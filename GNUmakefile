@@ -15,6 +15,7 @@ tex_files := $(note).tex # $(wildcard *.tex)
 pdfs := $(patsubst figures/eps/%.eps, figures/pdf/%.pdf,  $(wildcard figures/eps/*.eps ))
 
 pngs := $(patsubst figures/eps/%.eps, figures/png/%.png, $(wildcard figures/eps/*.eps ))
+jpgs := $(patsubst figures/eps/%.eps, figures/jpg/%.jpg, $(wildcard figures/eps/*.eps ))
 
 figure_03160: figures/eps/figure_03160_flsh0s36b0_vdet_9_time.eps 
 	convert -density 400 -depth 8 -quality 85 -trim $? figures/png/figure_03160_flsh0s36b0_vdet_9_time.png 
@@ -28,6 +29,8 @@ figures/png/%.png: figures/eps/%.eps
 pdf: $(pdfs) 
 # 	echo $?
 png: $(pngs) 
+# 	echo $?
+jpg: $(jpgs) 
 # 	echo $?
 
 note: $(tex_files) pdf 
