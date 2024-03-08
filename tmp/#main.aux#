@@ -1,0 +1,392 @@
+\relax 
+\providecommand*\new@tpo@label[2]{}
+\providecommand\babel@aux[2]{}
+\@nameuse{bbl@beforestart}
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\babel@aux{english}{}
+\citation{universe8060299}
+\citation{MARCIANO1977303}
+\citation{hesketh2022mu3e}
+\citation{PhysRevD.84.013006}
+\citation{PhysRevD.84.013006}
+\citation{universe9010054}
+\citation{universe9010054}
+\citation{accelerator}
+\citation{accelerator}
+\citation{universe9010054}
+\citation{Prebys:IPAC2015-THPF121}
+\citation{Prebys:IPAC2015-THPF121}
+\citation{ginther}
+\citation{tsview}
+\citation{6376120}
+\citation{bobbb}
+\citation{TYamazaki_1975}
+\citation{dukes}
+\citation{bartoszek2015mu2e}
+\citation{trk}
+\citation{bartoszek2015mu2e}
+\citation{Giovannella_2020}
+\citation{vadimmu2e}
+\citation{drac}
+\citation{bartoszek2015mu2e}
+\citation{clfv_signorelli}
+\citation{universe9010054}
+\citation{Bernstein_2013}
+\citation{clfv_signorelli}
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Charged Lepton Flavor Violation}{13}{chapter.1}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Theoretical Introduction}{13}{section.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.1}The Standard Model}{13}{subsection.1.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.1.1}Bosons}{13}{subsubsection.1.1.1.1}\protected@file@percent }
+\newlabel{bosons}{{1.1.1.1}{13}{Bosons}{subsubsection.1.1.1.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces Elementary particles of the Standard Model.\relax }}{14}{figure.caption.6}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:sm}{{1.1}{14}{Elementary particles of the Standard Model.\relax }{figure.caption.6}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.1.2}Fermions}{14}{subsubsection.1.1.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.2}History of flavor}{15}{subsection.1.1.2}\protected@file@percent }
+\citation{universe8060299}
+\citation{MARCIANO1977303}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.3}Overview of CLFV}{16}{subsection.1.1.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1.1}{\ignorespaces Lepton numbers assigned to neutrinos and charged leptons.\relax }}{16}{table.caption.7}\protected@file@percent }
+\newlabel{tab:leptons}{{1.1.3}{16}{Overview of CLFV}{table.caption.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.4}Lepton sector in Standard Model}{17}{subsection.1.1.4}\protected@file@percent }
+\newlabel{leptonsector}{{1.1.4}{17}{Lepton sector in Standard Model}{subsection.1.1.4}{}}
+\newlabel{leptoniccomponent}{{1.1}{17}{Lepton sector in Standard Model}{equation.1.1.1}{}}
+\newlabel{quarkcomponent}{{1.2}{17}{Lepton sector in Standard Model}{equation.1.1.2}{}}
+\newlabel{higgs}{{1.3}{17}{Lepton sector in Standard Model}{equation.1.1.3}{}}
+\citation{PhysRevLett.10.531}
+\citation{PhysRevLett.20.1205}
+\citation{clfv_signorelli}
+\newlabel{quarkviolation}{{1.7}{18}{Lepton sector in Standard Model}{equation.1.1.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.5}CLFV in the Standard Model with massive neutrinos}{18}{subsection.1.1.5}\protected@file@percent }
+\newlabel{massiveneutrinos}{{1.1.5}{18}{CLFV in the Standard Model with massive neutrinos}{subsection.1.1.5}{}}
+\citation{wein}
+\citation{universe8060299}
+\citation{universe8060299}
+\newlabel{fig:mutoegamma}{{1.2a}{19}{$\mu \rightarrow e \gamma $ process \cite {universe8060299}.\relax }{figure.caption.8}{}}
+\newlabel{sub@fig:mutoegamma}{{a}{19}{$\mu \rightarrow e \gamma $ process \cite {universe8060299}.\relax }{figure.caption.8}{}}
+\newlabel{fig:mutoeN}{{1.2b}{19}{$\mu N \rightarrow e N$ process.\relax }{figure.caption.8}{}}
+\newlabel{sub@fig:mutoeN}{{b}{19}{$\mu N \rightarrow e N$ process.\relax }{figure.caption.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces Some of CLFV processes.\relax }}{19}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:three graphs2}{{1.2}{19}{Some of CLFV processes.\relax }{figure.caption.8}{}}
+\citation{clfv_signorelli}
+\citation{universe8060299}
+\citation{clfv_signorelli}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.6}Beyond the Standard Model}{20}{subsection.1.1.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.6.1}CLFV in Supersymmetry}{20}{subsubsection.1.1.6.1}\protected@file@percent }
+\newlabel{susy}{{1.1.6.1}{20}{CLFV in Supersymmetry}{subsubsection.1.1.6.1}{}}
+\citation{universe8060299}
+\citation{universe8060299}
+\citation{Harnik_2013}
+\citation{PhysRevD.10.275}
+\citation{DORSNER20161}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.3}{\ignorespaces SUSY contribution to $l_i \rightarrow l_j\gamma $, through $sleptons$ mass mixing \cite  {universe8060299}.\relax }}{21}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:susy}{{1.3}{21}{SUSY contribution to $l_i \rightarrow l_j\gamma $, through $sleptons$ mass mixing \cite {universe8060299}.\relax }{figure.caption.9}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.6.2}Two Higgs Doublet Model}{21}{subsubsection.1.1.6.2}\protected@file@percent }
+\newlabel{2higgs}{{1.1.6.2}{21}{Two Higgs Doublet Model}{subsubsection.1.1.6.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.6.3}Leptoquark Models}{21}{subsubsection.1.1.6.3}\protected@file@percent }
+\citation{Leike_1999}
+\citation{zyla}
+\citation{megiicollaboration2024search}
+\citation{SINDRUM:1987nra}
+\citation{titanium}
+\citation{SINDRUMII:2006dvw}
+\citation{Willmann:1998gd}
+\citation{Aubert_2010}
+\citation{Aubert_2010}
+\citation{Hayasaka_2010}
+\citation{Hayasaka_2010}
+\citation{PhysRevLett.111.141801}
+\citation{PhysRevD.77.091104}
+\citation{PhysRevD.77.091104}
+\citation{BNL:1998apv}
+\citation{PhysRevD.72.012005}
+\citation{KTeV:2007cvy}
+\citation{Aad_2014}
+\citation{akers}
+\citation{abreu}
+\citation{KTeV:2007cvy}
+\citation{Love_2008}
+\citation{clfv_signorelli}
+\citation{clfv_signorelli}
+\citation{MARCIANO1977303}
+\citation{MARCIANO1977303}
+\citation{megi}
+\citation{megiicollaboration2024operation}
+\citation{megiicollaboration2024search}
+\citation{sindrumi}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.1.6.4}Additional Neutral Gauge Boson}{22}{subsubsection.1.1.6.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Experiments looking for CLFV}{22}{section.1.2}\protected@file@percent }
+\newlabel{tab:upperlimits}{{1.2}{22}{Experiments looking for CLFV}{table.caption.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.1}$\mu $ Channels}{22}{subsection.1.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.1.1}$\mu ^+ \rightarrow e^+ \gamma $}{22}{subsubsection.1.2.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {1.2.1.1.1}The MEG Experiment}{22}{paragraph.1.2.1.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {1.2.1.1.2}MEG II}{22}{paragraph.1.2.1.1.2}\protected@file@percent }
+\citation{hesketh2022mu3e}
+\citation{hesketh2022mu3e}
+\citation{SINDRUMII:2006dvw}
+\@writefile{lot}{\contentsline {table}{\numberline {1.2}{\ignorespaces Experimental upper limits for a variety of CLFV processes, Ref. \cite  {clfv_signorelli}.\relax }}{23}{table.caption.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.1.2}$\mu ^+ \rightarrow e^+ e^- e^+ $}{23}{subsubsection.1.2.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {1.2.1.2.1}SINDRUM I}{23}{paragraph.1.2.1.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {1.2.1.2.2}The Mu3e Experiment}{23}{figure.caption.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.1.3}$\mu ^- N \rightarrow e^- N $}{23}{subsubsection.1.2.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {1.2.1.3.1}SINDRUM II}{23}{paragraph.1.2.1.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces \cite  {MARCIANO1977303}.\relax }}{24}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:muchannel}{{1.4}{24}{\cite {MARCIANO1977303}.\relax }{figure.caption.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.5}{\ignorespaces .\relax }}{24}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:meg}{{1.5}{24}{.\relax }{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.6}{\ignorespaces .\relax }}{24}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:meg2}{{1.6}{24}{.\relax }{figure.caption.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.7}{\ignorespaces .\relax }}{24}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:meg22}{{1.7}{24}{.\relax }{figure.caption.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.8}{\ignorespaces .\relax }}{24}{figure.caption.15}\protected@file@percent }
+\newlabel{fig:sindrumi}{{1.8}{24}{.\relax }{figure.caption.15}{}}
+\citation{Abramishvili_2020}
+\citation{dukes}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.9}{\ignorespaces Longitudinal cross section of the detector. Positrons tracks in red, electron track in blue \cite  {hesketh2022mu3e}\relax }}{25}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:mu3e}{{1.9}{25}{Longitudinal cross section of the detector. Positrons tracks in red, electron track in blue \cite {hesketh2022mu3e}\relax }{figure.caption.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.10}{\ignorespaces .\relax }}{25}{figure.caption.17}\protected@file@percent }
+\newlabel{fig:sindrumii}{{1.10}{25}{.\relax }{figure.caption.17}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {1.2.1.3.2}Mu2e}{25}{paragraph.1.2.1.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {1.2.1.3.3}COMET}{25}{paragraph.1.2.1.3.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.11}{\ignorespaces Schematic layout of COMET (Phase-II) and COMET Phase-I (not in scale).\relax }}{25}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:comet}{{1.11}{25}{Schematic layout of COMET (Phase-II) and COMET Phase-I (not in scale).\relax }{figure.caption.18}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {1.2.1.3.4}Mu2e II}{25}{paragraph.1.2.1.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.2}$\tau $ Channels}{25}{subsection.1.2.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.12}{\ignorespaces .\relax }}{26}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:tauchannel}{{1.12}{26}{.\relax }{figure.caption.19}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.2.1}$ \tau \rightarrow l \gamma $}{26}{subsubsection.1.2.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.2.2}$ \tau \rightarrow 3l $}{26}{subsubsection.1.2.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.3}$B$ Channels}{26}{subsection.1.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.4}$K$ Channels}{26}{subsection.1.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.5}$Z$ Channels}{26}{subsection.1.2.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.13}{\ignorespaces .\relax }}{27}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:Kchannel}{{1.13}{27}{.\relax }{figure.caption.20}{}}
+\citation{SINDRUMII:2006dvw}
+\citation{bartoszek2015mu2e}
+\citation{bobbb}
+\citation{Bernstein_2013}
+\citation{Kargiantoulakis_2020}
+\citation{universe9010054}
+\citation{MEASDAY2001243}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Mu2e Experiment}{29}{chapter.2}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{rmue}{{2.1}{29}{Mu2e Experiment}{equation.2.0.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Experiment concept}{29}{section.2.1}\protected@file@percent }
+\citation{bartoszek2015mu2e}
+\citation{universe9010054}
+\citation{PhysRevD.84.013006}
+\citation{bartoszek2015mu2e}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Signals and Backgrounds}{30}{section.2.2}\protected@file@percent }
+\newlabel{sigandbkg}{{2.2}{30}{Signals and Backgrounds}{section.2.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Conversion Electron Signal}{30}{subsection.2.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Backgrounds}{30}{subsection.2.2.2}\protected@file@percent }
+\newlabel{backgrounds}{{2.2.2}{30}{Backgrounds}{subsection.2.2.2}{}}
+\citation{CRVposter}
+\citation{michel}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2.1}Cosmic rays}{31}{subsubsection.2.2.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2.2}Intrinsic Backgrounds}{31}{subsubsection.2.2.2.2}\protected@file@percent }
+\citation{PhysRev.113.1652}
+\citation{PhysRevD.84.013006}
+\citation{gaponenko}
+\citation{PhysRevD.84.013006}
+\citation{PhysRevD.84.013006}
+\citation{PhysRevD.84.013006}
+\citation{PhysRevD.84.013006}
+\citation{bartoszek2015mu2e}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.2.2.2.1}Muon Decay-in-Orbit}{32}{paragraph.2.2.2.2.1}\protected@file@percent }
+\newlabel{fig:linearscalemichel}{{2.1a}{32}{Linear scale.\relax }{figure.caption.21}{}}
+\newlabel{sub@fig:linearscalemichel}{{a}{32}{Linear scale.\relax }{figure.caption.21}{}}
+\newlabel{fig:logscalemichel}{{2.1b}{32}{Logarithmic scale.\relax }{figure.caption.21}{}}
+\newlabel{sub@fig:logscalemichel}{{b}{32}{Logarithmic scale.\relax }{figure.caption.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Electron spectrum for aluminum, Ref. \cite  {PhysRevD.84.013006}.\relax }}{32}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:michel}{{2.1}{32}{Electron spectrum for aluminum, Ref. \cite {PhysRevD.84.013006}.\relax }{figure.caption.21}{}}
+\citation{bartoszek2015mu2e}
+\citation{PhysRevC.5.1867}
+\citation{SINDRUMII:2006dvw}
+\citation{zyla}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces The electron energy spectrum near to the endpoint. The black line represents the Michel spectrum when neglecting nuclear recoil, while the red dashed line takes into consideration the recoil of the Aluminum nucleus, Ref. \cite  {PhysRevD.84.013006}.\relax }}{33}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:micheldiff}{{2.2}{33}{The electron energy spectrum near to the endpoint. The black line represents the Michel spectrum when neglecting nuclear recoil, while the red dashed line takes into consideration the recoil of the Aluminum nucleus, Ref. \cite {PhysRevD.84.013006}.\relax }{figure.caption.22}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.2.2.2.2}Radiative Muon Capture}{33}{paragraph.2.2.2.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2.3}Prompt Processes}{33}{subsubsection.2.2.2.3}\protected@file@percent }
+\citation{bartoszek2015mu2e}
+\citation{bobbb}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.2.2.3.1}Radiative Pion Capture}{34}{paragraph.2.2.2.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.2.2.3.2}$\pi $-DIF and $\mu $-DIF}{34}{paragraph.2.2.2.3.2}\protected@file@percent }
+\citation{bartoszek2015mu2e}
+\citation{bobbb}
+\citation{bartoszek2015mu2e}
+\newlabel{beamelectrons}{{2.2.2.3.3}{35}{Beam electrons}{paragraph.2.2.2.3.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{\numberline {2.2.2.3.3}Beam electrons}{35}{paragraph.2.2.2.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2.4}Delayed processes from antiprotons}{35}{subsubsection.2.2.2.4}\protected@file@percent }
+\citation{universe9010054}
+\citation{universe9010054}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2.5}Accidental activity}{36}{subsubsection.2.2.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Backgrounds estimates and Signal Sensitivity}{36}{subsection.2.2.3}\protected@file@percent }
+\citation{universe9010054}
+\citation{universe9010054}
+\citation{universe9010054}
+\citation{universe9010054}
+\citation{universe9010054}
+\citation{universe9010054}
+\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces Summary of the several background sources to the conversion electron search as expected in Mu2e Run I, Ref. \cite  {universe9010054}. The table also shows the corresponding single event sensitivity (SES). This is is defined as the $R_{\mu e}$ ratio when there is one signal event.\relax }}{37}{table.caption.23}\protected@file@percent }
+\newlabel{tab:summarybkg}{{2.2.3}{37}{Backgrounds estimates and Signal Sensitivity}{table.caption.23}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Left: Momentum distribution of the conversion electron signal and expected backgrounds. Right: Time distribution of the conversion electron signal and expected backgrounds. The arrows show the signal region selected for the analysis,103.60 $< \ p \ < $ 104.90 MeV/c and 640 $< \ T_0 \ < $ 1650 ns, Section \ref {pulsedprotonbeam}. The $CE$ signal distributions correspond to $R_{\mu e} = 1 \times 10^{-15}$, Ref. \cite  {universe9010054}.\relax }}{37}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:sensitivity}{{2.3}{37}{Left: Momentum distribution of the conversion electron signal and expected backgrounds. Right: Time distribution of the conversion electron signal and expected backgrounds. The arrows show the signal region selected for the analysis,103.60 $< \ p \ < $ 104.90 MeV/c and 640 $< \ T_0 \ < $ 1650 ns, Section \ref {pulsedprotonbeam}. The $CE$ signal distributions correspond to $R_{\mu e} = 1 \times 10^{-15}$, Ref. \cite {universe9010054}.\relax }{figure.caption.24}{}}
+\citation{PhysRevAccelBeams.20.111003}
+\citation{accelerator}
+\citation{accelerator}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Experimental setup}{38}{section.2.3}\protected@file@percent }
+\newlabel{setup}{{2.3}{38}{Experimental setup}{section.2.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Schematic view of the Mu2e apparatus. The center of the Mu2e reference frame is located at the COL3 collimator center, its y-axis points upwards, the z-axis is parallel to the DS axis and points downstream, and the x-axis completes the right-handed reference frame, Ref. \cite  {universe9010054}.\relax }}{38}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:mu2escheme}{{2.4}{38}{Schematic view of the Mu2e apparatus. The center of the Mu2e reference frame is located at the COL3 collimator center, its y-axis points upwards, the z-axis is parallel to the DS axis and points downstream, and the x-axis completes the right-handed reference frame, Ref. \cite {universe9010054}.\relax }{figure.caption.25}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Accelerator system and Proton Beam}{38}{section.2.4}\protected@file@percent }
+\newlabel{accel}{{2.4}{38}{Accelerator system and Proton Beam}{section.2.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}Pulsed Proton Beam}{38}{subsection.2.4.1}\protected@file@percent }
+\newlabel{pulsedprotonbeam}{{2.4.1}{38}{Pulsed Proton Beam}{subsection.2.4.1}{}}
+\citation{accelerator}
+\citation{accelerator}
+\citation{universe9010054}
+\citation{universe9010054}
+\newlabel{fig:accell}{{2.5a}{39}{\centering Fermilab accelerator facilities involved in producing and delivering the pulsed proton beam.\relax }{figure.caption.26}{}}
+\newlabel{sub@fig:accell}{{a}{39}{\centering Fermilab accelerator facilities involved in producing and delivering the pulsed proton beam.\relax }{figure.caption.26}{}}
+\newlabel{fig:deliver}{{2.5b}{39}{\centering Proton beam delivery to Mu2e.\relax }{figure.caption.26}{}}
+\newlabel{sub@fig:deliver}{{b}{39}{\centering Proton beam delivery to Mu2e.\relax }{figure.caption.26}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Pulsed proton beam delivery, Ref. \cite  {accelerator}.\relax }}{39}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:three graphs1}{{2.5}{39}{Pulsed proton beam delivery, Ref. \cite {accelerator}.\relax }{figure.caption.26}{}}
+\citation{bartoszek2015mu2e}
+\citation{accelerator}
+\citation{Prebys:IPAC2015-THPF121}
+\citation{Prebys:IPAC2015-THPF121}
+\citation{Prebys:IPAC2015-THPF121}
+\citation{Prebys:IPAC2015-THPF121}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces Proton beam profile at the Mu2e Proton Target, Ref. \cite  {accelerator}.\relax }}{40}{figure.caption.27}\protected@file@percent }
+\newlabel{fig:beamprofile}{{2.6}{40}{Proton beam profile at the Mu2e Proton Target, Ref. \cite {accelerator}.\relax }{figure.caption.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces Proton pulses arrive at the production solenoid every 1695 ns. A delayed live-time window can suppress the beam-related background, Ref. \cite  {universe9010054}.\relax }}{40}{figure.caption.28}\protected@file@percent }
+\newlabel{fig:beamwindow}{{2.7}{40}{Proton pulses arrive at the production solenoid every 1695 ns. A delayed live-time window can suppress the beam-related background, Ref. \cite {universe9010054}.\relax }{figure.caption.28}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}Proton Beam Extinction and Extinction Monitor}{40}{subsection.2.4.2}\protected@file@percent }
+\citation{bartoszek2015mu2e}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces The Extinction Monitor is located downstream of the production target, Ref. \cite  {Prebys:IPAC2015-THPF121}.\relax }}{41}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:extintion}{{2.8}{41}{The Extinction Monitor is located downstream of the production target, Ref. \cite {Prebys:IPAC2015-THPF121}.\relax }{figure.caption.29}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.3}Production Target}{41}{subsection.2.4.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces The tracking spectrometer of the Mu2e experiment, consisting of eight planes of pixel detectors and a permanent magnet spectrometer, Ref. \cite  {Prebys:IPAC2015-THPF121}.\relax }}{42}{figure.caption.30}\protected@file@percent }
+\newlabel{fig:extintionmonitor}{{2.9}{42}{The tracking spectrometer of the Mu2e experiment, consisting of eight planes of pixel detectors and a permanent magnet spectrometer, Ref. \cite {Prebys:IPAC2015-THPF121}.\relax }{figure.caption.30}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.5}Solenoids System}{42}{section.2.5}\protected@file@percent }
+\citation{ginther}
+\citation{ginther}
+\citation{tsview}
+\citation{tsview}
+\citation{6376120}
+\citation{6376120}
+\citation{bobbb}
+\citation{bobbb}
+\citation{bobbb}
+\citation{PhysRevD.80.013002}
+\citation{PhysRevD.76.059902}
+\citation{abusalma2018expression}
+\citation{TYamazaki_1975}
+\citation{TYamazaki_1975}
+\citation{dukes}
+\citation{dukes}
+\@writefile{toc}{\contentsline {section}{\numberline {2.6}Stopping target}{43}{section.2.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces The muon beamline, composed of the Production Solenoid (PS), the Transport Solenoid (TS) and the Dector Solenoids (DS), Ref. \cite  {ginther}. The PS is 4 m long. The role of the PS, shown in Figure \ref {fig:PS}, is to collect pions, kaons and their decay products muons. The TS is S-shaped and it is divided in five parts. The first is called TS1 that contains the first collimator (COL1), made of copper wedges. It filters particles from their momentum and reduces the radiation damage for coils of the upstream part of the TS (TSu). The TS2 contains a toroidal field in order to select negative muons from the positive ones in TS3 with two rotatable collimators (COLu and COLd). The rotatable feature allows selection of $\mu ^-$'s instead of $\mu ^+$'s, which can be used for detector calibration. The TS4 role is to put the beam in the center of the solenoid. TS5 connects TS with DS and it contains a collimator (COL5) made of polyethylene, which will serve as a shield from neutrons. A thin window assembly is installed at the beginning of the TS and also between the rotatable collimators to absorb antiprotons in the beam. The DS, shown in Figure \ref {fig:DS}, is a cylindrical system of approximately 11 m in length and 2 m in radius, which houses the Stopping Target and the main Mu2e detectors. The system is divided into two sections: a 4 m gradient section following the TS and a 6 m spectrometer section. The gradient region allows to separate conversion electrons from beam electrons. In the spectrometer region, the uniform magnetic field allows a precise measurement of the particle momentum. The upstream part of the beamline accounts for the Production Solenoid (PS) and the first part of the Transport Solenoid (TSu). The downstream part is composed of the last portion of the Transport Solenoids (TSd) and the Detector Solenoid (DS). Protons from muon captures in the Stopping Target are partially suppressed by a 0.5 mm thick cylindrical-shaped polyethylene proton absorber, placed halfway between the Stopping Target and the tracker. Finally, the IFB is a plate at the end of the DS, maintaining the DS vacuum and providing a path for the services and signals between vacuum and hall air. \relax }}{44}{figure.caption.31}\protected@file@percent }
+\newlabel{fig:muonbeamline}{{2.10}{44}{The muon beamline, composed of the Production Solenoid (PS), the Transport Solenoid (TS) and the Dector Solenoids (DS), Ref. \cite {ginther}. The PS is 4 m long. The role of the PS, shown in Figure \ref {fig:PS}, is to collect pions, kaons and their decay products muons. The TS is S-shaped and it is divided in five parts. The first is called TS1 that contains the first collimator (COL1), made of copper wedges. It filters particles from their momentum and reduces the radiation damage for coils of the upstream part of the TS (TSu). The TS2 contains a toroidal field in order to select negative muons from the positive ones in TS3 with two rotatable collimators (COLu and COLd). The rotatable feature allows selection of $\mu ^-$'s instead of $\mu ^+$'s, which can be used for detector calibration. The TS4 role is to put the beam in the center of the solenoid. TS5 connects TS with DS and it contains a collimator (COL5) made of polyethylene, which will serve as a shield from neutrons. A thin window assembly is installed at the beginning of the TS and also between the rotatable collimators to absorb antiprotons in the beam. The DS, shown in Figure \ref {fig:DS}, is a cylindrical system of approximately 11 m in length and 2 m in radius, which houses the Stopping Target and the main Mu2e detectors. The system is divided into two sections: a 4 m gradient section following the TS and a 6 m spectrometer section. The gradient region allows to separate conversion electrons from beam electrons. In the spectrometer region, the uniform magnetic field allows a precise measurement of the particle momentum. The upstream part of the beamline accounts for the Production Solenoid (PS) and the first part of the Transport Solenoid (TSu). The downstream part is composed of the last portion of the Transport Solenoids (TSd) and the Detector Solenoid (DS). Protons from muon captures in the Stopping Target are partially suppressed by a 0.5 mm thick cylindrical-shaped polyethylene proton absorber, placed halfway between the Stopping Target and the tracker. Finally, the IFB is a plate at the end of the DS, maintaining the DS vacuum and providing a path for the services and signals between vacuum and hall air. \relax }{figure.caption.31}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces The view of the Transport Solenoids and the collimators COL3u and COL3d showing the offset apertures in those collimators. The upper spiraling negative muons (red) pass through the aperture while the positive muons (blue) are stopped by these collimators, Ref. \cite  {tsview}.\relax }}{45}{figure.caption.32}\protected@file@percent }
+\newlabel{fig:collimators}{{2.11}{45}{The view of the Transport Solenoids and the collimators COL3u and COL3d showing the offset apertures in those collimators. The upper spiraling negative muons (red) pass through the aperture while the positive muons (blue) are stopped by these collimators, Ref. \cite {tsview}.\relax }{figure.caption.32}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.12}{\ignorespaces Cross-section of the production solenoid, Ref. \cite  {6376120}. The production target is placed approximately at the center of the superconducting coils.\relax }}{45}{figure.caption.33}\protected@file@percent }
+\newlabel{fig:PS}{{2.12}{45}{Cross-section of the production solenoid, Ref. \cite {6376120}. The production target is placed approximately at the center of the superconducting coils.\relax }{figure.caption.33}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.13}{\ignorespaces Overall structure of the Detector Solenoid coils and cryostat, Ref. \cite  {bobbb}.\relax }}{45}{figure.caption.34}\protected@file@percent }
+\newlabel{fig:DS}{{2.13}{45}{Overall structure of the Detector Solenoid coils and cryostat, Ref. \cite {bobbb}.\relax }{figure.caption.34}{}}
+\citation{bartoszek2015mu2e}
+\citation{trk}
+\citation{bartoszek2015mu2e}
+\citation{bartoszek2015mu2e}
+\citation{trk}
+\citation{trk}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.14}{\ignorespaces  The mean lifetimes and free decay branches of the muonic $1s$ state versus the atomic number of the nucleus to which the negative muon is bound \cite  {TYamazaki_1975}.\relax }}{46}{figure.caption.35}\protected@file@percent }
+\newlabel{fig:muonicatom}{{2.14}{46}{The mean lifetimes and free decay branches of the muonic $1s$ state versus the atomic number of the nucleus to which the negative muon is bound \cite {TYamazaki_1975}.\relax }{figure.caption.35}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.15}{\ignorespaces  The dependence of electron energy spectrum endpoint from muon DIO, Ref. \cite  {dukes}.\relax }}{46}{figure.caption.36}\protected@file@percent }
+\newlabel{fig:endpoint}{{2.15}{46}{The dependence of electron energy spectrum endpoint from muon DIO, Ref. \cite {dukes}.\relax }{figure.caption.36}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.7}Detectors}{46}{section.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.7.1}The Tracker}{46}{subsection.2.7.1}\protected@file@percent }
+\newlabel{trackersec}{{2.7.1}{46}{The Tracker}{subsection.2.7.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.16}{\ignorespaces (Upper left) Tracker panel. (Upper right) Isometric view of a tracker plane (left) with three panels each on the front and back face and a station (right) consisting of two planes. (Bottom) The assembled tracker, with 18 stations. Stations are shown in grey and support structure in gold, Ref. \cite  {bartoszek2015mu2e}.\relax }}{47}{figure.caption.37}\protected@file@percent }
+\newlabel{fig:trkpanel}{{2.16}{47}{(Upper left) Tracker panel. (Upper right) Isometric view of a tracker plane (left) with three panels each on the front and back face and a station (right) consisting of two planes. (Bottom) The assembled tracker, with 18 stations. Stations are shown in grey and support structure in gold, Ref. \cite {bartoszek2015mu2e}.\relax }{figure.caption.37}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.17}{\ignorespaces The annular design of Mu2e detectors: a view of the Tracker, Ref. \cite  {trk}.\relax }}{48}{figure.caption.38}\protected@file@percent }
+\newlabel{fig:sttrk}{{2.17}{48}{The annular design of Mu2e detectors: a view of the Tracker, Ref. \cite {trk}.\relax }{figure.caption.38}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.7.2}The Electromagnetic Calorimeter}{48}{subsection.2.7.2}\protected@file@percent }
+\newlabel{calorimeter}{{2.7.2}{48}{The Electromagnetic Calorimeter}{subsection.2.7.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.7.3}Cosmic Ray Veto}{48}{subsection.2.7.3}\protected@file@percent }
+\newlabel{CRV}{{2.7.3}{48}{Cosmic Ray Veto}{subsection.2.7.3}{}}
+\citation{bartoszek2015mu2e}
+\citation{bartoszek2015mu2e}
+\citation{Giovannella_2020}
+\citation{Giovannella_2020}
+\citation{bartoszek2015mu2e}
+\citation{bobbb}
+\citation{stm}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.18}{\ignorespaces The cosmic ray veto covering the Detector Solenoid looking upstream, showing the downstream (CRV-D), left (CRV-L), top (CRV-T) sectors, as well as the hole where the transport solenoid enters the enclosure, Ref. \cite  {bartoszek2015mu2e}.\relax }}{49}{figure.caption.39}\protected@file@percent }
+\newlabel{fig:crv}{{2.18}{49}{The cosmic ray veto covering the Detector Solenoid looking upstream, showing the downstream (CRV-D), left (CRV-L), top (CRV-T) sectors, as well as the hole where the transport solenoid enters the enclosure, Ref. \cite {bartoszek2015mu2e}.\relax }{figure.caption.39}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.7.4}Stopping Target Monitor}{49}{subsection.2.7.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.19}{\ignorespaces The CRV module geometry and nomenclature. Internal gaps are those between the counters in a di-counter, Ref. \cite  {Giovannella_2020}.\relax }}{50}{figure.caption.40}\protected@file@percent }
+\newlabel{fig:crvmodule}{{2.19}{50}{The CRV module geometry and nomenclature. Internal gaps are those between the counters in a di-counter, Ref. \cite {Giovannella_2020}.\relax }{figure.caption.40}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.8}Firmware-Based Data Acquisition}{50}{section.2.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.20}{\ignorespaces The Stopping-Target Monitor geometry showing the DS region (left), the End Cap Shielding, sweeper magnet and STM field-of-view collimator. At the far end of the hall (right) is the final $spot-size$ collimator and the STM detector.\relax }}{51}{figure.caption.41}\protected@file@percent }
+\newlabel{fig:stm}{{2.20}{51}{The Stopping-Target Monitor geometry showing the DS region (left), the End Cap Shielding, sweeper magnet and STM field-of-view collimator. At the far end of the hall (right) is the final $spot-size$ collimator and the STM detector.\relax }{figure.caption.41}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.8.1}Expected rate}{51}{subsection.2.8.1}\protected@file@percent }
+\citation{bartoszek2015mu2e}
+\citation{ryan}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.21}{\ignorespaces Mu2e DAQ Architecture.\relax }}{52}{figure.caption.42}\protected@file@percent }
+\newlabel{fig:linktodaq}{{2.21}{52}{Mu2e DAQ Architecture.\relax }{figure.caption.42}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.8.2}TDAQ software: artdaq}{53}{subsection.2.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.8.2.1}Expected rate}{53}{subsubsection.2.8.2.1}\protected@file@percent }
+\citation{vadi}
+\citation{vadimmu2e}
+\citation{bartoszek2015mu2e}
+\citation{vadimmu2e}
+\citation{vadimmu2e}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}The Mu2e Tracker}{55}{chapter.3}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chaptertrk}{{3}{55}{The Mu2e Tracker}{chapter.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Tracker panels}{55}{section.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Tracker Front-End Electronics}{55}{section.3.2}\protected@file@percent }
+\citation{drac}
+\citation{drac}
+\citation{bartoszek2015mu2e}
+\citation{bartoszek2015mu2e}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces An overview of the Tracker front-end electronics (FEE) \cite  {vadimmu2e}. The preamps and the Analog Motherboard (AMB) on the other side of the straws are not shown in the figure.\relax }}{56}{figure.caption.43}\protected@file@percent }
+\newlabel{fig:trackerfee}{{3.1}{56}{An overview of the Tracker front-end electronics (FEE) \cite {vadimmu2e}. The preamps and the Analog Motherboard (AMB) on the other side of the straws are not shown in the figure.\relax }{figure.caption.43}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Pre-Amplifiers}{56}{subsection.3.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Digitizer Readout and Assembler Controller}{56}{subsection.3.2.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Digitizer Readout and Assembler Controller (DRAC) board schematics \cite  {drac}. The DRAC board is the brain of the tracker panel. In this figure Analog to Digital Converters (ADCs), FPGAs, DDR3 memories and compators are shown.\relax }}{57}{figure.caption.44}\protected@file@percent }
+\newlabel{fig:drac}{{3.2}{57}{Digitizer Readout and Assembler Controller (DRAC) board schematics \cite {drac}. The DRAC board is the brain of the tracker panel. In this figure Analog to Digital Converters (ADCs), FPGAs, DDR3 memories and compators are shown.\relax }{figure.caption.44}{}}
+\citation{GIOIOSA2023167732}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Signal flow through front end electronics \cite  {bartoszek2015mu2e}.\relax }}{58}{figure.caption.45}\protected@file@percent }
+\newlabel{fig:flowfee}{{3.3}{58}{Signal flow through front end electronics \cite {bartoszek2015mu2e}.\relax }{figure.caption.45}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Read-Out Controller}{58}{subsection.3.2.3}\protected@file@percent }
+\newlabel{ROC}{{3.2.3}{58}{Read-Out Controller}{subsection.3.2.3}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Charged particle in magnetic field}{59}{appendix.A}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{appendix1}{{A}{59}{Charged particle in magnetic field}{appendix.A}{}}
+\newlabel{partincamp}{{A.2}{59}{Charged particle in magnetic field}{equation.A.0.2}{}}
+\@writefile{app}{\contentsline {chapter}{Appendix A: Charged particle in magnetic field}{60}{equation.A.0.5}\protected@file@percent }
+\bibstyle{unsrtnat}
+\bibdata{main}
+\gdef \@abspage@last{67}
