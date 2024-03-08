@@ -12,7 +12,7 @@ All PCBs are situated in the outer section of the panel. Pulse timing is measure
 There are 46,080 preamps and TDCs and 23,040 ADC channels. There are two sides of the panel, one called HV side and one called CAL side. 
 \begin{figure}[!h]
 \centering
-\includegraphics[width =0.8\textwidth]{images/chapter3/Screenshot_20240131_111836.png}
+\includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240131_111836.png}
 \caption{An overview of the Tracker front-end electronics (FEE) \cite{vadimmu2e}. The preamps and the Analog Motherboard (AMB) on the other side of the straws are not shown in the figure.}
 \label{fig:trackerfee}
 \end{figure}
@@ -24,14 +24,14 @@ The pre-amplifiers (preamps) are responsible for the initial readout of signals 
 The brain of a tracker panel is called Digitizer Readout and Assembler Controller (DRAC). The DRAC is responsible for digitizing, packaging and temporary storage. It also controls panel operations. The schematics of the DRAC board is shown in Figure \ref{fig:drac}. In this figure Analog to Digital Converters (ADCs), DDR3 memories and compators are shown. The large chips in the centers are the Field-Programmable Gate Arrays (FPGAs). The one in the center is the Readout Controller (ROC), which manages communications, monitors slow control variables and controls panel operations \ref{ROC}. The left and the right ones, which are referred to as the DIGI FPGAs, are responsible for monitoring data output, buffering data and assembling data packages. Each of them refers to 48 straw channels. 
 \begin{figure}[!h]
 \centering
-\includegraphics[width =\textwidth]{images/chapter3/Screenshot_20240204_115052.png}
+\includegraphics[width =\textwidth]{figures/png/Screenshot_20240204_115052.png}
 \caption{Digitizer Readout and Assembler Controller (DRAC) board schematics \cite{drac}. The DRAC board is the brain of the tracker panel. In this figure Analog to Digital Converters (ADCs), FPGAs, DDR3 memories and compators are shown.}
 \label{fig:drac}
 \end{figure}
 In figure \ref{fig:flowfee}, signal flow in the Tracker FEEs is reported. At the beginning the signal coming from both ends of the straw is routed to the preamps. After that, the analog signal is sent through the microstrip transmission line to the digitizers. In the DRAC, the two biased signals are fed independently to zero-crossing comparators, which produce square pulses when the signals exceed their respective thresholds. The squared pulses are sent to Time-to-Digital Converters (TDCs, firmware based, 16 bits each) implemented in the DIGI FPGAs, that have the task of digitizing the trigger timings, including the arrival time and the time over threshold, at a rate of about 62.5 MHz. Besides drift time, TDCs measure time difference across the straw to estimate position along the wire and the intrinsic time resolution of TDC is about 25 ps, adding comparator jitter, noise and other external effects the final resolution is $\sim$ 70 ps for time division. Furthermore, an integrator adds voltage signals coming from the two straw ends. In data collection, a hit occurs when both ends of a straw channel are simultaneously activated. The total is digitized by a 12-bit (10-bit ENOB) ADC at 50 MHz and then sent to the DIGI FPGA. The DIGI FPGA creates a data packet for each hit based on TDC and ADC information. This suppresses false triggers caused by random electrical noise. The Digitizer receives signals from both ends of four straws and multiplexes them into one output buffer before sending a packet of data to the ROC. Signals are sent to the ROC at 200 MHz. The data packets are then briefly stored in DDR3 memory for further use by the DAQ system. It is important to save also the voltage signal, since the pulse height information can help us to reject proton background, a significant source of noise or to distinguish muons from electrons. The proton signal will appear as a saturated flag, since the proton $dE/dx$ is $\times$50 the electron one.
 \begin{figure}[!h]
 \centering
-\includegraphics[width =0.8\textwidth]{images/chapter3/Screenshot_20240203_135048.png}
+\includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240203_135048.png}
 \caption{Signal flow through front end electronics \cite{bartoszek2015mu2e}.}
 \label{fig:flowfee}
 \end{figure}
