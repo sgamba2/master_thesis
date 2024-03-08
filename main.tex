@@ -2,13 +2,12 @@
 
 % Tipo di documento. L'uso di twoside implica che i capitoli inizino sempre con la prima pagina a sinistra, eventualmente lasciando una pagina vuota nel capitolo precedente. Se questa cosa è fastidiosa, è possibile rimuoverlo. 
 \documentclass[a4paper, twoside,openright]{report}
-\usepackage{tikz}
+
 \usepackage{[caption}
-\usetikzlibrary{arrows}
-\usetikzlibrary{decorations.markings}
+
 %\usepackage{lineno}
 
-\usetikzlibrary{decorations.pathmorphing}
+
 % \usepackage[absolute,overlay]{textpos}
 % \usepackage{onimage}
 % Dimensione dei margini
@@ -28,11 +27,11 @@
 % Permette di generare testo fittizio. Mi è stato utile 
 % per capire quale sarebbe stata l'impostazione del 
 % testo nella pagina prima che scrivessi un determinato paragrafo
-\usepackage{lipsum}
+
 % Per ruotare le immagini
 \usepackage{rotating}
 % Per modificare l'header delle pagine 
-\usepackage{fancyhdr}       \usepackage{tikz-feynman}     
+\usepackage{fancyhdr}     
 
 % Librerie matematiche
 \usepackage{amssymb}
@@ -49,7 +48,7 @@
 % Per inserire gli hyperlinks tra i vari elementi del testo 
 \usepackage{hyperref}     
 % Diversi tipi di sottolineature
-\usepackage[normalem]{ulem}
+
 
 % -----------------------------------------------------------------
 
@@ -172,9 +171,9 @@
 % -----------------------------------------------------------------
 \begin{document}
 
-\include{chapters/Frontespizio}
-\include{chapters/dediche}
-\include{chapters/abstract}
+\input{chapters/Frontespizio}
+\input{chapters/dediche}
+\input{chapters/abstract}
 
 
 \tableofcontents
@@ -183,14 +182,14 @@
 \listoffigures
 \listoftables
 \listofappendices
-\include{chapters/chapter1}
-\include{chapters/chapter2}
-\include{chapters/chapter3}
+\input{chapters/chapter1}
+\input{chapters/chapter2}
+\input{chapters/chapter3}
 \appendix
 
-\include{chapters/particleinmagneticfield}\appcaption{Appendix A: Charged particle in
+\input{chapters/particleinmagneticfield}\appcaption{Appendix A: Charged particle in
 magnetic field}
-\include{chapters/acknowledgements}
+\input{chapters/acknowledgements}
 
 \bibliographystyle{unsrt} %{plain}
 \bibliography{chapters/Bibliografia.bib}
