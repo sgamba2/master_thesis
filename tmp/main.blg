@@ -2,10 +2,10 @@ This is BibTeX, Version 0.99d (TeX Live 2023)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: unsrt.bst
-I couldn't open database file Bibliografia.bib
+I couldn't open database file main.bib
 ---line 391 of file main.aux
- : \bibdata{Bibliografia
- :                      }
+ : \bibdata{main.bib
+ :                  }
 I'm skipping whatever remains of this command
 I found no database files---while reading file main.aux
 Warning--I didn't find a database entry for "universe8060299"
@@ -73,7 +73,7 @@ Warning--I didn't find a database entry for "vadi"
 Warning--I didn't find a database entry for "GIOIOSA2023167732"
 You've used 0 entries,
             1791 wiz_defined-function locations,
-            542 strings with 4847 characters,
+            542 strings with 4843 characters,
 and the built_in function-call counts, 18 in all, are:
 = -- 0
 > -- 0
