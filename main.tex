@@ -67,14 +67,6 @@
   \renewcommand{\headrulewidth}{0pt}
 }
 
-\newcommand\listappendixname{List of Appendices}
-\newcommand\appcaption[1]{%
-  \addcontentsline{app}{chapter}{#1}}
-\makeatletter
-\newcommand\listofappendices{%
-  \chapter*{\listappendixname}\@starttoc{app}}
-\makeatother
-
 
 % Stile del codice
 \lstdefinestyle{codeStyle}{
@@ -181,14 +173,12 @@
 % Rimuovere se non si vuole la tabella delle figure
 \listoffigures
 \listoftables
-\listofappendices
 \input{chapters/chapter1}
 \input{chapters/chapter2}
 \input{chapters/chapter3}
 \appendix
 
-\input{chapters/particleinmagneticfield}\appcaption{Appendix A: Charged particle in
-magnetic field}
+\input{chapters/particleinmagneticfield}
 \input{chapters/acknowledgements}
 
 \bibliographystyle{unsrt} %{plain}
