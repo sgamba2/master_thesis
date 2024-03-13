@@ -10,6 +10,31 @@ W.J. Marciano and A.I. Sanda.
 \newblock Exotic decays of the muon and heavy leptons in gauge theories.
 \newblock {\em Physics Letters B}, 67(3):303--305, 1977.
 
+\bibitem{CGroup:2022tli}
+M.~Aoki et~al.
+\newblock {A New Charged Lepton Flavor Violation Program at Fermilab}.
+\newblock In {\em {Snowmass 2021}}, 3 2022.
+
+\bibitem{SINDRUMII:2006dvw}
+Wilhelm~H. Bertl et~al.
+\newblock {A Search for muon to electron conversion in muonic gold}.
+\newblock {\em Eur. Phys. J. C}, 47:337--346, 2006.
+
+\bibitem{megi}
+Final results of the meg experiment 2016.
+\newblock {\em Il Nuovo Cimento C}, 39(4):1–8, Dec 2016.
+
+\bibitem{megiicollaboration2024search}
+A.M. Baldini et~al. MEG II~collaboration.
+\newblock A search for $\mu^+ \to e^+\gamma$ with the first dataset of the meg
+  ii experiment, 2024.
+
+\bibitem{universe9010054}
+Mu2e Collaboration.
+\newblock Mu2e run i sensitivity projections for the neutrinoless $\mu ^-
+  \rightarrow e ^-$ conversion search in aluminum.
+\newblock {\em Universe}, 9(1), 2023.
+
 \bibitem{hesketh2022mu3e}
 Gavin Hesketh, Sean Hughes, Ann-Kathrin Perrevoort, and Nikolaos Rompotis.
 \newblock The mu3e experiment, 2022.
@@ -18,12 +43,6 @@ Gavin Hesketh, Sean Hughes, Ann-Kathrin Perrevoort, and Nikolaos Rompotis.
 Andrzej Czarnecki, Xavier Garcia~i Tormo, and William~J. Marciano.
 \newblock Muon decay in orbit: Spectrum of high-energy electrons.
 \newblock {\em Phys. Rev. D}, 84:013006, Jul 2011.
-
-\bibitem{universe9010054}
-Mu2e Collaboration.
-\newblock Mu2e run i sensitivity projections for the neutrinoless $\mu ^-
-  \rightarrow e ^-$ conversion search in aluminum.
-\newblock {\em Universe}, 9(1), 2023.
 
 \bibitem{accelerator}
 S.~J. Werkema.
@@ -147,11 +166,6 @@ Zyla et~al. Particle Data~Group.
 \newblock {\em Progress of Theoretical and Experimental Physics},
   2020(8):083C01, 08 2020.
 
-\bibitem{megiicollaboration2024search}
-A.M. Baldini et~al. MEG II~collaboration.
-\newblock A search for $\mu^+ \to e^+\gamma$ with the first dataset of the meg
-  ii experiment, 2024.
-
 \bibitem{SINDRUM:1987nra}
 U.~Bellgardt et~al.
 \newblock Search for the decay $\mu^+ \to e^+ e^+ e^-$.
@@ -162,11 +176,6 @@ P.~Wintz.
 \newblock Proceedings of the first international symposium on lepton and baryon
   number violation.
 \newblock {\em IOP Publishing}, page 534, 1998.
-
-\bibitem{SINDRUMII:2006dvw}
-Wilhelm~H. Bertl et~al.
-\newblock {A Search for muon to electron conversion in muonic gold}.
-\newblock {\em Eur. Phys. J. C}, 47:337--346, 2006.
 
 \bibitem{Willmann:1998gd}
 L.~Willmann et~al.
@@ -240,9 +249,17 @@ W.~Love et~al.
 \newblock Search for lepton flavor violation in upsilon decays.
 \newblock {\em Physical Review Letters}, 101(20), November 2008.
 
-\bibitem{megi}
-Final results of the meg experiment 2016.
-\newblock {\em Il Nuovo Cimento C}, 39(4):1–8, Dec 2016.
+\bibitem{doi:10.1146/annurev-nucl-100809-131949}
+Andr\'{e} de~Gouv\^{e}a and Niki Saoulidou.
+\newblock Fermilab's intensity frontier.
+\newblock {\em Annual Review of Nuclear and Particle Science}, 60(1):513--538,
+  2010.
+
+\bibitem{osti_1042577}
+J~L et~al. Hewett.
+\newblock Fundamental physics at the intensity frontier. report of the workshop
+  held december 2011 in rockville, md.
+\newblock 6 2012.
 
 \bibitem{megiicollaboration2024operation}
 MEG~II Collaboration.
