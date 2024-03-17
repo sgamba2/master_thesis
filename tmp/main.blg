@@ -4,53 +4,53 @@ The top-level auxiliary file: main.aux
 The style file: unsrt.bst
 Database file #1: main.bib
 Warning--entry type for "tsview" isn't style-file defined
---line 305 of file main.bib
+--line 317 of file main.bib
+Warning--empty journal in osti_1042577
 Warning--empty author in megi
 Warning--empty booktitle in dukes
-Warning--empty institution in drac
-Warning--empty journal in osti_1042577
 Warning--empty journal in stm
 Warning--empty journal in vadi
 Warning--empty year in vadi
-You've used 66 entries,
+Warning--empty institution in drac
+You've used 67 entries,
             1791 wiz_defined-function locations,
-            847 strings with 12950 characters,
-and the built_in function-call counts, 12432 in all, are:
-= -- 1090
-> -- 423
+            852 strings with 13129 characters,
+and the built_in function-call counts, 12572 in all, are:
+= -- 1102
+> -- 427
 < -- 3
-+ -- 177
-- -- 111
-* -- 791
-:= -- 2023
-add.period$ -- 192
-call.type$ -- 66
-change.case$ -- 67
++ -- 179
+- -- 112
+* -- 800
+:= -- 2048
+add.period$ -- 195
+call.type$ -- 67
+change.case$ -- 68
 chr.to.int$ -- 0
-cite$ -- 73
-duplicate$ -- 576
-empty$ -- 1329
-format.name$ -- 111
-if$ -- 2733
+cite$ -- 74
+duplicate$ -- 584
+empty$ -- 1344
+format.name$ -- 112
+if$ -- 2763
 int.to.chr$ -- 0
-int.to.str$ -- 66
-missing$ -- 59
-newline$ -- 326
-num.names$ -- 65
-pop$ -- 157
+int.to.str$ -- 67
+missing$ -- 60
+newline$ -- 331
+num.names$ -- 66
+pop$ -- 158
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 250
+skip$ -- 254
 stack$ -- 0
 substring$ -- 779
-swap$ -- 83
+swap$ -- 84
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 7
-while$ -- 113
-width$ -- 68
-write$ -- 690
+while$ -- 114
+width$ -- 69
+write$ -- 701
 (There were 8 warnings)
