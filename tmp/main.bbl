@@ -1,16 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{Bernstein_2013}
-R.H. Bernstein and Peter~S. Cooper.
-\newblock Charged lepton flavor violation: An experimenter’s guide.
-\newblock {\em Physics Reports}, 532(2):27–64, November 2013.
-
-\bibitem{clfv_signorelli}
-G.~Signorelli L.~Cabibbi.
-\newblock Charged lepton flavour violation: An experimental and theoretical
-  introduction.
-\newblock {\em La Rivista del Nuovo Cimento}, 41(2):71–174, Jan 2018.
-
 \bibitem{universe8060299}
 Marco Ardu and Gianantonio Pezzullo.
 \newblock Introduction to charged lepton flavor violation.
@@ -20,6 +9,123 @@ Marco Ardu and Gianantonio Pezzullo.
 W.J. Marciano and A.I. Sanda.
 \newblock Exotic decays of the muon and heavy leptons in gauge theories.
 \newblock {\em Physics Letters B}, 67(3):303--305, 1977.
+
+\bibitem{CGroup:2022tli}
+M.~Aoki et~al.
+\newblock {A New Charged Lepton Flavor Violation Program at Fermilab}.
+\newblock In {\em {Snowmass 2021}}, 3 2022.
+
+\bibitem{SINDRUMII:2006dvw}
+Wilhelm~H. Bertl et~al.
+\newblock {A Search for muon to electron conversion in muonic gold}.
+\newblock {\em Eur. Phys. J. C}, 47:337--346, 2006.
+
+\bibitem{megi}
+Final results of the meg experiment 2016.
+\newblock {\em Il Nuovo Cimento C}, 39(4):1–8, Dec 2016.
+
+\bibitem{megiicollaboration2024search}
+A.M. Baldini et~al. MEG II~collaboration.
+\newblock A search for $\mu^+ \to e^+\gamma$ with the first dataset of the meg
+  ii experiment, 2024.
+
+\bibitem{universe9010054}
+Mu2e Collaboration.
+\newblock Mu2e run i sensitivity projections for the neutrinoless $\mu ^-
+  \rightarrow e ^-$ conversion search in aluminum.
+\newblock {\em Universe}, 9(1), 2023.
+
+\bibitem{hesketh2022mu3e}
+Gavin Hesketh, Sean Hughes, Ann-Kathrin Perrevoort, and Nikolaos Rompotis.
+\newblock The mu3e experiment, 2022.
+
+\bibitem{universe4100101}
+Paolo Branchini.
+\newblock The belle ii experiment: Status and prospects.
+\newblock {\em Universe}, 4(10), 2018.
+
+\bibitem{PhysRevD.84.013006}
+Andrzej Czarnecki, Xavier Garcia~i Tormo, and William~J. Marciano.
+\newblock Muon decay in orbit: Spectrum of high-energy electrons.
+\newblock {\em Phys. Rev. D}, 84:013006, Jul 2011.
+
+\bibitem{accelerator}
+S.~J. Werkema.
+\newblock Cd-3c review: Mu2e accelerator systems.
+\newblock {\em (DOE CD-3c Review 2016-06-14), mu2e-doc-7530-v6}, 2016.
+
+\bibitem{Prebys:IPAC2015-THPF121}
+E.~Prebys and S.J. Werkema.
+\newblock {O}ut of {T}ime {B}eam {E}xtinction in the {M}u2e {E}xperiment.
+\newblock In {\em Proc. 6th International Particle Accelerator Conference
+  (IPAC'15), Richmond, VA, USA, May 3-8, 2015}, number~6 in International
+  Particle Accelerator Conference, pages 3996--3999, Geneva, Switzerland, June
+  2015. JACoW.
+
+\bibitem{ginther}
+G.~Ginther.
+\newblock Cd-3c review: Muon beamline overview.
+\newblock {\em (DOE CD-3c Review 2016-06-14)}, mu2e-doc-7531-v5.
+
+\bibitem{tsview}
+Mu2e Collaboration.
+\newblock Muonbeamlineintro.
+
+\bibitem{6376120}
+Kashikhin V.~V. et~al.
+\newblock Conceptual design of the mu2e production solenoid.
+\newblock {\em IEEE Transactions on Applied Superconductivity},
+  23(3):4100604--4100604, 2013.
+
+\bibitem{bobbb}
+Robert~H. Bernstein.
+\newblock The mu2e experiment.
+\newblock {\em Frontiers in Physics}, 7, 2019.
+
+\bibitem{TYamazaki_1975}
+T.~Yamazaki et~al.
+\newblock Negative moun spin rotation.
+\newblock {\em Physica Scripta}, 11(3-4):133, mar 1975.
+
+\bibitem{dukes}
+E.~C. Dukes.
+\newblock Mu2e-ii: The mu2e experiment in the pip-ii era.
+\newblock 2021.
+
+\bibitem{bartoszek2015mu2e}
+Mu2e Collaboration.
+\newblock Mu2e technical design report, 2015.
+
+\bibitem{trk}
+A.~Mukherjee.
+\newblock Mu2e tracker.
+\newblock In {\em (DOE IPR 2017 2017-07-25), mu2e-doc-11567-v3}, 2017.
+
+\bibitem{Giovannella_2020}
+S.~Giovannella.
+\newblock The detectors of the mu2e experiment.
+\newblock {\em Journal of Instrumentation}, 15(06):C06022, jun 2020.
+
+\bibitem{vadimmu2e}
+V.~L. Rusu.
+\newblock Mu2e tracker front end electronics.
+\newblock {\em DOE IPR 2019 2019-12-10}, 2019.
+
+\bibitem{drac}
+Vadim L~Rusu Richie~Bonventre, Greg~Deuerling.
+\newblock Mu2e-doc-7849-v1.
+\newblock Technical report, 2016.
+
+\bibitem{clfv_signorelli}
+G.~Signorelli L.~Cabibbi.
+\newblock Charged lepton flavour violation: An experimental and theoretical
+  introduction.
+\newblock {\em La Rivista del Nuovo Cimento}, 41(2):71–174, Jan 2018.
+
+\bibitem{Bernstein_2013}
+R.H. Bernstein and Peter~S. Cooper.
+\newblock Charged lepton flavor violation: An experimenter’s guide.
+\newblock {\em Physics Reports}, 532(2):27–64, November 2013.
 
 \bibitem{PhysRevLett.10.531}
 Nicola Cabibbo.
@@ -65,11 +171,6 @@ Zyla et~al. Particle Data~Group.
 \newblock {\em Progress of Theoretical and Experimental Physics},
   2020(8):083C01, 08 2020.
 
-\bibitem{megiicollaboration2024search}
-A.M. Baldini et~al. MEG II~collaboration.
-\newblock A search for $\mu^+ \to e^+\gamma$ with the first dataset of the meg
-  ii experiment, 2024.
-
 \bibitem{SINDRUM:1987nra}
 U.~Bellgardt et~al.
 \newblock Search for the decay $\mu^+ \to e^+ e^+ e^-$.
@@ -80,11 +181,6 @@ P.~Wintz.
 \newblock Proceedings of the first international symposium on lepton and baryon
   number violation.
 \newblock {\em IOP Publishing}, page 534, 1998.
-
-\bibitem{SINDRUMII:2006dvw}
-Wilhelm~H. Bertl et~al.
-\newblock {A Search for muon to electron conversion in muonic gold}.
-\newblock {\em Eur. Phys. J. C}, 47:337--346, 2006.
 
 \bibitem{Willmann:1998gd}
 L.~Willmann et~al.
@@ -137,6 +233,11 @@ E.~Abouzaid et~al.
 \newblock {Search for lepton flavor violating decays of the neutral kaon}.
 \newblock {\em Phys. Rev. Lett.}, 100:131803, 2008.
 
+\bibitem{Love_2008}
+W.~Love et~al.
+\newblock Search for lepton flavor violation in upsilon decays.
+\newblock {\em Physical Review Letters}, 101(20), November 2008.
+
 \bibitem{Aad_2014}
 ATLAS~Collaboration G.~Aad~et al.
 \newblock Search for the lepton flavor violating decay $z \rightarrow e \mu$
@@ -153,10 +254,20 @@ DELPHI~Collaboration P.~Abreu~et al.
 \newblock Search for lepton flavor number violating z$^0$ decays.
 \newblock {\em Z. Phys. C 73}, 1997.
 
-\bibitem{Love_2008}
-W.~Love et~al.
-\newblock Search for lepton flavor violation in upsilon decays.
-\newblock {\em Physical Review Letters}, 101(20), November 2008.
+\bibitem{PhysRevD.104.032013}
+Search for lepton flavour violating decays of the higgs boson to $e$ and $e\mu$
+  in proton-proton collisions at $\sqrt{s}=8\text{ }\text{ }\mathrm{TeV}$.
+\newblock 2016.
+
+\bibitem{cms17}
+Albert Sirunyan, Armen Tumasyan, Wolfgang Adam, Federico Ambrogi, Ece Asilar,
+  Thomas Bergauer, Johannes Brandstetter, Erica Brondolin, Marko Dragicevic,
+  Janos Erö, Martin Flechl, Markus Friedl, Rudolf Fruehwirth, V.~Ghete,
+  Johannes Grossmann, Josef Hrubec, M.~Jeitler, Axel König, Natascha Krammer,
+  and Boleslaw Wyslouch.
+\newblock Search for lepton flavour violating decays of the higgs boson to $\mu
+  \tau$ and $e \tau$ in proton-proton collisions at $\sqrt{s}$ = 13 tev.
+\newblock 03 2018.
 
 \bibitem{doi:10.1146/annurev-nucl-100809-131949}
 Andr\'{e} de~Gouv\^{e}a and Niki Saoulidou.
@@ -170,21 +281,6 @@ J~L et~al. Hewett.
   held december 2011 in rockville, md.
 \newblock 6 2012.
 
-\bibitem{CGroup:2022tli}
-M.~Aoki et~al.
-\newblock {A New Charged Lepton Flavor Violation Program at Fermilab}.
-\newblock In {\em {Snowmass 2021}}, 3 2022.
-
-\bibitem{megi}
-Final results of the meg experiment 2016.
-\newblock {\em Il Nuovo Cimento C}, 39(4):1–8, Dec 2016.
-
-\bibitem{universe9010054}
-Mu2e Collaboration.
-\newblock Mu2e run i sensitivity projections for the neutrinoless $\mu ^-
-  \rightarrow e ^-$ conversion search in aluminum.
-\newblock {\em Universe}, 9(1), 2023.
-
 \bibitem{megiicollaboration2024operation}
 MEG~II Collaboration.
 \newblock Operation and performance of meg ii detector, 2024.
@@ -194,35 +290,27 @@ Ralph Eichler and Christophorus Grab.
 \newblock The sindrum-i experiment.
 \newblock {\em SciPost Physics Proceedings}, 09 2021.
 
-\bibitem{hesketh2022mu3e}
-Gavin Hesketh, Sean Hughes, Ann-Kathrin Perrevoort, and Nikolaos Rompotis.
-\newblock The mu3e experiment, 2022.
-
 \bibitem{Abramishvili_2020}
 Abramishvili~R. et~al.
 \newblock Comet phase-i technical design report.
 \newblock {\em Progress of Theoretical and Experimental Physics}, 2020(3),
   2020.
 
-\bibitem{dukes}
-E.~C. Dukes.
-\newblock Mu2e-ii: The mu2e experiment in the pip-ii era.
-\newblock 2021.
+\bibitem{ABASHIAN2002117}
+The belle detector.
+\newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment},
+  479(1):117--232, 2002.
+\newblock Detectors for Asymmetric B-factories.
 
-\bibitem{Amhis_2021}
-Amhis~Y. et~al.
-\newblock Averages of b-hadron, c-hadron, and $$\tau $$-lepton properties as of
-  2018: Heavy flavor averaging group (hflav).
-\newblock {\em The European Physical Journal C}, 81(3), March 2021.
+\bibitem{TheLHCbCollaboration2008}
+The~LHCb Collaboration.
+\newblock 3(08):S08005, aug 2008.
 
-\bibitem{bartoszek2015mu2e}
-Mu2e Collaboration.
-\newblock Mu2e technical design report, 2015.
-
-\bibitem{bobbb}
-Robert~H. Bernstein.
-\newblock The mu2e experiment.
-\newblock {\em Frontiers in Physics}, 7, 2019.
+\bibitem{Bennett_2016}
+J~Bennett.
+\newblock Belle ii physics prospects, status and schedule.
+\newblock {\em Journal of Physics: Conference Series}, 770(1):012044, nov 2016.
 
 \bibitem{Kargiantoulakis_2020}
 Manolis Kargiantoulakis.
@@ -233,11 +321,6 @@ Manolis Kargiantoulakis.
 D.F. Measday.
 \newblock The nuclear physics of muon capture.
 \newblock {\em Physics Reports}, 354(4):243--409, 2001.
-
-\bibitem{PhysRevD.84.013006}
-Andrzej Czarnecki, Xavier Garcia~i Tormo, and William~J. Marciano.
-\newblock Muon decay in orbit: Spectrum of high-energy electrons.
-\newblock {\em Phys. Rev. D}, 84:013006, Jul 2011.
 
 \bibitem{CRVposter}
 R.~Ehrlich.
@@ -273,34 +356,6 @@ Diktys Stratakis, Mary~E. Convery, Carol Johnstone, John Johnstone, James~P.
 \newblock Accelerator performance analysis of the fermilab muon campus.
 \newblock {\em Phys. Rev. Accel. Beams}, 20:111003, Nov 2017.
 
-\bibitem{accelerator}
-S.~J. Werkema.
-\newblock Cd-3c review: Mu2e accelerator systems.
-\newblock {\em (DOE CD-3c Review 2016-06-14), mu2e-doc-7530-v6}, 2016.
-
-\bibitem{Prebys:IPAC2015-THPF121}
-E.~Prebys and S.J. Werkema.
-\newblock {O}ut of {T}ime {B}eam {E}xtinction in the {M}u2e {E}xperiment.
-\newblock In {\em Proc. 6th International Particle Accelerator Conference
-  (IPAC'15), Richmond, VA, USA, May 3-8, 2015}, number~6 in International
-  Particle Accelerator Conference, pages 3996--3999, Geneva, Switzerland, June
-  2015. JACoW.
-
-\bibitem{ginther}
-G.~Ginther.
-\newblock Cd-3c review: Muon beamline overview.
-\newblock {\em (DOE CD-3c Review 2016-06-14)}, mu2e-doc-7531-v5.
-
-\bibitem{tsview}
-Mu2e Collaboration.
-\newblock Muonbeamlineintro.
-
-\bibitem{6376120}
-Kashikhin V.~V. et~al.
-\newblock Conceptual design of the mu2e production solenoid.
-\newblock {\em IEEE Transactions on Applied Superconductivity},
-  23(3):4100604--4100604, 2013.
-
 \bibitem{PhysRevD.80.013002}
 Vincenzo Cirigliano, Ryuichiro Kitano, Yasuhiro Okada, and Paula Tuzon.
 \newblock Model discriminating power of
@@ -318,21 +373,6 @@ Ryuichiro Kitano, Masafumi Koike, and Yasuhiro Okada.
 F.~Abusalma et~al.
 \newblock Expression of interest for evolution of the mu2e experiment, 2018.
 
-\bibitem{TYamazaki_1975}
-T.~Yamazaki et~al.
-\newblock Negative moun spin rotation.
-\newblock {\em Physica Scripta}, 11(3-4):133, mar 1975.
-
-\bibitem{trk}
-A.~Mukherjee.
-\newblock Mu2e tracker.
-\newblock In {\em (DOE IPR 2017 2017-07-25), mu2e-doc-11567-v3}, 2017.
-
-\bibitem{Giovannella_2020}
-S.~Giovannella.
-\newblock The detectors of the mu2e experiment.
-\newblock {\em Journal of Instrumentation}, 15(06):C06022, jun 2020.
-
 \bibitem{stm}
 Quirk~J. Palladino~A. and Miller J.
 \newblock Mu2e stopping-target monitor baseline design. eng. version 4. fermi
@@ -348,16 +388,6 @@ Richard~Kwarciany Ryan~Rivera.
 \bibitem{vadi}
 vadim.
 \newblock vadim.
-
-\bibitem{vadimmu2e}
-V.~L. Rusu.
-\newblock Mu2e tracker front end electronics.
-\newblock {\em DOE IPR 2019 2019-12-10}, 2019.
-
-\bibitem{drac}
-Vadim L~Rusu Richie~Bonventre, Greg~Deuerling.
-\newblock Mu2e-doc-7849-v1.
-\newblock Technical report, 2016.
 
 \bibitem{GIOIOSA2023167732}
 Antonio~Gioiosa et~al.
