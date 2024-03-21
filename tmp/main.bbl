@@ -35,9 +35,20 @@ Mu2e Collaboration.
   \rightarrow e ^-$ conversion search in aluminum.
 \newblock {\em Universe}, 9(1), 2023.
 
-\bibitem{hesketh2022mu3e}
-Gavin Hesketh, Sean Hughes, Ann-Kathrin Perrevoort, and Nikolaos Rompotis.
-\newblock The mu3e experiment, 2022.
+\bibitem{megiicollaboration2024operation}
+MEG~II Collaboration.
+\newblock Operation and performance of meg ii detector, 2024.
+
+\bibitem{sindrumi}
+Ralph Eichler and Christophorus Grab.
+\newblock The sindrum-i experiment.
+\newblock {\em SciPost Physics Proceedings}, 09 2021.
+
+\bibitem{papa}
+Angela Papa.
+\newblock Towards a new generation of charged lepton flavour violation searches
+  at the paul scherrer institut: The meg upgrade and the mu3e experiment.
+\newblock {\em EPJ Web of Conferences}, 234:01011, 01 2020.
 
 \bibitem{universe4100101}
 Paolo Branchini.
@@ -281,14 +292,9 @@ J~L et~al. Hewett.
   held december 2011 in rockville, md.
 \newblock 6 2012.
 
-\bibitem{megiicollaboration2024operation}
-MEG~II Collaboration.
-\newblock Operation and performance of meg ii detector, 2024.
-
-\bibitem{sindrumi}
-Ralph Eichler and Christophorus Grab.
-\newblock The sindrum-i experiment.
-\newblock {\em SciPost Physics Proceedings}, 09 2021.
+\bibitem{hesketh2022mu3e}
+Gavin Hesketh, Sean Hughes, Ann-Kathrin Perrevoort, and Nikolaos Rompotis.
+\newblock The mu3e experiment, 2022.
 
 \bibitem{Abramishvili_2020}
 Abramishvili~R. et~al.

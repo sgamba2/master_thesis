@@ -141,12 +141,12 @@ In addition to the neutral LFV observed in neutrino oscillations, the mixing out
      \caption{Some of CLFV processes.}
         \label{fig:three graphs2}
 \end{figure}
-In the SM, each of these mechanisms is significantly inhibited. Using the example of $\mu \rightarrow  e \gamma $, the branching ratio (BR) of this process may be computed as follows:
+In the SM, each of these mechanisms is significantly inhibited. Using the example of $\mu \rightarrow  e \gamma $, the branching ratio of this process may be computed as follows:
 
 \begin{equation}\label{br}
 \begin{aligned}
 B R(\mu \rightarrow e \gamma) & =\frac{3 \alpha}{32 \pi}\left|\sum_{i=2,3} U_{\mu i}^* U_{e i} \frac{\Delta m_{1 i}^2}{M_W^2}\right|^2 \\
-& =\frac{3 \alpha}{32 \pi}\left(\frac{1}{4}\right) \sin ^2 2 \theta_{13} \sin ^2 \theta_{23}\left|\frac{\Delta m_{13}^2}{M_W^2}\right|^2,
+& =\frac{3 \alpha}{32 \pi}\left(\frac{1}{4}\right) \sin ^2 2 \theta_{13} \sin ^2 \theta_{23}\left|\frac{\Delta m_{13}^2}{M_W^2}\right|^2
 \end{aligned}
 \end{equation}
 
@@ -228,9 +228,20 @@ $h \ \rightarrow \ e \ \tau$ & $6.1 \times 10^{-3}$ & 95\% & LHC CMS & 2017 & \c
 
 
 \subsection{$\mu$ Channels}
-Currently, the most promising channel is the one that includes muon processes. When a proton beam interacts with a target, pions and kaons are produced, that subsequently decay in muons. Muon lifetime is long enough to form a muon beam and we are able to reach intensities of 10$^8 \div 10^{11} \  \mu$/s. There are three primary CLFV channels involving muons, with distinct sensitivities to effective lagrangian terms: $\mu^+ \rightarrow e^+ \gamma$, $\mu^- N \rightarrow e^- N$ and $\mu^+ \rightarrow e^+ e^+ e^-$. The following paragraphs will discuss the experimental challenges and future perspectives for each of these channels. As seen in Table \ref{tab:upperlimits}, these channels have the lowest branching ratio limits. Muons have small mass, that results in a limited number of decay modes. Figure \ref{fig:muchannel} shows how the branching ratio limitations of muon uncommon decays have rapidly improved over the last several decades. The next-generation experiments aim to improve by many orders of magnitude. Muon rare decay studies can also provide theory differentiation power combining results of the three channels. All CLFV extensions to SM can be described by the following Lagrangian, Ref. \cite{doi:10.1146/annurev-nucl-100809-131949}:
+Currently, the most promising channel is the one that includes muon processes. When a proton beam interacts with a target, 
+pions and kaons are produced, that subsequently decay in muons. Muon lifetime is long enough to form a muon beam and we are able to reach 
+intensities of 10$^8 \div 10^{11} \  \mu$/s. There are three primary CLFV channels involving muons, with distinct sensitivities to effective lagrangian 
+terms: $\mu^+ \rightarrow e^+ \gamma$, $\mu^- N \rightarrow e^- N$ and $\mu^+ \rightarrow e^+ e^+ e^-$. The following paragraphs 
+will discuss the experimental challenges and future perspectives for each of these channels. As seen in Table \ref{tab:upperlimits}, 
+these channels have the lowest branching ratio limits. Muons have small mass, that results in a limited number of decay modes. Figure \ref{fig:muchannel} 
+shows how the branching ratio limitations of muon uncommon decays have rapidly improved over the last several decades. The next-generation 
+experiments aim to improve by many orders of magnitude. Muon rare decay studies can also provide theory differentiation power 
+combining results of the three channels. All CLFV extensions to SM can be described by the following Lagrangian, Ref. \cite{doi:10.1146/annurev-nucl-100809-131949}:
 \begin{equation}\label{LCF}
-\mathscr{L}_{C L F V}=\frac{m_\mu}{(1+\kappa) \Lambda^2} \bar{\mu}_R \sigma_{\mu \nu} e_L F^{\mu \nu}+\text{h.c.}+\frac{\kappa}{(1+\kappa) \Lambda^2} \bar{\mu}_L \gamma_\mu e_L\left(\sum_{q=u, d} \bar{q}_L \gamma^\mu \bar{q}_L\right)+\text{h.c.}
+\begin{aligned}
+\mathscr{L}_{C L F V}= & \frac{m_\mu}{(1+\kappa) \Lambda^2} \bar{\mu}_R \sigma_{\mu \nu} e_L F^{\mu \nu}+\text{h.c.}+ \\
+&\frac{\kappa}{(1+\kappa) \Lambda^2} \bar{\mu}_L \gamma_\mu e_L\left(\sum_{q=u, d} \bar{q}_L \gamma^\mu \bar{q}_L\right)+\text{h.c.}
+\end{aligned}
 \end{equation}
 $m_\mu$ is the muon mass and  $F^{\mu \nu}$ is the electromagnetic field tensor. This toy Lagrangian includes two parameters.
 $\Gamma$ is the effective energy scale of the new physics and $\kappa$ is the relative strengths of the two operators. The first term in the Lagrangian 
@@ -243,13 +254,13 @@ physics, one needs to combine information involving the rates of a different CLF
 The corresponding parameter space (the $\Gamma-\kappa$ plane) is shown in Figure \ref{fig:muchannelbr}, Ref. \cite{doi:10.1146/annurev-nucl-100809-131949}.
 \begin{figure}[!h]
 \centering
-\includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240307_161549.png}
+\includegraphics[width =0.7\textwidth]{figures/png/Screenshot_20240307_161549.png}
 \caption{History and outlook of branching ratio limits in muon rare decay modes, Ref. \cite{MARCIANO1977303}.}
 \label{fig:muchannel}
 \end{figure}
 \begin{figure}[!h]
 \centering
-\includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240313_120457.png}
+\includegraphics[width =0.7\textwidth]{figures/png/Screenshot_20240313_120457.png}
 \caption{Sensitivity of $\mu \rightarrow e\gamma$ and $\mu N \rightarrow eN$ experiments to the new physics
 scale $\Gamma$ as a function of $\kappa$ as defined in Equation \ref{LCF}, Ref. \cite{CGroup:2022tli}. The blue region is the New
 Physics phase space excluded by SINDRUM-II, Ref. \cite{SINDRUMII:2006dvw}. The red region represents the
@@ -259,66 +270,216 @@ expected limit that would be set by Mu2e, Ref. \cite{universe9010054}.}
 \label{fig:muchannelbr}
 \end{figure}
 \subsubsection{$\mu^+ \rightarrow e^+ \gamma$}
+A clear signal of CLFV, in $\mu^+ \rightarrow e^+ \gamma$ channel, is given by back-to-back electron and photon, each one with energy of 52.8 MeV, 
+both produced simultaneously. Positive muons are preferred since the negative ones may undergo the nuclear capture. 
+Muons are stopped and decay at rest. There are two most significant sources of background: Radiative Muon Decay (RMD) $\mu^+ \rightarrow e^+ \nu_e \bar{\nu}_\mu \gamma$ 
+and the accidental coincidence of $\mu^+ \rightarrow e^+ \nu_e \bar{\nu}_\mu$ with a random $\gamma$ 
+generated by annihilation or bremsstrahlung. The first one is an in-time process, where neutrinos carry off a small part of the energy 
+and it is only the 10\% of the total background. The accidental background is dominant. Since both backgrounds scale with the muon stop rate $\Gamma_\mu$, a continuous beam is preferred. 
+Moreover, since an higher number of stopped muons correspond to a lower statistical error, but at the same time to a lower signal to background ratio, an optimal $\Gamma_\mu$ exists.
+The stopping target thickness must optimized: a thin target is needed to minimise Multiple Coulomb Scattering, which affects the angular resolution of the outgoing electron, but 
+it must be thick enough to block a significant portion of incoming muons. 
 \paragraph{The MEG Experiment}
-\cite{megi}
+The MEG experiment, Ref. \cite{megi}, has been designed around two concepts: exploiting a liquid
+xenon detector (LXe) for positron and photon tracking and an anti-bottle magnetic field, Ref. \cite{clfv_signorelli}. 
+In Figure \ref{fig:meg}, the apparatus is shown. A polyethylene target is used to stop muons in the center of the magnet. 
+The measured quantities are the electron and photon energies ($E_e$ and $E_\gamma$) and the
+relative positions (angles $\theta_{e\gamma}$, $\phi_{e\gamma}$ and time $t_{e \gamma}$).
+A combination of drift chambers (DCH) and plastic scintillator timing counters (TC) measures the positron momentum.
+The photon energy and direction are measured in a volume of LXe with more than 800 photo-multipliers tubes. 
+An energy resolution of less than 1\% for each particles is required to distinguish background from the signal. 
+In MEG, the magnetic field decreases uniformly from centre to periphery, pushing particles away from the centre. 
+The exact shape of the field has been chosen to have a track radius proportional to the absolute momentum.
+This allows low energy positrons to be discarded by simply placing the detector far enough away from the magnet axis. 
+This feature is unique to the MEG magnetic system and justifies its name as \textit{COnstant Bending RAdius} (COBRA) magnets.
+The DCH spectrometer is composed by 16 trapezoidal drift chambers oriented radially and filled with He-C$_2$H$_6$. 
+The timing from the DCH and TC is used to assess the radial coordinate, whereas the $z$ location is determined by measuring the induced
+charged on the zig-zag shaped pads on the side of the drift chambers. The momentum resolution for $e^+$ is $\sim$ 330 keV.
+A liquid xenon scintillating detector was used for photon reconstruction to reduce passive material and improve temporal resolution. 
+This option provides more light yield than NaI crystals and has a substantially shorter decay period, with photon interaction times measured at less than 100 ps.
+MEG collected $7.5 \times 10^{14}$ stopped muons in 2008-2013, setting a limit of $BR(\mu^+ \rightarrow e^+ \gamma) < 4.2 \times 10^{-13}$ at 90\% C.L., Ref. \cite{megi}.
 \begin{figure}[!h]
 \centering
-\includegraphics[width =0.4\textwidth]{figures/png/Screenshot_20240307_150038.png}
-\caption{.}
+\includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240321_115127.png}
+\caption{Schematic view of the MEG detector, Ref. \cite{megi}.}
 \label{fig:meg}
 \end{figure}
-\paragraph{MEG II}
-\cite{megiicollaboration2024operation}
-\cite{megiicollaboration2024search}
+\paragraph{The MEG II experiment}
+The MEG II detector is the upgrade to the MEG one, Ref. \cite{megiicollaboration2024operation}.
+MEG II was proposed to reduce the contamination due to the accidental background that could not be further reduced in MEG.
+In Figure \ref{fig:meg2}, the apparatus is shown. The muon flux was increased up to $7 \times 10^7 \ \mu^+$/s and a thinner but more inclined 
+stopping target was installed to reduce the multiple scattering and bremsstrahlung 
+while keeping the same stopping power (205 $\rightarrow$ 140 $\mu$m).
+The old drift chamber was replaced with a new cylindrical drift chamber (CDCH) designed
+to have higher granularity and transparency and made of 9 layers of drift cells to
+improve positron track reconstruction. CDCH is shown in Figure \ref{fig:meg2}.
+A more segmented system (pixellated-TC) was adopted instead of plastic scintillator timing counters (TC).
+A Radiative Decay Counter was introduced, that is a target of scintillator and LYSO calorimeter positioned transversely to detect positron from RMD emitted at low angle.
+When combined with the final result of MEG, MEG II collaboration obtained the most stringent limit up to date, $BR(\mu^+ \rightarrow e^+ \gamma)<3.1\times 10^{-13}$ 90\% C.L., Ref. \cite{megiicollaboration2024search}.
+The MEG II collaboration took data in 2022 and 2023, collecting much more statistics compared to 2021. By 2026, more than twenty-fold increase in statistics is foreseen, with the goal of reaching a
+$BR(\mu^+ \rightarrow e^+ \gamma)\lesssim 6\times 10^{-14}$ 90\% C.L..
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240307_140116.png}
+    \caption{A sketch of the MEG II detector with a simulated $\mu^+ \rightarrow e^+ \gamma $ event, Ref. \cite{megiicollaboration2024operation}.}
+    \label{fig:meg22}
+    \end{figure}
 \begin{figure}[!h]
 \centering
-\includegraphics[width =0.4\textwidth]{figures/png/Screenshot_20240307_140235.png}
-\caption{.}
+\includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240307_140235.png}
+\caption{Picture of the open CDCH equipped with all the wires, Ref. \cite{megiicollaboration2024operation}.}
 \label{fig:meg2}
 \end{figure}
-\begin{figure}[!h]
-\centering
-\includegraphics[width =0.4\textwidth]{figures/png/Screenshot_20240307_140116.png}
-\caption{.}
-\label{fig:meg22}
-\end{figure}
+
+
+
+
+
+
 \subsubsection{$\mu^+ \rightarrow e^+ e^-  e^+ $}
+The CLFV signature of the $\mu^+$ decay at rest consists of two $e^+$ and one $e^-$ at the same time, 
+with total energy equal to the muon mass and null vector sum of the
+particle momenta.  The exact energy distribution of daughter particles needs understanding of the underlying physics, 
+which is currently unknown. To establish detector efficiency, the fraction of particles with momentum over a certain 
+threshold requires some physical assumptions.
+There are two main sources of background. The first one is the radiative muon decay with 
+internal conversion, $\mu^+ \rightarrow e^+ \gamma \nu_e \bar{\nu}_\mu$ with the radiative
+photon internally converting into an electron pair $\mu^+ \rightarrow e^+ e^+ e^- \nu_e \bar{\nu}_\mu$. 
+This process has a branching ratio of $BR\sim 3.4 \times 10^{-5}$.
+An experimental resolution of $\sim$1 MeV is needed in order to be sensitive to the small energy carried off by the neutrinos. 
+The second source of background is due to the coincidence of one Michel decay with a $e^+e^-$ pair (1-MD) or two Michel decays with a single $e^-$ (2-MD). 
+In this case, the $e^+e^-$ pair can be produced by Bhabha scattering or photon conversion, while the $e^+$
+can be produced by Compton scattering or mis-reconstructed $e^+$ and $e^+e^-$ (with the $e^-$ not reconstructed). 
+As a consequence, this source of background depends on the muon rate and
+can be suppressed with precise vertex reconstruction, timing and track reconstruction.
+As in the previous channel, the use of a continuous beam is preferred.
+Since this is a three-body decay and particles momenta span a range between few MeV 
+and half the muon mass, a thin and low-mass tracker with an excellent resolution is needed. 
 \paragraph{SINDRUM I}
-\cite{sindrumi}
+The current best limit on $\mu^+ \rightarrow e^- e^+ e^+$, $1.0 \times 10^{- 12}$ at 90\% C.L., was set by the
+SINDRUM I experiment at PSI, Ref. \cite{sindrumi}. A schematic view of the SINDRUM spectrometer is given in Figure \ref{fig:sindrumi}. 
+The spectrometer consisted of a double cone-shaped stopping target in the middle of five concentric multi-wire proportional chambers surrounded by an array of plastic
+scintillator counters inside a solenoidal magnetic field. Considering a 50 MeV $e^-/e^+$, the detector 
+apparatus had a momentum resolution at the level of $\sim$1 MeV, a timing
+resolution $\leq$1 ns and a vertex resolution of $\sim$1 cm. The trigger consisted of a charge filter, requiring one negative and two positive particles, within a time window of 7 ns, Ref. \cite{universe8060299}.
 \begin{figure}[!h]
 \centering
-\includegraphics[width =0.4\textwidth]{figures/png/The-SINDRUM-I-detector-in-the-horizontal-operating-orientation.png}
-\caption{.}
+\includegraphics[width =0.8\textwidth]{figures/png/The-SINDRUM-I-detector-in-the-horizontal-operating-orientation.png}
+\caption{Schematic view of the SINDRUM experiment, Ref. \cite{sindrumi}.}
 \label{fig:sindrumi}
 \end{figure}
-\paragraph{The Mu3e Experiment}
 
+\paragraph{The Mu3e Experiment}
+The goal of the Mu3e experiment is to achieve a single-event-sensitivity of the order
+of $10^{-16}$ on the $\mu^+ \rightarrow e^+ e^-  e^+ $ decay, Ref. \cite{hesketh2022mu3e} and \cite{papa}. 
+In Figure \ref{fig:mu3e}, a schematic view of Mu3e is shown.
+The same muon beam as MEG II experiment will employed, stopping muons on a thin hollow double-come Mylar target. 
+A 2 m cylinder will be placed inside a 1.5 T magnetic field and segmented in 5 sections. 
+The central station will consist of two double layers of pixel detectors and a
+scintillating fiber tracker. The other four stations will be made of two layers of pixel
+sensors and a hodoscope of scintillator. Since the Mu3e search relies heavily on accurate track reconstruction, multiple Coulomb
+scattering is a limiting factor and the technical choices adopted for the detector design
+have been taken to minimize this effect. The tracker consists of High Voltage Monolithic
+Active Pixel (HV-MAPS) and the design is such as to exploit the (partial) canceling of
+the multiple scattering in half of turn. The estimated time and vertex resolutions are
+$\sigma_t \sim 100$ ps and $\sigma_{xy} \sim 200 \ \mu$m and the momentum resolution will be 100 $\div$ 400 keV for 10 $\div$ 53
+MeV particles. The experiment is projected in three phases. During the first one, the beam will have an intensity of $\mathcal{O}(10^7) \ \mu^+$/s 
+and there will be only the tracker installed. After that, the beam with an intensity of $\mathcal{O}(10^8) \ \mu^+$/s will 
+be used and the scintillating fibers and two of the additional tracking stations will be added.
+During the third phase, beam intensity will increase up to $\mathcal{0}(10^9) \ \mu^+$/s and to 
+reach the single-event-sensitivity of $10^{-16}$, two stations will be added.
 \begin{figure}[!h]
 \centering
-\includegraphics[width =0.4\textwidth]{figures/png/Screenshot_20240307_161651.png}
-\caption{Longitudinal cross section of the detector. Positrons tracks in red, electron
-track in blue \cite{hesketh2022mu3e}}
+\includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240321_143650}
+\caption{Mu3e experimental setup layout (3D view). An example of a $\mu^+ \rightarrow e^+ e^-  e^+ $ decay event is shown, Ref. \cite{papa}.}
 \label{fig:mu3e}
 \end{figure}
+
+
+
+
+
+
+
+
+
 \subsubsection{$\mu^- N \rightarrow e^- N $}
+In this CLFV channel, negative muons are captured by a nucleus and the decay products are detected. The coherent conversion leaves the nucleus
+intact and minimal energy will be transmitted to the nucleus recoil.
+The signal signature is a monochromatic 105 MeV $e^-$. All other 105 MeV signals may be a source of background. 
+Cosmic rays can generate or can be misidentified as electrons in the signal region.
+Decay in orbit (DIO) can contaminate the signal region and High energy photons produced by radiative captures of pions (RPC) and muons (RMC) can convert 
+asymmetrically and generate high energy electrons. More detailed discussion about signal and backgrounds will be given in Section \ref{sigandbkg}.
+Among the previous processes, this channel offers the most powerful sensitivity. 
+Thanks to the one particle final state, this channel is not affected by accidental background.
+Another advantage, with respect to the $\mu \rightarrow e \gamma$ search, is the larger momentum
+and better separation of the electron signal from the background. The background level, due to low-momentum particles, can be reduced
+thanks to the \textit{hollow-cylinder} detectors. The muon capture process is incredibly fast ($\mathcal{O}(10^{-13})$ s) and is characterized by the emission of
+an X-ray, that can be detected. To cancel the uncertainty due to the overlap of the nucleus and the muon wave
+functions, the commonly used quantity to denote results in this type of searches is:
+\begin{equation}
+    R_{\mu e}=\frac{N(\mu \rightarrow e)}{N(\text{muon capture})}
+\end{equation}
+Through the detection of X-ray from muon capture, the denominator can be easily determined.
+As discussed in Section \ref{sigandbkg}, a pulsed beam is preferred.
+A characteristic of these experiments is that the apparatus lend itself to the additional
+search of the process $\mu^- N \rightarrow e^+ N$ which would violate also the leptonic number.
 \paragraph{SINDRUM II}
-\cite{SINDRUMII:2006dvw}
+PSI delivered a 1 MW 590 MeV proton beam that was extracted from the ring
+cyclotron and directed onto a 40 mm carbon target. The beam line
+transported secondary particles ($\pi$, $\mu$, $e$) emitted in the backward direction to the SINDRUM II spectrometer, as
+illustrated in Figure \ref{fig:sindrumii}. The structure of the experiment
+was cylindrical. The gold target (B), which had a radius of 20 mm, was positioned
+in the middle of the cylinder. Two drift chambers (F and G) were adopted to measure
+the helical trajectories, with the ionization electrons drifting radially towards the amplification 
+regions. The tracker used CO$_2$-isobutane (70\%/30\%) as a drift
+gas while the second one He-isobutane (85\%/15\%). Two 3 mm thick plastic scintillator hodoscopes (D) and a 3 cm 
+thick plexiglass Cherenkov hodoscope (E) provided trigger and time information. 
+The device included two end-cap hodoscopes at opposite ends of the tracking zone to aid in triggering 
+and resolving ambiguities during event reconstruction.The number of muons stopped
+was monitored observing the characteristic muonic gold X-rays passing through the
+superconducting coil of the spectrometer. A Ge(Li) detector was used for this purpose.
+SINDRUM II set the limit on the muon conversion at $7 \times 10^{-13}$, Ref. \cite{SINDRUMII:2006dvw}.
 \begin{figure}[!h]
 \centering
-\includegraphics[width =0.4\textwidth]{figures/png/Screenshot_20240307_163120.png}
-\caption{.}
+\includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240307_163120.png}
+\caption{Pictorial view of the SINDRUM II experiment, Ref. \cite{SINDRUMII:2006dvw}.}
 \label{fig:sindrumii}
 \end{figure}
 \paragraph{Mu2e}
+
+Mu2e will employ an 8 GeV, 25 kW pulsed proton beam, with 100 ns wide bunches spaced by 1.7 $\mu$s. 
+Figure \ref{fig:mu2escheme} shows a schematic view of the experimental setup and of the
+three sections of the experiment: Production Solenoid, Transport
+Solenoid and Detector Solenoid. The $S$ shape lowers the background due to 
+neutral particles and selects the charge sign: almost only negative muons will hit the stopping target. 
+The straw tube tracker and the crystal electromagnetic calorimeter are located down-stream of the Al target. 
+Both these detectors adopted a \textit{hollow-cylinder} geometry. 
+The estimated Mu2e sensitivity after three years of data taking is $R_{\mu e} < 3 \times 10^{-17}$, Ref. \cite{universe9010054}.
+Mu2e will be described extensively in the Chapter \ref{mu2echapter}.
+The Mu2e Collaboration is also performing preliminary studies for the upgraded Mu2e II, Ref. \cite{dukes}. 
+The proton beam intensity will be improved by the PIP-II upgrade that will increase the rate of stopped muons 
+on target from $10^{10} \ \mu^-$/s to $10^{11} \ \mu^-$/s. New detector technologies are under study for the upgraded
+Mu2e II.
 \paragraph{COMET}
-\cite{Abramishvili_2020}
+The COherent Muon-to-Electron Transition (COMET) experiment is under construction at
+the Japanese Proton Accelerator Research Center (J-PARC), Ref. \cite{Abramishvili_2020}. 
+This experiment has lots of similarities with Mu2e: COMET will employ a 8 GeV, 56 kW pulsed proton beam
+with a separation of 1.17 $\mu$s between the bunches. The two main differences between
+COMET and Mu2e can be seen from the schematic view of these experiments.
+The presence of a C-shaped (not S-shaped) transport solenoid will allow a tighter
+muon momentum selection, traded with a reduced beam intensity $\sim$70\%
+An extra curved solenoid after the stopping target will remove most of the non
+interesting electrons before reaching the tracker.
+COMET will be developed in two stages: Phase-I and Phase-II (Fig. 1.14).
+
 \begin{figure}[!h]
 \centering
 \includegraphics[width =0.4\textwidth]{figures/png/Screenshot_20240307_152133.png}
 \caption{Schematic layout of COMET (Phase-II) and COMET Phase-I (not in scale).}
 \label{fig:comet}
 \end{figure}
-\paragraph{Mu2e II}
+\paragraph{DeeMe}
 \cite{dukes}
 \subsection{$\tau$ Channels}
 The $\tau$ lepton is a very promising source of CLFV decays, Ref. \cite{universe8060299}. 
@@ -342,7 +503,6 @@ $e^+ e^- \rightarrow \mu^+ \mu^- \gamma$ or $e^+ e^- \rightarrow \tau^+ \tau^- \
 To reduce the background, it is possible to use the $\tau$ polarization or to collect large samples of
 $\tau$ leptons at a lower center-of-mass energy, where initial state radiation is negligible in the signal region. This might be the situation in a $\tau$-charm 
 factory operating slightly above the $\tau$ production threshold, Ref. \cite{Bennett_2016}.
-
 \begin{figure}[!h]
 \centering
 \includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240319_134052.png}

@@ -18,45 +18,45 @@ Warning--empty journal in TheLHCbCollaboration2008
 Warning--empty journal in stm
 Warning--empty journal in vadi
 Warning--empty year in vadi
-You've used 72 entries,
+You've used 73 entries,
             1791 wiz_defined-function locations,
-            876 strings with 14070 characters,
-and the built_in function-call counts, 13659 in all, are:
-= -- 1174
-> -- 499
+            883 strings with 14258 characters,
+and the built_in function-call counts, 13847 in all, are:
+= -- 1191
+> -- 503
 < -- 3
-+ -- 206
-- -- 134
-* -- 904
-:= -- 2227
-add.period$ -- 208
-call.type$ -- 72
-change.case$ -- 72
++ -- 208
+- -- 135
+* -- 917
+:= -- 2258
+add.period$ -- 211
+call.type$ -- 73
+change.case$ -- 73
 chr.to.int$ -- 0
-cite$ -- 85
-duplicate$ -- 627
-empty$ -- 1442
-format.name$ -- 134
-if$ -- 2986
+cite$ -- 86
+duplicate$ -- 636
+empty$ -- 1463
+format.name$ -- 135
+if$ -- 3027
 int.to.chr$ -- 0
-int.to.str$ -- 72
-missing$ -- 65
-newline$ -- 354
-num.names$ -- 69
-pop$ -- 175
+int.to.str$ -- 73
+missing$ -- 66
+newline$ -- 359
+num.names$ -- 70
+pop$ -- 176
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 271
+skip$ -- 274
 stack$ -- 0
-substring$ -- 836
-swap$ -- 86
+substring$ -- 851
+swap$ -- 87
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 13
-while$ -- 120
-width$ -- 74
-write$ -- 747
+while$ -- 122
+width$ -- 75
+write$ -- 758
 (There were 14 warnings)
