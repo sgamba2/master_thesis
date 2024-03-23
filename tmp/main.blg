@@ -8,6 +8,7 @@ Warning--entry type for "tsview" isn't style-file defined
 Warning--empty author in megi
 Warning--empty booktitle in deeme
 Warning--empty booktitle in dukes
+Warning--empty journal in em7
 Warning--empty institution in drac
 Warning--empty author in PhysRevD.104.032013
 Warning--empty journal in PhysRevD.104.032013
@@ -19,45 +20,45 @@ Warning--empty journal in TheLHCbCollaboration2008
 Warning--empty journal in stm
 Warning--empty journal in vadi
 Warning--empty year in vadi
-You've used 74 entries,
+You've used 81 entries,
             1791 wiz_defined-function locations,
-            905 strings with 15051 characters,
-and the built_in function-call counts, 13989 in all, are:
-= -- 1286
-> -- 303
+            943 strings with 15763 characters,
+and the built_in function-call counts, 15369 in all, are:
+= -- 1407
+> -- 359
 < -- 6
-+ -- 149
-- -- 75
-* -- 863
-:= -- 2181
-add.period$ -- 214
-call.type$ -- 74
-change.case$ -- 74
++ -- 170
+- -- 89
+* -- 952
+:= -- 2410
+add.period$ -- 235
+call.type$ -- 81
+change.case$ -- 81
 chr.to.int$ -- 0
-cite$ -- 88
-duplicate$ -- 676
-empty$ -- 1567
-format.name$ -- 75
-if$ -- 3127
+cite$ -- 96
+duplicate$ -- 738
+empty$ -- 1709
+format.name$ -- 89
+if$ -- 3430
 int.to.chr$ -- 0
-int.to.str$ -- 74
-missing$ -- 67
-newline$ -- 364
-num.names$ -- 71
-pop$ -- 186
+int.to.str$ -- 81
+missing$ -- 74
+newline$ -- 399
+num.names$ -- 78
+pop$ -- 197
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 300
+skip$ -- 328
 stack$ -- 0
-substring$ -- 1061
-swap$ -- 115
+substring$ -- 1149
+swap$ -- 121
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 14
-while$ -- 126
-width$ -- 76
-write$ -- 770
-(There were 15 warnings)
+warning$ -- 15
+while$ -- 140
+width$ -- 83
+write$ -- 845
+(There were 16 warnings)

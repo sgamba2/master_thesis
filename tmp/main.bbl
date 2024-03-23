@@ -125,6 +125,16 @@ Wilhelm~H. Bertl et~al.
 \newblock {Mu2e Tracker}.
 \newblock In {\em {(DOE IPR 2017 2017-07-25), mu2e-doc-11567-v3}}, {2017}.
 
+\bibitem{em7}
+N.~Atanov et~al.
+\newblock {The Mu2e Calorimeter Final Technical Design Report}.
+\newblock 2 2018.
+
+\bibitem{em4}
+Nikolay Atanov et~al.
+\newblock {The Mu2e Crystal Calorimeter: An Overview}.
+\newblock {\em Instruments}, 6(4):60, 2022.
+
 \bibitem{Giovannella_2020}
 {S. Giovannella}.
 \newblock {The detectors of the Mu2e experiment}.
@@ -395,6 +405,34 @@ D.~Ambrose et~al.
 {F. Abusalma et al.}
 \newblock {Expression of Interest for Evolution of the Mu2e Experiment},
   {2018}.
+
+\bibitem{em6}
+N.~Atanov et~al.
+\newblock {Towards the construction of the Mu2e electromagnetic calorimeter at
+  Fermilab}.
+\newblock {\em J. Phys. Conf. Ser.}, 2374(1):012021, 2022.
+
+\bibitem{em1}
+Nikolay Atanov et~al.
+\newblock {The Mu2e Crystal and SiPM Calorimeter: Construction Status}.
+\newblock {\em IEEE Trans. Nucl. Sci.}, 70(7):1281--1287, 2023.
+
+\bibitem{em5}
+Luca Morescalchi et~al.
+\newblock {The Readout Electronics of the Mu2e Electromagnetic Calorimeter}.
+\newblock {\em PoS}, PANIC2021:113, 2022.
+
+\bibitem{em2}
+S.~Ceravolo et~al.
+\newblock {Design and qualification of the Mu2e electromagnetic calorimeter
+  electronic system}.
+\newblock {\em Nucl. Instrum. Meth. A}, 1047:167875, 2023.
+
+\bibitem{em3}
+Nikolay Atanov et~al.
+\newblock {Mu2e Crystal Calorimeter Readout Electronics: Design and
+  Characterisation}.
+\newblock {\em Instruments}, 6(4):68, 2022.
 
 \bibitem{stm}
 {Palladino A., Quirk J. and Miller J.}
