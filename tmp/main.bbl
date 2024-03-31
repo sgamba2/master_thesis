@@ -466,6 +466,11 @@ Nikolay Atanov et~al.
   Accelerators, Spectrometers, Detectors and Associated Equipment}},
   {1046}:{167732}, {2023}.
 
+\bibitem{trkreq}
+{R. Bernstein and A. Mukherjee}.
+\newblock {Tracker Requirements Document}.
+\newblock {2016}.
+
 \bibitem{ryan}
 {Ryan Rivera, Richard Kwarciany}.
 \newblock {Mu2e Data Transfer Controller Module Hardware User Guide -

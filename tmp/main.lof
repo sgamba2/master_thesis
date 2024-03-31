@@ -44,14 +44,15 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Schematics of a drift tube, Ref. \cite {kola}.\relax }}{63}{figure.caption.49}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Electron drift velocity versus electric field in Ar:CO$_2$ mixtures of different proportions, Ref. \cite {ZHAO1994485}. 80\%:20\% Ar:CO$_2$ mixture is the gas used in the Mu2e Tracker.\relax }}{65}{figure.caption.50}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces The model of an ionisation avalanche forming at the anode wire of a proportional tube or chamber, Ref. \cite {kola}. (a) In the drift volume, electrons and ions are generated and drift to their corresponding electrodes. (b) Near the wire, the electron achieves a high enough field to induce secondary ionisation, resulting in an avalanche. (c) The electric field separates charges created during an avalanche. (d) Electrons have higher lateral diffusion than ions, causing the avalanche to expand around the wire and produce a positive charge cloud in the shape of a drop. (e) Electrons from the avalanche reach the anode within nanoseconds, but ions take longer, up to ms, to reach the cathode.\relax }}{66}{figure.caption.51}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces A picture of the Mu2e straw tube compared to a pencil, Ref. \cite {trk}.\relax }}{68}{figure.caption.52}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces The fully assembled tracker panel with its straws, Ref. \cite {trk}.\relax }}{69}{figure.caption.53}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Straw arrangement in a tracker panel, Ref. \cite {trk}.\relax }}{69}{figure.caption.54}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces An overview of the Tracker front-end electronics (FEE) \cite {vadimmu2e}. The preamps and the Analog Motherboard (AMB) on the other side of the straws are not shown in the figure.\relax }}{71}{figure.caption.55}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Digitizer Readout and Assembler Controller (DRAC) board schematics \cite {drac}. The DRAC board is the brain of the tracker panel. In this figure Analog to Digital Converters (ADCs), FPGAs, DDR3 memories and compators are shown.\relax }}{72}{figure.caption.56}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Signal flow through front end electronics \cite {bartoszek2015mu2e}.\relax }}{73}{figure.caption.57}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces The dependence of particle gain on applied voltage in gaseous ionisation detectors. The numbers on the axes are for orders of magnitude only and they depend on the device geometry and gas concentration. Drift tubes operate in the proportional mode, Ref. \cite {kola}.\relax }}{69}{figure.caption.52}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces A picture of the Mu2e straw tube compared to a pencil, Ref. \cite {trk}.\relax }}{70}{figure.caption.53}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces The fully assembled tracker panel with its straws, Ref. \cite {trk}.\relax }}{71}{figure.caption.54}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Straw arrangement in a tracker panel, Ref. \cite {trk}.\relax }}{71}{figure.caption.55}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces An overview of the Tracker front-end electronics (FEE) \cite {vadimmu2e}. The preamps and the Analog Motherboard (AMB) on the other side of the straws are not shown in the figure.\relax }}{73}{figure.caption.56}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Digitizer Readout and Assembler Controller (DRAC) board schematics \cite {drac}. The DRAC board is the brain of the tracker panel. In this figure Analog to Digital Converters (ADCs), FPGAs, DDR3 memories and compators are shown.\relax }}{74}{figure.caption.57}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Signal flow through front end electronics \cite {bartoszek2015mu2e}.\relax }}{75}{figure.caption.58}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Mu2e DAQ Architecture.\relax }}{80}{figure.caption.58}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Mu2e DAQ Architecture.\relax }}{82}{figure.caption.59}%
 \addvspace {10\p@ }

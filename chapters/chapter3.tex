@@ -27,7 +27,7 @@ The wire, called anode, receives a high voltage. Long and thin drift tubes, know
     \end{figure}
 Assuming an anode radius $a$, a cathode radius $b$ and using Gauss theorem, the electric field is:
 \begin{equation}\label{avalanche}
-    E(r)=\frac{1}{r}\frac{\lambda}{2\pi \epsilon}=\frac{1}{r}\frac{V}{ln(b/a)} \qquad (a<r<b)
+    E(r)=\frac{1}{r}\frac{\lambda}{2\pi \epsilon}=\frac{1}{r}\frac{V}{ \text{ln}(b/a)} \qquad (a<r<b)
 \end{equation}
 Where $\lambda$ is linear charge density on the wire and $\epsilon$ is the dielectric constant of the gas.
 Thinner wires are typically preferred in drift tubes. A greater electric field near the wire increases the amplification factor 
@@ -129,13 +129,13 @@ Since the free path is inversely proportional to the particle density in the gas
 It is reasonable to say that the coefficient is proportional to the field strength, $\alpha= \beta E$, in the low field region. 
 Adding this relation with Equation \ref{avalanche} and \ref{av}:
 \begin{equation}
-    ln(G)=\beta a E(a) ln\left( \frac{E(a)}{E_{min}}\right)
+     \text{ln}(G)=\beta \ a \ E(a) \ \text{ln}\left( \frac{E(a)}{E_{min}}\right)
 \end{equation}
 where $\beta$ can be related to $w_i$, that is the energy spent for one ionisation and its value is equal to $e \Delta V$.
 As the voltage drop per unit path length is $dV = E(s)ds = (\alpha/\beta)ds$, we obtain $dN=N \beta dV$. Integrating, we can see that
-$\beta=ln(2)/\Delta V$, so the gain in a drift tube is:
+$\beta= \text{ln}(2)/\Delta V$, so the gain in a drift tube is:
 \begin{equation}
-    ln(G)=\frac{ln(2)}{\Delta V} a E(a) ln\left( \frac{E(a)\rho_0}{E_{min}(\rho_0)\rho}\right) \qquad E(a)=\frac{V}{a ln(b/a)}
+     \text{ln}(G)=\frac{ \text{ln}(2)}{\Delta V} \ a \ E(a)  \ \text{ln}\left( \frac{E(a)\rho_0}{E_{min}(\rho_0)\rho}\right) \qquad E(a)=\frac{V}{a ln(b/a)}
 \end{equation}
 which is the Diethorn's formula. 
 Gain measurements with variable $\rho$/$\rho_0$, $a$, and $E(a)$ can provide the parameters $E_{min} (\rho_0)$ and $\Delta V$. 
@@ -151,12 +151,89 @@ secondary avalanches, leading to a continuous discharge. The use of quench gas p
 avalanches by absorbing ionising photons before they travel far. A tiny quantity of quench gas during normal operation 
 can significantly decrease secondary avalanches and breakdowns.
 \subsubsection{Operation Modes of Gaseous Ionization Detectors}
+In drift tube detectors, the number of electron-ion pairs formed during an avalanche is 
+proportional to the starting number of electrons, as shown in the gain computation. To 
+operate in a proportional mode, an appropriate voltage is needed to reduce the effects 
+of avalanche charges on the electric field. Figure \ref{fig:gaseous} illustrates how a 
+gaseous ionisation detector may work in multiple modes based on the operating voltage. Higher operating 
+voltage leads to higher charges on the electrodes. Low voltage causes ionisation charges to recombine 
+before reaching electrodes, leading to no signal collection. At higher voltages, in ionisation chamber 
+region, charges can drift to electrodes, but the electric field is insufficient for avalanches to occur. 
+Increasing the operational voltage leads to drift tubes and proportional counters. When the voltage 
+becomes high enough, proportionality is lost. When electrons from an avalanche are collected, 
+the high density of positive ions near the anode might affect the electric field. 
+Electrons in future avalanches that enter the area between the positive ion cloud and the wire face a 
+decreased electric field, resulting in lower amplification. The electric field becomes greater in the 
+tail of the avalanche, which is far from the wire than the ion cloud. This range of voltage is called region of 
+limited proportionality. When the operating voltage reaches high values, 
+avalanches create sufficiently energy photons to cause secondary avalanches 
+that propagate across the detector, independently from the quench gas. 
+This results in detector saturating the output. This way of operating is 
+called breakdown mode, commonly known as the Geiger-Muller mode.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width =0.5\textwidth]{figures/png/Screenshot_20240330_203416.png}
+    \caption{The dependence of particle gain on applied voltage in gaseous ionisation detectors. 
+    The numbers on the axes are for orders of magnitude only and they depend on the device geometry and gas concentration. 
+    Drift tubes operate in the proportional mode, Ref. \cite{kola}.}
+    \label{fig:gaseous}
+    \end{figure}
 \subsection{Signal Creation and Propagation}
-\subsection{Example Detector Responses}
-\subsubsection{Minimum Ionizing Particles}
-\subsubsection{High Energy Particles}
+Drift tube signals do not originate from avalanche charges. In this case, the anode wire would 
+receive the complete signal within a few ns. Signal pulses are created by charges on electrodes 
+caused by electron and ion mobility. The Shockley-Ramo theorem, Ref. \cite{kola}, can be 
+used to determine the induced charge and current. 
+The Shockley-Ramo theorem yields various important results. The total induced charge of a moving charge 
+$q$ is determined by the initial and final positions only.  A charge pair induces the same amount of 
+charge on an electrode as the charge collected on it. Furthermore, if all electrodes are treated as 
+an unity, their weighted potential will be one. 
+If one electrode completely encloses the others, the weighted field in the contained region is always zero. 
+This means that the total induced current across all electrodes is always zero. The Shockley-Ramo theorem can 
+be applied to the drift tube. In an avalanche with $N$ electron-ion pairs, we evaluate the induced current 
+signal on the anode wire. The current on the cathode has an additional negative sign. The weighted 
+potential and field in the straw depend on the radial coordinate $r$:
+\begin{equation}
+    \psi_w(r)=\frac{\text{ln}(b/r)}{\text{ln}(b/a)}
+\end{equation}
+\begin{equation}
+    \textbf{E}_w(r)=\frac{1}{\text{ln}(b/a)}\hat{\textbf{r}}
+\end{equation}
+As previously mentioned, the drift velocity of ions, $u$, is proportional to the electric field intensity $E$. Therefore, $u$ = $mu \ E$. 
+Then the ion trajectory fulfils:
+\begin{equation}
+    u=\frac{dr(t)}{dt}=\frac{\mu V_0}{r(t)\text{ln}(b/a)}
+\end{equation}
+When ionisation occurs at the anode, the starting condition can be approximated as $r(0) = a$. So, the solution to the given differential equation is:
+ \begin{equation}
+    r(t)=a \sqrt{1+\frac{t}{t_0}} \qquad t_0=\frac{a^2 \ln (b / a)}{2 \mu V_0}
+    \end{equation}
+Here, $t_0$ represents the characteristic time, which is generally on the order of 1 ns. 
+The time $t$ falls within the range $0 < t < t_{max}$, where $t_{max} = t_0 [(b/a)^2 - 1]$. 
+The induced current and charge from the wire are expressed as:
+ \begin{equation}
+    I_{i o n}^{i n d}(t)=-(e N) E_w(r) \frac{\mathrm{d} r(t)}{\mathrm{d} t}=-\frac{e N}{2 \ln (b / a)} \frac{1}{t+t_0}
+    \end{equation}
+    \begin{equation}
+        Q_{\text {ion }}^{\text {ind }}(t)=\int_0^t I^{\text {ind }}\left(t^{\prime}\right) \mathrm{d} t^{\prime}=-\frac{e N}{2 \ln (b / a)} \ln \left(1+\frac{t}{t_0}\right)
+        \end{equation}
+The total charge created on the wire by the travelling electrons is:
+\begin{equation}
+    Q_e^{i n d}=-e N\left[\psi_w(a)-\psi_w\left(r_{a v g}\right)\right]=-e N \frac{\ln \left(r_{a v g} / a\right)}{\ln (b / a)}
+    \end{equation}
+    where $r_{avg}$ is the average position of ionisations in the avalanche. When compared to the total charge 
+    induced $Q^{ind}_{tot}(t_{max}) = -eN$, electron mobility in the avalanche accounts for just 1-2\%. 
+    Positive ion drift from the avalanche accounts for the majority of the signal. A signal propagates 
+    to both ends of the drift tube from the avalanche location.
+    Signals with distinct frequency components can propagate at varying velocities. This causes the signal to disperse.
+    When determining the longitudinal coordinate of an avalanche using the signal arrival time difference between straw tube ends, various complications emerge.
+%For low-frequency components of the signal (for a meter-long drift tube, this translates to a frequency much less than 300 MHz), 
+%a quasi-electrostatic approach is sufficient. The signals seen at tubes ends are influenced by impedances between and on the electrodes. 
+%On the other hand, for the high-frequency components of the signal, the tube needs to be treated as a transmission line. 
+%The propagation speed of a signal wave with frequency $\omega$ is then $c/\sqrt{\omega}$ $\epsilon$($\omega$), 
+%where $c$ is the speed of light and $\epsilon$ is the dielectric constant of the gas. As $\epsilon$ is a function of $\omega$, 
+%components of different frequencies propagate at slightly different velocities. This leads to a dispersion (widening) of the signal. It brings some subtleties when using signal arrival time difference between straw tube ends to determine the longitudinal coordinate of an avalanche.
 \section{Tracker panels}
-The Mu2e Tracker's straw tube arrays use the same detection principles as the gaseous ionisation detectors, Ref. \cite{kola}, 
+The Mu2e Tracker straw tube arrays use the same detection principles as the gaseous ionisation detectors, Ref. \cite{kola}, 
 but it has a significant different design and manufacturing improvements to meet the experiment precise requirements.
 \begin{figure}[!h]
     \centering
@@ -320,5 +397,15 @@ out of each 1333 ms), we want us to be able to take data from cosmic
 rays, even if the rate will be very low. For this purpose, the ROCs 
 include external DRAM. The communication is flexible, thanks to the 
 programmable nature of digitizer, ROC and DAQ. 
-
-XXXX immagine 
+\section{Requirements on Tracker Performance}
+Here a resume of the requirements that the Tracker must satisfy to ensure the success of the experiment is presented, Ref. \cite{trkreq}.
+A momentum resolution less than 180 keV/c for a 105 MeV/c electron is needed in the nominal
+1 Tesla solenoidal field, as measured at the front face of the tracker volume (before
+passing through any tracker related material). Non-Gaussian tails, particularly any
+high-side tail, must be controlled such that the DIO background results in much less
+than one event at design sensitivity. To reach this, simulation results indicate that 
+a single straw requires around 4 cm of longitudinal and 200 $\mu$m of transverse resolution for drift path lengths. 
+It must have an acceptance of approximately 20\% for conversion electrons.
+The Tracker must operate in an ambient vacuum (< $10^{-4}$ Torr).
+It should be able to withstand a rate of 5 MHz per straw (highest rate straw) 500 ns after the spill. This is
+for background studies. The nominal experiment live time starts 700 ns after the spill.
