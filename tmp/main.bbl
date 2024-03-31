@@ -135,6 +135,11 @@ Nikolay Atanov et~al.
 \newblock {The Mu2e Crystal Calorimeter: An Overview}.
 \newblock {\em Instruments}, 6(4):60, 2022.
 
+\bibitem{calo95}
+N.~Atanov et~al.
+\newblock The mu2e undoped csi crystal calorimeter.
+\newblock {\em Journal of Instrumentation}, 13(02):C02037, feb 2018.
+
 \bibitem{Giovannella_2020}
 {S. Giovannella}.
 \newblock {The detectors of the Mu2e experiment}.
@@ -145,6 +150,14 @@ Nikolay Atanov et~al.
 {H. Kolanoski, N. Wermes}.
 \newblock {\em {Particle detectors}}.
 \newblock { Oxford University Press}, {2020}.
+
+\bibitem{ZHAO1994485}
+T.~Zhao, Y.~Chen, S.~Han, and J.~Hersch.
+\newblock A study of electron drift velocity in ar:co2 and ar:co2:cf4 gas
+  mixtures.
+\newblock {\em Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment},
+  340(3):485--490, 1994.
 
 \bibitem{vadimmu2e}
 {V. L. Rusu}.
@@ -445,6 +458,14 @@ Nikolay Atanov et~al.
   National Research Laboratory}.
 \newblock {Dec. 15, 2015}.
 
+\bibitem{GIOIOSA2023167732}
+{Antonio Gioiosa et al.}
+\newblock {Status of the data acquisition, trigger, and slow control systems of
+  the Mu2e experiment at Fermilab}.
+\newblock {\em {Nuclear Instruments and Methods in Physics Research Section A:
+  Accelerators, Spectrometers, Detectors and Associated Equipment}},
+  {1046}:{167732}, {2023}.
+
 \bibitem{ryan}
 {Ryan Rivera, Richard Kwarciany}.
 \newblock {Mu2e Data Transfer Controller Module Hardware User Guide -
@@ -454,13 +475,5 @@ Nikolay Atanov et~al.
 \bibitem{vadi}
 {vadim}.
 \newblock {vadim}.
-
-\bibitem{GIOIOSA2023167732}
-{Antonio Gioiosa et al.}
-\newblock {Status of the data acquisition, trigger, and slow control systems of
-  the Mu2e experiment at Fermilab}.
-\newblock {\em {Nuclear Instruments and Methods in Physics Research Section A:
-  Accelerators, Spectrometers, Detectors and Associated Equipment}},
-  {1046}:{167732}, {2023}.
 
 \end{thebibliography}

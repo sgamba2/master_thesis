@@ -1,12 +1,14 @@
 \chapter{The Mu2e Tracker}\label{chaptertrk}
 
-\textit{The following section will focus on the Mu2e Tracker. 
+\textit{The following section will focus on the Mu2e Tracker, the most important detector in Mu2e. 
 This chapter will give further information about the straw tube Tracker panel, 
 including its detection mechanism, the mechanical design and the front end electronics FEE.
 As previously pointed out, the Mu2e Tracker is made up of 216 identical panels. 
 Each panel is a mechanical and electrical standalone module. Each panel has 96 drift 
 tubes used as fundamental detecting components. I will start by discussing the 
-theoretical characteristics of drift tubes. Most of the discussion is based on \cite{kola} and XXX.}
+theoretical characteristics of drift tubes and then I will go more in detail with Mu2e Tracker features. 
+Most of the discussion is based on \cite{kola} and \cite{bobbb}.}
+
 \section{Drift Tubes}
 Gas detectors are capable of measuring charged particle coordinates. 
 They provide great spatial resolution and detection efficiency at a low cost, Ref. \cite{kola}. 
@@ -24,17 +26,130 @@ The wire, called anode, receives a high voltage. Long and thin drift tubes, know
     \label{fig:drifttube}
     \end{figure}
 Assuming an anode radius $a$, a cathode radius $b$ and using Gauss theorem, the electric field is:
-\begin{equation}
+\begin{equation}\label{avalanche}
     E(r)=\frac{1}{r}\frac{\lambda}{2\pi \epsilon}=\frac{1}{r}\frac{V}{ln(b/a)} \qquad (a<r<b)
 \end{equation}
 Where $\lambda$ is linear charge density on the wire and $\epsilon$ is the dielectric constant of the gas.
 Thinner wires are typically preferred in drift tubes. A greater electric field near the wire increases the amplification factor 
 of the drift tube at the same voltage. Additionally, smaller wires improve spatial resolution, Ref. \cite{kola}. 
 \subsection{Gas Ionization}
+Two are the interactions that can deposit energy when particles traverse the gas volume: ionization and excitation.
+Collisions between a charged particle $C$ and an atom $A$ can result in the ejection of one or more electrons: 
+$A \ C \rightarrow A^+ e^- C$, or $A \ C \rightarrow A^{++} e^- e^- C$, if more than one electron is released.
+This process is called primary ionisation. The mean energy loss per path length can be determined using the Bethe-Bloch formula.
+A noble gas atom $A$ can turn also into an excited state $A^*$ through the interaction $A \ C \rightarrow A^* C$. 
+If the excitation energy of $A^*$ is higher than the ionization potential of another species $B$ in the gas, the quencher, the
+Penning Effect can produce ionization through $A^*B \rightarrow A B^+ e^-$. In addition, the noble gases can
+also form molecular ions through processes such as $A^* A \rightarrow A_{2}^{*} \rightarrow A^+_2 e^-$.
+A secondary ionisation can occurr through these processes or through electrons that have sufficient energy for generating more ions.
+To compute the average number of electron-ion pairs produced by an initial particle, divide its total energy loss 
+by the average energy required to make an electron-ion pair. Due to the energy lost during excitation, this average 
+does not match the gas ionisation potential. Measurements showed an average of one electron-ion pair every 
+30 eV, with variations depending on gas composition and starting particle. Except for very slow particles, 
+this value remains constant regardless of their initial energy.
+Without an electric field, electrons and ions created during ionisations spread uniformly. 
+Collisions cause them to lose energy and eventually reach thermal equilibrium with the surrounding gas. 
+They eventually recombine. An electron maximal range during ionisation is correlated with its initial kinetic 
+energy. In a normal temperature and pressure gas, a 10 keV electron may be stopped in approximately 1 mm. 
+Ionised electrons often have reduced kinetic energy, leading to a shorter range.
 \subsection{Drift of Ions and Electrons}
+The electric field accelerates free electrons and ions towards the anode and cathode 
+along the field lines. As charges accelerate, they scatter on other particles in the gas, 
+losing energy. The directions of motion are randomised, and maximum speeds are set. As a result, 
+charges move uniformly along the electric field. This is referred to as the drift velocity of the 
+charge. It is superimposed with the thermal motions.
+Drift velocities for ions and electrons varies based on several parameters. Ions have a bigger mass 
+than electrons and their masses are comparable to those of gas molecules. During collisions, gas 
+molecules absorb a significant portion of the energy gained from ions during acceleration. In a drift 
+tube detector just a little amount of electric field energy enters the energy associated with ion motion, 
+making it comparable to the initial thermal energy before acceleration. 
+The ion drift velocity $v_i$ is proportional to the reduced electric field $E/N$ where N is the number density of the gas 
+and it is typically $\mathcal{O}(10^3)$ cm/ns, except in the region near to the anode wire where a stronger 
+electric field is present. The ion thermal velocity is typically $\mathcal{O}(10^4)$ cm/ns at room temperature.
+On the opposite, only a small fraction of the energy is released during elastic collision from electrons, 
+so they acquire more energy from the electric field than their thermal energy.
+Many different factors impact electron drift velocity. Some gas molecules, such as H$_2$O or CO$_2$, 
+can interact with electrons to produce negative ions due to their great electron affinity. In rare situations, 
+electrons gather enough energy to exceed gas molecule excitation threshold, resulting in inelastic collisions. 
+Electron drift velocity is a complex function of electric field intensity due to several variables influencing 
+electron collisions across a large energy range. Figure \ref{fig:drift} shows the electron drift
+velocity at different electric field strengths in argon-carbon dioxide mixtures (Ar-CO$_2$) of different
+proportions, Ref. \cite{ZHAO1994485}.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width =0.7\textwidth]{figures/png/Screenshot_20240330_102206.png}
+    \caption{Electron drift velocity versus electric field in Ar:CO$_2$ mixtures of different proportions, Ref. \cite{ZHAO1994485}. 
+    80\%:20\% Ar:CO$_2$ mixture is the gas used in the Mu2e Tracker.}
+    \label{fig:drift}
+\end{figure}
+Electron drift velocities in drift tubes are typically $\mathcal{O}(10^6)$ cm/ns.
+This is significantly higher than ion drift velocities and comparable to electron thermal velocity under the same conditions. 
+The radial coordinate of an ionisation can be computed using the electron drift velocity and time.
+Since drifting electrons and ions are scattered on gas molecules, they also diffuse along their trajectory. 
+Electrons diffuse significantly quicker than ions because of their high velocity. Electron diffusion limits 
+the intrinsic resolution of drift tubes used to measure incoming particle coordinates. CO$_2$ has internal 
+degrees of freedom at low collision energies, preventing electron energies from exceeding thermal energy until 
+field strengths above about 2 kV/cm. This improves intrinsic spatial resolution.
 \subsection{Avalanche Multiplication}
+Electrons can ionise when they face a high electric field near the anode wire. 
+The released secondary electrons form tertiary electrons, and so on. Free electrons rapidly multiply, 
+resulting in an avalanche. In a drift tubes, where the electron mean free path is about the order of $\mu$m, 
+an avalanche develops when the electric field approaches $\mathcal{O}(10)$ kV/cm. 
+According to Equation \ref{avalanche}, using $a \sim \mathcal{O}(10^{-3})$ cm, $b \sim \mathcal{O}(1)$ cm and
+a normal voltage of 1-2 kV, the avalanches can occur within $\mathcal{O}(100) \ \mu$m from the anode wire. 
+Electrons from the avalanche are collected on the anode wire within 1 ns, while positively charged ions move towards the cathode.
+Drifting ions mostly generate signals in electrodes via induction. Figure \ref{fig:avalanche} shows the model of an ionisation avalanche.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width =0.7\textwidth]{figures/png/Screenshot_20240330_182509.png}
+    \caption{The model of an ionisation avalanche forming at the anode wire of a proportional tube or chamber, Ref. \cite{kola}. 
+    (a) In the drift volume, electrons and ions are generated and drift to their corresponding electrodes. 
+    (b) Near the wire, the electron achieves a high enough field to induce secondary ionisation, resulting in an avalanche. 
+    (c) The electric field separates charges created during an avalanche. 
+    (d) Electrons have higher lateral diffusion than ions, causing the avalanche to expand 
+    around the wire and produce a positive charge cloud in the shape of a drop. 
+    (e) Electrons from the avalanche reach the anode within nanoseconds, but ions take longer, up to ms, to reach the cathode.}
+    \label{fig:avalanche}
+\end{figure}
 \subsubsection{Avalanche Gain}
+When an avalanche develops, the amplification factor is around $10^4-10^6$. The number of electrons freed per unit path length is given
+by the first Townsend ionization coefficient $\alpha=\sigma_{ion}n=1/\lambda_{ion}$ and this depends on the electric field $E$, 
+as a higher electric field corresponds to a higher kinetic energy of the electron, that increases the ionization cross-section.
+The increase $dN$ of the number of electron-ion pairs over a path length $ds$ is, Ref. \cite{kola}:
+\begin{equation}
+    dN=\alpha(E)Nds
+\end{equation}
+Solving this equation, we can easily obtain the gas amplification $G$:
+\begin{equation}\label{av}
+    G=\frac{N(s_a)}{N_0}=\text{exp} \left( \int_{s_0}^{s_a} \alpha(E(s)) ds \right)=\text{exp} \left( \int_{E_{min}}^{E(a)} \frac{\alpha(E(s))}{dE/ds} dE \right)
+\end{equation}
+where $N_0$ corresponds to unamplified electrons in $s=s_0$ and $E_{min}$ corresponds to the minimum energy 
+for ionisation to occurr. The energy distribution depends on the electric field which is position dependent. 
+Since the free path is inversely proportional to the particle density in the gas, $E_{min}(\rho)=E_{min}(\rho_0)\rho/\rho_0$.
+It is reasonable to say that the coefficient is proportional to the field strength, $\alpha= \beta E$, in the low field region. 
+Adding this relation with Equation \ref{avalanche} and \ref{av}:
+\begin{equation}
+    ln(G)=\beta a E(a) ln\left( \frac{E(a)}{E_{min}}\right)
+\end{equation}
+where $\beta$ can be related to $w_i$, that is the energy spent for one ionisation and its value is equal to $e \Delta V$.
+As the voltage drop per unit path length is $dV = E(s)ds = (\alpha/\beta)ds$, we obtain $dN=N \beta dV$. Integrating, we can see that
+$\beta=ln(2)/\Delta V$, so the gain in a drift tube is:
+\begin{equation}
+    ln(G)=\frac{ln(2)}{\Delta V} a E(a) ln\left( \frac{E(a)\rho_0}{E_{min}(\rho_0)\rho}\right) \qquad E(a)=\frac{V}{a ln(b/a)}
+\end{equation}
+which is the Diethorn's formula. 
+Gain measurements with variable $\rho$/$\rho_0$, $a$, and $E(a)$ can provide the parameters $E_{min} (\rho_0)$ and $\Delta V$. 
+The gas temperature $T$, pressure $P$ and operating voltage $V$ significantly impact the gain of a drift tube with a particular shape and gas mixture. 
 \subsubsection{Quench Gas}
+To avoid subsequent avalanches, the drift tube gas combination may contain a quench gas, such as CO$_2$, 
+methane, or other hydrocarbons. During an avalanche, photons are created by gas deexcitation and electron 
+attachment to electronegative species, resulting in negative ions. Photons can generate ionisations 
+outside the primary avalanche zone or create free electrons on the cathode surface, resulting in secondary avalanches.
+The difficulty arises when the signal created is not proportional to thedeposited energy by the original particle 
+and is no longer localised to the energy deposition point. Enough intense photons can induce a chain reaction of 
+secondary avalanches, leading to a continuous discharge. The use of quench gas prevents subsequent 
+avalanches by absorbing ionising photons before they travel far. A tiny quantity of quench gas during normal operation 
+can significantly decrease secondary avalanches and breakdowns.
 \subsubsection{Operation Modes of Gaseous Ionization Detectors}
 \subsection{Signal Creation and Propagation}
 \subsection{Example Detector Responses}
@@ -94,8 +209,8 @@ The vacuum environment within the Detector Solenoid reduces the impact of electr
 However, the Tracker panels, particularly the straws, must endure pressure differences. Under normal temperature 
 and pressure, each panel must have an average leak rate of 0.014 cm$^3$/min. The nominal operating voltage of 
 the straw tube channels is 1450 V. An earlier investigation on a prototype of the Tracker showed the straw tube 
-gain as 1.25 $\times$ 10$^4$ at 1250 V and 7 $\times$ 10$^4$ at 1425 V. According to Diethorn's calculation, Equation \ref{XXX}, 
-the gas gain at 1450 V is around 1 $\times$ 10$^5$.
+gain as 1.25 $\times$10$^4$ at 1250 V and 7 $\times$ 10$^4$at 1425 V. According to Diethorn's calculation, Equation \ref{XXX}, 
+the gas gain at 1450 V is around 1 $\times$10$^5$.
 
 \section{Tracker Front-End Electronics}
 Before being accessible to the Mu2e Data Acquisition (DAQ) system, the analog signals 

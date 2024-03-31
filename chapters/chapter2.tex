@@ -33,8 +33,8 @@ of muonic atoms undergo muon nuclear capture. The remaining 39.1\% undergo muon 
 The experiment aims to identify a third decay mode, neutrinoless muon-to-electron 
 conversion $\mu^- N \rightarrow e^- N $. Detectors are designed to detect the signature of a 
 single monoenergetic electron: this will be explored further in the next sections.
-The Mu2e experiment can detect the lepton-number violation process $\mu^- N \rightarrow e^+ N'$.
-This process violates both the charged lepton flavor and the total lepton number ($|\Delta L|$ = 2). 
+The Mu2e experiment can detect the lepton-number violation process $\mu^- N \rightarrow e^+ N'$.
+This process violates both the charged lepton flavor and the total lepton number ($|\Delta L|$ = 2). 
 Conversion positrons tracks helices in the Tracker, but with different chirality from electrons. 
 \section{Signals and Backgrounds}\label{sigandbkg}
 \subsection{Conversion Electron Signal}
@@ -321,11 +321,20 @@ Moreover, the branching ratio ($BR$) of the conversion varies depending on the s
 
 \section{Detectors}
 \subsection{The Tracker}\label{trackersec}
-The Mu2e Straw Tube Tracker will measure conversion electrons momentum. 
-It is located inside the DS, downstream of the stopping target. 
+The Mu2e Straw Tube Tracker will measure conversion electrons momentum.
+The Tracker must have as good resolution as is reasonably achievable
+in order to minimize backgrounds, especially from the DIO electrons, Ref. \cite{bobbb}.
+Since $dE/dx$ in the stopping target spreads the 
+monochromatic energy distribution of the conversion electron downwards, 
+it is needed to stop as many muons as possible. DIO events are smeared near the conversion 
+peak as well, but this is a stochastic process. Conversion electrons with high energy loss 
+might end up in the DIO spectrum with lower energy loss. Energy loss in the tracker needs 
+to be as small as possible, since the stopping target only stops about 40\% of muons. 
+To achieve excellent resolution, small high-side tails and minimal energy loss, the experiment 
+will employ a straw tube tracker, Ref. \cite{bobbb}.
+The Tracker is located inside the DS, downstream of the stopping target. 
 Its shape follows the helical trajectories of conversion electrons 
-in the magnetic field. The Mu2e Tracker detects particles using gas 
-drift tubes, \textit{straw tubes}. 96 straw tubes are arranged in 
+in the magnetic field. 96 straw tubes are arranged in 
 two staggered layers to form a panel, Ref. \cite{bartoszek2015mu2e}. 
 The basic standalone module both mechanically and electrically is 
 shown in Figure \ref{fig:trkpanel}, upper left. Each panel, that is 
@@ -333,7 +342,8 @@ harp-shaped, spans 120°. The straw tubes are arranged like harp chords.
 The electronics is stored in the outer volume. The Mu2e Tracker has a 
 very limited material component, particularly in the straw region, 
 which reduces the probability of scattering conversion electrons 
-and increases the momentum resolution. The panels are combined 
+and increases the momentum resolution. The simulated resolution is shown in Figure \ref{fig:trkres}. 
+The panels are combined 
 using the approach indicated in Figure \ref{fig:trkpanel}, upper right, 
 Ref. \cite{trk}. Three panels create a full circle and two layers of six 
 panels, rotated by 30°, form a plane. A station is made up of two planes 
@@ -350,6 +360,17 @@ The assembled tracker, with 18 stations. Stations are shown in
 grey and support structure in gold, Ref. \cite{bartoszek2015mu2e}.}
 \label{fig:trkpanel}
 \end{figure}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width =0.7\textwidth]{figures/png/Screenshot_20240330_104830.png}
+    \caption{The simulated resolution of the Mu2e tracker for electrons at the
+    conversion energy. The asymmetric low-side tail is caused by the tracker 
+    stochastic energy loss mechanism. The high-side tail, where decay-in-orbit 
+    events would be much more present with respect to the signal region, is small. 
+    The simulation take into account all beam, tracker, electronics and DAQ 
+    properties, Ref. \cite{bobbb}.}
+    \label{fig:trkres}
+    \end{figure}
 Figure \ref{fig:sttrk} shows that the Tracker straws are only 
 in the active region with radius ranging from 380 mm to 700 mm. 
 The central part of the Tracker is not instrumented. A similar annular 
@@ -397,6 +418,12 @@ The separation was chosen to match half of the distance between two periods in t
 typical 105 MeV conversion electron. This maximizes the detection probability of conversion electrons in the
 calorimeter. Electrons that pass through the hole of the first disk will be detected by the second one.
 The disks inner radius is 35 cm and the outer one is 66 cm. A schematic view of the calorimeter is shown in Figure \ref{fig:calo1}.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width =0.7\textwidth]{figures/png/Screenshot_20240322_122050.png}
+    \caption{The Mu2e Calorimeter annular disks, Ref. \cite{em7}.}
+    \label{fig:calo1}
+\end{figure}
 Each calorimeter disk is filled with 674 undoped cesium iodide (CsI) crystals, Ref. \cite{em6}, wrapped with a 150 $\mu$m foil of Tyvek. 
 Tyvek is pure CsI, with a wavelenght peak emission at 315 nm and a scintillation time of 20 ns: it was chosen because of its
 fast emission and low cost. The crystals are 34 $\times$ 34 $\times$ 200 mm$^3$ in dimensions, as shown in Figure \ref{fig:calo2} (top right). 
@@ -411,7 +438,25 @@ Since the main scintillation component has a wavelength of 310 nm to match the S
 photon detection efficiency as a function of wavelength, each crystal is coupled with a readout 
 module consisting of two ultraviolet (UV)-extended Silicon Photomultiplier (SiPM) arrays
 and the corresponding analog front-end electronics (FEE) boards, as illustrated in Figure \ref{fig:calo2} (bottom right), 
-Ref. \cite{em5}, \cite{em2} and \cite{em3}. Each SiPM is composed of a 2 $\times$ 3 array of individual 6 mm $\times$ 6 mm cells. 
+Ref. \cite{em5}, \cite{em2} and \cite{em3}. 
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width =0.7\textwidth]{figures/png/Screenshot_20240322_121000.png}
+    \caption{Left: the CAD of the two calorimeter disks. Top right: the calorimeter parallelepiped shaped crystals.
+            Bottom right: two SiPM arrays glued onto copper holder on the left and one readout 
+            unit formed by two SiPM arrays and two FEE boards mounted on its
+            copper holder and on the right, Ref. \cite{em4}.}
+    \label{fig:calo2}
+\end{figure}
+\begin{figure}[!h]
+        \centering
+        \includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240322_121017.png}
+        \caption{Left: the breakout of calorimeter mechanical components. Top right: the breakdown of front
+        panel plate. Bottom right: the mezzanine and DiRAC boards, Ref. \cite{em4}.}
+        \label{fig:calo3}
+        \end{figure}
+
+Each SiPM is composed of a 2 $\times$ 3 array of individual 6 mm $\times$ 6 mm cells. 
 The array dimensions were chosen to maximise light collecting, with an active area of 1.8 $\times$ 1.2 cm$^2$ 
 and a small total capacitance due to the parallel structure, resulting in a signal width of less than 200 ns.
 Each SiPM is linked to its own power supply and high voltage in Front-End Electronics (FEE) board.
@@ -422,29 +467,18 @@ As shown in Figure \ref{fig:calo3}, each board is positioned within the electron
 Zero suppressed data are sent from the DiRAC board to the DAQ via optical fibers. 
 The calorimeter is designed to have good energy resolution ($\sigma_E/E$ < 10\%), 
 timing resolution ($\sigma_t \sim$500 ps for 100 MeV electrons) and position resolution
-($\sim$6 mm).
+($\sim$6 mm). A 51-crystal prototype module, called Module-0, was exposed
+to a test beam and results for energy and time resolution are
+shown in Figure \ref{fig:calores}, Ref. \cite{bobbb} and \cite{calo95}.
+
 \begin{figure}[!h]
     \centering
-    \includegraphics[width =0.7\textwidth]{figures/png/Screenshot_20240322_122050.png}
-    \caption{The Mu2e Calorimeter annular disks, Ref. \cite{em7}.}
-    \label{fig:calo1}
-\end{figure}
-\begin{figure}[!h]
-        \centering
-        \includegraphics[width =0.7\textwidth]{figures/png/Screenshot_20240322_121000.png}
-        \caption{Left: the CAD of the two calorimeter disks. Top right: the calorimeter parallelepiped shaped crystals.
-                Bottom right: two SiPM arrays glued onto copper holder on the left and one readout 
-                unit formed by two SiPM arrays and two FEE boards mounted on its
-                copper holder and on the right, Ref. \cite{em4}.}
-        \label{fig:calo2}
-\end{figure}
-\begin{figure}[!h]
-            \centering
-            \includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240322_121017.png}
-            \caption{Left: the breakout of calorimeter mechanical components. Top right: the breakdown of front
-            panel plate. Bottom right: the mezzanine and DiRAC boards, Ref. \cite{em4}.}
-            \label{fig:calo3}
-            \end{figure}
+    \includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240330_105520.png}
+    \caption{The energy and time resolution of the Module-0 for the Mu2e calorimeter for electrons at the conversion energy. (Top left) The resolution for electrons striking the
+    array at normal incidence. (Top right) Resolution for electrons striking the array at 55° with respect to the face. (Bottom) The time resolution. 
+    All measurements are compared with simulations (red line), Ref. \cite{bobbb} and \cite{calo95}.}
+                \label{fig:calores}
+                \end{figure}
 \subsection{Cosmic Ray Veto}\label{CRV}
 As stated in Section \ref{backgrounds}, Mu2e expects backgrounds generated by cosmic rays 
 at a rate of one per day. Although the EM calorimeter can detect some backgrounds created 
@@ -487,73 +521,4 @@ The Stopping Target Monitor, STM, is placed downstream of the MBS to measure the
 \caption{The Stopping-Target Monitor geometry showing the DS region (left), the End Cap Shielding, sweeper magnet and STM field-of-view collimator. At the far end of the hall (right) is the final $spot-size$ collimator and the STM detector.}
 \label{fig:stm}
 \end{figure}
-\section{Firmware-Based Data Acquisition}
-The Mu2e Trigger and Data Acquisition (TDAQ) system collects digitized data from the Tracker, Calorimeter, Cosmic Ray Veto and Beam Monitoring components (Stopping Target Monitor and Extinction Monitor) and delivers that data to online and offline processing for analysis. It must merge data from $\sim$450 subsystems and apply filters to reduce data volume by a factor of 100 before storing it offline. It is also responsible for detector synchronization, control, monitoring and operator interfaces. The Mu2e DAQ system uses a $streaming$ readout technique, which means that all detector data from the experiment is digitized and zero-suppressed in their respective Front End Electronics (FEEs) before being transferred. This strategy results in a high data flow in the DAQ system while providing greater flexibility in data selection and analysis.
-\subsection{Expected rate}
-The data-taking periods will be divided in two modes: on-spill and off-spill. The on-spill mode covers periods when 8 GeV proton bunch are colliding the production target. The off-spill mode covers all other periods: between bunches, calibration periods, commissioning. 
-Calling what is written in section XX, it is possible to estimate the on-spill event contribution:
-\begin{itemize}
-    \item 43.1ms (time of one spill)/ 1695ns(digitization time) = 25K pulses per spill
-    \item 8(number of spills)*25K=200K on spill events /cycle
-    \item 200K/ 1.4s(cycle time) = 145K ON Spill events/s
-\end{itemize}
-di questi 1.4s, 1.055s si riferisce all'offspill e 0.4s all'onspill.
-Meanwhile, the off-spill event contribution is:
-\begin{itemize}
-    \item 145K ON Spill events/s*0.4s=58Kevents
-    \item 55 K /1.4s= 41K off spill events per second per cycle
-\end{itemize}
-buffering: 0.4/1.4
-\\
-TOTAL INPUT: 186Kevents/s (Hz).
-\\
-INPUT EVENT SIZE:150KBytes/bunch(1695ns)=90GB/s
-\\
-buffering:0.4s(on spill)/1.4s(off spill)
-\\
-TOTAL: 90GB/s*0.4s(on spill)/1.4s(off spill)= 28GBytes/s
-\\
-online processing factor: 100(trigger that is after the farm manager and it is an approximation because it depends on the the input rate)
-\\
-TOTAL OUTPUT (that goes to boardreaders): 1.5kHz
-\\
-TOTAL: 1.5Kevents /s (Hz)*150KBytes/event=225MBytes/s
-\\
-The detector will generate $\sim$150 KB of zero-suppressed data per bunch (in un bunch ci sono 1695 ns), Section \ref{accel}, for an average data rate of $\sim$90 GB/s when beam is present. To reduce DAQ bandwidth requirements, this data is buffered in Readout
-Controller (ROC) memory during the spill period and transmitted to the DAQ over the full supercycle for an average data rate of $\sim$28 GBytes/sec.
-
-In Figure \ref{fig:linktodaq}, the general design of the Mu2e DAQ system is shown.
-\begin{figure}[!h]
-\centering
-\includegraphics[width =\textwidth]{figures/png/Screenshot_20240206_144803.png}
-\caption{Mu2e DAQ Architecture.}
-\label{fig:linktodaq}
-\end{figure}
-The left blocks represent the Readout Controllers (ROCs) in different detectors. The center block houses the DAQ system's online components, which include the Run Control Host, 40 DAQ servers, the Detector Control System (DCS) and the Event Building Switch. The Run Control Host receives beam status and timing information from the Accelerator Controls network and operator commands from the remote control room. The Detector Control System (DCS) is the window onto the status and health of the Mu2e detector. The Event Building (EVB) function combines these subsets to form a complete detector data set for analysis by an online processor, Ref. \cite{bartoszek2015mu2e}. Event building is typically done in a switching network to sustain high rates. The right block houses the DAQ system's offline components, which are used for data storage and processing. During an active spill (the first approximately 43 ms of the 48 ms bunch extraction cycle outlined in Chapter \ref{accel}), the experiment receives RF Zero-Crossing Markers from the Accelerator that are synchronized to the 1695 ns proton pulse cycles (the event windows). Based on these markers, the Command Fan-Out (CFO) module within the Run Control Host generates a 40 MHz system clock and encodes Event Window Markers (EWMs) in the system clock to indicate the start of the event windows. The CFO then sends the encoded system clock, along with run control packets, to Data Transfer Controllers (DTCs) in the DAQ servers. The DTCs\footnote{The Mu2e Data Transfer Controller (DTC), Ref. \cite{ryan} takes data from various Read-Out Controllers and may conduct event construction and data preprocessing. The DTC module connects a maximum of six ROCs to the Trigger and Data Acquisition (TDAQ) servers, which execute the TDAQ online software framework.} then transfer the encoded clock to the detectors' ROCs, where the EWMs are recovered with fixed delay relative to the original RF Zero-Crossing Markers and used in the local ROCs to discriminate data acquired during consecutive event windows. The Tracker generates a DDR3 memory address at the beginning of each event window. The relevant memory area is designated to hold Tracker hits received during that event window. Data requests trigger data readouts from the ROCs to the DAQ system. The Data Requests are modifiable through the CFO as described by the Run Plan, although they are initially given to the Tracker and Calorimeter ROCs via the DTCs following each event window.
-
-\subsection{TDAQ software: artdaq}
-
-
-
-
-
-\subsubsection{Expected rate}
-
-
-
-
-
-Each hit is composed of a data packet having a fixed length of 128 bits (16 bytes):
-\begin{itemize}
-    \item 16 bit header - it contains information as a packet header, a channel identifier to specify the channel so the ROC can assign the hit to a wire number and a packet checksum;
-    \item 16 bit - TDC left straw end;
-    \item 16 bit - TDC right straw end;
-    \item 8$\times$10 bit ADC.
-\end{itemize}
-A packet of 128 bits can be transferred every 640 ns (200 Mbps).An additional 32
-bits must be added as an end-of-file marker after the data $\mu$spill hit data is buffered.
-The ROC-to-DAQ connection is made via fiber optic links arranged in rings, with multiple ROC per ring, as shown in Figure \ref{fig:linktodaq}. This is possible since a single optical link can handle 2.6 Gbps, while the ROC output is around 230 Mbps. This value comes from the fact that the highest rate for any 4 straws group (corresponding to one digitizer data line to the ROC) is 240 kHz or 30 Mbps (at 128 bits/hit) and the Main Injector supplies Mu2e beam only 32\% of the time. The ROC monitors slow control variables and controls panel operations too.
-
-
-XXXXXXXXX: mettere le caratteristiche di Ref. \cite{vadi}  ?????
 
