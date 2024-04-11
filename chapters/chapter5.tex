@@ -3,3 +3,13 @@
 \subsection{CRY}
 \subsection{MIP cosmics interaction with tracker}
 yongi cap 3.1.5.2
+\section{tracker hit}
+Each Tracker hit comprises some geographical information to uniquely identify
+the straw, the time of the pulses of the two end of the straw from the start of the
+μspill, the time over threshold (TOT) for the two pulses and a variable number
+of 12 bit ADC samples for the sum of the two pulses. This data is passed via 4
+SERDES lanes using 10 to 8 bit encoding, hence the natural width of the incoming
+data is 32 bits. We assume that only 16 of the 32 bits are used in the following
+and refer to this as DIGI word. The proposed definition of data received from the
+DIGI FPGAs is in table 4.4.
+Micol 
