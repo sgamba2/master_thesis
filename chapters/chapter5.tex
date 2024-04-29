@@ -1,4 +1,5 @@
 \chapter{Timing Calibration of the Tracker}
+con il tracker in orizzontale , dato che le tracks sono verticali colpirebbero per panel sicuro almeno 2 straws che sono sovrappposte e quindi in totale 8, se hanno una certa angolazione anche 12
 \section{Simulation}
 \subsection{CRY}
 \subsection{MIP cosmics interaction with tracker}
@@ -13,3 +14,77 @@ data is 32 bits. We assume that only 16 of the 32 bits are used in the following
 and refer to this as DIGI word. The proposed definition of data received from the
 DIGI FPGAs is in table 4.4.
 Micol 
+
+
+
+
+yongi:
+As discussed in Chapter 3, the Mu2e Tracker panels need to satisfy a series of performance
+requirements for successful operations and the designed resolution. While various individual
+component and single panel tests in the past confirmed their respective effectiveness, it was of great
+interest to extend the tests to a system of multiple panels over a longer period of time under a more
+realistic setup (i.e., similar to that of the actual experiment setup), and to get better quantitative
+understandings of the detector performances. Hence, a VST was conducted.
+The overall goal of the VST was to “exercise the full tracker operation and readout chain,
+from the amplified wire signal to its storage in digitized format” [1]. The test used a whole plane of
+six panels from panel pre-production,1 which was 1/36 of the full Tracker.
+The VST contained two phases. In the first phase, the plane was laid horizontally on a
+test bench for diagnostics and horizontal position runs, as shown in Figure 5.1(a). In the figure
+the supporting systems, including gas lines, DC-to-DC converters for low voltage supplies, high
+voltage supplies, and the Raspberry Pi (marked as RPi) for panel controls, are all labeled.2 In this
+phase, the plane operations and performances were checked. The plane data output to the DAQ
+server through the optical fiber links (see Chapter 4 and Appendix B) were finalized and tested.
+Small cosmic-ray datasets were taken to verify the ability to synchronize data taking among the
+panels. And 55 Fe source scan studies were performed for calibrations. The second phase of the
+
+
+radicioni:
+Cosmic muons represent an important calibration source for the Mu2e detector
+system and in particular for the calorimeter. They have some unique characteristics
+which make the calibration with cosmics complementary to all the other calibration
+techniques1:
+• they can be acquired during normal run operations, in the same experimental
+conditions of the physics data sample;
+• their flux2
+is high enough to collect a large amount of calibration data in a
+relatively short time, allowing a continuous monitoring of the detector response;
+• since they are minimum ionizing particles (MIPs) their energy loss is practically
+independent of their initial energy;
+• they are relativistic particles and, thanks to their negligible energy loss, their
+speed is practically always equal to the speed of the light c; the time they take
+to travel through the calorimeter can be used to align the time offsets of all
+the channels without any external time reference.
+On the other hand, the calibration with cosmics deals with issues not present in
+other calibration tecniques, as for example:
+• the muon differential flux;
+• the overburden located above the detector;
+the purity of the MIP sample;
+• the reconstruction of the muon path inside the calorimeter crystals.
+All these issues can affect the accuracy of the calibration and are needed to be treated
+with particular care.
+
+tracker/vstplan
+We also plan to take significant amounts of cosmic ray data in at least two configurations. First, cosmic ray data will be taken with the plane in the current horizontal
+position. This will be taken using a modified readout scheme involving the serial
+connection as described above. Software exists to take the output raw data and manually convert it into an art format that can be processed by the official Mu2e software
+packages. This first cosmic data will be used to confirm the functionality of the system - including a cross-check of the panel to panel time synchronization, and the
+overall timing measurement performance. 
+Additionally, enough statistics could allow
+for important preliminary calibrations of delta-t resolution, longitudinal propagation
+velocities, efficiencies, and channel to channel variations. The fairly uniform distribution and wide phase-space of tracks in the horizontal configuration can make these
+analyses more straightforward than in the vertical configuration. Additionally a better measure of the expected showering will allow an improved analysis of vertical data.
+Finally, it may be possible to make some measure of the difference between vertical
+and horizontal straw alignment compared to expectations from Duke measurements
+and gravitational sag
+Later, the plane will be positioned vertically and another month of cosmic data
+will be taken. At this point readout may be through the fiber and DTC for improved
+livetime. As described above we will move towards automatic processing of this
+data and have it copied and backed up to tape. This data will be most useful for
+testing the track reconstruction. There exists software for reconstructing cosmic
+tracks without a magnetic field, and it has been tested in a limited fashion with
+data from a single vertical panel (docdb-33914). The implementation for a single
+plane in either horizontal or vertical configuration is being developed.
+Finally, a more thorough calibration of the plane can be done using a systematic
+scan across each panel with an Fe55 source. This will allow further measurements of
+the response as a function of straw and position, and a determination of the variability
+between panels.
