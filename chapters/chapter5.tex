@@ -120,24 +120,40 @@ Before starting explaining the event selection and the reconstruction, let me de
     \caption{Representation of a tracker station and definition of the coordinate used for the analysis.}
     \label{fig:coordinate}
 \end{figure}
-\subsection{Event selection}
+\subsection{Event selection}\label{eventselection}
 Events in which a cosmic muon strikes only the first station were chosen. 
 
 Each straw can be parametrized as a straight line
 \begin{equation}\label{equaretta}
     (D_{x,i}t+M_{x,i},D_{y,i}t+M_{y,i},z_i)
 \end{equation}
-where $D_{x,i}$, $D_{y,i}$ are the straws' directions on $x$, $y$, $M_{x,i}$, $M_{y,i}$ are the straws' midpoints on $x$, $y$ and $z_i$ is the $z$ coordinate of the straw.
+where $D_{x,i}$, $D_{y,i}$ are the straws' directions on $x$, $y$, while $M_{x,i}$, $M_{y,i}$ are the straws' midpoints on $x$, $y$. $z_i$ is the $z$ coordinate of the straw.
 %One dimension is correlated with the other two, so we have just two informationful dimensions.
 In this parametrization, the straws are all parallel on the $yz$ plane.
 Since two parallel straight lines (straws) define a three-dimensional plane of possible tracks, 
 at least another pair of straws, uncorrelated with the initial two, is required to reconstruct a 
-single straight line. The intersection of two planes forms a straight line. Therefore, at least four straws with different $z$ coordinates are necessary.
+single straight line. The intersection of two planes forms a straight line. Therefore, at least four straws with different $z$ coordinates are necessary, 
+so a number of hits per face greater than one was required.
 
 Since more than one hit can occur in a single panel, another selection criteria 
-was to choose events with fewer than three straw hits per panel. This was done to minimize the error in position reconstruction.
+was to choose events with fewer than three straw hits per panel. This was chosen to minimize the error on the position reconstruction.
 \subsubsection{Illumination of the panels}
-Appendix
+To achieve accurate timing calibration, it is essential to have uniform illumination of the hits across each panel. 
+Using only the conditions outlined in Section \ref{eventselection}, the Monte Carlo hits were plotted in the reference frame of the panel. 
+The result is shown in Figure \ref{fig:illumination} for panel 0 of plane 0, which corresponds to the upper right panel in Figure 
+\ref{fig:coordinate}. Similar patterns were observed for all panels in each plane. The illumination is 
+patchy and non-uniform. Additionally, there are almost no hits in the central region, which could lead to non-linearities. 
+Specifically, if particles pass near the end of the straw, the signals are wider, and wider signals have greater charge and 
+height compared to others. Consequently, the leading edge would be very sharp, potentially causing timing systematics.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width =0.8\textwidth]{figures/pdf/xp_vs_yp_panel0.pdf}
+    \caption{Illumination of Monte Carlo hits in panel 0, plane 0, selecting cosmics that traverse at 
+    least four panels across four distinct faces of the station, with fewer than three hits per panel.}
+    \label{fig:illumination}
+\end{figure}
+The reason of this strange illumination is due to the fact that the overlap areas of the panels are all on the extreme part of the panel.
+The same behaviour can be found in the other panels, as shown in Appendix XXXX
 \subsubsection{Rate}
 \subsection{Reconstruction of a straight line}
 Vogliamo ricostruire i segments nei cosmici partendo dal fatto che sappiamo solo se una straw e' stata colpita o meno. Sappiamo: \ref{equaretta}
@@ -189,58 +205,58 @@ A questo punto il bias sulla posizione lungitudinale nelle straws e' dato dalla 
 
 
 
-yongi cap 3.1.5.2
-con il tracker in orizzontale , dato che le tracks sono verticali colpirebbero per panel sicuro almeno 2 straws che sono sovrappposte e quindi in totale 8, se hanno una certa angolazione anche 12
+%yongi cap 3.1.5.2
+%con il tracker in orizzontale , dato che le tracks sono verticali colpirebbero per panel sicuro almeno 2 straws che sono sovrappposte e quindi in totale 8, se hanno una certa angolazione anche 12
 
 
 
 
 
 
-yongi:
-As discussed in Chapter 3, the Mu2e Tracker panels need to satisfy a series of performance
-requirements for successful operations and the designed resolution. While various individual
-component and single panel tests in the past confirmed their respective effectiveness, it was of great
-interest to extend the tests to a system of multiple panels over a longer period of time under a more
-realistic setup (i.e., similar to that of the actual experiment setup), and to get better quantitative
-understandings of the detector performances. Hence, a VST was conducted.
-The overall goal of the VST was to “exercise the full tracker operation and readout chain,
-from the amplified wire signal to its storage in digitized format” [1]. The test used a whole plane of
-six panels from panel pre-production,1 which was 1/36 of the full Tracker.
-The VST contained two phases. In the first phase, the plane was laid horizontally on a
-test bench for diagnostics and horizontal position runs, as shown in Figure 5.1(a). In the figure
-the supporting systems, including gas lines, DC-to-DC converters for low voltage supplies, high
-voltage supplies, and the Raspberry Pi (marked as RPi) for panel controls, are all labeled.2 In this
-phase, the plane operations and performances were checked. The plane data output to the DAQ
-server through the optical fiber links (see Chapter 4 and Appendix B) were finalized and tested.
-Small cosmic-ray datasets werereconstruction of the track longitudinal position taken to verify the ability to synchronize data taking among the
-panels. And 55 Fe source scan studies were performed for calibrations. The second phase of the
+%yongi:
+%As discussed in Chapter 3, the Mu2e Tracker panels need to satisfy a series of performance
+%requirements for successful operations and the designed resolution. While various individual
+%component and single panel tests in the past confirmed their respective effectiveness, it was of great
+%interest to extend the tests to a system of multiple panels over a longer period of time under a more
+%realistic setup (i.e., similar to that of the actual experiment setup), and to get better quantitative
+%understandings of the detector performances. Hence, a VST was conducted.
+%The overall goal of the VST was to “exercise the full tracker operation and readout chain,
+%from the amplified wire signal to its storage in digitized format” [1]. The test used a whole plane of
+%six panels from panel pre-production,1 which was 1/36 of the full Tracker.
+%The VST contained two phases. In the first phase, the plane was laid horizontally on a
+%test bench for diagnostics and horizontal position runs, as shown in Figure 5.1(a). In the figure
+%the supporting systems, including gas lines, DC-to-DC converters for low voltage supplies, high
+%voltage supplies, and the Raspberry Pi (marked as RPi) for panel controls, are all labeled.2 In this
+%phase, the plane operations and performances were checked. The plane data output to the DAQ
+%server through the optical fiber links (see Chapter 4 and Appendix B) were finalized and tested.
+%Small cosmic-ray datasets werereconstruction of the track longitudinal position taken to verify the ability to synchronize data taking among the
+%panels. And 55 Fe source scan studies were performed for calibrations. The second phase of the
 
 
 
-reconstruction of the track longitudinal position
-tracker/vstplan
-We also plan to take significant amounts of cosmic ray data in at least two configurations. First, cosmic ray data will be taken with the plane in the current horizontal
-position. This will be taken using a modified readout scheme involving the serial
-connection as described above. Software exists to take the output raw data and manually convert it into an art format that can be processed by the official Mu2e software
-packages. This first cosmic data will be used to confirm the functionality of the system - including a cross-check of the panel to panel time synchronization, and the
-overall timing measurement performance. 
-Additionally, enough statistics could allow
-for important preliminary calibrations of delta-t resolution, longitudinal propagation
-velocities, efficiencies, and channel to channel variations. The fairly uniform distribution and wide phase-space of tracks in the horizontal configuration can make these
-analyses more straightforward than in the vertical configuration. Additionally a better measure of the expected showering will allow an improved analysis of vertical data.
-Finally, it may be possible to make some measure of the difference between vertical
-and horizontal straw alignment compared to expectations from Duke measurements
-and gravitational sag
-Later, the plane will be positioned vertically and another month of cosmic data
-will be taken. At this point readout may be through the fiber and DTC for improved
-livetime. As described above we will move towards automatic processing of this
-data and have it copied and backed up to tape. This data will be most useful for
-testing the track reconstruction. There exists software for reconstructing cosmic
-tracks without a magnetic field, and it has been tested in a limited fashion with
-data from a single vertical panel (docdb-33914). The implementation for a single
-plane in either horizontal or vertical configuration is being developed.
-Finally, a more thorough calibration of the plane can be done using a systematic
-scan across each panel with an Fe55 source. This will allow further measurements of
-the response as a function of straw and position, and a determination of the variability
-between panels.
+%reconstruction of the track longitudinal position
+%tracker/vstplan
+%We also plan to take significant amounts of cosmic ray data in at least two configurations. First, cosmic ray data will be taken with the plane in the current horizontal
+%position. This will be taken using a modified readout scheme involving the serial
+%connection as described above. Software exists to take the output raw data and manually convert it into an art format that can be processed by the official Mu2e software
+%packages. This first cosmic data will be used to confirm the functionality of the system - including a cross-check of the panel to panel time synchronization, and the
+%overall timing measurement performance. 
+%Additionally, enough statistics could allow
+%for important preliminary calibrations of delta-t resolution, longitudinal propagation
+%velocities, efficiencies, and channel to channel variations. The fairly uniform distribution and wide phase-space of tracks in the horizontal configuration can make these
+%analyses more straightforward than in the vertical configuration. Additionally a better measure of the expected showering will allow an improved analysis of vertical data.
+%Finally, it may be possible to make some measure of the difference between vertical
+%and horizontal straw alignment compared to expectations from Duke measurements
+%and gravitational sag
+%Later, the plane will be positioned vertically and another month of cosmic data
+%will be taken. At this point readout may be through the fiber and DTC for improved
+%livetime. As described above we will move towards automatic processing of this
+%data and have it copied and backed up to tape. This data will be most useful for
+%testing the track reconstruction. There exists software for reconstructing cosmic
+%tracks without a magnetic field, and it has been tested in a limited fashion with
+%data from a single vertical panel (docdb-33914). The implementation for a single
+%plane in either horizontal or vertical configuration is being developed.
+%Finally, a more thorough calibration of the plane can be done using a systematic
+%scan across each panel with an Fe55 source. This will allow further measurements of
+%the response as a function of straw and position, and a determination of the variability
+%between panels.

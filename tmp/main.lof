@@ -66,6 +66,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces The relation of the observed zenith angle of muons, $\theta ^*$, to the zenith angle at the muon production point in the atmosphere, $\theta $. $R$ is the radius of the Earth, Ref.\cite {guan2015parametrization}.\relax }}{91}{figure.caption.71}%
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Representation of a tracker station and definition of the coordinate used for the analysis.\relax }}{93}{figure.caption.72}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces raggio cosmico che colpisce qualche straw nel panel. La direzione del cosmico non sara' mai cosi', dato che i cosmici sono distribuiti come $cos^2\theta $ e sono per lo piu' verticali.\relax }}{94}{figure.caption.73}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Illumination of Monte Carlo hits in panel 0, plane 0, selecting cosmics that traverse at least four panels across four distinct faces of the station, with fewer than three hits per panel.\relax }}{94}{figure.caption.73}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces raggio cosmico che colpisce qualche straw nel panel. La direzione del cosmico non sara' mai cosi', dato che i cosmici sono distribuiti come $cos^2\theta $ e sono per lo piu' verticali.\relax }}{95}{figure.caption.74}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
