@@ -368,7 +368,7 @@ straw to estimate position along the wire and the intrinsic time resolution of T
 25 ps, adding comparator jitter, noise and other external effects the final resolution is 
 $\sim$ 70 ps for time division. Furthermore, an integrator adds voltage signals coming 
 from the two straw ends. In data collection, a hit occurs when both ends of a straw channel 
-are simultaneously activated. The total is digitized by a 12-bit (10-bit ENOB) ADC at 50 MHz 
+are simultaneously activated. The total is digitized by a 12-bit (10-bit ENOB) ADC at 40 MHz
 and then sent to the digi FPGA. The digi FPGA creates a data packet for each hit based on 
 TDC and ADC information. This suppresses false triggers caused by random electrical noise. 
 The Digitizer receives signals from both ends of four straws and multiplexes them into one 
