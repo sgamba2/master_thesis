@@ -232,7 +232,7 @@ The total charge created on the wire by the travelling electrons is:
 %The propagation speed of a signal wave with frequency $\omega$ is then $c/\sqrt{\omega}$ $\epsilon$($\omega$), 
 %where $c$ is the speed of light and $\epsilon$ is the dielectric constant of the gas. As $\epsilon$ is a function of $\omega$, 
 %components of different frequencies propagate at slightly different velocities. This leads to a dispersion (widening) of the signal. It brings some subtleties when using signal arrival time difference between straw tube ends to determine the longitudinal coordinate of an avalanche.
-\section{tracker panels}
+\section{The tracker panels}
 The Mu2e tracker straw tube arrays use the same detection principles as the gaseous ionisation detectors, Ref. \cite{kola}, 
 but it has a significant different design and manufacturing improvements to meet the experiment precise requirements.
 \begin{figure}[!h]
@@ -289,7 +289,7 @@ the straw tube channels is 1450 V. An earlier investigation on a prototype of th
 gain as 1.25 $\times$10$^4$ at 1250 V and 7 $\times$ 10$^4$at 1425 V. According to Diethorn's calculation, Equation \ref{XXX}, 
 the gas gain at 1450 V is around 1 $\times$10$^5$.
 
-\section{tracker Front-End Electronics}
+\section{The tracker Front-End Electronics}
 Before being accessible to the Mu2e Data Acquisition (DAQ) system, the analog signals 
 from the tracker straw tube channels need amplification, digitization and packaging. 
 The tracker front-end electronics (FEEs) are designed to achieve these goals. The FEEs 
@@ -338,7 +338,7 @@ pulses into the channel. This capability enables the channel readout electronics
 to be tested without a high voltage source. The preamps on the HV side distribute 
 the high voltage supply to individual straw tubes. 
 %The voltage gains of individual channels, different from the gas gain, are set by control signal from the DRAC. A bias voltage, adjustable for each side of a channel, is applied to the signals. 
-\subsection{Digitizer Readout and Assembler Controller}
+\subsection{Digitizer Readout and Assembler Controller}\label{DRAC}
 The brain of a tracker panel is called Digitizer Readout and Assembler Controller (DRAC). 
 The DRAC is responsible for digitizing, packaging and temporary storage. It also controls 
 panel operations. The schematics of the DRAC board is shown in Figure \ref{fig:drac}. In 
@@ -346,7 +346,7 @@ this figure Analog to Digital Converters (ADCs), DDR3 memories and compators are
 The large chips in the centers are the Field-Programmable Gate Arrays (FPGAs). The one 
 in the center is the Readout Controller (ROC), which manages communications, monitors 
 slow control variables and controls panel operations \ref{ROC}. The left and the right 
-ones, which are referred to as the DIGI FPGAs, are responsible for monitoring data output, 
+ones, which are referred to as the digi FPGAs, are responsible for monitoring data output, 
 buffering data and assembling data packages. Each of them refers to 48 straw channels. 
 \begin{figure}[!h]
 \centering
@@ -361,7 +361,7 @@ After that, the analog signal is sent through the microstrip transmission line t
 the digitizers. In the DRAC, the two biased signals are fed independently to 
 zero-crossing comparators, which produce square pulses when the signals exceed 
 their respective thresholds. The squared pulses are sent to Time-to-Digital Converters 
-(TDCs, firmware based, 16 bits each) implemented in the DIGI FPGAs, that have the task 
+(TDCs, firmware based, 16 bits each) implemented in the digi FPGAs, that have the task 
 of digitizing the trigger timings, including the arrival time and the time over threshold, 
 at a rate of about 62.5 MHz. Besides drift time, TDCs measure time difference across the 
 straw to estimate position along the wire and the intrinsic time resolution of TDC is about 
@@ -369,7 +369,7 @@ straw to estimate position along the wire and the intrinsic time resolution of T
 $\sim$ 70 ps for time division. Furthermore, an integrator adds voltage signals coming 
 from the two straw ends. In data collection, a hit occurs when both ends of a straw channel 
 are simultaneously activated. The total is digitized by a 12-bit (10-bit ENOB) ADC at 50 MHz 
-and then sent to the DIGI FPGA. The DIGI FPGA creates a data packet for each hit based on 
+and then sent to the digi FPGA. The digi FPGA creates a data packet for each hit based on 
 TDC and ADC information. This suppresses false triggers caused by random electrical noise. 
 The Digitizer receives signals from both ends of four straws and multiplexes them into one 
 output buffer before sending a packet of data to the ROC. Signals are sent to the ROC at 

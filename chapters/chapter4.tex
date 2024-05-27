@@ -1,1 +1,360 @@
-\chapter{Vertical Slice Test}
+\chapter{DAQ readout testing}
+\textit{In this Chapter, I present the initial results of the tracker DAQ commissioning. Before reading out the detector, 
+    it was necessary to understand the readout process. This Chapter is divided into three sections: the first relates 
+    to the validation of ROC readout through Monte Carlo simulation, subsequently, I will discuss the initial and primitive tracker panel data quality monitoring, 
+    and in the third part, I will address high-rate software testing.}
+  \section{Description of teststand setup}
+    The tracker test stand,  called TS1, shown in Figure \ref{fig:TS1}, included one DRAC card \ref{DRAC} connected via an optical fiber
+    to the DTC installed in the DAQ computer, called mu2edaq09. The teststand included 96 channels in total.
+    The ROC \ref{ROC} could be operated in two different data readout modes:
+    \begin{itemize}
+    \item  First mode: the ROC was emulating the data itself without reading FPGAs (a pattern readout mode);
+    \item  Second mode: the ROC was reading digi FPGAs.
+    \end{itemize}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width =0.8\textwidth]{figures/jpg/IMG_20240219_090538.jpg}
+        \caption{The tracker test stand, TS1, featuring one DRAC card linked via optical fiber to the DTC in the DAQ computer (mu2edaq09). The setup includes a total of 96 channels.}
+        \label{fig:TS1}
+        \end{figure}
+    Most of the data were taken operating in the second mode, with digi FPGAs, pulsed by their internal pulsers.
+    The pulser has two different frequencies,  31.29 MHz/(2$^7$+1), or approximately 250 kHz, 
+    and 31.29 MHz/(2$^9$+1), or approximately 60 kHz.
+    Event window is the time interval between two heartbeats (HB's). 
+    A timing diagram of a single channel readout is shown in Fig. \ref{fig:3}.
+    Pulses, separated by $T_{gen}=1/f_{gen}$, where $f_{gen}$ is the generator frequency
+    are represented by gray triangles.
+    The event window, with the width of $T_{EW}$, that represents the distance between the proton pulses, 
+    was varied from 700 ns to 50 $\mu$s, to test the system and to increase flexibility during tests, but during Mu2e data taking it will be approximately 1.7 $\mu$s. 
+    The ROC firmware has an internal hit buffer which stores up to 255 hits.
+    Depending on $T_{gen}$ and $T_{EW}$, the data taking can proceed in two different
+    scenarios:
+    \begin{itemize}
+    \item
+      The event window is large enough , so the total number of generated hits is greater than 255. In this case
+      the ROC hit buffer always gets filled up, and only the first 255 hits are read out;
+    \item
+      The total number of hits within the event window is less than 255.
+      In this case the ROC hit buffer doesn't get filled up and the total number of hits may vary from one event to another.
+    \end{itemize}
+    
+    Each digi FPGA has its own pulse generator and the pulse sequences from the two
+    generators are offset with respect to each other by a time interval $\Delta t$.
+    The offset is constant for as long as the DRAC board is powered up and varies randomly between 0 and $T_{gen}$ when DRAC is powercycled.
+    The timing of the readout is uncorrelated with the generator timing sequences,
+      so the number of pulses within the readout window can vary from one event to another, as shown
+      in Figure \ref{fig:3}.
+    
+    Relative timing offsets of the channels within the same FPGA are of the order of a few ns.
+    The channel readout sequence is fixed.
+    
+    \begin{figure}[!h]
+    \centering
+    \includegraphics[width =\textwidth]{figures/png/finalimg.png}
+    \caption{Graphic illustration of pulses in an event window.}
+    \label{fig:3}
+    \end{figure}
+    
+    %The data taking has been performed $\mu$sing OTSDAQ+ARTDAQ software, and for each run the output data have been stored in an art file moved to {\bf /exp/mu2e/data/projects/tracker/vst} area mounted on Mu2e central platforms.
+    
+ \section{XXX da preamp a dato} 
+\section{Validation of ROC readout through Monte Carlo simulation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Monte Carlo simulation}\label{MonteCarlo}
+ 
+The ROC readout logic is purely digital, so the readout process can be simulated. 
+The logic of the simulation is as follows.
+The simulated parameters for each event are the number of hits in each channel
+and the total number of readout hits.
+
+In the following sections, we call $occupancy$ the total number of hits
+recorded in a given channel during the test run.
+
+Given that the total number of hits per event doesn't exceed 255, the simulation follows these steps:
+\begin{itemize}
+\item
+  The event window starts at $t=0$s;
+\item
+  In a given FPGA, the timing of the first pulse is generated randomly from 0 to $T_{gen}$
+  by sampling a uniform distribution;
+\item
+  The subsequent pulses are added, separated from each other by $T_{gen}$,
+  until the absolute time
+  of the next pulse is greater than $T_{EW}$;
+\item
+  In the readout part of the simulation, the pulses are read out following the readout sequence;
+\item
+  the readout ``continues'' until all simulated hits are included or
+  the total number of read out hits reaches the maximum threshold of 255. 
+\end{itemize}
+
+The simulation also takes into account the offset between the two FPGA timing sequences
+and the individual channel-to-channel timing offsets. 
+In the following sections, results of the data taking are compared with the simulation.
+\subsection{``ROC buffer overflow'' mode}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In the ``ROC buffer overflow'' configuration, which will be referred to as RUN281, the event window size is 50 $\mu$s
+and the pulser rate is 60 kHz.
+
+\subsubsection{Hit timing and occupancy}\label{over}
+The first distributions to look at are the time distributions of hits in 
+different channels and the distribution of the total number of hits
+in a given channel (occupancy) as a function of the channel number.
+The timing distributions of hits in channel 0 of the first FPGA
+and in channel 2 of the second FPGA are shown in Fig.\ref{fig:1}.
+The left distribution is, as expected, uniform, however the right one looks
+less trivial.
+
+\begin{figure}[!h]
+  \hspace{-0.5in}
+  \begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] at (0,0.) {
+      % \node[shift={(0 cm,0.cm)},inner sep=0,rotate={90}] at (0,0) {}
+      % \makebox[\textwidth][c] {
+      \includegraphics[width=0.6\textwidth]{figures/pdf/figure_00007_timedistr_roc_simulation_ch0_281.pdf}
+      % }
+    };
+    \node[anchor=south west,inner sep=0] at (9,0.) {
+      % \node[shift={(0 cm,0.cm)},inner sep=0,rotate={90}] at (0,0) {}
+      % \makebox[\textwidth][c] {
+      \includegraphics[width=0.6\textwidth]{figures/pdf/figure_00003_timedistr_roc_simulation_ch2_281.pdf}
+      % }
+    };
+  \end{tikzpicture}
+  \caption{
+    \label{fig:1}
+    Left: time distribution of hits in the channel 0 in the first FPGA. Right: time distribution of hits in the channel 2 in the second FPGA.
+    }
+\end{figure}
+
+The distributions in Fig.\ref{fig:1} are easier to understand by looking at the occupancy plot in Fig.\ref{fig:2} (left).
+The channel ordering in this plot corresponds to the readout order.
+Channels in the beginning of the readout sequence always have all their hits read out,
+  however that is not true for the channels in the end of the readout sequence.
+\begin{figure}[!h]
+  \hspace{-0.5in}
+  \begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] at (0,0.) {
+      % \node[shift={(0 cm,0.cm)},inner sep=0,rotate={90}] at (0,0) {}
+      % \makebox[\textwidth][c] {
+      \includegraphics[width=0.6\textwidth]{figures/pdf/figure_00004_nhitsvschannel_roc_simulation_281.pdf}
+      % }
+    };
+    \node[anchor=south west,inner sep=0] at (9,0.) {
+      % \node[shift={(0 cm,0.cm)},inner sep=0,rotate={90}] at (0,0) {}
+      % \makebox[\textwidth][c] {
+      \includegraphics[width=0.6\textwidth]{figures/pdf/figure_00014_nhitsvschannel_roc_simulation_281.pdf}
+      % }
+    };
+  \end{tikzpicture}
+  \caption{
+    \label{fig:2}
+    Left: number of hits versus the channel number. The channels are numbered in the readout order.
+    Right: zoom on the last channels in the readout sequence. The data and MC distributions
+    differ from each other by $\sim$ 10$^{-3}$.
+  }
+\end{figure}
+
+Figure \ref{fig:66} shows the distribution of the number of hits in channel 0.
+For the event window of 50 $\mu$s and the time between the pulses of 16 $\mu$s,
+the number of hits could be 3 or 4,
+depending on the timing offset of a given readout window with respect to the generated timing sequence.
+This distribution plays a key role in understanding of the occupancy plot.
+\begin{figure}[!h]
+\centering
+\includegraphics[width =0.8\textwidth]{figures/pdf/figure_00066_nhits_ch00_run281.pdf}
+\caption{
+  The distribution of the number of hits in the channel 0 of the first digi FPGA (RUN281).
+}
+\label{fig:66}
+\end{figure}
+
+In the distribution shown in Figure \ref{fig:2} (left),
+the first 68 channels are the ones with 4 hits per channel in the first FPGA
+and three hits per channel in the second FPGA, 
+resulting in the total of 255 hits.
+The second plateau extending from 68 to 75 corresponds to the channels
+with 3 hits per channel in the first FPGA and 4 hits per channel in the second one.
+  The ``dent'' in the end of the second plateau is due to the fact that the 48 channels of the first FPGA
+  yield 144 hits, so the second FPGA contributes 111 hits. The first 27 channels of the second FPGA contribute
+  4 hits per channel each, but as 111 is not an integer of 4, the three hits from channel 28 in the readout sequence
+  fill up the total ROC buffer of 255 hits.
+There is a big step at the end of this plateau, because if we count the number of hits
+in the first FPGA we get 144, so in the second FPGA we have 111 hits in total,
+due to the fact that the maximum number of hits in total is 255.
+111 is not divisible by 4, so the first 27 channels in the second FPGA will have 4 hits
+and the last one will have 3 hits.
+The last plateau corresponds to events with 3 hits per channel from the first FPGA
+and 3 hits per channel from the second FPGA.
+
+A zoom on last channels is shown on the right picture of Fig.\ref{fig:2}.
+The relative difference between the data and the MC distributions is at a level of $10^{-3}$,
+which is a very good agreement.
+Coming back to Fig.\ref{fig:1}, the first channels in the readout sequence
+always have all their hits read out,
+while the channels in the end of the readout sequence do not,
+as the ROC hit buffer gets filled up after
+the first 255 hits are read out.
+This results in a uniform time distribution for the first channels readout and in a non-uniform
+time distribution for the last readout channels, depending on $T_{gen}$ and $T_{EW}$.
+The dips in the hit timing distribution for channel 2 are defined by the timing offset
+between the two FPGA pulsers. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Number of hits}
+Fig. \ref{fig:3} shows that in the ``buffer overflow'' mode all events,
+as expected, have 255 hits read out per event.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width =0.8\textwidth]{figures/pdf/figure_00008_nhits_281.pdf}
+\caption{
+  The distribution of the total number of hits read out per event.
+}
+\label{fig:3}
+\end{figure}
+\subsection{The ``regular'' mode }
+In the ``regular'' configuration, which will be referred to as RUN105038, the event window size is 25 $\mu$s
+and the pulser rate is 60 kHz.
+
+\subsubsection{Time distribution and occupancy}
+
+Similar to Section \ref{over}, Figure \ref{fig:4} shows the distributions
+of the number of hits in two channels, one from the 
+first and another one - from the second FPGA. 
+In this readout configuration, the expected number of pulses in a given channel
+within the event window is one or two, and the total number of pulses is always below 255.
+
+\begin{figure}[!h]
+  \hspace{-0.5in}
+  \begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] at (0,0.) {
+      % \node[shift={(0 cm,0.cm)},inner sep=0,rotate={90}] at (0,0) {}
+      % \makebox[\textwidth][c] {
+      \includegraphics[width=0.6\textwidth]{figures/pdf/figure_00001_timedistr_roc_simulation_10538.pdf}
+      % }
+    };
+    \node[anchor=south west,inner sep=0] at (9,0.) {
+      % \node[shift={(0 cm,0.cm)},inner sep=0,rotate={90}] at (0,0) {}
+      % \makebox[\textwidth][c] {
+      \includegraphics[width=0.6\textwidth]{figures/pdf/figure_00012_timedistr_roc_simulation_ch2_105038.pdf}
+      % }
+    };
+  \end{tikzpicture}
+  \caption{
+    Left: the hit time distribution for this in channel 2, the second FPGA. Right: the hit time distribution for hits in channel 0, the first FPGA.
+  }
+  \label{fig:4}
+
+\end{figure}
+In this mode, the readout of a given channel is not affected by the readout of previous
+channels and the ``occupancy'' distributions shown in Figure \ref{fig:5} are, as expected, uniform.
+\begin{figure}[!h]
+\centering
+\includegraphics[width =0.8\textwidth]{figures/pdf/figure_00002_nhitsvschannel_roc_simulation_2.pdf}
+\caption{Occupancy: the number of hits versus the channel number for RUN105038.}
+\label{fig:5}
+\end{figure}
+
+
+Fig.\ref{fig:67} shows the distribution of the number of hits in the channel 0 (first FPGA).
+\begin{figure}[!h]
+\centering
+\includegraphics[width =0.8\textwidth]{figures/pdf/figure_00067_nhits_ch00_run105038.pdf}
+\caption{
+  The distribution of the number of hits in channel 0, first FPGA, for RUN105038.
+  Entries in the $n$(hits)=0 bin are due to the readout errors.
+}
+\label{fig:67}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Number of hits}
+Compared to RUN281, the event window in RUN105038 was twice shorter
+and the ROC readout buffer wasn't getting filled up.
+The total number of hits within the event window depends on the relative offset
+of the event window with respect to the FPGA pulsers, and varies from
+144 to 192, as shown in Figure \ref{fig:6}.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width =0.8\textwidth]{figures/pdf/figure_00009_nhits_105038.pdf}
+\caption{
+  The distribution of the total number of hits per event in ``non-saturated'' mode.
+}
+\label{fig:6}
+\end{figure}
+\section{Primitive Data Quality Monitoring}
+
+\section{High rate software testing}
+\subsection{Firmware-Based Data Acquisition}
+The Mu2e Trigger and Data Acquisition (TDAQ) system collects digitized data from the Tracker, Calorimeter, Cosmic Ray Veto and Beam Monitoring components (Stopping Target Monitor and Extinction Monitor) and delivers that data to online and offline processing for analysis. It must merge data from $\sim$450 subsystems and apply filters to reduce data volume by a factor of 100 before storing it offline. It is also responsible for detector synchronization, control, monitoring and operator interfaces. The Mu2e DAQ system $\mu$ses a $streaming$ readout technique, which means that all detector data from the experiment is digitized and zero-suppressed in their respective Front End Electronics (FEEs) before being transferred. This strategy results in a high data flow in the DAQ system while providing greater flexibility in data selection and analysis.
+\subsubsection{Expected rate}
+The data-taking periods will be divided in two modes: on-spill and off-spill. The on-spill mode covers periods when 8 GeV proton bunch are colliding the production target. The off-spill mode covers all other periods: between bunches, calibration periods, commissioning. 
+Calling what is written in section XX, it is possible to estimate the on-spill event contribution:
+\begin{itemize}
+    \item 43.1ms (time of one spill)/ 1695ns(digitization time) = 25K pulses per spill
+    \item 8(number of spills)*25K=200K on spill events /cycle
+    \item 200K/ 1.4s(cycle time) = 145K ON Spill events/s
+\end{itemize}
+di questi 1.4s, 1.055s si riferisce all'offspill e 0.4s all'onspill.
+Meanwhile, the off-spill event contribution is:
+\begin{itemize}
+    \item 145K ON Spill events/s*0.4s=58Kevents
+    \item 55 K /1.4s= 41K off spill events per second per cycle
+\end{itemize}
+buffering: 0.4/1.4
+\\
+TOTAL INPUT: 186Kevents/s (Hz).
+\\
+INPUT EVENT SIZE:150KBytes/bunch(1695ns)=90GB/s
+\\
+buffering:0.4s(on spill)/1.4s(off spill)
+\\
+TOTAL: 90GB/s*0.4s(on spill)/1.4s(off spill)= 28GBytes/s
+\\
+online processing factor: 100(trigger that is after the farm manager and it is an approximation because it depends on the the input rate)
+\\
+TOTAL OUTPUT (that goes to boardreaders): 1.5kHz
+\\
+TOTAL: 1.5Kevents /s (Hz)*150KBytes/event=225MBytes/s
+\\
+The detector will generate $\sim$150 KB of zero-suppressed data per bunch (in un bunch ci sono 1695 ns), Section \ref{accel}, for an average data rate of $\sim$90 GB/s when beam is present. To reduce DAQ bandwidth requirements, this data is buffered in Readout
+Controller (ROC) memory during the spill period and transmitted to the DAQ over the full supercycle for an average data rate of $\sim$28 GBytes/sec.
+
+In Figure \ref{fig:linktodaq}, the general design of the Mu2e DAQ system is shown.
+\begin{figure}[!h]
+\centering
+\includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240206_144803.png}
+\caption{Mu2e DAQ Architecture.}
+\label{fig:linktodaq}
+\end{figure}
+The left blocks represent the Readout Controllers (ROCs) in different detectors. The center block houses the DAQ system's online components, which include the Run Control Host, 40 DAQ servers, the Detector Control System (DCS) and the Event Building Switch. The Run Control Host receives beam status and timing information from the Accelerator Controls network and operator commands from the remote control room. The Detector Control System (DCS) is the window onto the status and health of the Mu2e detector. The Event Building (EVB) function combines these subsets to form a complete detector data set for analysis by an online processor, Ref. \cite{bartoszek2015mu2e}. Event building is typically done in a switching network to sustain high rates. The right block houses the DAQ system's offline components, which are $\mu$sed for data storage and processing. During an active spill (the first approximately 43 ms of the 48 ms bunch extraction cycle outlined in Chapter \ref{accel}), the experiment receives RF Zero-Crossing Markers from the Accelerator that are synchronized to the 1695 ns proton pulse cycles (the event windows). Based on these markers, the Command Fan-Out (CFO) module within the Run Control Host generates a 40 MHz system clock and encodes Event Window Markers (EWMs) in the system clock to indicate the start of the event windows. The CFO then sends the encoded system clock, along with run control packets, to Data Transfer Controllers (DTCs) in the DAQ servers. The DTCs\footnote{The Mu2e Data Transfer Controller (DTC), Ref. \cite{ryan} takes data from various Read-Out Controllers and may conduct event construction and data preprocessing. The DTC module connects a maximum of six ROCs to the Trigger and Data Acquisition (TDAQ) servers, which execute the TDAQ online software framework.} then transfer the encoded clock to the detectors' ROCs, where the EWMs are recovered with fixed delay relative to the original RF Zero-Crossing Markers and $\mu$sed in the local ROCs to discriminate data acquired during consecutive event windows. The Tracker generates a DDR3 memory address at the beginning of each event window. The relevant memory area is designated to hold Tracker hits received during that event window. Data requests trigger data readouts from the ROCs to the DAQ system. The Data Requests are modifiable through the CFO as described by the Run Plan, although they are initially given to the Tracker and Calorimeter ROCs via the DTCs following each event window.
+
+\subsubsection{TDAQ software: artdaq}
+
+
+
+
+
+\subsubsection{Expected rate}
+
+
+
+
+
+Each hit is composed of a data packet having a fixed length of 128 bits (16 bytes):
+\begin{itemize}
+    \item 16 bit header - it contains information as a packet header, a channel identifier to specify the channel so the ROC can assign the hit to a wire number and a packet checksum;
+    \item 16 bit - TDC left straw end;
+    \item 16 bit - TDC right straw end;
+    \item 8$\times$10 bit ADC.
+\end{itemize}
+A packet of 128 bits can be transferred every 640 ns (200 Mbps).An additional 32
+bits must be added as an end-of-file marker after the data $\mu$spill hit data is buffered.
+The ROC-to-DAQ connection is made via fiber optic links arranged in rings, with multiple ROC per ring, as shown in Figure \ref{fig:linktodaq}. This is possible since a single optical link can handle 2.6 Gbps, while the ROC output is around 230 Mbps. This value comes from the fact that the highest rate for any 4 straws group (corresponding to one digitizer data line to the ROC) is 240 kHz or 30 Mbps (at 128 bits/hit) and the Main Injector supplies Mu2e beam only 32\% of the time. The ROC monitors slow control variables and controls panel operations too.
+
+
+XXXXXXXXX: mettere le caratteristiche di Ref. \cite{vadi}  ?????
