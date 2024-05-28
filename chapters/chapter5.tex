@@ -137,23 +137,22 @@ so a number of hits per face greater than one was required.
 
 Since more than one hit can occur in a single panel, another selection criteria 
 was to choose events with fewer than three straw hits per panel. This was chosen to minimize the error on the position reconstruction.
-\subsubsection{Illumination of the panels}
+\subsubsection{Panels illumination pattern}
 To achieve accurate timing calibration, it is essential to have uniform illumination of the hits across each panel. 
 Using only the conditions outlined in Section \ref{eventselection}, the Monte Carlo hits were plotted in the reference frame of the panel. 
 The result is shown in Figure \ref{fig:illumination} for panel 0 of plane 0, which corresponds to the upper right panel in Figure 
-\ref{fig:coordinate}. Similar patterns were observed for all panels in each plane. The illumination is 
-patchy and non-uniform. Additionally, there are almost no hits in the central region, which could lead to non-linearities. 
+\ref{fig:coordinate}. Similar patterns were observed for all panels in both planes, as shown in Appendix \ref{appendix2}. The illumination is 
+spotty and non-uniform. The reason of this strange illumination is due to the fact that the overlap areas of the panels are all on the extreme part of the panel.
+Additionally, there are almost no hits in the central region, which could lead to non-linearities. 
 Specifically, if particles pass near the end of the straw, the signals are wider, and wider signals have greater charge and 
 height compared to others. Consequently, the leading edge would be very sharp, potentially causing timing systematics.
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.8\textwidth]{figures/pdf/xp_vs_yp_panel0.pdf}
-    \caption{Illumination of Monte Carlo hits in panel 0, plane 0, selecting cosmics that traverse at 
+    \caption{Illumination of Monte Carlo hits on panel 0, plane 0, selecting cosmics that traverse at 
     least four panels across four distinct faces of the station, with fewer than three hits per panel.}
     \label{fig:illumination}
 \end{figure}
-The reason of this strange illumination is due to the fact that the overlap areas of the panels are all on the extreme part of the panel.
-The same behaviour can be found in the other panels, as shown in Appendix XXXX
 \subsubsection{Rate}
 \subsection{Reconstruction of a straight line}
 Vogliamo ricostruire i segments nei cosmici partendo dal fatto che sappiamo solo se una straw e' stata colpita o meno. Sappiamo: \ref{equaretta}
