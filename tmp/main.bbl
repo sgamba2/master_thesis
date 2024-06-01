@@ -1,4 +1,4 @@
-\begin{thebibliography}{87}
+\begin{thebibliography}{85}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -647,18 +647,6 @@ T.~Zhao, Y.~Chen, S.~Han, and J.~Hersch.
 \newblock {Tracker Requirements Document}.
 \newblock {2016}.
 \newblock \doi{{mu2e-doc-732-v22}}.
-
-\bibitem[{Ryan Rivera, Richard Kwarciany}({2018})]{ryan}
-{Ryan Rivera, Richard Kwarciany}.
-\newblock {Mu2e Data Transfer Controller Module Hardware User Guide -
-  Mu2e-doc-4097}.
-\newblock \emph{{Fermilab, United States Department of Energy}}, {2018}.
-
-\bibitem[{vadim}()]{vadi}
-{vadim}.
-\newblock {vadim}.
-\newblock URL
-  \url{{https://mu2e-docdb.fnal.gov/cgi-bin/sso/ShowDocument?docid=3879&version=3}}.
 
 \bibitem[{Olive, K. A. et al.}({2014})]{muonflux}
 {Olive, K. A. et al.}
