@@ -117,7 +117,7 @@ Before starting explaining the event selection and the reconstruction, let me de
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.6\textwidth]{figures/png/Screenshot_20240526_164527.png}
-    \caption{Representation of a tracker station and definition of the coordinate used for the analysis.}
+    \caption{Schematic view of a tracker station and definition of the coordinate used for the analysis.}
     \label{fig:coordinate}
 \end{figure}
 \subsection{Event selection}\label{eventselection}
@@ -203,7 +203,7 @@ $ComboHit$s from different faces within the same plane. The $z$ coordinate of th
 The situation is reproduced in Figure \ref{fig:stco}.
 \begin{figure}[!h]
     \centering
-    \includegraphics[width =0.7\textwidth]{figures/png/Screenshot_20240601_195651.png}
+    \includegraphics[width =0.6\textwidth]{figures/png/Screenshot_20240601_195651.png}
     \caption{Schematic view of a cosmic muon (light blue) hitting the vertical oriented station. The red lines are the $ComboHit$s, the dark blue dots 
     are the $StrawHit$s and the green dots are the $StereoHit$s.}
     \label{fig:stco}
@@ -242,8 +242,8 @@ To determine the four hit positions of the reconstructed track on the panels, we
 The reconstructed hits on the panels will be denoted as $R_{x,i}$ and $R_{y,i}$.
 \begin{equation}
     \begin{aligned}
- R_{y,i}=m_{yz}\cdot z_i+q_{yz}\\
- R_{x,i}&=(m_{yz}\cdot z_i+q_{yz}-q_{xy})/m_{xy}
+ R_{y,i}&=m_{yz}\cdot z_i+q_{yz}\\
+ R_{x,i}&=\frac{(m_{yz}\cdot z_i+q_{yz}-q_{xy})}{m_{xy}}
 \end{aligned}
 \end{equation}
 The bias on the longitudinal position is the difference between the reconstructed coordinate and the true Monte Carlo position in the panel frame.
