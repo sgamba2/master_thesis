@@ -171,13 +171,14 @@ height compared to others. Consequently, the leading edge would be very sharp, p
 \subsubsection{Rate}\label{ratetracker}
 The rate of generated events is calculated by integrating the flux on the solid angle and on the generation plane described in Section \ref{genplane}:
 \begin{equation}
-    \int \frac{\text{d} I}{d E_\mu \text{d} \Omega \text{d} t \text{d} S} \text{d} S_{\perp} \text{d} \Omega
+   R= \int \frac{\text{d} I}{d E_\mu \text{d} \Omega \text{d} t \text{d} S} \text{d} S_{\perp} \text{d} \Omega \text{d} E_\mu
     \end{equation}
 where $\text{d}S_\perp= \text{d}S \text{cos}\theta$ is the projection of the surface element on the plane perpendicular to the cosmics flux. 
+The energy and angle ranges selected for this simulation are 0.5 GeV < $E_\mu$ < 500 GeV, that represent the cosmics spectrum range, and 0° < $\theta^*$ < 90°.
 The result is a rate of generated cosmics of $R\sim$1.7 kHz, considering a generation plane $\sim 3$ m$^2$.
 The rate of cosmics muons detected by each straw $R_{straw}$ can be easily obtained as:
 \begin{equation}
-    R_{straw}=R \ \frac{1}{(N_{faces}\cdot N_{panels}\cdot N_{straws} )}
+    R_{straw}=\frac{R}{(N_{faces}\cdot N_{panels}\cdot N_{straws} )}
 \end{equation}
 where $N_{faces}=4$ is the number of hit faces, $N_{panels}=3$ is the number of panels in one face and $N_{straws}=96$ is the number of straws in one panel.
 The resulting rate is about 1.5 Hz. To perform a proper calibration, at least $\sim$1000 hits per straw are needed, which requires a data-taking period of about 8 days.
