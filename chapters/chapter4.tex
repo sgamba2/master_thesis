@@ -97,9 +97,7 @@ In the following sections, the results of the data collection are compared with 
       \caption{Second FPGA: histogram of the delay between channel 44 and the reference channel 94, the first to be readout.}
       \label{fig:delay2}
     \end{figure}
-
 \subsection{``ROC buffer overflow'' mode}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 In the ``ROC buffer overflow'' configuration, which will be referred to as RUN281, the event window size is 50 $\mu$s
 and the pulser rate is 60 kHz.
 \subsubsection{Hit timing and occupancy}\label{over}
@@ -108,53 +106,42 @@ different channels and the distribution of the total number of hits
 in a given channel (occupancy) as a function of the channel number.
 The timing distributions of hits in channel 0 of the first FPGA
 and in channel 2 of the second FPGA are shown in Figure \ref{fig:1}.
-The (a) distribution is, as expected, uniform, however the right one looks
+The top distribution is, as expected, uniform, however the right one looks
 less trivial.
-
 \begin{figure}[!h]
   \begin{subfigure}[b]{\textwidth}
       \centering
       \includegraphics[width=0.7\textwidth]{figures/pdf/figure_00007_timedistr_roc_simulation_ch0_281.pdf}
-      \caption{}
       \label{fig:t1}
   \end{subfigure}
 \\
   \begin{subfigure}[b]{\textwidth}
       \centering
       \includegraphics[width=0.7\textwidth]{figures/pdf/figure_00003_timedistr_roc_simulation_ch2_281.pdf}
-      \caption{}
       \label{fig:t2}
   \end{subfigure}
-     \caption{(a): time distribution of hits in the channel 0 in the first FPGA. \\
-     (b): time distribution of hits in the channel 2 in the second FPGA.}
+     \caption{(Top): time distribution of hits in the channel 0 in the first FPGA.
+     (Bottom): time distribution of hits in the channel 2 in the second FPGA.}
      \label{fig:1}
 \end{figure}
-
-    
-
-The distributions in Figure \ref{fig:1} are easier to understand by looking at the occupancy plot in Figure \ref{fig:2} (a).
+The distributions in Figure \ref{fig:1} are easier to understand by looking at the occupancy plot in Figure \ref{fig:2} (Top).
 The channel ordering in this plot corresponds to the readout order.
 Channels in the beginning of the readout sequence always have all their hits read out,
   however that is not true for the channels in the end of the readout sequence.
-
-
   \begin{figure}[!h]
     \begin{subfigure}[b]{\textwidth}
         \centering
         \includegraphics[width=0.7\textwidth]{figures/pdf/figure_00004_nhitsvschannel_roc_simulation_281.pdf}
-        \caption{}
         \label{fig:tt1}
     \end{subfigure}
   \\
     \begin{subfigure}[b]{\textwidth}
         \centering
         \includegraphics[width=0.7\textwidth]{figures/pdf/figure_00014_nhitsvschannel_roc_simulation_281.pdf}
-        \caption{}
         \label{fig:tt2}
     \end{subfigure}
-       \caption{(a): number of hits versus the channel number. The channels are numbered in the readout order.
-       \\
-       (b): zoom on the last channels in the readout sequence. The data and MC distributions
+       \caption{(Top): number of hits versus the channel number. The channels are numbered in the readout order.
+       (Bottom): zoom on the last channels in the readout sequence. The data and MC distributions
        differ from each other by $\sim$ 10$^{-3}$.}
        \label{fig:2}
   \end{figure}
@@ -174,7 +161,7 @@ This distribution plays a key role in understanding of the occupancy plot.
 \label{fig:66}
 \end{figure}
 
-In the distribution shown in Figure \ref{fig:2} (a),
+In the distribution shown in Figure \ref{fig:2} (Top),
 the first 68 channels are the ones with 4 hits per channel in the first FPGA
 and three hits per channel in the second FPGA, 
 resulting in the total of 255 hits.
@@ -198,19 +185,16 @@ which is a very good agreement.
   \begin{subfigure}[b]{\textwidth}
       \centering
       \includegraphics[width=0.7\textwidth]{figures/pdf/figure_00004_nhitsvschannel_roc_simulation_281.pdf}
-      \caption{}
       \label{fig:tt1}
   \end{subfigure}
 \\
   \begin{subfigure}[b]{\textwidth}
       \centering
       \includegraphics[width=0.7\textwidth]{figures/pdf/figure_00014_nhitsvschannel_roc_simulation_281.pdf}
-      \caption{}
       \label{fig:tt2}
   \end{subfigure}
-     \caption{(a): number of hits versus the channel number. The channels are numbered in the readout order.
-     \\
-     (b): zoom on the last channels in the readout sequence. The data and MC distributions
+     \caption{(Top): number of hits versus the channel number. The channels are numbered in the readout order.
+     (Bottom): zoom on the last channels in the readout sequence. The data and MC distributions
      differ from each other by $\sim$ 10$^{-3}$.}
      \label{fig:2}
 \end{figure}
@@ -254,19 +238,16 @@ within the event window is one or two, and the total number of pulses is always 
   \begin{subfigure}[b]{\textwidth}
       \centering
       \includegraphics[width=0.7\textwidth]{figures/pdf/figure_00001_timedistr_roc_simulation_10538.pdf}
-      \caption{}
       \label{fig:ttt1}
   \end{subfigure}
 \\
   \begin{subfigure}[b]{\textwidth}
       \centering
       \includegraphics[width=0.7\textwidth]{figures/pdf/figure_00012_timedistr_roc_simulation_ch2_105038.pdf}
-      \caption{}
       \label{fig:ttt2}
   \end{subfigure}
-     \caption{(a): the hit time distribution for this in channel 2, the second FPGA. 
-     \\
-     (b): the hit time distribution for hits in channel 0, the first FPGA.}
+     \caption{(Top): the hit time distribution for this in channel 2, the second FPGA. 
+     (Bottom): the hit time distribution for hits in channel 0, the first FPGA.}
      \label{fig:4}
 \end{figure}
 
