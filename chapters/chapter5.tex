@@ -5,6 +5,36 @@ delays for each straw. To achieve this, an unbiased reconstruction of the longit
 hit is essential. In this chapter, I will discuss the planning of the calibration using cosmic muons. My task 
 involved reconstructing the cosmic trajectories in a vertically oriented station and understanding the potential 
 biases and systematic errors that this orientation might introduce. }
+\section{Overview of the timing calibration}
+As mentioned in the introduction to this chapter, the main goal of this calibration is to determine signal propagation and channel-to-channel delays for each straw.
+When a particle creates a signal in a straw, it propagates towards both ends. 
+The arrival times at the ends will be called $t_1$ and $t_2$:
+\begin{equation}
+\begin{aligned}
+    t_1 &= \frac{x_{\text{hit}}}{v} + t_0 + d_1 \\
+    t_2 &= \frac{L - x_{\text{hit}}}{v} + t_0 + d_2
+\end{aligned}
+\end{equation}
+where $L$ is the length of the straw, $x_{\text{hit}}$ is the straw hit position 
+of the particle, $v$ is the propagation velocity inside the straw, $t_0$ the particle arrival time and $d_i$ 
+are the delays introduced for the response of each end. $t_1$ and $t_2$ will be determined by the TDC timing on the HV side and on the CAL side.
+The measurement of $\Delta t_{12}$ allows determining the position $x_{hit}$ that the particle has passed, 
+while $(t_1 + t_2) / 2$ allows measuring, up to an offset, the instant of passing:
+\begin{equation}\label{ffffff}
+    \begin{aligned}
+        \Delta t_{12} &= \frac{2x_{hit}-L}{v} +(d_1-d_2)  \\
+        \frac{(t_1 + t_2)}{2} &= \frac{d_1+d_2}{2}-\cfrac{L}{2v}+t_0 
+    \end{aligned}
+    \end{equation}
+This type of calibration will be achieved using cosmic rays. 
+To determine $v$ in the first equation of \ref{ffffff}, an unbiased reconstruction of the cosmics hit coordinates is needed.
+Since the station is not yet calibrated, it is only possible to use information about the hit straws. 
+The station's horizontal orientation facilitates unbiased reconstruction, as cosmic rays are distributed according to 
+cos$^2\theta$ and are predominantly vertical (see Section \ref{distcos}), thus crossing the straws mostly perpendicularly.
+However, vertical orientation is preferred for some gas system contingencies and because the station will 
+be vertical during the experiment. 
+In the following sections, I will introduce the simulation performed to reconstruct cosmic tracks with 
+a vertically oriented station, aiming to understand possible biases in determining longitudinal position caused by the non-uniform illumination of a panel.
 \section{Calibration of the station with cosmic muons}
 Cosmic muons serve as a crucial calibration source for the Mu2e detector system, particularly for the tracker station \ref{trackersec}. 
 They possess unique characteristics that make calibration with cosmic rays complementary to other techniques:
@@ -17,7 +47,7 @@ They possess unique characteristics that make calibration with cosmic rays compl
     \item being relativistic particles with negligible energy loss, their speed is almost always equal to the speed of 
     light $c$. The time they take to traverse the station can be used to align the time offsets of all the channels without any external time reference.
 \end{itemize}
-\subsection{Distribution of the cosmic muons energy and angle}
+\subsection{Distribution of the cosmic muons energy and angle}\label{distcos}
 The muon flux at sea level is usually described by the standard Gaisser's formula, Ref. \cite{guan2015parametrization}:
 \begin{equation}
     \frac{d I}{d E_\mu d \Omega d t d S}=\frac{0.14}{\mathrm{~cm}^2 \mathrm{~s} \ \mathrm{sr}}\left(\frac{E_\mu}{\mathrm{GeV}}\right)^{-2.7} \quad\left[\frac{1}{1+\frac{1.1 E_\mu \cos \theta}{115 \mathrm{GeV}}}+\frac{0.054}{1+\frac{1.1 E_\mu \cos \theta}{850 \mathrm{GeV}}}\right]
@@ -67,36 +97,8 @@ The latitude is set at 41.8° N, corresponding to Fermilab.
 To avoid variations in primary cosmic-ray flux due to solar activity, a common day (6-21-2021) outside the maximum and minimum sunspot cycle has been chosen for the simulation.
 While there are other packages designed to produce cosmic muons with specific energy and zenith angles, 
 such as CORSIKA, CRY was chosen for this work due to its straightforward implementation and compatibility with Geant4.
-\section{Overview of the timing calibration}
-As mentioned in the introduction to this chapter, the main goal of this calibration is to determine signal propagation and channel-to-channel delays for each straw.
-When a particle creates a signal in a straw, it propagates towards both ends. 
-The arrival times at the ends will be called $t_1$ and $t_2$:
-\begin{equation}
-\begin{aligned}
-    t_1 &= \frac{x_{\text{hit}}}{v} + t_0 + d_1 \\
-    t_2 &= \frac{L - x_{\text{hit}}}{v} + t_0 + d_2
-\end{aligned}
-\end{equation}
-where $L$ is the length of the straw, $x_{\text{hit}}$ is the straw hit position 
-of the particle, $v$ is the propagation velocity inside the straw, $t_0$ the particle arrival time and $d_i$ 
-are the delays introduced for the response of each end.
-The measurement of $\Delta t_{12}$ allows determining the position $x_{hit}$ that the particle has passed, 
-while $(t_1 + t_2) / 2$ allows measuring, up to an offset, the instant of passing:
-\begin{equation}\label{ffffff}
-    \begin{aligned}
-        \Delta t_{12} &= \frac{2x_{hit}-L}{v} +(d_1-d_2)  \\
-        \frac{(t_1 + t_2)}{2} &= \frac{d_1+d_2}{2}-\cfrac{L}{2v}+t_0 
-    \end{aligned}
-    \end{equation}
-Particularly, to determine $v$ in the first equation of \ref{ffffff}, an unbiased reconstruction of the hit position is needed.
-$\Delta t_{12}$ will be determined by the timing difference of the TDC time on the HV side subtracting that on the CAL side.
-Since the station is not yet calibrated, it is only possible to use information about the hit straws. 
-The horizontal orientation of the station allows for an unbiased reconstruction, as cosmic rays are distributed according to cos$^2\theta$ and are predominantly vertical.
-However, vertical orientation is preferred for some gas system contingencies and because the station will 
-be vertical during the experiment. 
-In the following sections, I will introduce the simulation performed to reconstruct cosmic tracks with 
-a vertically oriented station, aiming to understand possible biases in determining longitudinal position caused by the non-uniform illumination of a panel.
-\section{Reconstruction of the longitudinal position}\label{genplane}
+
+\subsection{Simulation enviroment and coordinate system}\label{genplane}
 In the Monte Carlo simulation, cosmic muons are uniformly generated within a horizontal plane approximately 11 m 
 above the beam axis. The GEANT4 simulation also incorporates the effects of the external neutron shield surrounding the DS 
 and the concrete ceiling of the Mu2e experimental hall. Starting from the generation plane, 
@@ -106,38 +108,40 @@ The external neutron shield surrounding the DS consists of concrete ($\rho$=2.3 
 roughly 0.9 m, while the ceiling above the Mu2e experimental area comprises 1.8 m of concrete. 
 The entire structure is enclosed within a volume of air at standard temperature and pressure.
 
-The station was simulated in an extracted position, meaning it is placed outside the solenoid. The magnetic field of the Mu2e hall was turned off. 
+The station was simulated in an extracted position, meaning it is placed outside the solenoid. 
 Given that the Earth's magnetic field is approximately $4 \div 5 \times 10^{-5}$ T, 
 and considering that the dimensions of the station are on the order of 1-2 m, 
 along with the fact that the majority of particles under consideration have energies around $\sim$ 10 GeV, 
 the curvature radius of the particles is approximately $R\sim p[\text{GeV}]/(B[\text{T}]\cdot 0.3) \sim 30$ m. 
 This radius is significantly larger than the station's dimensions, allowing us to reconstruct particle trajectories as straight lines.
+For this reason, the magnetic field of the Mu2e hall was turned off. 
 
 Before starting explaining the event selection and the reconstruction, let me define the coordinate system, as shown in Figure \ref{fig:coordinate}.
 \begin{figure}[!h]
     \centering
-    \includegraphics[width =0.6\textwidth]{figures/png/Screenshot_20240526_164527.png}
+    \includegraphics[width =0.5\textwidth]{figures/png/Screenshot_20240526_164527.png}
     \caption{Schematic view of a tracker station and definition of the coordinate used for the analysis.}
     \label{fig:coordinate}
 \end{figure}
-\subsection{Event selection}\label{eventselection}
-Events in which a cosmic muon strikes only the first station were chosen. 
+\section{Event selection}\label{eventselection}
+Events in which a cosmic muon hits only the first station were chosen. 
 
-Each straw can be parametrized as a straight line
+Each straw can be parametrized as a straight line:
 \begin{equation}\label{equaretta}
     (D_{x,i}t+M_{x,i},D_{y,i}t+M_{y,i},z_i)
 \end{equation}
 where $D_{x,i}$, $D_{y,i}$ are the straws' directions on $x$, $y$, while $M_{x,i}$, $M_{y,i}$ are the straws' midpoints on $x$, $y$. $z_i$ is the $z$ coordinate of the straw.
 %One dimension is correlated with the other two, so we have just two informationful dimensions.
 In this parametrization, the straws are all parallel on the $y-z$ plane.
+
 Since two parallel straight lines (straws) define a three-dimensional plane of possible tracks, 
 at least another pair of straws, uncorrelated with the initial two, is required to reconstruct a 
 single straight line. The intersection of two planes forms a straight line. Therefore, at least four straws with different $z$ coordinates are necessary, 
 so a number of hits per face greater than one was required.
 
 Since more than one hit can occur in a single panel, another selection criterion was to choose events 
-with fewer than three straw hits per panel. This criterion was chosen to minimize the error in position reconstruction.
-\subsubsection{Panels illumination pattern}
+with fewer than three hit straws per panel. This criterion was chosen to minimize the error in position reconstruction.
+\subsection{Panels illumination pattern}
 To achieve accurate timing calibration, it is essential to have uniform illumination of the hits across each panel. 
 Using only the conditions outlined in Section \ref{eventselection}, the Monte Carlo hits were plotted in the reference frame of the panel. 
 The result is shown in Figure \ref{fig:illumination} for panel 0 of plane 0, which corresponds to the upper right panel in Figure 
@@ -150,40 +154,45 @@ The result is shown in Figure \ref{fig:illumination} for panel 0 of plane 0, whi
     \label{fig:illumination}
 \end{figure}
 Similar patterns were observed for all panels in both planes, as shown in Appendix \ref{appendix2}. 
-The illumination is spotty and non-uniform. This unusual illumination is due to the panels' overlap areas being located at the extreme edges. 
-The overlap selects specific cosmic directions in the $y$-$z$ plane. 
-To better visualize the selected directions, the Monte Carlo $m_{yz}=\Delta y /\Delta z$ distribution has been plotted.
-There are no tracks corresponding to the $m_{yz}\sim 0$, which are horizontal tracks. The vertical tracks (the most probable ones), 
-which correspond to $m_{yz} \sim \infty$, are also not selected by our algorithm. This results in a very low rate too, that will be 
-investigated better in Section \ref{ratetracker}. The most selected directions are those with $|m_{yz}| \sim 1$, which represent cosmics with 
+
+The illumination is spotty and non-uniform. This unusual illumination is due to the panels' overlap areas being located at their extreme edges, as shown in Figure \ref{fig:coordinate}. 
+The overlaps select specific cosmic directions in the $y$-$z$ plane. 
+To better visualize the selected directions, the Monte Carlo $m_{yz}=\Delta y /\Delta z$ distribution has been plotted in Figure \ref{fig:myz}.
+There are no tracks corresponding to the $m_{yz}\sim 0$, which are horizontal tracks, as one could expect. The vertical tracks, 
+which correspond to $m_{yz} \rightarrow \infty$, are also not selected by our algorithm, since no panels would be hit in these conditions. Since most of the cosmics' tracks are vertical, 
+this results in a very low rate too, that will be investigated better in Section \ref{ratetracker}. The most selected directions are those with $|m_{yz}| \sim 1$, which represent cosmics with 
 an angle of approximately 45°.
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.8\textwidth]{figures/pdf/myz.pdf}
-    \caption{Monte Carlo $\Delta y /\Delta z$ cosmics distribution.}
+    \caption{The Monte Carlo $y-z$ direction distribution of cosmic rays ($m_{yz}=\Delta y /\Delta z$).}
     \label{fig:myz}
 \end{figure}
 
-Additionally, there are almost no hits in the central region, which could lead to non-linearities. 
-Specifically, if particles pass near the end of the straw, the signals are wider, and wider signals have greater charge and 
+Additionally, Figure \ref{fig:illumination} shows that there are almost no hits in the panel central region, which could result in waveform non-linearities.
+Specifically, if particles pass near the end of the straw, signals are wider, and wider signals have greater charge and 
 height compared to others. Consequently, the leading edge would be very sharp, potentially causing timing systematics.
 
-\subsubsection{Rate}\label{ratetracker}
-The rate of generated events is calculated by integrating the flux on the solid angle and on the generation plane described in Section \ref{genplane}:
+\subsection{Rate}\label{ratetracker}
+The rate of generated events is calculated by integrating the flux on the solid angle, on the muon energy and on the generation plane described in Section \ref{genplane}:
 \begin{equation}
    R= \int \frac{\text{d} I}{d E_\mu \text{d} \Omega \text{d} t \text{d} S} \text{d} S_{\perp} \text{d} \Omega \text{d} E_\mu
     \end{equation}
 where $\text{d}S_\perp= \text{d}S \text{cos}\theta$ is the projection of the surface element on the plane perpendicular to the cosmics flux. 
 The energy and angle ranges selected for this simulation are 0.5 GeV < $E_\mu$ < 500 GeV, that represent the cosmics spectrum range, and 0° < $\theta^*$ < 90°.
 The result is a rate of generated cosmics of $R\sim$1.7 kHz, considering a generation plane $\sim 3$ m$^2$.
+Considering that the least energy detectable by the tracker is XXX
+\begin{equation}
+    R_{tracker}=R\frac{N_{E_\mu >}}{N_{tot}}
+\end{equation}
 The rate of cosmics muons detected by each straw $R_{straw}$ can be easily obtained as:
 \begin{equation}
-    R_{straw}=\frac{R}{(N_{faces}\cdot N_{panels}\cdot N_{straws} )}
+    R_{straw}=\frac{R_{tracker}}{(N_{faces}\cdot N_{panels}\cdot N_{straws} )}
 \end{equation}
 where $N_{faces}=4$ is the number of hit faces, $N_{panels}=3$ is the number of panels in one face and $N_{straws}=96$ is the number of straws in one panel.
 The resulting rate is about 1.5 Hz. To perform a proper calibration, at least $\sim$1000 hits per straw are needed, which requires a data-taking period of about 8 days.
 This is a significantly long duration for a simple calibration.
-\subsection{Reconstruction of a straight line}
+\section{Reconstruction of a straight cosmic track}
 The only information about a straw are, as mentioned in equation \ref{equaretta}:
 \begin{itemize}
     \item the straw direction $(D_{x,i},D_{y,i})$;
@@ -199,7 +208,7 @@ being the average of the hit straw midpoints in that panel. Since four panels in
 four $ComboHit$s are reconstructed within a station. The new $ComboHit$ midpoints will be referred to as $(x_{m,i}, y_{m,i}, z_{m,i})$.
 Two $ComboHit$s from different faces within the same plane are combined to form a $StereoHit$. 
 The $x$ and $y$ coordinates of the $StereoHit$ are determined by the intersection point of the two 
-$ComboHit$s from different faces within the same plane. The $z$ coordinate of the $StereoHit$ is the average of the $z$ coordinates of the $ComboHit$s.
+$ComboHit$s. The $z$ coordinate of the $StereoHit$ is the average of the $z$ coordinates of the $ComboHit$s.
 The situation is reproduced in Figure \ref{fig:stco}.
 \begin{figure}[!h]
     \centering
@@ -216,7 +225,7 @@ Considering only one plane and the following equations as the $x-y$ $Combo Hit$s
     \end{aligned}
     \end{equation}
 where $u_i$ is the $ComboHit$ $x$ direction and $v_i$ is the $ComboHit$ $y$ direction, the $StereoHit$ coordinates will be:
-\begin{equation}
+\begin{equation}\label{x}
     \begin{aligned}
 x&=\frac{u_1 u_2(y_{m,1}-y_{m,2}+\frac{v_2}{u_2}x_{m,2}-\frac{v_1}{u_1}x_{m,1})}{v_2 u_1 - v_1 u_2}\\
 y&=\frac{v_2}{u_2}\left(\frac{u_1 u_2(y_{m,1}-y_{m,2}+\frac{v_2}{u_2}x_{m,2}-\frac{v_1}{u_1}x_{m,1})}{v_2 u_1 - v_1 u_2}-x_{m,2}\right)+y_{m,2}
@@ -248,7 +257,68 @@ The reconstructed hits on the panels will be denoted as $R_{x,i}$ and $R_{y,i}$.
 \end{equation}
 The bias on the longitudinal position is the difference between the reconstructed coordinate and the true Monte Carlo position in the panel frame.
 
-\subsection{Results}
+\section{Results}
+
+Our target is to achieve a longitudinal resolution better than 4 cm, thus ensuring that every bias on the reconstructed coordinate 
+remains below this threshold. For each panel, I plotted the reconstructed longitudinal coordinate, as shown for panel 0 in Figure \ref{fig:recx}. 
+Similar patterns were observed for all panels. In this distribution, the bumps are a consequence of the four-hit face requirement and the panels' overlap areas being located at the extreme edges. 
+It is important to observe is that different bumps correspond to different straws, as can also be seen in Figure \ref{fig:illumination}.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/png/x_panel0.png}
+    \caption{The reconstructed longitudinal coordinate in the 0th panel frame.}
+    \label{fig:recx}
+\end{figure}
+The positional bias between the reconstructed and true longitudinal coordinates is plotted in 
+Figure \ref{fig:bias}. The true coordinate is the mean coordinate of the Monte Carlo hits. The bias range is approximately [-6, 6] cm, 
+indicating a significant systematic factor affecting the reconstructed hit. The distribution is nearly symmetric, similar for all panels. 
+There are four peaks corresponding to the four different spots shown in Figure \ref{fig:illumination}.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/png/panel_00_x_bias.png}
+    \caption{The difference between the reconstructed and the true longitudinal coordinate in the 0th panel frame. 
+    The true coordinate is the mean coordinates of Monte Carlo hits.}
+    \label{fig:bias}
+\end{figure}
+In the 2D distribution of the longitudinal bias versus the true position, 
+Figure \ref{fig:rec2D} shows four different spots on the $x$ axis corresponding to 
+the overlap regions. Each spot refers to different straws. The two spots on the $y$ axis correspond to cosmics with different orientations. 
+The first spot (CAL side) correspond to 90° panels overlap.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/png/panel_00_x_bias_vs_x.png}
+    \caption{The 2D histogram of the longitudinal bias versus the true longitudinal coordinate.}
+    \label{fig:rec2D}
+\end{figure}
+To assess the systematic impact on the reconstructed coordinates, it is essential to visualize the TProfile of the bias versus the true coordinates. 
+Profile histograms are used to represent the mean value of $y$ and its error for each bin in $x$. 
+The default displayed error is the standard error on the mean. 
+The profile is depicted in Figure \ref{fig:profile}. It reveals a systematic effect in determining the 
+longitudinal position within a range exceeding [-4,4] cm. The initial portion of the histogram (CAL side) 
+corresponds to the overlap of 90° panels. This plot indicates that the mean may not serve as an accurate estimator of the bias. 
+Under these conditions, the calibration is expected to become challenging.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/png/panel_00_x_bias_vs_x_prof.png}
+    \caption{The profile of the longitudinal bias versus the true longitudinal coordinate.}
+    \label{fig:profile}
+\end{figure}
+The main issue with this type of reconstruction lies in the fact that $m_{yz}=\frac{\Delta y}{\Delta z}$ 
+is not accurately reconstructed. Consequently, the reconstructed coordinates depend on this value, as demonstrated in \ref{}. 
+This discrepancy arises when the true hit position, far from the midpoint of the straws, results in incorrectly reconstructed tracks'
+direction on the $y-z$ plane, leading to horizontal cosmic rays being reconstructed. 
+Figure \ref{fig:myzrec} shows the reconstructed $m_{yz}$ distribution, highlighting a significant peak at the value of 0, 
+indicating horizontal cosmic rays, which are not possible in reality. This plot needs to be compared with the true $m_{yz}$ distribution, Figure \ref{fig:myz}.
+
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/png/myz_rec.png}
+    \caption{The reconstructed $y-z$ direction distribution of cosmic rays ($m_{yz}=\Delta y /\Delta z$).}
+    \label{fig:myzrec}
+\end{figure}
+
 
 %yongi cap 3.1.5.2
 %con il tracker in orizzontale , dato che le tracks sono verticali colpirebbero per panel sicuro almeno 2 straws che sono sovrappposte e quindi in totale 8, se hanno una certa angolazione anche 12

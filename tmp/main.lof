@@ -54,15 +54,15 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces The tracker test stand, TS1, featuring one DRAC card linked via optical fiber to the DTC in the DAQ computer (mu2edaq09). The setup includes a total of 96 channels.\relax }}{80}{figure.caption.60}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Graphic illustration of pulses in an event window.\relax }}{80}{figure.caption.61}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces First FPGA: histogram of the delay between channel 0 and the reference channel 91, the first to be readout.\relax }}{82}{figure.caption.62}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Second FPGA: histogram of the delay between channel 44 and the reference channel 94, the first to be readout.\relax }}{82}{figure.caption.63}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces (Top): time distribution of hits in the channel 0 in the first FPGA. (Bottom): time distribution of hits in the channel 2 in the second FPGA.\relax }}{83}{figure.caption.64}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces FPGA-1: histogram of the delay between channel 0 and the reference channel 91, the first to be readout.\relax }}{82}{figure.caption.62}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces FPGA-2: histogram of the delay between channel 44 and the reference channel 94, the first to be readout.\relax }}{82}{figure.caption.63}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces (Top): time distribution of hits in the channel 0 in the FPGA-1. (Bottom): time distribution of hits in the channel 2 in the FPGA-2.\relax }}{83}{figure.caption.64}%
 \contentsline {figure}{\numberline {4.6}{\ignorespaces (Top): number of hits versus the channel number. The channels are numbered in the readout order. (Bottom): zoom on the last channels in the readout sequence. The data and MC distributions differ from each other by $\sim $ 10$^{-3}$.\relax }}{84}{figure.caption.65}%
 \contentsline {figure}{\numberline {4.7}{\ignorespaces The distribution of the number of hits in the channel 0 of the first digi FPGA (RUN281). \relax }}{85}{figure.caption.66}%
 \contentsline {figure}{\numberline {4.8}{\ignorespaces The distribution of the total number of hits read out per event. \relax }}{85}{figure.caption.67}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces (Top): the hit time distribution for this in channel 2, the second FPGA. (Bottom): the hit time distribution for hits in channel 0, the first FPGA.\relax }}{86}{figure.caption.68}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces (Top): the hit time distribution for this in channel 2, the FPGA-2. (Bottom): the hit time distribution for hits in channel 0, the FPGA-1.\relax }}{86}{figure.caption.68}%
 \contentsline {figure}{\numberline {4.10}{\ignorespaces Occupancy: the number of hits versus the channel number for RUN105038.\relax }}{87}{figure.caption.69}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces The distribution of the number of hits in channel 0, first FPGA, for RUN105038. Entries in the $n$(hits)=0 bin are due to the readout errors. \relax }}{87}{figure.caption.70}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces The distribution of the number of hits in channel 0, FPGA-1, for RUN105038. Entries in the $n$(hits)=0 bin are due to the readout errors. \relax }}{87}{figure.caption.70}%
 \contentsline {figure}{\numberline {4.12}{\ignorespaces The distribution of the total number of hits per event in ``non-saturated'' mode. \relax }}{88}{figure.caption.71}%
 \contentsline {figure}{\numberline {4.13}{\ignorespaces Regular distribution of number of hits versus channel ID. The 0th channel is the first to be pulsed. As a consequence, the active channels are the 8th, 16th, 24th, 32nd, 40th, 48th, 56th, 64th, 72nd, 80th and 88th. The number of hits is 3 or 4 for all channels. No cross talks were observed in any neighbour channel.\relax }}{89}{figure.caption.72}%
 \contentsline {figure}{\numberline {4.14}{\ignorespaces Distribution of number of hits versus channel ID. The 6th channel is the first to be pulsed. As a consequence, the channels that should be active are the 14th, 22nd, 30th, 38th, 46th, 54th, 62nd, 70th, 78th, 86th and 94th. The 94th channel is not responding. In this case, the preamp was substituted. The number of hits is not the same for all channels. The 14th, 22nd, 38th, 46th, 54th, 62nd, 70th channels have more hit than expected. To address this issue, the distribution of $\Delta t$ between hits of one of this channels is reported in Figure \ref {fig:deltatnhits}. No cross talks were observed in any neighbour channel.\relax }}{89}{figure.caption.73}%
@@ -92,10 +92,15 @@
 \contentsline {figure}{\numberline {5.1}{\ignorespaces The relation of the observed zenith angle of muons, $\theta ^*$, to the zenith angle at the muon production point in the atmosphere, $\theta $. $R$ is the radius of the Earth, Ref.\cite {guan2015parametrization}.\relax }}{105}{figure.caption.96}%
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Schematic view of a tracker station and definition of the coordinate used for the analysis.\relax }}{107}{figure.caption.97}%
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Illumination of Monte Carlo hits on panel 0, plane 0, selecting cosmics that traverse at least four panels across four distinct faces of the station, with fewer than three hits per panel.\relax }}{108}{figure.caption.98}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Monte Carlo $\Delta y /\Delta z$ cosmics distribution.\relax }}{109}{figure.caption.99}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces The Monte Carlo $y-z$ direction distribution of cosmic rays ($m_{yz}=\Delta y /\Delta z$).\relax }}{109}{figure.caption.99}%
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Schematic view of a cosmic muon (light blue) hitting the vertical oriented station. The red lines are the $ComboHit$s, the dark blue dots are the $StrawHit$s and the green dots are the $StereoHit$s.\relax }}{110}{figure.caption.100}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces The reconstructed longitudinal coordinate in the 0th panel frame.\relax }}{112}{figure.caption.101}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces The difference between the reconstructed and the true longitudinal coordinate in the 0th panel frame. The true coordinate is the mean coordinates of Monte Carlo hits.\relax }}{112}{figure.caption.102}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces The 2D histogram of the longitudinal bias versus the true longitudinal coordinate.\relax }}{113}{figure.caption.103}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces The profile of the longitudinal bias versus the true longitudinal coordinate.\relax }}{114}{figure.caption.104}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces The reconstructed $y-z$ direction distribution of cosmic rays ($m_{yz}=\Delta y /\Delta z$).\relax }}{114}{figure.caption.105}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Illumination pattern of cosmics hits on the panels of plane 0.\relax }}{117}{figure.caption.101}%
-\contentsline {figure}{\numberline {B.2}{\ignorespaces Illumination pattern of cosmics hits on the panels of plane 1.\relax }}{118}{figure.caption.102}%
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Illumination pattern of cosmics hits on the panels of plane 0.\relax }}{119}{figure.caption.106}%
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Illumination pattern of cosmics hits on the panels of plane 1.\relax }}{120}{figure.caption.107}%
