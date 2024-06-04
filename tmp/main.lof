@@ -93,14 +93,14 @@
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Schematic view of a tracker station and definition of the coordinate used for the analysis.\relax }}{107}{figure.caption.97}%
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Illumination of Monte Carlo hits on panel 0, plane 0, selecting cosmics that traverse at least four panels across four distinct faces of the station, with fewer than three hits per panel.\relax }}{108}{figure.caption.98}%
 \contentsline {figure}{\numberline {5.4}{\ignorespaces The Monte Carlo $y-z$ direction distribution of cosmic rays ($m_{yz}=\Delta y /\Delta z$).\relax }}{109}{figure.caption.99}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Schematic view of a cosmic muon (light blue) hitting the vertical oriented station. The red lines are the $ComboHit$s, the dark blue dots are the $StrawHit$s and the green dots are the $StereoHit$s.\relax }}{110}{figure.caption.100}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Schematic view of a cosmic muon (light blue) hitting the vertical oriented station. The red lines are the $ComboHit$s, the dark blue dots are the $StrawHit$s and the green dots are the $StereoHit$s.\relax }}{111}{figure.caption.100}%
 \contentsline {figure}{\numberline {5.6}{\ignorespaces The reconstructed longitudinal coordinate in the 0th panel frame.\relax }}{112}{figure.caption.101}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces The difference between the reconstructed and the true longitudinal coordinate in the 0th panel frame. The true coordinate is the mean coordinates of Monte Carlo hits.\relax }}{112}{figure.caption.102}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces The difference between the reconstructed and the true longitudinal coordinate in the 0th panel frame. The true coordinate is the mean coordinates of Monte Carlo hits.\relax }}{113}{figure.caption.102}%
 \contentsline {figure}{\numberline {5.8}{\ignorespaces The 2D histogram of the longitudinal bias versus the true longitudinal coordinate.\relax }}{113}{figure.caption.103}%
 \contentsline {figure}{\numberline {5.9}{\ignorespaces The profile of the longitudinal bias versus the true longitudinal coordinate.\relax }}{114}{figure.caption.104}%
 \contentsline {figure}{\numberline {5.10}{\ignorespaces The reconstructed $y-z$ direction distribution of cosmic rays ($m_{yz}=\Delta y /\Delta z$).\relax }}{114}{figure.caption.105}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Illumination pattern of cosmics hits on the panels of plane 0.\relax }}{119}{figure.caption.106}%
-\contentsline {figure}{\numberline {B.2}{\ignorespaces Illumination pattern of cosmics hits on the panels of plane 1.\relax }}{120}{figure.caption.107}%
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Illumination pattern of cosmics hits on the panels of plane 0.\relax }}{121}{figure.caption.106}%
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Illumination pattern of cosmics hits on the panels of plane 1.\relax }}{122}{figure.caption.107}%

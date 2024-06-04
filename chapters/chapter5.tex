@@ -59,7 +59,7 @@ This simplified formula doesn't take into account muon decays and the curvature 
 thus it is only valid for zenith angles $\theta < 70^\circ$ and for energies $E > \frac{100}{\cos \theta}$ GeV.
 A modified version of the standard Gaisser formula, called Gaisser Tang model, is used to account for low energy and large zenith angle effects, Ref. \cite{guan2015parametrization}:
 \begin{equation}\label{cosmicmuonflux}
-    \frac{d I}{d E_\mu d \Omega d t d S}=\frac{0.14 E_\mu}{\mathrm{cm}^2 \mathrm{~s} \ \mathrm{sr} \ \mathrm{GeV}}\left(1+\frac{3.64 \mathrm{GeV}}{E_\mu\left(\cos \theta^*\right)^{1.29}}\right)^{-2.7}\left[\frac{1}{1+\frac{1.1 E_\mu \cos \theta^*}{115 \mathrm{GeV}}}+\frac{0.054}{1+\frac{1.1 E_\mu \cos \theta^*}{850 \mathrm{GeV}}}\right]
+    \frac{d I}{d E_\mu d \Omega d t d S}=\frac{0.14}{\mathrm{cm}^2 \mathrm{~s} \ \mathrm{sr} }\left( \frac{E_\mu}{\mathrm{GeV}} \left(1+\frac{3.64 \mathrm{GeV}}{E_\mu\left(\cos \theta^*\right)^{1.29}}\right)\right)^{-2.7}\left[\frac{1}{1+\frac{1.1 E_\mu \cos \theta^*}{115 \mathrm{GeV}}}+\frac{0.054}{1+\frac{1.1 E_\mu \cos \theta^*}{850 \mathrm{GeV}}}\right]
 \end{equation}
 where second term in the bracket is the same as in the standard formula, except that the zenith angle 
 $\theta$ is substituted by the angle $\theta^*$. The relation between cos$\theta$
@@ -174,24 +174,25 @@ Specifically, if particles pass near the end of the straw, signals are wider, an
 height compared to others. Consequently, the leading edge would be very sharp, potentially causing timing systematics.
 
 \subsection{Rate}\label{ratetracker}
-The rate of generated events is calculated by integrating the flux on the solid angle, on the muon energy and on the generation plane described in Section \ref{genplane}:
+The rate of generated events is computed by integrating the flux on the solid angle, on the muon energy and on the generation plane described in Section \ref{genplane}:
 \begin{equation}
    R= \int \frac{\text{d} I}{d E_\mu \text{d} \Omega \text{d} t \text{d} S} \text{d} S_{\perp} \text{d} \Omega \text{d} E_\mu
     \end{equation}
 where $\text{d}S_\perp= \text{d}S \text{cos}\theta$ is the projection of the surface element on the plane perpendicular to the cosmics flux. 
-The energy and angle ranges selected for this simulation are 0.5 GeV < $E_\mu$ < 500 GeV, that represent the cosmics spectrum range, and 0° < $\theta^*$ < 90°.
-The result is a rate of generated cosmics of $R\sim$1.7 kHz, considering a generation plane $\sim 3$ m$^2$.
-Considering that the least energy detectable by the tracker is XXX
-\begin{equation}
-    R_{tracker}=R\frac{N_{E_\mu >}}{N_{tot}}
-\end{equation}
-The rate of cosmics muons detected by each straw $R_{straw}$ can be easily obtained as:
+The energy and angle ranges selected for this simulation are 1.5 GeV < $E_\mu$ < 500 GeV, representing the 
+muons that are not absorbed in the concrete located above the tracker, and 0° < $\theta^*$ < 90°. In particular, 
+it has been observed in the simulation that the particles able to reach the tracker have energies above 3-4 GeV, so 1.5 GeV is a safe limit. 
+The result is a rate of generated cosmics of $R \sim 580$ Hz, considering a generation plane of $\sim 10$ m$^2$. 
+The rate of cosmic muons detected by each straw, $R_{straw}$, can be easily obtained as:
 \begin{equation}
     R_{straw}=\frac{R_{tracker}}{(N_{faces}\cdot N_{panels}\cdot N_{straws} )}
 \end{equation}
 where $N_{faces}=4$ is the number of hit faces, $N_{panels}=3$ is the number of panels in one face and $N_{straws}=96$ is the number of straws in one panel.
-The resulting rate is about 1.5 Hz. To perform a proper calibration, at least $\sim$1000 hits per straw are needed, which requires a data-taking period of about 8 days.
-This is a significantly long duration for a simple calibration.
+The resulting rate is about 0.5 Hz. This simple computation does not take into account the complicated tracker geometry and the station orientation.
+Let us normalize by a factor that is the ratio between the number of selected events and the total number of produced events, which is about 
+$\sim10^{-3}$. The rate then changes to $\sim$ mHz. 
+To perform a proper calibration, at least $\sim$1000 hits per straw are needed, which requires at least 8 days of data taking.
+This rate calculation is quite straightforward, but the duration required for such a simple calibration is notably long.
 \section{Reconstruction of a straight cosmic track}
 The only information about a straw are, as mentioned in equation \ref{equaretta}:
 \begin{itemize}
@@ -318,7 +319,7 @@ indicating horizontal cosmic rays, which are not possible in reality. This plot 
     \caption{The reconstructed $y-z$ direction distribution of cosmic rays ($m_{yz}=\Delta y /\Delta z$).}
     \label{fig:myzrec}
 \end{figure}
-
+\section{Conclusions}
 
 %yongi cap 3.1.5.2
 %con il tracker in orizzontale , dato che le tracks sono verticali colpirebbero per panel sicuro almeno 2 straws che sono sovrappposte e quindi in totale 8, se hanno una certa angolazione anche 12
