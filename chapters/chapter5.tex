@@ -179,19 +179,22 @@ The rate of generated events is computed by integrating the flux on the solid an
    R= \int \frac{\text{d} I}{d E_\mu \text{d} \Omega \text{d} t \text{d} S} \text{d} S_{\perp} \text{d} \Omega \text{d} E_\mu
     \end{equation}
 where $\text{d}S_\perp= \text{d}S \text{cos}\theta$ is the projection of the surface element on the plane perpendicular to the cosmics flux. 
-The energy and angle ranges selected for this simulation are 1.5 GeV < $E_\mu$ < 500 GeV, representing the 
-muons that are not absorbed in the concrete located above the tracker, and 0° < $\theta^*$ < 90°. In particular, 
-it has been observed in the simulation that the particles able to reach the tracker have energies above 3-4 GeV, so 1.5 GeV is a safe limit. 
-The result is a rate of generated cosmics of $R \sim 580$ Hz, considering a generation plane of $\sim 10$ m$^2$. 
-The rate of cosmic muons detected by each straw, $R_{straw}$, can be easily obtained as:
-\begin{equation}
-    R_{straw}=\frac{R}{(N_{faces}\cdot N_{panels}\cdot N_{straws} )}
-\end{equation}
-where $N_{faces}=4$ is the number of hit faces, $N_{panels}=3$ is the number of panels in one face and $N_{straws}=96$ is the number of straws in one panel.
-The resulting rate is about 0.5 Hz. This simple computation does not take into account the complicated tracker geometry and the station orientation.
-Let us normalize by a factor that is the ratio between the number of selected events and the total number of produced events, which is about 
-$\sim10^{-3}$. The rate then changes to $\sim$ mHz. 
-To perform a proper calibration, at least $\sim$1000 hits per straw are needed, which requires at least 8 days of data taking.
+The energy and angle ranges selected for this simulation are 0.5 GeV < $E_\mu$ < 500 GeV, representing the 
+muons that are not absorbed in the concrete located above the tracker, and 0° < $\theta^*$ < 90°. 
+Considering a generation plane of $\sim 5$ m$^2$, the result is a rate of generated cosmics of $R \sim 380$ Hz at $\sim$11 m to the ground. 
+%The rate of cosmic muons detected by each straw, $R_{straw}$, can be easily obtained as:
+%\begin{equation}
+%    R_{straw}=\frac{R}{(N_{faces}\cdot N_{panels}\cdot N_{straws} )}
+%\end{equation}
+%where $N_{faces}=4$ is the number of hit faces, $N_{panels}=3$ is the number of panels in one face and $N_{straws}=96$ is the number of straws in one panel.
+%The resulting rate is about 0.5 Hz. This simple computation does not take into account the complicated tracker geometry and the station orientation.
+%Let us normalize by a factor that is the ratio between the number of selected events and the total number of produced events, which is about 
+%$\sim10^{-3}$. The rate then changes to $\sim$ mHz. 
+%To perform a proper calibration, at least $\sim$1000 hits per straw are needed, which requires at least 8 days of data taking.
+%This rate calculation is quite straightforward, but the duration required for such a simple calibration is notably long.
+In the simulation, the number of generated cosmic muons was 2$\times 10^8$ on the generation plan (and only $10^5$ effectively hit the first station).
+From these number it is possible to compute how much time is needed for the calibration: 
+$\Delta t = N_{gen}/R\sim 6$ days. 
 This rate calculation is quite straightforward, but the duration required for such a simple calibration is notably long.
 \section{Reconstruction of a straight cosmic track}
 The only information about a straw are, as mentioned in equation \ref{equaretta}:
