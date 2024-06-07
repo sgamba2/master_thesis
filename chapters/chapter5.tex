@@ -174,14 +174,14 @@ Specifically, if particles pass near the end of the straw, signals are wider, an
 height compared to others. Consequently, the leading edge would be very sharp, potentially causing timing systematics.
 
 \subsection{Rate}\label{ratetracker}
-The rate of generated events is computed by integrating the flux on the solid angle, on the muon energy and on the generation plane described in Section \ref{genplane}:
+The rate of generated events, on the horizontal plane above the beam axis, is computed by integrating the flux on the solid angle, on the muon energy described in Section \ref{genplane}:
 \begin{equation}
    R= \int \frac{\text{d} I}{d E_\mu \text{d} \Omega \text{d} t \text{d} S} \text{d} S_{\perp} \text{d} \Omega \text{d} E_\mu
     \end{equation}
 where $\text{d}S_\perp= \text{d}S \text{cos}\theta$ is the projection of the surface element on the plane perpendicular to the cosmics flux. 
 The energy and angle ranges selected for this simulation are 0.5 GeV < $E_\mu$ < 500 GeV, representing the 
 muons that are not absorbed in the concrete located above the tracker, and 0° < $\theta^*$ < 90°. 
-Considering a generation plane of $\sim 5$ m$^2$, the result is a rate of generated cosmics of $R \sim 380$ Hz at $\sim$11 m to the ground. 
+Considering a generation plane of $\sim 5$ m$^2$, the result is $R \sim 380$ Hz. 
 %The rate of cosmic muons detected by each straw, $R_{straw}$, can be easily obtained as:
 %\begin{equation}
 %    R_{straw}=\frac{R}{(N_{faces}\cdot N_{panels}\cdot N_{straws} )}
@@ -192,10 +192,9 @@ Considering a generation plane of $\sim 5$ m$^2$, the result is a rate of genera
 %$\sim10^{-3}$. The rate then changes to $\sim$ mHz. 
 %To perform a proper calibration, at least $\sim$1000 hits per straw are needed, which requires at least 8 days of data taking.
 %This rate calculation is quite straightforward, but the duration required for such a simple calibration is notably long.
-In the simulation, the number of generated cosmic muons was 2$\times 10^8$ on the generation plan (and only $10^5$ effectively hit the first station).
-From these number it is possible to compute how much time is needed for the calibration: 
+In the simulation, 2$\times 10^8$ cosmic muons were generated on the horizontal plane. From this number, it is possible to compute the time required for calibration, that is
 $\Delta t = N_{gen}/R\sim 6$ days. 
-This rate calculation is quite straightforward, but the duration required for such a simple calibration is notably long.
+This rate calculation is straightforward, but the time needed for such a simple calibration is excessively long.
 \section{Reconstruction of a straight cosmic track}
 The only information about a straw are, as mentioned in equation \ref{equaretta}:
 \begin{itemize}
