@@ -323,12 +323,13 @@ $\Delta t$ distribution between hits was plotted, as shown in Figure \ref{fig:de
  \label{fig:deltatnhits}
 \end{figure}
 
-One more important feature to be investigated is the presence of cross talks. Figure \ref{fig:cross} shows a run where cross talks were observed.
-They were observed only in the case if the first pulsed channel is odd. The cross talk is asymmetric (3$\rightarrow$5 was observed, 
+One more important feature to be investigated is the presence of cross talks. Figure \ref{fig:cross} shows a run where cross talk is detected.
+This phenomenon occurred only when the first pulsed channel is odd. The cross talk is asymmetric (3$\rightarrow$5 is observed, 
 but no 3$\rightarrow$1) and only in odd channels.
-Moreover, it seems to appear only in the first 20 channels that are the one corresponding to the farest channels from the DRAC. XXXX
-Since preamps are mounted vertically, and channel 0 is the one on the board, the cross talks seem to be of radiative type.
-This behaviour was reported to tracker panel expert and they are still working on this.
+Since the preamps are mounted vertically, and channel 0 is the one on the board, the cross talk appears to be of radiative type. 
+Additionally, it seems to occur only in the first 20 channels, which correspond to the longest straws and will be placed in the middle of the station.
+The space between the preamps of the first channels is narrower compared to the others. This seems to be the reason why it 
+happens only in the first channels. This behaviour was reported to the tracker panel experts, and they are still working on it. XXX
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.65\textwidth]{figures/pdf/run105420_nh_vs_ch.pdf}
@@ -341,7 +342,7 @@ This behaviour was reported to tracker panel expert and they are still working o
 The shape of charge injection waveforms has been reconstructed. As mentioned in Section \ref{DRAC}, 
 the ADC has a sampling frequency of 40 MHz, resulting in a waveform bin width of 25 ns. 
 The maximum number of samples is 30. To reconstruct the waveform, the baseline, as will be 
-explained in more detail in Section \ref{basel}, was already subtracted.
+explained in more detail in Section \ref{basel}, is already subtracted.
 Figure \ref{fig:normalwf} shows a regular reconstructed waveform for RUN105421.
 \begin{figure}[!h]
   \centering
@@ -351,7 +352,7 @@ Figure \ref{fig:normalwf} shows a regular reconstructed waveform for RUN105421.
 \end{figure}
 The negative tail is due to the XXX
 
-As discussed in Section \ref{nhitvschid}, a higher number of hits in some channels was observed, 
+As discussed in Section \ref{nhitvschid}, a higher number of hits in some channels is observed, 
 leading to a different $\Delta t$ distribution between hits than expected. 
 While the $\Delta t$ peak was expected at 20 $\mu$s, in some channels two additional peaks were identified: 
 one at 16 $\mu$s and another at 4 $\mu$s. The 4 $\mu$s peak is characterized by inverted waveforms, as shown in Figure \ref{fig:inverted}. 
@@ -386,7 +387,7 @@ For both channels the pedestal is close to 210 ADC counts with a FWHM$=2 \sqrt{2
       \label{fig:baseline2}
 \end{figure}
 
-In some cases, a lower baseline value was observed. Examining the waveform, dips were identified with depths of 64, 128, or 192, 
+In some cases, a lower baseline value is observed. Examining the waveform, dips were identified with depths of 64, 128, or 192, 
 suggesting the possibility of 6th and 7th bit errors in the ADC. Such waveform is shown in Figure \ref{fig:dips}. 
 To address this issue, these waveforms were reconstructed by isolating the negative peaks and computing the mean of the remaining samples.
 \begin{figure}[!h]

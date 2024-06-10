@@ -192,7 +192,9 @@ Considering a generation plane of $\sim 5$ m$^2$, the result is $R \sim 380$ Hz.
 %$\sim10^{-3}$. The rate then changes to $\sim$ mHz. 
 %To perform a proper calibration, at least $\sim$1000 hits per straw are needed, which requires at least 8 days of data taking.
 %This rate calculation is quite straightforward, but the duration required for such a simple calibration is notably long.
-In the simulation, 2$\times 10^8$ cosmic muons were generated on the horizontal plane. From this number, it is possible to compute the time required for calibration, that is
+In the simulation, 2$\times 10^8$ cosmic muons\footnote{The number of selected events was chosen to be 2$\times 10^8$, since the number of cosmics that 
+hit a station is about 8$\times 10^5$ and this is a good number of events to perform a reasonable calibration.} were generated on the horizontal plane. 
+From this number, it is possible to compute the time required for calibration, that is
 $\Delta t = N_{gen}/R\sim 6$ days. 
 This rate calculation is straightforward, but the time needed for such a simple calibration is excessively long.
 \section{Reconstruction of a straight cosmic track}
@@ -284,8 +286,8 @@ There are four peaks corresponding to the four different spots shown in Figure \
     The true coordinate is the mean coordinates of Monte Carlo hits.}
     \label{fig:bias}
 \end{figure}
-In the 2D distribution of the longitudinal bias versus the true position, 
-Figure \ref{fig:rec2D} shows four different spots on the $x$ axis corresponding to 
+The 2D distribution of the longitudinal bias versus the true position, shown in 
+Figure \ref{fig:rec2D}, shows four different spots on the $x$ axis corresponding to 
 the overlap regions. Each spot refers to different straws. The two spots on the $y$ axis correspond to cosmics with different orientations. 
 The first spot (CAL side) correspond to 90° panels overlap.
 \begin{figure}[!h]
@@ -322,6 +324,16 @@ indicating horizontal cosmic rays, which are not possible in reality. This plot 
     \label{fig:myzrec}
 \end{figure}
 \section{Conclusions}
+This chapter demonstrated that the vertical orientation for calibrating a station is not optimal. This is due to several reasons:
+\begin{itemize}
+    \item The selection criteria in Section \ref{eventselection} select cosmic muons with orientations that affect panel illumination. 
+    The illumination is non-uniform, and moreover, there are almost no hits in the central region of the panel, which could result in waveform non-linearities;
+    \item The rate of cosmic events is $R \sim 380$ Hz, and the expected duration of the calibration is about 6 days without interruptions, 
+    which is excessive for the simple calibration we intend to perform;
+    \item The bias range is approximately [-6, 6] cm. The 2D distribution of the longitudinal bias versus the true position shows 
+    four distinct spots on the $x$ axis corresponding to the overlap regions. Each spot refers to different straws.
+\end{itemize}
+Therefore, an alternative orientation or method should be considered to optimize the calibration process and achieve more accurate results.
 
 %yongi cap 3.1.5.2
 %con il tracker in orizzontale , dato che le tracks sono verticali colpirebbero per panel sicuro almeno 2 straws che sono sovrappposte e quindi in totale 8, se hanno una certa angolazione anche 12

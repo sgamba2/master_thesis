@@ -69,25 +69,25 @@
 \contentsline {figure}{\numberline {4.15}{\ignorespaces $\Delta t$ distribution between hits in the 70th channel. The $\Delta t$ distribution between hits should peak at 20 $\mu $s, as the pulser operates at a frequency of 50 kHz. However, peaks at approximately 16 $\mu $s and 4 $\mu $s are observed. All waveforms at around 4 $\mu $s are inverted compared to the regular ones. The waveforms are shown in Section \ref {wf}, and the reason for this behaviour will be explained in the same section.\relax }}{90}{figure.caption.74}%
 \contentsline {figure}{\numberline {4.16}{\ignorespaces Distribution of the number of hits versus channel ID. The 7th channel is the first to be pulsed. As a consequence, the only channels that should be active are the 15th, 23rd, 31st, 39th, 47th, 55th, 63rd, 71st, 79th, 87th and 95th. Channels 9th, 17th and 25th were also observed to be active, indicating cross talks.\relax }}{90}{figure.caption.75}%
 \contentsline {figure}{\numberline {4.17}{\ignorespaces Regular waveform of the 50th channel.\relax }}{91}{figure.caption.76}%
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Inverted waveform of the 50th channel.\relax }}{91}{figure.caption.77}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Inverted waveform of the 50th channel.\relax }}{92}{figure.caption.77}%
 \contentsline {figure}{\numberline {4.19}{\ignorespaces The fitted baseline distribution of channel 0.\relax }}{92}{figure.caption.78}%
-\contentsline {figure}{\numberline {4.20}{\ignorespaces The fitted baseline distribution of channel 8.\relax }}{92}{figure.caption.79}%
+\contentsline {figure}{\numberline {4.20}{\ignorespaces The fitted baseline distribution of channel 8.\relax }}{93}{figure.caption.79}%
 \contentsline {figure}{\numberline {4.21}{\ignorespaces Waveform of the 58th channel. Before subtracting the baseline from the ADC counts, the dips were identified. The depth of the dips is 128.\relax }}{93}{figure.caption.80}%
-\contentsline {figure}{\numberline {4.22}{\ignorespaces Charge distribution of the waveforms in channel 66.\relax }}{93}{figure.caption.81}%
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Charge distribution of the waveforms in channel 66.\relax }}{94}{figure.caption.81}%
 \contentsline {figure}{\numberline {4.23}{\ignorespaces Pulse height distribution of the waveforms in channel 66.\relax }}{94}{figure.caption.82}%
-\contentsline {figure}{\numberline {4.24}{\ignorespaces First sample distribution of the waveforms in channel 66.\relax }}{94}{figure.caption.83}%
+\contentsline {figure}{\numberline {4.24}{\ignorespaces First sample distribution of the waveforms in channel 66.\relax }}{95}{figure.caption.83}%
 \contentsline {figure}{\numberline {4.25}{\ignorespaces Negative charge distribution of the waveforms in channel 66.\relax }}{95}{figure.caption.84}%
-\contentsline {figure}{\numberline {4.26}{\ignorespaces 2D histogram of charge ($x$-axis) versus pulse height ($y$-axis).\relax }}{95}{figure.caption.85}%
+\contentsline {figure}{\numberline {4.26}{\ignorespaces 2D histogram of charge ($x$-axis) versus pulse height ($y$-axis).\relax }}{96}{figure.caption.85}%
 \contentsline {figure}{\numberline {4.27}{\ignorespaces Distribution of the waveform mean sample weighted with the charge in channel 66.\relax }}{96}{figure.caption.86}%
-\contentsline {figure}{\numberline {4.28}{\ignorespaces 2D histogram of $s_{mean}$ ($x$-axis) versus charge ($y$-axis).\relax }}{96}{figure.caption.87}%
+\contentsline {figure}{\numberline {4.28}{\ignorespaces 2D histogram of $s_{mean}$ ($x$-axis) versus charge ($y$-axis).\relax }}{97}{figure.caption.87}%
 \contentsline {figure}{\numberline {4.29}{\ignorespaces 2D histogram of $s_{mean}$ ($x$-axis) versus pulse height ($y$-axis).\relax }}{97}{figure.caption.88}%
-\contentsline {figure}{\numberline {4.30}{\ignorespaces Simulation of charge and pulse height distribution behaviour. In the upper plot, triangular pulses representing charge injection waveforms are plotted alongside the square waves from the simulated ADC. The red wave corresponds to the dark red pulses, while the light blue wave corresponds to the dark blue pulses, shifted from the red one. In the central plot, the distribution of charge is displayed, and in the bottom plot, the distribution of pulse height is shown. The light blue distribution corresponds to the light blue ADC, and the same goes for the red one.\relax }}{97}{figure.caption.89}%
+\contentsline {figure}{\numberline {4.30}{\ignorespaces Simulation of charge and pulse height distribution behaviour. In the upper plot, triangular pulses representing charge injection waveforms are plotted alongside the square waves from the simulated ADC. The red wave corresponds to the dark red pulses, while the light blue wave corresponds to the dark blue pulses, shifted from the red one. In the central plot, the distribution of charge is displayed, and in the bottom plot, the distribution of pulse height is shown. The light blue distribution corresponds to the light blue ADC, and the same goes for the red one.\relax }}{98}{figure.caption.89}%
 \contentsline {figure}{\numberline {4.31}{\ignorespaces Glitch waveform of channel 0.\relax }}{98}{figure.caption.90}%
-\contentsline {figure}{\numberline {4.32}{\ignorespaces Noisy waveform of the 36th channel.\relax }}{98}{figure.caption.91}%
+\contentsline {figure}{\numberline {4.32}{\ignorespaces Noisy waveform of the 36th channel.\relax }}{99}{figure.caption.91}%
 \contentsline {figure}{\numberline {4.33}{\ignorespaces Baseline mean value versus channel ID.\relax }}{99}{figure.caption.92}%
-\contentsline {figure}{\numberline {4.34}{\ignorespaces Charge mean value versus channel ID.\relax }}{99}{figure.caption.93}%
+\contentsline {figure}{\numberline {4.34}{\ignorespaces Charge mean value versus channel ID.\relax }}{100}{figure.caption.93}%
 \contentsline {figure}{\numberline {4.35}{\ignorespaces Pulse height mean value versus channel ID.\relax }}{100}{figure.caption.94}%
-\contentsline {figure}{\numberline {4.36}{\ignorespaces First sample mean value versus channel ID.\relax }}{100}{figure.caption.95}%
+\contentsline {figure}{\numberline {4.36}{\ignorespaces First sample mean value versus channel ID.\relax }}{101}{figure.caption.95}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces The relation of the observed zenith angle of muons, $\theta ^*$, to the zenith angle at the muon production point in the atmosphere, $\theta $. $R$ is the radius of the Earth, Ref.\cite {guan2015parametrization}.\relax }}{105}{figure.caption.96}%
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Schematic view of a tracker station and definition of the coordinate used for the analysis.\relax }}{107}{figure.caption.97}%
@@ -97,10 +97,10 @@
 \contentsline {figure}{\numberline {5.6}{\ignorespaces The reconstructed longitudinal coordinate in the 0th panel frame.\relax }}{112}{figure.caption.101}%
 \contentsline {figure}{\numberline {5.7}{\ignorespaces The difference between the reconstructed and the true longitudinal coordinate in the 0th panel frame. The true coordinate is the mean coordinates of Monte Carlo hits.\relax }}{112}{figure.caption.102}%
 \contentsline {figure}{\numberline {5.8}{\ignorespaces The 2D histogram of the longitudinal bias versus the true longitudinal coordinate.\relax }}{113}{figure.caption.103}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces The profile of the longitudinal bias versus the true longitudinal coordinate.\relax }}{113}{figure.caption.104}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces The profile of the longitudinal bias versus the true longitudinal coordinate.\relax }}{114}{figure.caption.104}%
 \contentsline {figure}{\numberline {5.10}{\ignorespaces The reconstructed $y-z$ direction distribution of cosmic rays ($m_{yz}=\Delta y /\Delta z$).\relax }}{114}{figure.caption.105}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Illumination pattern of cosmics hits on the panels of plane 0.\relax }}{119}{figure.caption.106}%
-\contentsline {figure}{\numberline {B.2}{\ignorespaces Illumination pattern of cosmics hits on the panels of plane 1.\relax }}{120}{figure.caption.107}%
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Illumination pattern of cosmics hits on the panels of plane 0.\relax }}{121}{figure.caption.106}%
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Illumination pattern of cosmics hits on the panels of plane 1.\relax }}{122}{figure.caption.107}%
