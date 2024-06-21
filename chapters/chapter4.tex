@@ -359,11 +359,12 @@ Figure \ref{fig:normalwf} shows a regular reconstructed waveform for RUN105421.
  \label{fig:normalwf}
 \end{figure}
 
-The waveforms' negative tail is caused by a differentiating circuit, which approximately shapes a signal pulse using an high pass filter. 
-At high count rates, it is possible for another pulse to arrive before the previous pulse has returned to zero, causing it to overlap with the undershoot of the initial pulse. 
-This reduces the apparent amplitude of the second pulse, leading to unwanted broadening of peaks in the energy spectrum. 
-The rapid leading edge of the pulse remains unchanged due to the differentiator's time constant, which is not significantly 
-shorter than the pulse's rise time. 
+The negative tail of the waveforms is caused by a differentiating circuit that shapes a signal pulse 
+using a high-pass filter. This circuit is adopted because, at high count rates, a new pulse can 
+arrive before the previous one has returned to zero, leading to overlap with the initial pulse's undershoot. 
+This overlap reduces the apparent amplitude of the subsequent pulse, causing unwanted broadening of peaks in the energy spectrum. 
+The filter doesn't affect the rapid leading edge of the pulse because the differentiator's time constant is not
+small compared to its rise time.
 
 
 
