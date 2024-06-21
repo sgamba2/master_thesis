@@ -5,6 +5,25 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[{Mu2e Collaboration}({2015})]{bartoszek2015mu2e}
+{Mu2e Collaboration}.
+\newblock {Mu2e Technical Design Report}, {2015}.
+
+\bibitem[Bertl et~al.(2006)]{SINDRUMII:2006dvw}
+Wilhelm~H. Bertl et~al.
+\newblock {A Search for muon to electron conversion in muonic gold}.
+\newblock \emph{Eur. Phys. J. C}, 47:\penalty0 337--346, 2006.
+\newblock \doi{10.1140/epjc/s2006-02582-x}.
+
+\bibitem[{Bernstein, Robert H.}({2019})]{bobbb}
+{Bernstein, Robert H.}
+\newblock {The Mu2e Experiment}.
+\newblock \emph{{Frontiers in Physics}}, {7}, {2019}.
+\newblock ISSN {2296-424X}.
+\newblock \doi{{10.3389/fphy.2019.00001}}.
+\newblock URL
+  \url{{https://www.frontiersin.org/articles/10.3389/fphy.2019.00001}}.
+
 \bibitem[{Bernstein, R.H. and Cooper, Peter S.}({2013})]{Bernstein_2013}
 {Bernstein, R.H. and Cooper, Peter S.}
 \newblock {Charged lepton flavor violation: An experimenter’s guide}.
@@ -126,12 +145,6 @@
 \newblock {Proceedings of the First International Symposium on Lepton and
   Baryon Number Violation}.
 \newblock \emph{{IOP Publishing}}, page {534}, {1998}.
-
-\bibitem[Bertl et~al.(2006)]{SINDRUMII:2006dvw}
-Wilhelm~H. Bertl et~al.
-\newblock {A Search for muon to electron conversion in muonic gold}.
-\newblock \emph{Eur. Phys. J. C}, 47:\penalty0 337--346, 2006.
-\newblock \doi{10.1140/epjc/s2006-02582-x}.
 
 \bibitem[Willmann et~al.(1999)]{Willmann:1998gd}
 L.~Willmann et~al.
@@ -369,19 +382,6 @@ M.~Aoki et~al.
 \newblock ISSN {2218-1997}.
 \newblock \doi{{10.3390/universe4100101}}.
 \newblock URL \url{{https://www.mdpi.com/2218-1997/4/10/101}}.
-
-\bibitem[{Mu2e Collaboration}({2015})]{bartoszek2015mu2e}
-{Mu2e Collaboration}.
-\newblock {Mu2e Technical Design Report}, {2015}.
-
-\bibitem[{Bernstein, Robert H.}({2019})]{bobbb}
-{Bernstein, Robert H.}
-\newblock {The Mu2e Experiment}.
-\newblock \emph{{Frontiers in Physics}}, {7}, {2019}.
-\newblock ISSN {2296-424X}.
-\newblock \doi{{10.3389/fphy.2019.00001}}.
-\newblock URL
-  \url{{https://www.frontiersin.org/articles/10.3389/fphy.2019.00001}}.
 
 \bibitem[{Kargiantoulakis, Manolis}({2020})]{Kargiantoulakis_2020}
 {Kargiantoulakis, Manolis}.

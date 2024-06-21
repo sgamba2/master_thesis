@@ -2,9 +2,10 @@
 \textit{In this Chapter, I present the initial results of the tracker DAQ commissioning. Before reading out the detector, 
     it was necessary to understand the readout process. This Chapter is divided into three sections: the first relates 
     to the validation of ROC readout through Monte Carlo simulation, subsequently, I will discuss the initial and primitive tracker panel data quality monitoring, 
-    and in the third part, I will address high-rate software testing.}
+    and in the third part, I will address high-rate software testing.XXX}
+    
   \section{Description of teststand setup}\label{des}
-    The tracker test stand,  called TS1, shown in Figure \ref{fig:TS1}, included one DRAC card, \ref{DRAC}, connected via an optical fiber
+    The tracker test stand, called TS1, shown in Figure \ref{fig:TS1}, included one DRAC card, \ref{DRAC}, connected via an optical fiber
     to the DTC installed in the DAQ computer, called mu2edaq09. The teststand included 96 channels in total.
     The ROC, \ref{ROC}, could be operated in two different data readout modes:
     \begin{itemize}
@@ -326,10 +327,17 @@ $\Delta t$ distribution between hits was plotted, as shown in Figure \ref{fig:de
 One more important feature to be investigated is the presence of cross talks. Figure \ref{fig:cross} shows a run where cross talk is detected.
 This phenomenon occurred only when the first pulsed channel is odd. The cross talk is asymmetric (3$\rightarrow$5 is observed, 
 but no 3$\rightarrow$1) and only in odd channels.
-Since the preamps are mounted vertically, and channel 0 is the one on the board, the cross talk appears to be of radiative type. 
-Additionally, it seems to occur only in the first 20 channels, which correspond to the longest straws and will be placed in the middle of the station.
-The space between the preamps of the first channels is narrower compared to the others. This seems to be the reason why it 
-happens only in the first channels. This behaviour was reported to the tracker panel experts, and they are still working on it. XXX
+As mentioned in chapter \ref{tracker}, the preamps are mounted vertically and one preamp refers to two channels: odd channels are the ones on the board, 
+while even ones are on the top. For this reason, the cross talk appears to be between channels plced on the board. 
+Additionally, it seems to occur only in the first 20 channel IDs.
+The space between the first preamps is narrower compared to the others, as shown in Figure \ref{fig:spacepreamps}. 
+\begin{figure}[!h]
+  \centering
+  \includegraphics[angle=90,width=\textwidth]{figures/jpg/photo_6028424923279639562_y.jpg}
+  \caption{The spacing between preamps on the board. The first channels correspond to the preamps on the right side of the picture.}
+ \label{fig:spacepreamps}
+\end{figure}
+This seems to be the reason why it happens only in the first channels. This behaviour was reported to the tracker panel experts, and they are still working on it.
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.65\textwidth]{figures/pdf/run105420_nh_vs_ch.pdf}
@@ -350,7 +358,14 @@ Figure \ref{fig:normalwf} shows a regular reconstructed waveform for RUN105421.
   \caption{Regular waveform of the 50th channel.}
  \label{fig:normalwf}
 \end{figure}
-The negative tail is due to the XXX
+
+The waveforms' negative tail is caused by a differentiating circuit, which approximately shapes a signal pulse using an high pass filter. 
+At high count rates, it is possible for another pulse to arrive before the previous pulse has returned to zero, causing it to overlap with the undershoot of the initial pulse. 
+This reduces the apparent amplitude of the second pulse, leading to unwanted broadening of peaks in the energy spectrum. 
+The rapid leading edge of the pulse remains unchanged due to the differentiator's time constant, which is not significantly 
+shorter than the pulse's rise time. 
+
+
 
 As discussed in Section \ref{nhitvschid}, a higher number of hits in some channels is observed, 
 leading to a different $\Delta t$ distribution between hits than expected. 
@@ -361,7 +376,6 @@ It is reasonable to think that this phenomenon arises from the erroneous generat
 triggering them on both the leading and trailing edges. In fact, the sum of 4 $\mu$s and 16 $\mu$s is the inverse of the pulser frequency. 
 One potential solution to address this issue could involve varying the pulse length. 
 However, this approach was not pursued in this Thesis due to time constraints.
-XXX
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.65\textwidth]{figures/pdf/wf_ch50_1.pdf}
@@ -550,7 +564,7 @@ The outliers in the plots are due to crosstalk, noisy channels, inverted wavefor
 
 
 
-
+\iffalse
 
 
 \section{High rate software testing}
@@ -584,6 +598,9 @@ To reduce DAQ bandwidth requirements, this data is buffered in Readout Controlle
 DAQ over the full supercycle for an average data rate of $\sim$28 GB/s.
 The total input is 150,000 Byte per event $\times$ 1800 events/s that is 270 MB/s.
 \subsection{ARTDAQ}
+\section{Data flow testing}
+\fi
+
  %(1695 ns), that is 90 GB/s and there is a buffering factor of 0.4/1.4, that makes 28 GB/s.
 
 
