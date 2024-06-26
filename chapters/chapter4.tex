@@ -3,7 +3,7 @@
     it was necessary to understand the readout process. This Chapter is divided into three sections: the first relates 
     to the validation of ROC readout through Monte Carlo simulation, subsequently, I will discuss the initial and primitive tracker panel data quality monitoring, 
     and in the third part, I will address high-rate software testing.XXX}
-    
+
   \section{Description of teststand setup}\label{des}
     The tracker test stand, called TS1, shown in Figure \ref{fig:TS1}, included one DRAC card, \ref{DRAC}, connected via an optical fiber
     to the DTC installed in the DAQ computer, called mu2edaq09. The teststand included 96 channels in total.
@@ -50,10 +50,12 @@
     \caption{Graphic illustration of pulses in an event window.}
     \label{fig:3}
     \end{figure}
-    For the testing described in \ref{MonteCarlo}, only one ROC connected to the DTC was used. However, for the testing described in \ref{dqm}, two ROCs connected to one DTC were also used.
+    For the testing described in \ref{MonteCarlo}, only one ROC connected to the DTC was used. We used a single DTC, which was also emulating the CFO, to send a request for one event, immediately followed by reading the event.
+ 
     %The data taking has been performed $\mu$sing OTSDAQ+ARTDAQ software, and for each run the output data have been stored in an art file moved to {\bf /exp/mu2e/data/projects/tracker/vst} area mounted on Mu2e central platforms.
-\section{Validation of ROC readout through Monte Carlo}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Validation of ROC readout through Monte Carlo}
+
 \subsection{ROC Monte Carlo simulation}\label{MonteCarlo}
  
 The ROC readout logic is purely digital, so the readout process can be simulated. 
@@ -273,7 +275,13 @@ of the event window with respect to the FPGA pulsers, and varies from
 }
 \label{fig:6}
 \end{figure}
+
+
 \section{Primitive Data Quality Monitoring}\label{dqm}
+\subsection{Description of the te}
+For the testing described in \ref{}
+However, for the testing described in \ref{dqm}, two ROCs connected to one DTC were also used.
+\subsection{}
 The correct behaviour of the preamps was evaluated through the preamp charge injection test. Real-time monitoring and diagnostics were implemented.
 The monitoring involves the creation of real-time histograms, which can easily assess 
 the signal uniformity between channels within a single ROC, across multiple ROCs and among events.
@@ -600,18 +608,15 @@ DAQ over the full supercycle for an average data rate of $\sim$28 GB/s.
 The total input is 150,000 Byte per event $\times$ 1800 events/s that is 270 MB/s.
 \subsection{ARTDAQ}
 \section{Data flow testing}
+\section{ROC firmware testing}
+
 \fi
 
  %(1695 ns), that is 90 GB/s and there is a buffering factor of 0.4/1.4, that makes 28 GB/s.
 
 
 %In Figure \ref{fig:linktodaq}, the general design of the Mu2e DAQ system is shown.
-%\begin{figure}[!h]
-%\centering
-%\includegraphics[width =0.65\textwidth]{figures/png/Screenshot_20240206_144803.png}
-%\caption{Mu2e DAQ Architecture.}
-%\label{fig:linktodaq}
-%\end{figure}
+
 %The left blocks represent the Readout Controllers (ROCs) in different detectors. The center 
 %lock houses the DAQ system's online components, which include the Run Control Host, 40 DAQ servers, 
 %the Detector Control System (DCS) and the Event Building Switch. The Run Control Host receives beam status 
