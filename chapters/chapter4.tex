@@ -1,12 +1,16 @@
 \chapter{DAQ readout testing}
-\textit{In this Chapter, I present the initial results of the tracker DAQ commissioning. Before reading out the detector, 
-    it was necessary to understand the readout process. This Chapter is divided into three sections: the first relates 
-    to the validation of ROC readout through Monte Carlo simulation, subsequently, I will discuss the initial and primitive tracker panel data quality monitoring, 
-    and in the third part, I will address high-rate software testing.XXX}
+\textit{In this Chapter, I present the initial results of the tracker DAQ commissioning. 
+Understanding the readout process was essential before we could proceed with reading out the detector. 
+The first part of this Chapter focuses on the validation of the ROC readout through Monte Carlo simulation. 
+In the second part, I discuss the initial data quality monitoring of the tracker preamps. 
+Finally, the last section provides a brief overview of the DAQ performance studies conducted with the external CFO.
+}
 
   \section{Description of test stand setup}\label{des}
     The tracker test stand, called TS1, shown in Figure \ref{fig:TS1}, included one DRAC card, \ref{DRAC}, connected via an optical fiber
-    to the DTC \ref{tdaqtra} installed in the DAQ computer, called mu2edaq09. The test stand included 96 channels in total.
+    to the DTC \ref{tdaqtra} installed in the DAQ computer, called mu2edaq09. The DTC 
+    emulated the CFO \ref{tdaqtra} by sending a request for one event, which was immediately followed by reading the event.
+    The test stand included 96 channels in total.
     The ROC \ref{ROC} could be operated in two different data readout modes:
     \begin{itemize}
     \item  First mode: the ROC was emulating the data itself without reading FPGAs (a pattern readout mode);
@@ -48,15 +52,14 @@
     \label{fig:3}
     \end{figure}
     \subsection{Validation of ROC readout test stand}
-    During the test described in Section \ref{MonteCarlo}, the data were taken operating with digi FPGAs, pulsed by their internal pulsers.
-    The pulser has two different frequencies,  31.29 MHz/(2$^7$+1), or approximately 250 kHz, 
+    During the test described in Section \ref{MonteCarlo}, data were taken operating with digi FPGAs, pulsed by their internal pulsers.
+    The pulser has two different frequencies, 31.29 MHz/(2$^7$+1), or approximately 250 kHz, 
     and 31.29 MHz/(2$^9$+1), or approximately 60 kHz.
     Each digi FPGA has its own pulse generator and the pulse sequences from the two
     generators are offset with respect to each other by a time interval $\Delta t$. 
     The offset is constant for as long as the DRAC board is powered up and varies randomly between 0 and $T_{gen}$ when DRAC is powercycled. 
-    Multiple tests were conducted to verify the correct behavior of the ROC. 
-    During these tests, only one ROC was connected to a single DTC. The DTC 
-    emulated the CFO by sending a request for one event, which was immediately followed by reading the event.
+    Multiple tests were conducted to verify the correct behaviour of the ROC. 
+    During these tests, only one ROC was connected to a single DTC. 
     \subsection{Primitive data quality monitoring test stand}
     For the tests described in Section \ref{dqm}, one or two ROCs 
     were connected to a single DTC, and the test stand TS2 was also used. 
@@ -75,7 +78,7 @@ and the total number of readout hits. In the following sections, we call $occupa
 recorded in a given channel during the test run. Given that the total number of hits per event doesn't exceed 255, the simulation follows these steps:
 \begin{itemize}
 \item
-  The event window starts at $t=0$s;
+  The event window starts at $t=0$ s;
 \item
   In a given FPGA, the timing of the first pulse is generated randomly from 0 to $T_{gen}$
   by sampling a uniform distribution;
@@ -86,7 +89,7 @@ recorded in a given channel during the test run. Given that the total number of 
 \item
   In the readout part of the simulation, the pulses are read out following the readout sequence;
 \item
-  the readout ``continues'' until all simulated hits are included or
+  the readout \textit{continues} until all simulated hits are included or
   the total number of read out hits reaches the maximum threshold of 255. 
 \end{itemize}
 
@@ -101,18 +104,18 @@ In the following sections, the results of the data collection are compared with 
 
   \begin{figure}[!h]
           \centering
-      \includegraphics[width=0.8\textwidth]{figures/png/Screenshot from 2023-12-03 11-50-50.png}
+      \includegraphics[width=0.75\textwidth]{figures/png/Screenshot from 2023-12-03 11-50-50.png}
       \caption{FPGA-1: histogram of the delay between channel 0 and the reference channel 91, the first to be readout.}
       \label{fig:delay1}
     \end{figure}
     \begin{figure}[!h]
           \centering
-      \includegraphics[width=0.8\textwidth]{figures/png/Screenshot from 2023-12-03 11-50-33.png}
+      \includegraphics[width=0.75\textwidth]{figures/png/Screenshot from 2023-12-03 11-50-33.png}
       \caption{FPGA-2: histogram of the delay between channel 44 and the reference channel 94, the first to be readout.}
       \label{fig:delay2}
     \end{figure}
-\subsection{``ROC buffer overflow'' mode}
-In the ``ROC buffer overflow'' configuration, which will be referred to as RUN281, the event window size is 50 $\mu$s
+\subsection{\textit{ROC buffer overflow} mode}
+In the \textit{ROC buffer overflow} configuration, which will be referred to as RUN281, the event window size is 50 $\mu$s
 and the pulser rate is 60 kHz.
 \subsubsection{Hit timing and occupancy}\label{over}
 The first distributions to look at are the time distributions of hits in 
@@ -181,7 +184,7 @@ and three hits per channel in the FPGA-2,
 resulting in the total of 255 hits.
 The second plateau extending from 68 to 75 corresponds to the channels
 with 3 hits per channel in the FPGA-1 and 4 hits per channel in the second one.
-  The ``dent'' in the end of the second plateau is due to the fact that the 48 channels of the FPGA-1
+  The \textit{dent} in the end of the second plateau is due to the fact that the 48 channels of the FPGA-1
   yield 144 hits, so the FPGA-2 contributes 111 hits. The first 27 channels of the FPGA-2 contribute
   4 hits per channel each, but as 111 is not an integer of 4, the three hits from channel 28 in the readout sequence
   fill up the total ROC buffer of 255 hits.
@@ -209,7 +212,7 @@ between the two FPGA pulsers.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Number of hits}
-Figure \ref{fig:3} shows that in the ``buffer overflow'' mode all events,
+Figure \ref{fig:3} shows that in the \textit{buffer overflow} mode all events,
 as expected, have 255 hits read out per event.
 
 \begin{figure}[!h]
@@ -220,8 +223,8 @@ as expected, have 255 hits read out per event.
 }
 \label{fig:3}
 \end{figure}
-\subsection{The ``regular'' mode }
-In the ``regular'' configuration, which will be referred to as RUN105038, the event window size is 25 $\mu$s
+\subsection{The \textit{regular} mode }
+In the \textit{regular} configuration, which will be referred to as RUN105038, the event window size is 25 $\mu$s
 and the pulser rate is 60 kHz.
 
 \subsubsection{Time distribution and occupancy}
@@ -250,7 +253,7 @@ within the event window is one or two, and the total number of pulses is always 
 \end{figure}
 
 In this mode, the readout of a given channel is not affected by the readout of previous
-channels and the ``occupancy'' distributions shown in Figure \ref{fig:5} are, as expected, uniform.
+channels and the \textit{occupancy} distributions shown in Figure \ref{fig:5} are, as expected, uniform.
 \begin{figure}[!h]
 \centering
 \includegraphics[width =0.7\textwidth]{figures/pdf/figure_00002_nhitsvschannel_roc_simulation_2.pdf}
@@ -282,7 +285,7 @@ of the event window with respect to the FPGA pulsers, and varies from
 \centering
 \includegraphics[width =0.7\textwidth]{figures/pdf/figure_00009_nhits_105038.pdf}
 \caption{
-  The distribution of the total number of hits per event in ``non-saturated'' mode.
+  The distribution of the total number of hits per event in \textit{non-saturated} mode.
 }
 \label{fig:6}
 \end{figure}
@@ -346,7 +349,7 @@ $\Delta t$ distribution between hits was plotted, as shown in Figure \ref{fig:de
 One more important feature to be investigated is the presence of cross talks. Figure \ref{fig:cross} shows a run where cross talk is detected.
 This phenomenon occurred only when the first pulsed channel is odd. The cross talk is asymmetric (3$\rightarrow$5 is observed, 
 but no 3$\rightarrow$1) and only in odd channels.
-As mentioned in chapter \ref{tracker}, the preamps are mounted vertically and one preamp refers to two channels: odd channels are the ones on the board, 
+As mentioned in chapter \ref{chaptertrk}, the preamps are mounted vertically and one preamp refers to two channels: odd channels are the ones on the board, 
 while even ones are on the top. For this reason, the cross talk appears to be between channels plced on the board. 
 Additionally, it seems to occur only in the first 20 channel IDs.
 The space between the first preamps is narrower compared to the others, as shown in Figure \ref{fig:spacepreamps}. 
@@ -585,7 +588,47 @@ The outliers in the plots are due to crosstalk, noisy channels, inverted wavefor
   \label{fig:means}
 \end{figure}
 
+\section{DAQ performance studies with external CFO}
+The test described in this section uses the CFO in a mode expected to be implemented 
+during data acquisition. In the test, sequences of HBs \ref{des} were generated, separated by 
+\( T_0 \), and sent to the DTCs. The test procedure was fully programmable. 
+The \textit{run plan} was written using a simple, basic-like language, 
+compiled, loaded into the CFO, and executed. This approach covers nearly all conceivable use cases. We operated in two distinct modes:
+\begin{itemize}
+  \item \textit{Emulated CFO} mode: the DTC generates HBs and EWMs \ref{tdaqtra} and reads one ROC;
+  \item \textit{External CFO} mode: the CFO generates HBs and EWMs, sends them to the DTC, and the DTC reads the ROC.
+\end{itemize}
+Both DTC and CFO were installed in the DAQ computer mu2edaq09.
+In both modes, the CFO (or the DTC, in \textit{emulated CFO} mode) 
+sends a sequence of \( (N+1) \) EWMs. Afterward, the DTC 
+asynchronously reads \( N \) events. 
+Time synchronization between the CFO, DTCs, and ROCs was managed either 
+internally (using FPGA) or with an external clock. 
+The test setup involved two FPGAs - one acting as the CFO and one as the DTC - and one tracker test stand (one ROC). 
+We conducted short runs with \( N \) events, each EW lasting  1.7 $\mu$s. 
+The output was analyzed, and the test was repeated multiple times to ensure reproducibility. 
 
+
+My contribution to this test involved reading the data, whose format is shown in Figure \ref{fig:dataformat}, 
+and comparing the number of events and status codes between runs with the same \textit{run plan}. 
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=\textwidth]{figures/png/Screenshot_20240627_144108.png}
+  \caption{Each line (pink) in the data sequence is called \textit{data packet}. 
+  The first three packets (grey) denote one event. The green and cyan squares represent respectively
+  the number of packets in one event and the event window tag, which identifies a single event. 
+  The following packets (black) represent the ROC headers, six in total. 
+  The orange and red squares indicate the payload length (the number of packets after 
+  the ROC header, including the ROC header) and the ROC ID. The blue square represents 
+  the ROC status. There are different status codes: 0x0101 indicates a full payload, 0x0100 an empty one, 
+  and 0x0108, 0x0180, and 0x0508 are the codes for timeouts.}
+  \label{fig:dataformat}
+\end{figure}
+An increasing number of events were generated
+
+
+do see that results depend on the source of timing synchronization
+timing synchronization becomes more and more likely to be one of the major issues
 
 \iffalse
 
@@ -600,7 +643,7 @@ detector synchronization, control, monitoring and operator interfaces. The Mu2e 
 which means that all detector data from the experiment is digitized and zero-suppressed in their respective Front End Electronics 
 (FEEs) before being transferred. This strategy results in a high data flow in the DAQ system while providing greater flexibility in data selection and analysis.
 \subsubsection{Expected rate}
-The data-taking periods will be divided into two modes: on-spill and off-spill. The on-spill mode includes periods when 8 GeV 
+The data taking periods will be divided into two modes: on-spill and off-spill. The on-spill mode includes periods when 8 GeV 
 proton bunches are colliding with the production target. The off-spill mode includes all other periods, such as between bunches, calibration periods and commissioning.
 According to section \ref{accel}, it is possible to estimate the on-spill event contribution as follows:
 \begin{itemize}

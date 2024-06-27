@@ -411,9 +411,9 @@ the 48 ms bunch extraction cycle described in Chapter \ref{mu2echapter}),
 the experiment receives RF Zero-Crossing Markers from the Accelerator, 
 synchronized to the 1695 ns proton pulse cycles, that define the event 
 windows\footnote{Event windows are also assigned during off-spill periods when no beam batches are received. 
-These event windows are longer due to the reduced data rate. Based on these markers, the Command Fan-Out 
+These event windows are longer due to the reduced data rate.}. Based on these markers, the Command Fan-Out 
 (CFO) module within the Run Control Host generates a 40 MHz system clock and embeds Event Window Markers 
-(EWMs) into this clock to denote the start of event windows.}. 
+(EWMs) into this clock to denote the start of event windows. 
 The CFO distributes this encoded system clock and run control packets to the 
 Data Transfer Controllers (DTCs) in the DAQ servers. DTCs then pass the encoded clock to 
 the ROCs within the detectors, where the EWMs are recovered with a fixed latency relative to the 
