@@ -334,7 +334,7 @@ monitoring environmental variables such as temperature, pressure and humidity.
 The low voltage power supply is fed into the panel through the KEY. The KEY 
 contains an optical fiber link and a JTAG interface for communication. The 
 frontends components were chosen to sustain high level of radiation.
-\subsection{Pre-Amplifiers}
+\subsection{Pre-Amplifiers}\label{preampss}
 The pre-amplifiers (preamps) are responsible for the initial readout of 
 signals from both ends of the straw tube channels. As previously explained, 
 the channels are read out from both ends and two adjacent channels are linked 
@@ -357,7 +357,7 @@ Analog to Digital Converters (ADCs), DDR3 memories and compators.
 The large chips in the centers are the Field-Programmable Gate Arrays (FPGAs). The one 
 in the center is the Readout Controller (ROC), which manages communications, monitors 
 slow control variables and controls panel operations \ref{ROC}. The left and the right 
-FPGAs, which are referred to as the digiFPGAs, are responsible for monitoring data output, 
+FPGAs, which are referred to as the digi FPGAs, are responsible for monitoring data output, 
 buffering data and assembling data packages. Each of them refers to 48 straw channels. 
 \begin{figure}[!h]
 \centering
@@ -371,7 +371,7 @@ After the signals are sent to the preamplifiers, they are transmitted to the DRA
 In the DRAC, the two biased signals are fed independently to 
 zero-crossing comparators, which produce square pulses when the signals exceed 
 their respective thresholds. The squared pulses are sent to TDCs 
-(firmware based, 16 bits each) implemented in the digiFPGAs, that have the task 
+(firmware based, 16 bits each) implemented in the digi FPGAs, that have the task 
 of digitizing the triggered timings, including the arrival time and the time over threshold, 
 at a rate of about 62.5 MHz. Besides drift time, TDCs measure time difference across the 
 straw to estimate position along the wire and the intrinsic time resolution of TDC is about 
@@ -379,7 +379,7 @@ straw to estimate position along the wire and the intrinsic time resolution of T
 $\sim$70 ps for time division. Furthermore, an integrator adds voltage signals coming 
 from the two straw ends. In data collection, a hit occurs when both ends of a straw channel 
 are simultaneously activated. The total sum is digitized by a 12-bit (10-bit ENOB) ADC at 40 MHz
-and then sent to the digiFPGA. The digiFPGA creates a data packet for each hit based on 
+and then sent to the digi FPGA. The digi FPGA creates a data packet for each hit based on 
 TDC and ADC information. This suppresses false triggers caused by random electrical noise. 
 The Digitizer receives signals from both ends of four straws and multiplexes them into one 
 output buffer before sending a packet of data to the ROC. Signals are sent to the ROC at 
@@ -390,7 +390,7 @@ DAQ system.
 %or to distinguish muons from electrons. The proton signal will appear as a saturated flag, 
 %since the proton $dE/dx$ is $\times$50 the electron one.
 
-\subsection{Tracker Data Acquisition}
+\subsection{Tracker Data Acquisition}\label{tdaqtra}
 The Mu2e Data Acquisition system is based on a $streaming$ readout method, 
 where all detector data from the experiment are digitized, 
 zero-suppressed in the FEEs, and subsequently sent off the detectors for further processing and storage. 
