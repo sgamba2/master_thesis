@@ -477,15 +477,15 @@ M.~Aoki et~al.
 \newblock ISBN {978-3-95450-168-7}.
 \newblock \doi{{https://doi.org/10.18429/JACoW-IPAC2015-THPF121}}.
 
+\bibitem[{D. R. Pushka}({2020})]{PT}
+{D. R. Pushka}.
+\newblock {Production target (Hayman 2)-Requirement and Design}.
+\newblock \emph{{Mu2e internal doc. Database, doc-db-30814-v2}}, {2020}.
+
 \bibitem[{G. Ginther}({mu2e-doc-7531-v5})]{ginther}
 {G. Ginther}.
 \newblock {CD-3c Review: Muon Beamline Overview}.
 \newblock \emph{{(DOE CD-3c Review 2016-06-14)}}, {mu2e-doc-7531-v5}.
-
-\bibitem[{Mu2e Collaboration}()]{tsview}
-{Mu2e Collaboration}.
-\newblock {MuonBeamlineIntro}.
-\newblock URL \url{{https://mu2ewiki.fnal.gov/wiki/MuonBeamlineIntro}}.
 
 \bibitem[{Kashikhin V. V. et al.}({2013})]{6376120}
 {Kashikhin V. V. et al.}
@@ -493,6 +493,11 @@ M.~Aoki et~al.
 \newblock \emph{{IEEE Transactions on Applied Superconductivity}},
   {23}\penalty0 ({3}):\penalty0 {4100604--4100604}, {2013}.
 \newblock \doi{{10.1109/TASC.2012.2232341}}.
+
+\bibitem[{Mu2e Collaboration}()]{tsview}
+{Mu2e Collaboration}.
+\newblock {MuonBeamlineIntro}.
+\newblock URL \url{{https://mu2ewiki.fnal.gov/wiki/MuonBeamlineIntro}}.
 
 \bibitem[{Cirigliano, Vincenzo and Kitano, Ryuichiro and Okada, Yasuhiro and
   Tuzon, Paula}({2009})]{PhysRevD.80.013002}
@@ -546,6 +551,14 @@ N.~Atanov et~al.
   2022{\natexlab{b}}.
 \newblock \doi{10.1088/1742-6596/2374/1/012021}.
 
+\bibitem[et~al.(2018)]{calo95}
+N.~Atanov et~al.
+\newblock The mu2e undoped csi crystal calorimeter.
+\newblock \emph{Journal of Instrumentation}, 13\penalty0 (02):\penalty0 C02037,
+  feb 2018.
+\newblock \doi{10.1088/1748-0221/13/02/C02037}.
+\newblock URL \url{https://dx.doi.org/10.1088/1748-0221/13/02/C02037}.
+
 \bibitem[Atanov et~al.(2018)]{em7}
 N.~Atanov et~al.
 \newblock {The Mu2e Calorimeter Final Technical Design Report}.
@@ -578,14 +591,6 @@ Nikolay Atanov et~al.
 \newblock \emph{Instruments}, 6\penalty0 (4):\penalty0 68, 2022{\natexlab{c}}.
 \newblock \doi{10.3390/instruments6040068}.
 
-\bibitem[et~al.(2018)]{calo95}
-N.~Atanov et~al.
-\newblock The mu2e undoped csi crystal calorimeter.
-\newblock \emph{Journal of Instrumentation}, 13\penalty0 (02):\penalty0 C02037,
-  feb 2018.
-\newblock \doi{10.1088/1748-0221/13/02/C02037}.
-\newblock URL \url{https://dx.doi.org/10.1088/1748-0221/13/02/C02037}.
-
 \bibitem[{S. Giovannella}({2020})]{Giovannella_2020}
 {S. Giovannella}.
 \newblock {The detectors of the Mu2e experiment}.
@@ -593,14 +598,6 @@ N.~Atanov et~al.
   {C06022}, {jun} {2020}.
 \newblock \doi{{10.1088/1748-0221/15/06/C06022}}.
 \newblock URL \url{{https://dx.doi.org/10.1088/1748-0221/15/06/C06022}}.
-
-\bibitem[{Palladino A., Quirk J. and Miller J.}({Dec. 15, 2015})]{stm}
-{Palladino A., Quirk J. and Miller J.}
-\newblock {Mu2e Stopping-Target Monitor Baseline Design. eng. Version 4. Fermi
-  National Research Laboratory}.
-\newblock {Dec. 15, 2015}.
-\newblock URL \url{{https://mu2e-docdb.fnal.gov/cgi-bin/sso/RetrieveFile?docid=
-  6453&filename=stm_design_memo.pdf&version=4}}.
 
 \bibitem[{H. Kolanoski, N. Wermes}({2020})]{kola}
 {H. Kolanoski, N. Wermes}.

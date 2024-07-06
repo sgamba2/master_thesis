@@ -198,7 +198,7 @@ potential and field in the straw depend on the radial coordinate $r$:
 \begin{equation}
     \textbf{E}_w(r)=\frac{1}{\text{ln}(b/a)}\hat{\textbf{r}}
 \end{equation}
-As previously mentioned, the drift velocity of ions, $u$, is proportional to the electric field intensity $E$. Therefore, $u$ = $mu \ E$. 
+As previously mentioned, the drift velocity of ions, $u$, is proportional to the electric field intensity $E$. Therefore, $u$ = $\mu \cdot E$. 
 Then the ion trajectory fulfils:
 \begin{equation}
     u=\frac{dr(t)}{dt}=\frac{\mu V_0}{r(t)\text{ln}(b/a)}
@@ -232,9 +232,13 @@ The total charge created on the wire by the travelling electrons is:
 %The propagation speed of a signal wave with frequency $\omega$ is then $c/\sqrt{\omega}$ $\epsilon$($\omega$), 
 %where $c$ is the speed of light and $\epsilon$ is the dielectric constant of the gas. As $\epsilon$ is a function of $\omega$, 
 %components of different frequencies propagate at slightly different velocities. This leads to a dispersion (widening) of the signal. It brings some subtleties when using signal arrival time difference between straw tube ends to determine the longitudinal coordinate of an avalanche.
-\section{The tracker panels}
-The Mu2e tracker straw tube arrays use the same detection principles as the gaseous ionisation detectors, Ref. \cite{kola}, 
-but it has a significant different design and manufacturing improvements to meet the experiment precise requirements.
+\section{The Mu2e tracker}
+\subsection{The tracker straws}
+
+The Mu2e tracker straw tube arrays use the same detection principles as the gaseous 
+ionisation detectors, Ref. \cite{kola}, 
+but it has a significant different design and manufacturing improvements to 
+meet the experiment precise requirements.
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.5\textwidth]{figures/png/Screenshot_20240327_000000.png}
@@ -242,54 +246,154 @@ but it has a significant different design and manufacturing improvements to meet
     compared to a pencil, Ref. \cite{trk}.}
     \label{fig:trkpencil}
     \end{figure}
+
+The straw tubes used in the Mu2e tracker \ref{fig:trkpencil} are 5 mm in 
+diameter and 0.33$\div$1.17 m in length, 
+Ref. \cite{bartoszek2015mu2e}. The straws are wound with two layers of 
+6 $\mu$m-thick metallized Mylar and a 3 
+$\mu$m layer of glue in between. The straw wall is 15 $\mu$m thick: 
+this helps to minimize the amount of materials 
+in the tracker, lowering the total energy loss from the observed electrons. 
+Furthermore, it minimises the likelihood 
+of significant deflections in electron trajectories, 
+facilitating track reconstruction. As a result, the experiment 
+will have a very good momentum resolution. The straw tube anodes 
+are composed of gold-plated tungsten wires 
+with a diameter of 25 $\mu$m. The straws and anode wires are tensioned 
+and work-hardened to avoid sagging.
+The straw configuration is shown in Figure \ref{fig:trktubessmon}.
     \begin{figure}[!h]
         \centering
-        \includegraphics[width =0.5\textwidth]{figures/png/Screenshot_20240327_000131.png}
-        \caption{The fully assembled tracker panel with its straws, Ref. \cite{trk}.}
-        \label{fig:strawtubes}
+        \includegraphics[width =\textwidth]{figures/png/Screenshot_20240706_153158.png}
+        \caption{The straw termination, depicted both exploded and assembled, 
+        features a brass tube connected to the straw using silver epoxy. 
+        An insulator (green) is inserted into a brass tube 
+        (red) to prevent breakdown near the tube's end. The sense 
+        wire is soldered into the brass pin and epoxied to the 
+        injection-molded plastic. Post-assembly, the brass tube 
+        facilitates connection to the cathode, while the brass pin 
+        enables connection to the anode.}
+        \label{fig:trktubessmon}
         \end{figure}
-The straw tubes used in the Mu2e tracker \ref{fig:trkpencil} are 5 mm in diameter and 0.33: 1.17 m in length, 
-Ref. \cite{bartoszek2015mu2e}. The straws are wound with two layers of 6 $\mu$m-thick metallized Mylar and a 3 
-$\mu$m layer of glue in between. The straw wall is 15 $\mu$m thick: this helps to minimize the amount of materials 
-in the tracker, lowering the total energy loss from the observed electrons. Furthermore, it minimises the likelihood 
-of significant deflections in electron trajectories, facilitating track reconstruction. As a result, the experiment 
-will have a very good momentum resolution. The straw tube anodes are composed of gold-plated tungsten wires 
-with a diameter of 25 $\mu$m. The straws and anode wires are tensioned and work-hardened to avoid sagging.
+Figure \ref{fig:trkpencil} shows the 
+termination mechanism that holds the wire in place.
+To increase mechanical strength, a brass tube is joined to 
+either end of the straw using silver epoxied, Ref. \cite{bartoszek2015mu2e}. 
+To ensure electrical isolation, a Kapton sleeve is put within the brass tube. 
+An injection-molded plastic insert is then connected 
+inside the sleeve. The insert contains a semicylindrical duct that allows 
+gas to enter and exit the straw tube. The insert 
+has a groove along its axis and a U-shaped brass anode pin inserted at the end. 
+To avoid slippage, the anode wire is 
+epoxied into the groove and soldered to the anode pin.
+A T-shaped pin protector protects the anode pin from breaking by covering 
+the groove in the plastic insert. 
+The pin protector is epoxied to the insert, with an extra brass ring connecting them. 
+A ground clip 
+is silver-epoxied to two adjacent straws on the brass tubes and rings, providing a shared 
+ground connection for the straws. 
+
+To create a perfect electric field with adequate spatial resolutions, 
+the straw anode wires are oriented 
+to the panels with a precision of at least 25 $\mu$m in the 
+radial direction and 50 $\mu$m in the 
+perpendicular direction. 
+From the straws, signals are sent to a common preamplifier board 
+via the anode pin pair and grounding clip. The FEE will be introduced later.
+\subsection{The straw assembly}
+As already explained in Section \ref{trackersec},
+groups of 96 straws are assembled into panels (Figure \ref{fig:trkpanel} (upper left)). 
+
+Each panel spans a 120° arc and consists of two layers of straws, 
+as depicted in Figure \ref{fig:trktubes}. The dual-layer arrangement 
+enhances efficiency and assists in identifying the side of the 
+sense wire on which a track passes, addressing the typical $left-right$ 
+ambiguity. A 1.25 mm gap is maintained between the straws to accommodate 
+manufacturing tolerances and allow for expansion due to gas pressure. 
+Consequently, each straw must be self-supporting across its length. 
+Figure \ref{fig:strawtubes} shows completely built straws in a tracker panel. 
+Channels are numbered from 0 (longest straw) to 95 (shortest straw), starting with the radially innermost straw.
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width =0.6\textwidth]{figures/png/Screenshot_20240326_234405.png}
+        \caption{Straw arrangement in a tracker panel, Ref. \cite{trk}.}
+        \label{fig:trktubes}
+        \end{figure}
+        \begin{figure}[!h]
+            \centering
+            \includegraphics[width =0.5\textwidth]{figures/png/Screenshot_20240327_000131.png}
+            \caption{The fully assembled tracker panel with its straws, Ref. \cite{trk}.}
+            \label{fig:strawtubes}
+            \end{figure}
+            
+            The Mu2e tracker panels uses a gas flow of 80\%:20\% Ar:CO$_2$. 
+            The vacuum environment within the Detector Solenoid reduces the impact of electron 
+            scattering on trajectories. 
+            However, the tracker panels, particularly the straws, must endure pressure 
+            differences. Under normal temperature 
+            and pressure, each panel must have an average leak rate of 
+            0.014 cm$^3$/min. The nominal operating voltage of 
+            the straw tube channels is 1450 V. An earlier investigation 
+            on a prototype of the tracker showed the straw tube 
+            gain as 1.25 $\times$10$^4$ at 1250 V and 7 $\times$ 10$^4$ at 
+            1425 V. According to Diethorn's calculation, Equation \ref{XXX}, 
+            the gas gain at 1450 V is around 1 $\times$10$^5$.
+
+All panels are x-ray scanned 
+to accurately measure and document the wire 
+locations of straw tube channels. 
+
+
+Six panels are assembled into a single plane, as depicted in Figure \ref{fig:trkpanel} 
+(Upper right-left). Three of these panels are aligned at 120° angles 
+to form a complete ring on one face. The other three panels are rotated by 
+30° and form a second ring on the opposite face. Once 
+this plane is assembled, a cooling ring is fitted around its outer circumference. 
+This configuration has been identified as providing the best stereo performance, 
+even though it introduces more mechanical complexity compared to a 60° rotation.
+
+Two such planes are combined to create a station Figure \ref{fig:trkpanel} (Upper right-right). 
+These planes are identical, but during assembly, the second plane 
+is rotated 180° around a vertical axis. 
+
+The majority of tracker planes are now ready in Lab3 Fermilab Facility, as shown in Figure \ref{fig:trueplane}.
+
 \begin{figure}[!h]
     \centering
-    \includegraphics[width =0.6\textwidth]{figures/png/Screenshot_20240326_234405.png}
-    \caption{Straw arrangement in a tracker panel, Ref. \cite{trk}.}
-    \label{fig:trktubes}
-    \end{figure}
-To create a perfect electric field with adequate spatial resolutions, the anode wires are oriented 
-to the panels with a precision of at least 25 $mu$m in the radial direction and 50 $mu$m in the 
-perpendicular direction. All panels are x-ray scanned to accurately measure and document the wire 
-locations of straw tube channels. Figure \ref{fig:trkpencil} shows the 
-termination mechanism that holds the wire in place.
-To increase mechanical strength, a brass tube is joined to either end of the straw using silver epoxied, Ref. \cite{bartoszek2015mu2e}. 
-To ensure electrical isolation, a Kapton sleeve is put within the brass tube. An injection-molded plastic insert is then connected 
-inside the sleeve. The insert contains a semicylindrical duct that allows gas to enter and exit the straw tube. The insert 
-has a groove along its axis and a U-shaped brass anode pin inserted at the end. To avoid slippage, the anode wire is 
-epoxied into the groove and soldered to the anode pin.
-A T-shaped pin protector protects the anode pin from breaking by covering the groove in the plastic insert. 
-The pin protector is epoxied to the insert, with an extra brass ring connecting them. A ground clip 
-is silver-epoxied to two adjacent straws on the brass tubes and rings, providing a shared ground connection 
-for the straws. 
-Signals are sent to a common preamplifier board via the anode pin pair and grounding clip. 
-The FEE will be introduced later. Figure \ref{fig:strawtubes} shows completely built straws in a tracker panel. 
-Each panel has 96 straw tubes organised in two staggered layers for improved tracking. Figure \ref{fig:trktubes} 
-show the detailed spatial arrangement of the straws, Ref. \cite{trk}. Channels are numbered from 0 (longest) 
-to 95 (shortest), starting with the radially innermost straw.
-Straws are spaced by 1.25 mm and can expand under gas pressure, Ref. \cite{bartoszek2015mu2e}.
-The Mu2e tracker panels uses a gas flow of 80\%:20\% Ar:CO$_2$. 
-The vacuum environment within the Detector Solenoid reduces the impact of electron scattering on trajectories. 
-However, the tracker panels, particularly the straws, must endure pressure differences. Under normal temperature 
-and pressure, each panel must have an average leak rate of 0.014 cm$^3$/min. The nominal operating voltage of 
-the straw tube channels is 1450 V. An earlier investigation on a prototype of the tracker showed the straw tube 
-gain as 1.25 $\times$10$^4$ at 1250 V and 7 $\times$ 10$^4$at 1425 V. According to Diethorn's calculation, Equation \ref{XXX}, 
-the gas gain at 1450 V is around 1 $\times$10$^5$.
+    \includegraphics[width =0.6\textwidth]{figures/png/Screenshot_20240706_163056.png}
+    \caption{Mu2e tracker plane being assembled at the Lab3 Fermilab facility.}
+    \label{fig:trueplane}
+\end{figure}
+\subsection{The tracker frame}
 
-\section{The tracker Front-End Electronics}
+Eighteen stations are assembled into the completed tracker, shown in Figure \ref{fig:trkpanel} 
+(bottom). Horizontal beams maintain longitudinal alignment of the rings. 
+A thicker ring, and two thinner rings placed between 
+stations at the downstream end, stiffen the structure. 
+Stiffening rings and beams are stainless steel.
+
+The entire tracker rests on four bearing blocks placed near 
+the horizontal beams and attached to the stiffening rings. 
+The connection between the tracker and the bearing blocks is 
+kinetic to avoid over-constraining and distorting the tracker 
+frame, except all four points are constrained in the vertical 
+direction. Vertical adjustment screws are included to level and center the frame. 
+The completed tracker will be surveyed before being moved to the mu2e building. 
+
+A station feature that will be important for my Thesis, particularly in 
+Chapter \ref{planning}, is the layout of the gas system. 
+The gas tubes will be assembled together in each station as shown in Figure 
+\ref{fig:gassystem}. Consequently, orienting the assembled station horizontally 
+will be challenging, because it could damage the gas tubes.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width =0.3\textwidth]{figures/png/Screenshot_20240706_163631.png}
+    \caption{The gas system disposition in the assembled station.}
+    \label{fig:gassystem}
+\end{figure}
+
+\subsection{The tracker Front-End Electronics}
 Before being accessible to the Mu2e Data Acquisition (DAQ) system, the analog signals 
 from the tracker straw tube channels must undergo amplification, digitization, and packaging. 
 Each straw provides two hit times and one waveform, which are essential for 
@@ -302,7 +406,7 @@ The tracker front-end electronics (FEEs) are engineered to accomplish these task
 \\
 \begin{figure}[!h]
     \centering
-    \includegraphics[width =\textwidth]{figures/png/Screenshot_20240529_133230.png}
+    \includegraphics[width =0.9\textwidth]{figures/png/Screenshot_20240529_133230.png}
     \caption{Signal flow through front end electronics, Ref. \cite{bartoszek2015mu2e}.}
     \label{fig:flowfee}
     \end{figure}
@@ -334,7 +438,7 @@ monitoring environmental variables such as temperature, pressure and humidity.
 The low voltage power supply is fed into the panel through the KEY. The KEY 
 contains an optical fiber link and a JTAG interface for communication. The 
 frontends components were chosen to sustain high level of radiation.
-\subsection{Pre-Amplifiers}\label{preampss}
+\subsubsection{Pre-Amplifiers}\label{preampss}
 The pre-amplifiers (preamps) are responsible for the initial readout of 
 signals from both ends of the straw tube channels. As previously explained, 
 the channels are read out from both ends and two adjacent channels are linked 
@@ -349,7 +453,7 @@ pulses into the channel. This capability enables the channel readout electronics
 to be tested without a high voltage source. The preamps on the HV side distribute 
 the high voltage supply to individual straw tubes. 
 %The voltage gains of individual channels, different from the gas gain, are set by control signal from the DRAC. A bias voltage, adjustable for each side of a channel, is applied to the signals. 
-\subsection{DRAC: Digitizer Readout and Assembler Controller}\label{DRAC}
+\subsubsection{DRAC: Digitizer Readout and Assembler Controller}\label{DRAC}
 The brain of a tracker panel is called Digitizer Readout and Assembler Controller. 
 The DRAC is responsible for digitizing, packaging and temporary storage. It also controls 
 panel operations. The schematics of the DRAC board is shown in Figure \ref{fig:drac}, including also 
@@ -390,7 +494,7 @@ DAQ system.
 %or to distinguish muons from electrons. The proton signal will appear as a saturated flag, 
 %since the proton $dE/dx$ is $\times$50 the electron one.
 
-\subsection{Tracker Data Acquisition}\label{tdaqtra}
+\subsubsection{Tracker Data Acquisition}\label{tdaqtra}
 The Mu2e Data Acquisition system is based on a $streaming$ readout method, 
 where all detector data from the experiment are digitized, 
 zero-suppressed in the FEEs, and subsequently sent off the detectors for further processing and storage. 
@@ -406,8 +510,8 @@ To efficiently handle the substantial data rates, this segment of the DAQ system
 extensively on firmware operations. The right block features the offline components, responsible for data storage and offline processing.
 
 The DAQ operations during the experiment are coordinated by the Run Control Host, 
-which manages a predefined Run Plan. During an active spill (approximately the first $\sim$43 ms in 
-the 48 ms bunch extraction cycle described in Chapter \ref{mu2echapter}), 
+which manages a predefined Run Plan. During an active spill (approximately the first 
+$\sim$43 ms in the 48 ms bunch extraction cycle described in Chapter \ref{mu2echapter}), 
 the experiment receives RF Zero-Crossing Markers from the Accelerator, 
 synchronized to the 1695 ns proton pulse cycles, that define the event 
 windows\footnote{Event windows are also assigned during off-spill periods when no beam batches are received. 
@@ -453,7 +557,7 @@ calibration using preamp-generated pulses, and disconnection of channel high vol
     \caption{Mu2e DAQ Architecture, Ref. \cite{GIOIOSA2023167732}.}
     \label{fig:linktodaq}
     \end{figure}
-\subsubsection{Read-Out Controller}\label{ROC} 
+\paragraph{Read-Out Controller}\label{ROC} 
 The main job of the ROCs (one per panel, 216 in total) 
 is to collect data from the digitizer boards, buffer data and 
 send them to DAQ. They are based on an FPGA architecture. They 
@@ -466,7 +570,7 @@ rays, even if the rate will be very low. For this purpose, the ROCs
 include external DRAM. The communication is flexible, thanks to the 
 programmable nature of digitizer, ROC and DAQ. 
 
-\section{Requirements on tracker Performance}
+\subsection{Requirements on tracker Performance}
 Here a resume of the requirements that the tracker must satisfy to ensure the success of the experiment is presented, Ref. \cite{trkreq}.
 A momentum resolution less than 180 keV/c for a 105 MeV/c electron is needed in the nominal
 1 T solenoidal field, as measured at the front face of the tracker volume (before

@@ -114,7 +114,7 @@ In the following sections, the results of the data collection are compared with 
       \caption{FPGA-2: histogram of the delay between channel 44 and the reference channel 94, the first to be readout.}
       \label{fig:delay2}
     \end{figure}
-\subsection{\textit{ROC buffer overflow} mode}
+\subsection{The \textit{ROC buffer overflow} mode}
 In the \textit{ROC buffer overflow} configuration, which will be referred to as RUN281, the event window size is 50 $\mu$s
 and the pulser rate is 60 kHz.
 \subsubsection{Hit timing and occupancy}\label{over}
@@ -223,7 +223,7 @@ as expected, have 255 hits read out per event.
 }
 \label{fig:3}
 \end{figure}
-\subsection{The \textit{regular} mode }
+\subsection{The \textit{ROC buffer regular} mode }
 In the \textit{regular} configuration, which will be referred to as RUN105038, the event window size is 25 $\mu$s
 and the pulser rate is 60 kHz.
 
@@ -589,9 +589,10 @@ The outliers in the plots are due to crosstalk, noisy channels, inverted wavefor
 \end{figure}
 
 \section{DAQ performance studies with external CFO}
-The test described in this section uses the CFO in a mode expected to be implemented 
-during data acquisition. In the test, sequences of HBs \ref{des} were generated, separated by 
-\( T_0 \), and sent to the DTCs. The test procedure was fully programmable. 
+The brief and straightforward test described in this section uses the CFO in a mode expected to be 
+implemented during data acquisition. 
+In the test, sequences of HBs \ref{des} separated by a time constant  
+\( T_0 \) were generated and sent to the DTC. The test procedure was fully programmable. 
 The \textit{run plan} was written using a simple, basic-like language, 
 compiled, loaded into the CFO, and executed. This approach covers nearly all conceivable use cases. We operated in two distinct modes:
 \begin{itemize}
@@ -599,7 +600,7 @@ compiled, loaded into the CFO, and executed. This approach covers nearly all con
   \item \textit{External CFO} mode: the CFO generates HBs and EWMs, sends them to the DTC, and the DTC reads the ROC.
 \end{itemize}
 Both DTC and CFO were installed in the DAQ computer mu2edaq09.
-In both modes, the CFO (or the DTC, in \textit{emulated CFO} mode) 
+In both modes, the CFO (or the DTC, in the \textit{emulated CFO} mode) 
 sends a sequence of \( (N+1) \) EWMs. Afterward, the DTC 
 asynchronously reads \( N \) events. 
 Time synchronization between the CFO, DTCs, and ROCs was managed either 
@@ -610,25 +611,143 @@ The output was analyzed, and the test was repeated multiple times to ensure repr
 
 
 My contribution to this test involved reading the data, whose format is shown in Figure \ref{fig:dataformat}, 
-and comparing the number of events and status codes between runs with the same \textit{run plan}. 
+and comparing the number of events and status codes between runs with the same \textit{run plan}, 
+both for \textit{emulated} and \textit{external CFO} mode. 
 \begin{figure}[!h]
   \centering
-  \includegraphics[width=\textwidth]{figures/png/Screenshot_20240627_144108.png}
+  \includegraphics[width=\textwidth]{figures/png/Screenshot_20240628_104216.png}
   \caption{Each line (pink) in the data sequence is called \textit{data packet}. 
   The first three packets (grey) denote one event. The green and cyan squares represent respectively
   the number of packets in one event and the event window tag, which identifies a single event. 
-  The following packets (black) represent the ROC headers, six in total. 
+  The following packets (black) represent the ROC headers, six in total, but just one ROC was connected. 
   The orange and red squares indicate the payload length (the number of packets after 
-  the ROC header, including the ROC header) and the ROC ID. The blue square represents 
+  the ROC header, including the ROC header) and the ROC ID respectively. The blue square represents 
   the ROC status. There are different status codes: 0x0101 indicates a full payload, 0x0100 an empty one, 
   and 0x0108, 0x0180, and 0x0508 are the codes for timeouts.}
   \label{fig:dataformat}
 \end{figure}
-An increasing number of events were generated
+Different \textit{run plans} were created, with different number of events generated in both modes:
+\begin{itemize}
+  \item \textit{External CFO} mode: the chosen number of generated 
+  events per run was 66, 130, 258, 514, and 1026. These numbers 
+  were chosen because we were reading out the events emulated by 
+  the ROC, and the payload is fully defined by the EW tag. 
+  It was possible to generate 64 different patterns, and the 
+  first two patterns were easy to remember, seen at the end of each run. 
+  Therefore, each time the number of events was doubled and 2 events were added at the end.
+  \item \textit{Emulated CFO} mode: since it was the most stable mode, 
+  it was decided to start with a greater number of events per run (10k and 100k).
+\end{itemize}
 
 
-do see that results depend on the source of timing synchronization
-timing synchronization becomes more and more likely to be one of the major issues
+The results for the \textit{emulated CFO} mode are shown in Figure 
+\ref{fig:corruptionemulated}. This figure displays the total number of events, 
+the number of empty (0x100) and full events (0x101), and the number of timeouts 
+(0x108, 0x180, and 0x508) versus the run number per \textit{run plan}. We expect 
+to see all events read out correctly, with just the presence of empty and full events 
+as scheduled in the \textit{run plan}. This mode was much more stable compared to the 
+\textit{external CFO} mode. As shown in the 10k events generated \textit{run plan} (Figure \ref{fig:corruptionemulated}(a)), 
+the events are read out correctly, except for the 13th and the 19th runs. 
+For the 100k \textit{run plan}, the majority of the events seem to be read out correctly, 
+except for the 5th and 10th runs. It is possible to see a number of 0x0508 timeouts that is 
+$10^{-3}$ the total number of events in most of the runs. This suggests the presence of a 
+jitter with the external clock, indicating that the results depend on the source of timing synchronization.
+
+
+\begin{figure}[!h]
+  \centering
+  \begin{subfigure}[t]{0.5\textwidth}
+      \centering
+      \includegraphics[width=1.1\textwidth]{figures/pdf/10k.pdf}
+      \caption{}
+  \end{subfigure}%
+  ~ 
+  \begin{subfigure}[t]{0.5\textwidth}
+      \centering
+      \includegraphics[width=1.1\textwidth]{figures/pdf/100k.pdf}
+      \caption{}
+  \end{subfigure}
+  \caption{The \textit{emulated CFO} mode. Subfigures (a) and (b) show 10k and 100k events generated respectively. 
+  The total number of events (black), the number of empty events (0x100 - green -) and full events (0x101 - blue -), 
+  and the number of timeouts (0x108 - red -, 0x180 - brown -, and 0x508 - pink -) versus the run number in a \textit{run plan} are shown.
+  }
+  \label{fig:corruptionemulated}
+\end{figure} 
+
+The results for the \textit{external CFO} mode are shown in Figure \ref{fig:corruption}. 
+These graphics show the total number of events, the number of empty (0x100) and full events (0x101), and 
+the number of timeouts (0x108, 0x180, and 0x508) versus the run number per \textit{run plan}.
+As can be seen in Figure \ref{fig:corruption}(a), all events are read out correctly, without any timeouts.
+However, as the number of events generated increases, issues begin to arise.
+In the cases of 130 and 258 events generated (Figures \ref{fig:corruption}(b) and (c)), only the first run 
+was not read out correctly, resulting in only timeouts being read out.
+Before starting the first run of the series, a new \textit{run plan} was uploaded, 
+which suggests there may be an issue with the upload.
+The case of 514 events (Figure \ref{fig:corruption}(d)) is different from the previous two: 
+only the first run is read out correctly, ruling out previous assumptions. The main problem is 
+that in the subsequent runs, approximately 60\% of the events are lost. Only the last events 
+show up, and the first Event Window tag of the run is different from zero. The sum of the number 
+of events read out and the first EW tag equals 514.
+All events in the following runs appear to be timeouts. The same issue occurs with the 
+1026 events generated case, where 30\% of events are lost.
+
+
+\begin{figure}[!h]
+  \centering
+  \begin{subfigure}[t]{0.5\textwidth}
+      \centering
+      \includegraphics[width=1.1\textwidth]{figures/pdf/66.pdf}
+      \caption{}
+  \end{subfigure}%
+  ~ 
+  \begin{subfigure}[t]{0.5\textwidth}
+      \centering
+      \includegraphics[width=1.1\textwidth]{figures/pdf/130.pdf}
+      \caption{}
+  \end{subfigure}
+  ~ 
+  \begin{subfigure}[t]{0.5\textwidth}
+    \centering
+    \includegraphics[width=1.1\textwidth]{figures/pdf/258.pdf}
+    \caption{}
+\end{subfigure}%
+~ 
+\begin{subfigure}[t]{0.5\textwidth}
+    \centering
+    \includegraphics[width=1.1\textwidth]{figures/pdf/514.pdf}
+    \caption{}
+\end{subfigure}
+~ 
+\begin{subfigure}[t]{0.5\textwidth}
+    \centering
+    \includegraphics[width=1.1\textwidth]{figures/pdf/1026.pdf}
+    \caption{}
+\end{subfigure}
+  \caption{The  $external \ CFO$ mode. Subfigures (a), (b), (c), (d), (e) show 66, 130, 258, 514 and 1026 events generated respectively. 
+  The total number of events (black), the number of empty events (0x100 - green -) and full events (0x101 - blue -), 
+  and the number of timeouts (0x108 - red -, 0x180 - brown -, and 0x508 - pink -) versus the run number in a \textit{run plan} are shown.}
+  \label{fig:corruption}
+\end{figure}
+
+
+
+These results have been sent to the firmware developers for further checks.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \iffalse
 
