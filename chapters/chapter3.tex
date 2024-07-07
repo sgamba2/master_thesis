@@ -336,7 +336,7 @@ of the panel edge is also shown in Figure \ref{fig:strawtubes}.
                     \label{fig:strawtubes}
                     \end{figure}
             The Mu2e tracker panels uses a gas flow of 80\%:20\% Ar:CO$_2$ at 1 atm.
-            Since the Detector Solenoid internal volume is evacuated to 10$^{-4}$ Torr, 
+            Since the DS internal volume is evacuated to 10$^{-4}$ Torr, 
             the straws must endure such pressure difference. Under normal temperature and 
             pressure conditions, the panel must have an average leak rate below 0.014 cm$^3$/min.  
             The nominal operating voltage of the straw is 1450 V. 
@@ -578,7 +578,7 @@ rays, even if the rate will be very low. For this purpose, the ROCs
 include external DRAM. The communication is flexible, thanks to the 
 programmable nature of digitizer, ROC and DAQ. 
 
-\subsection{Requirements on tracker Performance}
+\subsection{Requirements on tracker performance}
 Here a resume of the requirements that the tracker must satisfy to ensure the success of the experiment is presented, Ref. \cite{trkreq}.
 A momentum resolution less than 180 keV/c for a 105 MeV/c electron is needed in the nominal
 1 T solenoidal field, as measured at the front face of the tracker volume (before
@@ -590,3 +590,61 @@ It must have an acceptance of approximately 20\% for conversion electrons.
 The tracker must operate in an ambient vacuum (< $10^{-4}$ Torr).
 It should be able to withstand a rate of 5 MHz per straw (highest rate straw) 500 ns after the spill. This is
 for background studies. The nominal experiment live time starts 700 ns after the spill.
+\subsubsection{Momentum scale calibration}
+One of the most challenging aspects of the Mu2e experiment is achieving the 
+required momentum resolution to distinguish the CE electron from the background.
+
+Mu2e requires at least one source of high-energy calibration electrons or 
+positrons to independently measure the absolute momentum scale of the tracker. 
+The momentum scale calibration relies on accurately reconstructing the 
+$\pi^+ \rightarrow e^+ \nu_e$ peak, with its success critically dependent on the 
+suppression of $\mu^+ \rightarrow e^+ \nu_e \bar{\nu}_\mu$ decays in flight (DIF). 
+Several approaches have been explored, with the most promising ones being:
+
+\begin{enumerate}
+    \item Special run with adjusted TS collimators: operating with 
+    reversed TS collimators and a reduced DS field 
+    (70\% of the nominal value), this setup is designed to capture the 
+    leptonic decay ($\pi^+ \rightarrow e^+ \nu_e$) of stopping $\pi^+$ in the nominal stopping target;
+    
+    \item Low intensity run with reduced DS magnetic field: 
+    running at low intensity and a further reduced DS field (50\% of the nominal value), 
+    this approach aims to gather high-statistics data to accurately fit 
+    the Michel edge of the DIO momentum distribution.
+\end{enumerate}
+
+Several important considerations include:
+
+\begin{itemize}
+    \item Early time measurement: to effectively 
+    reconstruct the peak in the momentum distribution 
+    of positrons from $\pi^+ \rightarrow e^+ \nu_e$ decays, 
+    measurements must be performed at early times, approximately 
+    $T \sim 300$ ns. This necessitates operating at a reduced proton 
+    beam intensity to mitigate pileup concerns;
+    
+    \item Special instrumentation requirement: to minimize 
+    background from muon decays in flight, the calibration demands 
+    the installation of a beam degrader in the DS.
+\end{itemize}
+
+The momentum scale calibration described involves two key measurements: 
+\begin{enumerate}
+    \item The edge of the positron momentum spectrum from $\mu^+ \rightarrow e^+ \nu_e \bar{\nu}_\mu$ decays at $B = 0.5$ T;
+    \item The $\pi^+ \rightarrow e^+ \nu_e$ peak at $B = 0.7$ T.
+\end{enumerate}
+
+Each of these measurements determines the momentum scale at their respective 
+magnetic field values. By combining these measurements, we can extrapolate the 
+momentum scale to the nominal magnetic field, $B = 1.0$ T. This concept is illustrated in Figure \ref{fig:momscale}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/png/Screenshot_20240707_180742.png}
+\caption{Illustration of the momentum scheme calibration.}
+\label{fig:momscale}
+\end{figure}
+
+The calibration scheme assumes that the magnetic field is initially set based 
+on readings from an NMR probe, and any necessary scale corrections can be 
+effectively managed by rescaling the value of the nominal magnetic field.
