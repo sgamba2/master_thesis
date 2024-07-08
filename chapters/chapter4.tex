@@ -786,6 +786,13 @@ The total input is 150,000 Byte per event $\times$ 1800 events/s that is 270 MB/
 \section{Data flow testing}
 \section{ROC firmware testing}
 
+
+2214 straw hits per event (DocDB-10898)
+- Event = micro bunch (1.6usecs)
+ Each hit = 32 bytes (ignores special characters, CRCs…)
+ So total 44GB/s
+ Assume uniform in z (which is definitely a bad assumption, 6:1
+front back asymmetry) this 200MB/s per ROC
 \fi
 
  %(1695 ns), that is 90 GB/s and there is a buffering factor of 0.4/1.4, that makes 28 GB/s.

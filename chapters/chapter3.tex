@@ -297,28 +297,26 @@ are joined to both ends of the straw suing silver epoxied.
 From the straws, signals are sent to a common preamplifier board 
 via the anode pin pair and grounding clip. The tracker front 
 end eletronic will be described in Section \ref{tfee}.
-\subsection{The straw assembly}
-Groups of 96 straws are assembled in two staggered layers and make a panel 
-(Figure \ref{fig:trktubes}). 
+\subsection{The building blocks: from the panels to the station}
+Groups of 96 straws are assembled in two staggered layers of 48 straws and make a 
+panel (Figure \ref{fig:trktubes}). 
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.6\textwidth]{figures/png/Screenshot_20240326_234405.png}
     \caption{Arrangement of the straws within a panel, Ref. \cite{trk}.}
     \label{fig:trktubes}
     \end{figure}
-Each panel spans a 120° arc.
-The dual-layer geometry allows to determine easily 
-which side of the sense wire the particle passes 
-through and thus solve the left-right ambiguity. 
-This simplifies pattern recognition and increases 
-tracking robustness and efficiency. A 1.25 mm 
-separation between two consecutive straws accommodate 
-manufacturing tolerances and allows for expansion due 
-to gas pressure. This requires that each straw must be 
-self-supporting across its length. Channels within a 
-panel are numbered from the radially most internal straw, 
-from 0, corresponding to the longest straw, to 95, 
-corresponding to the shortest one. 
+Each panel spans a 120° arc (Figure \ref{fig:gonzalo}).
+The dual-layer geometry was chosen since it allows to determine 
+easily which side of the sense wire the particle passes through 
+and thus solve the left-right ambiguity. This simplifies pattern 
+recognition and increases tracking robustness and efficiency. 
+A 1.25 mm separation between two consecutive straws accommodates 
+manufacturing tolerances and allows for straws expansion due to gas 
+pressure. This requires each straw to be self-supporting across its 
+length. Channels within a panel are numbered from 0, 
+corresponding to the radially most internal and longest straw, 
+to 95, corresponding to the most external and shortest straw. 
    
 All the tracker panels have been assembled at Fermilab Lab3 
 Facility, as shown in Figure \ref{fig:gonzalo}. An expanded view 
@@ -331,11 +329,11 @@ of the panel edge is also shown in Figure \ref{fig:strawtubes}.
                 \end{figure}
                 \begin{figure}[!h]
                     \centering
-                    \includegraphics[width =0.6\textwidth]{figures/png/Screenshot_20240327_000131.png}
+                    \includegraphics[width =0.45\textwidth]{figures/png/Screenshot_20240327_000131.png}
                     \caption{Expanded view of the panel edge, Ref. \cite{trk}.}
                     \label{fig:strawtubes}
                     \end{figure}
-            The Mu2e tracker panels uses a gas flow of 80\%:20\% Ar:CO$_2$ at 1 atm.
+            The straws are filled with a gas mixture of 80\%:20\% Ar:CO$_2$ at 1 atm.
             Since the DS internal volume is evacuated to 10$^{-4}$ Torr, 
             the straws must endure such pressure difference. Under normal temperature and 
             pressure conditions, the panel must have an average leak rate below 0.014 cm$^3$/min.  
@@ -344,251 +342,305 @@ of the panel edge is also shown in Figure \ref{fig:strawtubes}.
             tube gain is 1.25 $\times$10$^4$ at 1250 V and 7 $\times$ 10$^4$ at 
             1425 V. According to Diethorn's calculation, Equation \ref{XXX}, 
             the gas gain at 1450 V is around 1 $\times$10$^5$.
-            The front-end electronics is hosted in a ring around the outer circumference of the panel. 
+ 
 
 All panels are x-ray scanned 
 to accurately measure and document the wire 
 locations of straw tube channels. 
 
-Three panels rotated of 120° make a face and two faces rotated of 30° make a plane (Figure \ref{fig:trkpanel} 
-(Upper right-left) and \ref{fig:trueplane}).
-Once a plane is assembled, a cooling ring is fitted around its outer circumference. 
-
+Three panels rotated of 120° make a face and two faces rotated of 
+30° make a plane (Figure \ref{fig:trkpanel} (Upper right-left) and \ref{fig:trueplane}).
 Although the rotation of 30° between the two faces introduces more mechanical complexity if 
-compared to a rototation of 60°, this configuration provides the better stereo performance. 
+compared to a rototation of 60°, this configuration provides the better stereo performance.
 
-Two identical planes rotated of 180° around a vertical axis make one Station 
+Once a plane is assembled, a cooling ring is fitted around its outer circumference. 
+The front-end electronics is hosted in a ring around the outer 
+circumference of the panel.
+
+Two identical planes rotated of 180° around a vertical axis make one station 
 (Figure \ref{fig:trkpanel} (Upper right-right)). 
-These planes are identical, but during assembly, the second plane 
-is rotated 180° around a vertical axis. 
+During assembly, the second plane is rotated of 180° around the vertical axis.
 
 At the moment of writing this Thesis, almost all the tracker planes have 
-already been assembled at Fermilab Lab3 Facility and Station assembly is now work in progress, 
+already been assembled at Fermilab Lab3 Facility and station assembly is now work in progress, 
 as shown in Figure \ref{fig:trueplane}.
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240706_163056.png}
-    \caption{Mu2e tracker plane fully assembled at Fermilab Lab3 Facility.}
+    \includegraphics[width =0.65\textwidth]{figures/png/Screenshot_20240706_163056.png}
+    \caption{One tracker plane fully assembled at Fermilab Lab3 Facility.}
     \label{fig:trueplane}
 \end{figure}
-\subsection{The tracker frame}
+\subsection{The entire straw-tracker detector}
 
-Eighteen stations are assembled into the completed tracker, shown in Figure \ref{fig:trkpanel} 
-(bottom). Horizontal beams maintain longitudinal alignment of the rings. 
-A thicker ring, and two thinner rings placed between 
-stations at the downstream end, stiffen the structure. 
-Stiffening rings and beams are stainless steel.
+The entire detector is made of 18 stations (Figure \ref{fig:trkpanel} 
+(bottom)) assembled together with a complex mechanical structure. 
+Horizontal beams maintain longitudinal alignment of the rings. 
+A thicker ring and two thinner rings placed at the downstream end 
+of the detector stiffen the structure. The beams and the stiffening rings 
+are made of stainless steel.
 
-The entire tracker rests on four bearing blocks placed near 
-the horizontal beams and attached to the stiffening rings. 
-The connection between the tracker and the bearing blocks is 
-kinetic to avoid over-constraining and distorting the tracker 
-frame, except all four points are constrained in the vertical 
-direction. Vertical adjustment screws are included to level and center the frame. 
-The completed tracker will be surveyed before being moved to the mu2e building. 
+The detector rests on four bearing blocks attached to the 
+stiffening rings and placed near the horizontal beams.
+The connection between the detector and the bearing blocks 
+is kinetic, to avoid over-constraining and distorting the frame. 
+The only constraint of the four points is along the vertical 
+direction, and vertical adjustment screws allow to level and 
+center the frame. Once fully assembled, a thorough mechanical 
+survey of the detector will be performed before moving to the Mu2e experimental hall. 
 
-A station feature that will be important for my Thesis, particularly in 
-Chapter \ref{planning}, is the layout of the gas system. 
-The gas tubes will be assembled together in each station as shown in Figure 
-\ref{fig:gassystem}. Consequently, orienting the assembled station horizontally 
-will be challenging, because it could damage the gas tubes.
+One feature of the station that will be relevant for this Thesis 
+and will be discussed in more detail in \ref{planning}, is the layout of the gas system. 
+Figure \ref{fig:gassystem} shows the layout of the gas tubes 
+placed on the external surface of the station. 
+This specific layout makes orienting the assembled 
+station horizontally particularly challenging, since the gas tubes could be damaged.
 
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.3\textwidth]{figures/png/Screenshot_20240706_163631.png}
-    \caption{The gas system disposition in the assembled station.}
+    \caption{Gas system layout in the assembled station.}
     \label{fig:gassystem}
 \end{figure}
 
 \subsection{The tracker Front-End Electronics}\label{tfee}
-Before being accessible to the Mu2e Data Acquisition (DAQ) system, the analog signals 
-from the tracker straw tube channels must undergo amplification, digitization, and packaging. 
-Each straw provides two hit times and one waveform, which are essential for 
-reconstructing the hit coordinate along the straw, thereby mitigating time walk effects.
-Initially, signals from both ends of the straw are directed to the preamplifiers. 
-The analog signal is transmitted via the microstrip transmission line to the digitizers, 
-while the timing pulses are sent to Time-to-Digital Converters (TDCs), both of which 
-are located in the DRAC. Subsequently, the data are forwarded to the Readout Controller and then transmitted to the DAQ.
-The tracker front-end electronics (FEEs) are engineered to accomplish these tasks, as depicted in Figure \ref{fig:flowfee} and further detailed in this section.
-\\
+The front-end electronics performs amplification, digitization and data packaging 
+for transmission to the Data Acquisition System (DAQ) of the straw-tube signals. 
+In particular, each single straw provides two hit times and one waveform, 
+which are necessary to reconstruct the hit position along the straw, 
+thereby allowing the use of costant fraction discrimination and mitigating time walk effects. 
+A schematic representation of the entire system logic is reported in Figure \ref{fig:flowfee}.
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.9\textwidth]{figures/png/Screenshot_20240529_133230.png}
     \caption{Signal flow through front end electronics, Ref. \cite{bartoszek2015mu2e}.}
     \label{fig:flowfee}
     \end{figure}
-These components consist of multiple Printed Circuit Boards (PCBs) as shown in Figure \ref{fig:trackerfee}, Ref. \cite{vadimmu2e}.
-All PCBs are situated in the outer section of the panel. Each channel, corresponding to a straw, is equipped with:
-\begin{itemize}
-    \item two preamp channels, one for each end;
-    \item two TDC channels, one for each end;
-    \item one ADC channel, measuring sum of both ends;
-    \item one High Voltage feed.
-\end{itemize}
-There are two sides of the panel, one called HV side and one called CAL side. 
-\begin{figure}[!h]
-\centering
-\includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240131_111836.png}
-\caption{An overview of the tracker front-end electronics (FEE), Ref.  
-\cite{vadimmu2e}. The preamps and the Analog Motherboard (AMB) 
-on the other side of the straws are not shown in the figure.}
-\label{fig:trackerfee}
-\end{figure}
-On either side, there are an Analog Mother Board (AMB) and a Jumper board, 
+All the front-end electronics is installed on multiple Printed Circuit Boards 
+(PCBs) mounted on the outer section of the panel. 
+The PCBs are shown in Figure \ref{fig:trackerfee}, Ref. \cite{vadimmu2e}.
+All PCBs are situated in the outer section of the panel. 
+The panel has two sides, named high-voltage side (HV-side), 
+which handles the high-voltage supply distribution to the straws, and 
+calibration-side (CAL-side), that contains a circuitry that can inject calibration
+pulses to the channel.
+
+Signals from the straw tube channels are first read 
+out from both ends by the pre-amplifiers (preamps).
+
+Both sides of the panel have one Analog Mother Board (AMB) and one Jumper board, 
 which task consist of directing signals from the preamps towards the Digital 
 Motherboard (DMB) positioned at the center, then to the Digitizer Readout and 
 Assembler Controller (DRAC) (mounted on top of the DMB) to be processed and 
-temporarily stored. Both the AMBs and the DMB handle low voltage distribution 
-and the HV side of the AMB distributes high voltage to the straw anode wires, 
-reason why it is called this way. On the AMBs and the DMB there are sensors, 
-monitoring environmental variables such as temperature, pressure and humidity. 
-The low voltage power supply is fed into the panel through the KEY. The KEY 
-contains an optical fiber link and a JTAG interface for communication. The 
-frontends components were chosen to sustain high level of radiation.
-\subsubsection{Pre-Amplifiers}\label{preampss}
-The pre-amplifiers (preamps) are responsible for the initial readout of 
-signals from both ends of the straw tube channels. As previously explained, 
-the channels are read out from both ends and two adjacent channels are linked 
-to the same preamp. Each tracker panel contains 48 preamps on the HV side, 
-while an additional 48 preamps are located on the opposite side, the CAL one. 
-Preamps are mounted vertically on the AMBs. Preamps are required to have a 
-matching 300 $\Omega$ input impedance with the straw, in order to avoid signal 
-reflections. The preamps convert the straw tube current signals into voltage signals. 
-Signals are amplified and shaped. The preamps on the CAL and HV sides aren't 
-exactly the same. The CAL preamps have circuitry that can inject calibration 
-pulses into the channel. This capability enables the channel readout electronics 
-to be tested without a high voltage source. The preamps on the HV side distribute 
-the high voltage supply to individual straw tubes. 
+temporarily stored. 
+
+Moreover, the AMBs and the DMB handle 
+low voltage distribution and the AMB on the HV side is responsible for 
+distributing the high voltage to the straw anode wires
+The low voltage power supply is connected to the panel through the KEY board which 
+contains also an optical fiber link and a JTAG inferface for communication.
+The two boards are also equipped with sensor to monitor environmental parameters, 
+including temperature, pressure and humidity.
+
+In addition, the frontends components were chosen to sustain high level of radiation.
+
+The first step of signal processing is the signal pre-amplification performed 
+by preamps mounted on two AMBs placed on the two lateral sides of the panel. 
+The analog signals are transmitted from the preamps via 
+microstrip transmissione lines and through a Jumper board to the DRAC.
+Most of the data processing functions are performed by the DRAC board. 
+The analog signals are processed by the Time-to-Digital Converters 
+(TDCs) and to Analog-to-Digital Converters 
+(ADCs) installed on the DRAC. Digitized data are then transferred to the Readout 
+Controller (ROC) for data packaging and transmission to the Mu2e DAQ 
+(Figure \ref{fig:flowfee}). 
+
+To summarise, each straw-tube is an independent detector channel and it is equipped with:
+\begin{itemize}
+    \item two preamp channels, one for each end;
+    \item two TDC channels, one for each end (192 in total);
+    \item one ADC channel, measuring sum of both ends (96 in total);
+    \item one High Voltage feed.
+\end{itemize}
+\begin{figure}[!h]
+\centering
+\includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240131_111836.png}
+\caption{Overview of the straw-tracker front-end electronics, Ref.  
+\cite{vadimmu2e}. The CAL-Side of the panel is not shown.}
+\label{fig:trackerfee}
+\end{figure}
+
+
+\subsubsection{The pre-amplifiers}\label{preampss}
+All the 96 straw-tubes are read out from both ends. 
+Two adjacent tubes are connected to the same preamplifier. 
+Each panel is thus equipped with 48 preamplifiers on the HV 
+side and 48 preamplifiers on the CAL side. The preamplifiers 
+are mounted veritcally on the AMBs. To minimise signal reflections, 
+the preamplifiers have a matching 300 $\Omega$ input impedance. 
+The function of the preamplifiers is to convert the straw tubes 
+current signals into voltage signals which are amplfied and shaped. 
+There are some differences between the preamplifiers on the CAL and 
+HV sides. The CAL preamplifier can inject a calibration pulse into 
+the channel, which allows to test the readout electronics without a 
+high voltage source. The HV preamplifier performs the high voltage 
+distribution to the straw tube.
 %The voltage gains of individual channels, different from the gas gain, are set by control signal from the DRAC. A bias voltage, adjustable for each side of a channel, is applied to the signals. 
-\subsubsection{DRAC: Digitizer Readout and Assembler Controller}\label{DRAC}
-The brain of a tracker panel is called Digitizer Readout and Assembler Controller. 
-The DRAC is responsible for digitizing, packaging and temporary storage. It also controls 
-panel operations. The schematics of the DRAC board is shown in Figure \ref{fig:drac}, including also 
-Analog to Digital Converters (ADCs), DDR3 memories and compators. 
-The large chips in the centers are the Field-Programmable Gate Arrays (FPGAs). The one 
-in the center is the Readout Controller (ROC), which manages communications, monitors 
-slow control variables and controls panel operations \ref{ROC}. The left and the right 
-FPGAs, which are referred to as the digi FPGAs, are responsible for monitoring data output, 
-buffering data and assembling data packages. Each of them refers to 48 straw channels. 
+\subsubsection{The Digitizer Readout and Assembler Controller board}\label{DRAC}
+The $brain$ of the panel is called Digitizer Readout and Assembler Controller (DRAC) board. 
+The DRAC performs digitization, packaging, temporary storage and data transfer to 
+the Mu2e DAQ system. It also controls all the panel operations The schematics of the 
+Figure \ref{fig:drac} shows a picture of the board: a battery of comparators 
+and ADCs, three DDR3 memories and three Field-Programmable Gate Arrays (FPGAs) 
+are clearly visible. 
+The two FPGAs on the left and on the right are named digiFPGAs: 
+each of them receives the data from 48 straw channels, performs data 
+monitoring, buffering and assembles data packets which are then 
+transferred to the central FPGA named Readout Controller (ROC) \ref{ROC}. 
+The ROC handles communication, monitors slow control variables and 
+controls all panel operations.
+
 \begin{figure}[!h]
 \centering
 \includegraphics[width =\textwidth]{figures/png/Screenshot_20240204_115052.png}
 \caption{DRAC board schematics, Ref. \cite{drac}. 
-The DRAC board is the brain of the tracker panel. ADCs, FPGAs, DDR3 memories and compators are also shown.}
+The DRAC board is the brain of the tracker panel. ADCs, FPGAs, DDR3 
+memories and compators are also shown.}
 \label{fig:drac}
 \end{figure}
-In Figure \ref{fig:flowfee}, signal flow in the tracker FEEs is reported.
-After the signals are sent to the preamplifiers, they are transmitted to the DRAC.
-In the DRAC, the two biased signals are fed independently to 
-zero-crossing comparators, which produce square pulses when the signals exceed 
-their respective thresholds. The squared pulses are sent to TDCs 
-(firmware based, 16 bits each) implemented in the digi FPGAs, that have the task 
-of digitizing the triggered timings, including the arrival time and the time over threshold, 
-at a rate of about 62.5 MHz. Besides drift time, TDCs measure time difference across the 
-straw to estimate position along the wire and the intrinsic time resolution of TDC is about 
-25 ps, adding comparator jitter, noise and other external effects the final resolution is 
-$\sim$70 ps for time division. Furthermore, an integrator adds voltage signals coming 
-from the two straw ends. In data collection, a hit occurs when both ends of a straw channel 
-are simultaneously activated. The total sum is digitized by a 12-bit (10-bit ENOB) ADC at 40 MHz
-and then sent to the digi FPGA. The digi FPGA creates a data packet for each hit based on 
-TDC and ADC information. This suppresses false triggers caused by random electrical noise. 
-The Digitizer receives signals from both ends of four straws and multiplexes them into one 
-output buffer before sending a packet of data to the ROC. Signals are sent to the ROC at 
-200 MHz. The data packets are then briefly stored in DDR3 memory for further use by the 
-DAQ system. 
+Figure \ref{fig:flowfee} shows the data flow through the panel front-end and the DRAC:
+\begin{itemize}
+    \item The two signals from the two sides of a straw tube are transmitted 
+    from the preamps to the DRAC;
+    \item In the DRAC, the two biased signals are fed to zero-crossing comparators, 
+    which generate square pulses if the signals are above their respective thresholds;
+    \item The squared signals are transmitted to 16-bit TDCs implemented 
+    in firmware in the digiFPGAs. Timing digitization is performed at the rate 
+    of 20 ps per count, including the determination of the arrival time and the 
+    time over threshold. In addition to the drift time, the TDCs 
+    measure the time difference between the two signals received from the 
+    same straw to dermine the hit position along the straw. With an 
+    intrinsic TDC resolution of 25 ps, taking into account also the comparator jitter, 
+    the noise and other external effects, the resulting time resolution 
+    is of the order of 70 ps. At run time, a hit on a straw 
+    is considered only if both ends of the same straw simultaneously have a 
+    signal above threshold;
+    \item The two signals from the two ends of the same straw are also 
+    added by an integrator. The total sum is digitized by a 12-bit 
+    (10-bit ENOB) ADC at 40 MHz and then transmitted to the digiFPGA;
+    \item The digiFPGA creates one data packet for each hit based on the 
+    TDC and ADC information. This allows to suppress false triggers caused by 
+    random electrical noise;
+    \item The data packets are transferred to the ROC \ref{ROC}, and 
+    temporarily stored in the DDR3 memories for later access by the DAQ system. 
+    There is a total of 8 Gb of memory space available on each DRAC.
+\end{itemize}
+
 %It is important to save also the voltage signal, since the pulse height 
 %information can help us to reject proton background, a significant source of noise 
 %or to distinguish muons from electrons. The proton signal will appear as a saturated flag, 
 %since the proton $dE/dx$ is $\times$50 the electron one.
 
-\subsubsection{Tracker Data Acquisition}\label{tdaqtra}
-The Mu2e Data Acquisition system is based on a $streaming$ readout method, 
-where all detector data from the experiment are digitized, 
-zero-suppressed in the FEEs, and subsequently sent off the detectors for further processing and storage. 
-This method results in a high data throughput in the DAQ system but offers significant 
-flexibility for data selection and analysis. Moreover, this approach simplifies the required DAQ architecture. 
+\subsubsection{The Data Acquisition System}\label{tdaqtra}
 
-Figure \ref{fig:linktodaq}, Ref.\cite{GIOIOSA2023167732}, illustrates the comprehensive 
-architecture of the Mu2e DAQ system. On the left side, the figure shows the Readout Controllers 
-for various detectors. The tracker ROC is also shown in Figure \ref{fig:flowfee}. 
-The central block shows the online components of the DAQ system, which mainly comprise the Run Control Host, 
-40 DAQ servers, the Detector Control System (DCS), and the Event Building Switch. 
-To efficiently handle the substantial data rates, this segment of the DAQ system relies 
-extensively on firmware operations. The right block features the offline components, responsible for data storage and offline processing.
+The Mu2e Data Acquisition system (DAQ) is based on a $streaming$ readout architecture: 
+all detector data are digitised, zero-suppressed in the front-end electronics 
+and then transferred from the detectors for further processing and storage. 
+This architecture results in a large data throughput in the DAQ but offers a 
+significant flexibility for data selection and analysis. Moreover, it makes 
+the DAQ architecture simpler.
 
-The DAQ operations during the experiment are coordinated by the Run Control Host, 
-which manages a predefined Run Plan. During an active spill (approximately the first 
-$\sim$43 ms in the 48 ms bunch extraction cycle described in Chapter \ref{mu2echapter}), 
-the experiment receives RF Zero-Crossing Markers from the Accelerator, 
-synchronized to the 1695 ns proton pulse cycles, that define the event 
-windows\footnote{Event windows are also assigned during off-spill periods when no beam batches are received. 
-These event windows are longer due to the reduced data rate.}. Based on these markers, the Command Fan-Out 
-(CFO) module within the Run Control Host generates a 40 MHz system clock and embeds Event Window Markers 
-(EWMs) into this clock to denote the start of event windows. 
-The CFO distributes this encoded system clock and run control packets to the 
-Data Transfer Controllers (DTCs) in the DAQ servers. DTCs then pass the encoded clock to 
-the ROCs within the detectors, where the EWMs are recovered with a fixed latency relative to the 
-initial RF Zero-Crossing Markers. The local ROCs use the EWMs to distinguish data 
-collected during consecutive event windows. For the tracker, 
-this involves generating a DDR3 memory address at the start of each event 
-window to store tracker hits recorded during that period.
+Figure \ref{fig:linktodaq}, Ref.\cite{GIOIOSA2023167732}, shows the global 
+architecture of the Mu2e DAQ. 
+The Readout Controllers of all the detectors are shown 
+on the left side. The central box includes the main DAQ 
+components: the Run Control Host, 40 DAQ servers, the 
+Detector Control System (DCS), and the Event Building 
+Switch. The Mu2e data rates will be substantial: for 
+efficient data handling this segment of the DAQ heavily 
+relies on firmware implementation. The right box includes 
+the offline components, which perform data storage and 
+offline processing. 
+
+DAQ operation during data taking will be coordinated by the Run Control Host, 
+which will manage a predefined Run Plan. During an active spill (approximately the first 
+43 ms in the 48 ms bunch extraction cycle described in Chapter \ref{mu2echapter}), 
+the experiment receives RF Zero-Crossing Markers from the Accelerator 
+synchronised to the 1695 ns proton pulse cycles. This defines the 
+event window\footnote{Event windows are also assigned during off-spill periods 
+when no beam batches are received. 
+These event windows are longer due to the reduced data rate.}. 
+Based on these markers, the Command Fan-Out (CFO) module within the 
+Run Control Host generates a 40 MHz system clock and embeds Event 
+Window Markers (EWMs) into this clock to denote the start of event 
+windows. The CFO distributes this encoded system clock and run control 
+packets to the Data Transfer Controllers (DTCs) in the DAQ servers. 
+DTCs then pass the encoded clock to the ROCs within the detectors, 
+where the EWMs are recovered with a fixed latency relative to the 
+initial RF Zero-Crossing Markers. The local ROCs use the EWMs to distinguish 
+data collected during consecutive event windows. For the tracker, 
+this involves generating a DDR3 memory address at the start of each 
+event window to store tracker hits recorded during that period. 
 
 Data readouts from the ROCs to the DAQ system are triggered by Data Requests. 
-The Data Requests, configurable via the CFO as per the Run Plan, are typically 
-issued to the tracker and calorimeter ROCs following each event window through 
-the DTCs. Conversely, the CRV Data Requests are issued via software. The ROCs 
-respond to these Data Requests by transmitting the corresponding data to the DTCs. 
-Data from multiple DTC sources are routed through the Event Building Switch to 
-a designated DTC, pre-processed, and then passed to the Online Processing module 
-within the same DAQ server\footnote{The DTCs are implemented as commercial PCIe cards located 
-within the DAQ Servers.}. If a trigger decision is made, the corresponding CRV data are also 
-read out from the ROCs through software-generated Data Requests. Event data from all detectors 
-are collected at the Data Logger and subsequently transferred to long-term storage for 
-future offline analysis. Calculations estimate a data rate of 35 GBps (with a 30\% 
-overhead) from the ROCs and an annual storage requirement of approximately 7 PB.
+The Data Requests can be configured via the CFO as per the Run Plan and are 
+typically issued to the tracker and calorimeter ROCs following each event 
+window through the DTCs. Conversely, the CRV Data Requests are issued via 
+software. The ROCs respond to these Data Requests by transmitting the 
+corresponding data to the DTCs. Data from multiple DTC sources are routed 
+through the Event Building Switch to a designated DTC, pre-processed, and 
+then transmitted to the Online Processing module within the same DAQ 
+server\footnote{The DTCs are implemented as commercial PCIe cards located 
+within the DAQ Servers.}. If a trigger decision is made, the corresponding 
+CRV data are also read out from the ROCs through software-generated Data 
+Requests. Event data from all detectors are collected at the Data Logger 
+and subsequently transferred to long-term storage for future offline 
+analysis. Calculations estimate a data rate of 35 GBps (with a 30\% overhead) 
+from the ROCs and an annual storage requirement for the entire experiment of 
+approximately 7 PB. 
 
 In addition to detector data, the DTCs also handle the acquisition of 
-slow control variables from the detectors. For the tracker, these 
-variables include panel temperatures, pressures, humidities, voltages, 
-and currents at specified PCB nodes, high voltages, and channel threshold 
-settings across all panels. This data is managed by the DCS Host and recorded 
-in long-term storage. They are also accessible in real-time in the 
-Control Room for monitoring purposes. Other detector control tasks 
-and operations are managed through DCS commands via the DTCs. 
-For the tracker, this includes panel configuration, 
-calibration using preamp-generated pulses, and disconnection of channel high voltage when necessary.
+slow control variables from the detectors. For the tracker, these variables 
+include panels temperature, pressure, humidity, voltages, and currents at 
+specified PCB nodes, high voltages, and channel threshold settings across 
+all panels. These data are managed by the DCS Host and recorded in long-term 
+storage. The data are also accessible in real- time in the Control Room for 
+monitoring purposes. Other detector control tasks and operations are managed 
+through DCS commands via the DTCs. For the tracker, this includes panel 
+configuration, calibration using preamp-generated pulses, and disconnection 
+of channel high voltage when necessary. 
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width =\textwidth]{figures/png/Screenshot_20240206_144803.png}
-    \caption{Mu2e DAQ Architecture, Ref. \cite{GIOIOSA2023167732}.}
+    \includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240206_144803.png}
+    \caption{Mu2e Data Acquisition system architecture, Ref. \cite{GIOIOSA2023167732}.}
     \label{fig:linktodaq}
     \end{figure}
-\paragraph{Read-Out Controller}\label{ROC} 
-The main job of the ROCs (one per panel, 216 in total) 
-is to collect data from the digitizer boards, buffer data and 
-send them to DAQ. They are based on an FPGA architecture. They 
-continuously stream out the zero-suppressed data collected between 
-two proton pulses from the detectors, in this case the tracker, to 
-the DTCs, Ref. \cite{GIOIOSA2023167732}. The buffer 
-stage is fundamental, since during the beam inter-spill time (836 ms 
-out of each 1333 ms), we want us to be able to take data from cosmic 
-rays, even if the rate will be very low. For this purpose, the ROCs 
-include external DRAM. The communication is flexible, thanks to the 
-programmable nature of digitizer, ROC and DAQ. 
+\paragraph{The $Read \ Out \ Controller$}\label{ROC} 
+The main function of the ROC is to collect data from the digitizer boards 
+digiFPGAs, buffer data and transfer them to DAQ. They continuously stream out 
+the zero-suppressed data collected between two proton pulses to the DTCs, 
+Ref. \cite{GIOIOSA2023167732}. The buffer stage is fundamental, 
+since during the beam inter-spill time (836 ms out of each 1333 ms), 
+we want us to be able to take data from cosmic rays, even if the rate 
+will be very low. For this purpose, the ROCs include external DRAM. 
+The communication is flexible, thanks to the 
+programmable nature of digitizer, ROC and DAQ.
 
 \subsection{Requirements on tracker performance}
-Here a resume of the requirements that the tracker must satisfy to ensure the success of the experiment is presented, Ref. \cite{trkreq}.
+Here a resume of the requirements that the tracker must satisfy to ensure the 
+success of the experiment is presented, Ref. \cite{trkreq}.
 A momentum resolution less than 180 keV/c for a 105 MeV/c electron is needed in the nominal
 1 T solenoidal field, as measured at the front face of the tracker volume (before
 passing through any tracker related material). Non-Gaussian tails, particularly any
 high-side tail, must be controlled such that the DIO background results in much less
 than one event at design sensitivity. To reach this, simulation results indicate that 
-a single straw requires around 4 cm of longitudinal and 200 $\mu$m of transverse resolution for drift path lengths. 
+a single straw requires around 4 cm of longitudinal and 200 $\mu$m of transverse 
+resolution for drift path lengths. 
 It must have an acceptance of approximately 20\% for conversion electrons.
 The tracker must operate in an ambient vacuum (< $10^{-4}$ Torr).
-It should be able to withstand a rate of 5 MHz per straw (highest rate straw) 500 ns after the spill. This is
+It should be able to withstand a rate of 5 MHz per straw (highest rate straw) 
+500 ns after the spill. This is
 for background studies. The nominal experiment live time starts 700 ns after the spill.
 \subsubsection{Momentum scale calibration}
 One of the most challenging aspects of the Mu2e experiment is achieving the 
@@ -640,7 +692,7 @@ momentum scale to the nominal magnetic field, $B = 1.0$ T. This concept is illus
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\textwidth]{figures/png/Screenshot_20240707_180742.png}
+\includegraphics[width=0.7\textwidth]{figures/png/Screenshot_20240707_180742.png}
 \caption{Illustration of the momentum scheme calibration.}
 \label{fig:momscale}
 \end{figure}

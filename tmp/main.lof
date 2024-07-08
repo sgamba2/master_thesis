@@ -35,7 +35,7 @@
 \contentsline {figure}{\numberline {2.18}{\ignorespaces (a) The dependence of the mean lifetime and free decay branch of the muonic $1s$ state on the atomic number of the nucleus to which the negative muon is bound, Ref. \cite {TYamazaki_1975}, and (b) the dependence of the electron energy spectrum endpoint on the DIO, Ref. \cite {dukes}.\relax }}{58}{figure.caption.43}%
 \contentsline {figure}{\numberline {2.19}{\ignorespaces Momentum resolution of the straw-tracker as determined for a sample of Monte Carlo conversion electrons, Ref. \cite {bobbb}.\relax }}{59}{figure.caption.44}%
 \contentsline {figure}{\numberline {2.20}{\ignorespaces Schematic representation of the transverse view of the straw-tracker, Ref. \cite {trk}.\relax }}{60}{figure.caption.45}%
-\contentsline {figure}{\numberline {2.21}{\ignorespaces (Top left) Schematic representation of one straw-tracker panel. (Top right) Straw-tracker plane (left) and Station (right). (Bottom) Full assembly of the 18 Stations and support structure, Ref. \cite {bartoszek2015mu2e}.\relax }}{61}{figure.caption.46}%
+\contentsline {figure}{\numberline {2.21}{\ignorespaces (Top left) Schematic representation of one straw-tracker panel. (Top right) Straw-tracker plane (left) and station (right). (Bottom) Full assembly of the 18 stations and support structure, Ref. \cite {bartoszek2015mu2e}.\relax }}{61}{figure.caption.46}%
 \contentsline {figure}{\numberline {2.22}{\ignorespaces The energy and time resolution of the Module-0 for the Mu2e calorimeter for electrons at the conversion energy. (Top left) The resolution for electrons striking the array at normal incidence. (Top right) Resolution for electrons striking the array at 55° with respect to the face. (Bottom) The time resolution. All measurements are compared with simulations (red line), Ref. \cite {bobbb} and \cite {calo95}.\relax }}{62}{figure.caption.47}%
 \contentsline {figure}{\numberline {2.23}{\ignorespaces Mu2e calorimeters disks being assembled at the Fermilab SiDet facility.\relax }}{62}{figure.caption.48}%
 \contentsline {figure}{\numberline {2.24}{\ignorespaces The Mu2e calorimeter annular disks, Ref. \cite {em7}.\relax }}{63}{figure.caption.49}%
@@ -59,12 +59,12 @@
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Arrangement of the straws within a panel, Ref. \cite {trk}.\relax }}{80}{figure.caption.66}%
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Fully assembled panel (Lab3 Fermilab Facility).\relax }}{80}{figure.caption.67}%
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Expanded view of the panel edge, Ref. \cite {trk}.\relax }}{81}{figure.caption.68}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Mu2e tracker plane fully assembled at Fermilab Lab3 Facility.\relax }}{82}{figure.caption.69}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces The gas system disposition in the assembled station.\relax }}{82}{figure.caption.70}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces One tracker plane fully assembled at Fermilab Lab3 Facility.\relax }}{81}{figure.caption.69}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Gas system layout in the assembled station.\relax }}{82}{figure.caption.70}%
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Signal flow through front end electronics, Ref. \cite {bartoszek2015mu2e}.\relax }}{83}{figure.caption.71}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces An overview of the tracker front-end electronics (FEE), Ref. \cite {vadimmu2e}. The preamps and the Analog Motherboard (AMB) on the other side of the straws are not shown in the figure.\relax }}{84}{figure.caption.72}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Overview of the straw-tracker front-end electronics, Ref. \cite {vadimmu2e}. The CAL-Side of the panel is not shown.\relax }}{84}{figure.caption.72}%
 \contentsline {figure}{\numberline {3.14}{\ignorespaces DRAC board schematics, Ref. \cite {drac}. The DRAC board is the brain of the tracker panel. ADCs, FPGAs, DDR3 memories and compators are also shown.\relax }}{85}{figure.caption.73}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Mu2e DAQ Architecture, Ref. \cite {GIOIOSA2023167732}.\relax }}{87}{figure.caption.74}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Mu2e Data Acquisition system architecture, Ref. \cite {GIOIOSA2023167732}.\relax }}{88}{figure.caption.74}%
 \contentsline {figure}{\numberline {3.16}{\ignorespaces Illustration of the momentum scheme calibration.\relax }}{89}{figure.caption.75}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces The tracker test stand, TS1, featuring one DRAC card linked via optical fiber to the DTC in the DAQ computer (mu2edaq09). The setup includes a total of 96 channels.\relax }}{92}{figure.caption.76}%
