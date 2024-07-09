@@ -731,45 +731,43 @@ including the mechanical structure, the front-end electronics and DAQ system, as
 my thesis is on the Vertical Slice Test of the straw tracker.
 
 \subsection{The electromagnetic calorimeter}\label{calorimeter}
-The Mu2e Electromagnetic calorimeter serves multiple purposes, Ref. \cite{em4}:
+The Mu2e electromagnetic calorimeter serves multiple purposes, Ref. \cite{em4}:
 \begin{itemize}
-    \item the energy deposition measured in the calorimeter separates 
-    $e$ and $\mu$ with the same momentum.
-    The separation in energy-to-momentum ratio ($E/p$) can be used to 
-    identify particles and suppresses
-    part of the cosmic background caused by cosmic-ray muons;
-    \item the calorimeter signals can improve the quality of track reconstruction. 
-    The additional information can
-    be used for consistency check, reducing reconstruction errors caused by accidental 
-    activities;
-    \item it provides triggers for the experiment independent of the tracker, Ref. \cite{em6}. 
+    \item the measurement of the energy deposited in the calorimeter 
+    allows to separate electrons and muons of the same momentum. 
+    The energy-to-momentum ratio($E/p$) will be used for particle 
+    identification and to suppress the background due to cosmic-ray muons;
+    \item the calorimeter signals allow to improve pattern recognition and 
+    the quality of track reconstrution: calorimeter clusters can be used 
+    for consistency check and to reduce track reconstruction 
+    errors due to background hits in the straw tracker;
+    \item it provides independent triggers from the track-based triggers, Ref. \cite{em6}. 
 \end{itemize} 
 To accomplish these tasks, the calorimeter needs to fulfill 
 the following physical requirements:
 \begin{itemize}
-    \item An energy resolution of $\sigma_E/E$ < 10\%;
-    \item A timing resolution better than 500 ps for the conversion electron;
-    \item A position resolution better than 1 cm ($\sim$6 mm) to allow 
-    unambiguous track cluster matching;
-    \item The calorimeter must be capable of operating in 
+    \item an energy resolution better than $\sigma_E/E \sim$10\% allows
+     to reach a rejection factor at the level of 200 between conversion electron
+    and the $\sim$ 40 MeV energy deposit from 105 MeV/c cosmic ray muons mimicking the signal;
+    \item a timing resolution better than 500 ps ensures that
+    the energy depositions in the calorimeter are in time with
+    the conversion electrons reconstructed by the tracker and
+    also improve the PID;
+    \item a position resolution better than 1 cm ($\sim$6 mm) allows 
+    to match the position of the energy deposit with the 
+    extrapolated trajectory of a reconstructed track;
+    \item it should perform a fast enough 
+    response in order to handle the experimental high rate ($\tau < 40$ ns);
+    \item a temperature and gain stability within $\pm$0.5\% 
+    are required not to deteriorate the energy resolution;
+    \item it must be capable of operating in 
     a magnetic field of 1 T, a pressure of \(10^{-4}\) torr, a 
-    neutron flux equivalent to \(10^{11}\) n/cm\(^2\)/year, 
-    and radiation exposures up to 15 Gy/crystal/year.
+    neutron flux equivalent to \(10^{12}\) n/cm\(^2\)/year, 
+    and in a high radiation environment (exposures up to 15 krad/year);
+    \item reliability and redundancy are needed to operate in vacuum for one
+    year without any interruptions.
 \end{itemize}
-A 51-crystal prototype module, called Module-0, was exposed
-to a test beam and results for energy and time resolution are
-shown in Figure \ref{fig:calores}, Ref. \cite{bobbb} and \cite{calo95}.
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240330_105520.png}
-    \caption{The energy and time resolution of the Module-0 for the Mu2e 
-    calorimeter for electrons at the conversion energy. (Top left) The resolution 
-    for electrons striking the array at normal incidence. (Top right) 
-    Resolution for electrons striking the array at 55° with respect to the 
-    face. (Bottom) The time resolution. All measurements are compared with 
-    simulations (red line), Ref. \cite{bobbb} and \cite{calo95}.}
-    \label{fig:calores}
-\end{figure}
+
 
 The calorimeter disks are being assembled at Fermilab's SiDet facility, as shown in Figure 
 \ref{fig:calostatus}. The components will be described in the next sections.
@@ -781,58 +779,94 @@ The calorimeter disks are being assembled at Fermilab's SiDet facility, as shown
     \label{fig:calostatus}
 \end{figure}
 
-\subsubsection{The calorimiter structure}
-The calorimeter sits downstream of the straw tube tracker in the 1 T 
-region in the DS and in a vacuum of $10^{-4}$ Torr. 
+\subsubsection{The calorimiter mechanical structure}
+The calorimeter is located in the DS downstream of the tracker (Figure \ref{fig:DS})
+It consists of two annular disks, with an internal radius of 35 cm and 
+an external radius of 66 cm, positioned at a relative distance of 70 cm (Figure \ref{fig:calo1}).
+The separation was chosen to match half of the distance between two periods of the helical trajectory 
+of a typical 105 MeV conversion electron. This maximises the detection probability of conversion 
+electrons: electrons which pass through the hole of the first disk will be detector by the second one, Ref. \cite{em7}. 
 
-It consists of two annular detection disks, separated by 70 cm, Ref. \cite{em7}. 
-The separation was chosen to match half of the distance between two 
-periods in the helical trajectory of a
-typical 105 MeV conversion electron. This maximizes the detection probability 
-of conversion electrons in the
-calorimeter. Electrons that pass through the hole of the first disk will be 
-detected by the second one.
-The disks inner radius is 35 cm and the outer one is 66 cm. 
-A schematic view of the calorimeter is shown in Figure \ref{fig:calo1}.
+
+The calorimeter mechanical structure was designed to support the layout of the crystals 
+by piling them up in a self-standing array organized in consecutive staggered rows. 
+Each crystal array is supported by two coaxial cylinders. The inner cylinder must be 
+as thin and light as possible in order to minimize the passive material in the 
+region where spiraling background electrons are concentrated. The outer cylinder 
+is as robust as required to support the load of the crystals (700 kg). Each disk 
+has two cover plates. The plate facing the beam is made of carbon fiber to minimize 
+the degradation of the electron energy, while the back plate should also be robust 
+to support the SiPMs, the front-end electronics and the SiPM cooling lines and it 
+is therefore made of Polyether ether ketone (PEEK). The crystal arrangement is 
+self-supporting, with the load carried primarily by the outer ring. 
+The heat generated by SiPMs, front-end electronics and read out electronics 
+must be removed within temperature values acceptable for the correct operation 
+of each device. Furthermore, the difficult access to components requires a 
+cooling system free of fault and maintenance needs for at least one year. 
+The cooling system has to maintain SiPM temperature at approximately -10°C to 
+minimize the dark current: this is obtained by circulating a refrigerating fluid at approximately  -15°C.
+
 
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.6\textwidth]{figures/png/Screenshot_20240322_122050.png}
-    \caption{The Mu2e calorimeter annular disks, Ref. \cite{em7}.}
+    \caption{Calorimeter disks installed in the Mu2e experimetnal area (CAD representation), Ref. \cite{em7}.}
     \label{fig:calo1}
 \end{figure}
 
-Each calorimeter disk is filled with 674 undoped cesium iodide (CsI) crystals, 
-Ref. \cite{em6}, wrapped with a 150 $\mu$m foil of Tyvek. 
-Tyvek is pure CsI, with a wavelenght peak emission at 315 nm and a 
-scintillation time of 20 ns: it was chosen because of its
-fast emission and low cost. The crystals are 34 $\times$ 34 $\times$ 200 mm$^3$ 
-in dimensions and they are shown in Figure \ref{fig:calo2} (top right). 
-The crystals have fast emission time (decay time better than 40 ns) and CsI radiation 
-lenght is $X_0 \sim $2 cm and the crystal length is about 10 $X_0$:
-it is sufficient to contain the 105 MeV CE showers since the average incident angle is 50°. 
-Undoped CsI crystals were also chosen because they are sufficiently radiation hard.
+
+
+\subsubsection{The undoped Cesium Iodide crystals}
+Each calorimeter disk is filled with 674 undoped cesium 
+iodide (CsI) crystals, Ref. \cite{em6}, wrapped in a 150 $\mu$m foil fo Tyvek. 
+Undoped CsI represents the best compromise between cost, 
+reliability, performance and radiation hardness, providing 
+a fast emission time and a sufficiently high light yield. Pure 
+CsI has a wavelength peak emission at 310 nm and a scintillation 
+time of 20 ns and a light yield of about 2000 photons/MeV. 
+Figure \ref{fig:calo2} (top right) shows some CsI crystals: 
+the dimensions are 34$\times$34 200 mm$^3$. The crystal length 
+is approximately 10$X_0$ which is sufficient to contain the 105 
+MeV conversion electron shower since the average incident angle 
+is 50°. Undoped CsI crystals also have a radiation hardness 
+adequate for the Mu2e operational conditions. 
+
+
+
 
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.7\textwidth]{figures/png/Screenshot_20240322_121000.png}
-    \caption{Left: the CAD of the two calorimeter disks. Top right: the calorimeter parallelepiped shaped crystals.
-            Bottom right: two SiPM arrays glued onto copper holder on the left and one readout 
-            unit formed by two SiPM arrays and two FEE boards mounted on its
-            copper holder and on the right, Ref. \cite{em4}.}
+    \caption{(Left): Schematic CAD representation of the two calorimeter disks. (Top right): 
+    Cesium Iodided crystal employed in the calorimeter. (Botto, right): Two SiPM arrays 
+    glued onto the copper holder (left) and one fully assembled readout unit made of two 
+    SiPM arrays and two front-end boards mounted on the copper holder (right), Ref. \cite{em4}.}
     \label{fig:calo2}
 \end{figure}
-\subsubsection{The calorimiter readout chain}
-The ECAL readout is performed by a chain of components: SiPM, Front End, Mezzanine board
-and Digitizer board.
-\paragraph{SIPMs}
-To improve reliability, light collection and resolution, each 
-crystal is readout by two custom design Silicon PhotoMultipliers (SiPMs) array, Ref. \cite{em1}. 
-Magnetic field resistance was the factor in choosing between SIPMs and PMTs.
-The huge efficiency of the SiPMs allows to collect approximately 20 p.e./MeV per SiPM.
 
-To reduce thermal coupling between crystals and electronics, a 2 mm air gap is maintained 
-between the crystal and the readout sensor. 
+
+\subsubsection{The calorimiter readout chain}
+The readout of the calorimeter is performed through a chain of components: Silicon PhotoMultipliers (SiPM), 
+front-end electronics, Mezzanine board and Digitizer board. In the following, 
+a brief description of each component will be provided.
+\paragraph{Silicon PhotoMultipliers (SiPM)}
+Since the calorimeter will operate in a 1 T magnetic field, SiPMs were chosen over PMTs (Figure \ref{fig:sipmcell}), Ref. \cite{em1}. 
+To well match the scintillation emission of 310 nm to the SiPM photon detection efficiency, 
+UV extended Hamamatsu SiPMs with a front window made of a silicon resin were selected. Each SiPM is composed of a
+2 $\times$ 3 array array of individual 6 mm $\times$ 6 mm cells.
+The array can be seen as the parallel of two series of 3 cells, that 
+are powered by the same source. The mixed configuration is motivated by 
+two competing requirements: a parallel connection has greater capacitance, 
+resulting in a lower response time but requiring a lower bias voltage, whereas 
+a series connection has the opposite characteristics. 
+To improve reliability, light collection efficiency and resolution, each single 
+crystal is readout by two custom SiPMs arrays
+Magnetic field resistance was the factor in choosing between SIPMs and PMTs.
+The good efficiency of the SiPMs allows to collect approximately 20 p.e./MeV per SiPM.
+To operate in vacuum, minimise outgassing contributions, reduce 
+thermal coupling between crystals and front-end electronics, the crystal-SiPM 
+coupling is done without any optical grease and a 2 mm air gap is mantained 
+between the crystal and the readout sensor.
 
 Since the main scintillation component has a wavelength of 315 nm to match the SiPM
 photon detection efficiency as a function of wavelength, each crystal is coupled with a readout 
@@ -849,31 +883,24 @@ crates that sorround the calorimeter disks.
         \label{fig:calo3}
         \end{figure}
 
-Each SiPM is composed of a 2 $\times$ 3 array of individual 6 mm $\times$ 6 mm cells, 
-as shown in Figure \ref{fig:sipmcell}. The 2$\times$3 array can be seen as 
-the parallel of two series of 3 cells, that are powered by the same source. 
-The mixed configuration is motivated by two competing requirements: a parallel connection 
-has greater capacitance, resulting in a lower response time but requiring a lower bias voltage, 
-whereas a series connection has the opposite characteristics.
+
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.6\textwidth]{figures/png/Screenshot_20240706_141625.png}
-    \caption{The design of Mu2e SiPMs cell.}
+    \caption{The design of a 2$\times$3 array of SiPM cells.}
     \label{fig:sipmcell}
 \end{figure}
 \paragraph{The Front End eletronics}
-Each SiPM is read by one Front End Electronics (FEE) board. 
-Each board is directly linked to the pins on the back of the 
-SiPMs and, via cable, to the Mezzanine board. 
-The FEE board, shown in Figure \ref{fig:connectiontomezzanine}, provides 
-signal preamplification and shaping, local linear regulation of the SiPM bias voltage, 
-and monitoring of the SiPM current and temperature. The two FEE boards 
-connected to the SiPMs reading the same crystal are housed in a copper holder, 
-shown in Figure \ref{fig:holder}, which serves as a 
-mechanical support that ensures SiPM cooling and acts as a Faraday cage to reduce 
-noise. The holder also contains a fiber used to pulse the crystal with laser light to 
+Each SiPM is read by one front-end board directly linked to the pins on the 
+back of the SiPMs and, via cable, to the Mezzanine board (Figure \ref{fig:connectiontomezzanine}). 
+The front-end board provides signal preamplification and shaping, local linear 
+regulation of the SiPM bias voltage, and monitoring of the SiPM current and temperature. 
+The two front-end boards connected to the two SiPMs reading the same CsI 
+crystal are housed in a copper holder (Figure \ref{fig:holder}), which 
+serves as a mechanical support and ensures SiPM cooling. 
+An enternal Faraday cage reduces noise. The holder also holds 
+an optical fiber used to pulse the crystal with laser light to 
 calibrate energy and time response.
-
 \begin{figure}[!h]
     \centering
     \begin{subfigure}[t]{0.5\textwidth}
@@ -897,15 +924,14 @@ calibrate energy and time response.
 
 
 \paragraph{The Mezzanine board}
-The Mezzanine Board, shown in Figure \ref{fig:mezzanine}, 
-serves as the interface between 20 different FEE boards and a Digitizer. 
-The Mezzanine sets all FEE parameters (such as High Voltage (HV)) and 
-monitors all FEE and SiPM parameters (such as HV, temperature, and current). 
-It also provides low voltage to the FEEs. 
-The HV of each SiPM can be independently set. 
-These tasks are performed by a CPU located on the Mezzanine board. 
-The cables chosen to link the FEE with the Mezzanine board must be radiation-resistant, 
-shielded, and have low outgassing properties. Each cable connects to 4 FEE boards.
+The Mezzanine Board serves as the interface between 20 different 
+front-end boards and one Digitizer (Figure \ref{fig:mezzanine}) 
+he Mezzanine sets all FEE parameters (such as High Voltage (HV)) and 
+monitors all front-end boards and SiPM parameters (such as HV, temperature, and current). 
+It also provides low voltage to the front-end boards. The HV of each SiPM can be 
+independently set. These tasks are performed by an ARM processor located on the 
+Mezzanine board. The cables chosen to link the front-end boards to the 
+Mezzanine board must be radiation-resistant, shielded, and have low outgassing properties. 
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240706_144234.png}
@@ -917,23 +943,42 @@ shielded, and have low outgassing properties. Each cable connects to 4 FEE board
 
 
 \paragraph{The digitizer Board}
-The Digitizer Readout Controller (DiRAC) 
-digitizes signals from the Mezzanine Board and 
-manages data transmission to the experiment's main DAQ. 
-Zero suppressed data are sent from the DiRAC board to the DAQ via optical fibers. 
-Its structure and functions will be detailed in the following sections. 
-A sampling rate of 200 MHz (one sample every 5 ns) and a bit resolution of 12 bits well
-satisfy the calorimeter requirements. 
+The Digitizer Readout Controller (DiRAC) digitizes the SiPM 
+signals received from the Mezzanine Board and manages data 
+transmission to the experiment's DAQ system. Zero suppressed 
+data are sent from the DiRAC board to the DAQ via optical fibers. 
+A sampling rate of 200 MHz (one sample every 5 ns) and a 12-bit resolution 
+satisfy the calorimeter requirements. The Two SiPMs which read the same 
+crystal are always connected to different DiRAC boards hosted in separate 
+crates to prevent the complete loss of any crystals in the event of a single crate fault.
 
 \paragraph{The crate}
-The Mezzanine and DiRAC boards are collected in crates. Each crate contains up to 
-eight Mezzanine and DiRAC boards. Two SiPMs reading the same crystal are 
-always connected to different DiRAC boards in separate crates to prevent 
-the complete loss of any crystals in the event of a single crate fault. 
-Each crate provides a cooling system for the Mezzanine and DiRAC boards, 
-utilizing thermal conduction. Additionally, each board is equipped with a 
-copper plate to enhance thermal contact.
-
+The Mezzanine and DiRAC boards are collected in crates. Each crate contains up to eight Mezzanine 
+and DiRAC boards. Each crate provides a cooling system for the Mezzanine and DiRAC boards by 
+exploiting a network on cooling lines grooved in the crate walls. The thermal contact between 
+the electronics components on the Mezzanine and the DIRAC and the crate walls is ensured by a 
+copper plate covering the entire board.
+\subsubsection{Module-0 prototype}
+To validate the chosen design before commencing mass production of 
+the calorimeter components, a large-scale prototype was constructed and 
+tested with an electron beam at the Beam Test Facility of the National 
+Laboratories of Frascati. The Module-0 consists of 52 undoped CsI crystals, 
+read by 102 SiPMs connected to FEE boards. Its mechanics were designed 
+to closely resemble the final calorimeter, allowing for the testing 
+of assembly procedures and cooling.
+The energy and time resolution are
+shown in Figure \ref{fig:calores}, Ref. \cite{bobbb} and \cite{calo95}.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240330_105520.png}
+    \caption{The energy and time resolution of the Module-0 for the Mu2e 
+    calorimeter for electrons at the conversion energy. (Top left) The resolution 
+    for electrons striking the array at normal incidence. (Top right) 
+    Resolution for electrons striking the array at 55° with respect to the 
+    face. (Bottom) The time resolution. All measurements are compared with 
+    simulations (red line), Ref. \cite{bobbb} and \cite{calo95}.}
+    \label{fig:calores}
+\end{figure}
 \subsection{The Cosmic Ray Veto}\label{CRV}
 As reported in the Section \ref{backgrounds}, Mu2e expects a level of background due to cosmic rays at a rate of one event per day. 
 To minimize the source of these backgrounds, Mu2e exploits a combination of shielding and an active 
@@ -1037,7 +1082,7 @@ to measure the number of muons stopped on the ST which will be used as the denom
     (1809 keV) emitted in time with the nuclear captures.  
     \begin{figure}[!h]
         \centering
-        \includegraphics[width =0.6\textwidth]{figures/png/Setup.png}
+        \includegraphics[width =0.4\textwidth]{figures/png/Setup.png}
         \caption{Geometry of the Stopping Target Monitor.}
         \label{fig:stmfigure}
         \end{figure}

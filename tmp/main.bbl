@@ -551,14 +551,6 @@ N.~Atanov et~al.
   2022{\natexlab{b}}.
 \newblock \doi{10.1088/1742-6596/2374/1/012021}.
 
-\bibitem[et~al.(2018)]{calo95}
-N.~Atanov et~al.
-\newblock The mu2e undoped csi crystal calorimeter.
-\newblock \emph{Journal of Instrumentation}, 13\penalty0 (02):\penalty0 C02037,
-  feb 2018.
-\newblock \doi{10.1088/1748-0221/13/02/C02037}.
-\newblock URL \url{https://dx.doi.org/10.1088/1748-0221/13/02/C02037}.
-
 \bibitem[Atanov et~al.(2018)]{em7}
 N.~Atanov et~al.
 \newblock {The Mu2e Calorimeter Final Technical Design Report}.
@@ -590,6 +582,14 @@ Nikolay Atanov et~al.
   Characterisation}.
 \newblock \emph{Instruments}, 6\penalty0 (4):\penalty0 68, 2022{\natexlab{c}}.
 \newblock \doi{10.3390/instruments6040068}.
+
+\bibitem[et~al.(2018)]{calo95}
+N.~Atanov et~al.
+\newblock The mu2e undoped csi crystal calorimeter.
+\newblock \emph{Journal of Instrumentation}, 13\penalty0 (02):\penalty0 C02037,
+  feb 2018.
+\newblock \doi{10.1088/1748-0221/13/02/C02037}.
+\newblock URL \url{https://dx.doi.org/10.1088/1748-0221/13/02/C02037}.
 
 \bibitem[{S. Giovannella}({2020})]{Giovannella_2020}
 {S. Giovannella}.

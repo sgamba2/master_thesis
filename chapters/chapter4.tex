@@ -14,7 +14,7 @@ Finally, the last section provides a brief overview of the DAQ performance studi
     The ROC \ref{ROC} could be operated in two different data readout modes:
     \begin{itemize}
     \item  First mode: the ROC was emulating the data itself without reading FPGAs (a pattern readout mode);
-    \item  Second mode: the ROC was reading digi FPGAs \ref{DRAC}.
+    \item  Second mode: the ROC was reading digi-FPGAs \ref{DRAC}.
     \end{itemize}
     \begin{figure}[!h]
         \centering
@@ -22,8 +22,8 @@ Finally, the last section provides a brief overview of the DAQ performance studi
         \caption{The tracker test stand, TS1, featuring one DRAC card linked via optical fiber to the DTC in the DAQ computer (mu2edaq09). The setup includes a total of 96 channels.}
         \label{fig:TS1}
         \end{figure}
-    Most of the data were taken operating in the second mode, with digi FPGAs.
-    Various tests were conducted, either by using the digi FPGAs' internal pulser 
+    Most of the data were taken operating in the second mode, with digi-FPGAs.
+    Various tests were conducted, either by using the digi-FPGAs' internal pulser 
     or by injecting calibration pulses into the CAL side of the preamps \ref{preampss} at a customizable frequency . 
     Event window is the time interval between two heartbeats (HB's). 
     A timing diagram of a single channel readout is shown in Figure \ref{fig:3}.
@@ -52,10 +52,10 @@ Finally, the last section provides a brief overview of the DAQ performance studi
     \label{fig:3}
     \end{figure}
     \subsection{Validation of ROC readout test stand}
-    During the test described in Section \ref{MonteCarlo}, data were taken operating with digi FPGAs, pulsed by their internal pulsers.
+    During the test described in Section \ref{MonteCarlo}, data were taken operating with digi-FPGAs, pulsed by their internal pulsers.
     The pulser has two different frequencies, 31.29 MHz/(2$^7$+1), or approximately 250 kHz, 
     and 31.29 MHz/(2$^9$+1), or approximately 60 kHz.
-    Each digi FPGA has its own pulse generator and the pulse sequences from the two
+    Each digi-FPGA has its own pulse generator and the pulse sequences from the two
     generators are offset with respect to each other by a time interval $\Delta t$. 
     The offset is constant for as long as the DRAC board is powered up and varies randomly between 0 and $T_{gen}$ when DRAC is powercycled. 
     Multiple tests were conducted to verify the correct behaviour of the ROC. 
@@ -173,7 +173,7 @@ This distribution plays a key role in understanding of the occupancy plot.
 \centering
 \includegraphics[width =0.7\textwidth]{figures/pdf/figure_00066_nhits_ch00_run281.pdf}
 \caption{
-  The distribution of the number of hits in the channel 0 of the first digi FPGA (RUN281).
+  The distribution of the number of hits in the channel 0 of the first digi-FPGA (RUN281).
 }
 \label{fig:66}
 \end{figure}

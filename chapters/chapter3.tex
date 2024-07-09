@@ -301,11 +301,22 @@ end eletronic will be described in Section \ref{tfee}.
 Groups of 96 straws are assembled in two staggered layers of 48 straws and make a 
 panel (Figure \ref{fig:trktubes}). 
 \begin{figure}[!h]
+\begin{subfigure}[t]{0.5\textwidth}
     \centering
-    \includegraphics[width =0.6\textwidth]{figures/png/Screenshot_20240326_234405.png}
-    \caption{Arrangement of the straws within a panel, Ref. \cite{trk}.}
+    \includegraphics[width =\textwidth]{figures/png/Screenshot_20240326_234405.png}
+    \caption{}
     \label{fig:trktubes}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[t]{0.5\textwidth}
+        \centering
+        \includegraphics[width =\textwidth]{figures/png/Screenshot_20240327_000131.png}
+        \caption{}
+        \label{fig:strawtubes}
+        \end{subfigure}
+        \caption{(a): Arrangement of the straws within a panel, Ref. \cite{trk}. (b): Expanded view of the panel edge, Ref. \cite{trk}.}
     \end{figure}
+
 Each panel spans a 120° arc (Figure \ref{fig:gonzalo}).
 The dual-layer geometry was chosen since it allows to determine 
 easily which side of the sense wire the particle passes through 
@@ -327,12 +338,7 @@ of the panel edge is also shown in Figure \ref{fig:strawtubes}.
                 \caption{Fully assembled panel (Lab3 Fermilab Facility).}
                 \label{fig:gonzalo}
                 \end{figure}
-                \begin{figure}[!h]
-                    \centering
-                    \includegraphics[width =0.45\textwidth]{figures/png/Screenshot_20240327_000131.png}
-                    \caption{Expanded view of the panel edge, Ref. \cite{trk}.}
-                    \label{fig:strawtubes}
-                    \end{figure}
+
             The straws are filled with a gas mixture of 80\%:20\% Ar:CO$_2$ at 1 atm.
             Since the DS internal volume is evacuated to 10$^{-4}$ Torr, 
             the straws must endure such pressure difference. Under normal temperature and 
@@ -493,7 +499,7 @@ the Mu2e DAQ system. It also controls all the panel operations The schematics of
 Figure \ref{fig:drac} shows a picture of the board: a battery of comparators 
 and ADCs, three DDR3 memories and three Field-Programmable Gate Arrays (FPGAs) 
 are clearly visible. 
-The two FPGAs on the left and on the right are named digiFPGAs: 
+The two FPGAs on the left and on the right are named digi-FPGAs: 
 each of them receives the data from 48 straw channels, performs data 
 monitoring, buffering and assembles data packets which are then 
 transferred to the central FPGA named Readout Controller (ROC) \ref{ROC}. 
@@ -515,7 +521,7 @@ Figure \ref{fig:flowfee} shows the data flow through the panel front-end and the
     \item In the DRAC, the two biased signals are fed to zero-crossing comparators, 
     which generate square pulses if the signals are above their respective thresholds;
     \item The squared signals are transmitted to 16-bit TDCs implemented 
-    in firmware in the digiFPGAs. Timing digitization is performed at the rate 
+    in firmware in the digi-FPGAs. Timing digitization is performed at the rate 
     of 20 ps per count, including the determination of the arrival time and the 
     time over threshold. In addition to the drift time, the TDCs 
     measure the time difference between the two signals received from the 
@@ -527,15 +533,24 @@ Figure \ref{fig:flowfee} shows the data flow through the panel front-end and the
     signal above threshold;
     \item The two signals from the two ends of the same straw are also 
     added by an integrator. The total sum is digitized by a 12-bit 
-    (10-bit ENOB) ADC at 40 MHz and then transmitted to the digiFPGA;
-    \item The digiFPGA creates one data packet for each hit based on the 
+    (10-bit ENOB) ADC at 40 MHz and then transmitted to the digi-FPGA;
+    \item The digi-FPGA creates one data packet for each hit based on the 
     TDC and ADC information. This allows to suppress false triggers caused by 
     random electrical noise;
     \item The data packets are transferred to the ROC \ref{ROC}, and 
     temporarily stored in the DDR3 memories for later access by the DAQ system. 
     There is a total of 8 Gb of memory space available on each DRAC.
 \end{itemize}
-
+\paragraph{The $Read \ Out \ Controller$}\label{ROC} 
+The main function of the ROC is to collect data from the digitizer boards 
+digi-FPGAs, buffer data and transfer them to DAQ. They continuously stream out 
+the zero-suppressed data collected between two proton pulses to the DTCs, 
+Ref. \cite{GIOIOSA2023167732}. The buffer stage is fundamental, 
+since during the beam inter-spill time (836 ms out of each 1333 ms), 
+we want us to be able to take data from cosmic rays, even if the rate 
+will be very low. For this purpose, the ROCs include external DRAM. 
+The communication is flexible, thanks to the 
+programmable nature of digitizer, ROC and DAQ.
 %It is important to save also the voltage signal, since the pulse height 
 %information can help us to reject proton background, a significant source of noise 
 %or to distinguish muons from electrons. The proton signal will appear as a saturated flag, 
@@ -616,16 +631,7 @@ of channel high voltage when necessary.
     \caption{Mu2e Data Acquisition system architecture, Ref. \cite{GIOIOSA2023167732}.}
     \label{fig:linktodaq}
     \end{figure}
-\paragraph{The $Read \ Out \ Controller$}\label{ROC} 
-The main function of the ROC is to collect data from the digitizer boards 
-digiFPGAs, buffer data and transfer them to DAQ. They continuously stream out 
-the zero-suppressed data collected between two proton pulses to the DTCs, 
-Ref. \cite{GIOIOSA2023167732}. The buffer stage is fundamental, 
-since during the beam inter-spill time (836 ms out of each 1333 ms), 
-we want us to be able to take data from cosmic rays, even if the rate 
-will be very low. For this purpose, the ROCs include external DRAM. 
-The communication is flexible, thanks to the 
-programmable nature of digitizer, ROC and DAQ.
+
 
 \subsection{Requirements on tracker performance}
 Here a resume of the requirements that the tracker must satisfy to ensure the 
