@@ -704,32 +704,70 @@ recognition and track reconstruction, by reducing the amount of background hits.
     \label{fig:sttrk}
 \end{figure}
 
-The sensitive elements of the detector are straw-tubes with a diameter of 5 mm and a variable length between 40 cm and 110 cm, 
-filled with a 80\%:20\% Ar:CO$_2$ mixture at 1 atm.  
-The detector has a modular design, made of basic elements named $Panel$, $Face$, 
-$Plane$ and $Station$, shown in Figure \ref{fig:trkpanel}. 
-The panel is the fundamental unit of the detector: 96 straw tubes arranged like 
-harp cords in two staggered layers to form one harp-shaped panel spanning 120°, Ref. \cite{bartoszek2015mu2e}, 
-shown in Figure \ref{fig:trkpanel} (top left).
-Three rotated panels form a face, and two faces rotated of 60° form one plane, Figure \ref{fig:trkpanel} (top right-left). 
-Two planes rotated of 60° make one station, Figure \ref{fig:trkpanel} (top right-right).
-One station is thus made of twelve panels. The entire tracker is made of 18 stations, Figure \ref{fig:trkpanel} (bottom) 
-and has a total length of 3.2 m and a diameter of approximately 1.7 m.
-Each panel is equipped with its own front-end and DAQ electronics placed within the mechanical structure.
-\begin{figure}[!h]
-\centering
-\includegraphics[width =0.6\textwidth]{figures/png/Screenshot_20240306_222803.png}
-\caption{(Top left) Schematic representation of one straw-tracker panel. (Top right) 
-Straw-tracker plane (left) and station (right). (Bottom) Full assembly of the 18 
-stations and support structure, Ref. \cite{bartoszek2015mu2e}.}
-\label{fig:trkpanel}
-\end{figure}
+
 
 
 Chapter \ref{chaptertrk} will provide a more detailed description of the entire detector, 
 including the mechanical structure, the front-end electronics and DAQ system, as the focus of 
 my thesis is on the Vertical Slice Test of the straw tracker.
+\subsubsection{Momentum scale calibration}
+One of the most challenging aspects of the Mu2e experiment is achieving the 
+required momentum resolution to distinguish the CE electron from the background.
 
+Mu2e requires at least one source of high-energy calibration electrons or 
+positrons to independently measure the absolute momentum scale of the tracker. 
+The momentum scale calibration relies on accurately reconstructing the 
+$\pi^+ \rightarrow e^+ \nu_e$ peak, with its success critically dependent on the 
+suppression of $\mu^+ \rightarrow e^+ \nu_e \bar{\nu}_\mu$ decays in flight (DIF). 
+Several approaches have been explored, with the most promising ones being:
+
+\begin{enumerate}
+    \item Special run with adjusted TS collimators: operating with 
+    reversed TS collimators and a reduced DS field 
+    (70\% of the nominal value), this setup is designed to capture the 
+    leptonic decay ($\pi^+ \rightarrow e^+ \nu_e$) of stopping $\pi^+$ in the nominal stopping target;
+    
+    \item Low intensity run with reduced DS magnetic field: 
+    running at low intensity and a further reduced DS field (50\% of the nominal value), 
+    this approach aims to gather high-statistics data to accurately fit 
+    the Michel edge of the DIO momentum distribution.
+\end{enumerate}
+
+Several important considerations include:
+
+\begin{itemize}
+    \item Early time measurement: to effectively 
+    reconstruct the peak in the momentum distribution 
+    of positrons from $\pi^+ \rightarrow e^+ \nu_e$ decays, 
+    measurements must be performed at early times, approximately 
+    $T \sim 300$ ns. This necessitates operating at a reduced proton 
+    beam intensity to mitigate pileup concerns;
+    
+    \item Special instrumentation requirement: to minimize 
+    background from muon decays in flight, the calibration demands 
+    the installation of a beam degrader in the DS.
+\end{itemize}
+
+The momentum scale calibration described involves two key measurements: 
+\begin{enumerate}
+    \item The edge of the positron momentum spectrum from $\mu^+ \rightarrow e^+ \nu_e \bar{\nu}_\mu$ decays at $B = 0.5$ T;
+    \item The $\pi^+ \rightarrow e^+ \nu_e$ peak at $B = 0.7$ T.
+\end{enumerate}
+
+Each of these measurements determines the momentum scale at their respective 
+magnetic field values. By combining these measurements, we can extrapolate the 
+momentum scale to the nominal magnetic field, $B = 1.0$ T. This concept is illustrated in Figure \ref{fig:momscale}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth]{figures/png/Screenshot_20240707_180742.png}
+\caption{Illustration of the momentum scheme calibration.}
+\label{fig:momscale}
+\end{figure}
+
+The calibration scheme assumes that the magnetic field is initially set based 
+on readings from an NMR probe, and any necessary scale corrections can be 
+effectively managed by rescaling the value of the nominal magnetic field.
 \subsection{The electromagnetic calorimeter}\label{calorimeter}
 The Mu2e electromagnetic calorimeter serves multiple purposes, Ref. \cite{em4}:
 \begin{itemize}
