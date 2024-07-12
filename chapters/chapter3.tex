@@ -552,8 +552,8 @@ Figure \ref{fig:flowfee} shows the data flow through the panel front-end and the
     is considered only if both ends of the same straw simultaneously have a 
     signal above threshold;
     \item The two signals from the two ends of the same straw are also 
-    added by an integrator. The total sum is digitized by a 12-bit 
-    (10-bit ENOB) ADC at 40 MHz and then transmitted to the digi-FPGA;
+    added by an integrator. The total sum is digitized by a 10-bit 
+    ADC at 40 MHz and then transmitted to the digi-FPGA;
     \item The digi-FPGA creates one data packet for each hit based on the 
     TDC and ADC information. This allows to suppress false triggers caused by 
     random electrical noise;
@@ -653,6 +653,22 @@ of channel high voltage when necessary.
     \label{fig:linktodaq}
     \end{figure}
 
+\paragraph{The tracker data format}
+Each event (hit) is composed of a data packet having a fixed length of 256 bits (32 bytes).
+The packet has the following structure:
+\begin{itemize}
+    \item 16 bit header: the header contains information to uniquely specify this is a
+    packet header, a channel identifier to specify the channel so the ROC can
+    assign the hit to a wire number (straw index);
+    \item 16 bit for the TDC left straw end;
+    \item 16 bit for the TDC right straw end;
+    \item The ToT (time-over-threshold) values for the two ends 
+    of the straw are each stored using 8 bits;
+    \item The ADC samples require 12 bits each. For each hit, a fixed number of 
+    samples (15) is read out so we
+    pack the samples tightly in order to fit the payload into two data per hit;
+    \item 12 bits are set aside for preprocessing flags.
+\end{itemize}
 
 \subsection{Requirements on tracker performance}
 Here a resume of the requirements that the tracker must satisfy to ensure the 
