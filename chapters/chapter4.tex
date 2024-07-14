@@ -1,4 +1,4 @@
-\chapter{Commissioning of the tracker DAQ system}
+\chapter{Commissioning of the tracker DAQ}
 \textit{In this Chapter, I present the initial results of the tracker DAQ commissioning. 
 Understanding the readout process is essential before reading out the detector. 
 The first part focuses on the validation of the ROC readout through Monte Carlo simulation. 
@@ -567,16 +567,23 @@ negative peaks and estimated the pedestals with the remaning samples.
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.65\textwidth]{figures/pdf/wf_ch58_1.pdf}
-  \caption{Waveform of the 58th channel. Before subtracting the baseline from the ADC counts, the dips were identified. The depth of the dips is 128.}
+  \caption{Waveform of the 58th channel. Before subtracting 
+  the baseline from the ADC counts, the dips were identified. The depth of the dips is 128.}
  \label{fig:dips}
 \end{figure}
 \subsubsection{The waveform charge and pulse height}\label{threshold}
-Using a constant threshold discriminator, the integral of the positive and negative parts of the waveform, 
-the pulse height and the first sample were computed. The threshold was set to 5 ADC counts. 
-The first sample is defined as the first one to be above the threshold, and the positive charge 
-is the integral of the region above the threshold. The negative charge is the integral of the waveform's 
-negative tail. The pulse height is the highest ADC count reached by the waveform. The distributions of 
-charge, pulse height, first sample and negative charge are shown in Figures \ref{fig:ch1}, \ref{fig:ph2}, \ref{fig:fs2}, and \ref{fig:nch2}.
+Using a constant threshold discriminator, the integral of the positive and 
+negative parts of the waveform, 
+the pulse height and the first sample were computed. The threshold was set 
+to 5 ADC counts. 
+The first sample is defined as the first one to be above the threshold, 
+and the positive charge 
+is the integral of the region above the threshold. The negative charge 
+is the integral of the waveform's 
+negative tail. The pulse height is the highest ADC count reached 
+by the waveform. The distributions of 
+charge, pulse height, first sample and negative charge 
+are shown in Figures \ref{fig:ch1}, \ref{fig:ph2}, \ref{fig:fs2}, and \ref{fig:nch2}.
 
 \begin{figure}[!h]
       \centering
@@ -731,22 +738,37 @@ implemented during data acquisition.
 In the test, sequences of HBs \ref{des} separated by a time constant  
 \( T_0 \) were generated and sent to the DTC. The test procedure was fully programmable. 
 The \textit{run plan} was written using a simple, basic-like language, 
-compiled, loaded into the CFO, and executed. This approach covers nearly all conceivable use cases. We operated in two distinct modes:
+compiled, loaded into the CFO, and executed. This approach covers nearly 
+all conceivable use cases. We operated in two distinct modes:
 \begin{itemize}
-  \item \textit{Emulated CFO} mode: the DTC generates HBs and EWMs \ref{tdaqtra} and reads one ROC;
-  \item \textit{External CFO} mode: the CFO generates HBs and EWMs, sends them to the DTC, and the DTC reads the ROC.
+  \item \textit{Emulated CFO} mode: the DTC generates HBs and 
+  EWMs \ref{tdaqtra} and reads one ROC;
+  \item \textit{External CFO} mode: the CFO generates HBs and 
+  EWMs, sends them to the DTC, and the DTC reads the ROC.
 \end{itemize}
-Both DTC and CFO were installed in the DAQ computer mu2edaq09.
+Both DTC and CFO were installed in the DAQ computer mu2edaq09. 
+The block diagram scheme is similar to the one shown in Figure \ref{fig:blockdiagram}, 
+with the exception of the CFO and DTC blocks (Figure \ref{fig:secondtest}).
 In both modes, the CFO (or the DTC, in the \textit{emulated CFO} mode) 
 sends a sequence of \( (N+1) \) EWMs. Afterward, the DTC 
 asynchronously reads \( N \) events. 
 Time synchronization between the CFO, DTCs, and ROCs was managed either 
 internally (using FPGA) or with an external clock. 
-The test setup involved two FPGAs - one acting as the CFO and one as the DTC - and one tracker test stand (one ROC). 
+The test setup involved two FPGAs - one acting as the CFO and 
+one as the DTC - and one tracker test stand (one ROC). 
 We conducted short runs with \( N \) events, each EW lasting  1.7 $\mu$s. 
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=0.65\textwidth]{figures/png/Screenshot_20240714_131546.png}
+  \caption{The DTC and CFO block diagram 
+  used for the DAQ performance studies with an external CFO.}
+  \label{fig:secondtest}
+\end{figure}
+
+
+
 The output was analyzed, and the test was repeated multiple times to ensure reproducibility. 
-
-
 My contribution to this test involved reading the data, whose format is shown in Figure \ref{fig:dataformat}, 
 and comparing the number of events and status codes between runs with the same \textit{run plan}, 
 both for \textit{emulated} and \textit{external CFO} mode. 

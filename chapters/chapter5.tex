@@ -1,10 +1,14 @@
-\chapter{Planning the tracker calibration}\label{planning}
-\textit{Reconstructing cosmic tracks and understanding resolutions require calibrating the tracker station. 
-The primary goal of this calibration is to determine signal propagation and channel-to-channel 
-delays for each straw. To achieve this, an unbiased reconstruction of the longitudinal position of the straw 
-hit is essential. In this chapter, I will discuss the planning of the calibration using cosmic muons. My task 
-involved reconstructing the cosmic trajectories in a vertically oriented station and understanding the potential 
-biases and systematic errors that this orientation might introduce. }
+\chapter{Design of the tracker station calibration}\label{planning}
+\textit{Reconstructing cosmic tracks and understanding resolutions require 
+calibrating the tracker station \ref{geomtra}. 
+The primary goal of this calibration is to determine signal propagation and 
+channel-to-channel delays for each straw. To achieve this, an unbiased 
+reconstruction of the longitudinal position of the straw 
+hit is essential. In this chapter, I will discuss the planning 
+of the calibration using cosmic muons. My task 
+involved reconstructing the cosmic trajectories in a vertically 
+oriented station and understanding the potential 
+biases and systematic errors that this orientation might introduce.}
 \section{Overview of the timing calibration}
 As mentioned in the introduction to this chapter, the main goal of this calibration is to determine signal propagation and channel-to-channel delays for each straw.
 When a particle creates a signal in a straw, it propagates towards both ends. 
@@ -27,25 +31,44 @@ while $(t_1 + t_2) / 2$ allows measuring, up to an offset, the instant of passin
     \end{aligned}
     \end{equation}
 This type of calibration will be achieved using cosmic rays. 
-To determine $v$ in the first equation of \ref{ffffff}, an unbiased reconstruction of the cosmics hit coordinates is needed.
-Since the station is not yet calibrated, it is only possible to use information about the hit straws. 
-The station's horizontal orientation facilitates unbiased reconstruction, as cosmic rays are distributed according to 
+To determine $v$ in the first equation of \ref{ffffff}, 
+an unbiased reconstruction of the cosmics hit coordinates is needed.
+Since the station is not yet calibrated, it is only possible 
+to use information about the hit straws. 
+The station's horizontal orientation facilitates unbiased 
+reconstruction, as cosmic rays are distributed according to 
 cos$^2\theta$ and are predominantly vertical (see Section \ref{distcos}), thus crossing the straws mostly perpendicularly.
 However, vertical orientation is preferred for some gas system contingencies and because the station will 
 be vertical during the experiment. 
 In the following sections, I will introduce the simulation performed to reconstruct cosmic tracks with 
 a vertically oriented station, aiming to understand possible biases in determining longitudinal position caused by the non-uniform illumination of a panel.
-\section{Calibration of the station with cosmic muons}
-Cosmic muons serve as a crucial calibration source for the Mu2e detector system, particularly for the tracker station \ref{trackersec}. 
-They possess unique characteristics that make calibration with cosmic rays complementary to other techniques:
+\section{Cosmic muons as a calibration source}
+Cosmic muons will play a fundamental role in the 
+calibration of the entire Mu2e detector system and, 
+in particular, the tracker. They have unique 
+characteristics that make calibration with cosmic rays 
+complementary to other techniques:
+
+ 
+
 \begin{itemize}
-    \item they can be acquired during standard run operations, under the same experimental conditions as the physics data sample;
-    \item their flux ($\sim 1 \ \text{cm}^{-2} \text{min}^{-1}$ for horizontal detectors with a mean
-    energy of $\sim$4 GeV, Ref. \cite{muonflux}) is sufficiently high to gather a substantial amount of calibration data in a short period, 
-    enabling continuous monitoring of the detector response;
-    \item as minimum ionizing particles (MIPs), their energy loss is almost independent of their initial energy;
-    \item being relativistic particles with negligible energy loss, their speed is almost always equal to the speed of 
-    light $c$. The time they take to traverse the station can be used to align the time offsets of all the channels without any external time reference.
+    \item calibration samples with cosmic muons 
+    can be taken during standard detector operations, 
+    with the same detector conditions as the physics samples;
+    \item the cosmic muons flux 
+    ($\sim 1 \ \text{cm}^{-2} \text{min}^{-1}$ 
+    for horizontal detectors with a mean
+    energy of $\sim$4 GeV, Ref. \cite{muonflux}) is sufficiently 
+    large to allow gathering a substantial amount of 
+    calibration data in a relatively short time and 
+    thus monitoring continuously the detector response;
+    \item the energy loss of the cosmic muons is almost 
+    independent of their energy, as minimum ionizing particles (MIPs);
+    \item the speed of the cosmic muons is equal to the 
+    speed of light $c$, and the time they take to traverse 
+    a detector, in our case one tracker Station, can be 
+    used to align the time offsests of all the channesl 
+    without any external time reference.
 \end{itemize}
 \subsection{Distribution of the cosmic muons energy and angle}\label{distcos}
 The muon flux at sea level is usually described by the standard Gaisser's formula, Ref. \cite{guan2015parametrization}:
@@ -79,24 +102,32 @@ significant at low energies. The numerical constants are derived by fitting expe
     \label{fig:anglesinmuon}
 \end{figure}
 
-\subsection{Cosmics generation with CRY}
-Among the Monte Carlo programs capable of simulating sea-level cosmic ray muons, 
-CRY is the most widely used. CRY functions as a generator for air showers induced by primary cosmic rays. 
-Its simulation relies on precomputed input tables derived from comprehensive MCNPX simulations of protons 
-within the energy range of 1 GeV to 100 TeV, at the top of the atmosphere.
-
-To produce muons along with their momentum and zenith angle distributions, 
-the CRY package, developed by LANL, has been used. It uses data tables of primary 
-cosmic rays with energies from 1 GeV to 100 TeV, generated using the Monte Carlo transport code MCNPX 2.5.0. 
-The generation of muons and other secondary particles is governed by the pion and kaon decays. 
-The package offers cosmic muon flux within a zenith angle range of 0-90°, following a cos$^2 \theta$ distribution, 
-and energy ranges from 1-100 GeV, adhering to the Gaisser Tang parameterization. 
-This package accounts for the dependence of cosmic-ray flux on various parameters, including altitude, latitude, and solar activity.
-CRY provides muon flux data at three different altitudes: sea level, 2100 m, and 11300 m, with sea level being selected for the current study. 
-The latitude is set at 41.8° N, corresponding to Fermilab. 
-To avoid variations in primary cosmic-ray flux due to solar activity, a common day (6-21-2021) outside the maximum and minimum sunspot cycle has been chosen for the simulation.
-While there are other packages designed to produce cosmic muons with specific energy and zenith angles, 
-such as CORSIKA, CRY was chosen for this work due to its straightforward implementation and compatibility with Geant4.
+\subsection{Monte Carlo cosmic generation with CRY}
+Several Monte Carlo programs allow to simulate sea-level 
+cosmic ray mouns: the most widely used is CRY, developed 
+by LANL. CRY functions as a generator for air showers 
+induced by primary cosmic rays. The CRY package uses 
+precomputed input tables derived from comprehensive 
+MCNPX 2.5.0 simulation of protons in the energy range 
+between 1 GeV and 100 TeV, at the top of the atmosphere.
+The generation of muons and other secondary particles 
+is governed by the pion and kaon decays. The package 
+generates cosmic muon flux within a zenith angle range 
+of 0-90°, following a cos$^2 \theta$ distribution, and an 
+energy range between 1-100 GeV, following the Gaisser 
+Tang parameterization.The CRY package accounts for the 
+dependence of cosmic-ray flux on various parameters, 
+including altitude, latitude, and solar activity. CRY 
+provides muon flux data at three different altitudes: 
+sea level, 2100 m, and 11300 m, with sea level being 
+selected for this study. The latitude is set at 41.8° N, 
+corresponding to Fermilab. To avoid variations of the 
+primary cosmic-ray flux due to solar activity, I chose 
+a common day (6-21-2021) outside the maximum and minimum 
+sunspot cycle for the simulation. While there are other 
+packages designed to produce cosmic muons with specific 
+energy and zenith angles, such as CORSIKA, I chose CRY 
+for its straightforward implementation and compatibility with Geant4. 
 
 \subsection{Simulation enviroment and coordinate system}\label{genplane}
 In the Monte Carlo simulation, cosmic muons are uniformly generated within a horizontal plane approximately 11 m 
