@@ -576,6 +576,22 @@ Figure \ref{fig:flowfee} shows the data flow through the panel front-end and the
 %information can help us to reject proton background, a significant source of noise 
 %or to distinguish muons from electrons. The proton signal will appear as a saturated flag, 
 %since the proton $dE/dx$ is $\times$50 the electron one.
+\subsubsection{The tracker data format}
+Each event (hit) is composed of a data packet having a fixed length of 256 bits (32 bytes).
+The packet has the following structure:
+\begin{itemize}
+    \item 16 bit header: the header contains information to uniquely specify this is a
+    packet header, a channel identifier to specify the channel so the ROC can
+    assign the hit to a wire number (straw index);
+    \item 16 bit for the TDC left straw end;
+    \item 16 bit for the TDC right straw end;
+    \item The ToT (time-over-threshold) values for the two ends 
+    of the straw are each stored using 8 bits;
+    \item The ADC samples require 12 bits each. For each hit, a fixed number of 
+    samples (15) is read out so we
+    pack the samples tightly in order to fit the payload into two data per hit;
+    \item 12 bits are set aside for preprocessing flags.
+\end{itemize}
 
 \subsubsection{The Data Acquisition System}\label{tdaqtra}
 
@@ -653,22 +669,7 @@ of channel high voltage when necessary.
     \label{fig:linktodaq}
     \end{figure}
 
-\paragraph{The tracker data format}
-Each event (hit) is composed of a data packet having a fixed length of 256 bits (32 bytes).
-The packet has the following structure:
-\begin{itemize}
-    \item 16 bit header: the header contains information to uniquely specify this is a
-    packet header, a channel identifier to specify the channel so the ROC can
-    assign the hit to a wire number (straw index);
-    \item 16 bit for the TDC left straw end;
-    \item 16 bit for the TDC right straw end;
-    \item The ToT (time-over-threshold) values for the two ends 
-    of the straw are each stored using 8 bits;
-    \item The ADC samples require 12 bits each. For each hit, a fixed number of 
-    samples (15) is read out so we
-    pack the samples tightly in order to fit the payload into two data per hit;
-    \item 12 bits are set aside for preprocessing flags.
-\end{itemize}
+
 
 \subsection{Requirements on tracker performance}
 Here a resume of the requirements that the tracker must satisfy to ensure the 
