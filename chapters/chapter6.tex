@@ -15,19 +15,19 @@ When a particle creates a signal in a straw, it propagates towards both ends.
 The arrival times at the ends will be called $t_1$ and $t_2$:
 \begin{equation}
 \begin{aligned}
-    t_1 &= \frac{x_{\text{hit}}}{v} + t_0 + d_1 \\
-    t_2 &= \frac{L - x_{\text{hit}}}{v} + t_0 + d_2
+    t_1 &= t_0 + \frac{x_{\text{track}}}{v} + t_d + d_1 \\
+    t_2 &= t_0 + \frac{L - x_{\text{track}}}{v} + t_d + d_2
 \end{aligned}
 \end{equation}
-where $L$ is the length of the straw, $x_{\text{hit}}$ is the straw hit position 
-of the particle, $v$ is the propagation velocity inside the straw, $t_0$ the particle arrival time and $d_i$ 
+where $t_0$ the particle arrival time, $L$ is the length of the straw, $x_{\text{track}}$ is the straw track position 
+of the particle, $v$ is the propagation velocity along the central wire,  $t_d$ is the drift time and $d_i$ 
 are the delays introduced for the response of each end. $t_1$ and $t_2$ will be determined by the TDC timing on the HV side and on the CAL side.
-The measurement of $\Delta t_{12}$ allows determining the position $x_{hit}$ that the particle has passed, 
-while $(t_1 + t_2) / 2$ allows measuring, up to an offset, the instant of passing:
+The measurement of $\Delta t_{12}$ allows determining the position $x_{track}$ that the particle has passed, 
+while $(t_1 + t_2) / 2$ allows measuring, up to an offset, the drift time:
 \begin{equation}\label{ffffff}
     \begin{aligned}
-        \Delta t_{12} &= \frac{2x_{hit}-L}{v} +(d_1-d_2)  \\
-        \frac{(t_1 + t_2)}{2} &= \frac{d_1+d_2}{2}-\cfrac{L}{2v}+t_0 
+        \Delta t_{12} &= \frac{2x_{track}-L}{v} +(d_1-d_2)  \\
+        \frac{(t_1 + t_2)}{2} &= t_d+t_0+\frac{d_1+d_2}{2}-\cfrac{L}{2v} 
     \end{aligned}
     \end{equation}
 This type of calibration will be achieved using cosmic rays. 
@@ -37,11 +37,40 @@ Since the station is not yet calibrated, it is only possible
 to use information about the hit straws. 
 The station's horizontal orientation facilitates unbiased 
 reconstruction, as cosmic rays are distributed according to 
-cos$^2\theta$ and are predominantly vertical (see Section \ref{distcos}), thus crossing the straws mostly perpendicularly.
-However, vertical orientation is preferred for some gas system contingencies and because the station will 
+cos$^2\theta$ and are predominantly vertical (see Section \ref{distcos}), 
+thus crossing the straws mostly perpendicularly.
+However, vertical orientation is preferred for some gas system contingencies 
+\ref{gassystem} and because the station will 
 be vertical during the experiment. 
 In the following sections, I will introduce the simulation performed to reconstruct cosmic tracks with 
 a vertically oriented station, aiming to understand possible biases in determining longitudinal position caused by the non-uniform illumination of a panel.
+\subsection{A quick overview of the station gas system}\label{gassystem}
+Each panel is equipped with a check valve located both on the supply part and the exhaust 
+part of the panel. These check valves operate using a mechanism in which a ball is pressed onto an 
+O-ring to form a seal. It is crucial that these valves be oriented as vertically as possible to ensure proper sealing. 
+The check valves on the supply part of the panel do not present an issue in this regard, as they are designed 
+to remain open during calibration when the gas is flowing. However, the valves on the exhaust part of 
+the panel pose a different challenge: they must remain closed at all times to prevent gas from 
+leaking before it reaches the panel.
+
+Figure \ref{fig:gassystem} shows a diagram illustrating the functionality of these valves. 
+The red arrows indicate the direction of gas flow. On the supply side, situated on the left 
+(exhaust part of the panel), it is evident that if the ball does not rest on the O-ring, 
+the gas will escape downward towards the atmosphere rather than flowing upwards towards the panel.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width =0.5\textwidth]{figures/png/gassystem.png}
+    \caption{Schematic view of the valves located in a tracker panel.}
+    \label{fig:gassytem}
+\end{figure}
+
+To ensure optimal performance, it's essential to conduct the initial calibration with the system in a vertical orientation. 
+This helps us achieve conditions that closely match those of the actual detector. However, if the vertical 
+orientation doesn't prove useful for calibration, we will need to explore new mechanical solutions for the station.
+
+This requirement will be explored and discussed further in this final chapter.
+
 \section{Cosmic muons as a calibration source}
 Cosmic muons will play a fundamental role in the 
 calibration of the entire Mu2e detector system and, 

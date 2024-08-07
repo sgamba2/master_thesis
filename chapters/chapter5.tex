@@ -7,117 +7,153 @@ Finally, the last section provides a brief overview of the DAQ performance studi
 }
 
   \section{The test stand setup}\label{des}
-  Figure \ref{fig:blockdiagram} shows the tracker 
-  test-stand block diagram at Fermilab IERC facility.
+  Figure \ref{fig:blockdiagram} and \ref{fig:TS1} respectively show a 
+  schematic representation and a picture of the tracker DAQ test-stand 
+  installed at the IERC facility at Fermilab.
   
   \begin{figure}[!h]
     \centering
     \includegraphics[width =0.5\textwidth]{figures/png/Screenshot_20240712_102528.png}
-    \caption{The tracker test-stand block diagram installed at Fermilab IERC facility.}
+    \caption{Block diagram representation of the tracker DAQ test-stand. The two purple 
+    blocks represent the two channel batteries (48 CAL channels on the left, 
+    and 48 HV channels on the right), connected to their respective digi-FPGA 
+    (light green boxes), located in the DRAC board (dark green box). The 
+    digi-FPGAs are connected to the ROC (yellow box) that manages the communication with the
+    DTC (orange box). The DTC is connected to the DAQ 
+    computer (pink box - mu2edaq09).}
     \label{fig:blockdiagram}
     \end{figure}
 
 
 
-  A picture is reported in Figure \ref{fig:TS1}.
-  The test-stand includes the readout chain of an entire 96-channel panel, 
-  48 channels on the HV-side and 48 channels on the CAL-side, 2 digi-FPGAs, 
-  1 DRAC board \ref{DRAC} connected via optical fiber to one DTC 
-  \ref{tdaqtra} installed in DAQ computer, named mu2edaq09. 
-  The DTC was also programmed to emulate the CFO functionality to send 
-  the request to perform the readout of one event.
+  The test-stand includes the readout chain of an entire 96-channel tracker panel:  
+  48 channels on the HV-side and 48 channels on the CAL-side, 1 DRAC board 
+  connected via optical fiber to one DTC installed in DAQ computer (mu2edaq09).
+  The DTC was programmed, for most of our tests, to emulate the CFO 
+  functionality to send the request to the ROC to perform the readout of one event.
     
-    The DTC emulated the CFO \ref{tdaqtra} by sending a request 
+    The DTC emulated the CFO by sending a request 
     for one event, which was immediately followed by reading the event.
-    The test stand included 96 channels in total.
-    The ROC \ref{DRAC} had two possible operating modes 
-    which could be selected depending on the test to be performed:
+    Depending on the test to perform, it was possible to select one 
+    between two ROC operating modes:
     \begin{itemize}
-    \item  \textbf{First (Internal) mode}: the ROC was emulating the data 
+    \item  \textbf{ROC internal mode}: the ROC was emulating the data 
     itself (user-defined) without reading digi-FPGAs;
-    \item  \textbf{Second (External) mode}: the ROC receives data 
-    from the digi-FPGAs \ref{DRAC}.
+    \item  \textbf{ROC external mode}: the ROC receives data 
+    from the digi-FPGAs. This will be the mode used during Mu2e data-taking.
     \end{itemize}
+    For most of the tests performed, the ROC was operated 
+    in the external mode: in some cases we simply used the 
+    digi-FPGAs internal pulser, in some other cases we injected 
+    calibration pulses directly in the CAL-side of the preamps at 
+    a frequency we could customise.
     \begin{figure}[!h]
         \centering
         \includegraphics[width =0.6\textwidth]{figures/jpg/IMG_20240219_090538.jpg}
-        \caption{The tracker test stand, TS1, featuring one DRAC card linked 
-        via optical fiber to the DTC in the DAQ computer (mu2edaq09). The 
-        setup includes a total of 96 channels.}
+        \caption{The tracker DAQ test stand (TS1) installed at IERC facility 
+        at Fermilab. The test-stand in the full readout chain 
+        of one entire tracker panel: 48 channels on the HV-side 
+        and 48 channels on the CAL-side, 1 DRAC board connected 
+        via optical fiber to one DTC installed in the DAQ computer 
+        (not shown).}
         \label{fig:TS1}
         \end{figure}
-    For most of the tests performed, the ROC was operated 
-    in the second mode: in some cases we simply used the the 
-    digi-FPGAs internal pulser, in some other cases we injected 
-    calibration pulses directly in the CAL-side of the preamps \ref{preampss} at 
-    a frequency we could customise.
-    The event window is the time interval between two heartbeats (HB's). 
-    Figure \ref{fig:3} shows the timing diagram of a single channel readout.
-    There are two important parameters: the separation $T_{gen}=1/f_{gen}$ between 
-    two consecutive pulses (represented by gray triangles), 
-    where $f_{gen}$ is the generator frequency and the event window width, $T_{EW}$, 
-    that represents the distance between two consecutive proton pulses (1.7 $\mu$s during data 
-    taking). 
-    For the purpose of these tests and system commissioning, the system allows 
-    for the flexibility to vary the $T_{EW}$ between 700 ns to 50 
-    $\mu$s. The ROC firmware has an internal hit buffer which stores up to 255 hits. 
-    Each hit consists of two 16 byte packets.
-    Depending on $T_{gen}$ and $T_{EW}$, the data taking can proceed in two different
-    scenarios:
+    Figure \ref{fig:timing} shows the timing diagram 
+    for the readout of one detector channel.
+    There are two important parameters: 
+    the Event Window width ($T_{EW}$) shown in red, 
+    that represents the distance between two consecutive 
+    proton pulses (called heartbeats - HB's - separated by 
+    $\sim$1.7 $\mu$s during Mu2e data taking), and 
+    the separation $T_{gen}=1/f_{gen}$ between 
+    two consecutive hits (represented by grey triangles), 
+    where $f_{gen}$ is the generator frequency. 
+    Each hit consists of two 16 bytes packets.
+
+    For the purpose of these tests and DAQ commissioning, 
+    the system allows for the flexibility to vary 
+    the $T_{EW}$ between 700 ns to 50 
+    $\mu$s. 
+
+    The ROC firmware has an internal hit buffer 
+    which stores up to 255 hits. 
+    Depending on $T_{gen}$ and $T_{EW}$, the data 
+    taking can proceed in two different modes:
     \begin{itemize}
-    \item \textbf{The ROC overflow mode}: the event window is large enough , 
+      \item \textbf{The ROC regular mode}: the total number of hits 
+      within the event window is less than 255.
+      In this case the ROC hit buffer doesn't get filled up 
+      and the total number of 
+      hits may vary from one event to another one. It is 
+      expected that the number 
+      of hits will not exceed the threshold of 255, 
+      with an average of approximately 12 hits;
+    \item \textbf{The ROC overflow mode}: the event window 
+    is large enough, 
     so the total number of generated hits is 
       greater than 255. In this case
-      the ROC hit buffer always gets filled up, and only the first 255 hits are read out. 
-      The hits readout after the first 255 are lost;
-    \item \textbf{The ROC regular mode}: the total number of hits 
-      within the event window is less than 255.
-      In this case the ROC hit buffer doesn't get filled up and the total number of 
-      hits may vary from one event to another. it is expected that the number 
-      of hits will not exceed the threshold of 255, with an average of approximately 12 hits.
+      the ROC hit buffer always gets filled up, and only 
+      the first 255 hits are read out. 
+      The hits readout after the first 255 are lost.
     \end{itemize}
-    Since the timing of the readout is not correlated to the timing sequence 
-    of the pulse generator, the number of pulses contained in the readout window
-     can be different between two different windows, as shown 
-    in Figure \ref{fig:3}. The relative timing offsets among different channels of 
-    the same digi-FPGA are of the order of new ns and can be measured. 
-    The channel readout sequence is fixed.
+
+    Since the timing of the readout (i.e. the Event Window) 
+    is indipendent from the timing sequence 
+    of the pulse generator, the number of pulses contained in 
+    the Event Window can be different between two different 
+    windows. 
+    For example, Figure \ref{fig:timing} shows 
+    that for two different relative timing offsets between 
+    the Event Window and the sequence of generated pulses, 
+    the number of pulses can be 
+    either three (Figure \ref{fig:timing} Left) 
+    or four (Figure \ref{fig:timing} Right).
+
     \begin{figure}[!h]
     \centering
     \includegraphics[width =1\textwidth]{figures/png/finalimg.png}
     \caption{Graphic illustration of pulses in an event window.}
-    \label{fig:3}
+    \label{fig:timing}
     \end{figure}
-  
-    %The data taking has been performed $\mu$sing OTSDAQ+ARTDAQ software, and for each run the output data have been stored in an art file moved to {\bf /exp/mu2e/data/projects/tracker/vst} area mounted on Mu2e central platforms.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Validation of ROC readout}
-The goal of this test was to ensure the correct performance of 
+
+    The relative timing offsets among different channels of 
+    the same digi-FPGA are of the order of few ns and can be 
+    measured. The pulse sequences from the two digi-FPGAs are offset 
+    relative to each other by a time interval $\Delta t$, which is 
+    constant for as long as the DRAC board is 
+    powered up and varies randomly between 0 and $T_{gen}$ when DRAC is powercycled.
+
+
+    Depending on the event window and the start of the pulse 
+    sequence, the first channel in the read out sequence 
+    reads out as many hits as allowed. Once all hits are read out, 
+    the read out process for this channel 
+    stops, and the process moves to the second one, 
+    which then begins its own read out phase. This procedure 
+    is repeated for all channels, following a fixed order.
+\section{Validation of ROC read out and buffering}
+The first test I performed has been to verify the correct performance of 
 ROC buffering.
-The same test stand described in Section \ref{des} was used, 
-and data were collected with digi-FPGAs pulsed by their internal pulsers, 
-with the ROC was set in $External$ $Mode$ \ref{des}. 
-During these test, only one ROC was connected to a single DTC. 
-Each digi-FPGA has its own pulse generator, which can operate at two different 
-frequencies, 31.29 MHz/(2$^7$+1), or approximately 250 kHz, 
-    and 31.29 MHz/(2$^9$+1), or approximately 60 kHz.
-   The pulse sequences from the two generators are offset 
-   relative to each other by a time interval $\Delta t$, which is 
-   constant for as long as the DRAC board is 
-    powered up and varies randomly between 0 and $T_{gen}$ when DRAC is powercycled.     
+During these test, a single ROC was connected to the DTC. 
+Data were collected with digi-FPGAs pulsed by their internal pulsers, 
+with the ROC set in the external mode. 
+Concering the digi-FPGAs pulse generators, they can operate at two specific frequencies, 
+31.29 MHz/(2$^7$+1), or approximately 250 kHz, 
+and 31.29 MHz/(2$^9$+1), or approximately 60 kHz.
+        
 \subsection{Development of a ROC bit-level simulation}\label{MonteCarlo}
  
 ROC's digital readout logic allows to be 
 emulated with a bit-level C++ simulation, which I contributed to develop. 
 For each event, the user can specify the number of hits in each channel and the total 
-number of readout readout hits per event, which cannot exceed 255. 
+number of readout hits per event, which cannot exceed 255. 
 In the following sections, we call $occupancy$ the total number of hits
 recorded in a given channel during the test run. 
-The steps of the simulation are the following:
+The steps of the simulation are the following ones:
 
 \begin{itemize}
 \item
-  The event window starts at $t=0$ s;
+  The event window starts at $t=0$;
 \item
   In a given digi-FPGA, the timing of the first generated pulse 
   is sampled randomly from a uniform distribution between 0 and $T_{gen}$;
@@ -133,14 +169,16 @@ The steps of the simulation are the following:
 \end{itemize}
 The simulation allows to introduce the offset between digi-FPGA-1 
 and digi-FPGA-2 timing sequences and, 
-internally to each digi-FPGA, the channel-to-channel offsets, as user-defined parameters.
-We determined these offsets directly from the data by measuring the 
+internally to each digi-FPGA, the channel-to-channel 
+offsets, as user-defined parameters.
+We determined these offsets directly from the 
+data by measuring the 
 offset between each channel and one reference channel.
-The reference channel is the first channel to be readout 
-in each digi-FPGA: channel 91 for digi-FPGA-1 and 94 for digi-FPGA-2. 
+The reference channel is the first channel to 
+be readout in each digi-FPGA: channel 91 for 
+digi-FPGA-1 and 94 for digi-FPGA-2. 
 
-Figures \ref{fig:delay1} and \ref{fig:delay2} shows two examples: 
-Figure \ref{fig:delay1}(\ref{fig:delay2}) shows the offset between 
+As an example, Figure \ref{fig:delay1}(\ref{fig:delay2}) shows the offset between 
 channel 91(94) and channel 0(44) of digi-FPGA-1(digi-FPGA-2). 
 The mean offset was determined with a simple Gaussian fit of the distribution. 
 The procedure was repeated for the 48 channels of each digi-FPGA.
@@ -169,8 +207,8 @@ presented in the following sections.
     the ROC hit buffer is completely filled up and only the first 255 hits are read out; 
     otherwise, the total number of hits can vary from one event to another one.
 \subsection{The \textit{ROC buffer overflow} mode}
-In the \textit{ROC buffer overflow} configuration, which will be referred to as RUN281, 
-the event window size is 50 $\mu$s and the pulser rate is 60 kHz, which corresponds to 
+In the \textit{ROC buffer overflow} configuration (referred to as RUN281 in the following), 
+the $T_{EW}$ is 50 $\mu$s and $f_{gen}$ is 60 kHz, which corresponds to 
 a time between two consecutive pulses of approximately 16 $\mu$s.
 This implies that the number of hits in a readout window could be 
 either 3 or 4, depending on the offset between the readout window and the generated sequence.
@@ -201,7 +239,7 @@ The top distribution is, as expected, uniform, however the right one looks less 
 \end{figure}
 An explanation for the different timing distribution 
 can be found from Figure \ref{fig:tt2} (Top), 
-which shows the occupancy distribution a a function of channel number.
+which shows the occupancy distribution a function of channel number.
 The channel ordering in this plot corresponds to the readout 
 ordering of the channels, which means that channels on the 
 left are at the beginning of the readout sequence and are, in these conditions, always 
@@ -244,12 +282,12 @@ has 3 hits, with a tail of 4 hits.
 \label{fig:66}
 \end{figure}
 \begin{itemize}
-  \item \textbf{0-68 channels}: in the distribution shown 
+  \item \textbf{0-68th read out channels}: in the distribution shown 
   in Figure \ref{fig:2} (Top), the first 68 channels are 
   those with 4 hits per channel in digi-FPGA-1 and 3 hits per 
   channel in digi-FPGA-2 (thus, 48 channels with 4 hits and 21 
   channels with 3 hits), resulting in a total of 255 hits.
-  \item \textbf{68-75 channels}: 
+  \item \textbf{68-75th read out channels}: 
   the second plateau extending from 68 to 75 corresponds to the channels
   with 3 hits per channel in the digi-FPGA-1 and 4 hits per channel in the second one 
   (thus, 48 channels with 3 hits and 27 channels with 4 hits to reach 255 hits).
@@ -264,7 +302,7 @@ has 3 hits, with a tail of 4 hits.
   due to the fact that the maximum number of hits in total is 255.
   111 is not divisible by 4, so the first 27 channels in the digi-FPGA-2 will have 4 hits
   and the last one will have 3 hits;
-  \item \textbf{75-85 channels}: the last plateau corresponds to events 
+  \item \textbf{75-85th read out channels}: the last plateau corresponds to events 
   with 3 hits per channel from the digi-FPGA-1 and 3 hits per channel from the digi-FPGA-2 
   (thus, 48 channels with 3 hits and 37 channels with 3 hits to reach 255 hits).
   A zoom on last channels is shown on the right picture of Figure \ref{fig:2}.

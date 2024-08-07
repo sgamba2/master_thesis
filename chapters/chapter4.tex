@@ -1,4 +1,5 @@
-\chapter{Delta Electrons}
+\chapter{Comparing $\delta$-electrons flagging algorithms}
+\textit{This Chapter}
 \section{Delta electrons}
 One of the central challenges of Mu2e is the reconstruction of conversion electrons in the face of
 large amounts of backgrounds from other known processes that follow muon capture by the
@@ -19,6 +20,106 @@ decay by ejecting neutrons. Pair production electrons, on the other hand, are pr
 processes involving nuclear recoil also produce pairs of electrons and positrons in order to conserve
 energy and momentum. Delta rays, or secondary ionized electrons, are produced when charged
 energetic particles collide with detector material.
+
+\subsection{The Compton effect}
+The Compton effect is the scattering of photons off quasi-free atomic electrons. 
+In the treatment of this interaction process, the binding energy of
+the atomic electrons is neglected. The differential probability of 
+Compton scattering $\phi_c(E_\gamma, E^'_\gamma) dE^'_\gamma$ for $m_e c^2/2 < E^'_\gamma < E_\gamma$ 
+is given by the Klein-Nishina formula:
+\begin{equation}
+    \phi_{\mathrm{c}}\left(E_\gamma, E_\gamma^{\prime}\right) \mathrm{d} E_\gamma^{\prime}=\pi r_e^2 \frac{N_{\mathrm{A}} Z}{A} \frac{m_e c^2}{E_\gamma} \frac{\mathrm{d} E_\gamma^{\prime}}{E_\gamma^{\prime}}\left[1+\left(\frac{E_\gamma^{\prime}}{E_\gamma}\right)^2-\frac{E_\gamma^{\prime}}{E_\gamma} \sin ^2 \theta_\gamma\right]
+\end{equation}
+
+where $\theta_\gamma$ is the scattering angle of 
+the photon in the laboratory system (Figure \ref{fig:Compton}) and $E_\gamma$, $E^'_\gamma$
+are the energies of the incident and scattered photon. 
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width =0.6\textwidth]{figures/png/Screenshot_20240731_144138.png}
+    \caption{}
+    \label{fig:anglesinmuon}
+\end{figure}
+
+
+The total cross section for Compton scattering per electron is
+given by [55]
+
+
+The angular and energy distributions of Compton electrons are discussed
+in great detail in R.D. Evans [56] and G. Hertz [48]. For the energy
+spectrum of Compton electrons one gets
+
+For Compton scattering off atoms the cross section is increased by the factor Z, because there are exactly Z electrons as possible scattering partners
+in an atom; consequently σatomic
+c = Z · σe
+c .
+At high energies the energy dependence of the Compton-scattering cross
+section can be approximated by [57]
+
+The ratio of scattered to incident photon energy is given by
+
+Naturally, Compton scattering does not only occur with electrons, but
+also for other charged particles. For the measurement of photons in particle detectors, however, Compton scattering off atomic electrons is of
+special importance
+\subsection{Pair production}
+The production of electron-positron pairs in the Coulomb field of a
+nucleus is only possible if the photon energy exceeds a certain threshold.
+This threshold energy is given by the rest masses of two electrons plus
+the recoil energy which is transferred to the nucleus. From energy and
+momentum conservation, this threshold energy can be calculated to be
+
+Since mnucleus  me , the effective threshold can be approximated by
+
+If, however, the electron-positron pair production proceeds in the
+Coulomb field of an electron, the threshold energy is
+
+Electron-positron pair production in the Coulomb field of an electron is,
+however, strongly suppressed compared to pair production in the Coulomb
+field of the nucleus.
+In the case that the nuclear charge is not screened by atomic electrons,
+(for low energies the photon must come relatively close to the nucleus to
+make pair production probable, which means that the photon sees only
+the ‘naked’ nucleus),
+
+\subsection{Energetic knock-on electrons ($\delta$ rays)}
+The energy transfers to ionisation electrons can be so large that these
+electrons can cause further ionisation. These electrons are called δ rays or
+knock-on electrons. The energy spectrum of knock-on electrons is given
+by [1, 10-12, 25]
+dN
+dEkin
+= ξ · F
+E2
+kin
+(1.25)
+for I  Ekin ≤ Emax
+kin .
+F is a spin-dependent factor of order unity, if Ekin  Emax
+kin [12]. Of
+course, the energy spectrum of knock-on electrons falls to zero if the
+maximum transferable energy is reached. This kinematic limit also constrains the factor F [1, 25]. The spin dependence of the spectrum of the
+knock-on electrons only manifests itself close to the maximum transferable
+energy [1, 25].
+The strong fluctuations of the energy loss in thin absorber layers are
+quite frequently not observed by a detector. Detectors only measure the
+energy which is actually deposited in their sensitive volume, and this
+energy may not be the same as the energy lost by the particle. For example, the energy which is transferred to knock-on electrons may only be
+partially deposited in the detector because the knock-on electrons can
+leave the sensitive volume of the detector.
+Therefore, quite frequently it is of practical interest to consider only
+that part of the energy loss with energy transfers E smaller than a given
+cut value Ecut. This truncated energy loss is given by [10-12, 26]
+
+
+
+
+
+
+
+
+
+
 The delta removal is a part of a series of selections on the hit properties to reduce background
 hits.
 The first selection concerns the energy deposited by the hit and excludes strongly ionizing
@@ -45,7 +146,12 @@ concentrated clusters in the x-y plane using a clustering algorithm since deltas
 in such a cluster. However, the reverse containment does not hold - clusters can also contain many
 conversion electron hits. Removing conversion electron hits can severely harm subsequent
 reconstruction, so a filter is necessary. 
-
+low energy (delta, compton, photon conversion) electrons are the largest source of the hits
+in the tracker - about 2/3 of the total
+language: $\delta$-electron - an electron with P<20 MeV/c
+radius of a 10 MeV/c electron in the nominal Mu2e field < 3 cm, close to the resolution
+along the wire
+very specific topology - multiple hits with the same (X,Y) , within the resolution
 \subsection{Hit Position Information and Clustering}
 As mentioned above, the current straw drift tube position measurement limits the resolution to a
 few cm. An improved position measurement can be made by taking advantage of the various layers of
@@ -57,80 +163,18 @@ dimensional information (from two straws), it is referred to as the stereo infor
 measurement is much more precise, as shown in Figure 3.1.
 
 \subsection{DeltaFinder}
+step 1: Find $\delta$-electron track segments separately within each station
+connect segments, allow 1 station wide "gaps"
+dominant sources of failures:
+I stations with MC particle producing hits in only one face;
+I hits with wrong coordinates along the wire - long tails of the $\Delta$T distribution;
+I recover hits in "empty" stations to improve efficiency;
+I optimization of the algorithm timing performance;
+electron hit energy dependence on momentum: path length within the straw depends on momentum
+only about 4\% of CE hits have energies above 3.5keV (1\% above 5 keV)
+consider several hit energy cutoffs: 3.5 keV, 5keV, 7keV, use all hits
 \subsection{FlgBkgHits}
+flgbkg flags hits with high charge
 
-\section{Mu2e Simulation Framework}
-
-The Mu2e software framework is designed to study the expected performance of the Mu2e detectors, the signal reconstruction efficiency, and the characteristics of the backgrounds. The simulation framework is based on GEANT4, a widely used simulation toolkit. The simulation relies on Monte Carlo methods.
-
-It is implemented in the C++ programming language and includes a comprehensive set of tools, such as tracking, geometry, and physics models. The library provides models of physical processes like particle scattering, energy loss, and decay of long-lived particles over a wide energy range. The simulation environment implements the Mu2e geometry. Pattern recognition and track reconstruction algorithms are incorporated into the software framework.
-
-\subsection{art and FHiCL}
-
-The Mu2e Offline software is based on the \textit{art} framework. This framework is developed and maintained by the Fermilab Scientific Computing Division (SCD) and is used by multiple Intensity Frontier experiments at Fermilab.
-
-\textit{art} is a command-line-driven event-processing framework written in C++. It operates in a non-interactive mode where it sequences events as directed by the user. It has been designed to fulfill a wide range of requirements in high-energy physics experiments, including high-level software triggers, online data monitoring, calibration, reconstruction, simulation, and analysis.
-
-\textit{art} runtime configuration is written in the Fermilab Hierarchical Configuration Language (FHiCL), a data definition language developed at Fermilab. A FHiCL file contains definitions of C++ classes that implement the \textit{art} services. Within these classes, algorithms ranging from simulation and reconstruction to analysis codes are built and integrated into dynamic libraries called modules. The FHiCL files declare which modules will be loaded, in what order they will run, and which files will be read in input and written in output.
-
-The simulation begins by using a FHiCL file to configure the process, specifying the necessary modules and call files containing essential geometry and physics data.
-
-\subsection{STNTUPLE and ROOT}
-
-STNTUPLE is an n-tuple data format and a lightweight n-tuple analysis framework, written in C++. It has been used for many years by the CDF experiment at Fermilab and ported to Mu2e. One of the plug-in modules for \textit{art} is specific to the usage of the STNTUPLE. Every STNTUPLE file is a ROOT file containing multiple branches, each corresponding to a data block. A block is a data container optimized for I/O and analysis purposes, storing the Mu2e raw and/or reconstructed data. A STNTUPLE of the data saved in an \textit{art} file can be created and stored by using the appropriate module in the .fcl \textit{art}-job configuration file. The type of data saved in this format is customizable. Once the .stn file is generated, the analysis can be conducted using this data format, avoiding the re-running of the reconstruction. STNTUPLE is built on top of a data analysis and graphics package ROOT developed at CERN and allows the use of all interactive features of ROOT in the analysis.
-
-\subsection{Multi-stage Simulation}
-
-Mu2e simulation employs a technique known as multi-stage simulation for efficient event generation and simulation. This approach involves generating and partially simulating events, pausing the simulation, and saving the generated data. Subsequent stages build upon this saved data, extending the simulation before saving again. Multiple stages may be utilized to complete a simulation. Stages can end when particles reach specific planes or volumes, such as the DS region containing the target and detector or the tracker volume. This method is particularly useful when early stages consume most of the CPU time in Mu2e simulations.
-
-The motivations for using multi-stage simulation include:
-
-\begin{itemize}
-    \item \textbf{Progressive detector definition:} The simulation can define a portion of the detector in later stages. For instance, computationally-intensive tasks like simulating protons on target can be completed in an initial stage, allowing the tracker geometry and algorithms to be inserted later. Once the tracker is ready, simulation can proceed into its volume.
-    \item \textbf{Efficient design variation studies:} It facilitates the study of different experimental designs. Simulation stages can end outside a detector, enabling quick testing of various detector designs with no need to repeat the entire prior simulation.
-    \item \textbf{Effective error recovery:} It acts like a check-pointing mechanism, enhancing error recovery efficiency. If an error occurs in a later stage, only that stage needs to be redone using the output from the preceding stage. When early stages dominate CPU time, this approach can lead to significant time savings.
-    \item \textbf{Resource and limitation handling:} It can handle constraints like job duration and output file size. Techniques like compression, event filtering, and concatenation can be employed to manage resources effectively.
-\end{itemize}
-
-Multi-stage simulation also supports two other critical simulation techniques: mixing and resampling. These two techniques are necessary to study backgrounds and low statistics processes.
-
-For the study of muon beamline vertical misalignments developed in this Thesis, the simulation framework consists of six stages:
-
-\begin{itemize}
-    \item \textbf{First stage (s1):} The interactions of 8 GeV protons in the Production Target (PT) are simulated. All produced particles form the beam, which is traced up to the midpoint of the TS, storing information about any particle that makes it that far.
-    \item \textbf{Second stage (s2):} It uses the output of s1 and traces the beam up to the entrance of the Detector Solenoid.
-    \item \textbf{Third stage (s3):} It propagates the surviving particles from s2 through the upstream portion of the DS vacuum and records muons stopped in the aluminum Stopping Target (ST).
-    \item \textbf{Fourth stage (s4):} $\mu^+$ and $\mu^-$ stopped in the ST are separated into two different outputs for separate analysis.
-    \item \textbf{Fifth stage (s5):} The detector is finally simulated. Target-stopped muons are forced to undergo Michel decays. The resampling technique is employed to increase the available statistics; each stopped muon is used several times as a starting point to generate different decays. Particles that intersect the tracker or calorimeter are recorded.
-    \item \textbf{Sixth stage (s6):} The simulated raw data are converted into simple C++ classes or structs, simulating the digitization of detector raw data.
-    \item \textbf{Seventh stage (s7):} The final stage reconstructs the particle tracks and generates the n-tuples.
-\end{itemize}
-
-Multi-stage simulation saves computation resources in the study of vertical misalignment effects. The production of datasets with displaced COL3 requires only re-running from stage 2 onwards. This is very convenient as s1 is the most resource-consuming one.
-
-\subsection{Mu2e Offline Event Reconstruction}
-
-The central objective of the Mu2e reconstruction algorithms is to achieve efficient reconstruction of electrons in the range of conversion electrons. To fulfill this objective, the algorithms and a few user-defined parameters within them are set to default values optimized specifically for this scenario. This section outlines the stages of a Mu2e event reconstruction.
-
-\subsubsection{Tracker Hit Reconstruction and Pre-filtering}
-
-The Mu2e reconstruction process starts with hit reconstruction, where digital signals from the tracker are converted into physical time and position, creating StrawHits. Adjacent StrawHits in a panel, likely from the same particle, are combined into ComboHits to facilitate pattern recognition. The FlgBkgHits algorithm flags hits from low-energy electrons or positrons due to scattering, $\gamma$ conversion, or $\delta$-rays. This algorithm clusters hits in time and in the $xy$ plane, using Multivariate Analysis to distinguish low-energy hits from conversion electron hits, which are stored for subsequent pattern recognition.
-
-\subsubsection{Calorimeter Hit Reconstruction}
-
-CaloClusters are formed by combining signals from crystals hit by particles in the calorimeter. Clusters are reconstructed by grouping adjacent crystals within a 2 ns window and an adjustable energy threshold, currently set at 50 MeV.
-
-\subsubsection{Helix Search}
-
-Charged particles in the DS magnetic field follow helical trajectories described by the following parameters:
-
-\[
-\vec{\eta} \equiv (d_0, \phi_0, \omega, z_0, \tan \lambda);
-\]
-
-where $d_0$ is the distance of the point of closest approach to the solenoid axis, signed by the particle angular momentum with respect to the origin; $\phi_0$ is defined by the momentum direction at the point of closest approach; $\omega = 1/R$ is the curvature in the transverse plane; $z_0$ is the $z$-coordinate of the point of closest approach; $90^\circ - \lambda$ is the pitch angle between the momentum $p$ and the $xy$ plane. Helix search involves time clustering and pattern recognition.
-
-\paragraph{Time Clustering}
-
-The Time Clustering algorithm groups hits within a narrow time window into TimeClusters. Since ComboHits from the same particle tend to cluster in time, for each group of ComboHits a TimeCluster is created. To improve the clustering, the time distribution is generated by propagating all the hit times to the central plane of the tracker ($z=0$). Finally, the TimeCluster time and position in the calorimeter are evaluated. The process is iterated until the list of ComboHits associated with the TimeCluster is stable. All TimeClusters with more than a programmable number of hits are stored. Pattern recognition follows, utilizing
-
+\section{Analysis}
+The Mu2e Simulation framework is described in Appendix \ref{mu2eana}
