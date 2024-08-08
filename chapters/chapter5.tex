@@ -26,14 +26,16 @@ Finally, the last section provides a brief overview of the DAQ performance studi
 
 
 
-  The test-stand includes the readout chain of an entire 96-channel tracker panel:  
-  48 channels on the HV-side and 48 channels on the CAL-side, 1 DRAC board 
-  connected via optical fiber to one DTC installed in DAQ computer (mu2edaq09).
+  The test-stand includes the readout chain of an entire 96-channels tracker panel:  
+  48 channels connected to the first digi-FPGA and 48 channels to the second one. 
+  Each of these channels represents a tracker straw which was absent from our test stand.
+  The DRAC board was connected via optical fiber to one DTC installed in DAQ computer (mu2edaq09).
   The DTC was programmed, for most of our tests, to emulate the CFO 
   functionality to send the request to the ROC to perform the readout of one event.
-    
     The DTC emulated the CFO by sending a request 
     for one event, which was immediately followed by reading the event.
+
+
     Depending on the test to perform, it was possible to select one 
     between two ROC operating modes:
     \begin{itemize}
@@ -141,28 +143,28 @@ Concering the digi-FPGAs pulse generators, they can operate at two specific freq
 31.29 MHz/(2$^7$+1), or approximately 250 kHz, 
 and 31.29 MHz/(2$^9$+1), or approximately 60 kHz.
         
-\subsection{Development of a ROC bit-level simulation}\label{MonteCarlo}
+\subsection{Development of the ROC bit-level simulation}\label{MonteCarlo}
  
 ROC's digital readout logic allows to be 
 emulated with a bit-level C++ simulation, which I contributed to develop. 
-For each event, the user can specify the number of hits in each channel and the total 
+For each event, the simulated parameters are the number of hits in each channel and the total 
 number of readout hits per event, which cannot exceed 255. 
-In the following sections, we call $occupancy$ the total number of hits
-recorded in a given channel during the test run. 
-The steps of the simulation are the following ones:
 
+
+The main steps of the simulation are the following ones:
 \begin{itemize}
 \item
-  The event window starts at $t=0$;
+  The start of the Event Window is set at $t=0$;
 \item
-  In a given digi-FPGA, the timing of the first generated pulse 
-  is sampled randomly from a uniform distribution between 0 and $T_{gen}$;
+  In each digi-FPGA, the timing of the first generated pulse 
+  is randomly sampled from a uniform distribution between 0 and $T_{gen}$;
 \item
-  The following pulses are added, separated from each other by $T_{gen}$,
-  until the absolute time of the next pulse is greater than $T_{EW}$;
+Once the first pulse has been generated, the following pulses are 
+added at the relative distance of $T_{gen}$,
+  until the absolute time of the next pulse is above $T_{EW}$;
 \item
-  In the readout part of the simulation, the pulses are read 
-  out according to the defined channel readout sequence; 
+  In the readout part of the simulation, 
+  the pulses are readout following a predefined channel readout ordering;; 
 \item
   the readout \textit{continues} until all the simulated hits 
   have been included, or the maximum threshold of 255 hits has been reached.
@@ -206,6 +208,10 @@ presented in the following sections.
     data collection can proceed in two modes: when the event window is large enough, 
     the ROC hit buffer is completely filled up and only the first 255 hits are read out; 
     otherwise, the total number of hits can vary from one event to another one.
+
+
+    In the following sections, we call $occupancy$ the total number of hits
+recorded in a given channel during the test run. 
 \subsection{The \textit{ROC buffer overflow} mode}
 In the \textit{ROC buffer overflow} configuration (referred to as RUN281 in the following), 
 the $T_{EW}$ is 50 $\mu$s and $f_{gen}$ is 60 kHz, which corresponds to 
