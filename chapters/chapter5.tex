@@ -210,7 +210,7 @@ impact was negligible.
   \begin{figure}[!h]
           \centering
       \includegraphics[width=0.75\textwidth]{figures/png/Screenshot from 2023-12-03 11-50-50.png}
-      \caption{FPGA-1: histogram of the delay between 
+      \caption{digi-FPGA-1: histogram of the delay between 
       channel 0 and the reference channel 91, the first 
       to be readout.}
       \label{fig:delay1}
@@ -218,7 +218,7 @@ impact was negligible.
     \begin{figure}[!h]
           \centering
       \includegraphics[width=0.75\textwidth]{figures/png/Screenshot from 2023-12-03 11-50-33.png}
-      \caption{FPGA-2: histogram of the delay between 
+      \caption{digi-FPGA-2: histogram of the delay between 
       channel 44 and the reference channel 94, the first 
       to be readout.}
       \label{fig:delay2}
@@ -239,7 +239,7 @@ This implies that the number of hits in a
 readout window could be 
 either 3 or 4, depending on the offset 
 between the readout window and the generated pulses sequence.
-\subsubsection{Hit timing and occupancy}\label{over}
+\subsubsection{Hit timing distribution and channels occupancy}\label{over}
 We first checked the distribution of the hit time for 
 each readout channel, and the distribution of the 
 total number of hits (occupancy) in one specific 
@@ -337,8 +337,8 @@ following three types of events.
   In these conditions, 63 hits can still be stored.
   Because of the delay between the first and second digi-FPGA, 
   only three hits can be read out by each channel 
-  of the second digi-FPGA. The first 21 channels of the second 
-  digi-FPGA will be those with 3 hits per channel, resulting in a 
+  of the digi-FPGA-2. The first 21 channels of the 
+  digi-FPGA-2 will be those with 3 hits per channel, resulting in a 
   total of 255 hits. All the hits sent to the following 
   channels are lost.
   \item \textbf{0-75th read out channels}: 
@@ -394,8 +394,8 @@ between the two digi-FPGA pulsers.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Number of hits}
-Figure \ref{fig:3} shows that in the \textit{buffer overflow} mode all events,
-as expected, have 255 hits read out per event.
+Figure \ref{fig:3} shows that, in the \textit{ROC buffer overflow} 
+mode, the number of readout hits is exactly 255 for all events.
 
 \begin{figure}[!h]
 \centering
@@ -408,17 +408,23 @@ as expected, have 255 hits read out per event.
 \label{fig:3}
 \end{figure}
 \subsection{The \textit{ROC buffer regular} mode }
-In the \textit{regular} configuration, which will be referred to as RUN105038, the event window size is 25 $\mu$s
-and the pulser rate is 60 kHz.
+In the \textit{regular} configuration, which will be referred 
+to as RUN105038, the event window $T_{EW}$ was chosen to be 25 $\mu$s
+and the pulser rate $f_{gen}$ 60 kHz, 
+which corresponds to $T_{gen}=16 \ \mu$s.
 
 \subsubsection{Time distribution and occupancy}
-
-Similar to Section \ref{over}, Figure \ref{fig:4} shows the distributions
+Figure \ref{fig:4} shows the 
+distributions
 of the number of hits in two channels, one from the 
-FPGA-1 and another one, from the digi-FPGA-2. 
-In this readout configuration, the expected number of pulses in a given channel
-within the event window is one or two, and the total number of pulses is always below 255.
-
+digi-FPGA-1 and another one, from the digi-FPGA-2 and Figure 
+\ref{fig:5} shows the occupancy as 
+a function of the channel number. 
+In this readout configuration, the expected number of 
+hits in a given channel
+within the event window is one or two, and the total 
+number of pulses is always below 255.
+There is no overflow of the hit buffer and no pulses are lost.
 \begin{figure}[!h]
   \begin{subfigure}[b]{\textwidth}
       \centering
@@ -436,8 +442,10 @@ within the event window is one or two, and the total number of pulses is always 
      \label{fig:4}
 \end{figure}
 
-In this mode, the readout of a given channel is not affected by the readout of previous
-channels and the \textit{occupancy} distributions shown in Figure \ref{fig:5} are, as expected, uniform.
+In this mode, the readout of a given channel is not affected 
+by the readout of previous
+channels and the \textit{occupancy} distribution shown 
+in Figure \ref{fig:5} is, as expected, uniform.
 \begin{figure}[!h]
 \centering
 \includegraphics[width =0.7\textwidth]{figures/pdf/figure_00002_nhitsvschannel_roc_simulation_2.pdf}
@@ -447,8 +455,10 @@ are normalized to the same number of events. All 96 channels are read out.}
 \label{fig:5}
 \end{figure}
 
-
-Figure \ref{fig:67} shows the distribution of the number of hits in the channel 0 (FPGA-1).
+Given this choice of $f_{gen}$ and $T_{EW}$, 
+the maximum number of hits in one Event Window is 2.
+Figure \ref{fig:67} shows the distribution of the 
+number of hits in the channel 0 (FPGA-1).
 \begin{figure}[!h]
 \centering
 \includegraphics[width =0.7\textwidth]{figures/pdf/figure_00067_nhits_ch00_run105038.pdf}
@@ -461,12 +471,23 @@ Figure \ref{fig:67} shows the distribution of the number of hits in the channel 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Number of hits}
-Compared to RUN281, the event window in RUN105038 was twice shorter
+Compared to RUN281, the event window in RUN105038 
+was twice shorter
 and the ROC readout buffer wasn't getting filled up.
-The total number of hits within the event window depends on the relative offset
-of the event window with respect to the digi-FPGA pulsers, and varies from
-144 to 192, as shown in Figure \ref{fig:6}.
 
+Figure \ref{fig:6} shows the distribution of the total 
+number of hits per event in the $regular$ mode. 
+There are two higher peaks, one at 144 and one at 192. 
+The peak at 192 occurs when all 48 channels of digi-FPGA-1 
+and all 48 channels of digi-FPGA-2 have 2 hits each. The 
+peak at 144 occurs when all channels of digi-FPGA-1 have 
+2 hits, and all channels of digi-FPGA-2 have 1 hit, 
+or vice versa. The total number of hits within the event 
+window depends on the relative offset of the event window 
+with respect to the digi-FPGA pulsers, and it varies from 
+144 to 192. As before, the relative difference between the 
+data and the MC distributions is at the level of $10^{-3}$, 
+which indicates very good agreement.
 \begin{figure}[!h]
 \centering
 \includegraphics[width =0.7\textwidth]{figures/pdf/figure_00009_nhits_105038.pdf}
@@ -479,35 +500,58 @@ of the event window with respect to the digi-FPGA pulsers, and varies from
 \end{figure}
 
 
-\section{Primitive Data Quality Monitoring}\label{dqm}
-The goal of this test was to ensure the correct performance of the 
-preamplifiers along with the readout chain.
-During the test described in this section, the same test stand as 
-in Section \ref{des} was used and one or two ROCs 
-were connected to the same DTC, so one more test stand (TS2) was used. 
-As mentioned in Section \ref{preampss}, the preamps on the CAL side 
-include circuitry that can inject calibration pulses into the channel. 
-These pulses can be sent at an arbitrary rate.
-The calibration pulses were sent to the preamplifiers at a frequency of 50 kHz. 
-The data acquisition event window was set to 50 $\mu$s. 
-In this case, the number of Pulses within one Event Window could be 2 or 3.
-To perform this test, I developed several real-time monitoring and diagnostic tools: 
-a set of real-time histograms to allow an easy check of the signal uniformity among 
-channels within the same ROC or across multiple ROCs, and among different events.
-The diagnostics tools allowed the identification of errors, such as the presence of an 
-invalid channel ID, more hits than the maximum allowed in a given channel 
+\section{Study of preamplifiers performance and an 
+initial approach to Data Quality Monitoring}\label{dqm}
+After having validated the correct ROC buffering, 
+a set of different tests was accomplished to check 
+the performance of the preamplifiers along with the readout chain.
+During the test described in this section, the 
+same test stand as in Section \ref{des} was 
+used and one or two ROCs 
+were connected to the same DTC, so one more 
+test stand (TS2) was used. Preamps on the CAL 
+side were added to perform the test.
+As mentioned in Section \ref{preampss}, the 
+preamps on the CAL side 
+include circuitry that can inject calibration 
+pulses into the channel. 
+These pulses can be sent at an arbitrary rate and a frequency 
+of 50 kHz was chosen. 
+The data acquisition event window was set 
+to 50 $\mu$s. 
+In this case, the number of pulses within 
+one Event Window could be 2 or 3.
+To perform this test, I developed the initial step to the  
+real-time monitoring and diagnostic tools: 
+a set of real-time histograms to allow an 
+easy check of the signal uniformity among 
+channels within the same ROC or across 
+multiple ROCs, and among different events.
+The diagnostics tools allowed the identification 
+of errors, such as the presence of an 
+invalid channel ID, more hits than the maximum 
+allowed in a given channel 
 and an undefined link ID between ROCs.
 
-\subsection{Test 1: distribution of the number of hits versus channel ID}\label{nhitvschid}
-The first test I performed was to check the number of hits as a function 
-of the channel ID. This was a fundamental test: if a channel was dead, 
-the number of readout hits would be zero, in case of cross-talk  
-(the undesired coupling among channels) we could see undesired hits in the wrong channels. 
-It was also possible to see if the involved channels showed more hits than expected. 
-We setup our system to pulse one every eight channels.
-To scan all the 96 channels of the panel, we performed multiple runs. 
-Figure \ref{fig:normalhits} shows a distribution of the number of 
-hits versus channel ID with no anomalies.
+\subsection{Test 1: channel occupancy versus channel ID}\label{nhitvschid}
+The first test I conducted was to examine the channel occupancy. 
+This was a crucial test, as it was important to determine if a 
+channel was inactive, which would result in zero readout hits. 
+It was also essential to detect any cross-talks (unwanted 
+coupling between channels) which could cause the erroneous 
+read out of hits in the incorrect channels.
+It was also possible to check if the involved 
+channels showed more hits than expected. 
+
+
+For the previous reasons, we setup our system 
+to pulse one every eight channels.
+To scan all the 96 channels of the panel, 
+we performed multiple runs choosing each time 
+a different sequence of channels.
+Figure \ref{fig:normalhits} shows the 
+distribution of the occupancy for one channel 
+sequence, which shows no anomalies.
 \begin{figure}[!h]
       \centering
       \includegraphics[width=0.65\textwidth]{figures/pdf/run105421_nh_vs_ch.pdf}
@@ -520,17 +564,24 @@ hits versus channel ID with no anomalies.
      \label{fig:normalhits}
 \end{figure}
 Figure \ref{fig:dead} shows a run with one dead channel (ID=94) 
-and a channel (ID=70) with more than three hits, which was not expected. 
+and a channel (ID=70) with more than 
+three hits, which was not expected. 
 In the case of the dead channel, the problematic preamp 
-was replaced. In the second case, to investigate this more thoroughly, 
+was replaced. In the second case, to 
+investigate this more thoroughly, 
 I made the distribution of the time difference 
-$\Delta t$ distribution between consecutive pulses (Figure \ref{fig:deltatnhits}).
-Since the pulser provides pulses at the frequency of 50 kHZ, the $\Delta t$ 
+$\Delta t$ between consecutive pulses 
+(Figure \ref{fig:deltatnhits}).
+Since the pulser provides pulses at 
+the frequency of 50 kHz, the $\Delta t$ 
 distribution should show one single peak at 20 $\mu$s. 
-On the other hand, there are also two pronounced peaks at 16 $\mu$s and 4 $\mu$s. 
-In particular, the analysis of the waveforms of the hits in the 4 $\mu$s peak 
-showed an inversion of the waveforms: this has been further investigated 
-and will be discusse in more detail in Section \ref{wf}.
+On the other hand, there are also two 
+pronounced peaks at 16 $\mu$s and 4 $\mu$s. 
+In particular, the analysis of the 
+waveforms of the hits in the 4 $\mu$s peak 
+showed an inversion of the waveforms: 
+this has been further investigated 
+and will be discusse in more detail in Section \ref{inv}.
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.65\textwidth]{figures/pdf/run105346_nh_vs_ch.pdf}
@@ -559,27 +610,34 @@ and will be discusse in more detail in Section \ref{wf}.
  \label{fig:deltatnhits}
 \end{figure}
 
-Figure \ref{fig:cross} shows a clear example of cross-talk among channels. 
-We tried to characterize this phenomenon and we noticed that it occurred 
-only when the ID of the first channel to be pulsed is odd.
-The cross talk was also asymmetric (3$\rightarrow$5 was observed, 
-but no 3$\rightarrow$1).
-As described in Chapter \ref{chaptertrk} and shown in Figure \ref{fig:spacepreamps}, 
-the preamps are mounted on vertical boards and one preamp is 
-connected to two straw-tubes: odd channels are the ones on the board, 
-while even ones are on the top. For this reason, the cross talk 
-appears to be between channels plced on the board. 
-Moreover, we observed the cross-talk only in the first 20 channels IDs.
-This is due to the fact that the distance between consecutive preamp 
-boards is slightly narrower for the first channels (Figure \ref{fig:spacepreamps}).
-\begin{figure}[!h]
-  \centering
-  \includegraphics[angle=90,width=0.8\textwidth]{figures/jpg/photo_6028424923279639562_y.jpg}
-  \caption{The spacing between preamps on the board. The first channels correspond to the preamps on the right side of the picture.}
- \label{fig:spacepreamps}
-\end{figure}
-The ouput of the test was reported to the tracker panel 
-experts, and they are still working on it.
+Figure \ref{fig:cross} shows a clear example of 
+cross-talk among channels. 
+We tried to characterize this phenomenon and it was  
+noticed that it occurred 
+only when the ID of the first channel to be 
+pulsed is odd.
+The cross talk was also asymmetric 
+(the cross-talk from 3rd channel to 5th was observed, 
+but no 3rd$\rightarrow$1st).
+As described in Chapter \ref{chaptertrk} 
+and shown in Figure \ref{fig:spacepreamps}, 
+the preamps PBC boards are mounted on vertical 
+boards. Each board contains two preamps, each of one 
+connected to one of the two straw-tubes ends: odd numbers 
+are associated to the preamplifier closer to the horizontal 
+board, while even numbers are associated to 
+the preamplifier farther from the horizontal board. For this 
+reason, it is not surprising that the cross talk 
+appears to be between channels placed closer to 
+the horizontal board. 
+Moreover, we observed the cross-talk 
+only in the first 20 channels IDs.
+This is due to the fact that the 
+distance between consecutive preamp 
+boards is slightly narrower for the 
+first channels (Figure \ref{fig:spacepreamps}).
+At the moment of writing this Thesis, the 
+possible solutions are still being investigated. 
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.65\textwidth]{figures/pdf/run105420_nh_vs_ch.pdf}
@@ -588,14 +646,41 @@ experts, and they are still working on it.
   Channels 9th, 17th and 25th were also observed to be active, indicating cross talks.}
  \label{fig:cross}
 \end{figure}
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[angle=90,width=0.8\textwidth]{figures/jpg/photo_6028424923279639562_y.jpg}
+  \caption{The zoomed view of the Analog Mother Board with the 
+  preamplifier boards installed. The distance between 
+  two consecutive boards decreases from left to right. 
+  The first preamps in the occupancy plot are the ones on the right.}
+ \label{fig:spacepreamps}
+\end{figure}
+The ouput of the test was reported to the tracker panel 
+experts, and they are still working on it.
+
 \subsection{Test 2: Analysis of the readout pulses waveforms}\label{wf}
-The test described in this Section involved the study 
+The test described in this section involved the study 
 of the reconstructed waveforms from charge injection. 
-The sampling frequency of the ADC is 40 MHz, which results 
-in waveform bin width of 25 ns (Section. \ref{DRAC}). 
+The sampling frequency of the ADC is 40 MHz, which resulted 
+in a waveform bin width of 25 ns (Section \ref{DRAC}). 
 The maximum number of samples for one waveform is 30. 
-To reconstruct the waveform, the baseline is already subtracted (Section \ref{basel}). 
-Figure \ref{fig:normalwf} shows an example of reconstructed waveform for RUN105421. 
+
+
+Figure \ref{fig:normalwf} shows an example 
+of reconstructed waveform (RUN105421). 
+The reconstructed waveforms shown below 
+have already had the baseline subtracted. 
+In Section \ref{basel}, I will provide a deeper 
+analysis of the estimation of the waveform baseline. 
+In first approximation, a good waveform is 
+characterized by having a flat 
+distribution in the first 10 samples, indicating the 
+absence of noise at the start. It should feature a high 
+positive charge peak with a sharp leading edge, which is 
+the rising slope of the waveform. Additionally, the 
+waveform should have a negative tail, contributing to 
+its overall shape.
 The negative tail is generated by a 
 differentiating circuit that shapes the signal 
 using a high-pass filter. This circuit was adopted 
@@ -617,37 +702,24 @@ is not small compared to the rise time.
  \label{fig:normalwf}
 \end{figure}
 
-As discussed in Section \ref{nhitvschid}, a larger number of hits than 4 
-in channel 70 was observed, 
-leading to a different $\Delta t$ distribution between hits than expected. 
-While the $\Delta t$ peak was expected at 20 $\mu$s, in some channels two 
-additional peaks were identified: 
-one at 16 $\mu$s and another at 4 $\mu$s. The 4 $\mu$s peak is 
-characterized by inverted waveforms (Figure \ref{fig:inverted}). 
-The 16 $\mu$s peak is characterized by regular waveforms, as the 20 $\mu$s peak.
-It is reasonable to think that this phenomenon arises from the erroneous 
-generation of 4 $\mu$s long pulses, 
-triggering them on both the leading and trailing edges. In fact, 
-the sum of 4 $\mu$s and 16 $\mu$s is the inverse of the pulser frequency. 
-One potential solution to address this issue could involve varying the pulse length. 
-However, this approach was not pursued in this Thesis due to time constraints.
-\begin{figure}[!h]
-  \centering
-  \includegraphics[width=0.65\textwidth]{figures/pdf/wf_ch50_1.pdf}
-  \caption{Inverted waveform of the 50th channel.}
- \label{fig:inverted}
-\end{figure}
-\subsubsection{Estimating the waveform pedestal}\label{basel}
-We adopted a straightforward procedure to estimate the pedestal: 
-we simply take the mean value of the first 10 samples of the waveform. 
-In each channel, the stability of the pedestal is an indicator of the 
+
+\subsubsection{Estimate of the waveform pedestal}\label{basel}
+A straightforward procedure was adopted to estimate the pedestal: 
+we simply take the mean value of the first 
+10 samples of the waveform. 
+In each channel, the stability of the 
+pedestal is an indicator of the 
 level of noise within the electronic chain. 
-The pedestals for each channel vary according on the electrical component's 
-tolerances on the board.
-Figures \ref{fig:baseline1} and \ref{fig:baseline2} show the distributions on 
-the pedestals for two different channels, in a run named RUN105421.
-In both cases, the pedestal is close to 210 ADC counts, with a 
-FWHM$=2 \sqrt{2 \text{ln}2}\sigma\sim$4.5 ADC counts ($\sigma \sim$1.9 ADC counts).
+The pedestal of each channel varies 
+according to the tolerances of 
+the electrical components on the board.
+Figures \ref{fig:baseline1} and \ref{fig:baseline2} 
+show the distributions of 
+the pedestals for two different channels (RUN105421).
+In both cases, the pedestal is close to 
+210 ADC counts, with a 
+FWHM$=2 \sqrt{2 \text{ln}2}\sigma\sim$4.5 
+ADC counts ($\sigma \sim$1.9 ADC counts).
   \begin{figure}[!h]
       \centering
       \includegraphics[width=0.65\textwidth]{figures/png/baseline_ch00.png}
@@ -661,17 +733,53 @@ FWHM$=2 \sqrt{2 \text{ln}2}\sigma\sim$4.5 ADC counts ($\sigma \sim$1.9 ADC count
       \label{fig:baseline2}
 \end{figure}
 
-In some cases, a lower baseline value is observed. We observed dips of specific depths, 
-for example 64, 128, or 192, which may suggest the possibility of malfunctioning 6th 
+In some cases, a lower baseline value is observed. 
+We observed dips of specific depths, 
+for example 64, 128, or 192, which may suggest the 
+possibility of malfunctioning 6th 
 and 7th bit of the ADC (Figure \ref{fig:dips}). 
-To address this issue, we simply disregarded the bins with the 
-negative peaks and estimated the pedestals with the remaning samples.
+To address this issue and to reconstruct 
+correctly the waveform, we simply did not used the bins with the 
+negative peaks and estimated the pedestals with 
+the remaning samples.
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.65\textwidth]{figures/pdf/wf_ch58_1.pdf}
   \caption{Waveform of the 58th channel. Before subtracting 
   the baseline from the ADC counts, the dips were identified. The depth of the dips is 128.}
  \label{fig:dips}
+\end{figure}
+\subsubsection{Inverted waveforms}\label{inv}
+As discussed in Section \ref{nhitvschid}, 
+a larger number of hits than 4 
+in channel 70 was observed, 
+leading to a different $\Delta t$ distribution 
+between hits than expected. 
+While the $\Delta t$ peak was expected at 
+20 $\mu$s, in some channels two 
+additional peaks were identified: 
+one at 16 $\mu$s and another at 4 $\mu$s. 
+The 4 $\mu$s peak is 
+characterized by inverted waveforms 
+(Figure \ref{fig:inverted}). 
+The 16 $\mu$s peak is characterized 
+by regular waveforms, as the 20 $\mu$s peak.
+It is reasonable to think that this 
+phenomenon arises from the erroneous 
+generation of 4 $\mu$s long pulses, 
+triggering them on both the leading 
+and trailing edges. In fact, 
+the sum of 4 $\mu$s and 16 $\mu$s 
+is the inverse of the pulser frequency. 
+One potential solution to address 
+this issue could involve varying the pulse length. 
+However, this approach was not pursued 
+in this Thesis due to time constraints.
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=0.65\textwidth]{figures/pdf/wf_ch50_1.pdf}
+  \caption{Inverted waveform of the 50th channel.}
+ \label{fig:inverted}
 \end{figure}
 \subsubsection{The waveform charge and pulse height}\label{threshold}
 Using a constant threshold discriminator, the integral of the positive and 
@@ -690,28 +798,28 @@ are shown in Figures \ref{fig:ch1}, \ref{fig:ph2}, \ref{fig:fs2}, and \ref{fig:n
 \begin{figure}[!h]
       \centering
       \includegraphics[width=0.65\textwidth]{figures/pdf/charge.pdf}
-      \caption{Charge distribution of the waveforms in channel 66.}
+      \caption{The (Positive) charge distribution of the waveforms (channel 66).}
       \label{fig:ch1}
   \end{figure}
 
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.65\textwidth]{figures/pdf/pulseheight.pdf}
-  \caption{Pulse height distribution of the waveforms in channel 66.}
+  \caption{The pulse height distribution of the waveforms (channel 66).}
   \label{fig:ph2}
 \end{figure}
 
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.65\textwidth]{figures/pdf/fs.pdf}
-  \caption{First sample distribution of the waveforms in channel 66.}
+  \caption{The first sample distribution of the waveforms (channel 66).}
   \label{fig:fs2}
 \end{figure}
 
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.65\textwidth]{figures/pdf/negcharge.pdf}
-    \caption{Negative charge distribution of the waveforms in channel 66.}
+    \caption{The negative charge distribution of the waveforms (channel 66).}
     \label{fig:nch2}
 \end{figure}
     
@@ -722,10 +830,11 @@ correlation between the charge and pulse height peaks was observed, as shown in 
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.65\textwidth]{figures/pdf/phch1.pdf}
-  \caption{2D histogram of charge ($x$-axis) versus pulse height ($y$-axis).}
+  \caption{2D distribution of pulse height versus (positive) charge.}
   \label{fig:chvsph}
 \end{figure}
-To understand the origin of this pattern, the waveform mean sample weighted with the charge 
+To understand the origin of this pattern, the 
+waveform mean sample weighted with the charge 
 \begin{equation} 
   s_{mean} = \frac{\sum_i \text{sample}_i \cdot q_i }{\sum_i q_i} 
 \end{equation}
@@ -736,19 +845,19 @@ as shown in Figure \ref{fig:chtm} and Figure \ref{fig:phtm}.
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.65\textwidth]{figures/pdf/tmean1.pdf}
-  \caption{Distribution of the waveform mean sample weighted with the charge in channel 66.}
+  \caption{The distribution of the waveform mean sample weighted with the (positive) charge (channel 66).}
   \label{fig:smean}
 \end{figure}
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.65\textwidth]{figures/pdf/chtmean.pdf}
-  \caption{2D histogram of $s_{mean}$ ($x$-axis) versus charge ($y$-axis).}
+  \caption{2D distribution of (positive) charge versus $s_{mean}$.}
   \label{fig:chtm}
 \end{figure}
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.65\textwidth]{figures/pdf/phtmean1.pdf}
-  \caption{2D histogram of $s_{mean}$ ($x$-axis) versus pulse height ($y$-axis).}
+  \caption{2D distribution of pulse height versus $s_{mean}$.}
   \label{fig:phtm}
 \end{figure}
 The pulse height and charge peaks are perfectly correlated with the $s_{mean}$ peaks. 
@@ -834,7 +943,7 @@ The outliers in the plots are due to crosstalk, noisy channels, inverted wavefor
   \label{fig:means}
 \end{figure}
 
-\section{DAQ performance studies with external CFO}
+\section{Towards a fully functional DAQ: studies with external CFO}
 The brief and straightforward test described in this section uses the CFO in a mode expected to be 
 implemented during data acquisition. 
 In the test, sequences of HBs \ref{des} separated by a time constant  
