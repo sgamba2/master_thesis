@@ -1,5 +1,5 @@
 
-\chapter{Mu2e Simulation Framework}\label{mu2eana}
+\chapter{Simulation and Analysis tools}\label{mu2eana}
 
 The Mu2e software framework is designed to study the expected performance of the Mu2e detectors, the signal 
 reconstruction efficiency, and the characteristics of the backgrounds. The simulation framework is based on 
@@ -13,15 +13,17 @@ incorporated into the software framework.
 
 \section{art and FHiCL}
 
-The Mu2e Offline software is based on the \textit{art} framework. 
+The Mu2e Offline software is based on the \textit{art} framework (Figure \ref{fig:multistage}). 
 This framework is developed and maintained by the Fermilab Scientific 
 Computing Division (SCD) and is used by multiple Intensity Frontier experiments at Fermilab.
+
 
 \textit{art} is a command-line-driven event-processing framework written in 
 C++. It operates in a non-interactive mode where it sequences events as directed 
 by the user. It has been designed to fulfill a wide range of requirements in 
 high-energy physics experiments, including high-level software triggers, online data 
 monitoring, calibration, reconstruction, simulation, and analysis.
+
 
 \textit{art} runtime configuration is written in the Fermilab Hierarchical 
 Configuration Language (FHiCL), a data definition language developed at Fermilab. 
@@ -31,15 +33,15 @@ reconstruction to analysis codes are built and integrated into dynamic
 libraries called modules. The FHiCL files declare which modules will be loaded, 
 in what order they will run, and which files will be read in input and written in output.
 
+
 The simulation begins by using a FHiCL file to configure the process, specifying 
 the necessary modules and call files containing essential geometry and physics data.
 
 \section{STNTUPLE and ROOT}
-
 STNTUPLE is an n-tuple data format and a lightweight n-tuple analysis framework, 
-written in C++. It has been used for many years by the CDF experiment at Fermilab 
+written (almost) exclusively in C++. It has been used for many years by the CDF experiment at Fermilab 
 and ported to Mu2e. One of the plug-in modules for \textit{art} is specific to the 
-usage of the STNTUPLE. Every STNTUPLE file is a ROOT file containing multiple branches, 
+usage of the STNTUPLE \cite{stntuple}. Every STNTUPLE file is a ROOT file containing multiple branches, 
 each corresponding to a data block. A block is a data container optimized for I/O and 
 analysis purposes, storing the Mu2e raw and/or reconstructed data. A STNTUPLE of the 
 data saved in an \textit{art} file can be created and stored by using the appropriate 
@@ -49,10 +51,22 @@ using this data format, avoiding the re-running of the reconstruction. STNTUPLE 
 on top of a data analysis and graphics package ROOT developed at CERN and allows the use 
 of all interactive features of ROOT in the analysis.
 
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width =0.5\textwidth]{figures/png/Screenshot_20240809_174458.png}
+    \caption{Both generation and reconstruction of events are done through art-jobs
+    configured using FHiCLs and importing the necessary C++ modules. Other modules,
+    like the Event Display and TAnaDump, are used for debugging purpose. The analysis
+    workflow followed relies on the usage of STNTUPLE.}
+    \label{fig:multistage}
+\end{figure}
+
 \section{Multi-stage Simulation}
 
 Mu2e simulation employs a technique known as multi-stage simulation for efficient event 
-generation and simulation. This approach involves generating and partially simulating events, 
+generation and simulation. This approach involves 
+generating and partially simulating events, 
 pausing the simulation, and saving the generated data. Subsequent stages build upon this saved 
 data, extending the simulation before saving again. Multiple stages may be utilized to complete 
 a simulation. Stages can end when particles reach specific planes or volumes, such as the DS 
@@ -65,14 +79,15 @@ The motivations for using multi-stage simulation include:
     \item \textbf{Progressive detector definition:} The simulation can define a portion of the 
     detector in later stages. For instance, computationally-intensive tasks like simulating 
     protons on target can be completed in an initial stage, allowing the tracker geometry and 
-    algorithms to be inserted later. Once the tracker is ready, simulation can proceed into its volume.
+    algorithms to be inserted later. Once the tracker is ready, simulation can proceed into 
+    its volume;
     \item \textbf{Efficient design variation studies:} It facilitates the study of different 
     experimental designs. Simulation stages can end outside a detector, enabling quick testing 
-    of various detector designs with no need to repeat the entire prior simulation.
+    of various detector designs with no need to repeat the entire prior simulation;
     \item \textbf{Effective error recovery:} It acts like a check-pointing mechanism, enhancing 
     error recovery efficiency. If an error occurs in a later stage, only that stage needs to be 
     redone using the output from the preceding stage. When early stages dominate CPU time, this 
-    approach can lead to significant time savings.
+    approach can lead to significant time savings;
     \item \textbf{Resource and limitation handling:} It can handle constraints like job duration 
     and output file size. Techniques like compression, event filtering, and concatenation can be 
     employed to manage resources effectively.
@@ -87,19 +102,20 @@ framework consists of six stages:
 \begin{itemize}
     \item \textbf{First stage (s1):} The interactions of 8 GeV protons in the Production Target (PT) 
     are simulated. All produced particles form the beam, which is traced up to the midpoint of the TS, 
-    storing information about any particle that makes it that far.
-    \item \textbf{Second stage (s2):} It uses the output of s1 and traces the beam up to the entrance 
-    of the Detector Solenoid.
-    \item \textbf{Third stage (s3):} It propagates the surviving particles from s2 through the 
-    upstream portion of the DS vacuum and records muons stopped in the aluminum Stopping Target (ST).
+    storing information about any particle that makes it that far;
+    \item \textbf{Second stage (s2):} It uses the output of $s1$ and traces the beam up to the entrance 
+    of the Detector Solenoid;
+    \item \textbf{Third stage (s3):} It propagates the surviving particles from $s2$ through the 
+    upstream portion of the DS vacuum and records muons stopped in the aluminum 
+    Stopping Target (ST);
     \item \textbf{Fourth stage (s4):} $\mu^+$ and $\mu^-$ stopped in the ST are separated into two 
-    different outputs for separate analysis.
+    different outputs for separate analysis;
     \item \textbf{Fifth stage (s5):} The detector is finally simulated. Target-stopped muons are 
     forced to undergo Michel decays. The resampling technique is employed to increase the available 
     statistics; each stopped muon is used several times as a starting point to generate different 
-    decays. Particles that intersect the tracker or calorimeter are recorded.
+    decays. Particles that intersect the tracker or calorimeter are recorded;
     \item \textbf{Sixth stage (s6):} The simulated raw data are converted into simple C++ classes 
-    or structs, simulating the digitization of detector raw data.
+    or structs, simulating the digitization of detector raw data;
     \item \textbf{Seventh stage (s7):} The final stage reconstructs the particle tracks and 
     generates the n-tuples.
 \end{itemize}
@@ -107,134 +123,3 @@ framework consists of six stages:
 Multi-stage simulation saves computation resources in the study of vertical misalignment 
 effects. The production of datasets with displaced COL3 requires only re-running from stage 
 2 onwards. This is very convenient as s1 is the most resource-consuming one.
-
-\section{Mu2e Offline Event Reconstruction}
-
-The central objective of the Mu2e reconstruction algorithms is to achieve efficient 
-reconstruction of electrons in the range of conversion electrons. To fulfill this objective, 
-the algorithms and a few user-defined parameters within them are set to default values optimized 
-specifically for this scenario. This section outlines the stages of a Mu2e event reconstruction.
-
-\section{Tracker Hit Reconstruction and Pre-filtering}
-
-The Mu2e reconstruction process starts with hit reconstruction, where digital signals from the 
-tracker are converted into physical time and position, creating StrawHits. Adjacent StrawHits in 
-a panel, likely from the same particle, are combined into ComboHits to facilitate pattern recognition. 
-The FlgBkgHits algorithm flags hits from low-energy electrons or positrons due to scattering, $\gamma$ 
-conversion, or $\delta$-rays. This algorithm clusters hits in time and in the $xy$ plane, using 
-Multivariate Analysis to distinguish low-energy hits from conversion electron hits, which are stored for subsequent pattern recognition.
-
-\section{Calorimeter Hit Reconstruction}
-
-CaloClusters are formed by combining signals from crystals hit by particles 
-in the calorimeter. Clusters are reconstructed by grouping adjacent crystals 
-within a 2 ns window and an adjustable energy threshold, currently set at 50 MeV.
-
-\section{Helix Search}
-
-Charged particles in the DS magnetic field follow helical trajectories described 
-by the following parameters:
-
-\[
-\vec{\eta} \equiv (d_0, \phi_0, \omega, z_0, \tan \lambda);
-\]
-
-where $d_0$ is the distance of the point of closest approach to the solenoid axis, 
-signed by the particle angular momentum with respect to the origin; $\phi_0$ is 
-defined by the momentum direction at the point of closest approach; $\omega = 1/R$ 
-is the curvature in the transverse plane; $z_0$ is the $z$-coordinate of the point of 
-closest approach; $90^\circ - \lambda$ is the pitch angle between the momentum $p$ and 
-the $xy$ plane. Helix search involves time clustering and pattern recognition.
-
-\subsubsection{Time Clustering}
-
-The Time Clustering algorithm groups hits within a narrow time window into TimeClusters. 
-Since ComboHits from the same particle tend to cluster in time, for each group of ComboHits a 
-TimeCluster is created. To improve the clustering, the time distribution is generated by 
-propagating all the hit times to the central plane of the tracker ($z=0$). Finally, the 
-TimeCluster time and position in the calorimeter are evaluated. The process is iterated 
-until the list of ComboHits associated with the TimeCluster is stable. All TimeClusters with 
-more than a programmable number of hits are stored. Pattern recognition follows, utilizing 
-information from both tracker and calorimeter through two different algorithms.
-\subsubsection{Pattern Recognition}
-
-Pattern recognition in Mu2e can be categorized into two main approaches: 
-Tracker-only Pattern Recognition and Calorimeter + Tracker Pattern Recognition.
-
-\paragraph{TrkPatRec: Tracker-only Pattern Recognition}
-
-TrkPatRec performs helix reconstruction in the $xy$ plane and finds the 
-track projection on the transverse plane, determining the radius and impact 
-parameter with respect to the Stopping Target. It then performs reconstruction 
-in the $\phi z$ plane to determine the track pitch. Circle fitting and angular 
-position corrections are used for reconstruction.
-
-\paragraph{CalPatRec: Calorimeter + Tracker Pattern Recognition}
-
-CalPatRec employs CaloClusters as initial templates for pattern 
-recognition. Assuming the existence of a CaloCluster with reconstructed 
-energy above 50 MeV, its time and position are used to filter the collection of 
-ComboHits. These hits are expected to lie within the calorimeter acceptance, 
-and those within a defined time window around the cluster time are selected. 
-Helix fitting is performed using the filtered ComboHits, with track parameters 
-iteratively adjusted until convergence is achieved. This combined approach 
-enhances track reconstruction efficiency, particularly for electrons in the conversion energy range.
-
-\section{Track Fitting and Momentum Determination}
-
-Once the track candidates have been identified, track fitting algorithms 
-are applied to refine the track parameters and estimate the momentum of the 
-charged particles. The primary track fitting algorithm used in Mu2e is the Kalman 
-Filter, a recursive method that optimally estimates the track parameters by minimizing the chi-squared of the track fit.
-
-The Kalman Filter considers multiple scattering, energy loss, and magnetic 
-field variations, making it well-suited for the high-precision tracking 
-required in the Mu2e experiment. The momentum resolution achieved is crucial 
-for distinguishing conversion electrons from background processes.
-
-\section{Background Rejection and Signal Selection}
-
-Background rejection is a critical aspect of the Mu2e event reconstruction, 
-as the experiment aims to detect rare conversion events amidst a significant 
-background. Several strategies are employed to enhance signal selection and suppress background events:
-
-\begin{itemize}
-    \item \textbf{Timing Cuts:} Events are selected based on their timing relative 
-    to the beam structure, reducing beam-related backgrounds.
-    \item \textbf{Track Quality Cuts:} Tracks must meet specific quality criteria, 
-    such as a minimum number of hits and a maximum chi-squared value, to ensure reliable reconstruction.
-    \item \textbf{Calorimeter Matching:} Tracks are matched with CaloClusters based 
-    on spatial and temporal criteria to confirm the presence of an electromagnetic 
-    shower consistent with a conversion electron.
-    \item \textbf{Likelihood-Based Methods:} Multivariate analysis techniques, such 
-    as boosted decision trees, are employed to combine various discriminating 
-    variables and enhance signal purity.
-\end{itemize}
-
-\section{Data Analysis and Event Classification}
-
-After reconstruction and background rejection, the final step in the Mu2e 
-simulation framework is data analysis and event classification. This involves 
-categorizing events into different classes based on their characteristics and 
-analyzing the resulting distributions to extract physics results.
-
-The analysis is performed using ROOT, a powerful data analysis framework that 
-provides a wide range of tools for histogramming, fitting, and statistical analysis. 
-Custom scripts and macros are developed to automate the analysis process and generate 
-plots and tables for interpretation.
-
-\section{Conclusion}
-
-The Mu2e simulation framework is a sophisticated software suite that enables 
-comprehensive studies of detector performance, signal reconstruction, and background 
-characteristics. By utilizing a combination of multi-stage simulation, advanced 
-reconstruction algorithms, and efficient background rejection techniques, the framework 
-supports the search for charged lepton flavor violation in the Mu2e experiment. The flexibility 
-of the simulation framework allows for thorough investigations of various physics scenarios, 
-design optimizations, and detector responses.
-
-Through the integration of state-of-the-art technologies such as GEANT4, \textit{art}, 
-and ROOT, the simulation framework provides the necessary tools to achieve the scientific 
-goals of the Mu2e collaboration. Ongoing developments and improvements in the framework 
-continue to enhance the precision and reliability of the simulation, paving the way for 
-groundbreaking discoveries in the field of particle physics.

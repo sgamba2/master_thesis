@@ -120,6 +120,7 @@
 \contentsline {figure}{\numberline {6.11}{\ignorespaces The reconstructed $y-z$ direction distribution of cosmic rays ($m_{yz}=\Delta y /\Delta z$).\relax }}{141}{figure.caption.124}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Both generation and reconstruction of events are done through art-jobs configured using FHiCLs and importing the necessary C++ modules. Other modules, like the Event Display and TAnaDump, are used for debugging purpose. The analysis workflow followed relies on the usage of STNTUPLE.\relax }}{146}{figure.caption.125}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Illumination pattern of cosmics hits on the panels of plane 0.\relax }}{151}{figure.caption.125}%
-\contentsline {figure}{\numberline {C.2}{\ignorespaces Illumination pattern of cosmics hits on the panels of plane 1.\relax }}{152}{figure.caption.126}%
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Illumination pattern of cosmics hits on the panels of plane 0.\relax }}{149}{figure.caption.126}%
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Illumination pattern of cosmics hits on the panels of plane 1.\relax }}{150}{figure.caption.127}%

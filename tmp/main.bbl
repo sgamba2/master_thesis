@@ -1,4 +1,4 @@
-\begin{thebibliography}{85}
+\begin{thebibliography}{86}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -655,5 +655,10 @@ T.~Zhao, Y.~Chen, S.~Han, and J.~Hersch.
 {Mengyun Guan and Ming-Chung Chu and Jun Cao and Kam-Biu Luk and Changgen
   Yang}.
 \newblock {A parametrization of the cosmic-ray muon flux at sea-level}, {2015}.
+
+\bibitem[P.~Murat({2017})]{stntuple}
+G.~Pezzullo~(Mu2e) P.~Murat.
+\newblock Stntuple package.
+\newblock \emph{Mu2e-doc-13916-v1}, {2017}.
 
 \end{thebibliography}
