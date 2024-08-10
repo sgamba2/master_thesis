@@ -1,4 +1,4 @@
-\begin{thebibliography}{86}
+\begin{thebibliography}{87}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -660,5 +660,11 @@ T.~Zhao, Y.~Chen, S.~Han, and J.~Hersch.
 G.~Pezzullo~(Mu2e) P.~Murat.
 \newblock Stntuple package.
 \newblock \emph{Mu2e-doc-13916-v1}, {2017}.
+
+\bibitem[Pezzullo(2020)]{trkpat}
+G.~Pezzullo.
+\newblock The track finder algorithm for the trigger system of the mu2e
+  experiment at fermilab.
+\newblock 2020.
 
 \end{thebibliography}

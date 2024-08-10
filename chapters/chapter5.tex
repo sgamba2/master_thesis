@@ -1,4 +1,4 @@
-\chapter{Comparing $\delta$-electrons flagging algorithms}
+\chapter{Comparing $\delta$-electrons flagging algorithms}\label{delta}
 \textit{This Chapter}
 \section{Delta electrons}
 One of the central challenges of Mu2e is the reconstruction of conversion electrons in the face of
@@ -175,6 +175,20 @@ only about 4\% of CE hits have energies above 3.5keV (1\% above 5 keV)
 consider several hit energy cutoffs: 3.5 keV, 5keV, 7keV, use all hits
 \subsection{FlgBkgHits}
 flgbkg flags hits with high charge
+The description of a multivariate analysis is outside the scope of this work and so is the process
+of MVA-training. Since these techniques are fundamental for the background flagging, we will briefly
+describe the basic principles. When looking for patterns in a multi-variable space, it is a common
+procedure to define a set of statistical models that examine the variables measured and estimate the
+probability that these are compatible with the pattern. Once the variables have been chosen, the
+MVA is trained to recognize patterns by looking at examples known to the trainer and a feedback can
+be provided to improve the identification.
+When looking for δ-electrons, the most significant variables are the position and spread of the Com-
+boHit, both in the XY plane and in the Z direction.
 
+This algorithm 
+clusters hits in time and in the $xy$ plane, using 
+Multivariate Analysis to distinguish low-energy 
+hits from conversion electron hits, which are 
+stored for subsequent pattern recognition.
 \section{Analysis}
 The Mu2e Simulation framework is described in Appendix \ref{mu2eana}
