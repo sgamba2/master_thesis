@@ -3,15 +3,14 @@
 \textit{This Chapter provides a brief introduction on the working principles 
 of a drift tube and then a  detailed description of the Mu2e straw tracker. 
 This includes a description of the tracker mechanical structures 
-(straw, panels, planes and stations) and the front-end and DAQ electronics. 
+(straw, panels, planes and stations) and the Front-End and DAQ electronics. 
 Most of the discussion is based on \cite{kola} and \cite{bobbb}.}
 
 \section{Drift Tubes}
 Gas detectors are capable of measuring charged particle coordinates. 
 They provide great spatial resolution and detection efficiency at a low cost, Ref. \cite{kola}. 
-There are many different gas ionizazion detectors, one of these is the drift tube.
+There are many different gas ionizazion detectors, one of which is the drift tube.
 The basic configuration of a drift tube is shown in Figure \ref{fig:drifttube}.
-The cylindrical conducting tube, the cathode, is grounded.
 A hollow cylindrical conducting tube is grounded and serves as the cathode.
 The tube is filled with a combination of noble gas, often Argon, and quench gas. 
 A thin sensing wire is suspended along the cylindrical cathode axis. 
@@ -19,7 +18,7 @@ The wire, called anode, receives a high voltage. Long and thin drift tubes, know
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240324_232621.png}
-    \caption{Schematics of a drift tube, Ref. \cite{kola}.}
+    \caption[Schematic view of a drift tube.]{Schematic view of a drift tube, Ref. \cite{kola}.}
     \label{fig:drifttube}
     \end{figure}
 Assuming an anode radius $a$, a cathode radius $b$ and using Gauss theorem, the electric field is:
@@ -54,8 +53,8 @@ The electric field accelerates free electrons and ions towards the anode and cat
 along the field lines. As charges accelerate, they scatter on other particles in the gas, 
 losing energy. The directions of motion are randomised, and maximum speeds are set. As a result, 
 charges move uniformly along the electric field. This is referred to as the drift velocity of the 
-charge. It is superimposed with the thermal motions.
-Drift velocities for ions and electrons varies based on several parameters. Ions have a bigger mass 
+charge. It is superimposed with the thermal motion.
+Drift velocities for ions and electrons varies based on several parameters. Ions have a larger mass 
 than electrons and their masses are comparable to those of gas molecules. During collisions, gas 
 molecules absorb a significant portion of the energy gained from ions during acceleration. In a drift 
 tube detector just a little amount of electric field energy enters the energy associated with ion motion, 
@@ -75,7 +74,7 @@ proportions, Ref. \cite{ZHAO1994485}.
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.7\textwidth]{figures/png/Screenshot_20240330_102206.png}
-    \caption{Electron drift velocity versus electric field in Ar:CO$_2$ mixtures of different proportions, Ref. \cite{ZHAO1994485}. 
+    \caption[Electron drift velocity versus electric field in Ar:CO$_2$ mixtures.]{Electron drift velocity versus electric field in Ar:CO$_2$ mixtures of different proportions, Ref. \cite{ZHAO1994485}. 
     80\%:20\% Ar:CO$_2$ mixture is the gas used in the Mu2e tracker.}
     \label{fig:drift}
 \end{figure}
@@ -99,7 +98,7 @@ Drifting ions mostly generate signals in electrodes via induction. Figure \ref{f
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.7\textwidth]{figures/png/Screenshot_20240330_182509.png}
-    \caption{The model of an ionisation avalanche forming at the anode wire of a proportional tube or chamber, Ref. \cite{kola}. 
+    \caption[The model of an ionisation avalanche forming at the anode wire of a proportional tube.]{The model of an ionisation avalanche forming at the anode wire of a proportional tube or chamber, Ref. \cite{kola}. 
     (a) In the drift volume, electrons and ions are generated and drift to their corresponding electrodes. 
     (b) Near the wire, the electron achieves a high enough field to induce secondary ionisation, resulting in an avalanche. 
     (c) The electric field separates charges created during an avalanche. 
@@ -170,7 +169,7 @@ called breakdown mode, commonly known as the Geiger-Muller mode.
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.5\textwidth]{figures/png/Screenshot_20240330_203416.png}
-    \caption{The dependence of particle gain on applied voltage in gaseous ionisation detectors. 
+    \caption[The dependence of particle gain on applied voltage in gaseous ionisation detectors.]{The dependence of particle gain on applied voltage in gaseous ionisation detectors. 
     The numbers on the axes are for orders of magnitude only and they depend on the device geometry and gas concentration. 
     Drift tubes operate in the proportional mode, Ref. \cite{kola}.}
     \label{fig:gaseous}
@@ -241,12 +240,12 @@ Three rotated panels form a face, and two faces rotated of 60° form one plane, 
 Two planes rotated of 60° make one station, Figure \ref{fig:trkpanel} (top right-right).
 One station is thus made of twelve panels. The entire tracker is made of 18 stations, Figure \ref{fig:trkpanel} (bottom) 
 and has a total length of 3.2 m and a diameter of approximately 1.7 m.
-Each panel is equipped with its own front-end and DAQ electronics placed within the mechanical structure.
+Each panel is equipped with its own Front-End and DAQ electronics placed within the mechanical structure.
 \begin{figure}[!h]
 \centering
 \includegraphics[width =0.6\textwidth]{figures/png/Screenshot_20240306_222803.png}
-\caption{(Top left) Schematic representation of one straw-tracker panel. (Top right) 
-Straw-tracker plane (left) and station (right). (Bottom) Full assembly of the 18 
+\caption[The straw tracker components.]{(Top left) Schematic representation of one straw tracker panel. (Top right) 
+Straw tracker plane (left) and station (right). (Bottom) Full assembly of the 18 
 stations and support structure, Ref. \cite{bartoszek2015mu2e}.}
 \label{fig:trkpanel}
 \end{figure}
@@ -260,7 +259,7 @@ Figure \ref{fig:trkpencil} shows the edge of a straw tube, compared to a pencil.
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.5\textwidth]{figures/png/Screenshot_20240327_000000.png}
-    \caption{Picture of one Mu2e straw tube (compared to a pencil), Ref. \cite{trk}.}
+    \caption[A Mu2e straw tube.]{One of the Mu2e straw tube (compared to a pencil), Ref. \cite{trk}.}
     \label{fig:trkpencil}
     \end{figure}
 
@@ -286,7 +285,7 @@ are joined to both ends of the straw suing silver epoxied.
     \begin{figure}[!h]
         \centering
         \includegraphics[width =\textwidth]{figures/png/Screenshot_20240706_153158.png}
-        \caption{The straw termination, depicted both exploded and assembled, 
+        \caption[The straw termination.]{The straw termination, depicted both exploded and assembled, 
         features a brass tube connected to the straw using silver epoxy. 
         An insulator (green) is inserted into a brass tube 
         (red) to prevent breakdown near the tube's end. The sense 
@@ -334,7 +333,7 @@ panel (Figure \ref{fig:trktubes}).
         \caption{}
         \label{fig:strawtubes}
         \end{subfigure}
-        \caption{(a): Arrangement of the straws within a panel, Ref. \cite{trk}. (b): Expanded view of the panel edge, Ref. \cite{trk}.}
+        \caption[The straw arrangement within a panel.]{(a): The straw arrangement within a panel, Ref. \cite{trk}. (b): Expanded view of the panel edge, Ref. \cite{trk}.}
     \end{figure}
 
 Each panel spans a 120° arc (Figure \ref{fig:gonzalo}).
@@ -355,7 +354,7 @@ of the panel edge is also shown in Figure \ref{fig:strawtubes}.
             \begin{figure}[!h]
                 \centering
                 \includegraphics[width =\textwidth]{figures/png/image.png}
-                \caption{Fully assembled panel (Lab3 Fermilab Facility).}
+                \caption[One of the fully assembled panel.]{One of the fully assembled panel (Lab3 Fermilab Facility).}
                 \label{fig:gonzalo}
                 \end{figure}
 
@@ -380,7 +379,7 @@ Although the rotation of 30° between the two faces introduces more mechanical c
 compared to a rototation of 60°, this configuration provides the better stereo performance.
 
 Once a plane is assembled, a cooling ring is fitted around its outer circumference. 
-The front-end electronics is hosted in a ring around the outer 
+The Front-End electronics is hosted in a ring around the outer 
 circumference of the panel.
 
 Two identical planes rotated of 180° around a vertical axis make one station 
@@ -394,7 +393,7 @@ as shown in Figure \ref{fig:trueplane}.
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.65\textwidth]{figures/png/Screenshot_20240706_163056.png}
-    \caption{One tracker plane fully assembled at Fermilab Lab3 Facility.}
+    \caption[One tracker plane fully assembled.]{One tracker plane fully assembled at Fermilab Lab3 Facility.}
     \label{fig:trueplane}
 \end{figure}
 \subsection{The entire straw-tracker detector}
@@ -416,7 +415,7 @@ center the frame. Once fully assembled, a thorough mechanical
 survey of the detector will be performed before moving to the Mu2e experimental hall. 
 
 \subsection{The tracker Front-End Electronics}\label{tfee}
-The front-end electronics performs amplification, digitization and data packaging 
+The Front-End electronics performs amplification, digitization and data packaging 
 for transmission to the Data Acquisition System (DAQ) of the straw-tube signals. 
 In particular, each single straw provides two hit times and one waveform, 
 which are necessary to reconstruct the hit position along the straw, 
@@ -425,10 +424,10 @@ A schematic representation of the entire system logic is reported in Figure \ref
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.9\textwidth]{figures/png/Screenshot_20240529_133230.png}
-    \caption{Signal flow through front end electronics, Ref. \cite{bartoszek2015mu2e}.}
+    \caption[Signal flow through Front-End electronics.]{Signal flow through Front-End electronics, Ref. \cite{bartoszek2015mu2e}.}
     \label{fig:flowfee}
     \end{figure}
-All the front-end electronics is installed on multiple Printed Circuit Boards 
+All the Front-End electronics is installed on multiple Printed Circuit Boards 
 (PCBs) mounted on the outer section of the panel. 
 The PCBs are shown in Figure \ref{fig:trackerfee}, Ref. \cite{vadimmu2e}.
 All PCBs are situated in the outer section of the panel. 
@@ -477,7 +476,7 @@ To summarise, each straw-tube is an independent detector channel and it is equip
 \begin{figure}[!h]
 \centering
 \includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240131_111836.png}
-\caption{Overview of the straw-tracker front-end electronics, Ref.  
+\caption[Overview of the straw-tracker Front-End electronics.]{Overview of the straw-tracker Front-End electronics, Ref.  
 \cite{vadimmu2e}. The CAL-Side of the panel is not shown.}
 \label{fig:trackerfee}
 \end{figure}
@@ -517,12 +516,12 @@ controls all panel operations.
 \begin{figure}[!h]
 \centering
 \includegraphics[width =\textwidth]{figures/png/Screenshot_20240204_115052.png}
-\caption{DRAC board schematics, Ref. \cite{drac}. 
+\caption[The DRAC board schematics.]{DRAC board schematics, Ref. \cite{drac}. 
 The DRAC board is the brain of the tracker panel. ADCs, FPGAs, DDR3 
 memories and compators are also shown.}
 \label{fig:drac}
 \end{figure}
-Figure \ref{fig:flowfee} shows the data flow through the panel front-end and the DRAC:
+Figure \ref{fig:flowfee} shows the data flow through the panel Front-End and the DRAC:
 \begin{itemize}
     \item The two signals from the two sides of a straw tube are transmitted 
     from the preamps to the DRAC;
@@ -584,7 +583,7 @@ The packet has the following structure:
 \subsubsection{The Data Acquisition System}\label{tdaqtra}
 
 The Mu2e Data Acquisition system (DAQ) is based on a $streaming$ readout architecture: 
-all detector data are digitised, zero-suppressed in the front-end electronics 
+all detector data are digitised, zero-suppressed in the Front-End electronics 
 and then transferred from the detectors for further processing and storage. 
 This architecture results in a large data throughput in the DAQ but offers a 
 significant flexibility for data selection and analysis. Moreover, it makes 
@@ -653,7 +652,7 @@ of channel high voltage when necessary.
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240206_144803.png}
-    \caption{Mu2e Data Acquisition system architecture, Ref. \cite{GIOIOSA2023167732}.}
+    \caption[The Mu2e Data Acquisition system architecture.]{Mu2e Data Acquisition system architecture, Ref. \cite{GIOIOSA2023167732}.}
     \label{fig:linktodaq}
     \end{figure}
 

@@ -61,7 +61,7 @@ the gas will escape downward towards the atmosphere rather than flowing upwards 
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.5\textwidth]{figures/png/gassystem.png}
-    \caption{Schematic view of the valves located in a tracker panel.}
+    \caption[Schematic view of the valves located in a tracker panel.]{Schematic view of the valves located in a tracker panel.}
     \label{fig:gassytem}
 \end{figure}
 
@@ -126,7 +126,8 @@ significant at low energies. The numerical constants are derived by fitting expe
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.6\textwidth]{figures/png/Screenshot_20240526_140716.png}
-    \caption{The relation of the observed zenith angle of muons, $\theta^*$, to the zenith angle at the muon production point in the atmosphere, $\theta$. 
+    \caption[The relation of $\theta^*$ to $\theta$.]{The relation of the observed zenith angle of muons, $\theta^*$, to 
+    the zenith angle at the muon production point in the atmosphere, $\theta$. 
     $R$ is the radius of the Earth, Ref.\cite{guan2015parametrization}.}
     \label{fig:anglesinmuon}
 \end{figure}
@@ -180,7 +181,7 @@ Before starting explaining the event selection and the reconstruction, let me de
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.5\textwidth]{figures/png/Screenshot_20240526_164527.png}
-    \caption{Schematic view of a tracker station and definition of the coordinate used for the analysis.}
+    \caption[Schematic view of a tracker station and the coordinate system.]{Schematic view of a tracker station and definition of the coordinate system used for the analysis.}
     \label{fig:coordinate}
 \end{figure}
 \section{Event selection}\label{eventselection}
@@ -209,7 +210,7 @@ The result is shown in Figure \ref{fig:illumination} for panel 0 of plane 0, whi
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.8\textwidth]{figures/pdf/xp_vs_yp_panel0.pdf}
-    \caption{Illumination of Monte Carlo hits on panel 0, plane 0, selecting cosmics that traverse at 
+    \caption[Illumination of Monte Carlo hits on panel 0, plane 0.]{Illumination of Monte Carlo hits on panel 0, plane 0, selecting cosmics that traverse at 
     least four panels across four distinct faces of the station, with fewer than three hits per panel.}
     \label{fig:illumination}
 \end{figure}
@@ -225,7 +226,7 @@ an angle of approximately 45°.
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.8\textwidth]{figures/pdf/myz.pdf}
-    \caption{The Monte Carlo $y-z$ direction distribution of cosmic rays ($m_{yz}=\Delta y /\Delta z$).}
+    \caption[The Monte Carlo $y-z$ direction distribution.]{The Monte Carlo $y-z$ direction distribution of cosmic rays in a vertical tracker station ($m_{yz}=\Delta y /\Delta z$).}
     \label{fig:myz}
 \end{figure}
 
@@ -278,7 +279,7 @@ The situation is reproduced in Figure \ref{fig:stco}.
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.6\textwidth]{figures/png/Screenshot_20240601_195651.png}
-    \caption{Schematic view of a cosmic muon (light blue) hitting the vertical oriented station. The red lines are the $ComboHit$s, the dark blue dots 
+    \caption[Schematic view of a cosmic muon hitting the vertical oriented station.]{Schematic view of a cosmic muon (light blue) hitting the vertical oriented station. The red lines are the $ComboHit$s, the dark blue dots 
     are the $StrawHit$s and the green dots are the $StereoHit$s.}
     \label{fig:stco}
 \end{figure}
@@ -331,7 +332,7 @@ It is important to observe is that different bumps correspond to different straw
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/png/x_panel0.png}
-    \caption{The reconstructed longitudinal coordinate in the 0th panel frame.}
+    \caption[The reconstructed longitudinal coordinate in the 0th panel frame.]{The reconstructed longitudinal coordinate in the 0th panel frame.}
     \label{fig:recx}
 \end{figure}
 The positional bias between the reconstructed and true longitudinal coordinates is plotted in 
@@ -342,7 +343,8 @@ There are four peaks corresponding to the four different spots shown in Figure \
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/png/panel_00_x_bias.png}
-    \caption{The difference between the reconstructed and the true longitudinal coordinate in the 0th panel frame. 
+    \caption[The bias between the reconstructed and the true hit coordinate.]{The bias between the reconstructed 
+    and the true longitudinal hit coordinate in the 0th panel frame. 
     The true coordinate is the mean coordinates of Monte Carlo hits.}
     \label{fig:bias}
 \end{figure}
@@ -353,7 +355,7 @@ The first spot (CAL side) correspond to 90° panels overlap.
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/png/panel_00_x_bias_vs_x.png}
-    \caption{The 2D histogram of the longitudinal bias versus the true longitudinal coordinate.}
+    \caption[The 2D histogram of the longitudinal bias versus the true coordinate.]{The 2D histogram of the longitudinal bias versus the true longitudinal coordinate.}
     \label{fig:rec2D}
 \end{figure}
 To assess the systematic impact on the reconstructed coordinates, it is essential to visualize the TProfile of the bias versus the true coordinates. 
@@ -366,7 +368,7 @@ Under these conditions, the calibration is expected to become challenging.
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/png/panel_00_x_bias_vs_x_prof.png}
-    \caption{The profile of the longitudinal bias versus the true longitudinal coordinate.}
+    \caption[The profile of the longitudinal bias versus the true longitudinal coordinate.]{The profile of the longitudinal bias versus the true longitudinal coordinate.}
     \label{fig:profile}
 \end{figure}
 The main issue with this type of reconstruction lies in the fact that $m_{yz}=\frac{\Delta y}{\Delta z}$ 
@@ -380,7 +382,7 @@ indicating horizontal cosmic rays, which are not possible in reality. This plot 
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/png/myz_rec.png}
-    \caption{The reconstructed $y-z$ direction distribution of cosmic rays ($m_{yz}=\Delta y /\Delta z$).}
+    \caption[The reconstructed $y-z$ direction distribution of cosmic rays.]{The reconstructed $y-z$ direction distribution of cosmic rays ($m_{yz}=\Delta y /\Delta z$).}
     \label{fig:myzrec}
 \end{figure}
 \section{Conclusions}

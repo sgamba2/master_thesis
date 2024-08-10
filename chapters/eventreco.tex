@@ -1,5 +1,5 @@
 
-\chapter{Mu2e Offline Event Reconstruction}\label{trackreco}
+\chapter{Mu2e Offline Event Reconstruction}\label{eventreco}
 
 The central objective of the Mu2e reconstruction algorithms is to achieve efficient 
 reconstruction of electrons in the range of conversion electrons. To fulfill this objective, 
@@ -37,7 +37,7 @@ is the curvature in the transverse plane; $z_0$ is the $z$-coordinate of the poi
 closest approach; $90^\circ - \lambda$ is the pitch angle between the momentum $p$ and 
 the $xy$ plane. Helix search involves time clustering and pattern recognition.
 
-\subsubsection{Time Clustering}
+\subsection{Time Clustering}
 
 The Time Clustering algorithm groups hits within a narrow time window into TimeClusters. 
 Since ComboHits from the same particle tend to cluster in time, for each group of ComboHits a 
@@ -47,12 +47,12 @@ TimeCluster time and position in the calorimeter are evaluated. The process is i
 until the list of ComboHits associated with the TimeCluster is stable. All TimeClusters with 
 more than a programmable number of hits are stored. Pattern recognition follows, utilizing 
 information from both tracker and calorimeter through two different algorithms.
-\subsubsection{Pattern Recognition}
+\subsection{Pattern Recognition}
 
 Pattern recognition in Mu2e can be categorized into two main approaches: 
 Tracker-only Pattern Recognition and Calorimeter + Tracker Pattern Recognition.
 
-\paragraph{TrkPatRec: Tracker-only Pattern Recognition}
+\subsubsection{TrkPatRec: Tracker-only Pattern Recognition}
 
 TrkPatRec performs helix reconstruction in the $xy$ plane and finds the 
 track projection on the transverse plane, determining the radius and impact 
@@ -60,7 +60,7 @@ parameter with respect to the Stopping Target. It then performs reconstruction
 in the $\phi z$ plane to determine the track pitch. Circle fitting and angular 
 position corrections are used for reconstruction.
 
-\paragraph{CalPatRec: Calorimeter + Tracker Pattern Recognition}
+\subsubsection{CalPatRec: Calorimeter+Tracker Pattern Recognition}
 
 CalPatRec employs CaloClusters as initial templates for pattern 
 recognition. Assuming the existence of a CaloCluster with reconstructed 
