@@ -5,7 +5,6 @@ The style file: unsrtnat.bst
 Database file #1: main.bib
 Warning--entry type for "tsview" isn't style-file defined
 --line 443 of file main.bib
-Warning--I didn't find a database entry for "kolaimprov"
 Warning--empty author in PhysRevD.104.032013
 Warning--empty journal in PhysRevD.104.032013
 Warning--empty journal in cms17
@@ -23,7 +22,7 @@ Warning--empty journal in trkreq
 Warning--empty journal in trkpat
 You've used 87 entries,
             2481 wiz_defined-function locations,
-            1201 strings with 21731 characters,
+            1200 strings with 21721 characters,
 and the built_in function-call counts, 29541 in all, are:
 = -- 2858
 > -- 696
@@ -62,4 +61,4 @@ warning$ -- 15
 while$ -- 232
 width$ -- 0
 write$ -- 1347
-(There were 17 warnings)
+(There were 16 warnings)

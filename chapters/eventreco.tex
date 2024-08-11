@@ -1,5 +1,5 @@
 
-\chapter{Mu2e Offline Event Reconstruction}\label{eventreco}
+\chapter{Mu2e Offline event reconstruction}\label{eventreco}
 
 The primary goal of the Mu2e reconstruction algorithms is 
 to efficiently reconstruct electrons within the specific range 
@@ -9,7 +9,7 @@ with default values that are carefully optimized for this purpose.
 This appendix details the various stages involved in the Mu2e event reconstruction process.
 
 \section{Hits reconstruction and pre-filtering}
-\subsection{Tracker Hit Reconstruction and Pre-filtering}
+\subsection{Tracker hit reconstruction and pre-filtering}
 Charged particles traversing the tracker volume generate 
 ionization charges within the gas enclosed by the straws. 
 These charges are collected and produce electrical signals. 
@@ -57,9 +57,7 @@ group of crystals when a particle impacts the detector. The reconstruction of a
 $Cluster$ begins by identifying the crystal with the highest energy deposition 
 and subsequently adding all adjacent crystals that produce signals within a 
 2 ns window and have an energy above 50 MeV.
-
-$Cluster$s are constructed by aggregating signals from crystals struck by 
-particles in the calorimeter. The reconstruction process involves grouping 
+The reconstruction process involves grouping 
 adjacent crystals within a 2 ns time window, with an adjustable energy 
 threshold, currently set at 50 MeV. This procedure is iteratively applied, 
 starting from the added crystals, until no further crystals meet the inclusion 
@@ -71,7 +69,7 @@ seeding the pattern recognition process, significantly reducing the
 combinatorial background in the tracker.
 
 
-\section{Helix Search}
+\section{Helix search}
 The primary objective of the Mu2e tracking software 
 is to reconstruct the trajectories of charged particles 
 moving within the magnetic field of the Detector Solenoid. 
@@ -151,7 +149,7 @@ the wires. Given that the radius of a straw is 2.5 mm,
 the standard deviation of the uniform distribution for 
 the distance between the avalanche's starting point and 
 the wire can be approximately estimated through a 
-back-of-the-envelope calculation as 2.5 mm/$\sqrt{12} \sim 700,\mu\text{m}$. 
+back-of-the-envelope calculation as 2.5 mm/$\sqrt{12} \sim 700 \ \mu$m. 
 Assuming a drift velocity of 50 $\mu\text{m}/\text{ns}$, this leads 
 to a width estimate of approximately 14 ns. On the other hand, the 
 hit times are propagated based on an assumed particle identity 
@@ -272,9 +270,9 @@ of the straws relative to the helix.
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240810_165014.png}
-    \caption[Combinatorial background reduction achieved by exploiting the calorime-
-    ter clusters seeding.]{Combinatorial background reduction achieved by exploiting the calorime-
-    ter clusters seeding \cite{trkpat}. (Left plot) Typical Mu2e event 
+    \caption[Combinatorial background reduction achieved by exploiting the calorimeter 
+    clusters seeding.]{Combinatorial background reduction achieved by exploiting the 
+    calorimeter clusters seeding \cite{trkpat}. (Left plot) Typical Mu2e event 
     with a conversion electron
     projected on the $x-y$ plane. The green circle represents 
     the transverse projection of the
@@ -293,12 +291,12 @@ must be accounted for to optimize track reconstruction. Some of
 these effects are straightforward, such as the non-uniformity of 
 the magnetic field, while others are subtler. For instance, there 
 is an intrinsic symmetry in a straw hit regarding which side the 
-particle traversed, leading to what is commonly referred to as 
+particle traversed, leading to what is commonly referred to as left-right 
 ambiguity, as illustrated in Figure \ref{fig:trackam}.
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240810_171118.png}
+    \includegraphics[width =0.4\textwidth]{figures/png/Screenshot_20240810_171118.png}
     \caption[The symmetry of the straw generates an ambiguity for the hits.]{The 
     symmetry of the straw generates an ambiguity for the hits.}
     \label{fig:trackam}

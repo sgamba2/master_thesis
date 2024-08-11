@@ -1,14 +1,17 @@
 \chapter{First steps towards the station calibration}\label{planning}
-\textit{Reconstructing cosmic tracks and understanding resolutions require 
-calibrating the tracker station \ref{geomtra}. 
-The primary goal of this calibration is to determine signal propagation and 
-channel-to-channel delays for each straw. To achieve this, an unbiased 
-reconstruction of the longitudinal position of the straw 
-hit is essential. In this chapter, I will discuss the planning 
-of the calibration using cosmic muons. My task 
-involved reconstructing the cosmic trajectories in a vertically 
-oriented station and understanding the potential 
-biases and systematic errors that this orientation might introduce.}
+\textit{Following the comprehensive testing of the DAQ and FEE, the subsequent crucial 
+step towards achieving a fully operational tracker is the calibration phase. This 
+calibration will be carried out exploiting cosmic muons. The primary objective of 
+this calibration process is to accurately determine signal propagation times and 
+channel-to-channel delays within each straw. To accomplish this, it is essential 
+to perform an unbiased reconstruction of the longitudinal position of the hits 
+within the straws. This would be easily achieved using the station orientated horizontally. 
+However, certain technical and mechanical contingencies prevent horizontal calibration, 
+necessitating the exclusive focus on vertical orientation.
+In this Chapter, I am focusing on 
+reconstructing the trajectories of cosmic muons within a vertically oriented 
+station, as well as analyzing potential biases and systematic errors that could 
+arise from this particular orientation.}
 \section{Overview of the timing calibration}
 As mentioned in the introduction to this chapter, the main 
 goal of this calibration is to determine signal propagation 
@@ -59,8 +62,7 @@ However, vertical orientation is preferred for some gas system contingencies
 be vertical during the experiment. 
 In the following sections, I will introduce the simulation performed to reconstruct cosmic tracks with 
 a vertically oriented station, aiming to understand possible biases in determining longitudinal position caused by the non-uniform illumination of a panel.
-\subsection{Challenges in the horizontal orientation 
-of the station: gas distribution system and other constraints}\label{gassystem}
+\subsection{Challenges with the horizontal station orientation: gas distribution system and other constraints}\label{gassystem}
 The natural choice for calibrating the station would 
 be to place it horizontally, as previously explained. 
 However, there are several challenges with this orientation, 
@@ -88,28 +90,33 @@ rather than flowing upwards towards the panel. According
 to these specifications, it seems that the only operational 
 mode of the station is in the vertical position, which is 
 the actual orientation of the stations in the fully assembled 
-tracker. In this Chapter we will report on a simulation study 
-which shows that the vertical orientation introduces a bias on 
-the $x_{track}$ which does not allow to perform the station 
-calibration. 
-
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width =0.5\textwidth]{figures/png/gassystem.png}
-    \caption[Schematic view of the valves located in a tracker panel.]{Schematic view of the valves located in a tracker panel.}
-    \label{fig:gassytem}
-\end{figure}
+tracker. 
 Additionally, other reasons include space constraints, as placing 
 a station horizontally takes up significantly more room space than 
 vertically. Moreover, the station is quite fragile, and 
 excessive movement could lead to potential issues.
 
-To ensure optimal performance, it's essential to 
+
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width =0.4\textwidth]{figures/png/gassystem.png}
+    \caption[Schematic view of the valves located in a tracker panel.]{Schematic view of the valves located in a tracker panel.}
+    \label{fig:gassystem}
+\end{figure}
+To ensure optimal performance during Mu2e data-taking, it's essential to 
 conduct the initial calibration with the system in a vertical orientation. 
 This helps us achieve conditions that closely 
 match those of the actual detector. However, if the vertical 
 orientation doesn't prove useful for calibration, 
 we will need to explore new mechanical solutions.
+
+For this reason, in this Chapter I will report on a simulation study 
+which shows that the vertical orientation introduces a significant bias on 
+the $x_{track}$ which does not allow to perform the station 
+calibration. 
+
+
 
 \section{Cosmic muons as a calibration source}
 Cosmic muons will play a fundamental role in the 

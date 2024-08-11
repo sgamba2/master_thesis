@@ -1,6 +1,139 @@
 \chapter{Comparing $\delta$-electrons flagging algorithms}\label{delta}
-\textit{This Chapter}
-\section{Delta electrons}
+\textit{In the context of DAQ testing and performance analysis during Mu2e data-taking, 
+where the data volume is expected to reach approximately 7 PBytes per year, optimizing 
+memory usage and minimizing CPU consumption is crucial. The primary source of hits in the 
+Mu2e tracker will be $\delta$-electrons. Therefore, it is essential to effectively flag these 
+hits without compromising the efficiency of CE hit detection and track reconstruction. This 
+Chapter presents a comparison between two algorithms designed for $\delta$-electron flagging.}
+\section{$\delta$-electrons background in Mu2e}
+One of the central challenges of the Mu2e experiment is the reconstruction of 
+conversion electrons in the presence of significant background noise from 
+other processes associated with muon capture by aluminum atoms.
+
+The primary aim of this study is to address one prevalent source of 
+background: secondary ionized electrons, known as $\delta$-electrons. 
+These electrons primarily consist of Compton scattered electrons, pair production 
+electrons, and delta rays, listed in decreasing order of prevalence. Compton 
+scattered electrons are generated when photons, produced by various processes, 
+interact with the detector material. These photons primarily originate from 
+neutron capture by atoms, which excites the nucleus, leading to photon emission 
+during decay. Typically, these photons have energies of a few MeV. The neutrons 
+are produced when muons are captured by atoms, resulting in unstable isotopes that 
+decay by emitting neutrons. Pair production electrons are generated during nuclear 
+recoil processes, where pairs of electrons and positrons are produced to conserve 
+energy and momentum. Delta rays, or secondary ionized electrons, are generated when 
+high-energy charged particles collide with the detector material.
+
+A delta electron is defined as having a momentum below 20 MeV/c; for instance, an 
+electron with a momentum of 10 MeV/c would have a radius of less than 3 cm in the 
+Mu2e magnetic field. These electrons typically produce a distinctive pattern in the 
+Mu2e tracker, often resulting in multiple hits with nearly identical $(x, y)$ coordinates.
+
+In the Mu2e experiment, low-energy electrons constitute about 75\% of the tracker hits, 
+making their management crucial for memory efficiency. These hits can also interfere with 
+track reconstruction, necessitating their precise identification and filtering to preserve 
+data accuracy. It's essential to correctly identify these hits to prevent misidentification 
+of conversion electrons and to accurately estimate the muon stopping rate, which in turn 
+requires proper identification of protons. Additionally, distinguishing between background 
+sources like low-energy electrons and positrons, and the hits from muons and pions, is 
+critical to maintain the integrity of the analysis and the accuracy of background estimation.
+
+\section{Mu2e $\delta$-electrons rejection algorithms}
+The $\delta$-electrons flagging is a stage of Mu2e reconstruction tool that comes 
+before the time cluster and the pattern recognition.
+The Mu2e Offline software tool is illustrated in Appendix \ref{mu2eana} and 
+the reconstruction process is described in Appendix \ref{eventreco}.
+In Mu2e Offline, there are two different types of rejection algorithms:
+\begin{itemize}
+    \item DeltaFinder;
+    \item FlagBkgHits.
+\end{itemize}
+\begin{figure}[!h]
+    \begin{subfigure}[b]{0.4\linewidth}
+        \centering
+        \includegraphics[scale = 0.3]{figures/png/Screenshot_20240811_123612.png}
+        \subcaption{Before.}
+        \label{fig:bef}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.7\linewidth}
+        \centering
+        \includegraphics[scale = 0.3]{figures/png/Screenshot_20240811_124245.png}
+        \subcaption{After.}
+        \label{fig:af}
+    \end{subfigure}
+    \caption[Before and After background hits flagging.]{Before and After background hits flagging. 
+    The transverse $x-y$ views of a CE event 
+    with 2BB pile-up (Section \ref{pulsedprotonbeam}). The segments are the tracker $StrawHit$s. The hits marked in
+    dark red are from low energy electrons and the ones in blue are from positrons.}
+       \label{fig:befaf}
+\end{figure}
+\subsubsection{$FlagBkgHits$ Algorithm}
+flgbkg flags hits with high charge
+The description of a multivariate analysis is outside the scope of this work and so is the process
+of MVA-training. Since these techniques are fundamental for the background flagging, we will briefly
+describe the basic principles. When looking for patterns in a multi-variable space, it is a common
+procedure to define a set of statistical models that examine the variables measured and estimate the
+probability that these are compatible with the pattern. Once the variables have been chosen, the
+MVA is trained to recognize patterns by looking at examples known to the trainer and a feedback can
+be provided to improve the identification.
+When looking for $\delta$-electrons, the most significant variables are the position and spread of the Com-
+boHit, both in the XY plane and in the Z direction.
+
+This algorithm 
+clusters hits in time and in the $xy$ plane, using 
+Multivariate Analysis to distinguish low-energy 
+hits from conversion electron hits, which are 
+stored for subsequent pattern recognition.
+\subsubsection{$DeltaFinder$ Algorithm}
+DeltaFinder is an algorithm designed to identify $\delta$-electron hit patterns 
+rather than CE hits. This algorithm relies on the fact that $\delta$-electrons usually 
+form a straight line in the $r-z$ plane (Figure \ref{fig:yzviewdelta}) and appear as a spot in the $x-y$ plane, 
+while CE hits create entirely different patterns. The goal of DeltaFinder is to recognize 
+$\delta$ electrons in the Mu2e tracker with high efficiency, minimizing false positives. 
+In the process, all hits associated with detected objects are treated as $\delta$-electron hits.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width =0.6\textwidth]{figures/png/Screenshot_20240811_123048.png}
+    \caption[$\delta$-electrons $y-z$ plane pattern.]{    }
+    \label{fig:yzviewdelta}
+\end{figure}
+\paragraph{Step 1: Identifying $\delta$-Electron Segments}
+
+DeltaFinder first identifies $\delta$-electron track segments within 
+each station separately. $\delta$-electron hits, which may occur in multiple 
+straws within the same tracker panel, are clustered in space-time. The algorithm 
+performs several cleanup cuts to ensure the selected patterns resemble 
+those of $\delta$-electron hits. It uses hit wire intersections to determine the position 
+of the $\delta$-electron segment in 3D.
+For each station and face, DeltaFinder identifies $\delta$-electron seeds by 
+clustering hits within the face and neighboring face. The algorithm skips proton 
+hits with energy deposition above a certain threshold and continues until three 
+seeds are found. It checks for overlaps and refines the seed selection to ensure accuracy.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width =0.6\textwidth]{figures/png/Screenshot_20240811_115854.png}
+    \caption[]{    }
+    \label{fig:deltaseeds}
+\end{figure}
+\paragraph{Step 2: Connecting Seeds}
+DeltaFinder then connects segments close in both the $x-y$ plane and 
+time across different stations to form $\delta$-electron candidates. 
+A valid candidate must have at least two segments and a minimum of five straw hits. 
+Reconstructed segments of a 100 MeV electron typically remain unconnected 
+due to their separation in the $x-y$ plane.
+DeltaFinder links $\delta$-electron seeds across stations, attempting to 
+associate new seeds with existing $\delta$ candidates. If no match is found, a new candidate is created.
+Good $\delta$ candidates are marked, and their hits are flagged 
+to avoid their inclusion in proton candidate searches.
+
+
+\paragraph{Step 3: Identifying proton candidates}
+Finally, DeltaFinder identifies proton candidates by clustering high-ionization 
+hits in time. The algorithm resolves overlaps between proton candidates and 
+merges those with consistent segments across stations.
+
+\iffalse
+
 One of the central challenges of Mu2e is the reconstruction of conversion electrons in the face of
 large amounts of backgrounds from other known processes that follow muon capture by the
 aluminum atoms. The detailed background rates for these processes at this energy scale are not very
@@ -21,121 +154,35 @@ processes involving nuclear recoil also produce pairs of electrons and positrons
 energy and momentum. Delta rays, or secondary ionized electrons, are produced when charged
 energetic particles collide with detector material.
 
-\subsection{The Compton effect}
-The Compton effect is the scattering of photons off quasi-free atomic electrons. 
-In the treatment of this interaction process, the binding energy of
-the atomic electrons is neglected. The differential probability of 
-Compton scattering $\phi_c(E_\gamma, E^'_\gamma) dE^'_\gamma$ for $m_e c^2/2 < E^'_\gamma < E_\gamma$ 
-is given by the Klein-Nishina formula:
-\begin{equation}
-    \phi_{\mathrm{c}}\left(E_\gamma, E_\gamma^{\prime}\right) \mathrm{d} E_\gamma^{\prime}=\pi r_e^2 \frac{N_{\mathrm{A}} Z}{A} \frac{m_e c^2}{E_\gamma} \frac{\mathrm{d} E_\gamma^{\prime}}{E_\gamma^{\prime}}\left[1+\left(\frac{E_\gamma^{\prime}}{E_\gamma}\right)^2-\frac{E_\gamma^{\prime}}{E_\gamma} \sin ^2 \theta_\gamma\right]
-\end{equation}
-
-where $\theta_\gamma$ is the scattering angle of 
-the photon in the laboratory system (Figure \ref{fig:Compton}) and $E_\gamma$, $E^'_\gamma$
-are the energies of the incident and scattered photon. 
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width =0.6\textwidth]{figures/png/Screenshot_20240731_144138.png}
-    \caption{}
-    \label{fig:anglesinmuon}
-\end{figure}
-
-
-The total cross section for Compton scattering per electron is
-given by [55]
-
-
-The angular and energy distributions of Compton electrons are discussed
-in great detail in R.D. Evans [56] and G. Hertz [48]. For the energy
-spectrum of Compton electrons one gets
-
-For Compton scattering off atoms the cross section is increased by the factor Z, because there are exactly Z electrons as possible scattering partners
-in an atom; consequently σatomic
-c = Z · σe
-c .
-At high energies the energy dependence of the Compton-scattering cross
-section can be approximated by [57]
-
-The ratio of scattered to incident photon energy is given by
-
-Naturally, Compton scattering does not only occur with electrons, but
-also for other charged particles. For the measurement of photons in particle detectors, however, Compton scattering off atomic electrons is of
-special importance
-\subsection{Pair production}
-The production of electron-positron pairs in the Coulomb field of a
-nucleus is only possible if the photon energy exceeds a certain threshold.
-This threshold energy is given by the rest masses of two electrons plus
-the recoil energy which is transferred to the nucleus. From energy and
-momentum conservation, this threshold energy can be calculated to be
-
-Since mnucleus  me , the effective threshold can be approximated by
-
-If, however, the electron-positron pair production proceeds in the
-Coulomb field of an electron, the threshold energy is
-
-Electron-positron pair production in the Coulomb field of an electron is,
-however, strongly suppressed compared to pair production in the Coulomb
-field of the nucleus.
-In the case that the nuclear charge is not screened by atomic electrons,
-(for low energies the photon must come relatively close to the nucleus to
-make pair production probable, which means that the photon sees only
-the ‘naked’ nucleus),
-
-\subsection{Energetic knock-on electrons ($\delta$ rays)}
-The energy transfers to ionisation electrons can be so large that these
-electrons can cause further ionisation. These electrons are called δ rays or
-knock-on electrons. The energy spectrum of knock-on electrons is given
-by [1, 10-12, 25]
-dN
-dEkin
-= ξ · F
-E2
-kin
-(1.25)
-for I  Ekin ≤ Emax
-kin .
-F is a spin-dependent factor of order unity, if Ekin  Emax
-kin [12]. Of
-course, the energy spectrum of knock-on electrons falls to zero if the
-maximum transferable energy is reached. This kinematic limit also constrains the factor F [1, 25]. The spin dependence of the spectrum of the
-knock-on electrons only manifests itself close to the maximum transferable
-energy [1, 25].
-The strong fluctuations of the energy loss in thin absorber layers are
-quite frequently not observed by a detector. Detectors only measure the
-energy which is actually deposited in their sensitive volume, and this
-energy may not be the same as the energy lost by the particle. For example, the energy which is transferred to knock-on electrons may only be
-partially deposited in the detector because the knock-on electrons can
-leave the sensitive volume of the detector.
-Therefore, quite frequently it is of practical interest to consider only
-that part of the energy loss with energy transfers E smaller than a given
-cut value Ecut. This truncated energy loss is given by [10-12, 26]
 
 
 
 
 
+DELTAFINDER:
+step 1: Find $\delta$-electron track segments separately within each station
+connect segments, allow 1 station wide "gaps"
+dominant sources of failures:
+I stations with MC particle producing hits in only one face;
+I hits with wrong coordinates along the wire - long tails of the $\Delta$T distribution;
+I recover hits in "empty" stations to improve efficiency;
+I optimization of the algorithm timing performance;
+electron hit energy dependence on momentum: path length within the straw depends on momentum
+only about 4\% of CE hits have energies above 3.5keV (1\% above 5 keV)
+consider several hit energy cutoffs: 3.5 keV, 5keV, 7keV, use all hits
 
 
-
-
-
-The delta removal is a part of a series of selections on the hit properties to reduce background
-hits.
-The first selection concerns the energy deposited by the hit and excludes strongly ionizing
-particles such as protons*. Since deltas aren't generally strongly ionizing, we require another selection
-- hence this study. The last selection is made with respect to time. Namely, the time when the
-conversion electron goes through the midpoint of the detector along the symmetry axis can be found
-using an algorithm which takes the hits that pass the delta selection as input. By looking only at hits
-within a short interval centered at this time, many background hits can be excluded.
-In mu2e there are 2 types of rejections:
-\begin{itemize}
-    \item DeltaFinder
-    \item FlgBkgHits
-\end{itemize}
 
 
 \subsection{Delta electron features}
+
+
+
+
+
+
+
+
 Figure 2.1 shows the momentum distribution of deltas for 10,000 events.
 Most deltas have much lower momenta than conversion electrons. This produces a significant
 difference in their trajectories through the tracker, as shown in Figures 2.2 to 2.4. With the naked eye
@@ -152,43 +199,4 @@ language: $\delta$-electron - an electron with P<20 MeV/c
 radius of a 10 MeV/c electron in the nominal Mu2e field < 3 cm, close to the resolution
 along the wire
 very specific topology - multiple hits with the same (X,Y) , within the resolution
-\subsection{Hit Position Information and Clustering}
-As mentioned above, the current straw drift tube position measurement limits the resolution to a
-few cm. An improved position measurement can be made by taking advantage of the various layers of
-straws that have large overlaps in the transverse plane. By taking two hit measurements from a pair of
-intersecting straws and requiring them to be within a time window of on the order of the maximum
-drift time*, one can reliably infer that such a pair of hits have been produced by the same particle and
-occurred at the intersection of the two straws in the projected plane. Since the method involves two
-dimensional information (from two straws), it is referred to as the stereo information method. Such a
-measurement is much more precise, as shown in Figure 3.1.
-
-\subsection{DeltaFinder}
-step 1: Find $\delta$-electron track segments separately within each station
-connect segments, allow 1 station wide "gaps"
-dominant sources of failures:
-I stations with MC particle producing hits in only one face;
-I hits with wrong coordinates along the wire - long tails of the $\Delta$T distribution;
-I recover hits in "empty" stations to improve efficiency;
-I optimization of the algorithm timing performance;
-electron hit energy dependence on momentum: path length within the straw depends on momentum
-only about 4\% of CE hits have energies above 3.5keV (1\% above 5 keV)
-consider several hit energy cutoffs: 3.5 keV, 5keV, 7keV, use all hits
-\subsection{FlgBkgHits}
-flgbkg flags hits with high charge
-The description of a multivariate analysis is outside the scope of this work and so is the process
-of MVA-training. Since these techniques are fundamental for the background flagging, we will briefly
-describe the basic principles. When looking for patterns in a multi-variable space, it is a common
-procedure to define a set of statistical models that examine the variables measured and estimate the
-probability that these are compatible with the pattern. Once the variables have been chosen, the
-MVA is trained to recognize patterns by looking at examples known to the trainer and a feedback can
-be provided to improve the identification.
-When looking for δ-electrons, the most significant variables are the position and spread of the Com-
-boHit, both in the XY plane and in the Z direction.
-
-This algorithm 
-clusters hits in time and in the $xy$ plane, using 
-Multivariate Analysis to distinguish low-energy 
-hits from conversion electron hits, which are 
-stored for subsequent pattern recognition.
-\section{Analysis}
-The Mu2e Simulation framework is described in Appendix \ref{mu2eana}
+\fi
