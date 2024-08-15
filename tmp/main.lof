@@ -37,10 +37,10 @@
 \contentsline {figure}{\numberline {2.20}{\ignorespaces The transverse view of the straw-tracker.}}{58}{figure.caption.45}%
 \contentsline {figure}{\numberline {2.21}{\ignorespaces The momentum calibration scheme.}}{59}{figure.caption.46}%
 \contentsline {figure}{\numberline {2.22}{\ignorespaces The Mu2e calorimeter disks.}}{61}{figure.caption.47}%
-\contentsline {figure}{\numberline {2.23}{\ignorespaces CAD representation of the calorimeter disks.}}{61}{figure.caption.48}%
+\contentsline {figure}{\numberline {2.23}{\ignorespaces CAD representation of the calorimeter disks.}}{62}{figure.caption.48}%
 \contentsline {figure}{\numberline {2.24}{\ignorespaces The calorimeter components.}}{62}{figure.caption.49}%
 \contentsline {figure}{\numberline {2.25}{\ignorespaces The breakout of calorimeter mechanical components.}}{63}{figure.caption.50}%
-\contentsline {figure}{\numberline {2.26}{\ignorespaces The design of SiPM cells.}}{63}{figure.caption.51}%
+\contentsline {figure}{\numberline {2.26}{\ignorespaces The design of SiPM cells.}}{64}{figure.caption.51}%
 \contentsline {figure}{\numberline {2.27}{\ignorespaces The calorimeter Front-End electronic board.}}{64}{figure.caption.52}%
 \contentsline {figure}{\numberline {2.28}{\ignorespaces The calorimeter Mezzanine Board and FEE.}}{65}{figure.caption.53}%
 \contentsline {figure}{\numberline {2.29}{\ignorespaces The energy and time resolution of the calorimeter Module-0.}}{66}{figure.caption.54}%
@@ -106,30 +106,33 @@
 \contentsline {figure}{\numberline {4.39}{\ignorespaces The number of events versus run number (emulated CFO).}}{117}{figure.caption.112}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces The Compton effect.}}{120}{figure.caption.113}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Pair production}}{122}{figure.caption.114}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Monte Carlo momentum distribution of particles producing hits in the Mu2e tracker.}}{125}{figure.caption.115}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Monte Carlo deposited energy distribution in the Mu2e tracker.}}{126}{figure.caption.116}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces The pair production.}}{122}{figure.caption.114}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Monte Carlo momentum distribution of particles producing hits in the Mu2e tracker (conversion electron dataset and pileup).}}{125}{figure.caption.115}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Monte Carlo momentum distribution of particles producing hits in the Mu2e tracker ($\bar {p}$ dataset and no pileup).}}{126}{figure.caption.116}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Before and After background hits flagging. The transverse $x-y$ views of a CE event with 2BB pile-up (Section \ref {pulsedprotonbeam}). The segments are the $hit$ tracker straws. The hits marked in red are from electrons and the ones in blue are from positrons.\relax }}{127}{figure.caption.117}%
 \contentsline {figure}{\numberline {5.6}{\ignorespaces $\delta $-electrons $y-z$ plane pattern.}}{128}{figure.caption.118}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces $\delta -seed$s from $StrawHit$s.}}{129}{figure.caption.119}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Monte Carlo deposited energy distribution in the Mu2e tracker.}}{131}{figure.caption.120}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Schematic view of the valves located in a tracker panel.}}{133}{figure.caption.120}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces The relation of $\theta ^*$ to $\theta $.}}{135}{figure.caption.121}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Schematic view of a tracker station and the coordinate system.}}{136}{figure.caption.122}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Illumination of Monte Carlo hits on panel 0, plane 0.}}{137}{figure.caption.123}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces The Monte Carlo $y-z$ direction distribution.}}{138}{figure.caption.124}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Schematic view of a cosmic muon hitting the vertical oriented station.}}{139}{figure.caption.125}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces The reconstructed longitudinal coordinate in the 0th panel frame.}}{141}{figure.caption.126}%
-\contentsline {figure}{\numberline {6.8}{\ignorespaces The bias between the reconstructed and the true hit coordinate.}}{142}{figure.caption.127}%
-\contentsline {figure}{\numberline {6.9}{\ignorespaces The 2D histogram of the longitudinal bias versus the true coordinate.}}{142}{figure.caption.128}%
-\contentsline {figure}{\numberline {6.10}{\ignorespaces The profile of the longitudinal bias versus the true longitudinal coordinate.}}{143}{figure.caption.129}%
-\contentsline {figure}{\numberline {6.11}{\ignorespaces The reconstructed $y-z$ direction distribution of cosmic rays.}}{143}{figure.caption.130}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Schematic view of the valves located in a tracker panel.}}{135}{figure.caption.121}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces The relation of $\theta ^*$ to $\theta $.}}{137}{figure.caption.122}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Schematic view of a tracker station and the coordinate system.}}{138}{figure.caption.123}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Monte Carlo illumination across the panel (panel 0, plane 0).}}{139}{figure.caption.124}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces The $y-z$ direction distribution of muons satisfying 4/4 request.}}{140}{figure.caption.125}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Schematic view of a cosmic muon hitting the vertical oriented station.}}{142}{figure.caption.126}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces The reconstructed longitudinal coordinate in the 0th panel frame.}}{143}{figure.caption.127}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces The bias between the reconstructed and the true hit coordinate.}}{144}{figure.caption.128}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces The 2D histogram of the longitudinal bias versus the true coordinate.}}{144}{figure.caption.129}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces The profile of the longitudinal bias versus the true longitudinal coordinate.}}{145}{figure.caption.130}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces The reconstructed $y-z$ direction distribution of cosmic rays.}}{146}{figure.caption.131}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Mu2e simulation and data handling.}}{148}{figure.caption.131}%
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Mu2e simulation and data handling.}}{150}{figure.caption.132}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Procedure adopted to search for the center of the $x-y$ projection of the helix.}}{155}{figure.caption.132}%
-\contentsline {figure}{\numberline {C.2}{\ignorespaces Sketch of the resolution of the 2$\pi $ ambiguity.}}{155}{figure.caption.133}%
-\contentsline {figure}{\numberline {C.3}{\ignorespaces Combinatorial background reduction achieved by exploiting the calorimeter clusters seeding.}}{156}{figure.caption.134}%
-\contentsline {figure}{\numberline {C.4}{\ignorespaces The symmetry of the straw generates an ambiguity for the hits.}}{157}{figure.caption.135}%
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Procedure adopted to search for the center of the $x-y$ projection of the helix.}}{157}{figure.caption.133}%
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Sketch of the resolution of the 2$\pi $ ambiguity.}}{157}{figure.caption.134}%
+\contentsline {figure}{\numberline {C.3}{\ignorespaces Combinatorial background reduction achieved by exploiting the calorimeter clusters seeding.}}{158}{figure.caption.135}%
+\contentsline {figure}{\numberline {C.4}{\ignorespaces The symmetry of the straw generates an ambiguity for the hits.}}{159}{figure.caption.136}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {D.1}{\ignorespaces Plane 0 illumination pattern of cosmic hits.}}{159}{figure.caption.136}%
-\contentsline {figure}{\numberline {D.2}{\ignorespaces Plane 1 illumination pattern of cosmic hits.}}{160}{figure.caption.137}%
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Plane 0 illumination pattern of cosmic hits.}}{161}{figure.caption.137}%
+\contentsline {figure}{\numberline {D.2}{\ignorespaces Plane 1 illumination pattern of cosmic hits.}}{162}{figure.caption.138}%
