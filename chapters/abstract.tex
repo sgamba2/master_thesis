@@ -1,43 +1,80 @@
 \begin{abstract}
 \noindent
-The primary objective of the Mu2e experiment is to search for neutrino-less coherent $\mu \rightarrow e$ conversion in the 
-field of an aluminum nucleus, $\mu^- \text{Al} \rightarrow e^-\text{Al}$. This process's signal is a monoenergetic electron 
-with an energy of approximately 104.97 MeV, Ref. \cite{bartoszek2015mu2e}. 
-In the Standard Model (SM), the branching ratio for this process, or for the similarly 
-intriguing $\mu \rightarrow e \gamma$ decay, is expected to be of the order of $\mathcal{O}(10^{-54})$. 
-These values are well below the sensitivity of any current experimental capabilities, but several models of physics beyond the 
-SM predicts a much higher relative rate that could reach an observable level in some super-symmetry scenarios. 
-The SINDRUM II experiment established an upper limit on muon conversion 
-at $7 \times 10^{-13}$ (90\% C.L.) \cite{SINDRUMII:2006dvw}, and the Mu2e collaboration aims to improve this limit by four orders of magnitude. 
-Observing this process would provide unambiguous evidence of physics beyond the Standard Model and its search is complementary to 
-the direct searches for new physics currently carried out at the CERN Large Hadron Collider. 
 
-Mu2e will make use of a sophisticated setup to achieve its goals. An 8.9 GeV proton beam from Fermilab will strike a tungsten target, producing $\mu$s through $\pi$s decay. 
-These particles are transported via a series of superconducting solenoids to an aluminum stopping target, where the conversion may occur. 
-The system includes multiple components to precisely identify the conversion electrons and distinguish them from various backgrounds, including a straw tracker, 
-an electromagnetic calorimeter, a Cosmic Ray Veto and a Stopping Target Monitor.
 
-One of the most important Mu2e subsystems is the tracker, which must provide very good momentum resolution to distinguish the monochromatic 
-conversion electron signal from the background. Energy loss in the tracker needs to be minimal; thus, the experiment will use a straw 
-tube tracker, Ref. \cite{bobbb}. Its annular shape follows the helical trajectories of conversion electrons in the magnetic field. 
-The tracker consists of panels containing arrays of straw tubes arranged like hap chords. It is required to measure the conversion electrons with a momentum 
-resolution better than 180 keV/c. 
+The primary objective of the Mu2e experiment is to search for neutrino-less 
+coherent $\mu \rightarrow e$ conversion in the field of an aluminum nucleus, 
+$\mu^- \text{Al} \rightarrow e^-\text{Al}$. The signal for this process is a 
+monoenergetic electron with an energy of approximately 104.97 MeV \cite{bartoszek2015mu2e}. 
+In the Standard Model (SM), the branching ratio for this process, as 
+well as for the similarly intriguing $\mu \rightarrow e \gamma$ 
+decay, is expected to be of the order of $\mathcal{O}(10^{-54})$. 
+These values are well below the sensitivity of current experimental 
+capabilities. However, several models of physics beyond the SM predict 
+a much higher relative rate, potentially reaching an observable level 
+in some supersymmetry scenarios. The SINDRUM II experiment established 
+an upper limit on muon conversion at $7 \times 10^{-13}$ (90\% C.L.) 
+\cite{SINDRUMII:2006dvw}, and the Mu2e collaboration aims to improve 
+this limit by four orders of magnitude. Observing this process would 
+provide unambiguous evidence of physics beyond the Standard Model, 
+complementing direct searches for new physics currently conducted at 
+the CERN Large Hadron Collider.
 
-My activity at Fermilab has focused on the commissioning of the Mu2e DAQ system and the Vertical Slice Test (VST) of the tracker. 
-The VST encompasses the entire testing chain from the straws to the readout, to processed data on disk. Our ultimate goal was to conduct 
-a time calibration of the first assembled station of the tracker, aiming for a longitudinal position resolution better than 4 cm, and to determine the channel-to-channel delay and the drift velocity.
+Mu2e employs a sophisticated setup to achieve its goals. An 8.9 GeV 
+proton beam from Fermilab strikes a tungsten target, producing $\mu$s 
+through $\pi$s decay. These particles are transported via a series of 
+superconducting solenoids to an aluminum stopping target, where the 
+conversion may occur. The system includes multiple components to precisely 
+identify the conversion electrons and distinguish them from various backgrounds, 
+including a straw tracker, an electromagnetic calorimeter, a Cosmic Ray Veto, and a Stopping Target Monitor.
 
-Before proceeding, validating data from the tracker panels is necessary. The tracker's readout system has undergone several 
-tests to validate its performance, ensuring accurate and reliable data collection. This includes testing readout logic and firmware 
-with simulated and real data to confirm functionality, and developing methods to monitor and validate data accuracy, including identifying and addressing cross-talk and noise issues.
+The tracker must provide excellent 
+momentum resolution to distinguish the monochromatic 
+conversion electron signal from the background. To 
+minimize energy loss, a straw tube tracker will be used 
+\cite{bobbb}. Its annular shape follows the helical 
+trajectories of conversion electrons in the magnetic field. 
+The detector has a modular design, made of basic elements named $Panel$, $Face$, 
+$Plane$ and $Station$. The tracker consists of panels containing 
+arrays of straw tubes, which are the sensitive units, arranged like harp chords. 
 
-Our objective is to gather data from cosmic rays to develop the time calibration of the tracker. First, it was important to assess the feasibility of 
-performing this calibration with a vertical orientation of the first station. For this purpose, straight cosmic rays were simulated in one station to 
-understand how the varying luminosity of the straws can impact timing calibration and hit segment reconstruction. This calibration is crucial for achieving 
-precise momentum resolution, relying on accurate reconstruction of straw hit positions. Our goal is to determine the drift velocity in the straws and the time 
-offset from channel to channel. This involves reconstructing straight cosmic segments within each station by assessing whether a straw has been hit and the 
-relative orientations of the straws. From there, we can locate intersection points of straws on a 2D plane, assuming these to be the particle hit coordinates. 
-This process is repeated for all pairs of straws, followed by fitting all the points together. The actual position of a hit within a straw can then be reconstructed, 
-identifying biases by comparing the MC hits position with the reconstructed ones. Our target is to achieve a longitudinal resolution better than 4 cm, ensuring that every 
-bias remains below this threshold. During data collection, each straw will undergo calibration by correlating the time difference between ends with the reconstructed position.
+My work at Fermilab has focused on the complete DAQ testing from both 
+hardware and software perspectives. I was involved in the commissioning 
+of the Mu2e DAQ system and the Vertical Slice Test (VST) of the tracker. 
+The VST encompasses the entire testing chain, from the straws to the readout, to processed data on disk.
+
+The tracker's DAQ and front-end electronics (FEE) have undergone several tests 
+to validate their performance, ensuring reliability during future calibrationa and data-taking. 
+This includes testing readout logic and firmware with emulated data to confirm functionality and the buffering 
+of the DAQ components. The FEE monitoring and validation was performed. In particular, all preamps of a tracker panel 
+were tested and identifying and addressing cross-talk and noise issues, to garantee the correct functionality.
+
+The Mu2e experiment is expected to generate 7 PBytes of data annually, primarily 
+from $\delta$-electrons (Compton scattered electrons, pair production electrons and positrons, and delta rays). 
+Compton scattered electrons are generated when photons, from neutron capture, interact with the detector material. 
+Typically, these photons have energies of a few MeV. Pair production electrons and positrons are 
+generated during nuclear recoil processes. Delta rays, or secondary ionized electrons, 
+are generated when high-energy charged particles collide with the detector material. 
+It is crucial to effectively flag these hits 
+without compromising the efficiency of CE and other background hit detection and track reconstruction. 
+From the software point of view, I performed a 
+comparison between the two algorithms developed to flag these hits, improving their performance. This analysis is 
+important as optimizing memory usage and minimizing CPU consumption is crucial.
+
+Our ultimate goal was to conduct a time calibration of the first assembled station 
+of the tracker, aiming for a longitudinal position resolution better than 4 cm, 
+and to determine the channel-to-channel delay and the propagation velocity on the 
+wire. Our objective is to gather data from cosmic rays to develop the time calibration 
+of the tracker, ensuring that every bias remains below this threshold. First, it was 
+important to assess the feasibility of performing this calibration with a vertical orientation 
+of the first station, considering mechanical contingencies. To this end, straight cosmic rays 
+were simulated in one station to understand how the varying luminosity of the straws can impact 
+timing calibration and hit segment reconstruction. This calibration is crucial for achieving 
+precise momentum resolution, relying on accurate reconstruction of straw hit positions. This 
+involves reconstructing straight cosmic segments within each station by assessing whether a 
+straw has been hit and the relative orientations of the straws. From there, we can locate 
+intersection points of straws on a 2D plane, assuming these to be the particle hit coordinates. 
+This process is repeated for all pairs of straws, followed by fitting all the points together. 
+The actual position of a hit within a straw can then be reconstructed, identifying biases by 
+comparing the Monte Carlo hit positions with the reconstructed ones.
 \end{abstract}
