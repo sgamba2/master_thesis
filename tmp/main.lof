@@ -109,12 +109,16 @@
 \contentsline {figure}{\numberline {5.2}{\ignorespaces The pair production.}}{120}{figure.caption.114}%
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Monte Carlo momentum distribution of particles producing hits in the Mu2e tracker (conversion electron dataset and pileup).}}{125}{figure.caption.115}%
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Monte Carlo momentum distribution of particles producing hits in the Mu2e tracker ($\bar {p}$ dataset and no pileup).}}{126}{figure.caption.116}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Before and After background hits flagging. The transverse $x-y$ views of a CE event with 2BB pile-up (Section \ref {pulsedprotonbeam}). The segments are the $hit$ tracker straws. The hits marked in red are from electrons and the ones in blue are from positrons.\relax }}{127}{figure.caption.117}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Before and After background hits flagging.}}{127}{figure.caption.117}%
 \contentsline {figure}{\numberline {5.6}{\ignorespaces $\delta $-electrons and CE patterns in $r-z$ plane.}}{129}{figure.caption.118}%
 \contentsline {figure}{\numberline {5.7}{\ignorespaces A $\delta $ candidate $seed$.}}{130}{figure.caption.119}%
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Monte Carlo deposited energy distribution in the Mu2e tracker.}}{130}{figure.caption.120}%
 \contentsline {figure}{\numberline {5.9}{\ignorespaces The distribution of the total and flagged number of muon $ComboHit$s versus momentum.}}{133}{figure.caption.123}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces The efficiency of electrons and positrons versus particle momentum in the low-momentum range.}}{135}{figure.caption.126}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces The $\delta $-electrons energy distribution.}}{134}{figure.caption.126}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces The efficiency of electrons and positrons versus particle momentum in the low-momentum range.}}{136}{figure.caption.127}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Momentum distribution of reconstructed tracks.}}{137}{figure.caption.129}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces $TimeCluster$ on $time-z$ plane.}}{138}{figure.caption.131}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces $TimeCluster$ on $time-z$ plane.}}{138}{figure.caption.132}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Schematic view of the valves located in a tracker panel.}}{143}{figure.caption.134}%
 \contentsline {figure}{\numberline {6.2}{\ignorespaces The relation of $\theta ^*$ to $\theta $.}}{145}{figure.caption.135}%
