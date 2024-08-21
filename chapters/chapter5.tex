@@ -1,10 +1,16 @@
 \chapter{Pre-pattern recognition studies}\label{delta}
 \textit{During Mu2e data-taking, 
-where the data volume is expected to reach approximately 7 PBytes per year, optimizing 
-memory usage and minimizing CPU consumption is crucial. The primary source of hits in the 
-Mu2e tracker will be $\delta$-electrons. Therefore, it is essential to effectively flag these 
-hits without compromising the efficiency of CE hit detection and track reconstruction. This 
-Chapter presents a comparison between two algorithms designed for $\delta$-electron flagging.}
+where the data volume is expected to reach 
+approximately 7 PBytes per year, optimizing 
+memory usage and minimizing CPU consumption 
+is crucial. The primary source of hits in the 
+Mu2e tracker will be $\delta$-electrons. 
+Therefore, it is essential to effectively flag these 
+hits without compromising the efficiency 
+of CE hit detection and track reconstruction. This 
+Chapter presents a comparison between 
+two algorithms designed for $\delta$-electron 
+flagging in Mu2e Offline.}
 
 \section{$\delta$-electrons as source of background}
 
@@ -308,8 +314,9 @@ stages, S0 through S6, which will be briefly discussed in the context of our spe
     inelastic interactions is determined by the total inelastic cross-section 
     ($\sigma_{\text{tot.inelastic}}$) of protons on tungsten (W), which follows the 
     empirical cross section $\sigma_{\text{tot.inelastic}}(\text{W}) = (1710 \pm 30) \ \text{mb}$.
-    The probability that a proton from the beam induces an inelastic interaction with the tungsten target is computed using a Monte Carlo approach 
-    ($    \frac{N_{\text{inelastic}}}{N_{\text{POT}}} = 0.792$). Regarding the $\bar{p}$ 
+    The probability that a proton from the beam induces an inelastic interaction 
+    with the tungsten target is computed using a Monte Carlo approach, that gives 
+    $    \frac{N_{\text{inelastic}}}{N_{\text{POT}}} = 0.792$. Regarding the $p\bar{p}$ 
     data sample, the number of antiprotons produced per proton on target (POT) at the production target is given by:
     $$
     N_{\bar{p}_{\text{POT}}} = \frac{\sigma_p}{\sigma_{\text{tot.inelastic}}} \times N_{\text{inelastic}} = \frac{0.5 \times 0.2824 \, \text{mb}}{1710} \times 0.792 = 6.5 \times 10^{-5}.
@@ -1225,10 +1232,70 @@ observed without a momentum cut.
 \end{center}
 
 \section{Conclusions}
-hit flagging results
-lavora male quando la statistica e'bassa. 
-non distingue i protoni.
-high level results
-e'basato sul monte carlo. training difficile. se e' sviluppato per 
-riconoscere bene A e B, quando arriva C va in confusione. 
-timing results
+The Mu2e tracker will see approximately 75\% of its hit 
+sources originate from $\delta$-electrons, which are electrons 
+and positrons with momenta below 20 MeV/c. Two distinct algorithms 
+have been developed in Mu2e Offline to identify these hits and exclude 
+them from the reconstruction process: $FlagBkgHits$ and $DeltaFinder$. 
+The $FlagBkgHits$ algorithm initially clusters the hits and then uses an ANN 
+to classify them, while $DeltaFinder$ identifies clusters of hits that are 
+consistent with those produced by low-momentum particles.
+
+The performance of these two algorithms has been compared on two levels:
+
+\begin{itemize}
+    \item Hit-level comparison: it focuses on evaluating the 
+    accuracy with which individual hits are flagged, providing a 
+    direct method for comparing the algorithms' performance. In terms 
+    of $\delta$-electron flagging, both algorithms perform similarly. 
+    However, $DeltaFinder$ performs better in flagging positrons 
+    due to the low statistics at energies below 2 MeV/c, 
+    while this disadvantages $FlagBkgHits$ since the ANN is 
+    statistics dependent, though it 
+    performs worse with electrons as it struggles to reconstruct hits 
+    that register only a single hit per station. Regarding CE hits, 
+    $FlagBkgHits$ flags approximately 70\% more of these than 
+    $DeltaFinder$, as it performs analysis on the $x$-$y$ plane and does 
+    not reconstruct hits in the $z$ coordinate. Furthermore, 
+    $DeltaFinder$ is capable of flagging proton hits (approximately 84\%), 
+    a task that $FlagBkgHits$ cannot perform. It is crucial that hits 
+    corresponding to $p\bar{p}$ annihilation are not flagged. This necessitates 
+    examining muon and pion hit flagging, but $FlagBkgHits$ trained 
+    on datasets lacking muon and pion hits and so 
+    flags these particles at rates roughly 4 and 3.3 times higher, 
+    respectively, than $DeltaFinder$.
+    
+    \item High-level comparison: This phase assesses the algorithms' 
+    impact on subsequent stages of event reconstruction, particularly 
+    how effectively each contributes to accurate track reconstruction. 
+    The main observed difference between the two algorithms lies in the number 
+    of reconstructed tracks using CE data samples, which is 16\% higher 
+    for $FlagBkgHits$. This increase is due to $FlagBkgHits$ failing to 
+    properly flag protons, allowing these particles to be sent to the 
+    reconstruction stage. The difference in the reconstruction of 
+    $p\bar{p}$ events, measured as the fraction of events with 
+    at least two reconstructed tracks, is approximately 22\% higher with $DeltaFinder$.
+\end{itemize}
+
+Additionally, the processing time per event for each algorithm was 
+monitored. For $FlagBkgHits$, it was necessary to account for the time 
+spent creating the $StereoHit$s, while $DeltaFinder$ independently 
+reconstructed the $seed$s. Processing $CELE1BB$ events required about 
+0.14 ms/event for $FlagBkgHits$ plus an additional 0.15 ms/event, 
+compared to 0.42 ms/event for $DeltaFinder$. For $CELE2BB$ events, 
+$FlagBkgHits$ took approximately 0.37 ms/event plus 0.34 ms/event, 
+while $DeltaFinder$ required 1.1 ms/event. Processing $PBAR0BB$ 
+events took about 0.02 ms/event plus 0.02 ms/event for $FlagBkgHits$, 
+and 0.09 ms/event for $DeltaFinder$. The difference in processing time 
+is negligible considering that the entire reconstruction process 
+takes only a few ms per event.
+
+The primary drawback of $FlagBkgHits$ is its reliance 
+on supervised training using CE and $\delta$-electron samples. 
+This approach fails when other particles, such as cosmic muons 
+and those from $p\bar{p}$ annihilation, are introduced into the algorithm. 
+Additionally, the training was performed using Monte Carlo data 
+rather than real data, posing a potential risk when transitioning 
+to actual data-taking. Moreover, being ANN-based, $FlagBkgHits$ 
+performs poorly when the statistics are very low and lacks 
+a well-defined method for proton flagging.

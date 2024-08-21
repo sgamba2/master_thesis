@@ -13,32 +13,44 @@ reconstructing the trajectories of cosmic muons within a vertically oriented
 station, as well as analyzing potential biases and systematic errors that could 
 arise from this particular orientation.}
 \section{Overview of the timing calibration}
-As mentioned in the introduction to this chapter, the main 
-goal of this calibration is to determine signal propagation 
+The main goal of this calibration is to 
+determine signal propagation 
 and channel-to-channel delays for each straw.
-When a particle creates a signal in a straw, it propagates 
-on the central wire towards both ends. 
-The arrival times at the ends will be called $t_1$ and $t_2$, 
-which are given by the following equations:
+When a charged particle crosses the straw tube 
+gas volume, the resulting ionization charge 
+generates an electric signal along the central 
+wire which propagates towards the two ends of 
+the straw and to the front-end electronics, 
+where TDCs measure the signal arrival 
+times $t_1$ and $t_2$. The primary goal of 
+the time calibration is enabling the 
+determination of the track position 
+along the straw from the measurement of 
+the arrival times $t_1$ and $t_2$. 
+The dependence of $t_1$ and $t_2$ on the track 
+position $x_{track}$ is given by the following equations:
 \begin{equation}
 \begin{aligned}
     t_1 &= t_0 + \frac{x_{\text{track}}}{v} + t_d + d_1 \\
     t_2 &= t_0 + \frac{L - x_{\text{track}}}{v} + t_d + d_2
 \end{aligned}
 \end{equation}
-where $t_0$ is the muon arrival time, $t_d$ is the drift time, 
-$L$ is the length of the straw, $x_{\text{track}}$ is the 
+where $t_0$ is the particle's crossing time, 
+$t_d$ is the drift time in the straw, 
+$L$ is the length of the straw, 
+$x_{\text{track}}$ is the 
 reconstructed track position on the wire, $v$ 
-is the propagation velocity of the electric signal along the central 
-wire and $d_i$ are the delays introduced 
+is the propagation velocity of 
+the electric signal along the central 
+wire and $d_i$ are the delays  
 introduced by the front end electronics. 
 $t_1$ and $t_2$ are measured  
 by the TDC timing on the HV side and on the CAL side.
-The measurement of $\Delta t_{12}$ allows 
-determining the position $x_{\text{track}}$ that 
-the particle has passed, 
-while $(t_1 + t_2) / 2$ allows measuring, 
-up to an offset common to all channels, the drift time. 
+The measurement of the difference 
+$\Delta t_{12}=t_1-t_2$ allows 
+determining the coordinate $x_{\text{track}}$, 
+while $(t_1 + t_2) / 2$ allows to measure the drift time  
+up to an offset common to all channels. 
 If we subtract and add the two equations, we obtain:
 \begin{equation}\label{ffffff}
     \begin{aligned}
@@ -52,17 +64,27 @@ signals at the two straw ends as measured
 by the TDCs, the reconstructed track coordinate 
 $x_{track}$ along the wire, the propagation 
 velocity $v$ of the signal along the wire and 
-the difference between the delays introduced by 
-the front-end electronics.
+the difference $d_1-d_2$ between the delays introduced by 
+the front-end electronics. 
+Performing the time calibration means 
+determining $v$ and $d1-d2$ from the $\Delta t_{12}$ 
+measured by the TDCs and from an independent 
+reconstruction of the track 
+projected on the wire ($x_{track}$).
 This type of calibration will be 
 achieved using cosmic rays. 
+At the moment of the very first calibration, 
+the only available spatial information is 
+whether a straw has been hit or not. The 
+only way to obtain $x_{track}$ from a "yes or no" 
+information is to use the tracker station 
+geometry and the relative rotation angle between straws. 
 To determine $v$ in the first equation of \ref{ffffff}, 
 an unbiased reconstruction of the 
 track projected on the wires is needed.
-Since the station is not yet calibrated, 
-it is only possible 
-to use the information whether a straw 
-has been hit or not. 
+
+
+\subsection{Operational constraints}\label{gassystem}
 The station's horizontal orientation 
 facilitates unbiased 
 reconstruction, since cosmic muons 
@@ -74,18 +96,10 @@ However, vertical orientation is preferred
 for some gas system contingencies 
 \ref{gassystem} and because the station will 
 be vertical during the experiment. 
-In the following sections, I will 
-introduce the simulation performed to 
-reconstruct cosmic tracks with 
-a vertically oriented station, aiming 
-to understand possible biases in 
-determining longitudinal position 
-caused by the non-uniform illumination of a panel.
-\subsection{Challenges with the horizontal station orientation: gas distribution system and other constraints}\label{gassystem}
-The natural choice for calibrating the station would 
-be to place it horizontally, as previously explained. 
-However, there are several challenges with this orientation, 
-one of which is the gas distribution. The gas distribution 
+
+There are several challenges with this orientation, 
+one of which is the gas distribution. 
+The gas distribution 
 system of the panel is equipped 
 with two check valves: the first one is located on 
 the supply side, the second one on the exhaust side. 
@@ -110,12 +124,21 @@ to these specifications, it seems that the only operational
 mode of the station is in the vertical position, which is 
 the actual orientation of the stations in the fully assembled 
 tracker. 
-Additionally, other reasons include space constraints, as placing 
-a station horizontally takes up significantly more room space than 
-vertically. Moreover, the station is quite fragile, and 
+Additionally, other reasons include space 
+constraints, as placing 
+a station horizontally takes up 
+significantly more room space than 
+vertically. Moreover, the station 
+is quite fragile, and 
 excessive movement could lead to potential issues.
 
-
+In the following sections, I will 
+introduce the simulation performed to 
+reconstruct cosmic tracks with 
+a vertically oriented station, aiming 
+to understand possible biases in 
+determining longitudinal position 
+caused by the non-uniform illumination of a panel.
 
 \begin{figure}[!h]
     \centering
