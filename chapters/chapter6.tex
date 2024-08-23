@@ -84,36 +84,32 @@ an unbiased reconstruction of the
 track projected on the wires is needed.
 
 
-\subsection{Operational constraints}\label{gassystem}
-The station's horizontal orientation 
-facilitates unbiased 
-reconstruction, since cosmic muons 
-are distributed according to 
-cos$^2\theta$ and they are predominantly vertical 
-(Section \ref{distcos}), 
-thus crossing the straws mostly perpendicularly.
-However, vertical orientation is preferred 
-for some gas system contingencies 
-\ref{gassystem} and because the station will 
-be vertical during the experiment. 
+\subsection{Operational constraints of the station}\label{gassystem}
 
-There are several challenges with this orientation, 
-one of which is the gas distribution. 
-The gas distribution 
-system of the panel is equipped 
-with two check valves: the first one is located on 
-the supply side, the second one on the exhaust side. 
-These valves operate using a simple mechanism where 
-a ball is pressed onto an O-ring to form a seal. The 
-only operational mode for these valves is to be oriented 
-vertically to ensure proper sealing. In our specific 
-case, this is not an issue for the check valves on the 
-supply side, since they should be kept open during 
-calibration with the gas flowing. On the other hand, 
-the check valves on the exhaust side of the panel must 
-be closed at all times to prevent gas from leaking before 
-reaching the panel. 
-Figure \ref{fig:gassystem} shows a schematic 
+Figure \ref{fig:gassystem}  shows a schematic representation of the fully assembled tracker. Clearly, the
+entire detector, its infrastrucures and services, and, consequently, the stations have been
+designed for being operated in what we call $vertical$ $orientation$, which is the orientation of
+the detector in Mu2e. This choice has now an impact in several aspects: from the storage and
+handling tools of the fully assembled and equipped station, which is a very fragile system, to
+the available services, for example the gas distribution system, which have been designed for
+managing, moving and operating a complex detector with a specific orientation, and may not
+allow to move and operate even one of its building blocks, one single station, in a different
+orientation. The most reasonable orientation of the station for a test with
+cosmic muons is the $horizontal$ $orientation$, that facilitates unbiased 
+reconstruction, since cosmic muons are distributed according to 
+cos$^2\theta$ and they are predominantly vertical 
+(Section \ref{distcos}), thus crossing the straws mostly perpendicularly.
+We first checked the operational constraints
+which may not allow to operate the station horizontally.
+Apparently, the main challenge with the horizontal orientation is the operation of the gas
+distribution system. The gas distribution system of the panel is equipped with two check valces:
+the first one is located on the supply side, the second one on the exhaust side. These valves
+operate using a simple mechanism where a ball is pressed onto an O-ring to form a seal. The
+only operational mode for these valves is to be oriented vertically to ensure proper sealing. In
+our specific case, this is not an issue for the check valves on the supply side, since they should
+be kept open during calibration with the gas flowing. On the other hand, the check valves on
+the exhaust side of the panel must be closed at all times to prevent gas from leaking before
+reaching the panel. Figure \ref{fig:gassystem} shows a schematic 
 representation of the operational mode of the supply 
 and exhaust valves. The red arrows represent the 
 direction of the gas flow. On the supply side (Figure 
@@ -121,24 +117,18 @@ direction of the gas flow. On the supply side (Figure
 O-ring, or the gas flows downwards towards the atmosphere, 
 rather than flowing upwards towards the panel. According 
 to these specifications, it seems that the only operational 
-mode of the station is in the vertical position, which is 
-the actual orientation of the stations in the fully assembled 
-tracker. 
-Additionally, other reasons include space 
-constraints, as placing 
-a station horizontally takes up 
-significantly more room space than 
-vertically. Moreover, the station 
-is quite fragile, and 
+mode of the station is in the vertical position. 
+Additionally, other reasons include space constraints, as placing 
+a station horizontally takes up significantly more room space than 
+vertically. Moreover, the station is quite fragile, and 
 excessive movement could lead to potential issues.
 
-In the following sections, I will 
-introduce the simulation performed to 
-reconstruct cosmic tracks with 
-a vertically oriented station, aiming 
-to understand possible biases in 
-determining longitudinal position 
-caused by the non-uniform illumination of a panel.
+To achieve good momentum resolution, a resolution of at least 4 cm 
+is required on the tracker straws. In the following sections, I will 
+introduce the simulation performed to reconstruct cosmic tracks 
+with a vertically oriented station, with the aim of understanding 
+potential biases in determining the longitudinal position due to 
+the non-uniform illumination of a panel.
 
 \begin{figure}[!h]
     \centering
@@ -177,9 +167,9 @@ complementary to other techniques:
     ($\sim 1 \ \text{cm}^{-2} \text{min}^{-1}$ 
     for horizontal detectors with a mean
     energy of $\sim$4 GeV, Ref. \cite{muonflux}) 
-    is sufficient large to allow gathering a 
-    substantial amount of 
-    physics data in a relatively short time and 
+    is sufficient to allow
+    collecting a substantial amount of calibration 
+    data in a relatively short time and 
     thus monitoring continuously the detector response;
     \item a cosmic muon is a minimum ionizing 
     particle (MIP) and 
@@ -188,10 +178,10 @@ complementary to other techniques:
     \item the speed of the cosmic muons is equal to the 
     speed of light $c$, and the time they take to traverse 
     a detector, in our case one tracker station, can be 
-    used to align the time offsets of all the channesl 
+    used to align the time offsets of all the channels  
     without any external time reference.
 \end{itemize}
-\subsection{Cosmic muons energy and angle distributions}\label{distcos}
+\subsection{Cosmic muons energy and angular distribution}\label{distcos}
 The muon flux at sea level is usually described by the standard Gaisser's formula, Ref. \cite{guan2015parametrization}:
 \begin{equation}
     \frac{d I}{d E_\mu d \Omega d t d S}=\frac{0.14}{\mathrm{~cm}^2 \mathrm{~s} \ \mathrm{sr}}\left(\frac{E_\mu}{\mathrm{GeV}}\right)^{-2.7} \quad\left[\frac{1}{1+\frac{1.1 E_\mu \cos \theta}{115 \mathrm{GeV}}}+\frac{0.054}{1+\frac{1.1 E_\mu \cos \theta}{850 \mathrm{GeV}}}\right]
@@ -226,7 +216,7 @@ significant at low energies. The numerical constants are derived by fitting expe
 
 \subsection{Monte Carlo cosmic generation with CRY}
 Several Monte Carlo programs allow to simulate sea-level 
-cosmic ray mouns: the most widely used is CRY, developed 
+cosmic ray muons: the most widely used is CRY, developed 
 by LANL. CRY functions as a generator for air showers 
 induced by primary cosmic rays. The CRY package uses 
 precomputed input tables derived from comprehensive 
@@ -252,17 +242,18 @@ energy and zenith angles, such as CORSIKA, I chose CRY
 for its straightforward implementation and compatibility with GEANT4. 
 
 \subsection{Monte Carlo sample and coordinate system }\label{genplane}
-Cosmic muons are uniformly generated within a horizontal plane approximately 11 m 
-above the beam axis. The GEANT4 simulation also incorporates the effects of the external neutron shield surrounding the DS 
+I generated a sample of cosmic muons with a uniform distribution within a
+horizontal plane approximately 11 m above the muon beam axis. The GEANT4 
+simulation also incorporates the effects of the external neutron shield surrounding the DS 
 and the concrete ceiling of the Mu2e experimental hall. Starting from the generation plane, 
 cosmic muons pass through the concrete ceiling and walls situated outside the experimental hall. 
-As they propagate downwards to the detector, they interact with the materials within the building. 
-The external neutron shield surrounding the DS consists of concrete ($\rho$=2.3 g/cm$^3$) and has a thickness of 
-roughly 0.9 m, while the ceiling above the Mu2e experimental area comprises 1.8 m of concrete. 
+As they propagate downwards to the detector, they interact with the building materials. 
+The external neutron shield surrounding the DS consists of concrete ($\rho$=2.3 g/cm$^3$) of  
+roughly 0.9 m thickness, while the ceiling above the Mu2e experimental area comprises 1.8 m of concrete. 
 The entire structure is enclosed within a volume of air at standard temperature and pressure.
 
-The station was simulated in an extracted position, 
-which means it was placed outside the solenoid. 
+I performed the simulation of the station in what in Mu2e jargon is called
+"extracted position", which means the station was placed outside the solenoid.
 Given that the Earth's magnetic field is approximately 
 $4 \div 5 \times 10^{-5}$ T, 
 and considering that the dimensions of the station are 
@@ -279,19 +270,33 @@ magnetic field intensity equal to zero.
 
 Before starting explaining the event selection and the 
 reconstruction, let me define the coordinate system, 
-as shown in Figure \ref{fig:coordinate}.
+as shown in Figure \ref{fig:coordinate}. The $z$ axis is parallel to 
+the DS axis, while the $y$ axis corresponds to the vertical axis.
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.5\textwidth]{figures/png/Screenshot_20240526_164527.png}
     \caption[Schematic view of a tracker station and the coordinate system.]{Schematic view of a tracker station and definition of the coordinate system used for the analysis.}
     \label{fig:coordinate}
 \end{figure}
-\section{The events selection}\label{eventselection}
+\section{Monte Carlo event selection}\label{eventselection}
 
-I adapted the Monte Carlo to focus solely on 
+The Monte Carlo was adapted to focus solely on 
 events where a cosmic muon hits only the first 
 tracker station.
-
+One station is made of two planes, one plane is made of two faces, and one face is
+made of three panels (Section \ref{geomtra}). The geometry of the station 
+is thus very simple: it is a detector made of four parallel 
+layers orthogonal to the $z$ axis, with a total thickness of less than 10 cm.
+Although the station has globally four layers, 
+the panel geometry does not provide a uniform
+volume coverage: there are regions of the 
+detector where a particle with a trajectory orthogonal
+to the panel may cross four, three, two or even only one 
+detector layer (Figure \ref{fig:coordinate}). Given the
+rotation angles of the panels within the same 
+face and between different faces, if this particle
+crosses four layers, the straws of the four 
+panels are not parallel to each other.
 Each straw can be parametrized as a straight line 
 lying on a plane $z = z_i$, where $z_i$ is the $z$ 
 coordinate of the panel which contains the straw:
@@ -326,18 +331,20 @@ selection criterion was to choose events
 with fewer than three hit straws per panel. 
 This criterion was selected to minimize errors 
 in track reconstruction.
-\subsection{Panels illumination pattern}
-To perform accurate timing calibration, 
-the distribution of the hits should be 
-as uniform as possible across the panel. 
-Figure \ref{fig:illumination} 
-shows the hit distribution after applying 
-the selection cuts outlined in Section 
-\ref{eventselection}, for panel 0 and plane 0, 
-which corresponds to the panel in the 
-upper right part of Figure \ref{fig:coordinate}. 
-The hit distributions for all the panels in 
-both planes are similar, as shown in Appendix \ref{appendix2}.
+\subsection{Panel illumination pattern}
+To perform an accurate calibration, 
+the distribution of the hits across the panel should be as
+uniform as possible. On the other hand, this is 
+not what we obtain, due to the station geometry
+and selection cuts we applied. 
+Figure \ref{fig:illumination} shows the resulting hit distribution for panel 0 of
+plane 0, after applying the selection cuts outlined in Section 
+\ref{eventselection}, which corresponds to the panel in 
+the upper right part of Figure \ref{fig:coordinate}. 
+We picked this panel as one possible example, the 
+distributions for all the planes in both planes are similar, as
+shown in Appendix \ref{appendix2}.
+
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.8\textwidth]{figures/pdf/xp_vs_yp_panel0.pdf}
@@ -350,8 +357,8 @@ both planes are similar, as shown in Appendix \ref{appendix2}.
         fewer than three hits per panel.}
     \label{fig:illumination}
 \end{figure}
-Figure \ref{fig:illumination} shows a spotty and 
-non-uniform panel illumination. This is due to the 
+Figure \ref{fig:illumination} shows a non-uniform, or spotty, 
+panel illumination. This is due to the 
 fact that the only 4/4 overlap regions are 
 limited to the edges of the panels (darkest 
 areas in Figure \ref{fig:coordinate}). 
