@@ -13,12 +13,9 @@ reconstructing the trajectories of cosmic muons within a vertically oriented
 station, as well as analyzing potential biases and systematic errors that could 
 arise from this particular orientation.}
 \section{Overview of the timing calibration}
-The main goal of this calibration is to 
-determine signal propagation 
-and channel-to-channel delays for each straw.
 When a charged particle crosses the straw tube 
 gas volume, the resulting ionization charge 
-generates an electric signal along the central 
+generates an electric signal along the anode  
 wire which propagates towards the two ends of 
 the straw and to the front-end electronics, 
 where TDCs measure the signal arrival 
@@ -41,11 +38,11 @@ $L$ is the length of the straw,
 $x_{\text{track}}$ is the 
 reconstructed track position on the wire, $v$ 
 is the propagation velocity of 
-the electric signal along the central 
+the electric signal along the anode 
 wire and $d_i$ are the delays  
 introduced by the front end electronics. 
 $t_1$ and $t_2$ are measured  
-by the TDC timing on the HV side and on the CAL side.
+by the TDCs on the HV side and on the CAL side.
 The measurement of the difference 
 $\Delta t_{12}=t_1-t_2$ allows 
 determining the coordinate $x_{\text{track}}$, 
@@ -71,14 +68,16 @@ determining $v$ and $d1-d2$ from the $\Delta t_{12}$
 measured by the TDCs and from an independent 
 reconstruction of the track 
 projected on the wire ($x_{track}$).
-This type of calibration will be 
-achieved using cosmic rays. 
-At the moment of the very first calibration, 
-the only available spatial information is 
-whether a straw has been hit or not. The 
+This is the first calibration of the detector and 
+will be performed using cosmic muons. 
+At this level, the only available spatial 
+information is whether a straw has been crossed 
+by a muon or not. The 
 only way to obtain $x_{track}$ from a "yes or no" 
 information is to use the tracker station 
-geometry and the relative rotation angle between straws. 
+geometry, which is made of a set of rotated 
+panels lying on four planes orthogonal to 
+the axis of the detector (Section \ref{reconstruction}). 
 To determine $v$ in the first equation of \ref{ffffff}, 
 an unbiased reconstruction of the 
 track projected on the wires is needed.
@@ -86,15 +85,24 @@ track projected on the wires is needed.
 
 \subsection{Operational constraints of the station}\label{gassystem}
 
-Figure \ref{fig:gassystem}  shows a schematic representation of the fully assembled tracker. Clearly, the
-entire detector, its infrastrucures and services, and, consequently, the stations have been
-designed for being operated in what we call $vertical$ $orientation$, which is the orientation of
-the detector in Mu2e. This choice has now an impact in several aspects: from the storage and
-handling tools of the fully assembled and equipped station, which is a very fragile system, to
-the available services, for example the gas distribution system, which have been designed for
-managing, moving and operating a complex detector with a specific orientation, and may not
-allow to move and operate even one of its building blocks, one single station, in a different
-orientation. The most reasonable orientation of the station for a test with
+Figure \ref{fig:gassystem} shows a schematic 
+representation of the fully assembled tracker. 
+Clearly, the entire detector, its infrastructures 
+and services, and, consequently, the stations have been
+designed for being operated in what we call 
+$vertical$ $orientation$, which is the orientation of
+the detector in Mu2e. This has now an impact 
+on several aspects of detection operation: from 
+the storage and
+handling tools of the fully assembled and 
+equipped station, which is a very fragile system, to
+the available services, for example the gas 
+distribution system, which have been designed for
+managing, moving and operating a complex 
+detector with a specific orientation, and may not
+allow to move and operate even one single 
+station, in a different orientation. 
+The most reasonable orientation of the station for a test with
 cosmic muons is the $horizontal$ $orientation$, that facilitates unbiased 
 reconstruction, since cosmic muons are distributed according to 
 cos$^2\theta$ and they are predominantly vertical 
@@ -123,8 +131,11 @@ a station horizontally takes up significantly more room space than
 vertically. Moreover, the station is quite fragile, and 
 excessive movement could lead to potential issues.
 
-To achieve good momentum resolution, a resolution of at least 4 cm 
-is required on the tracker straws. In the following sections, I will 
+The Mu2e simulation shows that to achieve the 
+desired momentum resolution, it is necessary 
+to have a resolution on the hit position along 
+the straw better than 4 cm. In the following 
+sections, I will 
 introduce the simulation performed to reconstruct cosmic tracks 
 with a vertically oriented station, with the aim of understanding 
 potential biases in determining the longitudinal position due to 
