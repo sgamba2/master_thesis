@@ -1,2 +1,30 @@
 \chapter{Conclusions}\label{conclusions}
-During
+The success of Mu2e depends on many factors and one of them is the 
+performance of the tracker. 
+The tracker must provide excellent momentum resolution, approximately 1 MeV/c, 
+to distinguish the monochromatic conversion electron signal from the background. 
+To minimize energy loss, a straw tube tracker will be used, so the 
+technology used is the drift tubes. Its 
+annular shape is designed to follow the helical trajectories of conversion 
+electrons in the magnetic field. The detector has a modular design, consisting 
+of basic elements referred to as $Panel$s, $Face$s, $Plane$s, and $Station$s. The 
+tracker comprises panels containing arrays of straw tubes, which are the 
+sensitive units, arranged like the harp chords.
+
+This Thesis has provided an in-depth examination of the Mu2e 
+tracker system, from its initial stages of commissioning to the 
+optimization of data acquisition and preliminary calibration steps. 
+Throughout the chapters, we explored critical aspects of the tracker 
+system, focusing on the robustness and reliability of data acquisition 
+processes and the crucial role of calibration in ensuring precise measurements. 
+
+The first phase of this work was integral to the early phases of the Mu2e experiment 
+at Fermilab, particularly in the context of the 
+tracker system's DAQ and FEE testing. 
+The first test I performed has been to verify the correct performance of ROC 
+buffering. During these test, a single ROC was connected to the DTC. Data were collected
+with digi-FPGAs pulsed by their internal pulsers, with the ROC set in the external
+mode. ROC's digital readout logic allows to be emulated with a bit-level C++ simulation,
+which I contributed to develop. The Monte Carlo and the data have been compared in two different 
+modes: $ROC$ $buffer$ $overflow$ and $underflow$ configuration, at a channel occupancy level, studying 
+the timing distribution and delays between channels and digi-FPGAs.
