@@ -107,8 +107,8 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces The Compton effect.}}{118}{figure.caption.113}%
 \contentsline {figure}{\numberline {5.2}{\ignorespaces The pair production.}}{120}{figure.caption.114}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Monte Carlo momentum distribution of particles producing hits in the Mu2e tracker (conversion electron dataset and pileup).}}{126}{figure.caption.115}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Monte Carlo momentum distribution of particles producing hits in the Mu2e tracker ($\bar {p}$ dataset and no pileup).}}{127}{figure.caption.116}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Monte Carlo momentum distribution of particles producing hits in the Mu2e tracker ($CE-1BB$ data sample).}}{126}{figure.caption.115}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Monte Carlo momentum distribution of particles producing hits in the Mu2e tracker ($PBAR-0BB$ data sample).}}{127}{figure.caption.116}%
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Before and After background hits flagging.}}{128}{figure.caption.117}%
 \contentsline {figure}{\numberline {5.6}{\ignorespaces $\delta $-electrons and CE patterns in $r-z$ plane.}}{129}{figure.caption.118}%
 \contentsline {figure}{\numberline {5.7}{\ignorespaces A $\delta $ candidate $seed$.}}{130}{figure.caption.119}%

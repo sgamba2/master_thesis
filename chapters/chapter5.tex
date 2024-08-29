@@ -554,12 +554,19 @@ as the momentum ranges are different.
 \begin{figure}[!h]
         \centering
         \includegraphics[width =0.95\textwidth]{figures/png/Screenshot_20240812_152905.png}
-    \caption[Monte Carlo momentum distribution of particles producing hits in the Mu2e tracker (conversion electron dataset and pileup).]{
-       The Monte Carlo momentum distribution of particles producing at 
-       least one hit in the Mu2e tracker (conversion electron dataset and pileup). The distribution
-       corresponds to 1BB pile-up. The momentum distribution 
-       of all particles making hits is depicted in dark blue, with electrons 
-       shown in pink, positrons in light blue, $\delta$s in orange, protons and deuterons in 
+    \caption[Monte Carlo momentum distribution 
+    of particles producing hits in the Mu2e 
+    tracker ($CE-1BB$ data sample).]{
+        Momentum distribution (Monte Carlo truth)  
+       of particles producing at 
+       least one hit in the tracker 
+       ($CE-1BB$ data sample).  
+       The momentum distribution 
+       of all particles making hits is 
+       depicted in dark blue, with electrons 
+       shown in pink, positrons in light 
+       blue, $\delta$s in orange, protons 
+       and deuterons in 
        light green, and CEs in dark green. }
        \label{fig:momhits}
 \end{figure}
@@ -585,12 +592,20 @@ times lower than the one in Figure \ref{fig:momhits}.
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.9\textwidth]{figures/png/Screenshot_20240815_124710.png}
-\caption[Monte Carlo momentum distribution of particles producing hits in the Mu2e tracker ($\bar{p}$ dataset and no pileup).]{
-   The Monte Carlo momentum distribution of particles producing at 
-   least one hit in the Mu2e tracker ($\bar{p}$ dataset and no pileup). 
+\caption[Monte Carlo momentum distribution 
+of particles producing hits in the Mu2e 
+tracker ($PBAR-0BB$ data sample).]{
+    Momentum distribution (Monte Carlo truth) 
+    of particles producing at 
+   least one hit in the tracker 
+   ($PBAR-0BB$ data sample). 
    The momentum distribution 
-   of all particles making hits is depicted in dark blue, with electrons 
-   shown in pink, positrons in light blue, $\delta$s in orange, protons and deuterons in green, pions in light brown and muons 
+   of all particles making hits is 
+   depicted in dark blue, with electrons 
+   shown in pink, positrons in light 
+   blue, $\delta$s in orange, protons 
+   and deuterons in green, pions in 
+   light brown and muons 
    in black. }
    \label{fig:pbar}
 \end{figure}
@@ -624,9 +639,14 @@ would lead to inefficiencies in data storage.
         \subcaption{After.}
         \label{fig:af}
     \end{subfigure}
-    \caption[Before and After background hits flagging.]{Before and After background hits flagging. The transverse $x-y$ views of a CE 
-    event with 2BB pile-up (Section \ref{pulsedprotonbeam}). The segments are the $hit$ tracker straws. The hits marked in
-    red are from electrons and the ones in blue are from positrons.}
+    \caption[Before and After background hits flagging.]{
+        Before and After background hits flagging. 
+        The $x-y$ plane views of a CE 
+    event with 2BB pile-up in the tracker (Section \ref{pulsedprotonbeam}). 
+    The segments are the $hit$ tracker straws. 
+    The hits marked in
+    red are from electrons and the ones in 
+    blue are from positrons. Left (Right): before (after) $\delta$-electron hit flagging.}
     \label{fig:afbef} 
 \end{figure}
 
@@ -652,28 +672,39 @@ Mu2e has developed two types of flagging algorithms:
     \item $DeltaFinder$, described in Section \ref{deltafinder}.
 \end{itemize}
 
-\subsection{The $FlagBkgHits$ Algorithm}\label{flagbkghits}
-The detailed description of multivariate analysis (MVA) and the 
-process of MVA training are beyond the scope of this work. 
-Nevertheless, since this technique is one of the options 
-developed for background flagging, I will briefly outline 
+\subsection{The $FlagBkgHits$ algorithm}\label{flagbkghits}
+The detailed description of multivariate 
+analysis (MVA) and the 
+process of MVA training are beyond the 
+scope of this work. 
+Nevertheless, since this technique is 
+one of the options 
+developed for background flagging, I 
+will briefly outline 
 the fundamental principles involved.
 
 When searching for patterns in a multivariable space, 
-a common procedure involves defining a set of statistical 
-models that analyze the measured variables and estimate 
+a common procedure involves 
+defining a set of statistical 
+models that analyze the measured 
+variables and estimate 
 the probability that these are consistent with the 
 sought pattern. Once the variables are selected, 
 the MVA is trained to recognize patterns by 
 evaluating examples known to the trainer, 
 allowing for feedback to refine the 
-pattern identification process.
+pattern identification procedure.
 
-The first selection concerns the mean energy deposited in  
-the $ComboHit$s used to create a $StereoHit$ and excludes 
+The first selection concerns the 
+mean energy deposited in  
+the $ComboHit$s used to create a 
+$StereoHit$ and excludes 
 those with a deposited energy above 5 keV. 
-The algorithm then classify as protons all hits with a deposited energy above 4.5 keV.
-Other selections concern the timing, position, and spread of the $ComboHit$ 
+The algorithm then classifies as 
+protons all hits with a deposited 
+energy above 4.5 keV.
+Other selections concern the timing, 
+position, and spread of the $ComboHit$ 
 in the $x$-$y$ plane. The maximum cluster timing 
 and diameter are 20 ns and 5 mm, respectively.
 
@@ -682,26 +713,28 @@ clusters of hits on $x$-$y$ plane, an algorithm based on a clustering
 approach was developed: concentrated clusters in the 
 $x$-$y$ plane are sought using a clustering algorithm, 
 as $\delta$-electrons are highly likely to reside 
-in such clusters. The $FlagBkgHits$ algorithm employs 
+in such clusters. The $FlagBkgHits$ algorithm uses  
 a hit-level MVA to ensure that hits within a 
 $\delta$-dominant cluster truly belong there, 
 and a cluster-level MVA to differentiate 
 $\delta$-dominant clusters from those 
-predominantly containing conversion electrons. 
-This was trained in a supervised mode, using CE and $\delta$-electrons hits from 
+predominantly containing CEs. 
+This was trained in a supervised mode, 
+using CE and $\delta$-electrons hits from 
 Monte Carlo data sample.
 
-The current resolution of straw drift tube 
-position measurements is limited to a few cm. 
+The resolution on the measurement of the 
+hit position performed by the straw drift 
+tube is limited to a few cm. 
 However, an improved position measurement can be 
 achieved by leveraging the multiple straw layers that 
-significantly overlap in the transverse plane. 
+significantly overlap in the $x-y$ plane. 
 By obtaining two hit measurements from a pair of 
 intersecting straws and ensuring they fall within 
 a time window on the order of the maximum drift time, 
 one can deduce that these hits were produced by the 
 same particle and occurred at the intersection of the 
-two straws in the projected plane. This method, 
+two straws in the $x-y$ plane. This method, 
 involving two-dimensional information from the two 
 straws, is referred to as the stereo information method.
 
@@ -725,7 +758,7 @@ continues until convergence is achieved, i.e.,
 when an iteration no longer results in any changes.
 
 
-\subsection{$DeltaFinder$ Algorithm}\label{deltafinder}
+\subsection{The $DeltaFinder$ algorithm}\label{deltafinder}
 
 $DeltaFinder$ is an algorithm designed to identify $\delta$-electron 
 hit patterns rather than CE hits. This algorithm relies on the 
