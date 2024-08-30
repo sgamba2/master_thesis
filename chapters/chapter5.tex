@@ -760,52 +760,76 @@ when an iteration no longer results in any changes.
 
 \subsection{The $DeltaFinder$ algorithm}\label{deltafinder}
 
-$DeltaFinder$ is an algorithm designed to identify $\delta$-electron 
-hit patterns rather than CE hits. This algorithm relies on the 
-fact that $\delta$-electrons typically form a straight line in 
-the $r$-$z$ plane (cyan lines in Figure \ref{fig:yzviewdelta}) 
-and appear as a spot with a diameter of less than 3 cm in the 
-$x$-$y$ plane within the Mu2e magnetic field. In contrast, 
-CE hits create entirely different patterns, appearing as oblique lines in 
-the $r$-$z$ plane due to their helical trajectories (red lines in Figure \ref{fig:yzviewdelta}). 
-In the process, all hits associated with detected objects are treated as $\delta$-electron hits.
+The $DeltaFinder$ algorithm has been designed 
+to identify $\delta$-electron 
+hit patterns rather than CE hits. This 
+algorithm relies on the 
+fact that $\delta$-electrons typically 
+form a straight line in 
+the $r$-$z$ plane (cyan lines in Figure 
+\ref{fig:yzviewdelta}) 
+and appear as a spot with a diameter 
+of less than $\sim$3 cm in the 
+$x$-$y$ plane within the 1 T  
+magnetic field. On the other hand, 
+CEs create entirely different 
+patterns of hits, which appear as oblique segments in 
+the $r$-$z$ plane due to their 
+helical trajectories (red lines 
+in Figure \ref{fig:yzviewdelta}). 
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.6\textwidth]{figures/png/Screenshot_20240811_123048.png}
     \caption[$\delta$-electrons and CE patterns in $r-z$ plane.]{
         $\delta$-electrons and CE patterns in the $r-z$ plane. 
-        The white squares represent some of the tracker stations. 
-        The cyan straight lines represent the $\delta$-electron 
-        patterns in the $r-z$ plane, while the red lines a CE signal in the same plane.
+        The white rectangles represent four of the eighteen tracker stations. 
+        The cyan straight lines represent a possible $\delta$-electron 
+        patterns, while the red lines a possible CE pattern.
         }
     \label{fig:yzviewdelta}
 \end{figure}
-\subsubsection{Step 1: Identifying $\delta$-Electron Segments}
-$DeltaFinder$ first seeks to identify $\delta$-electron track 
-segments within each station individually. These segments, 
-parallel to the beam axis, are called $seeds$. Since hits 
-from the same electron should be close in both time and space, 
-and $\delta$-electrons may hit multiple straws within the 
-same panel, the algorithm clusters these straw hits in 
-space-time, applying various cleanup cuts to ensure the 
-selected patterns resemble $\delta$-electron hits. 
-The maximum allowed time difference between two hits within 
+\subsubsection{Step 1: identifying $\delta$-electron segments}
+The $DeltaFinder$ first tries to 
+identify $\delta$-electron track 
+segments within each station 
+individually. These segments, 
+parallel to the beam axis, are 
+called $seeds$. Since hits 
+from the same electron should be 
+close in both time and space, 
+and $\delta$-electrons may hit 
+multiple straws within the 
+same panel, the algorithm clusters 
+these straw hits in 
+in space and time, applying various 
+cleanup cuts to ensure the 
+selected patterns resemble 
+$\delta$-electron hits. 
+The maximum allowed time 
+difference between two hits within 
 a station to form a $seed$ is set to 40 ns.
 
-These cleanups based on the $x$-$y$ coordinates are performed 
-by computing a $\chi^2$. The $seed$ is reconstructed using 
-two, three, or four $ComboHit$s. In each case, the 
-intersections between two straws are determined, 
-and the $x$-$y$ coordinates of the $seed$ are given 
-by the center of gravity of these intersections. 
-In the case of only two hits, the center of gravity 
-corresponds to the stereo hit. Explicit stereo hit 
-reconstruction is not used for all hits.
+These cleanups based on the $x$-$y$ 
+coordinates are performed 
+by computing a $\chi^2$. The $seed$ 
+is reconstructed using 
+two, three, or four $ComboHit$s. 
+In each case, the 
+intersections between two straws 
+are determined, 
+and the $x$-$y$ coordinates of 
+the $seed$ are given 
+by the center of gravity of 
+these intersections. 
+In the case of only two hits, 
+the center of gravity 
+corresponds to the stereo hit. 
 
 The algorithm extends the $seed$s by requiring 
 hits to be sufficiently close to the intersection 
 point in time and space, performing multiple checks 
-to avoid over-efficiency in hit flagging. For each $seed$, 
+to avoid over-efficiency in 
+hit flagging. For each $seed$, 
 the mean deposited energy is calculated from the energy 
 deposited in all $ComboHit$s. Based on the mean 
 deposited energy of a $seed$ in a station, hits with 
@@ -816,12 +840,14 @@ reducing the total number of hits that need to be analyzed.
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.6\textwidth]{figures/png/Screenshot_20240811_115854.png}
-    \caption[A $\delta$ candidate $seed$.]{A $\delta$ candidate $seed$. The four coloured segments are the tracker straws that were
-    hit in one station.}
+    \caption[A $\delta$ candidate $seed$.]{A 
+    $\delta$ candidate $seed$. The four 
+    coloured segments are the tracker straws that were
+    hit in the same station.}
     \label{fig:deltaseeds}
 \end{figure}
 
-It is necessary to do a clarification. 
+It is necessary clarify one detail. 
 Figure \ref{fig:energydeposited} shows the 
 distribution of the simulated deposited energy 
 in the tracker for $\delta$ electrons, CEs, and 
@@ -829,33 +855,44 @@ protons in the case of a 1BB pileup.
 
 To optimize data processing, a hit energy 
 threshold could be applied to the $DeltaFinder$ 
-to reduce the total number of hits that need to be analyzed, 
+to reduce the total number of hits that 
+need to be analyzed, 
 thereby speeding up the process. Moreover, only about 
 4\% of CE hits have energies above 3.5 keV 
 (and 1\% above 5 keV), so the loss of CE 
-hits would be minimal, resulting in a faster overall algorithm. 
+hits would be minimal, resulting in a 
+faster overall algorithm. 
 
-However, implementing such an energy cutoff has 
-significant implications for the algorithm's performance. 
-Starting with fewer hits, especially in stereo intersections, 
-decreases the likelihood of identifying the correct $seed$. 
-Additionally, a higher energy cutoff increases 
+However, implementing such an energy cutoff has a 
+significant impact for the algorithm's performance. 
+Starting with fewer hits, especially in 
+stereo intersections, 
+reduces the likelihood of 
+identifying the correct $seed$. 
+Moreover, a higher energy cutoff increases 
 the probability of false positives, as the algorithm 
 aims to count protons too.
 
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.6\textwidth]{figures/png/Screenshot_20240729_151910.png}
-\caption[Monte Carlo deposited energy distribution in the Mu2e tracker.]{
-   The Monte Carlo deposited energy distribution in the Mu2e tracker. The distribution
-   corresponds to 1BB pile-up (Section \ref{pulsedprotonbeam}). The red distribution refers to 
-   conversion electrons, while the green and the blue one to $\delta$-electrons and protons respectively. 
-   The peaks and tails correspond to the saturation of the waveforms.
+\caption[Monte Carlo deposited energy 
+distribution in the tracker.]{
+   The Monte Carlo deposited energy 
+   distribution in the tracker ($CE-1BB$ data sample).  
+   The red distribution refers to 
+   CEs, while the 
+   green and the blue one to $\delta$-electrons 
+   and protons respectively. 
+   The peaks and tails correspond to 
+   particles with such high energy 
+   deposition that they result in a 
+   saturated waveform.
 
 }
    \label{fig:energydeposited}
 \end{figure}
-\subsubsection{Step 2: Connecting $seed$s}
+\subsubsection{Step 2: connecting $seed$s}
 After the selection based on mean deposited energy, 
 $DeltaFinder$ attempts to connect segments that 
 are close in both the $x$-$y$ plane and time 
@@ -863,7 +900,8 @@ across different stations to form $\delta$-electron
 candidates. A valid candidate must have at 
 least two segments and a minimum of five straw hits. 
 Reconstructed segments from a 100 MeV electron 
-typically remain unconnected due to their separation in the $x$-$y$ plane. 
+typically remain unconnected due 
+to their separation in the $x$-$y$ plane. 
 
 $DeltaFinder$ links $\delta$-electron $seed$s 
 across stations, attempting to associate new $seed$s 
@@ -877,13 +915,15 @@ Finally, $DeltaFinder$ identifies proton candidates
 using the remaining $seed$s, which are more likely 
 to have deposited energy above 3 keV. First, it checks 
 if a $seed$ is consistent in time with any existing 
-proton candidates. If no consistency is found, 
+proton candidate. If no consistency is found, 
 the hits of the $seed$ are added to a new proton candidate.
 
 
-\section{Analysis of the performance and comparison}
-The analysis is carried out on two levels of 
-comparison, each addressing different aspects of the algorithms under evaluation:
+\section{Performance analysis and comparison between $FlagBkgHits$ and $DeltaFinder$}
+The comparison between $FlagBkgHits$ and $DeltaFinder$ 
+is performed at two levels of 
+comparison, with each level addressing different aspects 
+of the algorithms:
 
 \begin{itemize}
     \item \textbf{Hit-level comparison}: this phase focuses 
@@ -923,9 +963,13 @@ under study.
     $p$     & 96.0\% & 1.0\% \\
     \hline
     \end{tabular}
-    \caption[$DeltaFinder$ proton flagging results before the adjustment.]{$DeltaFinder$ proton 
-    flagging results before the adjustment ($CE-1BB$ data sample). $f_p$ and $f_e$ represent 
-    the number of proton $ComboHit$s flagged as protons and electrons, respectively, 
+    \caption[$DeltaFinder$ proton 
+    flagging results before the adjustment.]{$DeltaFinder$ proton 
+    flagging results before the 
+    adjustment ($CE-1BB$ data sample). 
+    $f_p$ and $f_e$ represent 
+    the number of proton $ComboHit$s 
+    flagged as protons and electrons, respectively, 
     divided by the total number of $ComboHit$s.}
     \end{table}\label{tab:1bbcelebefore}
 \end{center}
@@ -943,7 +987,8 @@ under study.
         $\pi$ & 2.5\% &  11.2\%\\
         \hline
         \end{tabular}
-        \caption[$DeltaFinder$ muon and pion flagging results before the adjustment.]{$DeltaFinder$ muon 
+        \caption[$DeltaFinder$ muon and 
+        pion flagging results before the adjustment.]{$DeltaFinder$ muon 
         and pion flagging results before the adjustment ($PBAR-0BB$ data sample). $f_p$ and $f_e$ represent 
         the number of particle $ComboHit$s flagged as protons and electrons, respectively, 
         divided by the total number of $ComboHit$s.}
@@ -972,10 +1017,15 @@ a factor of 2 and a factor of 6 (Table \ref{tab:0bbpbar}), respectively.
  \begin{figure}[!h]
             \centering
             \includegraphics[width =0.7\textwidth]{figures/png/Screenshot_20240805_222923.png}
-        \caption[The distribution of the total and flagged number of muon $ComboHit$s versus momentum.]{The 
-        distribution of the total number of muon $ComboHit$s 
-        (red) and those flagged as $\delta$s (blue) 
-        and protons (green) versus the particle momentum ($PBAR-0BB$ data sample). }
+        \caption[The momentum 
+        distribution of the total 
+        and flagged number of muon 
+        $ComboHit$s.]{The momentum 
+        distribution of the total number of 
+        muon $ComboHit$s 
+        (red) and of the muon $ComboHit$s 
+        flagged as $\delta$s (blue) 
+        and protons (green) ($PBAR-0BB$ data sample). }
            \label{fig:0pbarbefore}
 \end{figure}
 
@@ -1004,8 +1054,8 @@ comparison for the $CE-1BB$ and $CE-2BB$ data samples between the two algorithms
     \end{tabular}
     \caption[Electrons, 
     positrons and protons hit-level comparison.]{Electrons, 
-    positrons and protons hit-level comparison ($CE-2BB$ data sample). FBH denotes 
-    the $FlagBkgHits$ algorithm, and DF denotes the $DeltaFinder$ algorithm. $f_p$ and $f_e$ represent 
+    positrons and protons hit-level comparison ($CE-2BB$ data sample). FBH and DF denote  
+    the $FlagBkgHits$ and the $DeltaFinder$ algorithms, respectively. $f_p$ and $f_e$ represent 
     the number of particle $ComboHit$s flagged as protons and electrons, respectively, 
     divided by the total number of $ComboHit$s.
     }
@@ -1032,8 +1082,9 @@ comparison for the $CE-1BB$ and $CE-2BB$ data samples between the two algorithms
     \hline
     \end{tabular}
     \caption[Electrons, positrons and protons hit-level comparison.]{Electrons, 
-    positrons and protons hit-level comparison ($CE-1BB$ data sample). FBH denotes 
-    the $FlagBkgHits$ algorithm, and DF denotes the $DeltaFinder$ algorithm. $f_p$ and $f_e$ represent 
+    positrons and protons hit-level comparison ($CE-1BB$ data sample). 
+    FBH and DF denote the $FlagBkgHits$ and the $DeltaFinder$ 
+    algorithms, respectively. $f_p$ and $f_e$ represent 
     the number of particle $ComboHit$s flagged as protons and electrons, respectively, 
     divided by the total number of $ComboHit$s.}
     \end{table}\label{tab:1bbcele}
@@ -1193,8 +1244,8 @@ The results are comparable for both the 1BB and 2BB data samples.
         \hline
         \end{tabular}
         \caption[Muon and Pion hit-level comparison.]{Muon and Pion 
-        hit-level comparison ($PBAR-0BB$ data sample). FBH denotes 
-        the $FlagBkgHits$ algorithm, and DF denotes the $DeltaFinder$ algorithm. $f_p$ and $f_e$ represent 
+        hit-level comparison ($PBAR-0BB$ data sample). FBH and DF denote 
+        the $FlagBkgHits$ and $DeltaFinder$ algorithms respectively. $f_p$ and $f_e$ represent 
         the number of particle $ComboHit$s flagged as protons and electrons, respectively, 
         divided by the total number of $ComboHit$s.}
         \end{table}\label{tab:0bbpbar}
