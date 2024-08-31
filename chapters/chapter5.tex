@@ -58,7 +58,7 @@ are generated when high-energy
 charged particles collide with the detector material.
 
 
-\subsection{Compton scattering}
+\subsection{Compton scattering}\label{compton}
 The Compton effect (Figure \ref{fig:compt}) is the 
 scattering of a photon by a free or quasi-free electron. 
 An electron is considered "quasi-free" when the energy of 
@@ -427,7 +427,7 @@ the pileup hits are explicitly added to the hits from
 the signal process. In the antiproton sample, however, 
 no pileup hits are added, meaning the data represents 
 pure antiproton sample. 
-\section{$\delta$-electrons in the Mu2e tracker}
+\section{$\delta$-electrons in the Mu2e tracker}\label{trackerdeltas}
 
 In Mu2e, low-energy electrons 
 and positrons, with a momentum below 20 MeV/c and 
@@ -926,31 +926,43 @@ comparison, with each level addressing different aspects
 of the algorithms:
 
 \begin{itemize}
-    \item \textbf{Hit-level comparison}: this phase focuses 
-    on evaluating how accurately individual hits are 
+    \item \textbf{Hit-level comparison}: this 
+    phase focuses 
+    on estimating how accurately individual hits are 
     flagged, providing the most direct method for 
     assessing and comparing the performance of the two 
     algorithms. This stage allows for an unbiased 
     comparison without the influence of subsequent 
-    reconstruction stages. It also includes a direct evaluation of proton counting;
+    reconstruction stages. It also includes a 
+    direct evaluation of proton counting;
     
-    \item \textbf{High-level comparison}: this phase examines 
+    \item \textbf{High-level comparison}: we examined  
     the algorithms' impact on the later stages of 
-    event reconstruction. It highlights how effectively 
+    event reconstruction. It estimates how effectively 
     each algorithm contributes to the accurate reconstruction 
     of tracks. The main figure of merit at this stage is the 
     reconstruction of CE tracks, as well as the background reconstruction.
 \end{itemize}
 
 \subsection{Hit-level comparison}
-Before starting with the hit-level comparison of the two algorithms, during the analysis, 
-we first observed an over-efficiency in the proton hit flagging by $DeltaFinder$. 
-This primarily impacted the flagging of protons, muons, and pions, as shown in 
-Table \ref{tab:1bbcelebefore} and Table \ref{tab:0bbpbarbefore}. In these tables 
-and the ones that follow, $f_p$ and $f_e$ represent 
-the number of $ComboHit$s flagged as protons and electrons, respectively, 
-divided by the total number of $ComboHit$s. DF and FBH denote the $DeltaFinder$ 
-algorithm and $FlagBkgHits$, respectively. Each row corresponds to the particle 
+Before starting with the hit-level 
+comparison of the two algorithms, during the analysis, 
+we first observed an over-efficiency 
+in the proton hit flagging by $DeltaFinder$. 
+This primarily impacted the flagging of 
+protons, muons, and pions, as shown in 
+Table \ref{tab:1bbcelebefore} and Table 
+\ref{tab:0bbpbarbefore}. In Tables 
+\ref{tab:1bbcelebefore}, \ref{tab:0bbpbarbefore}, 
+\ref{tab:2bbcele}, \ref{tab:1bbcele} and 
+\ref{tab:0bbpbar}, $f_p$ and 
+$f_e$ represent 
+the number of $ComboHit$s flagged as 
+protons and electrons, respectively, 
+divided by the total number of 
+$ComboHit$s. DF and FBH denote the $DeltaFinder$ 
+and $FlagBkgHits$ algorithms, 
+respectively. Each row corresponds to the particle 
 under study.
 \begin{center}
     \begin{table}[h!]
@@ -963,15 +975,17 @@ under study.
     $p$     & 96.0\% & 1.0\% \\
     \hline
     \end{tabular}
-    \caption[$DeltaFinder$ proton 
-    flagging results before the adjustment.]{$DeltaFinder$ proton 
+    \caption{$DeltaFinder$ proton 
     flagging results before the 
-    adjustment ($CE-1BB$ data sample). 
+    adjustment -selecting a proton 
+    candidate with more than four hits 
+    and a deposited energy above 3 keV- ($CE-1BB$ data sample). 
     $f_p$ and $f_e$ represent 
     the number of proton $ComboHit$s 
     flagged as protons and electrons, respectively, 
     divided by the total number of $ComboHit$s.}
-    \end{table}\label{tab:1bbcelebefore}
+    \label{tab:1bbcelebefore}
+    \end{table}
 \end{center}
     
 \begin{center}
@@ -987,52 +1001,80 @@ under study.
         $\pi$ & 2.5\% &  11.2\%\\
         \hline
         \end{tabular}
-        \caption[$DeltaFinder$ muon and 
-        pion flagging results before the adjustment.]{$DeltaFinder$ muon 
-        and pion flagging results before the adjustment ($PBAR-0BB$ data sample). $f_p$ and $f_e$ represent 
-        the number of particle $ComboHit$s flagged as protons and electrons, respectively, 
+        \caption{
+            $DeltaFinder$ muon 
+        and pion flagging results before the 
+        adjustment -selecting a proton 
+        candidate with more than four hits 
+        and a deposited energy above 3 keV- 
+        ($PBAR-0BB$ data sample). $f_p$ and 
+        $f_e$ represent 
+        the number of particle $ComboHit$s 
+        flagged as protons and electrons, respectively, 
         divided by the total number of $ComboHit$s.}
-    \end{table}\label{tab:0bbpbarbefore}
+        \label{tab:0bbpbarbefore}
+    \end{table}
 \end{center}
 
-The number of pions and muons flagged as protons is extremely high. 
-Figure \ref{fig:0pbarbefore} shows the distribution of the total 
-number of muon $ComboHit$s (red) and those flagged as $\delta$s (blue) 
-and protons (green) versus the particle momentum. 
-As shown, a significant number of muons were misidentified 
-as protons when the momentum was low. 
-According to the Bethe-Bloch formula, such hits have 
-higher energy loss and can thus be most likely flagged as 
-protons. Upon realizing this issue, we made slight modifications to the 
-algorithm. Since $seed$s may have accidentally attached hits, we imposed a 
-condition requiring a $good$ proton candidate to have more than four 
+The number of muons (5.8\%) and pions (2.5\%) 
+flagged as protons is extremely high, since as already 
+mentioned in Section \ref{trackerdeltas} the fraction 
+of those type of events is really low. 
+Figure \ref{fig:0pbarbefore} shows the  
+distribution of the total 
+number of muon $ComboHit$s (red) 
+and those flagged as $\delta$s (blue) 
+and protons (green) as a function 
+of the particle momentum. 
+The distribution shows that a significant number of 
+muons are misidentified 
+as protons at low momentum. 
+According to the Bethe-Bloch formula, 
+such hits have 
+higher energy loss and can thus be 
+most likely flagged as 
+protons. We thus implemented a 
+number of corrections to the algorithm. 
+Since $seed$s may have 
+accidentally attached hits, we imposed a 
+condition requiring a $good$ proton 
+candidate to have more than four 
 hits with a deposited energy greater than 3 keV.
 
-This adjustment is slightly inefficient for protons, reducing their 
-efficiency by a 10\% (Tables \ref{tab:1bbcele} and \ref{tab:2bbcele}). 
+This adjustment is slightly inefficient 
+for protons, reducing their 
+efficiency by a $\sim$10\% 
+(Tables \ref{tab:1bbcele} and \ref{tab:2bbcele}). 
 However, it significantly reduces the 
-number of muons and pions flagged as protons, by approximately 
-a factor of 2 and a factor of 6 (Table \ref{tab:0bbpbar}), respectively.
+number of muons and pions flagged as 
+protons, by approximately 
+a factor of 2 and a factor of 6 
+(Table \ref{tab:0bbpbar}), respectively.
 
  \begin{figure}[!h]
             \centering
             \includegraphics[width =0.7\textwidth]{figures/png/Screenshot_20240805_222923.png}
-        \caption[The momentum 
+        \caption[The  
         distribution of the total 
         and flagged number of muon 
-        $ComboHit$s.]{The momentum 
+        $ComboHit$s as a function of the particle momentum.]{The  
         distribution of the total number of 
         muon $ComboHit$s 
         (red) and of the muon $ComboHit$s 
         flagged as $\delta$s (blue) 
-        and protons (green) ($PBAR-0BB$ data sample). }
+        and protons (green) as a function of the particle momentum ($PBAR-0BB$ data sample). }
            \label{fig:0pbarbefore}
 \end{figure}
 
-Now let's move on to the performance analysis and comparison part.
+We can now concentrate on to the 
+performance and comparison 
+between the two algorithms.
 
-Tables \ref{tab:2bbcele} and \ref{tab:1bbcele} show the hit-level 
-comparison for the $CE-1BB$ and $CE-2BB$ data samples between the two algorithms.
+Tables \ref{tab:2bbcele} and \ref{tab:1bbcele} 
+show the hit-level 
+comparison between the two algorithms 
+for the $CE-1BB$ and $CE-2BB$ data 
+samples.
 \begin{center}
     \begin{table}[h!]
     \centering
@@ -1052,14 +1094,18 @@ comparison for the $CE-1BB$ and $CE-2BB$ data samples between the two algorithms
     e$^+$ ($p<$20 MeV/c) & 0.4\%    &   84.2\%& 87.9\%\\
     \hline
     \end{tabular}
-    \caption[Electrons, 
-    positrons and protons hit-level comparison.]{Electrons, 
-    positrons and protons hit-level comparison ($CE-2BB$ data sample). FBH and DF denote  
-    the $FlagBkgHits$ and the $DeltaFinder$ algorithms, respectively. $f_p$ and $f_e$ represent 
-    the number of particle $ComboHit$s flagged as protons and electrons, respectively, 
+    \caption{Electrons, 
+    positrons and protons hit-level 
+    comparison ($CE-2BB$ data sample). 
+    FBH and DF denote  
+    the $FlagBkgHits$ and the 
+    $DeltaFinder$ algorithms, 
+    respectively. $f_p$ and $f_e$ represent 
+    the number of particle $ComboHit$s 
+    flagged as protons and electrons, respectively, 
     divided by the total number of $ComboHit$s.
-    }
-    \end{table}\label{tab:2bbcele}
+    }\label{tab:2bbcele}
+    \end{table}
     \end{center}
 
     \begin{center}
@@ -1081,43 +1127,73 @@ comparison for the $CE-1BB$ and $CE-2BB$ data samples between the two algorithms
     e$^+$ ($p<$20 MeV/c)    & 0.2\%    &   85.5\%& 88.5\%\\
     \hline
     \end{tabular}
-    \caption[Electrons, positrons and protons hit-level comparison.]{Electrons, 
-    positrons and protons hit-level comparison ($CE-1BB$ data sample). 
-    FBH and DF denote the $FlagBkgHits$ and the $DeltaFinder$ 
-    algorithms, respectively. $f_p$ and $f_e$ represent 
-    the number of particle $ComboHit$s flagged as protons and electrons, respectively, 
+    \caption{Electrons, 
+    positrons and protons hit-level 
+    comparison ($CE-1BB$ data sample). 
+    FBH and DF denote the $FlagBkgHits$ 
+    and the $DeltaFinder$ 
+    algorithms, respectively. $f_p$ and 
+    $f_e$ represent 
+    the number of particle $ComboHit$s 
+    flagged as protons and electrons, respectively, 
     divided by the total number of $ComboHit$s.}
-    \end{table}\label{tab:1bbcele}
+    \label{tab:1bbcele}
+    \end{table}
     \end{center}
   
-The fraction of electrons and positrons flagged as $\delta$-electrons 
-differs due to the momentum distribution of these particles at low energies 
-(Figure \ref{fig:efficiency}). These plots show the efficiency 
-(i.e., the number of $\delta$-electron $ComboHit$s flagged as $\delta$s 
-over the total number of $ComboHit$s for each particle type) as a function 
-of particle momentum for positrons (red) and electrons (blue) using the 
-$FlagBkgHits$ (left) or $DeltaFinder$ (right) algorithms. 
+The fraction of electrons and positrons 
+flagged as $\delta$-electrons 
+differs due to the different momentum distributions  
+of these particles at low energies 
+(Figure \ref{fig:detail}). Figures \ref{fig:eff1} and 
+\ref{fig:eff2} 
+show the efficiency 
+(i.e., the number of $\delta$-electron 
+$ComboHit$s flagged as $\delta$s 
+over the total number of $ComboHit$s 
+for each particle type) as a function 
+of particle momentum for positrons (red) 
+and electrons (blue) using the 
+$FlagBkgHits$ (left) or $DeltaFinder$ 
+(right) algorithms. 
 
-At low momentum values (less than 1-2 MeV/c), the efficiency 
-is generally higher for positrons. This is because the 
-total number of $ComboHit$s with such low momentum is extremely 
-small, as positrons are not affected by Compton scattering. 
-The efficiency plot is, in fact, convoluted with the momentum 
-distribution. This behavior is due to both the high number of 
-$ComboHit$s in this energy range and the fact that the number 
-of $ComboHit$s flagged as $\delta$-electrons remains constant 
-at low energies. Compton electrons typically produce only 
-one hit per station, making it impossible to find the $seed$. 
+At low momentum values (below 1-2 MeV/c), 
+the efficiency 
+tends to be higher for positrons. 
+This is because the 
+total number of $ComboHit$s with 
+such low momentum is extremely 
+small, as positrons are not affected 
+by Compton scattering. 
+The efficiency plot is, in fact, 
+convoluted with the momentum 
+distribution. This behavior is due 
+to both the high number of 
+$ComboHit$s in this energy range and 
+the fact that the number 
+of $ComboHit$s flagged as 
+$\delta$-electrons remains constant 
+at low energies. Compton electrons 
+typically produce only 
+one hit per station, which does not allow to 
+find $seed$. 
 
 Figure \ref{fig:detail} shows a zoomed-in view of the 
-true $\delta$-electron energy distribution for hits that 
-register at least one hit in the tracker for energies below 
-2 MeV. Electrons are shown in pink and positrons in black. 
-Each bin represents the number of hits corresponding to a 
-specific Monte Carlo particle. The pink distribution peaks 
-near the electron mass, that corresponds to a value of $\theta_\gamma \sim 0$, 
+$\delta$-electron energy 
+distribution (Monte Carlo truth) for particles with  
+at least one hit in the 
+tracker for energies below 
+2 MeV. Electrons are shown in 
+pink and positrons in black. 
+Each bin represents the number 
+of hits corresponding to a 
+specific Monte Carlo particle. 
+The pink distribution peaks 
+near the electron mass, that 
+corresponds to a value of $\theta_\gamma \sim 0$ (Section \ref{compton}), 
 while the black distribution falls down 
-to zero, as positrons are not affected by Compton scattering.
+to zero, as positrons are not 
+affected by Compton scattering.
 
 
 \begin{figure}[!h]
@@ -1127,27 +1203,30 @@ to zero, as positrons are not affected by Compton scattering.
     are shown in pink and positrons in black.}
     \label{fig:detail}
 \end{figure}
-For both the algorithms, another cause of failure 
-in $\delta$ flagging arises from hits on straws that are 
-parallel to each other, particularly those near the center of the tracker, 
+Moreover, both the algorithms tend to fail 
+in $\delta$ flagging in the case of  
+hits on straws that are 
+parallel to each other, particularly 
+those near the center of the tracker, 
 with which stereo reconstruction is not possible. 
 
-From both tables, it is also noticeable that the positron 
-efficiency for $FlagBkgHits$ is lower compared to $DeltaFinder$. 
-This is because the MVA output is statistics-dependent. In this 
+Both Tables \ref{tab:2bbcele} and \ref{tab:1bbcele} 
+show that the positron 
+efficiency for $FlagBkgHits$ is lower 
+compared to $DeltaFinder$. 
+This is because the MVA output is 
+statistics-dependent. In this 
 energy range, positrons have very few $ComboHit$s, as 
 they are not affected by Compton scattering. Therefore, 
-$FlagBkgHits$ is less efficient with positrons for $E < 2$ MeV/c, 
+$FlagBkgHits$ is less efficient with 
+positrons for $E < 2$ MeV/c, 
 but more efficient with electrons compared to 
 $DeltaFinder$, due to the higher statistics.
 
-For higher momentum values, both algorithms perform similarly and the 
-differences between positrons and electrons become negligible.  
-The sum of the positron and electron efficiency (Tables \ref{tab:2bbcele} 
-and \ref{tab:1bbcele}) for a given algorithm 
-matches that of the other algorithm, indicating they have the same 
-capability in rejecting $\delta$-electrons. 
-
+At higher momentum values, 
+both algorithms perform similarly and the 
+differences between positrons and 
+electrons become negligible. 
 Figure \ref{fig:efficiency} shows that as the momentum 
 increases, the efficiency decreases. This occurs because 
 higher momenta correspond to larger radii and a 
@@ -1155,36 +1234,63 @@ greater spread of hits on the $x$-$y$ plane.
 This trend is also observed for particles in the 
 next selected momentum range ($20 \ \text{MeV/c} <p<80 \ \text{MeV/c}$).
 
+The sum of the positron and electron 
+efficiency (Tables \ref{tab:2bbcele} 
+and \ref{tab:1bbcele}) for a given algorithm 
+matches that of the other algorithm, 
+indicating they have the same 
+capability in rejecting $\delta$-electrons. 
 
-When comparing the two algorithms, especially in terms of 
-CE flagging, there is a factor of 1.7 between the 
-two $f_e$ values. The key difference lies in the following: 
-CE hits can sometimes occur in close temporal and spatial 
-proximity to other $\delta$ hits. Consequently, $FlagBkgHits$ 
-flags these as $\delta$ hits because it does not attempt to 
-correlate hits across different stations along the $z$-axis. 
+$FlagBkgHits$ flags 70\% more hits caused by CEs 
+as $\delta$s compared to $DeltaFinder$ (Tables \ref{tab:2bbcele} 
+and \ref{tab:1bbcele}). 
+The key difference 
+lies in the following: 
+CE hits can sometimes occur in close 
+temporal and spatial 
+proximity to other $\delta$-electron hits. 
+Consequently, $FlagBkgHits$ 
+flags these as $\delta$ hits 
+because it does not attempt to 
+correlate hits across different 
+stations along the $z$-axis. 
 In contrast, $DeltaFinder$ attempts to link $seed$s 
-across stations, thereby distinguishing them more efficiently.
+across stations, thereby 
+distinguishing them more efficiently.
 
-Concerning proton flagging, we could not compare the two 
-algorithms since the $FlagBkgHits$, before creating $StereoHit$s, 
-applies a preliminary selection cut on the energy deposited in 
-the $StrawHit$s of 5 keV. Subsequently, the algorithm identifies 
-protons as all particles with a deposited energy greater than 
-4.5 keV. It was not possible to conduct a direct comparison, 
-as $DeltaFinder$ does not apply a cut on the energy deposited in 
-the $StrawHit$s, making the comparison unreliable and biased. 
+Concerning proton flagging, we could 
+not compare the two 
+algorithms since the $FlagBkgHits$, 
+before creating $StereoHit$s, 
+applies a preliminary selection cut 
+on the energy deposited in 
+the $StrawHit$s of 5 keV. 
+$FlagBkgHits$ then identifies 
+protons as all particles with 
+a deposited energy greater than 
+4.5 keV. It was not possible to 
+perform a direct comparison, 
+as $DeltaFinder$ does not apply any  
+cuts on the energy deposited in 
+the $StrawHit$s, making the 
+comparison unreliable and biased. 
 Therefore, we reported the fraction of protons 
 flagged as protons only by $DeltaFinder$.
 
-From both Tables \ref{tab:2bbcele} and \ref{tab:1bbcele}, 
-we observe that 3.7\% of 2BB and 2.5\% of 1BB low-momentum 
-electron hits are misidentified as protons. These hits all have 
-higher deposited energy. This occurs because energy loss depends 
-on the particle's energy, which increases as the particle's energy 
-decreases, leading to the misidentification. Positrons, however, 
-are not affected by this misidentification, as they are not 
-subject to Compton scattering and are not abundant in this energy range.
+Tables \ref{tab:2bbcele} and \ref{tab:1bbcele} show 
+that 3.7\% of 2BB and 2.5\% of 1BB low-momentum 
+electron hits are misidentified as protons. 
+All these hits all have 
+higher deposited energy. This occurs because 
+energy loss depends 
+on the particle's energy, which increases as 
+the particle's energy 
+decreases, leading to the misidentification with protons. 
+Positrons, however, 
+are not affected by this misidentification, 
+as they are not 
+subject to Compton scattering and are not 
+abundant in this energy range.
 
 
 The results are comparable for both the 1BB and 2BB data samples.
@@ -1196,12 +1302,14 @@ The results are comparable for both the 1BB and 2BB data samples.
             \centering
             \includegraphics[width=1.\textwidth]{figures/png/Screenshot_20240818_155835.png}
             \caption{}
+            \label{fig:eff1}
         \end{subfigure}%
         ~ 
         \begin{subfigure}[t]{0.5\textwidth}
             \centering
             \includegraphics[width=0.95\textwidth]{figures/png/Screenshot_20240813_203916.png}
             \caption{}
+            \label{fig:eff2}
         \end{subfigure}
         \caption[The efficiency of electrons and positrons versus 
         particle momentum in the low-momentum range.]{The efficiency of electrons (blue) and positrons (red) versus 
@@ -1211,23 +1319,37 @@ The results are comparable for both the 1BB and 2BB data samples.
         \label{fig:efficiency}
       \end{figure} 
 
-      Looking at the results for $\mu$ and $\pi$ (Table \ref{tab:0bbpbar}), 
-      we observe an approximate factor of 4 difference between the two algorithms 
-      in muon flagging, and about a factor of 3.3 for pions 
-      between the two algorithms. This occurs 
-      because muons and pions often produce more than one hit in a single station, 
-      but the $DeltaFinder$ algorithm is able to distinguish these hits, aided by 
-      its ability to recognize straight lines in the $r-z$ plane, whereas 
-      $FlagBkgHits$ cannot. Moreover, the problem with having a supervised 
-      training method that distinguishes one type of particle (CE) from another ($\delta$-electrons)
-      is that it can be confused when another type of particle, such as 
-      tracks from $p\bar{p}$ annihilation, appears. 
+      Concerning $\mu$ and $\pi$ (Table \ref{tab:0bbpbar}), 
+      we observe an approximate factor of 
+      4 difference between the two algorithms 
+      in muon flagging, and about a factor 
+      of 3.3 for pions 
+      between the two algorithms. This occurs because 
+      muons and pions often produce more than one 
+      hit in a single station, but the 
+      $DeltaFinder$ algorithm is able to 
+      distinguish these hits (helical 
+      trajectory) from $\delta$s, which are 
+      straight in the $r-z$ plane, whereas 
+      $FlagBkgHits$ cannot. Moreover, the 
+      problem with having a supervised 
+      training method that distinguishes 
+      one type of particle (CEs) from 
+      another ($\delta$-electrons)
+      is that it can be confused when 
+      another type of particle, such as 
+      those from $p\bar{p}$ annihilation, appears. 
       
-      On average, pions from $p\bar{p}$ collisions have higher 
-      momenta than muons, leading to a higher false positive rate. In fact, 
-      there are more low-energy particles in the case of muons, making them 
-      less likely to be correctly distinguished compared to pions. Furthermore, 
-      the false positive rate ($f_p$) decreases as the momentum increases for pions, 
+      On average, pions from $p\bar{p}$ annihilations  
+      have higher 
+      momenta than muons, leading to a 
+      higher false positive rate. In fact, 
+      there are more low-energy particles 
+      in the case of muons, making them 
+      less likely to be correctly 
+      distinguished compared to pions. Furthermore, 
+      the false positive rate ($f_p$) decreases 
+      as the momentum increases for pions, 
       according to the Bethe-Bloch formula.
 
     \begin{center}
@@ -1243,30 +1365,32 @@ The results are comparable for both the 1BB and 2BB data samples.
         $\pi$ & 0.4\% & 23.8\%& 7.3\%\\
         \hline
         \end{tabular}
-        \caption[Muon and Pion hit-level comparison.]{Muon and Pion 
+        \caption{Muon and Pion 
         hit-level comparison ($PBAR-0BB$ data sample). FBH and DF denote 
         the $FlagBkgHits$ and $DeltaFinder$ algorithms respectively. $f_p$ and $f_e$ represent 
         the number of particle $ComboHit$s flagged as protons and electrons, respectively, 
         divided by the total number of $ComboHit$s.}
-        \end{table}\label{tab:0bbpbar}
+        \label{tab:0bbpbar}
+        \end{table}
         \end{center}
 
 
 \subsection{High-level comparison}
 The unflagged hits are then passed to the pattern 
-recognition algorithm, after which track reconstruction is performed. 
-Figure \ref{fig:highlevel1} presents the momentum 
+recognition algorithm, after which 
+track reconstruction is performed. 
+Figure \ref{fig:highlevel1} shows the momentum 
 distribution of reconstructed tracks for the $CE-1BB$ 
 data sample using both algorithms. 
-In the case of $FlagBkgHits$ (blue), protons are not 
-correctly flagged, resulting in their inclusion during 
+In the case of $FlagBkgHits$ (blue), proton hits are not 
+correctly flagged, and they are erroneously included in the  
 pattern recognition and subsequent reconstruction. 
-In contrast, $DeltaFinder$ (red) successfully flags 
+On the other end, $DeltaFinder$ (red) successfully flags 
 proton hits, preventing them from entering the reconstruction stage. 
 Figure \ref{fig:highlevel2} provides a zoomed-in view 
 of the reconstructed track momentum distribution within 
-the CE momentum range, where the reconstruction results 
-from both algorithms are quite similar.
+the CE momentum range, where the results of track reconstruction 
+for the two flagging algorithms are quite similar.
 
 \begin{figure}[!h]
     \begin{subfigure}[b]{0.5\textwidth}
@@ -1282,23 +1406,35 @@ from both algorithms are quite similar.
         \label{fig:highlevel2}
     \end{subfigure}
     \caption[Momentum distribution of reconstructed tracks.]{The momentum distribution of reconstructed tracks. 
-    Tracks reconstructed using $FlagBkgHits$ as the $\delta$-flagger are shown in blue, while those 
-    using $DeltaFinder$ are in red. The distribution in (a) covers a higher momentum range, while (b) 
+    Tracks reconstructed using $FlagBkgHits$ ($DeltaFinder$) 
+    as the $\delta$-flagger are shown in blue (red). 
+    The distribution in (a) covers a higher momentum range, while (b) 
     provides a zoomed-in view of the momentum range [100, 107] MeV/c.
     }
     \label{fig:highlevel} 
 \end{figure}
 
-The discrepancy in the number of reconstructed tracks, particularly 
-for protons, is approximately 16\%, suggesting that $FlagBkgHits$ is 
-capable of flagging only about one proton track every six events. 
-Table \ref{tab:recoeffcele} reports the fraction of events associated 
-with a true CE that have at least one reconstructed track (for both 2BB and 1BB). 
-This fraction of CEs is nearly identical between the two algorithms, 
-as expected from Figure \ref{fig:highlevel}. Table \ref{tab:1bbcele} shows 
-that the difference in the number of hits between the two algorithms 
-is less than one hit per track, which justifies the observed similarities in 
-Table \ref{tab:recoeffcele}. The results are comparable for both 1BB and 2BB.
+The difference between the number of 
+reconstructed tracks, particularly 
+for protons, is approximately 16\%:  
+this suggests that $FlagBkgHits$ is 
+capable of flagging only about one 
+proton track every six events. 
+Table \ref{tab:recoeffcele} reports 
+the fraction of events associated 
+with a true CE that have at least one 
+reconstructed track (for both 
+$CE-2BB$ and $CE-1BB$ data samples). 
+This fraction of CEs is nearly identical 
+between the two algorithms, 
+as expected from Figure \ref{fig:highlevel}. 
+Table \ref{tab:1bbcele} shows 
+that the difference in the number of 
+hits between the two algorithms 
+is less than one hit per track, which 
+justifies the observed similarities in 
+Table \ref{tab:recoeffcele}. The 
+results are comparable for both 1BB and 2BB.
 
 
 
@@ -1313,9 +1449,10 @@ Table \ref{tab:recoeffcele}. The results are comparable for both 1BB and 2BB.
     fraction of CE events with $N_{tracks}>0$ & 36.7\% & 36.5\% & 37.9\% & 37.9\%\\
     \hline
     \end{tabular}
-    \caption[Fraction of reconstructed CE events.]{Fraction of reconstructed CE events ($CE-2BB$ and $CE-1BB$ data sample). FBH denotes 
-    the $FlagBkgHits$ algorithm, and DF denotes the $DeltaFinder$ algorithm.}
-    \end{table}\label{tab:recoeffcele}
+    \caption{Fraction of reconstructed CE events ($CE-2BB$ and $CE-1BB$ data sample). FBH and DF denote  
+    $FlagBkgHits$ and $DeltaFinder$ algorithms, respectively.}
+    \label{tab:recoeffcele}
+\end{table}
 \end{center}
 
 To better understand the performance of the two algorithms, 
@@ -1420,10 +1557,11 @@ observed without a momentum cut.
             fraction of events with $N_{tracks} \geq 2$ \& $p>$90 MeV/c & 1.6\% & 2.0\%\\
             \hline
             \end{tabular}
-        \caption[Fraction of reconstructed $p\bar{p}$ events.]{Fraction of reconstructed $p\bar{p}$ events 
+        \caption{Fraction of reconstructed $p\bar{p}$ events 
         ($PBAR-0BB$ data sample). FBH denotes the $FlagBkgHits$ algorithm, 
         and DF denotes the $DeltaFinder$ algorithm.}
-        \end{table}\label{tab:recoeffpbar}
+        \label{tab:recoeffpbar}
+        \end{table}
 \end{center}
 
 \section{Conclusions}
