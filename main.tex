@@ -43,7 +43,10 @@
 % Uso delle immagini
 \usepackage{graphicx}
 % Uso dei colori
-%\usepackage[dvipsnames]{xcolor}         
+\usepackage[normalem]{ulem}  % for striking out
+\usepackage{xcolor}         
+% \usepackage{comment}         
+\usepackage{todonotes}         
 % Uso dei listing per il codice
 \usepackage{listings}          
 % Per inserire gli hyperlinks tra i vari elementi del testo 
@@ -160,6 +163,23 @@
   \gdef\thesection{\@arabic\c@section}}
 \setcounter{tocdepth}{4}
 \setcounter{secnumdepth}{4}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand {\blue}      {\color{blue}}
+\newcommand {\green}     {\color{ForestGreen}}
+\newcommand {\red}       {\color{red}}
+\newcommand {\purple}    {\color{purple}}
+\newcommand {\violet}    {\color{violet}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% editing commands
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand {\del}[1]    {{\blue \sout{#1}}}
+\newcommand {\add}[1]    {{\red #1}}
+
 % -----------------------------------------------------------------
 \begin{document}
 
