@@ -8,34 +8,51 @@ aluminum nucleus ($\mu^- \text{Al} \rightarrow e^- \text{Al}$). The signature
 of this process is a monochromatic conversion electron with an energy of 
 approximately 104.97 MeV \cite{bartoszek2015mu2e}. Within the Standard 
 Model, the branching ratio for this process, as well as for the $\mu \rightarrow e \gamma$ 
-decay, is expected to be of the order of $\mathcal{O}(10^{-54})$. These values 
-are far below the sensitivity of current experimental capabilities. However, several 
-models of physics beyond the Standard Model predict a much higher relative rate, potentially 
-reaching an observable level in certain supersymmetry scenarios. The SINDRUM II experiment 
-set an upper limit on muon conversion at $7 \times 10^{-13}$ (90\% C.L.) 
+decay, {\red is expected to be of the order of $\mathcal{O}(10^{-54})$}.
+
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt] {not correct, double check}
+
+These values 
+are far \del{below the sensitivity of}\add{beyond} current experimental capabilities.
+However, \del{several}
+models of physics beyond the Standard Model predict \del{a} much higher relative rate\add{s},
+\del{potentially reaching}\add{approaching} an observable level\del{ in certain supersymmetry scenarios}.
+The SINDRUM II experiment 
+set an upper limit on muon conversion at $7 \times 10^{-13}$ (90\% C.L.) \add{on Au target} 
 \cite{SINDRUMII:2006dvw}, and the Mu2e collaboration aims to improve this limit by 
-four orders of magnitude. Observing this process would provide clear evidence of physics 
+four orders of magnitude. {\red Observing this process would provide a clear evidence of physics 
 beyond the Standard Model, complementing direct searches for new physics currently 
-conducted at the CERN Large Hadron Collider.
+conducted at the CERN Large Hadron Collider.}
+
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt] {why would an observation complement searches?}
 
 Mu2e adopts a sophisticated experimental setup to achieve its goals. An 8.9 GeV proton 
-beam from Fermilab strikes a tungsten target, producing muons through pion decays. These 
-particles are transported via a series of superconducting solenoids to an aluminum 
+beam from Fermilab strikes a tungsten target, producing muons through pion decays.
+These particles are transported via a series of superconducting solenoids to an aluminum 
 stopping target, where the conversion may occur. The system incorporates several 
 components to accurately identify the conversion electrons and differentiate 
 them from various backgrounds, including a straw tracker, an electromagnetic 
-calorimeter, a Cosmic Ray Veto, and a Stopping Target Monitor.
+calorimeter, a Cosmic Ray Veto, {\red and a Stopping Target Monitor.}
+
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{what is the purpose of mentioning the  STM in the abstract ? }
 
 The tracker must provide excellent momentum resolution, approximately 1 MeV/c, 
 to distinguish the monochromatic conversion electron signal from the background. 
-To minimize energy loss, a straw tube tracker will be used \cite{bobbb}. Its 
-annular shape is designed to follow the helical trajectories of conversion 
-electrons in the magnetic field. The detector has a modular design, consisting 
+To minimize energy loss, a straw tube tracker will be used \cite{bobbb}.
+
+{\red Its annular shape is designed to follow the helical trajectories of conversion 
+  electrons in the magnetic field.}
+
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{ really ? }
+
+The detector has a modular design, consisting 
 of basic elements referred to as $Panel$s, $Face$s, $Plane$s, and $Station$s. The 
 tracker comprises panels containing arrays of straw tubes, which are the 
 sensitive units, arranged like the harp chords.
 
-This Thesis presents a comprehensive study of the Mu2e tracker system, 
+This Thesis presents a comprehensive study of the Mu2e tracker \del{system}, 
 covering various aspects from initial commissioning to optimization and first 
 steps of the calibration processes. My work at Fermilab has focused on the 
 complete Data Acquisition (DAQ) testing from both hardware and software 
@@ -63,8 +80,12 @@ Compton scattered electrons, pair production electrons and positrons, and
 delta rays. Compton scattered electrons are produced when photons, from 
 neutron capture, interact with the detector material. Typically, these 
 photons have energies of a few MeV. Pair production electrons and positrons 
-are generated during nuclear recoil processes. Delta rays, or secondary 
-ionized electrons, are produced when high-energy charged particles collide 
+are generated during nuclear recoil processes. Delta rays, {\red or secondary 
+  ionized electrons},
+
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]{ what is a secondary ionized electron' ? }
+
+are produced when high-energy charged particles collide 
 with the detector material. A detailed study of pre-pattern recognition 
 and a comparison of two algorithms for $\delta$-electron flagging is 
 provided in Chapter \ref{delta} to address this issue.
@@ -73,7 +94,7 @@ provided in Chapter \ref{delta} to address this issue.
 Chapter \ref{planning} discusses the initial steps towards the calibration 
 phase of the tracker. Our ultimate goal is to conduct a time calibration of 
 the first assembled station of the tracker, aiming for a longitudinal 
-position resolution better than 4 cm. This involves determining signal 
+position resolution better than 4 cm. This involves determining \add{the} signal 
 propagation times and channel-to-channel delays using cosmic muons. The 
 calibration will be conducted with a vertically oriented station due 
 to technical constraints, and the impact of this orientation on trajectory 
