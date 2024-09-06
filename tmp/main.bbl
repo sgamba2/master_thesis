@@ -532,11 +532,6 @@ M.~Aoki et~al.
 \newblock \doi{{10.1088/0031-8949/11/3-4/004}}.
 \newblock URL \url{{https://dx.doi.org/10.1088/0031-8949/11/3-4/004}}.
 
-\bibitem[{A. Mukherjee}({2017})]{trk}
-{A. Mukherjee}.
-\newblock {Mu2e Tracker}.
-\newblock In \emph{{(DOE IPR 2017 2017-07-25), mu2e-doc-11567-v3}}, {2017}.
-
 \bibitem[Atanov et~al.(2022{\natexlab{a}})]{em4}
 Nikolay Atanov et~al.
 \newblock {The Mu2e Crystal Calorimeter: An Overview}.
@@ -615,6 +610,11 @@ T.~Zhao, Y.~Chen, S.~Han, and J.~Hersch.
 \newblock \doi{https://doi.org/10.1016/0168-9002(94)90129-5}.
 \newblock URL
   \url{https://www.sciencedirect.com/science/article/pii/0168900294901295}.
+
+\bibitem[{A. Mukherjee}({2017})]{trk}
+{A. Mukherjee}.
+\newblock {Mu2e Tracker}.
+\newblock In \emph{{(DOE IPR 2017 2017-07-25), mu2e-doc-11567-v3}}, {2017}.
 
 \bibitem[{V. L. Rusu}({2019})]{vadimmu2e}
 {V. L. Rusu}.
