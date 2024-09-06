@@ -1455,27 +1455,37 @@ results are comparable for both 1BB and 2BB.
 \end{table}
 \end{center}
 
-To better understand the performance of the two algorithms, 
-we analyzed events where at least one track was reconstructed 
-using one hit flagger while no tracks were reconstructed 
-with the other. A well defined class of events was identified in 
-which the effects of hit flaggers are mitigated by the time 
+To better understand the performance of the 
+two algorithms, 
+we analyzed events where at least one 
+track was reconstructed 
+using one hit flagger while no tracks 
+were reconstructed 
+with the other. A well defined class 
+of events was identified in 
+which the effects of hit flaggers are 
+mitigated by the time 
 clustering algorithm during reconstruction.
 
 Figures \ref{fig:TZCluster1} ($FlagBkgHits$) and 
-\ref{fig:TZCluster2} ($DeltaFinder$) illustrate the 
-$time$ versus $z$ coordinate (aligned with the tracker) for 
-the same event processed by both algorithms. In these plots, 
-CE hits are represented by large red dots, $\delta$-electrons 
-by small brown dots, and protons by large blue dots. Violet 
-squares denote particles associated with the same $TimeCluster$, 
-which is formed by grouping hits that align along a linear 
+\ref{fig:TZCluster2} ($DeltaFinder$) show the 
+$time$ versus $z$ coordinate 
+(the one aligned with the tracker axis) for 
+the same event processed by both algorithms. 
+CE hits are represented by large red dots, 
+$\delta$-electrons 
+by small brown dots, and protons by large 
+blue dots. Violet 
+squares denote particles associated with 
+the same $TimeCluster$, 
+which is formed by grouping hits that 
+align along a linear 
 path in time versus $z$ space.
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.7\textwidth]{figures/png/Screenshot_20240819_153229.png}
     \caption[$TimeCluster$ on $time-z$ plane.]{$TimeCluster$ (green) on $time-z$ plane. 
-    This $TimeCluster$ is reconstructed using the $FlagBkgHits$ output.
+    The $TimeCluster$ is reconstructed using the $FlagBkgHits$ output.
     CE hits are represented by large red dots, $\delta$-electrons 
     by small brown dots, and protons by large blue dots. Violet 
     squares denote particles associated with the same $TimeCluster$.}
@@ -1485,60 +1495,96 @@ path in time versus $z$ space.
     \centering
     \includegraphics[width =0.7\textwidth]{figures/png/Screenshot_20240819_153730.png}
     \caption[$TimeCluster$ on $time-z$ plane.]{$TimeCluster$ (green and orange) on $time-z$ 
-    plane. This $TimeCluster$ is reconstructed using the $DeltaFinder$ output.
+    plane. The $TimeCluster$ is reconstructed using the $DeltaFinder$ output.
     CE hits are the large red dots, $\delta$-electrons 
     the small brown ones, and protons the large blue ones. Violet 
     squares denote particles associated with the same $TimeCluster$.}
     \label{fig:TZCluster2}
 \end{figure}
-The time clustering process begins by combining hits within a specific $time-z$ 
-window to create $chunks$ (with a 20 ns time window and a 5-plane z-window). 
-A window qualifies as a $chunk$ if it contains more than three $ComboHit$s. 
-Every potential pair of chunks within a certain time 
-proximity is tested together, and the pair, that minimizes 
-the $\chi^2/ndof$ when the hits are fit to a linear line, 
-is combined. This procedure is repeated until no further combinations 
-yield a $\chi^2/ndof$ below a set threshold. If a chunk 
-exceeds a minimum number of straw hits, it is saved as a cluster.
+The time clustering process begins 
+by combining hits within a specific $time-z$ 
+window to create $chunks$ (with a 
+20 ns time window and a 5-plane z-window). 
+A window qualifies as a $chunk$ if 
+it contains more than three $ComboHit$s. 
+Every potential pair of chunks 
+within a certain time 
+proximity is tested together, 
+and the pair, that minimizes 
+the $\chi^2/ndof$ when the hits 
+are fit to a linear line, 
+is combined. This procedure is 
+repeated until no further combinations 
+yield a $\chi^2/ndof$ below a set 
+threshold. If a chunk 
+exceeds a minimum number of straw 
+hits, it is saved as a cluster.
 
-Since particles grouped together may be at different $z$ values, 
-$TimeCluster$s can exhibit varying $z$ coordinates. In Figure \ref{fig:TZCluster1}, 
+Since particles grouped together 
+may be at different $z$ values, 
+$TimeCluster$s can exhibit varying 
+$z$ coordinates. In Figure \ref{fig:TZCluster1}, 
 all hits are grouped into a single cluster (green), 
-while in Figure \ref{fig:TZCluster2} (green and orange), CE hits are divided into 
+while in Figure \ref{fig:TZCluster2} 
+(green and orange), CE hits are divided into 
 two different $TimeCluster$s.  
-Specifically, in the $DeltaFinder$ algorithm, hits from the same 
-particle are split into separate time clusters and no 
-track are reconstructed. In contrast, with $FlagBkgHits$, 
-unflagged hits are utilized by the time clusterer to $connect$ particle hits, 
+Specifically, in the $DeltaFinder$ 
+algorithm, hits from the same 
+particle are split into separate time 
+clusters and no 
+track are reconstructed. In contrast, 
+with $FlagBkgHits$, 
+unflagged hits are utilized by the 
+time clusterer to $connect$ particle hits, 
 leading to successful track reconstruction. 
 
 This example highlights the importance of refining 
-the cluster finder and pattern recognition algorithms to 
+the cluster finder and pattern recognition 
+algorithms to 
 enhance track reconstruction performance.
 
 
-Table \ref{tab:recoeffpbar} shows the fraction of events attributed 
-to muons, pions, or electrons from $p\bar{p}$ annihilation, 
-with at least two reconstructed tracks and using momentum cuts of 
-either 80 MeV/c or 90 MeV/c. The 80 MeV/c cut represents the 
-minimum particle momentum for which a particle can be reconstructed 
-in Mu2e, due to acceptance limitations for particles originating from 
-the stopping target. The 90 MeV/c cut is applied to ensure 
-the complete elimination of DIO events. For Run I, requiring a 
-DIO electron momentum above 90 MeV/c yields an estimate of 
-approximately $10^{-2}$ events with two DIO electrons. With a 
-track reconstruction efficiency of approximately 0.1, this corresponds 
-to roughly $10^{-4}$ events with two DIO electron tracks. Assuming a 
+Table \ref{tab:recoeffpbar} shows the 
+fraction of events attributed 
+to muons, pions, or electrons from 
+$p\bar{p}$ annihilation, 
+with at least two reconstructed tracks 
+and using momentum cuts of 
+either 80 MeV/c or 90 MeV/c. The 80 
+MeV/c cut represents the 
+minimum particle momentum for which 
+a particle can be reconstructed 
+in Mu2e, due to acceptance limitations 
+for particles originating from 
+the stopping target. The 90 MeV/c cut 
+is applied to ensure 
+the complete elimination of DIO events. 
+For Run I, requiring a 
+DIO electron momentum above 90 MeV/c 
+yields an estimate of 
+approximately $10^{-2}$ events with 
+two DIO electrons. With a 
+track reconstruction efficiency of 
+approximately 0.1, this corresponds 
+to roughly $10^{-4}$ events with two 
+DIO electron tracks. Assuming a 
 uniform distribution in time, the number of such events within a 
 100 ns window is approximately $10^{-5}$.
 
-The $DeltaFinder$ algorithm demonstrates an advantage of 
-approximately 22\% in reconstructing two tracks, attributed to 
-its ability to distinguish between muon and pion hits compared to 
-$\delta$-electrons (Table \ref{tab:0bbpbar}). The difference in 
-hit-level efficiencies results in more than 12 hits per track difference 
-between the two algorithms. After applying momentum cuts, the 
-difference between the algorithms appears to be similar to that 
+The $DeltaFinder$ algorithm shows  
+an advantage of 
+approximately 22\% in reconstructing 
+two tracks, attributed to 
+its ability to distinguish between 
+muon and pion hits compared to 
+$\delta$-electrons (Table \ref{tab:0bbpbar}). 
+The difference in 
+hit-level efficiencies results in more 
+than 12 hits per track difference 
+between the two algorithms. After 
+applying momentum cuts, the 
+difference between the algorithms 
+appears to be similar to that 
 observed without a momentum cut.
 
 
@@ -1558,26 +1604,33 @@ observed without a momentum cut.
             \hline
             \end{tabular}
         \caption{Fraction of reconstructed $p\bar{p}$ events 
-        ($PBAR-0BB$ data sample). FBH denotes the $FlagBkgHits$ algorithm, 
-        and DF denotes the $DeltaFinder$ algorithm.}
+        ($PBAR-0BB$ data sample). FBH and DF denote the $FlagBkgHits$ and the $DeltaFinder$ algorithm, respectively.}
         \label{tab:recoeffpbar}
         \end{table}
 \end{center}
 
 \section{Conclusions}
-The Mu2e tracker will see approximately 75\% of its hit 
-sources originate from $\delta$-electrons, which are electrons 
-and positrons with momenta below 20 MeV/c. Two distinct algorithms 
-have been developed in Mu2e Offline to identify these hits and exclude 
-them from the reconstruction process: $FlagBkgHits$ and $DeltaFinder$. 
-The $FlagBkgHits$ algorithm initially clusters the hits and then uses an ANN 
-to classify them, while $DeltaFinder$ identifies clusters of hits that are 
-consistent with those produced by low-momentum particles.
+The simulation shows that the majority 
+(approximately 75\%) 
+of hits in the tracker are generated by 
+$\delta$-electrons, i.e. electrons 
+and positrons with momenta below 20 MeV/c. 
+Two distinct algorithms 
+have been developed in Mu2e Offline to 
+identify these hits and exclude 
+them from the reconstruction process: 
+$FlagBkgHits$ and $DeltaFinder$. 
+The $FlagBkgHits$ algorithm initially 
+clusters the hits and then uses an ANN 
+to classify them, while $DeltaFinder$ 
+identifies clusters of hits that are 
+consistent with those produced by 
+low-momentum particles.
 
-The performance of these two algorithms has been compared on two levels:
+I performed a systematic two-level comparison of the performance of the two algorithms:
 
 \begin{itemize}
-    \item Hit-level comparison: it focuses on evaluating the 
+    \item Hit-level comparison: the focus is on evaluating the 
     accuracy with which individual hits are flagged, providing a 
     direct method for comparing the algorithms' performance. In terms 
     of $\delta$-electron flagging, both algorithms perform similarly. 
@@ -1586,19 +1639,19 @@ The performance of these two algorithms has been compared on two levels:
     while this disadvantages $FlagBkgHits$ since the ANN is 
     statistics dependent, though it 
     performs worse with electrons as it struggles to reconstruct hits 
-    that register only a single hit per station. Regarding CE hits, 
-    $FlagBkgHits$ flags approximately 70\% more of these than 
+    that register only a single hit per station.  
+    $FlagBkgHits$ flags approximately 70\% more CE hits than 
     $DeltaFinder$, as it performs analysis on the $x$-$y$ plane and does 
     not reconstruct hits in the $z$ coordinate. Furthermore, 
-    $DeltaFinder$ is capable of flagging proton hits (approximately 84\%), 
+    $DeltaFinder$ can flag proton hits (approximately 84\%), 
     a task that $FlagBkgHits$ cannot perform. It is crucial that hits 
     corresponding to $p\bar{p}$ annihilation are not flagged. This necessitates 
-    examining muon and pion hit flagging, but $FlagBkgHits$ trained 
+    examining muon and pion hit flagging, but $FlagBkgHits$ has been trained 
     on datasets lacking muon and pion hits and so 
     flags these particles at rates roughly 4 and 3.3 times higher, 
-    respectively, than $DeltaFinder$.
+    respectively, than $DeltaFinder$;
     
-    \item High-level comparison: This phase assesses the algorithms' 
+    \item High-level comparison: this is a study of the algorithms' 
     impact on subsequent stages of event reconstruction, particularly 
     how effectively each contributes to accurate track reconstruction. 
     The main observed difference between the two algorithms lies in the number 
@@ -1609,11 +1662,10 @@ The performance of these two algorithms has been compared on two levels:
     $p\bar{p}$ events, measured as the fraction of events with 
     at least two reconstructed tracks, is approximately 22\% higher with $DeltaFinder$.
 \end{itemize}
-
-Additionally, the processing time per event for each algorithm was 
-monitored. For $FlagBkgHits$, it was necessary to account for the time 
+An important factor of study was the timing performance of the 
+two algorithms. For $FlagBkgHits$, it was necessary to account for the time 
 spent creating the $StereoHit$s, while $DeltaFinder$ independently 
-reconstructed the $seed$s. Processing $CE-1BB$ events required about 
+reconstructed the $seed$s. Processing $CE-1BB$ sample required about 
 0.14 ms/event for $FlagBkgHits$ plus an additional 0.15 ms/event, 
 compared to 0.42 ms/event for $DeltaFinder$. For $CE-2BB$ events, 
 $FlagBkgHits$ took approximately 0.37 ms/event plus 0.34 ms/event, 
