@@ -43,6 +43,13 @@ Wilhelm~H. Bertl et~al.
 \newblock \doi{{10.1393/ncr/i2018-10144-0}}.
 \newblock URL \url{{https://doi.org/10.1393/ncr/i2018-10144-0}}.
 
+\bibitem[{Cabibbo, Nicola}({1963})]{PhysRevLett.10.531}
+{Cabibbo, Nicola}.
+\newblock {Unitary Symmetry and Leptonic Decays}.
+\newblock \emph{{Phys. Rev. Lett.}}, {10}:\penalty0 {531--533}, {Jun} {1963}.
+\newblock \doi{{10.1103/PhysRevLett.10.531}}.
+\newblock URL \url{{https://link.aps.org/doi/10.1103/PhysRevLett.10.531}}.
+
 \bibitem[{Ardu, Marco and Pezzullo, Gianantonio}({2022})]{universe8060299}
 {Ardu, Marco and Pezzullo, Gianantonio}.
 \newblock {Introduction to Charged Lepton Flavor Violation}.
@@ -58,13 +65,6 @@ Wilhelm~H. Bertl et~al.
   {1977}.
 \newblock ISSN {0370-2693}.
 \newblock \doi{{https://doi.org/10.1016/0370-2693(77)90377-X}}.
-
-\bibitem[{Cabibbo, Nicola}({1963})]{PhysRevLett.10.531}
-{Cabibbo, Nicola}.
-\newblock {Unitary Symmetry and Leptonic Decays}.
-\newblock \emph{{Phys. Rev. Lett.}}, {10}:\penalty0 {531--533}, {Jun} {1963}.
-\newblock \doi{{10.1103/PhysRevLett.10.531}}.
-\newblock URL \url{{https://link.aps.org/doi/10.1103/PhysRevLett.10.531}}.
 
 \bibitem[{Davis, Raymond and Harmer, Don S. and Hoffman, Kenneth
   C.}({1968})]{PhysRevLett.20.1205}
@@ -334,6 +334,13 @@ M.~Aoki et~al.
 \newblock {Mu2e-II: The Mu2e Experiment in the PIP-II Era}.
 \newblock {2021}.
 
+\bibitem[{TESHIMA, Natsuki}({2018})]{deeme}
+{TESHIMA, Natsuki}.
+\newblock {DeeMe experiment to search for muon to electron conversion at J-PARC
+  MLF}.
+\newblock page {109}, {02} {2018}.
+\newblock \doi{{10.22323/1.295.0109}}.
+
 \bibitem[{Abramishvili R. et al.}({2020})]{Abramishvili_2020}
 {Abramishvili R. et al.}
 \newblock {COMET Phase-I technical design report}.
@@ -342,13 +349,6 @@ M.~Aoki et~al.
 \newblock ISSN {2050-3911}.
 \newblock \doi{{10.1093/ptep/ptz125}}.
 \newblock URL \url{{http://dx.doi.org/10.1093/ptep/ptz125}}.
-
-\bibitem[{TESHIMA, Natsuki}({2018})]{deeme}
-{TESHIMA, Natsuki}.
-\newblock {DeeMe experiment to search for muon to electron conversion at J-PARC
-  MLF}.
-\newblock page {109}, {02} {2018}.
-\newblock \doi{{10.22323/1.295.0109}}.
 
 \bibitem[ABA({2002})]{ABASHIAN2002117}
 {The Belle detector}.

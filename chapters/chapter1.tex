@@ -21,7 +21,7 @@ The SM describes the elementary fields shown in Fig. \ref{fig:sm}.
 \begin{figure}[!h]
 \centering
 \includegraphics[width =0.8\textwidth]{figures/pdf/Standard_Model_of_Elementary_Particles.pdf}
-\caption[Elementary particles of the Standard Model.]{Elementary particles of the Standard Model.}
+\caption[Elementary particles of the Standard Model.]{Elementary particles of the SM.}
 \label{fig:sm}
 \end{figure}
 
@@ -72,7 +72,7 @@ through weak and electromagnetic interactions.
 
 \subsection{History of flavour}
 The concept of flavour, namely the presence of three 
-duplicates for every family of elementary fermions, was implemented within the Standard Model by introducing 
+duplicates for every family of elementary fermions, was implemented within the SM by introducing 
 three copies of the gauge representations of fermion fields, without any fundamental requirement. This view began 
 to take shape in the late 1940s. The origin can be traced back to the 
 experiment conducted by Conversi, Pancini and Piccioni in 1947. Their experiment 
@@ -106,12 +106,93 @@ coming from pion decays that produced only muons.
 
 After the observation of CP violation in neutral kaon 
 decay, a third generation of quarks was hypothesized. After the discoveries of the $\tau$ (1976), 
-the $b$ quark (1977), $t$ quark (1995) and $\nu_{\tau}$ (2000), a complete picture was achieved and the concept of flavour was consolidated in the Standard Model.
+the $b$ quark (1977), $t$ quark (1995) and $\nu_{\tau}$ (2000), a complete picture was achieved and the concept of flavour was consolidated in the SM.
 
+\subsection{Lepton sector in the Standard Model}\label{leptonsector}
+In the SM, only one Higgs field $\Phi$ exists. The 
+fermions masses and the mixing term arise from the 
+couplings of fermions with Higgs field. In the following, 
+I will call the left-handed quark doublets 
+as $Q^T_{L}=(u_{L} \ d_{L})$, $u_R$ and $d_R$ the 
+right-handed quarks up and down respectively,  
+the left-handed lepton doublets as 
+$L^T_{L}=(\nu_{L} \ e_{L})$, and $e_R$ 
+the right-handed leptons. There 
+is no right-handed 
+neutrinos. The Yukawa coupling of 
+fermions with the Higgs 
+field $\mathscr{L}_Y$ is the sum of 
+two terms: $\mathscr{L}_e$ 
+that describes the leptonic component 
+(Eq.\ref{leptoniccomponent}) 
+and $\mathscr{L}_q$ that describes the 
+quark one (Eq.\ref{quarkcomponent}).
+\begin{equation}\label{leptoniccomponent}
+    -\mathscr{L}_e=\left(Y_e\right)_{i j} \bar{L}_{L i} e_{R j} \Phi+ \text{ h.c. }
+\end{equation}
+\begin{equation}\label{quarkcomponent}
+        -\mathscr{L}_q=\left(Y_u\right)_{i j} \bar{Q}_{L i} u_{R j} \widetilde{\Phi}+\left(Y_d\right)_{i j} \bar{Q}_{L i} d_{R j} \Phi+\text { h.c. }
+\end{equation}
 
-\subsection{Overview of Charged Lepton Flavour Violation}
+where the term $Y_f \ (f  =  u,d,e)$ describe the 3$\times$3 
+Yukawa complex matrices. $\widetilde{\Phi} \equiv i \tau_2 \Phi^*$ 
+is the conjugate Higgs field. The mass terms of fermions, 
+characterized by the $m_f \bar{f}_L f_R$ form, originate 
+from the breaking of the $SU(2)_L \times U(1)$ symmetry 
+caused by the non-zero vacuum expectation value of the Higgs field.
+\begin{equation}\label{higgs}
+\langle\Phi\rangle=\frac{1}{\sqrt{2}}\left(\begin{array}{l}
+0 \\
+v
+\end{array}\right) \qquad v \simeq 246 \mathrm{GeV}
+\end{equation}
+The fermion mass is given by:
+\begin{equation}
+\left(m_f\right)_{i j}=\frac{v}{\sqrt{2}}\left(Y_f\right)_{i j} \qquad f=u, d, e
+\end{equation}
+Since a right-handed neutrino does not appear in the 
+Lagrangian, neutrinos have no mass, as it is formulated 
+in the SM. The Yukawa matrices can be diagonalized 
+through unitary rotations of the fields, as it follows:
+\begin{equation}\label{bbbb}
+Y_f=V_f \hat{Y}_f U_f^{\dagger} \qquad f=u, d, e
+\end{equation}
+where $ \hat{Y}_f $ is the diagonal Yukawa matrix. 
+It is possible to label fermions in the rotated basis 
+as $f^{\prime}$, so $f_L=V_f f^{\prime}_L$ and $f_R=V_f f^{\prime}_R $. 
+Since $V_f$ and $U_f$ are unitary, the rotation will not affect the 
+neutral interactions term and the kinetic terms, as we can see 
+in $\bar{f}_L \gamma^\mu f_L=\bar{f}_L \gamma^\mu\left(V_f^{\dagger} V_f\right) f_L=\bar{f}_L^{\prime} \gamma^\mu f_L^{\prime}$. 
+The coupling between fermion and Higgs boson will be:
+\begin{equation}
+-\mathscr{L}_{h \bar{f} f}=\frac{(\hat{m}_f)_{i j}}{v} \bar{f}_{L i}^{\prime}f^{\prime}_{R j} h+\text{h.c.} \qquad f=u, d, e
+\end{equation}
+where $\hat{m}_f$ denotes the diagonalized mass matrix: it is clear that there are no flavour-violating terms.
+In quark sector flavour-violation arises from the rotations 
+in Eq.\ref{bbbb} in the charged-current interactions with the $W$ bosons:
+\begin{equation}\label{quarkviolation}
+\begin{array}{c}
+      { \displaystyle 
+\mathscr{L}_{C C}  =\frac{g}{\sqrt{2}}\left(\bar{u}_L \gamma^\mu d_L+\bar{\nu}_L \gamma^\mu e_L\right) W_\mu^{+}+\text {h.c.} }\\
+ {\displaystyle=\frac{g}{\sqrt{2}}\left(\bar{u}^{\prime}_L \gamma^\mu\left(V_u^{\dagger} V_d\right) d_L^{\prime}+\bar{\nu}^{\prime}_L \gamma^\mu\left(V_\nu^{\dagger} V_e\right) e_L^{\prime}\right) W_\mu^{+}+\text {h.c.}}
+\end{array}
+\end{equation}
 
-\add{\bf why this section is coming before the section 'Lepton sector in the SM' ?}
+The violation comes from the fact that $V_u \neq V_d$. The mixing 
+is controlled by the Cabibbo-Kobayashi-Maskawa matrix 
+$V_{CKM}\equiv V^{\dagger}_u V_d $, Ref. \cite{PhysRevLett.10.531}. 
+Meanwhile, as the lepton sector contains massless neutrinos, 
+$V_{\nu}$ can be arbitrarily chosen as $V_{\nu}=V_e$. From the 
+preceding discussions, it becomes evident that in the SM with 
+massless neutrinos, there is no occurrence of LFV in any form. The 
+Lagrangian $\mathscr{L}_Y$ is invariant under three independent 
+global $U(1)$ rotations, resulting in the conservation of three 
+lepton family numbers: $L_e$, $L_\mu$ and $L_\tau$. However, if the 
+Yukawa coupling Lagrangian includes supplementary terms involving the 
+lepton fields, flavour violation can occur in the lepton sector. 
+Examples of such additions could be a neutrino mass term or a second Higgs doublet.
+
+\subsection{Overview of Charged Lepton Flavour Violation}\label{ovclfv}
 
 There are three different lepton flavours: the electron-lepton $L_e$, 
 the muon-lepton $L_{\mu}$ and the tau-lepton $L_{\tau}$. In Table 
@@ -136,13 +217,13 @@ $\nu_{\tau}/\bar{\nu}_{\tau}$ & 0 & 0 & $+1 \ /-1$ \\
 \label{tab:leptons}
 \end{table}
 \end{center}
-In the \del{Standard Model} SM defined with massless 
+In the SM defined with massless 
 left-handed neutrinos, Lepton flavour (LF) is a conserved quantity, 
 Ref. \cite{universe8060299}. Experimental observations have 
 demonstrated that, as they travel, neutrinos exhibit flavour 
 oscillations, which implies that they must have non-zero masses 
 and mixing angles. This phenomenon represents also a violation 
-of the conservation of the lepton flavour. The Standard Model, 
+of the conservation of the lepton flavour. The SM, 
 while successful in many aspects, fails to explain phenomena 
 like neutrino masses and the consequent flavour oscillations. 
 Since neutrinos get their masses through renormalizable Yukawa interactions
@@ -153,85 +234,26 @@ Ref. \cite{MARCIANO1977303} and as shown in Section
 difference between the neutrino mass eigenstates $i$, $j$ and 
 $M_W$ is the $W$ boson mass. The neutrino mass difference is 
 very small ($\Delta m^2 _{i j} \leq 10^{-3}$ eV$^2$) with respect to the $W$ boson mass,
-\del{so}\add{and} the expected branching ratios \del{reach unmeasurable values,} 
-below $10^{-50}$ \add{are well beyond the experimental reach}. Experimental studies 
+and the expected branching ratios  
+below $10^{-50}$ are well beyond the experimental reach. Experimental studies 
 of the lepton flavour violating process could open a window to new physics. 
 Moreover, lepton flavour constitutes an accidental symmetry within the SM, 
 not related to the Gauge structure of the theory but coming
 from its particle content, especially from the absence of RH neutrinos. 
-Minor deviations from the Standard Model can easily give rise to extra 
+Minor deviations from the SM can easily give rise to extra 
 occurrences of lepton flavour violation, leading to notable rates of CLFV.
-There are various extensions of the Standard Model that could potentially 
+There are various extensions of the SM that could potentially 
 be examined in the upcoming experimental searches for CLFV, that 
 I will report in the next sections.
 
-\subsection{Lepton sector in the Standard Model}\label{leptonsector}
-In the SM, only one Higgs field $\Phi$ exists. The 
-fermions masses and the mixing term arise from the 
-couplings of fermions with Higgs field. In the following, 
-I will call the left-handed $i$-th quarks doublets and 
-leptons doublets as $Q_{L,i}=(u_{L,i} \ d_{L,i})^T$ and 
-$L_{L,i}=(\nu_{L,i} \ e_{L,i})^T$: $u_i$ \del{will be}\add{is} 
-the up-type quark, $d_i$ the down-type quark, $\nu_i$ the neutrino, 
-and $e_i$ the charged lepton. These are $SU(2)$ doublets, while 
-$u_{R,j}$, $d_{R,j}$ and $e_{R,j}$ will be the right-handed 
-up-type, down-type quarks and the right charged lepton of the 
-$j$-th generation respectively. There is no right-handed 
-neutrino\add{s}. The Yukawa coupling of fermions with the Higgs 
-field $\mathscr{L}_Y$ is the sum of two terms: $\mathscr{L}_e$ 
-that describes the leptonic component (Eq.\ref{leptoniccomponent}) 
-and $\mathscr{L}_q$ that describes the quark one (Eq.\ref{quarkcomponent}).
-\begin{equation}\label{leptoniccomponent}
-    -\mathscr{L}_e=\left(Y_e\right)_{i j} \bar{L}_{L i} e_{R j} \Phi+ \text{ h.c. }
-\end{equation}
-\begin{equation}\label{quarkcomponent}
-        -\mathscr{L}_q=\left(Y_u\right)_{i j} \bar{Q}_{L i} u_{R j} \widetilde{\Phi}+\left(Y_d\right)_{i j} \bar{Q}_{L i} d_{R j} \Phi+\text { h.c. }
-\end{equation}
 
-
-\add{as introduced, e and d look like singlets, so the lagrangian terms above are not scalars}
-
-where the term $Y_f \ (f  =  u,d,e)$ describe the 3$\times$3 Yukawa complex matrices. $\widetilde{\Phi} \equiv i \tau_2 \Phi^*$ is the conjugate Higgs field. The mass terms of fermions, characterized by the $m_f \bar{f}_L f_R$ form, originate from the breaking of the $SU(2)_L \times U(1)$ symmetry caused by the \add{non-zero} vacuum expectation value of the Higgs field\del{, as in Eq.\ref{higgs}.}
-\begin{equation}\label{higgs}
-\langle\Phi\rangle=\frac{1}{\sqrt{2}}\left(\begin{array}{l}
-0 \\
-v
-\end{array}\right) \qquad v \simeq 246 \mathrm{GeV}
-\end{equation}
-The fermion mass is given by:
-\begin{equation}
-\left(m_f\right)_{i j}=\frac{v}{\sqrt{2}}\left(Y_f\right)_{i j} \qquad f=u, d, e
-\end{equation}
-Since a right-handed neutrino does not appear in the Lagrangian, neutrinos have no mass, as it is formulated in the SM. The Yukawa matrices can be diagonalized 
-through unitary rotations of the fields, as it follows:
-\begin{equation}\label{bbbb}
-Y_f=V_f \hat{Y}_f U_f^{\dagger} \qquad f=u, d, e
-\end{equation}
-where $ \hat{Y}_f $ is the diagonal Yukawa matrix. It is possible to label fermions in the rotated basis as $f^{\prime}$, so $f_L=V_f f^{\prime}_L$ and $f_R=V_f f^{\prime}_R $. Since $V_f$ and $U_f$ are unitary, the rotation will not affect the neutral interactions term and the kinetic terms, as we can see in $\bar{f}_L \gamma^\mu f_L=\bar{f}_L \gamma^\mu\left(V_f^{\dagger} V_f\right) f_L=\bar{f}_L^{\prime} \gamma^\mu f_L^{\prime}$. The coupling between fermion and Higgs boson will be:
-\begin{equation}
--\mathscr{L}_{h \bar{f} f}=\frac{(\hat{m}_f)_{i j}}{v} \bar{f}_{L i}^{\prime}f^{\prime}_{R j} h+\text{h.c.} \qquad f=u, d, e
-\end{equation}
-where $\hat{m}_f$ denotes the diagonalized mass matrix: it is clear that there are no flavour-violating terms.
-In quark sector flavour-violation arises from the rotations in Eq.\ref{bbbb} in the charged-current interactions with the $W$ bosons:
-\begin{equation}\label{quarkviolation}
-\begin{array}{c}
-      { \displaystyle 
-\mathscr{L}_{C C}  =\frac{g}{\sqrt{2}}\left(\bar{u}_L \gamma^\mu d_L+\bar{\nu}_L \gamma^\mu e_L\right) W_\mu^{+}+\text {h.c.} }\\
- {\displaystyle=\frac{g}{\sqrt{2}}\left(\bar{u}^{\prime}_L \gamma^\mu\left(V_u^{\dagger} V_d\right) d_L^{\prime}+\bar{\nu}^{\prime}_L \gamma^\mu\left(V_\nu^{\dagger} V_e\right) e_L^{\prime}\right) W_\mu^{+}+\text {h.c.}}
-\end{array}
-\end{equation}
-
-The violation comes from the fact that $V_u \neq V_d$. The mixing is controlled by the Cabibbo-Kobayashi-Maskawa matrix $V_{CKM}\equiv V^{\dagger}_u V_d $, Ref. \cite{PhysRevLett.10.531}. Meanwhile, as the lepton sector contains massless neutrinos, $V_{\nu}$ can be arbitrarily chosen as $V_{\nu}=V_e$. From the preceding discussions, it becomes evident that in the SM with massless neutrinos, there is no occurrence of LFV in any form. The Lagrangian $\mathscr{L}_Y$ is invariant under three independent global $U(1)$ rotations, resulting in the conservation of three lepton family numbers: $L_e$, $L_\mu$ and $L_\tau$. \del{Furthermore}\add{However}, if the Yukawa coupling Lagrangian includes supplementary terms involving the lepton fields, flavour violation can occur in the lepton sector. Examples of such additions could be a neutrino mass term or a second Higgs doublet.
-
-\subsection{CLFV in the Standard Model with massive neutrinos}\label{massiveneutrinos}
-The first evidence against the hypotesis of massless neutrinos emerged with the solar neutrino problem. In the 1960s, the solar neutrino detection experiment at Homestake revealed that the observed number of solar neutrinos, generated by fusion in the Sun, was significantly lower than the anticipated value based on the standard solar model, given that the detector was only sensitive to $\nu_e$, Ref. \cite{PhysRevLett.20.1205}. Consistent results were replicated in subsequent experiments using radiochemical and Cherenkov detectors, discovering neutrino oscillations. These oscillations firmly established non-zero neutrino masses. The lepton flavour-violating neutrino oscillations showed that the global $U(1)$ symmetries associated with the lepton family numbers are not fundamental symmetries. A correction to standard model is needed to include neutrino mass terms. This is possible adding a right-handed neutrino singlet $\nu_R$ or some non-renormalizable operators.
+\subsection{CLFV in the SM with massive neutrinos}\label{massiveneutrinos}
+The first evidence against the hypotesis of massless neutrinos emerged with the solar neutrino problem. In the 1960s, the solar neutrino detection experiment at Homestake revealed that the observed number of solar neutrinos, generated by fusion in the Sun, was significantly lower than the anticipated value based on the standard solar model, given that the detector was only sensitive to $\nu_e$, Ref. \cite{PhysRevLett.20.1205}. Consistent results were replicated in subsequent experiments using radiochemical and Cherenkov detectors, discovering neutrino oscillations. These oscillations firmly established non-zero neutrino masses. The lepton flavour-violating neutrino oscillations showed that the global $U(1)$ symmetries associated with the lepton family numbers are not fundamental symmetries. A correction to SM is needed to include neutrino mass terms. This is possible adding a right-handed neutrino singlet $\nu_R$ or some non-renormalizable operators.
 \\
 In the first case, an additional term $\Delta \mathscr{L}_D$ to the Yukawa coupling should be introduced:
 \begin{equation}
--\Delta \mathscr{L}_D=\left(Y_\nu\right)_{i j} \bar{L}_{L i} \nu_{Rj} \widetilde{\Phi}+\text { h.c. }
+-\Delta \mathscr{L}_D=\left(Y_\nu\right)_{i j} \bar{\nu}_{R i}  \widetilde{\Phi}^\dagger L_{Lj}+\text { h.c. }
 \end{equation}
-
-\add{\bf Lagrangian not scalar}
 
 Similarly to other fermions, a Dirac mass term $m_{\nu} \bar{\nu}_L \nu_R$ is generated through simmetry breaking:
 \begin{equation}
@@ -253,7 +275,7 @@ In this case, the small neutrino masses can be explained only if $\Lambda > > v$
 \begin{equation}
 \nu_\alpha=\sum_{i=1,2,3}\left(U_{\mathrm{PMNS}}\right)_{l i} \ \nu_i \qquad l=e, \mu, \tau
 \end{equation}
-In addition to the neutral Lepton Flavour Violation (LFV) observed in neutrino oscillations, the mixing outlined by $U_{PMNS}$ can in principle give rise to \add{CLFV} processes \del{known as Charged Lepton Flavour Violations}, i.e. LFV that involves charged leptons. The new Feynman diagrams are loops involving neutrinos and $W$ bosons, as $\mu \rightarrow e \gamma$ in Fig.\ref{fig:mutoegamma} and $\mu N \rightarrow e N$ in Fig.\ref{fig:mutoeN}. 
+In addition to the neutral Lepton Flavour Violation (LFV) observed in neutrino oscillations, the mixing outlined by $U_{PMNS}$ can in principle give rise to CLFV processes, i.e. LFV that involves charged leptons. The new Feynman diagrams are loops involving neutrinos and $W$ bosons, as $\mu \rightarrow e \gamma$ in Fig.\ref{fig:mutoegamma} and $\mu N \rightarrow e N$ in Fig.\ref{fig:mutoeN}. 
 
 
 
@@ -273,7 +295,7 @@ In addition to the neutral Lepton Flavour Violation (LFV) observed in neutrino o
      \caption[$\mu \rightarrow e \gamma$ and $\mu N \rightarrow e N$ Feynman diagrams.]{$\mu \rightarrow e \gamma$ and $\mu N \rightarrow e N$ Feynman diagrams.}
         \label{fig:three graphs2}
 \end{figure}
-In the SM, each of these mechanisms is significantly \del{inhibited}\add{suppressed}. Using the example of $\mu \rightarrow  e \gamma $, the branching ratio of this process may be computed as follows:
+In the SM, each of these mechanisms is significantly suppressed. Using the example of $\mu \rightarrow  e \gamma $, the branching ratio of this process may be computed as follows:
 
 \begin{equation}\label{br}
 \begin{aligned}
@@ -282,37 +304,56 @@ B R(\mu \rightarrow e \gamma) & =\frac{3 \alpha}{32 \pi}\left|\sum_{i=2,3} U_{\m
 \end{aligned}
 \end{equation}
 
-where $\alpha$ is the fine structure constant, $U_{\mu i}$ and $U_{ei}$ are corresponding elements in the PMNS matrix, $\Delta m_{1i}^2$ are the neutrino squared mass differences, $M_W$ is the $W$ boson mass and $\theta_{13}$ and $\theta_{23}$ are rotating angles in PMNS matrix parametrization.
+where $\alpha$ is the fine structure constant, $U_{\mu i}$ and $U_{ei}$ are 
+corresponding elements in the PMNS matrix, $\Delta m_{1i}^2$ are the neutrino 
+squared mass differences, $M_W$ is the $W$ boson mass and $\theta_{13}$ and 
+$\theta_{23}$ are rotating angles in PMNS matrix parametrization, Ref. \cite{MARCIANO1977303}.
 
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt] { a reference would be highly appropriate here}
+As mentioned in \ref{ovclfv}, the expression yields $B R(\mu \rightarrow e \gamma) \sim \mathcal{O}(10^{-54})$. 
+The big discrepancy in mass between neutrinos and the $W$ boson results in an 
+extraordinarily small value for $|\Delta m_{13}^2/M_W|$.
 
-The expression yields $B R(\mu \rightarrow e \gamma) \sim \mathcal{O}(10^{-54})$. The big discrepancy in mass between neutrinos and the $W$ boson results in an extraordinarily small value for $|\Delta m_{13}^2/M_W|$.
 
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt] { already claimed in 1.1.3}
+The rates predicted by the SM are extremely small, 
+making them impractical for detection in any experiment. On the 
+other hand, numerous Beyond the Standard Model (BSM) theories 
+incorporate mechanisms that substantially amplify CLFV rates, a 
+topic to be addressed in the subsequent section. Any experimental observation of 
+any CLFV process would unequivocally indicate physics beyond the SM.
 
-Equivalent suppression mechanisms are evident in other CLFV processes.
-
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ why 'equivalent' ? - the loop is the same ... Why mechanisms are evident ?}
-
-The rates predicted by the Standard Model are extremely small, making them impractical for detection in any experiment. On the other hand, numerous Beyond the Standard Model (BSM) theories incorporate mechanisms that substantially amplify CLFV rates, a topic to be addressed in the subsequent section. {\violet The small value} of \add{the} SM CLFV rates implies that \add{an experimental observation} \del{the detection} of any CLFV \add{process} \del{processes in experiments} would unequivocally indicate \del{the presence of }physics beyond the SM.
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{it is not one value', and it is not defined}
-
-\subsection{Beyond the Standard Model}'
-Numerous Beyond the Standard Model (BSM) theories propose mechanisms that could contribute to CLFV processes, potentially yielding \add{experimentally} detectable rates \del{in experiments}. Here, we highlight a selection of BSM theories known for their CLFV contributions. It is important to note that this list is not comprehensive; for further studies, additional reviews are available in Ref. \cite{clfv_signorelli} and Ref. \cite{universe8060299}.
+\subsection{Beyond the Standard Model}
+Numerous BSM theories propose mechanisms that could contribute to 
+CLFV processes, potentially yielding experimentally detectable rates. 
+Here, we highlight a selection of BSM theories known for their CLFV 
+contributions. It is important to note that this list is not 
+comprehensive; for further studies, additional reviews are available 
+in Ref. \cite{clfv_signorelli} and Ref. \cite{universe8060299}.
 \subsubsection{CLFV in Supersymmetry}\label{susy}
-Supersymmetry (SUSY) is a theoretical framework that has oriented experiments in the CLFV reasearch for many years. On one hand, models with SUSY broken at energies close to electro-weak scale have given solution to the hierarchy problem, i.e. how to maintain the Higgs mass significantly smaller than the Planck scale ($\sim$10$^{19}$ GeV). On the other hand, the suppression of CLFV processes is due to the wide separation of the neutrinos and $W$ masses, which can be mitigated by introducing SUSY partners of neutrinos and $W$ bosons. This suggests that CLFV processes should have been observable earlier, unless SUSY breaking occurs at or near the electroweak scale ($\sim 10^2$ GeV), Ref. \cite{clfv_signorelli}.
+Supersymmetry (SUSY) is a theoretical framework that has oriented 
+experiments in the CLFV reasearch for many years. On one hand, 
+models with SUSY broken at energies close to electro-weak scale 
+have given solution to the hierarchy problem, i.e. how to maintain 
+the Higgs mass significantly smaller than the Planck scale ($\sim$10$^{19}$ GeV). 
+In this framework, each elementary particle has a superpartner, 
+with the same quantum numbers except for spin: a boson is the superpartner 
+of a fermion and vice versa. A superpartner of a lepton is called $slepton$. 
+If there is no common eigenstate base between lepton and $slepton$'s mass 
+matrices then a physical $slepton$ will be a superposition of flavours.
+On the other hand, the suppression of CLFV processes is due to the wide 
+separation of the neutrinos and $W$ masses, which can be mitigated by 
+introducing SUSY partners of neutrinos and $W$ bosons. This suggests 
+that CLFV processes should have been observable earlier, unless SUSY 
+breaking occurs at or near the electroweak scale ($\sim 10^2$ GeV), Ref. \cite{clfv_signorelli}.
 
-{\violet In this framework, each elementary particle has a superpartner,  with the same quantum numbers except for spin: a boson is the superpartner of a fermion and vice versa. A superpartner of a lepton is called $slepton$. If there is no common eigenstate base between lepton and $slepton$'s mass matrices then a physical $slepton$ will be a superposition of flavours.}
-
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ move before the discussion of CLFV suppression}
-
-In this case a loop diagram can lead to CLFV, as shown in Fig.\ref{fig:susy}. Despite the similar topology to that of the SM contribution (Fig.\ref{fig:mutoegamma}), the typical SUSY mass is expected to be much higher than that of the neutrinos. Predictions for the branching ratio of this process vary among different SUSY models, contingent upon specific mechanisms and particle masses. These rates can undergo significant enhancement. For example, in an $SU(5)$ SUSY grand unified theory, the computed branching ratio could reach $\mathcal{O}(10^{-14})$ for a {\violet slepton mass on the order of $\mathcal{O}(10^{-14}$ GeV/c$^2)$} , a value measurable for upcoming experiments.
-
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ check the slepton mass, give a reference }
+In this case a loop diagram can lead to CLFV, as shown in Fig.\ref{fig:susy}. 
+Despite the similar topology to that of the SM contribution (Fig.\ref{fig:mutoegamma}), 
+the typical SUSY mass is expected to be much higher than that of the neutrinos. 
+Predictions for the branching ratio of this process vary among different SUSY models, 
+contingent upon specific mechanisms and particle masses. These rates can undergo 
+significant enhancement. For example, in an $SU(5)$ SUSY grand unified theory, the 
+computed branching ratio could reach $\mathcal{O}(10^{-14})$ for a 
+slepton mass on the order of $\mathcal{O}(10^{2}$ GeV/c$^2)$, 
+a value measurable for upcoming experiments, Ref. \cite{clfv_signorelli}.
 
 \begin{figure}[!h]
 \centering
@@ -323,11 +364,12 @@ In this case a loop diagram can lead to CLFV, as shown in Fig.\ref{fig:susy}. De
 
 
 \subsubsection{Two Higgs Doublet Model}\label{2higgs}
-Although the Standard Model (SM) incorporates only one Higgs boson, there are no constraints against the presence of additional Higgs fields. One straightforward example of a comprehensive theory featuring multiple Higgs fields is the {red type III} two Higgs doublet model (2HDM), where two Higgs bosons exist, each interacting with fermions and possessing a vacuum expectation value, Ref. \cite{Harnik_2013}.
-
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ what is type III ? }
-
+Although the SM incorporates only one Higgs boson, there are 
+no constraints against the presence of additional Higgs fields. 
+One straightforward example of a comprehensive theory featuring 
+multiple Higgs fields is the two Higgs doublet model 
+(2HDM), where two Higgs bosons exist, each interacting with 
+fermions and possessing a vacuum expectation value, Ref. \cite{Harnik_2013}.
 
 Generally, the Lagrangian incorporating extra Higgs fields post-electroweak symmetry breaking can be written as:
 \begin{equation}
@@ -335,39 +377,66 @@ Generally, the Lagrangian incorporating extra Higgs fields post-electroweak symm
 \end{equation}
 Non-renormalizable terms of higher dimensions are omitted. $(Y^\alpha)_{i j}$ represents couplings to a single scalar field and the contributions from different Higgses are summed over. The non-zero-off-diagonal terms in $(Y^\alpha)_{i j}$ give rise to flavour violating Yukawa couplings. From accelerator and precision experiments, constraints on the off-diagonal coupling of the 125 GeV Higgs boson can be obtained.
 \subsubsection{Leptoquark Models}
-Leptoquarks (LQs) are \rm{theoretical}\add{hypothetical} particles initially proposed within the Pati-Salam model, Ref. \cite{PhysRevD.10.275}. \del{Each}\add{A} LQ \del{is linked to}\add{posesses} both \add{a} baryon number ($B$) and \add{a} lepton number ($L$). In various LQ models the quark and lepton sectors are unified. This unification allows for direct coupling between quarks and leptons via the exchange of LQs. Consequently, specific CLFV processes like $K_L^0 \rightarrow e \mu$ and $\mu N \rightarrow e N$ are mediated by LQs. Constraints on LQ models arise from both collider experiments and rare decay searches. Direct searches at ATLAS and CMS have excluded scalar LQs of the first and second generations with masses below $\sim$1 TeV.
+Leptoquarks (LQs) are hypothetical particles initially 
+proposed within the Pati-Salam model, Ref. \cite{PhysRevD.10.275}. 
+A LQ posesses both a baryon number ($B$) and a lepton number ($L$). 
+In various LQ models the quark and lepton sectors are unified. This 
+unification allows for direct coupling between quarks and leptons via 
+the exchange of LQs. Consequently, specific CLFV processes like 
+$K_L^0 \rightarrow e \mu$ and $\mu N \rightarrow e N$ are mediated by LQs. 
+Constraints on LQ models arise from both collider experiments and rare decay 
+searches. Direct searches at ATLAS and CMS have already excluded scalar LQs of the 
+first and second generations with masses below $\sim$1 TeV.
 
-{\violet Indirect searches provide constraints on the mass-coupling plane, where regions with higher couplings and lower LQ masses correspond to higher branching ratios.}
-
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ isn't it the same for direct searches ? }
-
-Additionally, LQ models must satisfy constraints related to proton stability, as some models involve LQs that could mediate proton decay. To mitigate this, the corresponding LQs must either have extremely high masses or their related couplings must be exceedingly small, Ref. \cite{DORSNER20161}.
+Additionally, LQ models must satisfy constraints related to 
+proton stability, as some models involve LQs that could mediate 
+proton decay. To mitigate this, the corresponding LQs must either 
+have extremely high masses or their related couplings must be 
+exceedingly small, Ref. \cite{DORSNER20161}.
 \subsubsection{Additional Neutral Gauge Boson}
-Grand unified theories (GUTs) are constructed based on extended Gauge groups in the pursuit of a more fundamental model. At lower energies, these extended \del{Gauge}\add{gauge} groups \del{are believed to} break down to the direct product of the Standard Model (SM) Gauge group $SU(3) \times SU(2) \times U(1)$ along with an additional $U(1)$ factor. The neutral {\red Gauge} boson associated with this $U(1)$ group can mix with the original SM neutral Gauge boson, resulting in two mass eigenstates, namely $Z$ and $Z'$. Additionally, extended Gauge theories require the introduction of additional fermion fields to cancel anomaly-free currents beyond those of $SU(5)$. These $new$ fermions can mix with the known SM fermions possessing the same electric and color charges, consequently affecting their couplings with Gauge bosons. The appearance of off-diagonal terms in neutral current couplings to fermions can lead to flavour-changing couplings to $Z$ and $Z'$. Certain CLFV processes, such as $\mu \rightarrow eee$ and $\mu-e$ conversion, receive tree-level contributions through intermediate $Z$ and $Z'$ bosons. Further insights into the phenomenology of the $Z'$ boson can be found in, Ref. \cite{Leike_1999}. The search for \del{the existence of} $Z'$ bosons is conducted \del{through}\add{using} channels like $Z' \rightarrow \bar{f}f$ at hadron colliders. \del{Mass lower}\add{Lower} limits \del{of}\add{on the} $Z'$ \add{mass} from various \del{specific} models are listed in Ref. \cite{zyla}, primarily falling within the low TeV range. Particularly, \del{mass lower}\add{the} limits reported in CLFV final states $e\mu$, $e\tau$ and $\mu\tau$ range \add{in} between 3.5 TeV and 4.5 TeV. Upper limits \del{of}\add{on the} $Z \rightarrow l_1 l_2$ couplings \del{to}\add{of} the \del{normal}\add{SM} $Z$ boson are also provided in Table \ref{tab:upperlimits}.
-%Quello che segue è un esempio di codice. E' possibile modificare il linguaggio per il synyax highlight, aggiungere parole chiave... E' tutto disponibile nella guida del pacchetto \texttt{listings}.
+Grand unified theories (GUTs) are constructed based on 
+extended Gauge groups in the pursuit of a more fundamental model. 
+At lower energies, these extended gauge groups break down to the 
+direct product of the SM Gauge group $SU(3) \times SU(2) \times U(1)$ 
+along with an additional $U(1)$ factor. The neutral Gauge boson 
+associated with this $U(1)$ group can mix with the original SM 
+neutral Gauge boson, resulting in two mass eigenstates, namely 
+$Z$ and $Z'$. Additionally, extended Gauge theories require the 
+introduction of additional fermion fields to cancel anomaly-free 
+currents beyond those of $SU(5)$. These $new$ fermions can mix 
+with the known SM fermions possessing the same electric and color 
+charges, consequently affecting their couplings with Gauge bosons. 
+The appearance of off-diagonal terms in neutral current couplings 
+to fermions can lead to flavour-changing couplings to $Z$ and $Z'$. 
+Certain CLFV processes, such as $\mu \rightarrow eee$ and $\mu-e$ 
+conversion, receive tree-level contributions through intermediate 
+$Z$ and $Z'$ bosons. Further insights into the phenomenology of the 
+$Z'$ boson can be found in, Ref. \cite{Leike_1999}. The search for 
+$Z'$ bosons is conducted using channels like $Z' \rightarrow \bar{f}f$ 
+at hadron colliders. Lower limits on the $Z'$ mass from various models 
+are listed in Ref. \cite{zyla}, primarily falling within the low TeV range. 
+Particularly, the limits reported in CLFV final states $e\mu$, $e\tau$ 
+and $\mu\tau$ range in between 3.5 TeV and 4.5 TeV. Upper limits on the 
+$Z \rightarrow l_1 l_2$ couplings of the SM $Z$ boson are also provided 
+in Table \ref{tab:upperlimits}.
 
-%\lstinputlisting[language=C++]{listings/png/code1.cpp} 
 \section{Experiments looking for CLFV}
-CLFV has not been observed yet, despite the ongoing efforts to detect such {\red violations} in different channels in both dedicated and general-purpose experiments.
+CLFV has not been observed yet, despite the ongoing efforts to 
+detect such violation in different channels in both dedicated and general-purpose experiments.
 
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ CLFV is singular }
-
-
-Some of these efforts are documented in Table \ref{tab:upperlimits}, which presents their respective experimental upper limits. 
+Some of these efforts are documented in Table \ref{tab:upperlimits}, which 
+presents their respective experimental upper limits. 
 In addition to searches at collider experiments, such as observing $Z$ and 
 Higgs decays, rare decay experiments play a significant role as a complementary method in the search for CLFV. 
-Collider experiments enable the exploration of various CLFV channels simultaneously, including those involving $\tau$el{s}\add{-leptons}. 
-However, complexities in data selection and reconstruction and limitations in statistics present challenges to improve the limits in this field.
-Rare decay experiments, by focusing on specific processes or a set of similar processes, can achieve high statistics using an intense particle beam. 
-By suppressing background signals, these experiments can significantly improve sensitivity. Furthermore, this approach 
+Collider experiments enable the exploration of various CLFV channels simultaneously, 
+including those involving $\tau$ leptons. 
+However, complexities in data selection and reconstruction 
+present challenges to improve the limits in this field.
+Rare decay experiments, by focusing on specific processes or a 
+set of similar processes, can achieve high statistics using an intense particle beam. 
+By suppressing background signals, these experiments can 
+significantly improve sensitivity. Furthermore, this approach 
 enables the investigation of high mass scales, as will be explained in next sections.
-
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ not clear what is the line of reasoning. - Aren't colliders using high-luminosity beams ?
-  and where limitations in statistics are coming from ?
-}
 
 \begin{center}  
 \begin{table}[!h]
@@ -375,7 +444,7 @@ enables the investigation of high mass scales, as will be explained in next sect
 \renewcommand{\arraystretch}{1.5}
 \begin{tabular}{c c c c c c}
 \hline
-Reaction & Present limit & C.L. & Experiment &  Year & Ref.\\
+Reaction & Present limit & CL & Experiment &  Year & Ref.\\
 \hline
 $\mu^+\ \rightarrow \ e^+ \ \gamma$& $7.5 \times 10^{-13}$ & 90\% & MEG II & 2024 & \cite{megiicollaboration2024search}\\
 $\mu^+ \ \rightarrow \ e^+ \ e^+ \ e^-$ & $1.0 \times 10^{-12}$ & 90\% & SINDRUM & 1988 & \cite{SINDRUM:1987nra} \\
@@ -410,32 +479,21 @@ $h \ \rightarrow \ e \ \tau$ & $6.1 \times 10^{-3}$ & 95\% & LHC CMS & 2017 & \c
 \end{center}
 \vspace{-15mm}
 \subsection{$\mu$ Channels}
-Currently, the most promising channel is the one that includes muon processes.
+The most promising channel is currently represented by muons. 
+There are three primary CLFV channels involving muons: 
+$\mu^+ \rightarrow e^+ \gamma$, $\mu^- N \rightarrow e^- N$ and $\mu^+ \rightarrow e^+ e^+ e^-$. 
+As seen in Table \ref{tab:upperlimits}, 
+these channels have the lowest branching ratio limits: 
+their production is highly favored in pion and kaon decays, 
+which are easily produced through hadronic interactions, and  
+moreover their sufficiently long lifetime enables the 
+formation of a stable muon beam. Current technology 
+supports muon beam intensities in the range of $10^8$ to $10^{11} \ \mu/\text{s}$.
+However, muons have small mass with respect to $\tau$s, that results in a limited number of decay modes. 
 
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ what is a channel which includes processes and why - in the next sentence - a proton beam ?}
-
-When a proton beam interacts with a target, 
-pions and kaons are produced, that subsequently decay in muons. Muon lifetime is long enough to form a muon beam and we are able to reach 
-intensities of 10$^8 \div 10^{11} \  \mu$/s. There are three primary CLFV channels involving muons, with distinct sensitivities to effective lagrangian 
-terms: $\mu^+ \rightarrow e^+ \gamma$, $\mu^- N \rightarrow e^- N$ and $\mu^+ \rightarrow e^+ e^+ e^-$.
-
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ which lagrangian? which terms? }
-
-
-The following paragraphs 
-will discuss the experimental challenges and future perspectives for each of these channels. As seen in Table \ref{tab:upperlimits}, 
-these channels have the lowest branching ratio limits. Muons have small mass, that results in a limited number of decay modes.
-
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ sounds scientific... in reality: one decay + rad corrections... }
-
-Figure \ref{fig:muchannel} 
-shows how the branching ratio \del{limitations}\add{limits} of muon \del{uncommon}\add{rare} decays
-have rapidly improved over the last several decades. The next generation 
-experiments aim to improve \add{the search sensitivity} by many orders of magnitude. Muon rare decay studies can also provide theory differentiation power 
-combining results of the three channels. All CLFV extensions to SM can be described by the following Lagrangian, Ref. \cite{doi:10.1146/annurev-nucl-100809-131949}:
+Muon rare decay studies can also provide theory differentiation power 
+combining results of the three channels. We can consider the following model-independent 
+effective Lagrangian of the $e \mu$ CLFV mode, Ref. \cite{doi:10.1146/annurev-nucl-100809-131949}:
 \begin{equation}\label{LCF}
 \begin{aligned}
 \mathscr{L}_{C L F V}= & \frac{m_\mu}{(1+\kappa) \Lambda^2} \bar{\mu}_R \sigma_{\mu \nu} e_L F^{\mu \nu}+\text{h.c.}+ \\
@@ -444,29 +502,30 @@ combining results of the three channels. All CLFV extensions to SM can be descri
 \end{equation}
 $m_\mu$ is the muon mass and  $F^{\mu \nu}$ is the electromagnetic field tensor.
 
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ not correct. there could be a term with a product of lepton-only currents... re-read the referenced paper}
+$\Lambda$ represents the effective mass scale of the new degree of freedom, and $\kappa$
+determines the relative strengths of the two operators. The first term in the Lagrangian represents a
+magnetic moment type operator which directly mediates $\mu \rightarrow e \gamma$. 
+The second one corresponds to a four-fermion operator, 
+which mediates $\mu N \rightarrow eN$ at tree level and 
+the other two processes at one-loop level.
+The Mu2e experiment can probe an effective mass scale up 
+to $\mathcal{O}$(10$^4$ TeV) with its designed sensitivity assuming $\kappa$ $\gg$ 1.
+On the other hand, $\mu \rightarrow e\gamma$ experiments 
+are more sensitive when $\kappa$ $\ll$ 1; the dominant magnetic
+moment type term determines the other two processes have 
+lower rates in such a case. In order to learn more about the new
+physics, one needs to combine information involving rates 
+of different CLFV processes, Ref. \cite{osti_1042577}.
+The corresponding parameter space (the $\Lambda$-$\kappa$ plane) is shown in 
+Figure \ref{fig:muchannelbr}, Ref. \cite{doi:10.1146/annurev-nucl-100809-131949}. 
 
-This toy Lagrangian includes two parameters.
-\del{$\Gamma$}\add{$\Lambda$} is the effective energy scale of the new physics and $\kappa$ is the relative strengths of the two operators. The first term in the Lagrangian 
-is a magnetic-moment-type operator \del{and describes}\add{which contributes to} all three processes mentioned above, it is generated by {\red any loop with some new particle that can be either virtual and real.}
+Figure \ref{fig:muchannel} 
+shows how the branching ratio limits of muon rare decays
+have rapidly improved over the last several decades. The following paragraphs 
+will discuss the experimental challenges and future perspectives 
+for each of these channels. The next generation 
+experiments aim to improve the search sensitivity by many orders of magnitude. 
 
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ what is that ??? }
-
-The second one corresponds to a four-fermion operator, which mediates $\mu N \rightarrow eN$ at tree level and the other two processes at one-loop level.
-The Mu2e experiment can probe an effective mass scale up to $\mathcal{O}$(10$^4$ TeV) with its designed sensitivity assuming $\kappa$ $\gg$ 1.
-On the other hand, $\mu \rightarrow e\gamma$ experiments are more sensitive when $\kappa$ $\ll$ 1; the dominant magnetic
-moment type term determines the other two processes have lower rates in such a case. In order to learn more about the new
-physics, one needs to combine information involving \del{the} rates of \del{a} different CLFV processes, Ref. \cite{osti_1042577}.
-The corresponding parameter space (the \del{$\Gamma$}\add{$\Lambda$}-$\kappa$ plane) is shown in 
-Figure \ref{fig:muchannelbr}, Ref. \cite{doi:10.1146/annurev-nucl-100809-131949}.
-\begin{figure}[!h]
-\centering
-\includegraphics[width =0.7\textwidth]{figures/png/Screenshot_20240307_161549.png}
-\caption[Branching ratio limits in muon rare decay modes.]{History and outlook of branching ratio limits in muon rare decay modes, Ref. \cite{MARCIANO1977303}.}
-\label{fig:muchannel}
-\end{figure}
 \begin{figure}[!h]
 \centering
 \includegraphics[width =0.7\textwidth]{figures/png/Screenshot_20240313_120457.png}
@@ -478,6 +537,12 @@ excluded by MEG-II, Ref. \cite{megiicollaboration2024search}. The solid (dashed)
 expected limit that would be set by Mu2e, Ref. \cite{universe9010054}.}
 \label{fig:muchannelbr}
 \end{figure}
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width =0.7\textwidth]{figures/png/Screenshot_20240307_161549.png}
+  \caption[Branching ratio limits in muon rare decay modes.]{History and outlook of branching ratio limits in muon rare decay modes, Ref. \cite{MARCIANO1977303}.}
+  \label{fig:muchannel}
+  \end{figure}
 \subsubsection{$\mu^+ \rightarrow e^+ \gamma$}
 A clear signal of CLFV, in $\mu^+ \rightarrow e^+ \gamma$ channel, is given by back-to-back electron and photon, each one with energy of 52.8 MeV, 
 both produced simultaneously. Positive muons are preferred since the negative ones may undergo the nuclear capture. 
@@ -485,19 +550,16 @@ Muons are stopped and decay at rest. There are two most significant sources of b
 and the accidental coincidence of $\mu^+ \rightarrow e^+ \nu_e \bar{\nu}_\mu$ with a random $\gamma$ 
 generated by annihilation or bremsstrahlung. The first one is an in-time process, where neutrinos carry off a small part of the energy 
 and it is only a small part of the total background. The accidental background is dominant. Since both backgrounds scale with the muon stop rate $\Gamma_\mu$, a continuous beam is preferred. 
-Moreover, since \del{an}\add{a} higher number of stopped muons correspond to a lower statistical error, but at the same time, to a lower signal to background ratio, an optimal $\Gamma_\mu$ exists.
-The Stopping Target thickness must be optimized: a thin target is needed to minimise \add{the} Multiple Coulomb Scattering, which affects the angular resolution of the outgoing electron, but 
-it must be thick enough to \del{block}\add{stop} a significant portion of incoming muons. 
+Moreover, since a higher number of stopped muons correspond to a lower statistical error, but at the same time, to a lower signal to background ratio, an optimal $\Gamma_\mu$ exists.
+The Stopping Target thickness must be optimized: a thin target is needed to minimise the Multiple Coulomb Scattering, which affects the angular resolution of the outgoing electron, but 
+it must be thick enough to stop a significant portion of incoming muons. 
 \paragraph{The MEG Experiment}
 The MEG experiment, Ref. \cite{megi}, has been designed around two concepts: exploiting a liquid
 xenon detector (LXe) for positron and photon tracking and an anti-bottle magnetic field, Ref. \cite{clfv_signorelli}. 
 The apparatus is shown in Figure \ref{fig:meg}. A polyethylene target is used to stop muons in the center of the magnet. 
 The measured quantities are the electron and photon energies ($E_e$ and $E_\gamma$) and the
 relative positions (angles $\theta_{e\gamma}$, $\phi_{e\gamma}$ and time $t_{e \gamma}$).
-A combination of drift chambers (DCH) and plastic scintillator timing counters (TC) measures the positron momentum.
-
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ how many separate drift chambers did the MEG experiment have ??? }
+A combination of a drift chamber (DCH) and plastic scintillator timing counters (TC) measure the positron momentum.
 
 The photon energy and direction are measured in a volume of LXe with more than 800 photo-multipliers tubes. 
 An energy resolution of less than 1\% for each particles is required to distinguish background from the signal. 
@@ -507,14 +569,13 @@ This allows low energy positrons to be discarded by simply placing the detector 
 This feature is unique to the MEG magnetic system and justifies its name as \textit{COnstant Bending RAdius} (COBRA) magnets.
 The DCH spectrometer is composed by 16 trapezoidal drift chambers oriented radially and filled with He-C$_2$H$_6$. 
 The timing from the DCH and TC is used to assess the radial coordinate, whereas the $z$ location is determined by measuring the induced
-charged on the zig-zag shaped pads on the side of the drift chambers. The momentum resolution for $e^+$ is $\sim$ 330 keV.
+charged on the zig-zag shaped pads on the side of the drift chambers. The core momentum resolution for $e^+$ is $\sim$ 330 keV.
 A liquid xenon scintillating detector was used for photon reconstruction to reduce passive material and improve temporal resolution. 
-This option provides more light yield than NaI crystals and has a substantially shorter decay period, {\violet with photon interaction times measured at less than 100 ps.}
+This option provides more light yield than NaI crystals 
+and has a substantially shorter decay period, with a timing resolution below 100 ps.
 
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ what does this mean ?}
-
-MEG collected $7.5 \times 10^{14}$ stopped muons in 2008-2013, setting a limit of $BR(\mu^+ \rightarrow e^+ \gamma) < 4.2 \times 10^{-13}$ at 90\% C.L., Ref. \cite{megi}.
+MEG collected $7.5 \times 10^{14}$ stopped muons in 2008-2013, 
+setting a limit of $BR(\mu^+ \rightarrow e^+ \gamma) < 4.2 \times 10^{-13}$ at 90\% CL, Ref. \cite{megi}.
 \begin{figure}[!h]
 \centering
 \includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240321_115127.png}
@@ -522,7 +583,7 @@ MEG collected $7.5 \times 10^{14}$ stopped muons in 2008-2013, setting a limit o
 \label{fig:meg}
 \end{figure}
 \paragraph{The MEG II experiment}
-The MEG II detector is the upgrade \del{to}\add{of} the MEG \del{one}\add{detector}, Ref. \cite{megiicollaboration2024operation}.
+The MEG II detector is the upgrade of the MEG detector, Ref. \cite{megiicollaboration2024operation}.
 MEG II was proposed to reduce the contamination due to the accidental background that could not be further reduced in MEG.
 In Figure \ref{fig:meg2}, the apparatus is shown. The muon flux was increased up to $7 \times 10^7 \ \mu^+$/s and a thinner but more inclined 
 stopping target was installed to reduce the multiple scattering and bremsstrahlung 
@@ -533,9 +594,9 @@ improve positron track reconstruction. CDCH is shown
 in Figure \ref{fig:meg2}.
 A more segmented system (pixellated-TC) was adopted instead of plastic scintillator timing counters (TC).
 A Radiative Decay Counter was introduced, that is a target of scintillator and LYSO calorimeter positioned transversely to detect positron from RMD emitted at low angle.
-When combined with the final result of MEG, MEG II collaboration obtained the most stringent limit up to date, $BR(\mu^+ \rightarrow e^+ \gamma)<3.1\times 10^{-13}$ 90\% C.L., Ref. \cite{megiicollaboration2024search}.
+When combined with the final result of MEG, MEG II collaboration obtained the most stringent limit up to date, $BR(\mu^+ \rightarrow e^+ \gamma)<3.1\times 10^{-13}$ 90\% CL, Ref. \cite{megiicollaboration2024search}.
 The MEG II collaboration took data in 2022 and 2023, collecting much more statistics compared to 2021. By 2026, more than twenty-fold increase in statistics is foreseen, with the goal of reaching a
-$BR(\mu^+ \rightarrow e^+ \gamma)\lesssim 6\times 10^{-14}$ 90\% C.L..
+$BR(\mu^+ \rightarrow e^+ \gamma)\lesssim 6\times 10^{-14}$ 90\% CL.
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240307_140116.png}
@@ -555,58 +616,38 @@ $BR(\mu^+ \rightarrow e^+ \gamma)\lesssim 6\times 10^{-14}$ 90\% C.L..
 
 
 \subsubsection{$\mu^+ \rightarrow e^+ e^-  e^+ $}
-{\violet The CLFV signature of the $\mu^+$ decay at rest } consists of two $e^+$ and one $e^-$ at the same time, 
+The signature of the $\mu^+$ decay at rest consists of two $e^+$ and one $e^-$ at the same time, 
 with total energy equal to the muon mass and null vector sum of the
 particle momenta.
-
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ is there a non-CLFV signature? would a decay in flight have a different signature? }
-
-{\violet The exact energy distribution of daughter particles needs understanding of the underlying physics, 
-which is currently unknown.}
-
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ a distribution doesn't need anything -it is a distribution.... did you want to say that it depends on the underlying physics? }
-
-{\violet To establish detector efficiency, the fraction of particles with momentum over a certain 
-threshold requires some physical assumptions.}
-
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ what did you want to say?  }
+Since this is a three-body decay, where the momenta of the particles 
+range from a few MeV (depending on the $\mu^+$ speed) to about half the mass of the muon, it is crucial 
+to use a tracker that is both thin and low-mass, with an excellent resolution. 
+It is also important to estimate the probability
+of having the three particles with momenta above the detector threshold.
 
 There are two main sources of background. The first one is the radiative muon decay with 
-internal conversion \del{ , $\mu^+ \rightarrow e^+ \gamma \nu_e \bar{\nu}_\mu$ with the radiative
-photon internally converting into an electron pair} $\mu^+ \rightarrow e^+ e^+ e^- \nu_e \bar{\nu}_\mu$. 
-This process has a branching ratio of $BR\sim 3.4 \times 10^{-5}$.
-An experimental resolution of $\sim$1 MeV is needed in order to be sensitive to the small energy carried off by the neutrinos. 
+internal conversion $\mu^+ \rightarrow e^+ e^+ e^- \nu_e \bar{\nu}_\mu$. 
+This process has a branching ratio of $BR\sim 3.4 \times 10^{-5}$, and it is 
+indistinguishable from the signal when the neutrinos have very low energy. 
 
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ needed for what ? - the resolution requirement depends on the sensitivity goal }
-
-The second source of background is due to the coincidence of one Michel decay with a $e^+e^-$ pair (1-MD) or two Michel decays with a single $e^-$ (2-MD). 
+The second source of background is due to the coincidence 
+of one Michel decay with a $e^+e^-$ pair (1-MD) or two Michel decays with a single $e^-$ (2-MD). 
 In this case, the $e^+e^-$ pair can be produced by Bhabha scattering or photon conversion, while the $e^+$
 can be produced by Compton scattering or mis-reconstructed $e^+$ and $e^+e^-$ (with the $e^-$ not reconstructed). 
 As a consequence, this source of background depends on the muon rate and
 can be suppressed with precise vertex reconstruction, timing and track reconstruction.
 As in the previous channel, the use of a continuous beam is preferred.
-Since this is a three-body decay and particles momenta span {\violet a range between few MeV }
-and half the muon mass, a thin and low-mass tracker with an excellent resolution is needed.
 
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ how few is few MeV? }
 
 \paragraph{SINDRUM I}
-The current best limit \del{on} \add{, BR($\mu^+ \rightarrow e^- e^+ e^+$) < $1.0 \times 10^{- 12}$} at 90\% C.L., was set by the
+The current best limit, $BR(\mu^+ \rightarrow e^- e^+ e^+) < 1.0 \times 10^{- 12}$ at 90\% CL, was set by the
 SINDRUM I experiment at PSI, Ref. \cite{sindrumi}. A schematic view of the SINDRUM spectrometer is given in Figure \ref{fig:sindrumi}. 
 The spectrometer consisted of a double cone-shaped stopping target in the middle of five concentric multi-wire proportional chambers surrounded by an array of plastic
 scintillator counters inside a solenoidal magnetic field. Considering a 50 MeV $e^-/e^+$, the detector 
-apparatus had a {\violet momentum resolution at the level of $\sim$1 MeV,}
-
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ specify what it is - gaussian $\sigma$, FWHM, or else. Do the same - whenever the resolution is discussed }
-
-a timing
-resolution $\leq$1 ns and a vertex resolution of $\sim$1 cm. The trigger consisted of a charge filter, requiring one negative and two positive particles, within a time window of 7 ns, Ref. \cite{universe8060299}.
+apparatus had a momentum resolution at the level of $\sim$1 MeV,
+a timing resolution $\leq$1 ns and a vertex resolution of $\sim$1 cm. 
+The trigger consisted of a charge filter, requiring one negative and two 
+positive particles, within a time window of 7 ns, Ref. \cite{universe8060299}.
 \begin{figure}[!h]
 \centering
 \includegraphics[width =0.8\textwidth]{figures/png/The-SINDRUM-I-detector-in-the-horizontal-operating-orientation.png}
@@ -618,16 +659,13 @@ resolution $\leq$1 ns and a vertex resolution of $\sim$1 cm. The trigger consist
 The goal of the Mu3e experiment is to achieve a single-event-sensitivity of the order
 of $10^{-16}$ on the $\mu^+ \rightarrow e^+ e^-  e^+ $ decay, Ref. \cite{hesketh2022mu3e} and \cite{papa}. 
 A schematic view of Mu3e is shown in Figure \ref{fig:mu3e}.
-The same muon beam as MEG II experiment will \add{be} used, stopping muons on a thin hollow double-cone Mylar target. 
+The same muon beam as MEG II experiment will be used, stopping muons on a thin hollow double-cone Mylar target. 
 A 2 m cylinder will be placed inside a 1.5 T magnetic field and segmented in 5 sections. 
 The central station will consist of two double layers of pixel detectors and a
 scintillating fiber tracker. The other four stations will be made of two layers of pixel
 sensors and a hodoscope of scintillator. Since the Mu3e search relies heavily on accurate track reconstruction, multiple Coulomb
 scattering is a limiting factor and the technical choices adopted for the detector design
-have been taken to minimize this effect. The tracker consists of {\violet High Voltage Monolithic Active Pixel} (HV-MAPS)
-
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ only one pixel? }
+have been taken to minimize this effect. The tracker consists of High Voltage Monolithic Active Pixels (HV-MAPS)
 
 and the design is such as to exploit the (partial) canceling of
 the multiple scattering in half of turn. The estimated time and vertex resolutions are
@@ -635,8 +673,8 @@ $\sigma_t \sim 100$ ps and $\sigma_{xy} \sim 200 \ \mu$m and the momentum resolu
 MeV particles. The experiment is projected in three phases. During the first one, the beam will have an intensity of $\mathcal{O}(10^7) \ \mu^+$/s 
 and there will be only the tracker installed. After that, the beam with an intensity of $\mathcal{O}(10^8) \ \mu^+$/s will 
 be used and the scintillating fibers and two of the additional tracking stations will be added.
-During the third phase, \add{the} beam intensity will increase up to $\mathcal{O}(10^9) \ \mu^+$/s and to 
-reach the single-event-sensitivity of $10^{-16}$, two \add{more (?) tracking} stations will be added.
+During the third phase, the beam intensity will increase up to $\mathcal{O}(10^9) \ \mu^+$/s and to 
+reach the single-event-sensitivity of $10^{-16}$, two more tracking stations will be added.
 \begin{figure}[!h]
 \centering
 \includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240321_143650}
@@ -653,105 +691,98 @@ reach the single-event-sensitivity of $10^{-16}$, two \add{more (?) tracking} st
 
 
 \subsubsection{$\mu^- N \rightarrow e^- N $}
-Negative muons are captured by a nucleus and {\violet the decay products are detected}.
-
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ products of which decays ? what does this have to do with the coherent mu --\> e conversion ? }
-
-The coherent conversion leaves the nucleus
-intact and minimal energy will be transmitted to the nucleus recoil.
-The signal signature is a monochromatic 105 MeV $e^-$.
-{\violet All other 105 MeV signals may be a source of background. }
-
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ may be or may be not ? }
-
-Cosmic rays can generate or can be misidentified as electrons in the signal region.
-
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ generate what ? }
-
-Decay in orbit (DIO) can contaminate the signal region and high energy photons produced
-by radiative \del{captures}\add{capture} of pions (RPC) and muons (RMC) can convert 
-asymmetrically and generate high energy electrons.
-
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ define high energy }
-
-More detailed discussion about signal and backgrounds will be given in Section \ref{sigandbkg}.
-{\violet Among the previous processes, this channel offers the most powerful sensitivity.}
-
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ use consistently words 'a process' and 'a channel'. What is 'previous processes'?
-  what is 'the most powerful sensitivity' ? }
-
-Thanks to the one particle final state, this channel is not affected by accidental background.
-Another advantage, with respect to the $\mu \rightarrow e \gamma$ search, is the larger momentum
+In the process of neutrino-less coherent muon to electron conversion, 
+$\mu^- N \rightarrow e^- N$, the energy of the muon is completely 
+transferred to the electron, as the energy given to the nuclear 
+recoil is almost negligible. Consequently, the signal manifests 
+as a monochromatic electron with 105 MeV energy. A significant 
+advantage of this conversion search, compared to the 
+$\mu \rightarrow e \gamma$ search, is the higher momentum 
 and better separation of the electron signal from the background.
-The background level, due to low-momentum particles, can be reduced
-thanks to the \textit{hollow-cylinder} detectors.
 
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ tracking chambers of all experiments have a central beam hole,
-  why is the mu -- >e conversion case so special ? }
+To cancel out uncertainties due to the overlap of the 
+nucleus and the muon wave functions, the quantity often 
+used to represent the results of such searches is defined as: 
+\begin{equation} 
+  R_{\mu e} = \frac{N(\mu \rightarrow e)}{N(\text{muon capture})} 
+\end{equation} 
 
-{\violet The muon capture process is incredibly fast ($\mathcal{O}(10^{-13})$ s)
-  and is characterized by the emission of an X-ray, that can be detected.}
+The muon capture process occurs extremely fast, 
+on the order of $\mathcal{O}(10^{-13})$ s, and is 
+accompanied by the emission of an X-ray, which can be detected. 
+By measuring the X-rays emitted during muon capture, the denominator of 
+the above ratio can be accurately determined. As no coincidence 
+is required, the experiment's success depends largely on effective electron reconstruction.
 
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ a) 'incredibly' is a non-scientific term. b) which capture atomic or nuclear capture?
-  c) is it only one X-ray ?}
+The primary sources of background from muon decay include: 
+\begin{itemize} 
+  \item Electrons from muon decay-in-orbit (DIO), which exhibit a 
+  long energy tail and can contaminate the signal region. 
+  The DIO is an intrinsic background, but the probability of 
+  contamination within the last MeV is less than $10^{-16}$, 
+  and it can be controlled with precise momentum resolution; 
+  \item High-energy photons generated by radiative captures of pions (RPC) 
+  and muons (RMC), which can asymmetrically convert and produce high-energy 
+  electrons. RPC and RMC can be mitigated using a pulsed beam combined with a delayed 
+  time window gate; 
+  \item Cosmic rays, which can either generate electrons or be misidentified as 
+  electrons within the signal region. The cosmic ray background can be reduced 
+  by employing a veto system around the detector. 
+\end{itemize}
 
-To cancel the uncertainty due to the overlap of the nucleus and the muon wave
-functions, the commonly used quantity to denote results in this type of searches is:
-\begin{equation}
-    R_{\mu e}=\frac{N(\mu \rightarrow e)}{N(\text{muon capture})}
-\end{equation}
-Through the detection of X-ray from muon capture, the denominator can be easily determined.
-A pulsed beam is preferred as discussed in Section \ref{sigandbkg}.
-A characteristic of these experiments is that {\bf \red the apparatus lends itself} to the additional
-search of the process $\mu^- N \rightarrow e^+ N$ which would violate also the leptonic number.
+In a $doughnut$-shaped experimental setup, the background 
+from low-momentum particles can be reduced to manageable levels.
+A more detailed discussion of signals and background sources is provided in Section \ref{sigandbkg}.
 
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{a) not clear what that 'lending itself' means, rephrase\\
-  b) 'violating leptonic number' sounds awkward, rephrase
-}
+The use of a curved transport solenoid helps suppress 
+prompt background by a factor of $10^{10}$, eliminates 
+neutral particles, and selects particles based on momentum. 
+To prevent spurious pion production, it is essential to maintain the 
+extinction factor - defined as the fraction of protons that strike the 
+production target outside the desired time window - below $10^{-10}$. 
+Among all available channels, this method offers the highest sensitivity.
 
+Additionally, this experimental setup is conducive to 
+searching for the process $\mu^- N \rightarrow e^+ N$, which would also violate lepton number conservation.
 \paragraph{SINDRUM II}
-PSI delivered a 1 MW 590 MeV proton beam that was extracted from the ring
-cyclotron and directed onto a 40 mm carbon target. The beam line
-transported secondary particles ($\pi$, $\mu$, $e$)
-{\bf \violet emitted in the backward direction to the SINDRUM II spectrometer, as
-illustrated in Figure \ref{fig:sindrumii}.}
-
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{Figure \ref{fig:sindrumii} doesn't illustrate emission in the backward direction }
-
-
-{\bf \violet The structure of the experiment was cylindrical.}
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{rephrase }
-
-{\bf \violet The gold target (B), which had a radius of 20 mm, was positioned
-in the middle of the cylinder.}
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{SINDRUM-II  was taking data for a number of years, and at different times
-  they were using different nuclear targets }
+PSI delivered a 1 MW 590 MeV proton 
+beam that was extracted from the ring
+cyclotron and directed onto a 40 
+mm carbon target. The beam line
+transported secondary particles ($\pi$, $\mu$, $e$) 
+emitted in the backward 
+direction to the SINDRUM II spectrometer 
+(Figure \ref{fig:sindrumii}).
+The overall structure of the experiment
+was cylindrical and the target (B), 
+which had a radius of 20 mm, was positioned
+in the middle of the detector.
 
 Two drift chambers (F and G) were adopted to measure
-the helical trajectories, with the ionization electrons drifting radially towards the amplification 
-regions. The tracker used CO$_2$-isobutane (70\%/30\%) as a drift
-gas while the second one He-isobutane (85\%/15\%). Two 3 mm thick plastic scintillator hodoscopes (D) and a 3 cm 
-thick plexiglass Cherenkov hodoscope (E) provided trigger and time information. 
-The device included two end-cap hodoscopes at opposite ends of the tracking zone to aid in triggering 
+the helical trajectories, with the 
+ionization electrons drifting radially 
+towards the amplification 
+regions. The tracker used CO$_2$-isobutane 
+(70\%/30\%) as a drift
+gas while the second one He-isobutane 
+(85\%/15\%). Two 3 mm thick plastic 
+scintillator hodoscopes (D) and a 3 cm 
+thick plexiglass Cherenkov hodoscope 
+(E) provided trigger and time information. 
+The device included two end-cap hodoscopes 
+at opposite ends of the tracking zone to 
+aid in triggering 
 and resolving ambiguities during event reconstruction.
 
 The number of muons stopped
-was monitored observing the characteristic muonic gold X-rays passing through the
-superconducting coil of the spectrometer. A Ge(Li) detector was used for this purpose.
-{\bf violet SINDRUM II set the limit on the muon conversion at $7 \times 10^{-13}$, Ref. \cite{SINDRUMII:2006dvw}.}
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{This is a limit on Au target}
+was monitored observing the characteristic 
+muonic gold X-rays passing through the
+superconducting coil of the spectrometer. 
+A Ge(Li) detector was used for this purpose.
+SINDRUM II set the limit on the 
+muon conversion on Au target 
+(currently the best limit) at $7 \times 10^{-13}$, 
+Ref. \cite{SINDRUMII:2006dvw}.
 
 \begin{figure}[!h]
 \centering
@@ -760,68 +791,125 @@ superconducting coil of the spectrometer. A Ge(Li) detector was used for this pu
 \label{fig:sindrumii}
 \end{figure}
 \paragraph{Mu2e}
-Mu2e will make use of an 8 GeV, 25 kW pulsed proton beam, with 100 ns wide bunches spaced by 1.7 $\mu$s. 
-Figure \ref{fig:mu2escheme} shows a schematic view of the experimental setup and of the
-three sections of the experiment: Production Solenoid, Transport
-Solenoid and Detector Solenoid. The $S$ shape lowers the background due to 
-neutral particles and selects the charge sign: almost only negative muons will hit the stopping target. 
-The straw tube tracker and the crystal electromagnetic calorimeter are located down-stream of the Al target. 
-Both these detectors adopted a \textit{hollow-cylinder} geometry. 
-The estimated Mu2e sensitivity after three years of data taking is $R_{\mu e} < 3 \times 10^{-17}$, Ref. \cite{universe9010054}.
+Mu2e will make use of an 8 GeV, 
+25 kW pulsed proton beam, with 100 
+ns wide bunches spaced by 1.7 $\mu$s. 
+Figure \ref{fig:mu2escheme} shows a 
+schematic view of the experimental setup and of the
+three sections of the experiment: 
+Production Solenoid, Transport
+Solenoid and Detector Solenoid. The 
+$S$ shape lowers the background due to 
+neutral particles and selects the 
+charge sign: almost only negative 
+muons will hit the stopping target. 
+The straw tube tracker and the crystal 
+electromagnetic calorimeter are located 
+down-stream of the Al target. 
+Both these detectors adopted a 
+\textit{hollow-cylinder} geometry. 
+The estimated Mu2e sensitivity after 
+three years of data taking is 
+$R_{\mu e} < 3 \times 10^{-17}$, 
+Ref. \cite{universe9010054}.
+Mu2e will be described 
+extensively in the Chapter \ref{mu2echapter}.
 
-{\bf violet Mu2e will be described extensively in the Chapter \ref{mu2echapter}.}
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{This one sentence would be enough}
-
-The Mu2e Collaboration is also performing preliminary studies for the upgraded Mu2e II, Ref. \cite{dukes}. 
-The proton beam intensity will be improved by the PIP-II upgrade that will increase the rate of stopped muons 
-on target from $10^{10} \ \mu^-$/s to $10^{11} \ \mu^-$/s. New detector technologies are under study for the upgraded
+The Mu2e Collaboration is also 
+performing preliminary studies for 
+the upgraded Mu2e II, Ref. \cite{dukes}. 
+The proton beam intensity will be 
+improved by the PIP-II upgrade that 
+will increase the rate of stopped muons 
+on target from $10^{10} \ \mu^-$/s 
+to $10^{11} \ \mu^-$/s. New detector 
+technologies are under study for the upgraded
 Mu2e II.
+\paragraph{DeeMe}
+A simpler setup will be adopted 
+by the Direct emission of electron 
+from Muon to electron conversion (DeeMe) 
+experiment at J-PARC to search 
+the muon-to-electron conversion, Ref. \cite{deeme}.
+A pictorial view of DeeMe experiment is shown in Figure 
+\ref{fig:deeme}.
+The experiment will use the Muon 
+Science Establishment's new beam-line (H-line), 
+which will provide 3 GeV protons 
+(a pair of bunches separated by 600 ns at 25 Hz) 
+that will hit on the production target. 
+Some muons ($\mathcal{O}(10^{10})\mu$/s) 
+will be stopped in the target itself, 
+allowing for a search for $\mu \rightarrow e$ 
+with just one target. The signal will be detected 
+with multi-wire proportional chambers and a 
+spectrometer. 
+A dipole will remove low momentum background 
+particles from the transport system. 
+The experiment aims to achieve a single-event 
+sensitivity of $10^{-13}$ using a graphite target, 
+and later of $10^{-14} \div 10^{-15}$ 
+(depending on running duration) using a 
+silicon carbide (SiC) target with a higher 
+capture rate. 
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240322_101840.png}
+    \caption[DeeMe experiment.]{Schematic view 
+    and timing structure of the DeeMe experiment, Ref. \cite{deeme}.}
+    \label{fig:deeme}
+\end{figure}
 \paragraph{COMET}
-The COherent Muon-to-Electron Transition (COMET) experiment is under construction at
-the Japanese Proton Accelerator Research Center (J-PARC), Ref. \cite{Abramishvili_2020}. 
-This experiment shares several characteristics with Mu2e. COMET will use a 8 GeV, 56 kW pulsed proton beam
-with 1.17 $\mu$s spaced bunches. The two main differences between
-COMET and Mu2e can be seen from the schematic view of these experiments 
-in Figure \ref{fig:comet}.
-{\red Using a C-shaped transport solenoid instead of an S-shaped a more precise muon momentum selection 
-  is possible}, 
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{is that true? what does that mean and why the momentum selection is needed ?}
+The COherent Muon-to-Electron 
+Transition (COMET) experiment is 
+under construction at
+the Japanese Proton Accelerator 
+Research Center (J-PARC), Ref. \cite{Abramishvili_2020}. 
+This experiment shares several 
+characteristics with Mu2e. COMET 
+will use a 8 GeV, 56 kW pulsed proton beam
+with 1.17 $\mu$s spaced bunches. 
+The two primary differences between 
+the COMET and Mu2e experiments can 
+be observed in the schematic representations 
+provided in Figure \ref{fig:comet}. First, 
+COMET employs a C-shaped transport solenoid, 
+in contrast to the S-shaped one used in Mu2e. 
+This design leads to a trade-off: while the 
+beam intensity is reduced by approximately 
+70\% compared to Mu2e, the momentum selection 
+of muons is more refined. Specifically, in 
+COMET, the muons that stop in the target 
+have momenta between 30 and 50 MeV/c, whereas 
+in Mu2e, there is no lower momentum cut-off. 
 
-{\red but there will be a lower beam intensity of $\sim$70\%.}
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{70\% compared to what ? }
+Secondly, COMET introduces an 
+additional curved solenoid after 
+the stopping target. This solenoid serves 
+to remove electrons, including those 
+up to and beyond the Michel peak, 
+before they reach the tracker.
 
-An additional curved solenoid after the stopping target filters out non 
-interesting electrons before they reach the tracker.
-COMET will \del{be developed in}\add{have} two stages: Phase-I and Phase-II.
-{\red The two-step strategy is motivated by uncertainties of physical processes. }
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{what are the uncertainties discussed and why are they important ?
-  .. you don't need to explain decisions which you're not responsible for}
-
-\subparagraph*{Phase-I} The first phase involves understanding experimental techniques and studying backgrounds, 
-{\red with an intermediate measurement of $R_{\mu e} \sim 7\times 10^{-15}$.}
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{did COMET promise the measurement ? }
+COMET will have two stages: Phase-I and Phase-II.
+\subparagraph*{Phase-I} The first phase 
+involves understanding experimental 
+techniques and studying backgrounds, 
+making an intermediate
+measurement of the $\mu-e$ conversion at a 90\% CL 
+sensitivity on $R_{\mu e} \sim 7\times 10^{-15}$.
 
 The proton power will be restricted to 
 3.2 kW and a single 90$^o$ bend will be utilized.
-The major challenge is the short distance between all the elements. 
-To track electrons, a cylindrical drift chamber will be used. To trigger and time the tracker, 
+The major challenge is the short distance 
+between all the elements. 
+To track electrons, a cylindrical drift 
+chamber will be used. To trigger and time the tracker, 
 scintillating hodoscopes will surround the tracker. 
-\subparagraph*{Phase-II} A straw tube tracker and a LYSO crystal electromagnetic 
-calorimeter will be adopted to deal with the increased particle rate. 
-The entire magnetic system will be  expanded.
-After Phase-I, some physical processes will be better understood.
-For example, {\red the backward production by 8 GeV proton is now poorly known}
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{backward production of what ? }
-
-{\red and the data on muon nuclear capture in aluminum are still quite scarce. }
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{I'm struggling to understand the concern }
+\subparagraph*{Phase-II} A straw tube 
+tracker and a LYSO crystal electromagnetic 
+calorimeter will be adopted to deal 
+with the increased particle rate. 
+The entire magnetic system will be expanded.
 
 \begin{figure}[!h]
 \centering
@@ -829,66 +917,93 @@ For example, {\red the backward production by 8 GeV proton is now poorly known}
 \caption[COMET experiment.]{Conceptual view of the staging approach in COMET experiment, Ref. \cite{Abramishvili_2020}.}
 \label{fig:comet}
 \end{figure}
-\paragraph{DeeMe}
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{DeeMee is better to be discussed before COMET - they are supposed to finish
-  before COMET starts. They have taken some beam data }
 
-A simpler setup will be adopted by the Direct emission of electron from Muon to electron conversion (DeeMe) 
-experiment at J-PARC to search the muon-to-electron conversion, Ref. \cite{deeme}.
-A pictorial view of DeeMe experiment is shown in Figure 
-\ref{fig:deeme}.
-The experiment will use the Muon Science Establishment's new beam-line (H-line), 
-which will provide 3 GeV protons (a pair of bunches separated by 600 ns at 25 Hz) 
-that will hit on the production target. Some muons ($\mathcal{O}(10^{10})\mu$/s) will be stopped in the target itself, 
-allowing for a search for $\mu \rightarrow e$ with just one target. The signal will be detected 
-with multi-wire proportional chambers and a spectrometer. 
-A dipole will remove low momentum background particles from the transport system. 
-The experiment aims to achieve a single-event 
-sensitivity of $10^{-13}$ using a graphite target, 
-and later of $10^{-14} \div 10^{-15}$ (depending on running duration) using a silicon carbide (SiC) target with a higher capture rate. 
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240322_101840.png}
-    \caption[DeeMe experiment.]{Schematic view and timing structure of the DeeMe experiment, Ref. \cite{deeme}.}
-    \label{fig:deeme}
-    \end{figure}
 \subsection{$\tau$ Channels}
-The $\tau$ lepton is a very promising source of CLFV decays, Ref. \cite{universe8060299}. 
-{\red The huge $\tau$ mass ($m_\tau$ $\sim$ 1.777 GeV)} allows for the investigation of multiple CLFV
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{a) 1.8 GeV is not 'huge'\\
-b)re-work the whole subsection, it needs that }
+The $\tau$ lepton is a very promising 
+source of CLFV decays, Ref. \cite{universe8060299}. 
+The large $\tau$ mass ($m_\tau$ $\sim$ 1.777 GeV) 
+allows for the investigation of multiple CLFV
+channels, with respect to muon decays, 
+Ref. \cite{clfv_signorelli}. 
+Some of these processes are 
+$\tau \rightarrow l \gamma$ (radiative decay), $\tau \rightarrow 3l$ (three-body decay) 
+and $\tau\rightarrow l \ h$, 
+where $h$ is a light hadron and $l$ 
+is an electron or muon. The $\tau$ 
+sector of a CLFV search takes advantage 
+from a higher predicted branching ratio, 
+compared to muons, 
+according to $(\frac{m_\tau}{m_\mu})^\alpha$, 
+where $\alpha$ depends on the model. 
 
-channels, in comparison with muon decays, Ref. \cite{clfv_signorelli}: 
-$\tau^\pm \rightarrow l^\pm \gamma$, $\tau \rightarrow 3l$ and $\tau\rightarrow l \ h$, 
-where $h$ is a light hadron and $l$ is an electron or muon. The $\tau$ sector of a CLFV search takes advantage from an higher predicted branching ratio, compared to muons, 
-according to $(\frac{m_\tau}{m_\mu})^\alpha$, where $\alpha$ depends on the model. Table \ref{tab:upperlimits} lists the current best limits on the $\tau$ 
-CLFV searches and Figure \ref{fig:tauchannel} displays the results from the BaBar, Ref. \cite{PhysRevD.77.091104}, Belle, Ref. \cite{ABASHIAN2002117} and LHCb, 
-Ref. \cite{TheLHCbCollaboration2008}. The $\tau$ \del{particle}\add{lepton} has a short lifetime ($\tau_\tau \ \sim$ \del{2.91}\add{2.9} $\times$ 10$^{-13}$ s), with respect to the muon.
-As a result, it is not possible to produce $\tau$ beams and
-{\red strong electron or proton accelerators are required to produce $\tau$s with
-  a large generation cross section. }
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{the language is really awkward, rephrase}
+However, the search is affected by its  
+short $\tau$ lifetime  
+($\tau_\tau \ \sim$ 2.9 $\times$ 10$^{-13}$ s), that 
+makes not possible to produce 
+$\tau$ beams.
 
-To constrain the kinematics of decay, large detectors with good particle identification, tracking, calorimetry, and hermeticity are required. 
-Because $\tau$ CLFV searches are done with beams and detectors used for a broader physics programme, 
-the increased sensitivity derived by its greater mass is partially decreased by the number of $\tau$s that can be detected.
-In these experiments, a pair of $\tau^+ \tau^-$ is produced by the decay of $\Upsilon(4s)$ resonance at $\sqrt{s}=10.58$ GeV. The branching ratio of this process is  $90\%$ of 
-the one of $b \bar{b}$. One $\tau$ decays via Standard Model (SM) process (tag side), while the signal side is determined based on the specific topology of each channel. 
-At $e^+ e^-$ and $pp$ colliders, the $\tau$s are not created at rest. Because of the boost, the decay products could have 
-energy of several GeV, posing an experimental challenge of providing wide-range calibrations for detectors (from a few hundred MeV to several GeV), Ref. \cite{universe8060299}.
-In a short time, the Belle 2 experiment at Super KEKB will try to increase its limits below $5 \times 10^{-9}$ or $10^{-9}$ for the radiative and three body decays respectively, 
-with an integrated luminosity of 50 ab$^{-1}$. The main background, in $\tau \rightarrow l \gamma$ channel only, arises from
-$e^+ e^- \rightarrow \mu^+ \mu^- \gamma$ or $e^+ e^- \rightarrow \tau^+ \tau^- \gamma$ where one of the $\tau$s decays via $\tau \rightarrow \nu \bar{\nu}$.
-To reduce the background, it is possible to use the $\tau$ polarization or to collect large samples of
-$\tau$ leptons at a lower center-of-mass energy, where initial state radiation is negligible in the signal region. This might be the situation in a $\tau$-charm 
-factory operating slightly above the $\tau$ production threshold, Ref. \cite{Bennett_2016}.
+To constrain the kinematics of decay, 
+large detectors with good particle 
+identification, tracking, calorimetry, 
+and hermeticity are required. 
+Because $\tau$ CLFV searches are done 
+with beams and detectors used for a 
+broader physics programme, 
+the increased sensitivity derived by 
+its greater mass is partially decreased 
+by the number of $\tau$s that can be detected.
+
+In these experiments, a pair of 
+$\tau^+ \tau^-$ is produced by the 
+decay of $\Upsilon(4s)$ resonance at 
+$\sqrt{s}=10.58$ GeV. The branching ratio 
+of this process is  $90\%$ of 
+the one of $b \bar{b}$. One $\tau$ decays 
+via SM process (tag side), 
+while the signal side is determined based on 
+the specific topology of each channel. 
+At $e^+ e^-$ and $pp$ colliders, the $\tau$s 
+are not created at rest. Because of the boost, 
+the decay products could have 
+energy of several GeV, posing an experimental 
+challenge of providing wide-range calibrations 
+for detectors (from a few hundred MeV to several GeV), 
+Ref. \cite{universe8060299}.
+
+Table \ref{tab:upperlimits} lists the 
+current best limits on the $\tau$ 
+CLFV searches and Figure \ref{fig:tauchannel} 
+displays the results from the BaBar, 
+Ref. \cite{PhysRevD.77.091104}, Belle, 
+Ref. \cite{ABASHIAN2002117} and LHCb, 
+Ref. \cite{TheLHCbCollaboration2008}. 
+
+In a short time, the Belle 2 experiment at 
+Super KEKB will try to increase its limits 
+below $5 \times 10^{-9}$ or $10^{-9}$ for 
+the radiative and three body decays respectively, 
+with an integrated luminosity of 50 ab$^{-1}$. 
+The main background, in radiative decay  
+channel only, arises from
+$e^+ e^- \rightarrow \mu^+ \mu^- \gamma$ or 
+$e^+ e^- \rightarrow \tau^+ \tau^- \gamma$ 
+where one of the $\tau$s decays via 
+$\tau \rightarrow \nu \bar{\nu}$.
+To reduce the background, it is possible to 
+use the $\tau$ polarization or to collect 
+large samples of
+$\tau$ leptons at a lower center-of-mass energy, 
+where initial state radiation is negligible in 
+the signal region. This might be the situation 
+in a $\tau$-charm 
+factory operating slightly above the $\tau$ 
+production threshold, Ref. \cite{Bennett_2016}. 
+
+
 \begin{figure}[!h]
 \centering
 \includegraphics[width =0.7\textwidth]{figures/png/Screenshot_20240319_134052.png}
-\caption[Tau lepton-flavour-violating branching ratio upper limits.]{Tau lepton-flavour-violating branching ratio 90\% C.L. upper limits summary plot, Ref. \cite{universe4100101}. The green and blue cones 
+\caption[Tau lepton-flavour-violating branching ratio upper limits.]{Tau lepton-flavour-violating branching ratio 90\% CL upper limits summary plot, Ref. \cite{universe4100101}. The green and blue cones 
 are respectively the Belle and Babar's best upper limits. The red dots are Belle II's expected upper limits for the 50 ab$^{-1}$ run.}
 \label{fig:tauchannel}
 \end{figure}
