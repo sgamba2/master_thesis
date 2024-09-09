@@ -3,14 +3,14 @@
 
 
 The primary objective of the Mu2e experiment at Fermilab is to search 
-for neutrino-less coherent $\mu \rightarrow e$ conversion in the field of an 
+for the neutrino-less coherent $\mu \rightarrow e$ conversion in the field of an 
 aluminum nucleus ($\mu^- \text{Al} \rightarrow e^- \text{Al}$). The signature 
 of this process is a monochromatic conversion electron with an energy of 
 approximately 104.97 MeV \cite{bartoszek2015mu2e}. Within the Standard 
-Model, the branching ratio for this process, as well as for the $\mu \rightarrow e \gamma$ 
-decay, including neutrino masses and oscillation, is expected to be of the order of $\mathcal{O}(10^{-54})$.
-These values are far beyond current experimental capabilities.
-However, models of physics beyond the Standard Model predict much higher relative rates,
+Model (SM), the branching ratio for this process, including neutrino masses 
+and oscillation, is expected to be less than $\mathcal{O}(10^{-50})$.
+This value is far beyond current experimental capabilities.
+However, models of physics beyond the SM predict much higher relative rates,
 approaching an observable level.
 The SINDRUM II experiment set an upper limit on muon conversion at $7 \times 10^{-13}$ (90\% C.L.) on Au target 
 \cite{SINDRUMII:2006dvw}, and the Mu2e collaboration aims to improve this limit by 
@@ -27,21 +27,21 @@ These particles are transported via a series of superconducting solenoids to an 
 stopping target, where the conversion may occur. The system incorporates several 
 components to accurately identify the conversion electrons and differentiate 
 them from various backgrounds, including a straw tracker, an electromagnetic 
-calorimeter, a Cosmic Ray Veto. 
+calorimeter, a cosmic ray veto. 
 
 
 The tracker must provide excellent momentum resolution, approximately 1 MeV/c, 
 to distinguish the monochromatic conversion electron signal from the background. 
 To minimize energy loss, a straw tube tracker will be used \cite{bobbb}.
 The detector has a modular design, consisting 
-of basic elements referred to as $Panel$s, $Face$s, $Plane$s, and $Station$s. The 
+of basic elements referred to as $panel$s, $face$s, $plane$s, and $station$s. The 
 tracker comprises panels containing arrays of straw tubes, which are the 
 sensitive units, arranged like the harp chords. Chapter \ref{chaptertrk} 
 provides an overview of the working principles of the straw tracker and its modular design.
 
 
 This Thesis presents a comprehensive study of the Mu2e tracker, 
-covering various aspects from initial commissioning to optimization and first 
+covering complementary aspects from initial commissioning to optimization and first 
 steps of the calibration processes. My work at Fermilab has focused on the 
 complete Data Acquisition (DAQ) testing from both hardware and software 
 perspectives. I was involved in the commissioning of the Mu2e DAQ system and 
@@ -71,18 +71,19 @@ photons have energies of a few MeV. Pair production electrons and positrons
 are generated during nuclear recoil processes. Delta rays 
 are produced when high-energy charged particles collide 
 with the detector material. A detailed study of pre-pattern recognition 
-and a comparison of two algorithms for $\delta$-electron flagging is 
+and a thorough comparison of two algorithms for $\delta$-electron flagging is 
 provided in Chapter \ref{delta} to address this issue.
 
 
-Chapter \ref{planning} discusses the initial steps towards the calibration 
-phase of the tracker. Our ultimate goal is to conduct a time calibration of 
-the first assembled station of the tracker, aiming for a longitudinal 
+Chapter \ref{planning} discusses the initial steps towards the tracker 
+calibration. Our ultimate goal is to perform a time calibration of 
+the first assembled station of the tracker using cosmic muons, aiming for a longitudinal hit 
 position resolution better than 4 cm. This involves determining the signal 
-propagation times and channel-to-channel delays using cosmic muons. The 
-calibration will be conducted with a vertically oriented station due 
-to technical constraints, and the impact of this orientation on trajectory 
-reconstruction and potential biases is thoroughly analyzed. Together, 
+propagation times and channel-to-channel delays. Due to technical constraints, the 
+first option is to perform the with a vertically oriented station. I performed a 
+Monte Carlo study to determine the impact of this orientation on the quality of the calibration, 
+in particular on the cosmic track reconstruction, focusing on the 
+potential biases that could arise. Together, 
 these studies provide essential insights into the operation, optimization, 
 and calibration of the Mu2e tracker system, contributing to its 
 overall performance and reliability.

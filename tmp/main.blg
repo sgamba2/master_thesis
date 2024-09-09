@@ -5,7 +5,6 @@ The style file: unsrtnat.bst
 Database file #1: main.bib
 Warning--entry type for "tsview" isn't style-file defined
 --line 443 of file main.bib
-Warning--I didn't find a database entry for "SU2020_MDPI_PAPER"
 Warning--empty author in PhysRevD.104.032013
 Warning--empty journal in PhysRevD.104.032013
 Warning--empty journal in cms17
@@ -24,7 +23,7 @@ Warning--empty journal in trkreq
 Warning--empty journal in trkpat
 You've used 88 entries,
             2481 wiz_defined-function locations,
-            1208 strings with 21895 characters,
+            1206 strings with 21861 characters,
 and the built_in function-call counts, 30010 in all, are:
 = -- 2905
 > -- 703
@@ -63,4 +62,4 @@ warning$ -- 16
 while$ -- 236
 width$ -- 0
 write$ -- 1359
-(There were 18 warnings)
+(There were 17 warnings)
