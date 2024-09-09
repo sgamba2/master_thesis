@@ -8,7 +8,7 @@ Most of the discussion is based on \cite{kola} and \cite{bobbb}.}
 
 \section{Drift Tubes}
 Gas detectors are capable of measuring charged particle coordinates. 
-They provide great spatial resolution and detection efficiency at a low cost, Ref. \cite{kola}. 
+They provide great spatial resolution and detection efficiency at a low cost \cite{kola}. 
 There are many different gas ionizazion detectors, one of which is the drift tube.
 The basic configuration of a drift tube is shown in Figure \ref{fig:drifttube}.
 A hollow cylindrical conducting tube is grounded and serves as the cathode.
@@ -18,7 +18,7 @@ The wire, called anode, receives a high voltage. Long and thin drift tubes, know
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240324_232621.png}
-    \caption[Schematic view of a drift tube.]{Schematic view of a drift tube, Ref. \cite{kola}.}
+    \caption[Schematic view of a drift tube.]{Schematic view of a drift tube \cite{kola}.}
     \label{fig:drifttube}
     \end{figure}
 Assuming an anode radius $a$, a cathode radius $b$ and using Gauss theorem, the electric field is:
@@ -27,7 +27,7 @@ Assuming an anode radius $a$, a cathode radius $b$ and using Gauss theorem, the 
 \end{equation}
 Where $\lambda$ is linear charge density on the wire and $\epsilon$ is the dielectric constant of the gas.
 Thinner wires are typically preferred in drift tubes. A greater electric field near the wire increases the amplification factor 
-of the drift tube at the same voltage. Additionally, smaller wires improve spatial resolution, Ref. \cite{kola}. 
+of the drift tube at the same voltage. Additionally, smaller wires improve spatial resolution \cite{kola}. 
 \subsection{Gas Ionization}
 Two are the interactions that can deposit energy when particles traverse the gas volume: ionization and excitation.
 Collisions between a charged particle $C$ and an atom $A$ can result in the ejection of one or more electrons: 
@@ -70,11 +70,11 @@ electrons gather enough energy to exceed gas molecule excitation threshold, resu
 Electron drift velocity is a complex function of electric field intensity due to several variables influencing 
 electron collisions across a large energy range. Figure \ref{fig:drift} shows the electron drift
 velocity at different electric field strengths in argon-carbon dioxide mixtures (Ar-CO$_2$) of different
-proportions, Ref. \cite{ZHAO1994485}.
+proportions \cite{ZHAO1994485}.
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.7\textwidth]{figures/png/Screenshot_20240330_102206.png}
-    \caption[Electron drift velocity versus electric field in Ar:CO$_2$ mixtures.]{Electron drift velocity versus electric field in Ar:CO$_2$ mixtures of different proportions, Ref. \cite{ZHAO1994485}. 
+    \caption[Electron drift velocity versus electric field in Ar:CO$_2$ mixtures.]{Electron drift velocity versus electric field in Ar:CO$_2$ mixtures of different proportions \cite{ZHAO1994485}. 
     80\%:20\% Ar:CO$_2$ mixture is the gas used in the Mu2e tracker.}
     \label{fig:drift}
 \end{figure}
@@ -98,7 +98,7 @@ Drifting ions mostly generate signals in electrodes via induction. Figure \ref{f
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.7\textwidth]{figures/png/Screenshot_20240330_182509.png}
-    \caption[The model of an ionisation avalanche forming at the anode wire of a proportional tube.]{The model of an ionisation avalanche forming at the anode wire of a proportional tube or chamber, Ref. \cite{kola}. 
+    \caption[The model of an ionisation avalanche forming at the anode wire of a proportional tube.]{The model of an ionisation avalanche forming at the anode wire of a proportional tube or chamber \cite{kola}. 
     (a) In the drift volume, electrons and ions are generated and drift to their corresponding electrodes. 
     (b) Near the wire, the electron achieves a high enough field to induce secondary ionisation, resulting in an avalanche. 
     (c) The electric field separates charges created during an avalanche. 
@@ -111,7 +111,7 @@ Drifting ions mostly generate signals in electrodes via induction. Figure \ref{f
 When an avalanche develops, the amplification factor is around $10^4-10^6$. The number of electrons freed per unit path length is given
 by the first Townsend ionization coefficient $\alpha=\sigma_{ion}n=1/\lambda_{ion}$ and this depends on the electric field $E$, 
 as a higher electric field corresponds to a higher kinetic energy of the electron, that increases the ionization cross-section.
-The increase $dN$ of the number of electron-ion pairs over a path length $ds$ is, Ref. \cite{kola}:
+The increase $dN$ of the number of electron-ion pairs over a path length $ds$ is \cite{kola}:
 \begin{equation}
     dN=\alpha(E)Nds
 \end{equation}
@@ -171,13 +171,13 @@ called breakdown mode, commonly known as the Geiger-Muller mode.
     \includegraphics[width =0.5\textwidth]{figures/png/Screenshot_20240330_203416.png}
     \caption[The dependence of particle gain on applied voltage in gaseous ionisation detectors.]{The dependence of particle gain on applied voltage in gaseous ionisation detectors. 
     The numbers on the axes are for orders of magnitude only and they depend on the device geometry and gas concentration. 
-    Drift tubes operate in the proportional mode, Ref. \cite{kola}.}
+    Drift tubes operate in the proportional mode \cite{kola}.}
     \label{fig:gaseous}
     \end{figure}
 \subsection{Signal Creation and Propagation}
 Drift tube signals do not originate from avalanche charges. In this case, the anode wire would 
 receive the complete signal within a few ns. Signal pulses are created by charges on electrodes 
-caused by electron and ion mobility. The Shockley-Ramo theorem, Ref. \cite{kola}, can be 
+caused by electron and ion mobility. The Shockley-Ramo theorem \cite{kola}, can be 
 used to determine the induced charge and current. 
 The Shockley-Ramo theorem yields various important results. The total induced charge of a moving charge 
 $q$ is determined by the initial and final positions only.  A charge pair induces the same amount of 
@@ -233,7 +233,7 @@ filled with a 80\%:20\% Ar:CO$_2$ mixture at 1 atm.
 The detector has a modular design, made of basic elements named $Panel$, $Face$, 
 $Plane$ and $Station$, shown in Figure \ref{fig:trkpanel}. 
 The panel is the fundamental unit of the detector: 96 straw tubes arranged like 
-harp cords in two staggered layers to form one harp-shaped panel spanning 120° along the azimuthal angle, Ref. \cite{bartoszek2015mu2e}, 
+harp cords in two staggered layers to form one harp-shaped panel spanning 120° along the azimuthal angle \cite{bartoszek2015mu2e}, 
 shown in Figure \ref{fig:trkpanel} (top left).
 Three rotated panels form a face, and two faces rotated of 60° form one plane, Figure \ref{fig:trkpanel} (top right-left). 
 Two planes rotated of 60° make one station, Figure \ref{fig:trkpanel} (top right-right).
@@ -245,19 +245,19 @@ Each panel is equipped with its own Front-End and DAQ electronics placed within 
 \includegraphics[width =0.6\textwidth]{figures/png/Screenshot_20240306_222803.png}
 \caption[The straw tracker components.]{(Top left) Schematic representation of one straw tracker panel. (Top right) 
 Straw tracker plane (left) and station (right). (Bottom) Full assembly of the 18 
-stations and support structure, Ref. \cite{bartoszek2015mu2e}.}
+stations and support structure \cite{bartoszek2015mu2e}.}
 \label{fig:trkpanel}
 \end{figure}
 \subsection{The sensitive unit: the straw}
 
 The Mu2e tracker straw tubes use the same detection principles as the gaseous 
-ionisation detectors, Ref. \cite{kola}, to 
+ionisation detectors \cite{kola}, to 
 meet the experiment precise requirements.
 Figure \ref{fig:trkpencil} shows the edge of a straw tube, compared to a pencil.
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.5\textwidth]{figures/png/Screenshot_20240327_000000.png}
-    \caption[A Mu2e straw tube.]{One of the Mu2e straw tube (compared to a pencil), Ref. \cite{trk}.}
+    \caption[A Mu2e straw tube.]{One of the Mu2e straw tube (compared to a pencil) \cite{trk}.}
     \label{fig:trkpencil}
     \end{figure}
 
@@ -331,7 +331,7 @@ panel (Figure \ref{fig:trktubes}).
         \caption{}
         \label{fig:strawtubes}
         \end{subfigure}
-        \caption[The straw arrangement within a panel.]{(a): The straw arrangement within a panel, Ref. \cite{trk}. (b): Expanded view of the panel edge, Ref. \cite{trk}.}
+        \caption[The straw arrangement within a panel.]{(a): The straw arrangement within a panel \cite{trk}. (b): Expanded view of the panel edge \cite{trk}.}
     \end{figure}
 
 Each panel spans a 120° arc (Figure \ref{fig:gonzalo}).
@@ -418,12 +418,12 @@ A schematic representation of the entire system logic is reported in Figure \ref
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.9\textwidth]{figures/png/Screenshot_20240529_133230.png}
-    \caption[Signal flow through Front-End electronics.]{Signal flow through Front-End electronics, Ref. \cite{bartoszek2015mu2e}.}
+    \caption[Signal flow through Front-End electronics.]{Signal flow through Front-End electronics \cite{bartoszek2015mu2e}.}
     \label{fig:flowfee}
     \end{figure}
 All the Front-End electronics is installed on multiple Printed Circuit Boards 
 (PCBs) mounted on the outer section of the panel. 
-The PCBs are shown in Figure \ref{fig:trackerfee}, Ref. \cite{vadimmu2e}.
+The PCBs are shown in Figure \ref{fig:trackerfee} \cite{vadimmu2e}.
 All PCBs are situated in the outer section of the panel. 
 The panel has two sides, named high-voltage side (HV-side), 
 which handles the high-voltage supply distribution to the straws, and 
@@ -470,7 +470,7 @@ To summarise, each straw-tube is an independent detector channel equipped with:
 \begin{figure}[!h]
 \centering
 \includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240131_111836.png}
-\caption[Overview of the straw-tracker Front-End electronics.]{Overview of the straw-tracker Front-End electronics, Ref.  
+\caption[Overview of the straw-tracker Front-End electronics.]{Overview of the straw-tracker Front-End electronics  
 \cite{vadimmu2e}. The CAL-Side of the panel is not shown.}
 \label{fig:trackerfee}
 \end{figure}
@@ -510,7 +510,7 @@ controls all panel operations.
 \begin{figure}[!h]
 \centering
 \includegraphics[width =\textwidth]{figures/png/Screenshot_20240204_115052.png}
-\caption[The DRAC board schematics.]{DRAC board schematics, Ref. \cite{drac}. 
+\caption[The DRAC board schematics.]{DRAC board schematics \cite{drac}. 
 The DRAC board is the brain of the tracker panel. ADCs, FPGAs, DDR3 
 memories and compators are also shown.}
 \label{fig:drac}
@@ -542,8 +542,7 @@ Figure \ref{fig:flowfee} shows the data flow through the panel Front-End and the
     There is a total of 8 Gb of memory space available on each DRAC. 
     The main function of the ROC is to collect data from the digitizer boards 
     digi-FPGAs, buffer data and transfer them to DAQ. They continuously stream out 
-    the zero-suppressed data collected between two proton pulses to the DTCs, 
-    Ref. \cite{GIOIOSA2023167732}. The buffer stage is fundamental, 
+    the zero-suppressed data collected between two proton pulses to the DTCs \cite{GIOIOSA2023167732}. The buffer stage is fundamental, 
     since during the beam inter-spill time (836 ms out of each 1333 ms), 
     we want us to be able to take data from cosmic rays, even if the rate 
     will be very low. For this purpose, the ROCs include external DRAM. 
@@ -583,7 +582,7 @@ processing and storage.
 This architecture results in a large data throughput in 
 the DAQ but offers a 
 significant flexibility for data selection and analysis. 
-Figure \ref{fig:linktodaq}, Ref.\cite{GIOIOSA2023167732}, 
+Figure \ref{fig:linktodaq} \cite{GIOIOSA2023167732}, 
 shows the global 
 architecture of the Mu2e DAQ. 
 The Readout Controllers of all the detectors are shown 
@@ -644,7 +643,7 @@ of channel high voltage when necessary.
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240206_144803.png}
-    \caption[The Mu2e Data Acquisition system architecture.]{Mu2e Data Acquisition system architecture, Ref. \cite{GIOIOSA2023167732}.}
+    \caption[The Mu2e Data Acquisition system architecture.]{Mu2e Data Acquisition system architecture \cite{GIOIOSA2023167732}.}
     \label{fig:linktodaq}
     \end{figure}
 
@@ -652,7 +651,7 @@ of channel high voltage when necessary.
 
 \subsection{Requirements on tracker performance}
 Here a resume of the requirements that the tracker must satisfy to ensure the 
-success of the experiment is presented, Ref. \cite{trkreq}.
+success of the experiment is presented \cite{trkreq}.
 A momentum resolution less than 180 keV/c for a 105 MeV/c electron is needed in the nominal
 1 T solenoidal field, as measured at the front face of the tracker volume (before
 passing through any tracker related material). Non-Gaussian tails, particularly any
