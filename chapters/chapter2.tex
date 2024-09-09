@@ -54,13 +54,10 @@ conservation ($|\Delta L|$ = 2).
 Conversion positrons tracks helices in the tracker, but with different chirality from electrons. 
 \section{Signals and Backgrounds}\label{sigandbkg}
 \subsection{Conversion Electron Signal}
-{\red The conversion of a muon to an electron in the field of a nucleus is coherent: }
 
-\todo[inline, color=green!20,linecolor=gray,tickmarkheight=10pt] {
-  mu-to-e conversion doesn't have to be coherent, but Mu2e will search, first of all, for a coherent process
-}
-
-the electron recoils off the entire nucleus and follows two-body decay kinematics \cite{bartoszek2015mu2e}. The mass of the nucleus is large compared to the 
+The specific goal of Mu2e search is the neutrino-less coherent $\mu^- \rightarrow e^-$
+conversion in the field of an aluminum nucleus: the electron recoils off the 
+entire nucleus and follows two-body decay kinematics \cite{bartoszek2015mu2e}. The mass of the nucleus is large compared to the 
 mass of the electron, hence the recoil terms are minimal. The outgoing nucleus 
 remains in the ground state and as a result the signature of the process is a monochromatic conversion electron 
 (CE) with the energy slightly lower than the muon's rest mass:
@@ -135,10 +132,8 @@ Figure \ref{fig:logscalemichel} shows a more detailed zoom on the high-energy
 range of the spectrum. When the electron energy $E_e \ \geq$ 85 MeV, the dominant term 
 at the leading order scales with $(E_{\mu e} - E_e)^5$ \cite{PhysRevD.84.013006}, 
 resulting in a low rate within the energy range very close to the endpoint. However, due to 
-the energy loss of particles interacting with ST or detector materials, 
+the energy loss of particles interacting with ST or detector materials and radiative corrections, 
 the CEs tend to be reconstructed with a left-skewed energy distribution,
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{what about the radiative corrections? }
 with a full width at half maximum (FWHM) approximately on the order of 1 MeV 
 \cite{gaponenko}, as shown in Figure \ref{fig:sensitivity}.
 
@@ -167,14 +162,11 @@ also helps to reduce background, which will be explored in next sections.
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width =0.55\textwidth]{figures/png/Screenshot_20240222_175644.png}
+\includegraphics[width =0.55\textwidth]{figures/png/Screenshot_20240909_141143.png}
 \caption[The electron energy spectrum near to the endpoint.]{The electron energy spectrum near to the endpoint. The black line 
 represents the Michel spectrum w/o the nuclear recoil, while the red 
 dashed line takes into consideration the recoil of the Al nucleus 
-\cite{PhysRevD.84.013006}.
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{add an arrow showing that the spectrum ends at 104.973, otherwise the figure creates a misleading impression }
-
+\cite{PhysRevD.84.013006}. The green arrow shows the spectrum end at 104.973 MeV.
 }
 \label{fig:micheldiff}
 \end{figure}
@@ -769,16 +761,14 @@ found in \cite{PhysRevD.80.013002}, \cite{PhysRevD.76.059902} and
         \caption{}
         \label{fig:endpoint}
     \end{subfigure}
-   \caption[The muonic atom mean lifetime and free decay branch. The dependence 
+   \caption[The muonic atom mean lifetime and muonic free decay fraction. The dependence 
    of the electron energy spectrum endpoint
-   on the DIO.]{(a) The dependence of the mean lifetime and free decay \underline{\red branch}
+   on the DIO.]{(a) The dependence of the mean lifetime and free decay fraction 
    of the muonic $1s$ state on the atomic number of the nucleus to which 
    the negative muon is bound \cite{TYamazaki_1975}, and (b) 
    the dependence of the electron 
    energy spectrum endpoint on the DIO \cite{dukes}.}
     \label{fig:2imins}
-     \todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{'branch' - what's that ?}
   \end{figure}
 \section{The Mu2e detectors}
 Mu2e makes use of a set of complementary detectors to 
@@ -805,11 +795,8 @@ the ST in a 1 T uniform magnetic field. The tracker is the most
 important Mu2e detectors: it must provide very good momentum resolution to 
 disentangle the monochromatic CE signal from the background. 
 Since the shape of the DIO spectrum near the endpoint decreases as 
-$(E_{\mu e} -E_e)^5$, {\red the impact of this background source can be significantly enhanced if the momentum resolution is improved.}
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{how come?}
-
-To achieve the desired DIO suppression, the required momentum resolution should be below 1 MeV/c.  
+$(E_{\mu e} -E_e)^5$, the corresponding background increases very quickly as the resolution
+degrades. To achieve the desired DIO suppression, the required momentum resolution should be below 1 MeV/c.  
 Figure \ref{fig:trkres} shows the expected momentum resolution as determined 
 from a full GEANT4 simulation of the detector, Front-End Electronics (FEE), and the DAQ.
 It is fundamental to have a thorough understanding of the tails of the momentum resolution. 
@@ -826,17 +813,13 @@ thus reducing the signal efficiency.
     \label{fig:trkres}
     \end{figure} 
 To minimise the probability of scattering and the energy loss of the CE, 
-the volume inside the DS is evacuated to $10^{-4}$ Torr 
-and the tracker has been designed {\red to minimise the material component. }
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ a) what are other (non-material) components ? \\
-  b) compared to other options, the choice of straws doesn't minimize the material
-}
-
-The Mu2e Collaboration selected the straw-tube technology {\red for a detector 
-designed to have a complex geometry} \cite{bobbb}.
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ a) why would making the geometry complex be a design goal ? }
+the volume inside the DS is evacuated to $10^{-4}$ Torr. 
+The Mu2e collaboration has selected the straw-tube 
+technology \cite{bobbb} for its tracker, driven by the need for 
+a detector with high core resolution, minimal high-side tails, 
+and low energy loss. This choice led to straw tubes, which 
+offer a combination of low mass, rapid drift times, good spatial 
+resolution and they are in wide use in particle physics. 
 
 The detector has an annular shape with an active region covered by straws only between the 
 internal radius of 380 mm and the external radius of 700 mm.  
@@ -895,20 +878,13 @@ momentum scale to the nominal magnetic field, $B = 1.0$ T. This concept is illus
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=0.7\textwidth]{figures/png/Screenshot_20240707_180742.png}
+\includegraphics[width=0.7\textwidth]{figures/png/Screenshot_20240909_140555.png}
 \caption[The momentum calibration scheme.]{Illustration of the momentum calibration scheme.}
 \label{fig:momscale}
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{the cartoon is wrong, and I apologize for that. Take the one from mu2e-50014}
-
 \end{figure}
 
 The calibration scheme assumes that the magnetic field is initially set based 
-on readings from an NMR probe, {\red and any necessary scale corrections can be 
-  effectively managed by rescaling the value of the nominal magnetic field.}
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{avoid tautologies, i.e. 'butter has a buttery substance'}
-
+on readings from an NMR probe.
 
 \subsection{The electromagnetic calorimeter}\label{calorimeter}
 The Mu2e electromagnetic calorimeter serves multiple purposes \cite{em4}:
@@ -1204,11 +1180,8 @@ of the Transport Solenoid. It is made of several sectors, including the top
 There are internal gaps between counters in a di-counter \cite{Giovannella_2020}.}
 \label{fig:crvmodule}
 \end{figure}
-\subsection{The Stopping Target Monitor}
-{\red A Muon Beam Stop (MBS)} is installed at the downstream end of the DS to
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{the subsection title reads STM ??? }
-
+\subsection{The Muon Beam Stop and the Stopping Target Monitor}
+A Muon Beam Stop (MBS) is installed at the downstream end of the DS to 
 absorb muons that are not stopped in the ST, shown in Figure \ref{fig:stm}. 
 The MBS has been designed to limit the effects of muon decays and captures. 
 The magnetic field gradient prevents the majority of the low-energy charged 
@@ -1249,10 +1222,7 @@ to measure the number of muons stopped on the ST.
      respect to the muonic atom lifetime (864 ns). 
      This process occurs for 51\% of the nuclear captures.
      \item  A 844 KeV gamma-ray coming from the decay of 
-       long-lived {\red ($\tau \sim$9.5 m)} isotopes produced in muon nuclear captures:
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{9.5 ?} - what are the units
-       
+       long-lived ($\tau \sim$9.5 min) isotopes produced in muon nuclear captures:       
      \begin{equation}
         ^{27}\text{Mg} \ \rightarrow \ ^{27}\text{Al} \ + \ \gamma(844 \ \text{keV}) \ + \ e^- \ + \ \bar{\nu}_e
      \end{equation}
