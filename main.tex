@@ -47,6 +47,7 @@
 \usepackage{xcolor}         
 % \usepackage{comment}         
 \usepackage{todonotes}         
+\usepackage{soul}         
 % Uso dei listing per il codice
 \usepackage{listings}          
 % Per inserire gli hyperlinks tra i vari elementi del testo 
@@ -177,6 +178,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % editing commands
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand {\hlite}[1]    {{\red \ul{#1}}}       % needs xcolor, soul
 \newcommand {\del}[1]    {{\blue \sout{#1}}}
 \newcommand {\add}[1]    {{\red #1}}
 

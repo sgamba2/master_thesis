@@ -8,13 +8,18 @@ Most of the discussion is based on \cite{kola} and \cite{bobbb}.}
 
 \section{Drift Tubes}
 Gas detectors are capable of measuring charged particle coordinates. 
-They provide great spatial resolution and detection efficiency at a low cost, Ref. \cite{kola}. 
+They provide \del{great} spatial resolution \add{which could be as good as 50 um}
+and \add{high} detection efficiency at a low cost, Ref. \cite{kola}. 
 There are many different gas ionizazion detectors, one of which is the drift tube.
 The basic configuration of a drift tube is shown in Figure \ref{fig:drifttube}.
 A hollow cylindrical conducting tube is grounded and serves as the cathode.
-The tube is filled with a combination of noble gas, often Argon, and quench gas. 
-A thin sensing wire is suspended along the cylindrical cathode axis. 
-The wire, called anode, receives a high voltage. Long and thin drift tubes, known as $straw$ $tubes$, have a similar form.
+The tube is filled with a combination of \add{a} noble gas, often Argon, and \add{a} quench gas. 
+A thin sensing wire is \del{suspended}\add{positioned} along the cylindrical cathode axis. 
+The wire, called anode, receives a high voltage. Long and thin drift tubes,
+known as $straw$ $tubes$, have a similar form.
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{not quite. Straw tubes - tubes with thin, often mylar, walls}
+
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240324_232621.png}
@@ -26,20 +31,28 @@ Assuming an anode radius $a$, a cathode radius $b$ and using Gauss theorem, the 
     E(r)=\frac{1}{r}\frac{\lambda}{2\pi \epsilon}=\frac{1}{r}\frac{V}{ \text{ln}(b/a)} \qquad (a<r<b)
 \end{equation}
 Where $\lambda$ is linear charge density on the wire and $\epsilon$ is the dielectric constant of the gas.
-Thinner wires are typically preferred in drift tubes. A greater electric field near the wire increases the amplification factor 
-of the drift tube at the same voltage. Additionally, smaller wires improve spatial resolution, Ref. \cite{kola}. 
+\del{Thinner}\add{Lower diameter} wires are typically preferred in drift tubes.
+A \del{greater}\add{higher} electric field near the wire increases the amplification factor 
+of the drift tube at the same voltage. Additionally, smaller \add{diameter of a signal} wire\del{s}
+improve\add{s the} spatial resolution, Ref. \cite{kola}. 
 \subsection{Gas Ionization}
-Two are the interactions that can deposit energy when particles traverse the gas volume: ionization and excitation.
+{\red \ul{Two are the interactions that can deposit energy when particles traverse
+    the gas volume: ionization and excitation.}}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{grammar!}
+
 Collisions between a charged particle $C$ and an atom $A$ can result in the ejection of one or more electrons: 
 $A \ C \rightarrow A^+ e^- C$, or $A \ C \rightarrow A^{++} e^- e^- C$, if more than one electron is released.
 This process is called primary ionisation. The mean energy loss per path length can be determined using the Bethe-Bloch formula.
 A noble gas atom $A$ can turn also into an excited state $A^*$ through the interaction $A \ C \rightarrow A^* C$. 
-If the excitation energy of $A^*$ is higher than the ionization potential of another species $B$ in the gas, the quencher, the
-Penning Effect can produce ionization through $A^*B \rightarrow A B^+ e^-$. In addition, the noble gases can
+\add{In case of a compound gas (A+B), if}\del{If} the excitation energy of $A^*$ is higher than the ionization potential of \del{another species} $B$\del{ in the gas}, the quencher, the
+Penning Effect can produce ionization through $A^*B \rightarrow A B^+ e^-$.
+In addition, \del{the} noble gases can
 also form molecular ions through processes such as $A^* A \rightarrow A_{2}^{*} \rightarrow A^+_2 e^-$.
-A secondary ionisation can occurr through these processes or through electrons that have sufficient energy for generating more ions.
-To compute the average number of electron-ion pairs produced by an initial particle, divide its total energy loss 
-by the average energy required to make an electron-ion pair. Due to the energy lost during excitation, this average 
+A secondary ionisation can occur through these processes or through electrons that have sufficient energy for generating more ions.
+To compute the average number of electron-ion pairs produced by \del{an}\add{the} initial particle,
+divide its total energy loss by the average energy required to make an electron-ion pair.
+Due to the energy lost during excitation, this average 
 does not match the gas ionisation potential. Measurements showed an average of one electron-ion pair every 
 30 eV, with variations depending on gas composition and starting particle. Except for very slow particles, 
 this value remains constant regardless of their initial energy.
@@ -47,12 +60,16 @@ Without an electric field, electrons and ions created during ionisations spread 
 Collisions cause them to lose energy and eventually reach thermal equilibrium with the surrounding gas. 
 They eventually recombine. An electron maximal range during ionisation is correlated with its initial kinetic 
 energy. In a normal temperature and pressure gas, a 10 keV electron may be stopped in approximately 1 mm. 
-Ionised electrons often have reduced kinetic energy, leading to a shorter range.
+\del{Ionised}\add{Ionisation} electrons often have \del{reduced}\add{lower} kinetic energy,
+leading to a shorter range.
 \subsection{Drift of Ions and Electrons}
-The electric field accelerates free electrons and ions towards the anode and cathode 
-along the field lines. As charges accelerate, they scatter on other particles in the gas, 
+\del{The}\add{An} electric field accelerates free electrons and ions towards the anode and cathode 
+along the field lines. \hlite{As charges accelerate, they scatter}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{what is the ``charges''? }
+on other particles in the gas, 
 losing energy. The directions of motion are randomised, and maximum speeds are set. As a result, 
-charges move uniformly along the electric field. This is referred to as the drift velocity of the 
+\hlite{charges} move uniformly along the electric field. This is referred to as the drift velocity of the 
 charge. It is superimposed with the thermal motion.
 Drift velocities for ions and electrons varies based on several parameters. Ions have a larger mass 
 than electrons and their masses are comparable to those of gas molecules. During collisions, gas 
@@ -60,7 +77,10 @@ molecules absorb a significant portion of the energy gained from ions during acc
 tube detector just a little amount of electric field energy enters the energy associated with ion motion, 
 making it comparable to the initial thermal energy before acceleration. 
 The ion drift velocity $v_i$ is proportional to the reduced electric field $E/N$ where N is the number density of the gas 
-and it is typically $\mathcal{O}(10^3)$ cm/ns, except in the region near to the anode wire where a stronger 
+and it is typically \hlite{$\mathcal{O}(10^3)$ cm/ns},
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{check the order of magnitude}
+except in the region near to the anode wire where a stronger 
 electric field is present. The ion thermal velocity is typically $\mathcal{O}(10^4)$ cm/ns at room temperature.
 On the opposite, only a small fraction of the energy is released during elastic collision from electrons, 
 so they acquire more energy from the electric field than their thermal energy.
@@ -78,8 +98,12 @@ proportions, Ref. \cite{ZHAO1994485}.
     80\%:20\% Ar:CO$_2$ mixture is the gas used in the Mu2e tracker.}
     \label{fig:drift}
 \end{figure}
-Electron drift velocities in drift tubes are typically $\mathcal{O}(10^6)$ cm/ns.
-This is significantly higher than ion drift velocities and comparable to electron thermal velocity under the same conditions. 
+\hlite{Electron drift velocities in drift tubes are typically $\mathcal{O}(10^6)$ cm/ns.}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{and what is the speed of light in these units? }
+
+This is significantly higher than ion drift velocities and comparable to electron
+thermal velocity under the same conditions. 
 The radial coordinate of an ionisation can be computed using the electron drift velocity and time.
 Since drifting electrons and ions are scattered on gas molecules, they also diffuse along their trajectory. 
 Electrons diffuse significantly quicker than ions because of their high velocity. Electron diffusion limits 
@@ -88,9 +112,13 @@ degrees of freedom at low collision energies, preventing electron energies from 
 field strengths above about 2 kV/cm. This improves intrinsic spatial resolution.
 \subsection{Avalanche Multiplication}
 Electrons can ionise when they face a high electric field near the anode wire. 
-The released secondary electrons form tertiary electrons, and so on. Free electrons rapidly multiply, 
-resulting in an avalanche. In a drift tubes, where the electron mean free path is about the order of $\mu$m, 
-an avalanche develops when the electric field approaches $\mathcal{O}(10)$ kV/cm. 
+The released secondary electrons form tertiary electrons, and so on.
+\hlite{Free electrons rapidly multiply, }
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{are they also able to rapidly add and subtract? }
+%
+resulting in an avalanche. In a drift tube\del{s}, where the electron mean free path is about the order of $\mu$m, 
+an avalanche develops when the electric field approaches $\mathcal{O}(10)$ kV/cm.
 According to Equation \ref{avalanche}, using $a \sim \mathcal{O}(10^{-3})$ cm, $b \sim \mathcal{O}(1)$ cm and
 a normal voltage of 1-2 kV, the avalanches can occur within $\mathcal{O}(100) \ \mu$m from the anode wire. 
 Electrons from the avalanche are collected on the anode wire within 1 ns, while positively charged ions move towards the cathode.
@@ -120,7 +148,7 @@ Solving this equation, we can easily obtain the gas amplification $G$:
     G=\frac{N(s_a)}{N_0}=\text{exp} \left( \int_{s_0}^{s_a} \alpha(E(s)) ds \right)=\text{exp} \left( \int_{E_{min}}^{E(a)} \frac{\alpha(E(s))}{dE/ds} dE \right)
 \end{equation}
 where $N_0$ corresponds to unamplified electrons in $s=s_0$ and $E_{min}$ corresponds to the minimum energy 
-for ionisation to occurr. The energy distribution depends on the electric field which is position dependent. 
+for ionisation to \del{occurr}\add{occur}. The energy distribution depends on the electric field which is position dependent. 
 Since the free path is inversely proportional to the particle density in the gas, $E_{min}(\rho)=E_{min}(\rho_0)\rho/\rho_0$.
 It is reasonable to say that the coefficient is proportional to the field strength, $\alpha= \beta E$, in the low field region. 
 Adding this relation with Equation \ref{avalanche} and \ref{av}:
@@ -135,7 +163,12 @@ $\beta= \text{ln}(2)/\Delta V$, so the gain in a drift tube is:
 \end{equation}
 which is the Diethorn's formula. 
 Gain measurements with variable $\rho$/$\rho_0$, $a$, and $E(a)$ can provide the parameters $E_{min} (\rho_0)$ and $\Delta V$. 
-The gas temperature $T$, pressure $P$ and operating voltage $V$ significantly impact the gain of a drift tube with a particular shape and gas mixture. 
+The gas temperature $T$, pressure $P$ and operating voltage $V$ significantly impact
+the gain of \hlite{a drift tube with a particular shape}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{a drift tube has a shape of a tube, right? so what are the other shapes referred to?}
+%
+and gas mixture. 
 \subsubsection{Quench Gas}
 To avoid subsequent avalanches, the drift tube gas combination may contain a quench gas, such as CO$_2$, 
 methane, or other hydrocarbons. During an avalanche, photons are created by gas deexcitation and electron 
@@ -169,8 +202,14 @@ called breakdown mode, commonly known as the Geiger-Muller mode.
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.5\textwidth]{figures/png/Screenshot_20240330_203416.png}
-    \caption[The dependence of particle gain on applied voltage in gaseous ionisation detectors.]{The dependence of particle gain on applied voltage in gaseous ionisation detectors. 
-    The numbers on the axes are for orders of magnitude only and they depend on the device geometry and gas concentration. 
+    \caption[The dependence of particle gain on applied voltage in gaseous ionisation detectors.]
+    {The dependence of \hlite{particle gain}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{how the particle gain is defined ?}
+%
+      on applied voltage in gaseous ionisation detectors. 
+      The numbers on the axes are for orders of magnitude only and they depend on the device geometry
+      and gas concentration. 
     Drift tubes operate in the proportional mode, Ref. \cite{kola}.}
     \label{fig:gaseous}
     \end{figure}
@@ -235,8 +274,12 @@ $Plane$ and $Station$, shown in Figure \ref{fig:trkpanel}.
 The panel is the fundamental unit of the detector: 96 straw tubes arranged like 
 harp cords in two staggered layers to form one harp-shaped panel spanning 120° along the azimuthal angle, Ref. \cite{bartoszek2015mu2e}, 
 shown in Figure \ref{fig:trkpanel} (top left).
-Three rotated panels form a face, and two faces rotated of 60° form one plane, Figure \ref{fig:trkpanel} (top right-left). 
-Two planes rotated of 60° make one station, Figure \ref{fig:trkpanel} (top right-right).
+Three rotated panels form a face, and two faces rotated of \del{60°}\add{30°} form one plane, Figure \ref{fig:trkpanel} (top right-left). 
+\hlite{Two planes rotated of 60° make one station},
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{this is not correct, don't claim 60 deg}
+%
+Figure \ref{fig:trkpanel} (top right-right).
 One station is thus made of twelve panels. The entire tracker is made of 18 stations, Figure \ref{fig:trkpanel} (bottom) 
 and has a total length of 3.2 m and a diameter of approximately 1.7 m.
 Each panel is equipped with its own Front-End and DAQ electronics placed within the mechanical structure (colored in red).
@@ -335,10 +378,12 @@ panel (Figure \ref{fig:trktubes}).
     \end{figure}
 
 Each panel spans a 120° arc (Figure \ref{fig:gonzalo}).
-The dual-layer geometry was chosen since it allows to determine 
-easily which side of the sense wire the particle passes through 
-and thus solve the left-right ambiguity. This simplifies pattern 
-recognition and increases tracking robustness and efficiency. 
+The dual-layer geometry was chosen \hlite{since it allows to determine 
+  easily which side of the sense wire the particle passes through and thus solve the left-right ambiguity.}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{don't make up the reasoning. Rephrase.}
+%
+This simplifies pattern recognition and increases tracking robustness and efficiency. 
 A 1.25 mm separation between two consecutive straws accommodates 
 manufacturing tolerances and allows for straws expansion due to gas 
 pressure. This requires each straw to be self-supporting across its 
@@ -380,8 +425,8 @@ Two identical planes rotated of 180° around a vertical axis make one station
 (Figure \ref{fig:trkpanel} (Upper right-right)). 
 During assembly, the second plane is rotated of 180° around the vertical axis.
 
-At the moment of writing this Thesis, almost all the tracker planes have 
-already been assembled at Fermilab Lab3 Facility and station assembly is now work in progress, 
+At the moment of writing this Thesis, almost all \del{the} tracker planes have 
+already been assembled at Fermilab Lab3 Facility and \add{the} station assembly \add{was}\del{is now work} in progress, 
 as shown in Figure \ref{fig:trueplane}.
 
 \begin{figure}[!h]
@@ -390,7 +435,7 @@ as shown in Figure \ref{fig:trueplane}.
     \caption[One tracker plane fully assembled.]{One tracker plane fully assembled at Fermilab Lab3 Facility.}
     \label{fig:trueplane}
 \end{figure}
-\subsection{The entire straw-tracker detector}
+\subsection{The entire straw tracker detector}
 
 The entire detector is made of 18 stations (Figure \ref{fig:trkpanel} 
 (bottom)) assembled together with a complex mechanical structure. 
@@ -413,7 +458,7 @@ The Front-End electronics performs amplification, digitization and data packagin
 for transmission to the Data Acquisition System (DAQ) of the straw-tube signals. 
 In particular, each single straw provides two hit times and one waveform, 
 which are necessary to reconstruct the hit position along the straw, 
-thereby allowing the use of costant fraction discrimination and mitigating time walk effects. 
+thereby allowing the use of constant fraction discrimination and mitigating time walk effects. 
 A schematic representation of the entire system logic is reported in Figure \ref{fig:flowfee}.
 \begin{figure}[!h]
     \centering
@@ -425,10 +470,10 @@ All the Front-End electronics is installed on multiple Printed Circuit Boards
 (PCBs) mounted on the outer section of the panel. 
 The PCBs are shown in Figure \ref{fig:trackerfee}, Ref. \cite{vadimmu2e}.
 All PCBs are situated in the outer section of the panel. 
-The panel has two sides, named high-voltage side (HV-side), 
+The panel has two sides, \del{named}\add{the} high-voltage side (HV-side), 
 which handles the high-voltage supply distribution to the straws, and 
-calibration-side (CAL-side), that contains a circuitry that can inject calibration
-pulses to the channel.
+\add{the} calibration-side (CAL-side), that contains \del{a}\add{the} circuitry
+\del{that can}\add{to} inject \add{the} calibration pulses\del{ to the channel}.
 
 Signals from the straw tube channels are first read 
 out from both ends by the pre-amplifiers (preamps).
@@ -439,12 +484,12 @@ Motherboard (DMB) positioned at the center, then to the Digitizer Readout and
 Assembler Controller (DRAC) (mounted on top of the DMB) to be processed and 
 temporarily stored. 
 
-Moreover, the AMBs and the DMB handle 
-low voltage distribution and the AMB on the HV side is responsible for 
-distributing the high voltage to the straw anode wires
+\del{Moreover, the}\add{The} AMBs and the DMB \add{also} handle 
+low voltage distribution and the AMB on the HV side \del{is responsible for 
+distributing}\add{distributes} the high voltage to the \del{straw anode} wires.
 The low voltage power supply is connected to the panel through the KEY board which 
-contains also an optical fiber link and a JTAG inferface for communication.
-The two boards are also equipped with sensor to monitor environmental parameters, 
+contains also an optical fiber link and a JTAG \del{inferface for communication}\add{connector}.
+The \del{two} boards are also equipped with sensor\add{s} to monitor environmental parameters, 
 including temperature, pressure and humidity.
 
 In addition, the frontends components were chosen to sustain high level of radiation.
@@ -487,18 +532,22 @@ side and 48 on the CAL side, 192 preamps in total.
 To minimise signal reflections, the preamps have a matching 300 $\Omega$ input impedance. 
 The function of the preamps is to convert the straw tubes 
 current signals into voltage signals which are amplified and shaped. 
-There are some differences between the preamps on the CAL and 
-HV sides. The CAL preamp can inject a calibration pulse into 
+\hlite{There are some differences between the preamps on the CAL and 
+  HV sides.
+The CAL preamp can inject a calibration pulse into 
 the channel, which allows to test the readout electronics without a 
 high voltage source. The HV preamp performs the high voltage 
-distribution to the straw tube.
+distribution to the straw tube.}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{all preamps are the same and don't inject anything anywhere, different are the AMBs}
+%
 %The voltage gains of individual channels, different from the gas gain, are set by control signal from the DRAC. A bias voltage, adjustable for each side of a channel, is applied to the signals. 
 \subsubsection{The Digitizer Readout and Assembler Controller board}\label{DRAC}
 The $brain$ of the panel is called Digitizer Readout and Assembler Controller (DRAC) board. 
 The DRAC performs digitization, packaging, temporary storage and data transfer to 
-the Mu2e DAQ system. It also controls all the panel operations The schematics of the 
-Figure \ref{fig:drac} shows a picture of the board: a battery of comparators 
-and ADCs, three DDR3 memories and three Field-Programmable Gate Arrays (FPGAs) 
+the Mu2e DAQ system. It also controls all the panel operations. The schematics of the 
+Figure \ref{fig:drac} shows a picture of the board: a \hlite{battery of comparators 
+and ADCs}, three DDR3 \del{memories}\add{memory chips} and three Field-Programmable Gate Arrays (FPGAs) 
 are clearly visible. 
 The two FPGAs on the left and on the right are named digi-FPGAs: 
 each of them receives the data from 48 straw channels, performs data 
@@ -520,33 +569,49 @@ Figure \ref{fig:flowfee} shows the data flow through the panel Front-End and the
     \item The two signals from the two sides of a straw tube are transmitted 
     from the preamps to the DRAC;
     \item In the DRAC, the two biased signals are fed to zero-crossing comparators, 
-    which generate square pulses if the signals are above their respective thresholds;
-    \item The squared signals are transmitted to 16-bit TDCs implemented 
-    in firmware in the digi-FPGAs. Timing digitization is performed at the rate 
-    of 20 ps per count, including the determination of the arrival time and the 
-    time over threshold. In addition to the drift time, the TDCs 
+      which generate \hlite{square pulses} if the signals are above their respective thresholds;
+    \item The \hlite{squared signals} are transmitted to 16-bit TDCs implemented 
+      \todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+      {decipher 'square pulses'}
+      %
+    in \add{the} firmware in the digi-FPGAs. Timing digitization \del{is performed at the rate 
+    of}\add{bin is} 20 ps\del{ per count}, including the determination of the arrival time and the 
+    time over threshold.  \hlite{In addition to the drift time, the TDCs 
     measure the time difference between the two signals received from the 
-    same straw to dermine the hit position along the straw. With an 
+    same straw to dermine the hit position along the straw.}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{the TDS's don't do that, the time difference is calculated in the reconstruction software }
+
+  With \del{an}\add{the} 
     intrinsic TDC resolution of 25 ps, taking into account also the comparator jitter, 
     the noise and other external effects, the resulting time resolution 
     is of the order of 70 ps. At run time, a hit on a straw 
     is considered only if both ends of the same straw simultaneously have a 
     signal above threshold;
-    \item The two signals from the two ends of the same straw are also 
-    added by an integrator. The total sum is digitized by a 10-bit 
-    ADC at 40 MHz and then transmitted to the digi-FPGA;
-    \item The digi-FPGA creates one data packet for each hit based on the 
+  \item \del{The two signals}\add{Signals} from the two ends of the same straw
+    are also \del{added by an integrator.}\add{summed up, the} \del{The total} sum is digitized by a 10-bit 
+    ADC at 40 MHz and \del{then} transmitted to the digi-FPGA;
+    \item The digi-FPGA creates one data packet for each hit \del{based on}\add{containing} the 
     TDC and ADC information;
     \item The data packets are transferred to the ROC \ref{DRAC}, and 
-    temporarily stored in the DDR3 memories for later access by the DAQ system. 
+    temporarily stored in the DDR3 \del{memories}\add{memory} for later access by the DAQ system. 
     There is a total of 8 Gb of memory space available on each DRAC. 
     The main function of the ROC is to collect data from the digitizer boards 
-    digi-FPGAs, buffer data and transfer them to DAQ. They continuously stream out 
-    the zero-suppressed data collected between two proton pulses to the DTCs, 
-    Ref. \cite{GIOIOSA2023167732}. The buffer stage is fundamental, 
+    digi-FPGAs, buffer data and transfer them to DAQ. \hlite{They continuously stream out 
+    the zero-suppressed data collected between two proton pulses to the DTCs, }
+    Ref. \cite{GIOIOSA2023167732}.
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{a) explain who are 'they' ? \\
+  b) DTCs have not been introduced yet}
+%
+  \hlite{The buffer stage is fundamental, 
     since during the beam inter-spill time (836 ms out of each 1333 ms), 
     we want us to be able to take data from cosmic rays, even if the rate 
-    will be very low. For this purpose, the ROCs include external DRAM. 
+    will be very low. For this purpose, the ROCs include external DRAM. }
+  \todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+  {this is wrong. The buffering is needed because the DAQ is not able to handle the instantaneous 
+    on-spill data rate and the off-spill time will be used to level the rate }
+%
     The communication is flexible, thanks to the 
     programmable nature of digitizer, ROC and DAQ.
 \end{itemize}
@@ -586,7 +651,7 @@ significant flexibility for data selection and analysis.
 Figure \ref{fig:linktodaq}, Ref.\cite{GIOIOSA2023167732}, 
 shows the global 
 architecture of the Mu2e DAQ. 
-The Readout Controllers of all the detectors are shown 
+The Readout Controllers of all \del{the} detectors are shown 
 on the left side. The central box includes the main DAQ 
 components: the Run Control Host, 40 DAQ servers, the 
 Detector Control System (DCS), and the Event Building 
@@ -602,8 +667,8 @@ synchronised to the 1695 ns proton pulse cycles. This defines the
 Event Window\footnote{Event Windows are also assigned during off-spill periods 
 when no beam batches are received. 
 These Event Windows are longer due to the reduced data rate.}. 
-Based on these markers, the Command Fan-Out (CFO) module within the 
-Run Control Host generates a 40 MHz system clock and embeds Event 
+Based on these markers, the Command Fan-Out (CFO) module \del{within the 
+Run Control Host} generates a 40 MHz system clock and embeds Event 
 Window Markers (EWMs) into this clock to denote the start of event 
 windows. The CFO distributes this encoded system clock and run control 
 packets to the Data Transfer Controllers (DTCs) in the DAQ servers. 
@@ -625,15 +690,18 @@ server\footnote{The DTCs are implemented as commercial PCIe cards located
 within the DAQ Servers.}. If a trigger decision is made, the corresponding 
 CRV data are also read out from the ROCs through software-generated Data 
 Requests. Event data from all detectors are collected at the Data Logger 
-and subsequently transferred to long-term storage for future offline 
-analysis. Calculations estimate a data rate of 35 GBps (with a 30\% overhead) 
+and \del{subsequently} transferred to \add{the} long-term storage\del{ for future offline 
+  analysis}. Calculations estimate a data rate of 35 GBps \hlite{(with a 30\% overhead)}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{explain overhead}
+%
 from the ROCs and an annual storage requirement for the entire experiment of 
 approximately 7 PB. 
 
-In addition to detector data, the DTCs also handle the acquisition of 
+In addition to \add{the} detector data, the DTCs also handle the acquisition of 
 slow control variables from the detectors. For the tracker, these variables 
 include panels temperature, pressure, humidity, voltages, and currents at 
-specified PCB nodes, high voltages, and channel threshold settings across 
+specified PCB \del{nodes}\add{boards}, high voltages, and channel threshold settings across 
 all panels. These data are managed by the DCS Host and recorded in long-term 
 storage. The data are also accessible in real-time in the Control Room for 
 monitoring purposes. Other detector control tasks and operations are managed 
@@ -650,7 +718,7 @@ of channel high voltage when necessary.
 
 
 
-\subsection{Requirements on tracker performance}
+\subsection{Tracker performance requirements}
 Here a resume of the requirements that the tracker must satisfy to ensure the 
 success of the experiment is presented, Ref. \cite{trkreq}.
 A momentum resolution less than 180 keV/c for a 105 MeV/c electron is needed in the nominal
@@ -661,7 +729,10 @@ than one event at design sensitivity. To reach this, simulation results indicate
 a single straw requires around 4 cm of longitudinal and 200 $\mu$m of transverse 
 resolution for drift path lengths. 
 It must have an acceptance of approximately 20\% for conversion electrons.
-The tracker must operate in an ambient vacuum (< $10^{-4}$ Torr).
-It should be able to withstand a rate of 5 MHz per straw (highest rate straw) 
-500 ns after the spill. This is
-for background studies. The nominal experiment live time starts 700 ns after the spill.
+The tracker must operate in an ambient vacuum (< $10^{-4}$ Torr) \del{.
+It should}\add{and} be able to withstand a rate of 5 MHz per straw (highest rate straw) 
+500 ns after the spill. \del{This is
+  for background studies. The nominal experiment live time starts 700 ns after the spill.}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{not directly unrelated to the tracker performance requirements}
+
