@@ -1,4 +1,4 @@
-\begin{thebibliography}{87}
+\begin{thebibliography}{88}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -392,6 +392,12 @@ M.~Aoki et~al.
 \newblock ISSN {1793-6632}.
 \newblock \doi{{10.1142/s0217732320300074}}.
 \newblock URL \url{{http://dx.doi.org/10.1142/S0217732320300074}}.
+
+\bibitem[{R.M. Dzhilkibaev and V.M. Lobashev}(1989)]{lobachev}
+{R.M. Dzhilkibaev and V.M. Lobashev}.
+\newblock {On the search for $\mu \rightarrow e$ conversion process in a
+  nucleus}.
+\newblock pages {622--624}, 1989.
 
 \bibitem[{D.F. Measday}({2001})]{MEASDAY2001243}
 {D.F. Measday}.
