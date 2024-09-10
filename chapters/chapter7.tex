@@ -29,16 +29,29 @@ system, focusing on the robustness and reliability of data acquisition
 processes and the crucial role of calibration in ensuring precise measurements. 
 
 \section{Commissioning of the tracker DAQ and FEE}
-The first phase, described in Chapter \ref{commissioning}, 
-was integral to the early phases of the Mu2e experiment, particularly in the context of the 
-tracker system's DAQ and FEE testing. 
+
+The commissioning of the tracker DAQ and FEE systems, described in Chapter \ref{commissioning}, has been a 
+crucial step in validating the functionality and performance of the 
+readout chain. 
 The first test I performed has been to verify the correct performance of ROC 
-buffering. During these test, a single ROC was connected to the DTC. Data were collected
+buffering and to understand its logic. During these test, a single ROC was connected to one DTC. Data were collected
 with digi-FPGAs pulsed by their internal pulsers, with the ROC set in the external
 mode. ROC's digital readout logic allows to be emulated with a bit-level C++ simulation,
 which I contributed to develop. The Monte Carlo and the data have been compared in two different 
-modes: $ROC$ $buffer$ $overflow$ and $underflow$ configuration, at a channel occupancy level, studying 
-the timing distribution and delays between channels and digi-FPGAs.
+modes: $ROC$ $buffer$ $underflow$ and $overflow$ configuration, based on the internal hit buffer 
+which stores up to 255 hits. Depending on $T_{gen}$ and $T_{EW}$, the data 
+
+Studying the timing distribution and delays between channels and digi-FPGAs, we were able to incorporate realistic delays into the simulation. 
+The comparison between the data and the bit-level simulation showed a good correlation, 
+validating the simulation's accuracy in reproducing the expected hit behavior under different readout conditions.
+The agreement between simulation and experimental data was highly satisfactory, with deviations at the level of $10^{-3}$.
+In summary, this commissioning phase has successfully validated the core functionalities of 
+the tracker DAQ and FEE systems, ensuring they are ready for the next stages of testing and 
+integration. The insights gained, particularly in handling ROC overflow and timing synchronization, 
+will be essential for optimizing the system's performance during full detector operation. 
+Further work will focus on expanding the scope of testing with more complex configurations 
+and refining the DAQ software for future runs.
+
 
 \section{Pre-pattern recognition studies}
 Given the high data volume expected during Mu2e operations, estimated 
