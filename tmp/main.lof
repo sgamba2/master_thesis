@@ -9,7 +9,7 @@
 \contentsline {figure}{\numberline {1.7}{\ignorespaces MEG II detector (I).}}{25}{figure.caption.14}%
 \contentsline {figure}{\numberline {1.8}{\ignorespaces MEG II detector (II).}}{26}{figure.caption.15}%
 \contentsline {figure}{\numberline {1.9}{\ignorespaces SINDRUM experiment.}}{27}{figure.caption.16}%
-\contentsline {figure}{\numberline {1.10}{\ignorespaces Mu3e experiment.}}{28}{figure.caption.17}%
+\contentsline {figure}{\numberline {1.10}{\ignorespaces Mu3e experiment.}}{27}{figure.caption.17}%
 \contentsline {figure}{\numberline {1.11}{\ignorespaces SINDRUM II experiment.}}{29}{figure.caption.18}%
 \contentsline {figure}{\numberline {1.12}{\ignorespaces DeeMe experiment.}}{30}{figure.caption.19}%
 \contentsline {figure}{\numberline {1.13}{\ignorespaces COMET experiment.}}{31}{figure.caption.22}%
@@ -33,7 +33,7 @@
 \contentsline {figure}{\numberline {2.16}{\ignorespaces The structure of the inner and outer proton absorber.}}{49}{figure.caption.40}%
 \contentsline {figure}{\numberline {2.17}{\ignorespaces The Stopping Target design.}}{49}{figure.caption.41}%
 \contentsline {figure}{\numberline {2.18}{\ignorespaces The muonic atom mean lifetime and muonic free decay fraction. The dependence of the electron energy spectrum endpoint on the DIO.}}{50}{figure.caption.42}%
-\contentsline {figure}{\numberline {2.19}{\ignorespaces The momentum resolution of the straw-tracker.}}{52}{figure.caption.43}%
+\contentsline {figure}{\numberline {2.19}{\ignorespaces The momentum resolution of the straw tracker.}}{52}{figure.caption.43}%
 \contentsline {figure}{\numberline {2.20}{\ignorespaces The momentum calibration scheme.}}{53}{figure.caption.44}%
 \contentsline {figure}{\numberline {2.21}{\ignorespaces The Mu2e calorimeter disks.}}{54}{figure.caption.45}%
 \contentsline {figure}{\numberline {2.22}{\ignorespaces CAD representation of the calorimeter disks.}}{55}{figure.caption.46}%
@@ -59,8 +59,8 @@
 \contentsline {figure}{\numberline {3.8}{\ignorespaces The straw arrangement within a panel.}}{74}{figure.caption.65}%
 \contentsline {figure}{\numberline {3.9}{\ignorespaces One of the fully assembled panel.}}{74}{figure.caption.66}%
 \contentsline {figure}{\numberline {3.10}{\ignorespaces One tracker plane fully assembled.}}{75}{figure.caption.67}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Signal flow through Front-End electronics.}}{76}{figure.caption.68}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Overview of the straw-tracker Front-End electronics.}}{77}{figure.caption.69}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Signal flow through front-end electronics.}}{76}{figure.caption.68}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Overview of the straw tracker front-end electronics.}}{77}{figure.caption.69}%
 \contentsline {figure}{\numberline {3.13}{\ignorespaces The DRAC board schematics.}}{78}{figure.caption.70}%
 \contentsline {figure}{\numberline {3.14}{\ignorespaces The Mu2e Data Acquisition system architecture.}}{81}{figure.caption.71}%
 \addvspace {10\p@ }

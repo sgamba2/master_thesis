@@ -3,10 +3,10 @@
 \textit{This Chapter provides a brief introduction on the working principles 
 of a drift tube and then a  detailed description of the Mu2e straw tracker. 
 This includes a description of the tracker mechanical structures 
-(straw, panels, planes and stations) and the Front-End and DAQ electronics. 
+(straw, panels, planes and stations) and the front-end and DAQ electronics. 
 Most of the discussion is based on \cite{kola} and \cite{bobbb}.}
 
-\section{Drift Tubes}
+\section{Drift tubes}
 Gas detectors are capable of measuring charged particle coordinates. 
 They provide spatial resolution which could be as good as 50 $\mu$m
 and high detection efficiency at a low cost \cite{kola}. 
@@ -32,7 +32,7 @@ Lower diameter wires are typically preferred in drift tubes.
 A higher electric field near the wire increases the amplification factor 
 of the drift tube at the same voltage. Additionally, smaller diameter of a signal wires 
 improves the spatial resolution \cite{kola}. 
-\subsection{Gas Ionization}
+\subsection{Gas ionization}
 There are two types of interactions that can deposit energy as particles traverse the gas volume: ionization and excitation.
 Collisions between a charged particle $C$ and an atom $A$ can result in the ejection of one or more electrons: 
 $A \ C \rightarrow A^+ e^- C$, or $A \ C \rightarrow A^{++} e^- e^- C$, if more than one electron is released.
@@ -56,7 +56,7 @@ They eventually recombine. An electron maximal range during ionisation is correl
 energy. In a normal temperature and pressure gas, a 10 keV electron may be stopped in approximately 1 mm. 
 Ionisation electrons often have lower kinetic energy,
 leading to a shorter range.
-\subsection{Drift of Ions and Electrons}
+\subsection{Drift of ions and electrons}
 An electric field accelerates free electrons and ions towards the anode and cathode 
 along the field lines. As these particles accelerate, they scatter on other particles in the gas, 
 losing energy. The directions of motion are randomised, and maximum speeds are set. As a result, 
@@ -71,7 +71,7 @@ The ion drift velocity $v_i$ is proportional to the reduced electric field $E/N$
 and it is typically $\mathcal{O}(10^{-2}) \ \mu$m/ns, 
 except in the region near to the anode wire where a stronger 
 electric field is present. The ion thermal velocity is typically $\mathcal{O}(10^{-1}) \ \mu$m/ns at room temperature.
-On the opposite, only a small fraction of the energy is released during elastic collision from electrons, 
+On the other end, only a small fraction of the energy is released during elastic collision from electrons, 
 so they acquire more energy from the electric field than their thermal energy.
 Many different factors impact electron drift velocity. Some gas molecules, such as H$_2$O or CO$_2$, 
 can interact with electrons to produce negative ions due to their great electron affinity. In rare situations, 
@@ -96,11 +96,11 @@ Electrons diffuse significantly quicker than ions because of their high velocity
 the intrinsic resolution of drift tubes used to measure incoming particle coordinates. CO$_2$ has internal 
 degrees of freedom at low collision energies, preventing electron energies from exceeding thermal energy until 
 field strengths above about 2 kV/cm. This improves intrinsic spatial resolution.
-\subsection{Avalanche Multiplication}
+\subsection{Avalanche multiplication}
 Electrons can ionise when they face a high electric field near the anode wire. 
 The released secondary electrons form tertiary electrons, and so on.
 The number of free electrons rapidly increases, 
-resulting in an avalanche. In a drift tubes, where the electron mean free path is about the order of $\mu$m, 
+resulting in an avalanche. In a drift tube, where the electron mean free path is about the order of $\mu$m, 
 an avalanche develops when the electric field approaches $\mathcal{O}(10)$ kV/cm.
 According to Equation \ref{avalanche}, using $a \sim \mathcal{O}(10^{-3})$ cm, $b \sim \mathcal{O}(1)$ cm and
 a normal voltage of 1-2 kV, the avalanches can occur within $\mathcal{O}(100) \ \mu$m from the anode wire. 
@@ -119,7 +119,7 @@ Drifting ions mostly generate signals in electrodes via induction. Figure \ref{f
     (e) Electrons from the avalanche reach the anode within nanoseconds, but ions take longer, up to ms, to reach the cathode.}
     \label{fig:avalanche}
 \end{figure}
-\subsubsection{Avalanche Gain}
+\subsubsection{Avalanche gain}
 When an avalanche develops, the amplification factor is around $10^4-10^6$. The number of electrons freed per unit path length is given
 by the first Townsend ionization coefficient $\alpha=\sigma_{ion}n=1/\lambda_{ion}$ and this depends on the electric field $E$, 
 as a higher electric field corresponds to a higher kinetic energy of the electron, that increases the ionization cross-section.
@@ -149,7 +149,7 @@ which is the Diethorn's formula.
 Gain measurements with variable $\rho$/$\rho_0$, $a$, and $E(a)$ can provide the parameters $E_{min} (\rho_0)$ and $\Delta V$. 
 The gas temperature $T$, pressure $P$ and operating voltage $V$ significantly impact
 the gain of a drift tube and gas mixture. 
-\subsubsection{Quench Gas}
+\subsubsection{Quench gas}
 To avoid subsequent avalanches, the drift tube gas combination may contain a quench gas, such as CO$_2$, 
 methane, or other hydrocarbons. During an avalanche, photons are created by gas deexcitation and electron 
 attachment to electronegative species, resulting in negative ions. Photons can generate ionisations 
@@ -159,7 +159,7 @@ and is no longer localised to the energy deposition point. Enough intense photon
 secondary avalanches, leading to a continuous discharge. The use of quench gas prevents subsequent 
 avalanches by absorbing ionising photons before they travel far. A tiny quantity of quench gas during normal operation 
 can significantly decrease secondary avalanches and breakdowns.
-\subsubsection{Operation Modes of Gaseous Ionization Detectors}
+\subsubsection{Operation modes of gaseous ionization detectors}
 In drift tube detectors, the number of electron-ion pairs formed during an avalanche is 
 proportional to the starting number of electrons, as shown in the gain computation. To 
 operate in a proportional mode, an appropriate voltage is needed to reduce the effects 
@@ -175,7 +175,7 @@ Electrons in future avalanches that enter the area between the positive ion clou
 decreased electric field, resulting in lower amplification. The electric field becomes greater in the 
 tail of the avalanche, which is far from the wire than the ion cloud. This range of voltage is called region of 
 limited proportionality. When the operating voltage reaches high values, 
-avalanches create sufficiently energy photons to cause secondary avalanches 
+avalanches create photons of sufficient energy to cause secondary avalanches 
 that propagate across the detector, independently from the quench gas. 
 This results in detector saturating the output. This way of operating is 
 called breakdown mode, commonly known as the Geiger-Muller mode.
@@ -232,13 +232,13 @@ The detector has a modular design, made of basic elements named $Panel$, $Face$,
 $Plane$ and $Station$, shown in Figure \ref{fig:trkpanel}. 
 The panel is the fundamental unit of the detector: 96 straw tubes arranged like 
 harp cords in two staggered layers to form one harp-shaped panel spanning 120° along the azimuthal angle \cite{bartoszek2015mu2e}, 
-shown in Figure \ref{fig:trkpanel} (top left).
-Three rotated panels form a face, and two faces rotated of 30° form one plane, Figure \ref{fig:trkpanel} (top right-left). 
+shown in Figure \ref{fig:trkpanel} (Top left).
+Three rotated panels form a face, and two faces rotated of 30° form one plane, Figure \ref{fig:trkpanel} (Top right-left). 
 Two planes are coupled to make a station, mounting the second rotated on the vertical axes by 180°.
-Figure \ref{fig:trkpanel} (top right-right).
+Figure \ref{fig:trkpanel} (Top right-right).
 One station is thus made of twelve panels. The entire tracker is made of 18 stations, Figure \ref{fig:trkpanel} (bottom) 
 and has a total length of 3.2 m and a diameter of approximately 1.7 m.
-Each panel is equipped with its own Front-End and DAQ electronics placed within the mechanical structure (colored in red).
+Each panel is equipped with its own front-end and DAQ electronics placed within the mechanical structure (colored in red).
 \begin{figure}[!h]
 \centering
 \includegraphics[width =0.6\textwidth]{figures/png/Screenshot_20240306_222803.png}
@@ -251,7 +251,7 @@ stations and support structure \cite{bartoszek2015mu2e}.}
 
 The Mu2e tracker straw tubes use the same detection principles as the gaseous 
 ionisation detectors \cite{kola}, to 
-meet the experiment precise requirements.
+meet the experiment requirements.
 Figure \ref{fig:trkpencil} shows the edge of a straw tube, compared to a pencil.
 \begin{figure}[!h]
     \centering
@@ -312,7 +312,7 @@ are joined to both ends of the straw suing silver epoxied.
         precision of at least 25 $\mu$m in the radial direction and 50 $\mu$m in the perpendicular direction. 
 From the straws, signals are sent to a common preamp board 
 via the anode pin pair and grounding clip. The tracker front 
-end eletronic will be described in Section \ref{tfee}.
+end electronics will be described in Section \ref{tfee}.
 \subsection{The building blocks: from the panels to the station}
 Groups of 96 straws are assembled in two staggered layers of 48 straws and make a 
 panel (Figure \ref{fig:trktubes}). 
@@ -369,8 +369,8 @@ locations of straw tube channels.
 Three panels rotated of 120° make a face and two faces rotated of 
 30° make a plane (Figure \ref{fig:trkpanel} (Upper right-left) and \ref{fig:trueplane}).
 
-Once a plane is assembled, a cooling ring is fitted around its outer circumference. 
-The Front-End electronics is hosted in a ring around the outer 
+Once a plane has been assembled, a cooling ring is fitted around its outer circumference. 
+The front-end electronics is hosted in a ring around the outer 
 circumference of the panel.
 
 Two identical planes rotated of 180° around a vertical axis make one station 
@@ -405,8 +405,8 @@ direction, and vertical adjustment screws allow to level and
 center the frame. Once fully assembled, a thorough mechanical 
 survey of the detector will be performed before moving to the Mu2e experimental hall. 
 
-\subsection{The tracker Front-End Electronics}\label{tfee}
-The Front-End electronics performs amplification, digitization and data packaging 
+\subsection{The tracker front-end Electronics}\label{tfee}
+The front-end electronics performs amplification, digitization and data packaging 
 for transmission to the Data Acquisition System (DAQ) of the straw-tube signals. 
 In particular, each single straw provides two hit times and one waveform, 
 which are necessary to reconstruct the hit position along the straw, 
@@ -415,13 +415,13 @@ A schematic representation of the entire system logic is reported in Figure \ref
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.9\textwidth]{figures/png/Screenshot_20240529_133230.png}
-    \caption[Signal flow through Front-End electronics.]{Signal flow through Front-End electronics \cite{bartoszek2015mu2e}.}
+    \caption[Signal flow through front-end electronics.]{Signal flow through front-end electronics \cite{bartoszek2015mu2e}.}
     \label{fig:flowfee}
     \end{figure}
-All the Front-End electronics is installed on multiple Printed Circuit Boards 
+All the front-end electronics is installed on multiple Printed Circuit Boards 
 (PCBs) mounted on the outer section of the panel. 
 The PCBs are shown in Figure \ref{fig:trackerfee} \cite{vadimmu2e}.
-All PCBs are situated in the outer section of the panel. 
+All PCBs are located in the outer section of the panel. 
 The panel has two sides, the high-voltage side (HV-side), 
 which handles the high-voltage supply distribution to the straws, and 
 the calibration-side (CAL-side), that contains the circuitry
@@ -467,13 +467,13 @@ To summarise, each straw-tube is an independent detector channel equipped with:
 \begin{figure}[!h]
 \centering
 \includegraphics[width =0.8\textwidth]{figures/png/Screenshot_20240131_111836.png}
-\caption[Overview of the straw tracker Front-End electronics.]{Overview of the straw tracker Front-End electronics  
+\caption[Overview of the straw tracker front-end electronics.]{Overview of the straw tracker front-end electronics  
 \cite{vadimmu2e}. The CAL-Side of the panel is not shown.}
 \label{fig:trackerfee}
 \end{figure}
 
 
-\subsubsection{The preamps}\label{preampss}
+\subsubsection{The preamplifiers}\label{preampss}
 All the 96 straw-tubes are read out from both ends. 
 Two adjacent tubes are connected to the same preamp PCB board. 
 These boards are mounted vertically on the AMBs. 
@@ -508,7 +508,7 @@ The DRAC board is the brain of the tracker panel. ADCs, FPGAs, DDR3
 memories and compators are also shown.}
 \label{fig:drac}
 \end{figure}
-Figure \ref{fig:flowfee} shows the data flow through the panel Front-End and the DRAC:
+Figure \ref{fig:flowfee} shows the data flow through the panel front-end and the DRAC:
 \begin{itemize}
     \item The two signals from the two sides of a straw tube are transmitted 
     from the preamps to the DRAC;
@@ -562,7 +562,7 @@ The packet has the following structure:
 
 The Mu2e Data Acquisition system (DAQ) is based on a $streaming$ readout architecture: 
 all detector data are digitised, zero-suppressed in the 
-Front-End electronics 
+front-end electronics 
 and then transferred from the detectors for further 
 processing and storage. 
 This architecture results in a large data throughput in 
