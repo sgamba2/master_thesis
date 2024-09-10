@@ -99,46 +99,42 @@
 \contentsline {figure}{\numberline {4.33}{\ignorespaces Glitch waveform of channel 0.}}{106}{figure.caption.104}%
 \contentsline {figure}{\numberline {4.34}{\ignorespaces Noisy waveform of the 36th channel.}}{106}{figure.caption.105}%
 \contentsline {figure}{\numberline {4.35}{\ignorespaces A first example of Data Quality Monitoring.}}{107}{figure.caption.106}%
-\contentsline {figure}{\numberline {4.36}{\ignorespaces The DTC and CFO block diagram with an external CFO.}}{108}{figure.caption.107}%
-\contentsline {figure}{\numberline {4.37}{\ignorespaces The data format.}}{108}{figure.caption.108}%
-\contentsline {figure}{\numberline {4.38}{\ignorespaces The number of events versus run number (emulated CFO).}}{109}{figure.caption.109}%
-\contentsline {figure}{\numberline {4.39}{\ignorespaces The number of events versus run number (emulated CFO).}}{111}{figure.caption.110}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces The Compton effect.}}{114}{figure.caption.111}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces The pair production.}}{116}{figure.caption.112}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Monte Carlo momentum distribution of particles producing hits in the Mu2e tracker ($CE-1BB$ data sample).}}{122}{figure.caption.113}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Monte Carlo momentum distribution of particles producing hits in the Mu2e tracker ($PBAR-0BB$ data sample).}}{123}{figure.caption.114}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Before and After background hits flagging.}}{124}{figure.caption.115}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces $\delta $-electrons and CE patterns in $r-z$ plane.}}{125}{figure.caption.116}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces A $\delta $ candidate $seed$.}}{126}{figure.caption.117}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Monte Carlo deposited energy distribution in the tracker.}}{127}{figure.caption.118}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces The distribution of the total and flagged number of muon $ComboHit$s as a function of the particle momentum.}}{129}{figure.caption.121}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces The $\delta $-electrons energy distribution.}}{131}{figure.caption.124}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces The efficiency of electrons and positrons versus particle momentum in the low-momentum range.}}{132}{figure.caption.125}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Momentum distribution of reconstructed tracks.}}{134}{figure.caption.127}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces $TimeCluster$ on $time-z$ plane.}}{135}{figure.caption.129}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces $TimeCluster$ on $time-z$ plane.}}{135}{figure.caption.130}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces The Compton effect.}}{110}{figure.caption.107}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces The pair production.}}{112}{figure.caption.108}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Monte Carlo momentum distribution of particles producing hits in the Mu2e tracker ($CE-1BB$ data sample).}}{118}{figure.caption.109}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Monte Carlo momentum distribution of particles producing hits in the Mu2e tracker ($PBAR-0BB$ data sample).}}{119}{figure.caption.110}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Before and After background hits flagging.}}{120}{figure.caption.111}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces $\delta $-electrons and CE patterns in $r-z$ plane.}}{121}{figure.caption.112}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces A $\delta $ candidate $seed$.}}{122}{figure.caption.113}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Monte Carlo deposited energy distribution in the tracker.}}{123}{figure.caption.114}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces The distribution of the total and flagged number of muon $ComboHit$s as a function of the particle momentum.}}{125}{figure.caption.117}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces The $\delta $-electrons energy distribution.}}{127}{figure.caption.120}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces The efficiency of electrons and positrons versus particle momentum in the low-momentum range.}}{128}{figure.caption.121}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Momentum distribution of reconstructed tracks.}}{130}{figure.caption.123}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces $TimeCluster$ on $time-z$ plane.}}{131}{figure.caption.125}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces $TimeCluster$ on $time-z$ plane.}}{131}{figure.caption.126}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Schematic view of the valves located in a tracker panel.}}{141}{figure.caption.132}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces The relation of $\theta ^*$ to $\theta $.}}{143}{figure.caption.133}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Schematic view of a tracker station and the coordinate system.}}{144}{figure.caption.134}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Monte Carlo illumination across the panel (panel 0, plane 0).}}{146}{figure.caption.135}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces The $y-z$ direction distribution of muons satisfying 4/4 request.}}{147}{figure.caption.136}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Schematic view of a cosmic muon hitting the vertical oriented station.}}{148}{figure.caption.137}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces The reconstructed longitudinal coordinate in the 0th panel frame.}}{150}{figure.caption.138}%
-\contentsline {figure}{\numberline {6.8}{\ignorespaces The bias between the reconstructed and the true hit coordinate.}}{150}{figure.caption.139}%
-\contentsline {figure}{\numberline {6.9}{\ignorespaces The 2D histogram of the longitudinal bias versus the true coordinate.}}{151}{figure.caption.140}%
-\contentsline {figure}{\numberline {6.10}{\ignorespaces The profile of the longitudinal bias versus the true longitudinal coordinate.}}{152}{figure.caption.141}%
-\contentsline {figure}{\numberline {6.11}{\ignorespaces The reconstructed $y-z$ direction distribution of cosmic rays.}}{152}{figure.caption.142}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Schematic view of the valves located in a tracker panel.}}{137}{figure.caption.128}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces The relation of $\theta ^*$ to $\theta $.}}{139}{figure.caption.129}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Schematic view of a tracker station and the coordinate system.}}{140}{figure.caption.130}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Monte Carlo illumination across the panel (panel 0, plane 0).}}{142}{figure.caption.131}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces The $y-z$ direction distribution of muons satisfying 4/4 request.}}{143}{figure.caption.132}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Schematic view of a cosmic muon hitting the vertical oriented station.}}{144}{figure.caption.133}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces The reconstructed longitudinal coordinate in the 0th panel frame.}}{146}{figure.caption.134}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces The bias between the reconstructed and the true hit coordinate.}}{146}{figure.caption.135}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces The 2D histogram of the longitudinal bias versus the true coordinate.}}{147}{figure.caption.136}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces The profile of the longitudinal bias versus the true longitudinal coordinate.}}{148}{figure.caption.137}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces The reconstructed $y-z$ direction distribution of cosmic rays.}}{148}{figure.caption.138}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Mu2e simulation and data handling.}}{160}{figure.caption.143}%
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Mu2e simulation and data handling.}}{156}{figure.caption.139}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Procedure adopted to search for the center of the $x-y$ projection of the helix.}}{165}{figure.caption.144}%
-\contentsline {figure}{\numberline {C.2}{\ignorespaces Sketch of the resolution of the 2$\pi $ ambiguity.}}{165}{figure.caption.145}%
-\contentsline {figure}{\numberline {C.3}{\ignorespaces Combinatorial background reduction achieved by exploiting the calorimeter clusters seeding.}}{166}{figure.caption.146}%
-\contentsline {figure}{\numberline {C.4}{\ignorespaces The symmetry of the straw generates an ambiguity for the hits.}}{167}{figure.caption.147}%
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Procedure adopted to search for the center of the $x-y$ projection of the helix.}}{161}{figure.caption.140}%
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Sketch of the resolution of the 2$\pi $ ambiguity.}}{161}{figure.caption.141}%
+\contentsline {figure}{\numberline {C.3}{\ignorespaces Combinatorial background reduction achieved by exploiting the calorimeter clusters seeding.}}{162}{figure.caption.142}%
+\contentsline {figure}{\numberline {C.4}{\ignorespaces The symmetry of the straw generates an ambiguity for the hits.}}{163}{figure.caption.143}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {D.1}{\ignorespaces Plane 0 illumination pattern of cosmic hits.}}{169}{figure.caption.148}%
-\contentsline {figure}{\numberline {D.2}{\ignorespaces Plane 1 illumination pattern of cosmic hits.}}{170}{figure.caption.149}%
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Plane 0 illumination pattern of cosmic hits.}}{165}{figure.caption.144}%
+\contentsline {figure}{\numberline {D.2}{\ignorespaces Plane 1 illumination pattern of cosmic hits.}}{166}{figure.caption.145}%
