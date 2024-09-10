@@ -367,14 +367,6 @@ M.~Aoki et~al.
 \newblock \doi{{10.1088/1748-0221/3/08/S08005}}.
 \newblock URL \url{{https://dx.doi.org/10.1088/1748-0221/3/08/S08005}}.
 
-\bibitem[{J Bennett}({2016})]{Bennett_2016}
-{J Bennett}.
-\newblock {Belle II Physics Prospects, Status and Schedule}.
-\newblock \emph{{Journal of Physics: Conference Series}}, {770}\penalty0
-  ({1}):\penalty0 {012044}, {nov} {2016}.
-\newblock \doi{{10.1088/1742-6596/770/1/012044}}.
-\newblock URL \url{{https://dx.doi.org/10.1088/1742-6596/770/1/012044}}.
-
 \bibitem[{Branchini, Paolo}({2018})]{universe4100101}
 {Branchini, Paolo}.
 \newblock {The Belle II Experiment: Status and Prospects}.
@@ -382,6 +374,14 @@ M.~Aoki et~al.
 \newblock ISSN {2218-1997}.
 \newblock \doi{{10.3390/universe4100101}}.
 \newblock URL \url{{https://www.mdpi.com/2218-1997/4/10/101}}.
+
+\bibitem[{J Bennett}({2016})]{Bennett_2016}
+{J Bennett}.
+\newblock {Belle II Physics Prospects, Status and Schedule}.
+\newblock \emph{{Journal of Physics: Conference Series}}, {770}\penalty0
+  ({1}):\penalty0 {012044}, {nov} {2016}.
+\newblock \doi{{10.1088/1742-6596/770/1/012044}}.
+\newblock URL \url{{https://dx.doi.org/10.1088/1742-6596/770/1/012044}}.
 
 \bibitem[{Kargiantoulakis, Manolis}({2020})]{Kargiantoulakis_2020}
 {Kargiantoulakis, Manolis}.
