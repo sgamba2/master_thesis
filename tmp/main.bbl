@@ -1,4 +1,4 @@
-\begin{thebibliography}{88}
+\begin{thebibliography}{89}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -303,6 +303,15 @@ M.~Aoki et~al.
 \newblock ISSN {2218-1997}.
 \newblock \doi{{10.3390/universe9010054}}.
 \newblock URL \url{{https://www.mdpi.com/2218-1997/9/1/54}}.
+
+\bibitem[Cei(2020)]{Cei_2020}
+F~Cei.
+\newblock Status and perspectives of lepton flavour violation experiments with
+  muons.
+\newblock \emph{Journal of Physics: Conference Series}, 1526\penalty0
+  (1):\penalty0 012020, apr 2020.
+\newblock \doi{10.1088/1742-6596/1526/1/012020}.
+\newblock URL \url{https://dx.doi.org/10.1088/1742-6596/1526/1/012020}.
 
 \bibitem[{MEG II Collaboration}({2024})]{megiicollaboration2024operation}
 {MEG II Collaboration}.

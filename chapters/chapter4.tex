@@ -2,8 +2,7 @@
 \textit{In this Chapter, I present the initial results of the tracker DAQ commissioning. 
 Understanding the readout process is essential before reading out the detector. 
 The first part focuses on the validation of the ROC readout through Monte Carlo simulation. 
-The second \del{one illustrates}\add{part describes}  the initial data quality monitoring of the tracker preamps. 
-Finally, the last section provides a brief overview of the DAQ performance studies.
+The second part describes the initial data quality monitoring of the tracker preamps. 
 }
 
   \section{The test stand setup}\label{des}
@@ -30,21 +29,20 @@ Finally, the last section provides a brief overview of the DAQ performance studi
 
 
   The test-stand includes the entire readout 
-  chain of \del{an entire}\add{a} 96-channel\del{s} tracker panel \del{:}\add{.} 
+  chain of a 96-channels tracker panel. 
   48 channels connected to the digi-FPGA-1 and 
   48 channels to the second one. 
-  Each channel \del{represents}\add{corresponds to} a tracker straw.
-  \del{which was absent from our}\add{at the}  test stand\add{, the straws were not installed}.
+  Each channel corresponds to a tracker straw. 
+  At the test stand, the straws were not installed.
 
   The DRAC board was connected via optical 
   fiber to one DTC installed in DAQ computer (mu2edaq09).
-  The DTC was programmed, for most of \del{our}\add{the} 
+  The DTC was programmed, for most of the  
   tests, to emulate the CFO 
   functionality to send the request to the 
   ROC to perform the readout of one event.
-  \del{The DTC emulated the CFO by sending a request 
-  for one event, which}\add{The event request} was immediately 
-  followed by \del{reading} the event\add{ readout}.
+  The event request was immediately 
+  followed by the event readout.
 
 
     Depending on the test to perform, it was possible to 
@@ -53,8 +51,8 @@ Finally, the last section provides a brief overview of the DAQ performance studi
     \item  \textbf{ROC internal mode}: the ROC was emulating the data 
     itself (user-defined) without reading \add{the} digi-FPGAs;
     \item  \textbf{ROC external mode}: the ROC receives data 
-    from the digi-FPGAs. This \del{will be}\add{is} the mode \add{to be} used during 
-    \del{Mu2e}\add{the} data-taking.
+    from the digi-FPGAs. This is the mode to be used during 
+    the data-taking.
     \end{itemize}
     For most of the tests performed, the ROC was operated 
     in the external mode: in some cases we simply used the 
@@ -72,38 +70,35 @@ Finally, the last section provides a brief overview of the DAQ performance studi
         (not shown).}
         \label{fig:TS1}
         \end{figure}
-    Figure \ref{fig:timing} shows the \add{readout} timing diagram 
-    for \del{the readout of} one detector channel.
+    Figure \ref{fig:timing} shows the readout timing diagram 
+    for one detector channel.
     There are two important parameters: 
     the Event Window width ($T_{EW}$) shown in red, 
     that represents the distance between two consecutive 
-    proton pulses (called heartbeats - HB's \del{-}\add{and} separated by 
-    $\sim$1.7 $\mu$s during Mu2e data taking), and 
+    proton pulses (called heartbeats - HB's) and separated by 
+    $\sim$1.7 $\mu$s during Mu2e data taking, and 
     the separation $T_{gen}=1/f_{gen}$ between 
     two consecutive hits (represented by grey triangles), 
     where $f_{gen}$ is the generator frequency. 
     Each hit consists of two 16-bytes packets.
-    \del{For the purpose of these tests and DAQ commissioning, 
-    the system allows for the flexibility to vary 
-  }\add{in the process of testing,} the $T_{EW}$ \add{has been varied}
-  between 700 ns to 50  $\mu$s. 
+    In the process of testing, the $T_{EW}$ 
+    has been varied between 700 ns to 50  $\mu$s. 
 
     The ROC firmware has an internal hit buffer 
-    which stores up to 255 hits \add{per event}, \del{which is} adequate 
-    \del{given the expected hit multiplicity 
-    in the detectorsat run time}\add{for the expected run time occupancy}. 
+    which stores up to 255 hits per event, adequate 
+    for the expected run time occupancy. 
     Depending on $T_{gen}$ and $T_{EW}$, the data 
     taking can proceed in two different modes:
     \begin{itemize}
-      \item \textbf{\del{The ROC} regular mode}: the total number of hits 
+      \item \textbf{regular mode}: the total number of hits 
       within the event window is less than 255.
       In this case the ROC hit buffer doesn't get filled up 
       and the total number of 
-      hits may vary from one event to another \del{one}. It is 
+      hits may vary from one event to another. It is 
       expected that the number 
       of hits will not exceed the threshold of 255, 
       with an average of approximately 12 hits;
-    \item \textbf{\del{The ROC} overflow mode}: the event window 
+    \item \textbf{overflow mode}: the event window 
     is large enough, 
     so the total number of generated hits is 
       greater than 255. In this case
@@ -131,7 +126,7 @@ Finally, the last section provides a brief overview of the DAQ performance studi
     \label{fig:timing}
     \end{figure}
 
-    The relative timing offsets \del{among}\add{between} different channels of 
+    The relative timing offsets between different channels of 
     the same digi-FPGA are of the order of few ns and can be 
     measured. The pulse sequences from the two digi-FPGAs are offset 
     relative to each other by a time interval $\Delta t$, which is 
@@ -150,20 +145,20 @@ Finally, the last section provides a brief overview of the DAQ performance studi
 {not clear what you want to say, clarify}
 %
   This procedure 
-    is repeated for all channels, \del{following}\add{in} a fixed order.
+    is repeated for all channels, in a fixed order.
 \section{Validation of ROC read out and buffering}
-The first test \del{I} performed \del{has been}\add{was} to verify the correct performance of 
+The first test performed was to verify the correct performance of 
 ROC buffering.
-During \del{these}\add{the} test, a single ROC was connected to \del{the}\add{a} DTC. 
+During the test, a single ROC was connected to a DTC. 
 Data were collected with digi-FPGAs pulsed by their internal pulsers, 
-\add{with}\add{and} the ROC set in the external mode. 
-\del{Concering the}\add{The} digi-FPGAs pulse generators\del{, they can} operate\add{d} at two specific frequencies, 
+and the ROC set in the external mode. 
+The digi-FPGAs pulse generators operated at two specific frequencies, 
 31.29 MHz/(2$^7$+1), or approximately 250 kHz, 
 and 31.29 MHz/(2$^9$+1), or approximately 60 kHz.
         
 \subsection{Development of the ROC bit-level simulation}\label{MonteCarlo}
  
-ROC's \del{digital} readout logic \del{allows to}\add{can} be 
+ROC's readout logic can be 
 emulated with a bit-level C++ simulation, 
 which I contributed to develop. 
 For each event, the simulated parameters 
@@ -171,7 +166,7 @@ are the number of hits in each channel and the total
 number of readout hits per event, which cannot exceed 255. 
 
 
-The main steps of the simulation are \del{the following ones}\add{as follows}:
+The main steps of the simulation are as follows:
 \begin{itemize}
 \item
   The start of the Event Window is set at $t=0$;
@@ -184,11 +179,10 @@ added at the relative distance of $T_{gen}$,
   until the absolute time of the next pulse is above $T_{EW}$;
 \item
   In the readout part of the simulation, 
-  the pulses are read out \del{following a predefined channel readout ordering;;}
-  \add{in the same order as in the firmware}
+  the pulses are read out in the same order as in the firmware;
 \item
-  the readout \textit{continues} until all \del{the} simulated hits 
-  have been \del{included}\add{``read out''}, or the \del{maximum} threshold of 255 hits has been reached.
+  the readout \textit{continues} until all simulated hits 
+  have been ``read out'', or the threshold of 255 hits has been reached.
 \end{itemize}
 The simulation allows to introduce the offset between digi-FPGA-1 
 and digi-FPGA-2 timing sequences and, 
@@ -199,27 +193,25 @@ offsets from the data. For each digi-FPGA, we selected
 a reference channel
 and measured the offset of the 
 remaining 47 channels relative to it.
-The reference channel is the first channel {to 
-be readout in each digi-FPGA}\add{in the readout sequence}: channel 91 for 
-digi-FPGA-1 and \add{channel} 94 for digi-FPGA-2. 
+The reference channel is the first channel in the readout sequence: channel 91 for 
+digi-FPGA-1 and channel 94 for digi-FPGA-2. 
 Figure \ref{fig:delay1}(\ref{fig:delay2}) shows an example of 
-distribution of the \del{offset}\add{time residuals} between the \add{pulses in a} reference 
+distribution of the time residuals between the pulses in a reference 
 channel 91(94) and a randomly selected channel, 0(44) for 
 digi-FPGA-1(digi-FPGA-2). 
-The mean offset was determined with a \del{simple} 
+The mean offset was determined with a  
 Gaussian fit of the distribution. 
 This procedure was repeated for all channels 
 relative to each digi-FPGA.
-All \del{the} measured offsets were of the order of a 
-few ns and were \del{inserted}\add{included} in the simulation\hlite{ because 
-it was important to take into account all possible 
+All measured offsets were of the order of a 
+few ns and were included in the simulation. 
+It was important to take into account all possible 
 effects in the emulation of the ROC hit buffering 
 to perform an accurate comparison between data and 
-simulation, although we were aware of the fact that 
+simulation. However, we were aware of the fact that 
 given the order of magnitude of these offsets, the 
-impact was negligible.}
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{the sentence too long, break it down into several ones}
+impact was negligible.
+
 
 
   \begin{figure}[!h]
@@ -246,14 +238,13 @@ impact was negligible.}
 \subsection{The \textit{ROC buffer overflow} mode}
 In the \textit{ROC buffer overflow} configuration (referred to 
 as RUN281 in the following), 
-the $T_{EW}$ was set to 50 $\mu$s and $f_{gen}$ to $\sim$60 kHz\del{, 
-which}\add{That} corresponds to 
-\del{a}\add{the} time distance between two consecutive pulses of 
+the $T_{EW}$ was set to 50 $\mu$s and $f_{gen}$ to $\sim$60 kHz, that 
+corresponds to the time distance between two consecutive pulses of 
 approximately 16 $\mu$s.
 This implies that the number of hits in a 
 readout window could be 
 either 3 or 4, depending on the offset 
-between the \add{start of the} readout window and the generated pulses sequence.
+between the start of the readout window and the generated pulses sequence.
 \subsubsection{Hit timing distribution and channels occupancy}\label{over}
 We first checked the distribution of the hit time for 
 each readout channel, and the distribution of the 
@@ -263,7 +254,7 @@ Figure \ref{fig:1} shows the hit time
 distributions for two selected channels, 
 channel 0 of digi-FPGA-1 and channel 2 of digi-FPGA-2.
 The top distribution is, as expected, uniform, 
-however the bottom one shows some \del{unexpected}\add{non-trivial} features.
+however the bottom one shows some non-trivial features.
 \begin{figure}[!h]
   \begin{subfigure}[b]{\textwidth}
       \centering
@@ -281,24 +272,23 @@ however the bottom one shows some \del{unexpected}\add{non-trivial} features.
      \label{fig:1}
 \end{figure}
 The explanation for the two different distributions 
-\del{can be found}\add{comes} from Figure \ref{fig:2} (Top), 
-which shows the \add{channel} occupancy as a function of \add{the} channel number 
+comes from Figure \ref{fig:2} (Top), 
+which shows the channel occupancy as a function of the channel number 
 (red is for data, blue for simulation).
 
-The \add{bin} ordering \del{of the bins} in the histogram corresponds 
-to the channel readout ordering\del{: this}\add{. That} means that 
+The bin ordering in the histogram corresponds 
+to the channel readout ordering. That means that 
 the first bin on the left corresponds to the first 
-\del{readout} channel and the last one on the right 
-corresponds to the last \del{readout} channel\add{in the readout sequence}.
+channel and the last one on the right 
+corresponds to the last channel in the readout sequence.
 In other words, channels on the left 
 are at the beginning of the readout sequence 
-and \del{are, in these conditions, always 
-  completely readout}\add{all hits from those channels are always fully read out}.
+and all hits from those channels are always fully read out.
 On the other hand, channels on 
 the right are in the 
 later part of the readout sequence and may 
-not have all the hits \del{readout}\add{read out}, 
-since the ROC buffer may \del{be in overflow}\add{get filled up}.
+not have all the hits read out, 
+since the ROC buffer may get filled up.
   \begin{figure}[!h]
     \begin{subfigure}[b]{\textwidth}
         \centering
@@ -525,13 +515,9 @@ same test stand as in Section \ref{des} was
 used and one or two ROCs 
 were connected to the same DTC, so one more 
 test stand (TS2) was used. Preamps on the CAL 
-side were added to perform the test.
-As mentioned in Section \ref{preampss}, \hlite{the 
-preamps on the CAL side 
-include circuitry that can inject calibration pulses into the channel.}
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{this is not correct - all preamplifiers are the same, however the CAL side FPGA
-  is programmed to manage the generation of the test pulses }
+side were added to perform the test. 
+As mentioned in Section \ref{preampss}, the CAL side FPGA
+is programmed to manage the generation of the calibration pulses. 
 
 These pulses can be sent at an arbitrary rate and a frequency 
 of 50 kHz was chosen. 
@@ -794,22 +780,11 @@ characterized by inverted waveforms
 The 16 $\mu$s peak is characterized 
 by regular waveforms, as the 20 $\mu$s peak.
 It is reasonable to think that this 
-phenomenon arises \hlite{from the erroneous 
-  generation of 4 $\mu$s long pulses},
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{nothing wrong with the generation, just triggering on the trailing edge of the 4us input pulse.}
-%
-triggering them on both the leading 
-and trailing edges. In fact, 
-the sum of 4 $\mu$s and 16 $\mu$s 
+phenomenon arises from the triggering 
+on the trailing edge of the 4 $\mu$s long input pulse. 
+In fact, the sum of 4 $\mu$s and 16 $\mu$s 
 is the inverse of the pulser frequency. 
-\hlite{One potential solution to address 
-this issue could involve varying the pulse length. 
-However, this approach was not pursued 
-in this Thesis due to time constraints.}
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{the solution is likely the same - replace the preamplifier}
-%
+The chosen solution was to replace the preamp. 
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.65\textwidth]{figures/pdf/wf_ch50_1.pdf}

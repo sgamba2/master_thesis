@@ -21,45 +21,45 @@ Warning--empty journal in em7
 Warning--empty institution in drac
 Warning--empty journal in trkreq
 Warning--empty journal in trkpat
-You've used 88 entries,
+You've used 89 entries,
             2481 wiz_defined-function locations,
-            1206 strings with 21861 characters,
-and the built_in function-call counts, 30010 in all, are:
-= -- 2905
-> -- 703
-< -- 91
-+ -- 376
-- -- 198
-* -- 1997
-:= -- 4695
-add.period$ -- 386
-call.type$ -- 88
-change.case$ -- 175
-chr.to.int$ -- 86
-cite$ -- 107
-duplicate$ -- 1677
-empty$ -- 3064
-format.name$ -- 294
-if$ -- 6540
+            1216 strings with 22099 characters,
+and the built_in function-call counts, 30369 in all, are:
+= -- 2940
+> -- 710
+< -- 92
++ -- 380
+- -- 200
+* -- 2026
+:= -- 4752
+add.period$ -- 391
+call.type$ -- 89
+change.case$ -- 177
+chr.to.int$ -- 87
+cite$ -- 108
+duplicate$ -- 1696
+empty$ -- 3101
+format.name$ -- 297
+if$ -- 6617
 int.to.chr$ -- 3
-int.to.str$ -- 89
-missing$ -- 81
-newline$ -- 569
-num.names$ -- 255
-pop$ -- 617
+int.to.str$ -- 90
+missing$ -- 82
+newline$ -- 576
+num.names$ -- 258
+pop$ -- 622
 preamble$ -- 1
-purify$ -- 88
+purify$ -- 89
 quote$ -- 0
-skip$ -- 1024
+skip$ -- 1034
 stack$ -- 0
-substring$ -- 1403
-swap$ -- 267
+substring$ -- 1423
+swap$ -- 270
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 613
+type$ -- 620
 warning$ -- 16
-while$ -- 236
+while$ -- 239
 width$ -- 0
-write$ -- 1359
+write$ -- 1376
 (There were 17 warnings)
