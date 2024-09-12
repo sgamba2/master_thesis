@@ -2,7 +2,7 @@
 \textit{In this Chapter, I present the initial results of the tracker DAQ commissioning. 
 Understanding the readout process is essential before reading out the detector. 
 The first part focuses on the validation of the ROC readout through Monte Carlo simulation. 
-The second one illustrates the initial data quality monitoring of the tracker preamps. 
+The second \del{one illustrates}\add{part describes}  the initial data quality monitoring of the tracker preamps. 
 Finally, the last section provides a brief overview of the DAQ performance studies.
 }
 
@@ -30,31 +30,31 @@ Finally, the last section provides a brief overview of the DAQ performance studi
 
 
   The test-stand includes the entire readout 
-  chain of an entire 96-channels tracker panel:  
+  chain of \del{an entire}\add{a} 96-channel\del{s} tracker panel \del{:}\add{.} 
   48 channels connected to the digi-FPGA-1 and 
   48 channels to the second one. 
-  Each channel represents a tracker straw 
-  which was absent from our test stand.
+  Each channel \del{represents}\add{corresponds to} a tracker straw.
+  \del{which was absent from our}\add{at the}  test stand\add{, the straws were not installed}.
 
   The DRAC board was connected via optical 
   fiber to one DTC installed in DAQ computer (mu2edaq09).
-  The DTC was programmed, for most of our 
+  The DTC was programmed, for most of \del{our}\add{the} 
   tests, to emulate the CFO 
   functionality to send the request to the 
   ROC to perform the readout of one event.
-  The DTC emulated the CFO by sending a request 
-  for one event, which was immediately 
-  followed by reading the event.
+  \del{The DTC emulated the CFO by sending a request 
+  for one event, which}\add{The event request} was immediately 
+  followed by \del{reading} the event\add{ readout}.
 
 
     Depending on the test to perform, it was possible to 
     select one between two ROC operational modes:
     \begin{itemize}
     \item  \textbf{ROC internal mode}: the ROC was emulating the data 
-    itself (user-defined) without reading digi-FPGAs;
+    itself (user-defined) without reading \add{the} digi-FPGAs;
     \item  \textbf{ROC external mode}: the ROC receives data 
-    from the digi-FPGAs. This will be the mode used during 
-    Mu2e data-taking.
+    from the digi-FPGAs. This \del{will be}\add{is} the mode \add{to be} used during 
+    \del{Mu2e}\add{the} data-taking.
     \end{itemize}
     For most of the tests performed, the ROC was operated 
     in the external mode: in some cases we simply used the 
@@ -72,38 +72,38 @@ Finally, the last section provides a brief overview of the DAQ performance studi
         (not shown).}
         \label{fig:TS1}
         \end{figure}
-    Figure \ref{fig:timing} shows the timing diagram 
-    for the readout of one detector channel.
+    Figure \ref{fig:timing} shows the \add{readout} timing diagram 
+    for \del{the readout of} one detector channel.
     There are two important parameters: 
     the Event Window width ($T_{EW}$) shown in red, 
     that represents the distance between two consecutive 
-    proton pulses (called heartbeats - HB's - separated by 
+    proton pulses (called heartbeats - HB's \del{-}\add{and} separated by 
     $\sim$1.7 $\mu$s during Mu2e data taking), and 
     the separation $T_{gen}=1/f_{gen}$ between 
     two consecutive hits (represented by grey triangles), 
     where $f_{gen}$ is the generator frequency. 
     Each hit consists of two 16-bytes packets.
-    For the purpose of these tests and DAQ commissioning, 
+    \del{For the purpose of these tests and DAQ commissioning, 
     the system allows for the flexibility to vary 
-    the $T_{EW}$ between 700 ns to 50 
-    $\mu$s. 
+  }\add{in the process of testing,} the $T_{EW}$ \add{has been varied}
+  between 700 ns to 50  $\mu$s. 
 
     The ROC firmware has an internal hit buffer 
-    which stores up to 255 hits, which is adequate 
-    given the expected hit multiplicity 
-    in the detectors at run time. 
+    which stores up to 255 hits \add{per event}, \del{which is} adequate 
+    \del{given the expected hit multiplicity 
+    in the detectorsat run time}\add{for the expected run time occupancy}. 
     Depending on $T_{gen}$ and $T_{EW}$, the data 
     taking can proceed in two different modes:
     \begin{itemize}
-      \item \textbf{The ROC regular mode}: the total number of hits 
+      \item \textbf{\del{The ROC} regular mode}: the total number of hits 
       within the event window is less than 255.
       In this case the ROC hit buffer doesn't get filled up 
       and the total number of 
-      hits may vary from one event to another one. It is 
+      hits may vary from one event to another \del{one}. It is 
       expected that the number 
       of hits will not exceed the threshold of 255, 
       with an average of approximately 12 hits;
-    \item \textbf{The ROC overflow mode}: the event window 
+    \item \textbf{\del{The ROC} overflow mode}: the event window 
     is large enough, 
     so the total number of generated hits is 
       greater than 255. In this case
@@ -113,7 +113,7 @@ Finally, the last section provides a brief overview of the DAQ performance studi
     \end{itemize}
    
     Since the timing of the readout (i.e. the Event Window) 
-    is indipendent from the timing sequence 
+    is independent from the timing sequence 
     of the pulse generator, the number of pulses contained in 
     the Event Window can be different between two different 
     windows. 
@@ -131,35 +131,39 @@ Finally, the last section provides a brief overview of the DAQ performance studi
     \label{fig:timing}
     \end{figure}
 
-    The relative timing offsets among different channels of 
+    The relative timing offsets \del{among}\add{between} different channels of 
     the same digi-FPGA are of the order of few ns and can be 
     measured. The pulse sequences from the two digi-FPGAs are offset 
     relative to each other by a time interval $\Delta t$, which is 
     constant for as long as the DRAC board is 
     powered up and varies randomly between 0 and $T_{gen}$ 
-    when DRAC is powercycled.
+    when \add{the} DRAC is powercycled.
 
 
-    Depending on the event window and the start of the pulse 
-    sequence, the first channel in the read out sequence 
+    \hlite{Depending on the event window and the start of the pulse 
+    sequence, the first channel in the readout sequence 
     reads out as many hits as allowed. Once all hits are read out, 
     the read out process for this channel 
     stops, and the process moves to the second one, 
-    which then begins its own read out phase. This procedure 
-    is repeated for all channels, following a fixed order.
+    which then begins its own read out phase.}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{not clear what you want to say, clarify}
+%
+  This procedure 
+    is repeated for all channels, \del{following}\add{in} a fixed order.
 \section{Validation of ROC read out and buffering}
-The first test I performed has been to verify the correct performance of 
+The first test \del{I} performed \del{has been}\add{was} to verify the correct performance of 
 ROC buffering.
-During these test, a single ROC was connected to the DTC. 
+During \del{these}\add{the} test, a single ROC was connected to \del{the}\add{a} DTC. 
 Data were collected with digi-FPGAs pulsed by their internal pulsers, 
-with the ROC set in the external mode. 
-Concering the digi-FPGAs pulse generators, they can operate at two specific frequencies, 
+\add{with}\add{and} the ROC set in the external mode. 
+\del{Concering the}\add{The} digi-FPGAs pulse generators\del{, they can} operate\add{d} at two specific frequencies, 
 31.29 MHz/(2$^7$+1), or approximately 250 kHz, 
 and 31.29 MHz/(2$^9$+1), or approximately 60 kHz.
         
 \subsection{Development of the ROC bit-level simulation}\label{MonteCarlo}
  
-ROC's digital readout logic allows to be 
+ROC's \del{digital} readout logic \del{allows to}\add{can} be 
 emulated with a bit-level C++ simulation, 
 which I contributed to develop. 
 For each event, the simulated parameters 
@@ -167,7 +171,7 @@ are the number of hits in each channel and the total
 number of readout hits per event, which cannot exceed 255. 
 
 
-The main steps of the simulation are the following ones:
+The main steps of the simulation are \del{the following ones}\add{as follows}:
 \begin{itemize}
 \item
   The start of the Event Window is set at $t=0$;
@@ -180,39 +184,43 @@ added at the relative distance of $T_{gen}$,
   until the absolute time of the next pulse is above $T_{EW}$;
 \item
   In the readout part of the simulation, 
-  the pulses are readout following a predefined channel readout ordering;; 
+  the pulses are read out \del{following a predefined channel readout ordering;;}
+  \add{in the same order as in the firmware}
 \item
-  the readout \textit{continues} until all the simulated hits 
-  have been included, or the maximum threshold of 255 hits has been reached.
+  the readout \textit{continues} until all \del{the} simulated hits 
+  have been \del{included}\add{``read out''}, or the \del{maximum} threshold of 255 hits has been reached.
 \end{itemize}
 The simulation allows to introduce the offset between digi-FPGA-1 
 and digi-FPGA-2 timing sequences and, 
 internally to each digi-FPGA, the channel-to-channel 
 offsets, as user-defined parameters.
 To fine-tune the simulation, we measured the channel-to-channel 
-offset from the data. For each digi-FPGA, we selected 
+offsets from the data. For each digi-FPGA, we selected 
 a reference channel
 and measured the offset of the 
 remaining 47 channels relative to it.
-The reference channel is the first channel to 
-be readout in each digi-FPGA: channel 91 for 
-digi-FPGA-1 and 94 for digi-FPGA-2. 
+The reference channel is the first channel {to 
+be readout in each digi-FPGA}\add{in the readout sequence}: channel 91 for 
+digi-FPGA-1 and \add{channel} 94 for digi-FPGA-2. 
 Figure \ref{fig:delay1}(\ref{fig:delay2}) shows an example of 
-distribution of the offset between the reference 
+distribution of the \del{offset}\add{time residuals} between the \add{pulses in a} reference 
 channel 91(94) and a randomly selected channel, 0(44) for 
 digi-FPGA-1(digi-FPGA-2). 
-The mean offset was determined with a simple 
+The mean offset was determined with a \del{simple} 
 Gaussian fit of the distribution. 
 This procedure was repeated for all channels 
 relative to each digi-FPGA.
-All the measured offsets were of the order of a 
-few ns and were inserted in the simulation because 
+All \del{the} measured offsets were of the order of a 
+few ns and were \del{inserted}\add{included} in the simulation\hlite{ because 
 it was important to take into account all possible 
 effects in the emulation of the ROC hit buffering 
 to perform an accurate comparison between data and 
 simulation, although we were aware of the fact that 
 given the order of magnitude of these offsets, the 
-impact was negligible.
+impact was negligible.}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{the sentence too long, break it down into several ones}
+
 
   \begin{figure}[!h]
           \centering
@@ -238,14 +246,14 @@ impact was negligible.
 \subsection{The \textit{ROC buffer overflow} mode}
 In the \textit{ROC buffer overflow} configuration (referred to 
 as RUN281 in the following), 
-the $T_{EW}$ was set to 50 $\mu$s and $f_{gen}$ to $\sim$60 kHz, 
-which corresponds to 
-a time distance between two consecutive pulses of 
+the $T_{EW}$ was set to 50 $\mu$s and $f_{gen}$ to $\sim$60 kHz\del{, 
+which}\add{That} corresponds to 
+\del{a}\add{the} time distance between two consecutive pulses of 
 approximately 16 $\mu$s.
 This implies that the number of hits in a 
 readout window could be 
 either 3 or 4, depending on the offset 
-between the readout window and the generated pulses sequence.
+between the \add{start of the} readout window and the generated pulses sequence.
 \subsubsection{Hit timing distribution and channels occupancy}\label{over}
 We first checked the distribution of the hit time for 
 each readout channel, and the distribution of the 
@@ -255,7 +263,7 @@ Figure \ref{fig:1} shows the hit time
 distributions for two selected channels, 
 channel 0 of digi-FPGA-1 and channel 2 of digi-FPGA-2.
 The top distribution is, as expected, uniform, 
-however the bottom one shows some unexpected features.
+however the bottom one shows some \del{unexpected}\add{non-trivial} features.
 \begin{figure}[!h]
   \begin{subfigure}[b]{\textwidth}
       \centering
@@ -273,23 +281,24 @@ however the bottom one shows some unexpected features.
      \label{fig:1}
 \end{figure}
 The explanation for the two different distributions 
-can be found from Figure \ref{fig:2} (Top), 
-which shows the occupancy as a function of channel number 
+\del{can be found}\add{comes} from Figure \ref{fig:2} (Top), 
+which shows the \add{channel} occupancy as a function of \add{the} channel number 
 (red is for data, blue for simulation).
 
-The ordering of the bins in the histogram corresponds 
-to the channel readout ordering: this means that 
+The \add{bin} ordering \del{of the bins} in the histogram corresponds 
+to the channel readout ordering\del{: this}\add{. That} means that 
 the first bin on the left corresponds to the first 
-readout channel and the last one on the right 
-corresponds to the last readout channel.
+\del{readout} channel and the last one on the right 
+corresponds to the last \del{readout} channel\add{in the readout sequence}.
 In other words, channels on the left 
 are at the beginning of the readout sequence 
-and are, in these conditions, always 
-completely readout. On the other hand, channels on 
+and \del{are, in these conditions, always 
+  completely readout}\add{all hits from those channels are always fully read out}.
+On the other hand, channels on 
 the right are in the 
 later part of the readout sequence and may 
-not have all the hits readout, 
-since the ROC buffer may be in overflow.
+not have all the hits \del{readout}\add{read out}, 
+since the ROC buffer may \del{be in overflow}\add{get filled up}.
   \begin{figure}[!h]
     \begin{subfigure}[b]{\textwidth}
         \centering
@@ -315,10 +324,10 @@ since the ROC buffer may be in overflow.
 
 
 Figure \ref{fig:66} shows the distribution of the number of 
-hits of channel 0 of digi-FPGA-1. As expected, 
+hits \del{of}\add{in} channel 0 of \add{the} digi-FPGA-1. As expected, 
 the majority of events 
 has 3 hits, with a tail of 4 hits. 
-This provides an explanation for Figure \ref{fig:2} (Top).
+This provides an explanation \del{for}\add{of} Figure \ref{fig:2} (Top).
 \begin{figure}[!h]
 \centering
 \includegraphics[width =0.7\textwidth]{figures/pdf/figure_00066_nhits_ch00_run281.pdf}
@@ -333,11 +342,11 @@ show a flat distribution with the maximum observed occupancy.
 Additionally, there are two more plateaus with slightly lower 
 occupancy (less than 10\% lower): one over the following 
 7 bins (with a small $dent$ at the end), and the other 
-spanning the last 9 bins.
-This pattern can be generated by adding together the 
-following three types of events.
+spanning \add{over} the last 9 bins.
+This pattern \del{can be}\add{is} generated by \del{adding together the 
+following}\add{the} three \add{following} types of events \add{added together}.
 \begin{itemize}
-  \item \textbf{0-68th read out channels}: 
+  \item \textbf{\add{channels} 0-68\del{th read out channels}}: 
   the 48 channels of the digi-FPGA-1, the first one to be readout, 
   are those with 4 hits per channel, 
   which makes a total of 192 hits stored in the ROC buffer. 
@@ -346,9 +355,9 @@ following three types of events.
   only three hits can be read out by each channel 
   of the digi-FPGA-2. The first 21 channels of the 
   digi-FPGA-2 will be those with 3 hits per channel, resulting in a 
-  total of 255 hits. All the hits sent to the following 
+  total of 255 hits. All \del{the} hits sent to the following 
   channels are lost.
-  \item \textbf{0-75th read out channels}: 
+  \item \textbf{\add{channels} 0-75\del{th read out channels}}: 
   the 48 channels of the digi-FPGA-1 are 
   those with 3 hits per channel, 
   which makes a total of 144 hits stored in the ROC buffer.
@@ -361,7 +370,7 @@ following three types of events.
   the three hits from channel 28 in the 
   readout sequence
   fill up the total ROC buffer of 255 hits. 
-  \item \textbf{0-85th read out channels}: 
+  \item \textbf{\add{channels} 0-85\del{th read out channels}}: 
   the 48 channels of the digi-FPGA-1 and the 
   first 37 channels to be read out in the digi-FPGA-2 
   are those with 3 hits, 255 hits in total.
@@ -372,8 +381,8 @@ histogram because the maximum
 threshold of 255 hits was reached with 
 fewer channels, in particular the number of 
 85 read out channels corresponds to the 
-sum of 48 read out channels in the first 
-digi-FPGA and 37 read out channel in the digi-FPGA-2.
+sum of 48 readout channels in the first 
+digi-FPGA and 37 readout channel in the digi-FPGA-2.
 
 
 Figure \ref{fig:2} (Bottom) shows a zoom on the 
@@ -414,11 +423,11 @@ mode, the number of readout hits is exactly 255 for all events.
 }
 \label{fig:3}
 \end{figure}
-\subsection{The \textit{ROC buffer regular} mode }
+\subsection{Regular ROC readout mode }
 In the \textit{regular} configuration, which will be referred 
 to as RUN105038, the event window $T_{EW}$ was chosen to be 25 $\mu$s
-and the pulser rate $f_{gen}$ 60 kHz, 
-which corresponds to $T_{gen}=16 \ \mu$s.
+\del{and the}\add{. The} pulser rate $f_{gen}$ \add{of} 60 kHz\del{, 
+which} corresponds to $T_{gen}=16 \ \mu$s.
 
 \subsubsection{Time distribution and occupancy}
 Figure \ref{fig:4} shows the 
@@ -451,7 +460,7 @@ There is no overflow of the hit buffer and no pulses are lost.
 
 In this mode, the readout of a given channel is not affected 
 by the readout of previous
-channels and the \textit{occupancy} distribution shown 
+channels and the \add{channel} \textit{occupancy} distribution shown 
 in Figure \ref{fig:5} is, as expected, uniform.
 \begin{figure}[!h]
 \centering
@@ -462,7 +471,7 @@ are normalized to the same number of events. All 96 channels are read out.}
 \label{fig:5}
 \end{figure}
 
-Given this choice of $f_{gen}$ and $T_{EW}$, 
+Given \del{this}\add{the} choice of $f_{gen}$ and $T_{EW}$, 
 the maximum number of hits in one Event Window is 2.
 Figure \ref{fig:67} shows the distribution of the 
 number of hits in the channel 0 (FPGA-1).
@@ -493,7 +502,7 @@ or vice versa. The total number of hits within the event
 window depends on the relative offset of the event window 
 with respect to the digi-FPGA pulsers, and it varies from 
 144 to 192. As before, the relative difference between the 
-data and the MC distributions is at the level of $10^{-3}$, 
+data and the MC distributions is at \del{the}\add{a} level of $10^{-3}$, 
 which indicates very good agreement.
 \begin{figure}[!h]
 \centering
@@ -517,10 +526,13 @@ used and one or two ROCs
 were connected to the same DTC, so one more 
 test stand (TS2) was used. Preamps on the CAL 
 side were added to perform the test.
-As mentioned in Section \ref{preampss}, the 
+As mentioned in Section \ref{preampss}, \hlite{the 
 preamps on the CAL side 
-include circuitry that can inject calibration 
-pulses into the channel. 
+include circuitry that can inject calibration pulses into the channel.}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{this is not correct - all preamplifiers are the same, however the CAL side FPGA
+  is programmed to manage the generation of the test pulses }
+
 These pulses can be sent at an arbitrary rate and a frequency 
 of 50 kHz was chosen. 
 The data acquisition event window was set 
@@ -537,24 +549,24 @@ The diagnostics tools allowed the identification
 of errors, such as the presence of an 
 invalid channel ID, more hits than the maximum 
 allowed in a given channel 
-and an undefined link ID between ROCs.
+and an undefined \add{ROC} link ID\del{ between ROCs}.
 
 \subsection{Test 1: channel occupancy versus channel ID}\label{nhitvschid}
-The first test I conducted was to examine the channel occupancy. 
+The first \add{conducted} test \del{I conducted was to} examine\add{d} the channel occupancy. 
 This was a crucial test, as it was important to determine if a 
 channel was inactive, which would result in zero readout hits. 
-It was also essential to detect any cross-talks (unwanted 
+It was also essential to detect \del{any}\add{the} cross-talks (unwanted 
 coupling between channels) which could cause the erroneous 
 read out of hits in the incorrect channels.
 It was also possible to check if the involved 
 channels showed more hits than expected. 
 
-
-For the previous reasons, we setup our system 
-to pulse one every eight channels.
-To scan all the 96 channels of the panel, 
-we performed multiple runs choosing each time 
-a different sequence of channels.
+\del{For the previous reasons, we setup our system 
+  to pulse one every eight channels.}
+\add{The implemented preamplifier pulsing scheme allows to pulse every 8-th channel.} 
+\del{To scan}\add{Scanning} all \del{the} 96 channels of the panel, 
+\del{we performed multiple}\add{requires eight} runs \del{choosing each time 
+a different sequence of channels}\add{taken with the different first pulsed channel offset}.
 Figure \ref{fig:normalhits} shows the 
 distribution of the occupancy for one channel 
 sequence, which shows no anomalies.
@@ -572,22 +584,22 @@ sequence, which shows no anomalies.
 Figure \ref{fig:dead} shows a run with one dead channel (ID=94) 
 and a channel (ID=70) with more than 
 three hits, which was not expected. 
-In the case of the dead channel, the problematic preamp 
-was replaced. In the second case, to 
-investigate this more thoroughly, 
-I made the distribution of the time difference 
+In \del{the} case of the dead channel, the problematic preamp\add{lifier}
+was replaced. \del{In the second case, to 
+investigate this more thoroughly, }\add{To investigate the second case,}
+\del{I made the}\add{a} distribution of the time difference 
 $\Delta t$ between consecutive pulses 
-(Figure \ref{fig:deltatnhits}).
-Since the pulser provides pulses at 
-the frequency of 50 kHz, the $\Delta t$ 
+(Figure \ref{fig:deltatnhits}) \add{has been made}.
+Since the \del{pulser provides pulses at 
+the frequency of}\add{the pulse frequency is} 50 kHz, the $\Delta t$ 
 distribution should show one single peak at 20 $\mu$s. 
 On the other hand, there are also two 
 pronounced peaks at 16 $\mu$s and 4 $\mu$s. 
-In particular, the analysis of the 
-waveforms of the hits in the 4 $\mu$s peak 
+\del{In particular, the analysis}\add{Analysis} of the 
+\add{hit} waveforms \del{of the hits} in the 4 $\mu$s peak 
 showed an inversion of the waveforms: 
 this has been further investigated 
-and will be discusse in more detail in Section \ref{inv}.
+and will be discussed in more detail in Section \ref{inv}.
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.65\textwidth]{figures/pdf/run105346_nh_vs_ch.pdf}
@@ -617,7 +629,7 @@ and will be discusse in more detail in Section \ref{inv}.
 \end{figure}
 
 Figure \ref{fig:cross} shows a clear example of 
-cross-talk among channels. 
+\add{a} cross-talk \del{among}\add{between the two} channels. 
 We tried to characterize this phenomenon and it was  
 noticed that it occurred 
 only when the ID of the first channel to be 
@@ -642,7 +654,7 @@ This is due to the fact that the
 distance between consecutive preamp 
 boards is slightly narrower for the 
 first channels (Figure \ref{fig:spacepreamps}).
-At the moment of writing this Thesis, the 
+At the \del{moment}\add{time} of writing this Thesis, the 
 possible solutions are still being investigated. 
 \begin{figure}[!h]
   \centering
@@ -663,21 +675,27 @@ possible solutions are still being investigated.
   The first preamps in the occupancy plot are the ones on the right.}
  \label{fig:spacepreamps}
 \end{figure}
-The ouput of the test was reported to the tracker panel 
-experts, and they are still working on it.
+\del{The ouput of the test was reported to the tracker panel 
+  experts, and they are still working on it.}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{the stricken out sentence repeats the one before it}
+
 
 \subsection{Test 2: analysis of the readout pulses waveforms}\label{wf}
-The test described in this section involved the study 
-of the reconstructed waveforms from charge injection. 
-The sampling frequency of the ADC is 40 MHz, which resulted 
-in a waveform bin width of 25 ns (Section \ref{DRAC}). 
-The maximum number of samples for one waveform is 30. 
+\del{The test described in this section involved}\add{This section describes} the study 
+  of the reconstructed waveforms from \add{the} charge injection.
+The sampling frequency of the ADC is 40 MHz\del{, which resulted 
+in a}\add{corresponds to the} waveform bin width of 25 ns (Section \ref{DRAC}). 
+\del{The maximum number of samples for one waveform is 30.}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{science fiction}
+
 
 
 Figure \ref{fig:normalwf} shows an example 
-of reconstructed waveform (RUN105421). 
+of \add{a} reconstructed waveform (RUN105421). 
 The reconstructed waveforms shown below 
-have already had the baseline subtracted. 
+have \del{already had} the baseline subtracted. 
 In Section \ref{basel}, I will provide a deeper 
 analysis of the estimation of the waveform baseline. 
 In first approximation, a good waveform is 
@@ -686,9 +704,9 @@ distribution in the first 10 samples, indicating the
 absence of noise at the start. It should feature a high 
 positive charge peak with a sharp leading edge, which is 
 the rising slope of the waveform. Additionally, the 
-waveform should have a negative tail, contributing to 
-its overall shape.
-The negative tail is generated by a 
+waveform should have a negative tail\del{, contributing to 
+its overall shape}.
+The \del{negative} tail is generated by a 
 differentiating circuit that shapes the signal 
 using a high-pass filter. This circuit was adopted 
 because at high count rates two pulses can overlap: a 
@@ -698,9 +716,9 @@ with the initial pulse's undershoot. This overlap
 may reduce the apparent amplitude of the subsequent 
 pulse and generated the undesired broadening of peaks 
 in the energy spectrum. 
-The filter does not affect the rapid leading edge 
-of the pulse because the time constant of the differentiator 
-is not small compared to the rise time.
+The filter does not affect the \del{rapid} leading edge 
+of the pulse because the time constant of the \del{differentiator}
+\add{differentiating circuit} is \del{not small}\add{large} compared to the rise time.
 
 \begin{figure}[!h]
   \centering
@@ -710,8 +728,11 @@ is not small compared to the rise time.
 \end{figure}
 
 
-\subsubsection{Estimate of the waveform pedestal}\label{basel}
-A straightforward procedure was adopted to estimate the pedestal: 
+\subsubsection{Estimate of the waveform baseline}\label{basel}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{replace 'pedestal' --> 'baseline' }
+
+A straightforward procedure was adopted to estimate the \del{pedestal}\add{baseline}: 
 we simply take the mean value of the first 
 10 samples of the waveform. 
 In each channel, the stability of the 
@@ -746,9 +767,10 @@ for example 64, 128, or 192, which may suggest the
 possibility of malfunctioning 6th 
 and 7th bit of the ADC (Figure \ref{fig:dips}). 
 To address this issue and to reconstruct 
-correctly the waveform, we simply did not used the bins with the 
-negative peaks and estimated the pedestals with 
-the remaning samples.
+correctly the waveform,
+\del{we simply did not used the bins with the negative peaks and estimated the pedestals with 
+  the remaning samples}
+\add{the problematic samples have been identified and excluded from the baseline estimate}.
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.65\textwidth]{figures/pdf/wf_ch58_1.pdf}
@@ -759,9 +781,9 @@ the remaning samples.
 \subsubsection{Inverted waveforms}\label{inv}
 As discussed in Section \ref{nhitvschid}, 
 a larger number of hits than 4 
-in channel 70 was observed, 
-leading to a different $\Delta t$ distribution 
-between hits than expected. 
+in channel 70 was observed\del{, 
+leading }\add{. That lead} to a different \add{from expected} $\Delta t$ distribution 
+between \add{the} hits \del{than expected}. 
 While the $\Delta t$ peak was expected at 
 20 $\mu$s, in some channels two 
 additional peaks were identified: 
@@ -772,20 +794,26 @@ characterized by inverted waveforms
 The 16 $\mu$s peak is characterized 
 by regular waveforms, as the 20 $\mu$s peak.
 It is reasonable to think that this 
-phenomenon arises from the erroneous 
-generation of 4 $\mu$s long pulses, 
+phenomenon arises \hlite{from the erroneous 
+  generation of 4 $\mu$s long pulses},
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{nothing wrong with the generation, just triggering on the trailing edge of the 4us input pulse.}
+%
 triggering them on both the leading 
 and trailing edges. In fact, 
 the sum of 4 $\mu$s and 16 $\mu$s 
 is the inverse of the pulser frequency. 
-One potential solution to address 
+\hlite{One potential solution to address 
 this issue could involve varying the pulse length. 
 However, this approach was not pursued 
-in this Thesis due to time constraints.
+in this Thesis due to time constraints.}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{the solution is likely the same - replace the preamplifier}
+%
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.65\textwidth]{figures/pdf/wf_ch50_1.pdf}
-  \caption[An inverted waveform.]{Inverted waveform of the 50th channel.}
+  \caption[An inverted waveform.]{Inverted waveform of the \del{50th channel}\add{channel 50}.}
  \label{fig:inverted}
 \end{figure}
 \subsubsection{The waveform charge and pulse height}\label{threshold}
@@ -838,11 +866,10 @@ of the positive charge and pulse height
 The charge and pulse height distribution 
 exhibit a non-trivial shape. 
 Three and two peaks were observed in both distributions; 
-it was verified that 
-these peaks were not correlated with 
-the number of hits. Moreover, a clear
+it was verified that these peaks were not correlated with 
+the number of hits. Moreover, a \del{clear}
 correlation between the positive charge and pulse 
-height peaks is observable (Figure \ref{fig:chvsph}). 
+height peaks \del{is observable}\add{has been observed} (Figure \ref{fig:chvsph}). 
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.65\textwidth]{figures/pdf/phch1.pdf}
@@ -850,8 +877,7 @@ height peaks is observable (Figure \ref{fig:chvsph}).
   \label{fig:chvsph}
 \end{figure}
 To understand the origin of this pattern, we computed $s_{mean}$, 
-that is the 
-waveform mean sample weighted with the charge: 
+that is the waveform mean sample weighted with the charge: 
 \begin{equation} 
   s_{mean} = \frac{\sum_i \text{sample}_i \cdot q_i }{\sum_i q_i} 
 \end{equation}
@@ -972,7 +998,8 @@ either adjusted or the preamp was replaced.
 \subsubsection{Channels response uniformity}
 From the perspective of data taking, it is important to 
 find an easy way to identify as soon as possible 
-problematic channels and check the uniformity of channel responses.
+problematic channels and check the \add{response} uniformity
+\del{of channel responses}\add{across the channels}.
 For this reason, plots of positive charge, first sample, 
 pulse height and baseline means versus channel ID were produced. 
 These plots are shown in Figures \ref{fig:means}. 
