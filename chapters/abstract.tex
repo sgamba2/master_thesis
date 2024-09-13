@@ -15,28 +15,28 @@ approaching an observable level.
 The SINDRUM II experiment set an upper limit on muon conversion at $7 \times 10^{-13}$ (90\% C.L.) on Au target 
 \cite{SINDRUMII:2006dvw}, and the Mu2e collaboration aims to improve this limit by 
 four orders of magnitude. Observing this process would provide a clear evidence of physics 
-beyond the Standard Model. A brief discussion on the theoretical and 
-experimental components essential to understand the objectives 
-of the Mu2e experiment is provided in Chapter \ref{intr}.
+beyond the Standard Model. A brief discussion of the theoretical and 
+experimental \del{components essential to understand the objectives 
+of the Mu2e experiment}\add{aspects} is provided in Chapter \ref{intr}.
 
 
 Mu2e adopts a sophisticated experimental setup to achieve its goals, further 
-described in Chapter \ref{mu2echapter}. An 8.9 GeV proton 
+described in Chapter \ref{mu2echapter}. \del{An 8.9 GeV proton 
 beam from Fermilab strikes a tungsten target, producing muons through pion decays.
 These particles are transported via a series of superconducting solenoids to an aluminum 
 stopping target, where the conversion may occur. The system incorporates several 
 components to accurately identify the conversion electrons and differentiate 
 them from various backgrounds, including a straw tracker, an electromagnetic 
-calorimeter, a cosmic ray veto. 
-
-
+calorimeter, a cosmic ray veto.}
+\add{The central part of the Mu2e detector is the tracker}
 The tracker must provide excellent momentum resolution, approximately 1 MeV/c, 
 to distinguish the monochromatic conversion electron signal from the background. 
-To minimize energy loss, a straw tube tracker will be used \cite{bobbb}.
-The detector has a modular design, consisting 
+To minimize \add{the} energy loss\add{es}, a straw tube tracker will be used \cite{bobbb}.
+\del{The detector has a modular design, consisting 
 of basic elements referred to as $panel$s, $face$s, $plane$s, and $station$s. The 
 tracker comprises panels containing arrays of straw tubes, which are the 
-sensitive units, arranged like the harp chords. Chapter \ref{chaptertrk} 
+sensitive units, arranged like the harp chords.}
+Chapter \ref{chaptertrk} 
 provides an overview of the working principles of the straw tracker and its modular design.
 
 
@@ -58,33 +58,33 @@ front-end electronics, and assessing overall DAQ performance to ensure
 reliability during future calibration and data-taking.
 
 Chapter \ref{planning} discusses the initial steps towards the tracker 
-calibration. Our ultimate goal is to perform a time calibration of 
+calibration. \del{Our}\add{The} ultimate goal is to perform a time calibration of 
 the first assembled station of the tracker using cosmic muons, aiming for a longitudinal hit 
 position resolution better than 4 cm. This involves determining the signal 
-propagation times and channel-to-channel delays. Due to technical constraints, the 
-first option is to perform the with a vertically oriented station. I performed a 
-Monte Carlo study to determine the impact of this orientation on the quality of the calibration, 
-in particular on the cosmic track reconstruction, focusing on the 
-potential biases that could arise. Together, 
-these studies provide essential insights into the operation, optimization, 
-and calibration of the Mu2e tracker system, contributing to its 
-overall performance and reliability.
+propagation times and channel-to-channel delays. \del{Due to technical constraints, the 
+first option is to perform the with a vertically oriented station.} I performed a 
+Monte Carlo study to determine the impact of \del{this}\add{the station} orientation
+on the quality of the calibration, in particular on the cosmic track reconstruction, focusing on the 
+potential biases that could arise. \del{Together, 
+these}\add{These} studies provide essential insights into the operation, optimization, 
+and calibration of the Mu2e tracker system\del{, contributing to its 
+overall performance and reliability}.
 
 Given the high data volume expected during Mu2e operations, estimated 
 at approximately 7 PBytes per year, optimizing memory usage and minimizing 
 CPU consumption are critical. A significant challenge lies in effectively 
 flagging $\delta$-electron hits, which are the primary source of hits in 
 the tracker, without compromising the efficiency of conversion electron 
-hit detection and track reconstruction. $\delta$-electrons originate from 
+hit detection and track reconstruction. \del{$\delta$-electrons originate from 
 Compton scattered electrons, pair production electrons and positrons, and 
-delta rays. Compton scattered electrons are produced when photons, from 
+delta rays. Compton-scattered electrons are produced when photons, from 
 neutron capture, interact with the detector material. Typically, these 
 photons have energies of a few MeV. Pair production electrons and positrons 
 are generated during nuclear recoil processes. Delta rays 
 are produced when high-energy charged particles collide 
-with the detector material. A detailed study of pre-pattern recognition 
+with the detector material.} A detailed study of pre-pattern recognition 
 and a thorough comparison of two algorithms for $\delta$-electron flagging is 
-provided in Chapter \ref{delta} to address this issue.
+provided in Chapter \ref{delta}\del{ to address this issue}.
 
 
 
