@@ -31,7 +31,7 @@ and performance of the readout chain.
 The first test I performed was to verify the correct functioning of 
 ROC buffering and to understand its logic. During these tests, a single 
 ROC was connected to one DTC. Data were collected with digi-FPGAs pulsed 
-by their internal pulsers, with the ROC set in external mode. The ROC's digital 
+by their internal pulsers, with the ROC set in external mode. The ROC's  
 readout logic can be emulated with a bit-level C++ simulation, which I 
 contributed to develop. The Monte Carlo simulation and the experimental 
 data were compared in two different modes: \textit{ROC buffer underflow} and \textit{overflow} 
@@ -55,8 +55,8 @@ of preamplifiers on the motherboard and the closeness of the first channels to e
 Although cross-talk was not fully resolved at the time of writing, further investigations 
 are ongoing with tracker experts.
 Subsequent waveform analysis helped explain abnormalities, particularly the inverted 
-waveforms observed in some channels, which indicated the erroneous generation of longer 
-pulses than normal, triggering both the leading and trailing edges. The waveform analysis 
+waveforms observed in some channels, which indicated the erroneous triggering of waveform 
+on both the leading and trailing edges. The waveform analysis 
 provided further insights into the charge and pulse height distributions, showing two or 
 three peaks in their distribution. This was due to timing mismatches between the pulser 
 and ADC, leading to incorrect readings. Overall, these tests provided valuable results 
