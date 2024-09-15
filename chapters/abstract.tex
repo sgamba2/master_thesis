@@ -5,14 +5,14 @@
 The primary objective of the Mu2e experiment at Fermilab is to search 
 for the neutrino-less coherent $\mu \rightarrow e$ conversion in the field of an 
 aluminum nucleus ($\mu^- \text{Al} \rightarrow e^- \text{Al}$). The signature 
-of this process is a monochromatic conversion electron with an energy of 
+of this process is a monochromatic Conversion Electron (CE) with an energy of 
 approximately 104.97 MeV \cite{bartoszek2015mu2e}. Within the Standard 
 Model (SM), the branching ratio for this process, including neutrino masses 
 and oscillation, is expected to be less than $\mathcal{O}(10^{-50})$.
 This value is far beyond current experimental capabilities.
 However, models of physics beyond the SM predict much higher relative rates,
 approaching an observable level.
-The SINDRUM II experiment set an upper limit on muon conversion at $7 \times 10^{-13}$ (90\% C.L.) on Au target 
+The SINDRUM II experiment set an upper limit on muon conversion at $7 \times 10^{-13}$ (90\% CL) on Au target 
 \cite{SINDRUMII:2006dvw}, and the Mu2e collaboration aims to improve this limit by 
 four orders of magnitude. Observing this process would provide a clear evidence of physics 
 beyond the Standard Model. A brief discussion of the theoretical and 
@@ -23,7 +23,7 @@ Mu2e adopts a sophisticated experimental setup to achieve its goals, further
 described in Chapter \ref{mu2echapter}. 
 The central part of the Mu2e detector is the tracker, that consists of 18 tracking stations. 
 The tracker must provide excellent momentum resolution, approximately 1 MeV/c, 
-to distinguish the monochromatic conversion electron signal from the background. 
+to distinguish the monochromatic CE signal from the background. 
 To minimize the energy losses, a straw tube tracker will be used \cite{bobbb}.
 Chapter \ref{chaptertrk} provides an overview of the working principles 
 of the straw tracker and its modular design.
@@ -35,7 +35,10 @@ steps of the calibration processes. My work at Fermilab has focused on the
 complete Data Acquisition (DAQ) testing from both hardware and software 
 perspectives. I was involved in the commissioning of the Mu2e DAQ system and 
 the Vertical Slice Test (VST) of the tracker. The VST encompasses the entire 
-testing chain, from the straws to the readout, to processed data on disk.
+testing chain, from the straws to the readout, to processed data on disk. 
+I also focused on the offline analysis, especially on pre-pattern 
+recognition studies, to explore the best methods for identifying 
+$\delta$-electrons during data taking.
 
 
 Chapter \ref{commissioning} details the commissioning of the tracker 
@@ -60,12 +63,14 @@ Given the high data volume expected during Mu2e operations, estimated
 at approximately 7 PBytes per year, optimizing memory usage and minimizing 
 CPU consumption are critical. A significant challenge lies in effectively 
 flagging $\delta$-electron hits, which are the primary source of hits in 
-the tracker, without compromising the efficiency of conversion electron 
+the tracker, without compromising the efficiency of CE  
 hit detection and track reconstruction. A detailed study of pre-pattern recognition 
 and a thorough comparison of two algorithms for $\delta$-electron flagging is 
 provided in Chapter \ref{delta}.
 
-
+In Chapter \ref{conclusions}, the findings are concisely summarized, 
+offering a comprehensive synthesis of the research and emphasizing the 
+key insights derived from this study.
 
 
 
