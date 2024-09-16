@@ -8,8 +8,7 @@ to perform an unbiased reconstruction of the longitudinal position of the hits
 within the straws. This would be easily achieved using the station orientated horizontally. 
 However, certain technical and mechanical contingencies prevent horizontal calibration, 
 necessitating the exclusive focus on vertical orientation.
-In this Chapter, I am focusing on 
-reconstructing the trajectories of cosmic muons within a vertically oriented 
+This Chapter focuses on reconstructing the trajectories of cosmic muons within a vertically oriented 
 station, as well as analyzing potential biases and systematic errors that could 
 arise from this particular orientation.}
 \section{Overview of the timing calibration}
@@ -20,7 +19,7 @@ wire which propagates towards the two ends of
 the straw and to the front-end electronics, 
 where TDCs measure the signal arrival 
 times $t_1$ and $t_2$. The primary goal of 
-the time calibration is \del{enabling}\add{to enable} the 
+the time calibration is to enable the 
 determination of the track position 
 along the straw from the measurement of 
 the arrival times $t_1$ and $t_2$. 
@@ -48,7 +47,7 @@ $\Delta t_{12}=t_1-t_2$ allows
 determining the coordinate $x_{\text{track}}$, 
 while $(t_1 + t_2) / 2$ allows to measure the drift time  
 up to an offset common to all channels. 
-If we subtract and add the two equations, we obtain:
+If we subtract and add the two equations:
 \begin{equation}\label{ffffff}
     \begin{aligned}
         \Delta t_{12} &= \frac{2x_{\text{track}}-L}{v} +(d_1-d_2)  \\
@@ -74,12 +73,8 @@ At this level, the only available spatial
 information is whether a straw has been crossed 
 by a muon or not. The 
 only way to obtain $x_{track}$ from a "yes or no" 
-information is to \del{use}\add{rely on} the tracker station 
-geometry\del{, which is made of a set of rotated 
-panels lying on four faces orthogonal to 
-the axis of the detector} (Section \ref{reconstruction}).
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{geometry is not made of anything}
+information is to rely on the tracker station 
+geometry (Section \ref{reconstruction}).
 
 To determine $v$ in the first equation of \ref{ffffff}, 
 an unbiased reconstruction of the 
@@ -87,16 +82,10 @@ track projected on the wires is needed.
 
 
 \subsection{Operational constraints of the station}\label{gassystem}
-
-Figure \ref{fig:gassystem} \hlite{shows a schematic representation of the fully assembled tracker.}
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{the figure shows smth very different from a fully assembled tracker}
-
-\del{Clearly, the entire}\add{The} detector, its infrastructures 
+The detector, its infrastructures 
 and services, and, consequently, the stations have been
-designed for being operated in \del{what we call}\add{a} 
-$vertical$ $orientation$\del{, which is the orientation of
-the detector in Mu2e}. This has now an impact 
+designed for being operated in a 
+$vertical$ $orientation$. This has now an impact 
 on several aspects of detection operation: from 
 the storage and
 handling tools of the fully assembled and 
@@ -108,13 +97,12 @@ detector with a specific orientation, and may not
 allow to move and operate even one single 
 station, in a different orientation. 
 The most reasonable orientation of the station for a test with
-cosmic muons is the $horizontal$ $orientation$\del{, that}
-\add{That} facilitates unbiased 
+cosmic muons is the $horizontal$ $orientation$. 
+That facilitates unbiased 
 reconstruction, since cosmic muons are distributed according to 
 cos$^2\theta$ and they are predominantly vertical 
 (Section \ref{distcos}), thus crossing the straws mostly perpendicularly.
-We first checked the operational constraints
-which may not allow to operate the station horizontally.
+Initially, the operational constraints, which may prevent the station from being operated horizontally, were assessed.
 Apparently, the main challenge with the horizontal orientation is the operation of the gas
 distribution system. The gas distribution system of the panel is equipped with two check valves:
 the first one is located on the supply side, the second one on the exhaust side. These valves
@@ -137,22 +125,15 @@ a station horizontally takes up significantly more room space than
 vertically. Moreover, the station is quite fragile, and 
 excessive movement could lead to potential issues.
 
-\hlite{The Mu2e simulation shows that to achieve the 
-desired momentum resolution, it is necessary 
-to have a resolution on the hit position along 
-the straw better than 4 cm.}
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{momentum resolution is NOT directly related to the resolution along the wire. Rephrase}
+The ultimate goal is to perform a time calibration of 
+the first assembled station of the tracker using 
+cosmic muons, with the aim of achieving a longitudinal hit 
+position resolution better than 4 cm. This would enable the distinction 
+between different particle trajectories while reconstructing helices (Appendix \ref{eventreco}).
 
-In the following 
-sections, I will 
-introduce the \hlite{simulation performed to reconstruct cosmic tracks }
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{rephrase}
-%
+In the following sections, simulation performed to reconstruct cosmic tracks will introduced. 
 with a vertically oriented station, with the aim of understanding 
-potential biases in determining the longitudinal position\del{ due to 
-the non-uniform illumination of a panel}.
+potential biases in determining the longitudinal position.
 
 \begin{figure}[!h]
     \centering
@@ -160,20 +141,14 @@ the non-uniform illumination of a panel}.
     \caption[Schematic view of the valves located in a tracker panel.]{Schematic view of the valves located in a tracker panel.}
     \label{fig:gassystem}
 \end{figure}
-To ensure optimal performance during Mu2e data-taking, it's essential to 
-conduct the initial calibration with \hlite{the system in a vertical orientation}.
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{what is 'the system'? .. during the data taking there will be more than
-  one station available, for the VST, there is only one }
+To ensure optimal performance, it is essential to take data with a vertical oriented station 
+to achieve conditions that are as close as possible to those of the real detector. 
+However, if the vertical orientation proves ineffective for calibration, 
+alternative mechanical solutions will be considered.
 
-This helps us achieve conditions that closely 
-match those of the actual detector. However, if the vertical 
-orientation doesn't prove useful for calibration, 
-we will need to explore new mechanical solutions.
-
-\del{For this reason, in}\add{In} this Chapter, I \del{will} report on a simulation study 
+This Chapter report on a simulation study 
 which shows that the vertical orientation introduces a significant bias on 
-the $x_{track}$ which \del{does not allow to perform}\add{significantly complicates}
+the $x_{track}$ which significantly complicates 
 the station calibration. 
 
 
@@ -193,8 +168,8 @@ complementary to other techniques:
     with the same detector conditions as the physics samples;
     \item the cosmic muons flux 
     ($\sim 1 \ \text{cm}^{-2} \text{min}^{-1}$ 
-    for horizontal detectors \del{with}\add{and} a mean
-    \add{muon} energy of $\sim$4 GeV \cite{muonflux}) 
+    for horizontal detectors and a mean
+    muon energy of $\sim$4 GeV \cite{muonflux}) 
     is sufficient to allow
     collecting a substantial amount of calibration 
     data in a relatively short time and 
@@ -210,20 +185,18 @@ complementary to other techniques:
     without any external time reference.
 \end{itemize}
 \subsection{Cosmic muons energy and angular distribution}\label{distcos}
-The muon flux at sea level is usually described by the \del{standard} Gaisser\del{'s} formula \cite{guan2015parametrization}:
+The muon flux at sea level is usually described by the Gaisser formula \cite{guan2015parametrization}:
 \begin{equation}
     \frac{d I}{d E_\mu d \Omega d t d S}=\frac{0.14}{\mathrm{~cm}^2 \mathrm{~s} \ \mathrm{sr}}\left(\frac{E_\mu}{\mathrm{GeV}}\right)^{-2.7} \quad\left[\frac{1}{1+\frac{1.1 E_\mu \cos \theta}{115 \mathrm{GeV}}}+\frac{0.054}{1+\frac{1.1 E_\mu \cos \theta}{850 \mathrm{GeV}}}\right]
     \end{equation}
-where $E_\mu$ is the muon energy and $\theta$ is the \add{muon} polar angle\del{ of the muon}. 
+where $E_\mu$ is the muon energy and $\theta$ is the muon polar angle. 
 The two terms in brackets correspond to the contribution of the charged pions and kaons, while 
 the small contribution from charm and heavier flavors is neglected. 
 This simplified formula doesn't take into account muon decays and the curvature of the Earth, 
 thus it is only valid for zenith angles $\theta < 70^\circ$
-\hlite{and for energies $E > \frac{100}{\cos \theta}$ GeV.}
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{valid only for E> 100 GeV? - cross-check}
+and for energies $E > \frac{100}{\cos \theta}$ GeV.
 
-A modified version of the standard Gaisser formula, called Gaisser\add{-}Tang model, is used to account for low energy and large zenith angle effects \cite{guan2015parametrization}:
+A modified version of the standard Gaisser formula, called Gaisser-Tang model, is used to account for low energy and large zenith angle effects \cite{guan2015parametrization}:
 \begin{equation}\label{cosmicmuonflux}
     \frac{d I}{d E_\mu d \Omega d t d S}=\frac{0.14}{\mathrm{cm}^2 \mathrm{~s} \ \mathrm{sr} }\left( \frac{E_\mu}{\mathrm{GeV}} \left(1+\frac{3.64 \mathrm{GeV}}{E_\mu\left(\cos \theta^*\right)^{1.29}}\right)\right)^{-2.7}\left[\frac{1}{1+\frac{1.1 E_\mu \cos \theta^*}{115 \mathrm{GeV}}}+\frac{0.054}{1+\frac{1.1 E_\mu \cos \theta^*}{850 \mathrm{GeV}}}\right]
 \end{equation}
@@ -249,11 +222,7 @@ significant at low energies. The numerical constants are derived by fitting expe
 \subsection{Monte Carlo cosmic generation with CRY}
 Several Monte Carlo programs allow to simulate sea-level 
 cosmic ray muons: the most widely used is CRY, developed 
-by LANL.
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{add reference to CRY}
-%
-CRY functions as a generator for air showers 
+by LANL. CRY \cite{Hagmann2007CosmicraySG} functions as a generator for air showers 
 induced by primary cosmic rays. The CRY package uses 
 precomputed input tables derived from comprehensive 
 MCNPX 2.5.0 simulation of protons in the energy range 
@@ -262,7 +231,7 @@ The generation of muons and other secondary particles
 is governed by the pion and kaon decays. The package 
 generates the cosmic muon flux within a zenith angle range 
 of 0-90°, following a cos$^2 \theta$ distribution, and an 
-energy range between 1-100 GeV, following the Gaisser\add{-}Tang
+energy range between 1-100 GeV, following the Gaisser-Tang
 parameterization.The CRY package accounts for the 
 dependence of cosmic muon flux on various parameters, 
 including altitude, latitude, and solar activity. CRY 
@@ -270,19 +239,16 @@ provides muon flux data at three different altitudes:
 sea level, 2100 m, and 11300 m, with sea level being 
 selected for this study. The latitude is set at 41.8° N, 
 corresponding to Fermilab. To avoid variations of the 
-primary cosmic muon flux due to solar activity, I chose 
-a common day (6-21-2021) outside the maximum and minimum 
+primary cosmic muon flux due to solar activity, a 
+common day (6-21-2021) was chosen outside the maximum and minimum 
 sunspot cycle for the simulation. While there are other 
 packages designed to produce cosmic muons with specific 
-energy and zenith angles, such as CORSIKA, I chose CRY 
-for its straightforward implementation\del{ and compatibility with GEANT4}.
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{ a) this is science fiction - there is no CRY-G4 interface in CRY
-  b) add reference to CORSIKA
-}
+energy and zenith angles, such as CORSIKA \cite{Heck:1998vt}, CRY was chosen 
+for its straightforward implementation.
+
 
 \subsection{Monte Carlo sample and coordinate system }\label{genplane}
-I generated a sample of cosmic muons with a uniform distribution within a
+A sample of cosmic muons was generated with a uniform distribution within a
 horizontal plane approximately 11 m above the muon beam axis. The GEANT4 
 simulation also incorporates the effects of the external neutron shield surrounding the DS 
 and the concrete ceiling of the Mu2e experimental hall. Starting from the generation plane, 
@@ -292,24 +258,21 @@ The external neutron shield surrounding the DS consists of concrete ($\rho$=2.3 
 roughly 0.9 m thickness, while the ceiling above the Mu2e experimental area comprises 1.8 m of concrete. 
 The entire structure is enclosed within a volume of air at standard temperature and pressure.
 
-I performed the simulation of the station in what in Mu2e jargon is called
+The simulation of the station was performed in what in Mu2e jargon is called
 "extracted position", which means the station was placed outside the solenoid.
 Given that the Earth's magnetic field is approximately 
 $4 \div 5 \times 10^{-5}$ T, 
 and considering that the dimensions of the station are 
 on the order of 1-2 m, 
 along with the fact that the majority of particles under consideration
-\hlite{have energies around $\sim$ 10 GeV},
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{take a look at the cosmic muon spectrum and revisit this statement}
-
+have energies around $\sim$ 1 GeV, 
 the curvature radius of the particles is approximately 
-$R\sim p[\text{GeV}]/(B[\text{T}]\cdot 0.3) \sim 700$ km. 
+$R\sim p[\text{GeV}]/(B[\text{T}]\cdot 0.3) \sim 70$ km. 
 This radius is significantly larger than the station's 
 dimensions, allowing us to reconstruct particle trajectories 
 as straight lines.
-For this reason, in the simulation we used a 
-magnetic field \del{intensity equal}\add{set} to zero. 
+For this reason, in the simulation  
+the magnetic field was set to zero. 
 
 Before starting explaining the event selection and the 
 reconstruction, let me define the coordinate system, 
@@ -324,23 +287,13 @@ the DS axis, while the $y$ axis corresponds to the vertical axis.
 \section{Monte Carlo event selection}\label{eventselection}
 
 Since in the Mu2e simulation the tracker is made of 18 stations, to 
-perform this study, \hlite{we selected only those events where a cosmic 
-  muon crosses one single station}.
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{wouldn't such a selection bias the angle distribution? }
-%
-\del{One station is made of two planes, one plane is made of two faces, and one face is
-made of three panels (Section \ref{geomtra}). The geometry of the station 
-is thus very simple: it is a detector made of four parallel 
-layers orthogonal to the $z$ axis, with a total thickness of less than 10 cm.}
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{already described}
+perform this study, we selected those events where a cosmic muon crosses the first station.
 
-Although the station has \del{globally} four layers, 
+Although the station has four layers, 
 the panel geometry does not provide a uniform
-\del{volume} coverage: there are regions of the 
+coverage: there are regions of the 
 detector where a particle with a trajectory orthogonal
-to the panel \del{may cross}\add{crosses} four, three, two or even only one 
+to the panel crosses four, three, two or even only one 
 detector layer (Figure \ref{fig:coordinate}). Given the
 rotation angles of the panels within the same 
 face and between different faces, if this particle
@@ -353,17 +306,8 @@ coordinate of the panel which contains the straw:
     (D_{x,i}t+M_{x,i},D_{y,i}t+M_{y,i},z_i)
 \end{equation}
 where $D_{x,i}$, $D_{y,i}$ are the $x$ and $y$ 
-$i$-th straws' \hlite{directions},
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{direction cosines?}
-%
-while $M_{x,i}$, $M_{y,i}$ 
-are the $x$, $y$ straws' midpoints.
-%One dimension is correlated with the other two, so we have just two informationful dimensions.
-In this parametrization, the straws \add{of a single panel (?) } are all parallel 
-in \hlite{the $y-z$ plane.}
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{if the two lines are parallel, that doesn't depend on a view direction}
+$i$-th straws' direction cosines and sines respectively, 
+while $M_{x,i}$, $M_{y,i}$ are the $x$, $y$ straws' midpoints.
 
 To conduct this study, it is necessary to 
 reconstruct the 3D trajectory of the cosmic muon, 
@@ -371,11 +315,12 @@ which requires at least two 3D points along the muon's
 trajectory. The $x$ and $y$ coordinates of 
 the each required 3D point can be determined 
 from the intersection of one pair of non-parallel 
-straws. Since all straws 
-within a single panel are parallel to each other, 
-\hlite{more than one hit per face is needed}.
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{not sure why more than one hit per face is needed - explain}
+straws. Since all straws within a single panel are parallel to 
+one another, it is necessary to use at least two straws from 
+different panels. The intersection of two straws from 
+different panels on the same face lies outside the tracker circle 
+(Figure \ref{fig:coordinate}), which is not physically possible. 
+Therefore, more than one hit per face is required.
 
 The 3D intersection $z$ 
 coordinate is determined as the average of the 
@@ -384,27 +329,18 @@ parallel straws in the same plane,
 the first selection cut 
 was to require at least one hit per face. 
 This first requirement will be denoted as 
-4/4 request in the following sections.
+4/4 requirement in the following sections.
 
-Since multiple hits can occur within a 
-single panel due to \hlite{signal spread},
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{what is the signal spread? }
-%
-another 
-selection criterion was to choose events 
+Since one particle can hit more than one straw within a panel, 
+another selection criterion was to choose events 
 with fewer than three hit straws per panel. 
 This criterion was selected to minimize errors 
 in track reconstruction.
 \subsection{Panel illumination pattern}
-To perform an accurate calibration, 
-the distribution of the hits across the panel 
-should be {hlite{as uniform as possible}.
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{in this context, as uniform as possible means 'any', rephrase}
-%
-  On the other hand, this is 
-not what we obtain, due to the station geometry
+To achieve precise calibration, the hits should 
+be distributed uniformly across the panel.
+On the other hand, this is 
+not what it is obtained, due to the station geometry
 and the applied selection cuts. 
 Figure \ref{fig:illumination} shows the 
 resulting hit distribution for panel 0 of
@@ -414,9 +350,9 @@ the upper right part of Figure \ref{fig:coordinate},
 after applying the selection cuts 
 outlined in Section 
 \ref{eventselection}. 
-We picked this panel as one possible 
+This panel was picked as one possible 
 example, the 
-distributions for all \del{the planes}\add{panels} in 
+distributions for all panels in 
 both planes are similar, as
 shown in Appendix \ref{appendix2}.
 
@@ -434,15 +370,13 @@ shown in Appendix \ref{appendix2}.
 \end{figure}
 Figure \ref{fig:illumination} shows a 
 non-uniform, or spotty, 
-panel illumination. This is due to the 4/4 \del{request}\add{requirement}: 
-given the station geometry, the \del{only} 4/4 overlap 
+panel illumination. This is due to the 4/4 requirement: 
+given the station geometry, the 4/4 overlap 
 regions are 
 limited to the edges of the panels (darkest 
 areas in Figure \ref{fig:coordinate}). 
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{replace request --> requirement consistently}
 
-Moreover, the 4/4 \del{request}\add{requirement} selects specific
+Moreover, the 4/4 requirement selects specific
 muon directions in the $y$-$z$ plane. 
 Figure \ref{fig:myz} shows the 
 $m_{yz}=\Delta y /\Delta z$ distribution 
@@ -451,8 +385,8 @@ As expected, there are no particles corresponding
 to the $m_{yz}\sim 0$, which corresponds to the  
 horizontal direction and 
 $m_{yz} \rightarrow \infty$ (vertical), since the 
-4/4 request is not satisfied by vertical muons. 
-The consequence of the 4/4 \hlite{request} is also a 
+4/4 requirement is not satisfied by vertical muons. 
+The consequence of the 4/4 requirement is also a 
 significant reduction of the total muon rate 
 (Section \ref{ratetracker}). 
 The selected muon  
@@ -463,14 +397,14 @@ an angle of approximately 45°.
     \centering
     \includegraphics[width =0.8\textwidth]{figures/pdf/myz.pdf}
     \caption[The $y-z$ direction 
-    distribution of muons satisfying 4/4 request.]{
+    distribution of muons satisfying 4/4 requirement.]{
         $m_{yz}=\Delta y /\Delta z$  
-    distribution of muons satisfying 4/4 request.}
+    distribution of muons satisfying 4/4 requirement.}
     \label{fig:myz}
 \end{figure}
 
 Figure \ref{fig:illumination} 
-shows that there \del{are}[add{is} almost no hits in the 
+shows that there is almost no hits in the 
 panel central region. This could result in 
 waveform non-linearities: \hlite{the signals generated by 
 particles which pass close to the edges of 
@@ -492,16 +426,7 @@ causing timing systematics.}
 
 
 \subsection{Expected muon rate}\label{ratetracker}
-The rate of cosmics \hlite{generated on the horizontal 
-  plane}
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{generated by whom? }
-%
-\hlite{above the beam axis}
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{doesn't make much sense, fix}
-
-can be computed by 
+The cosmic muons sample rate can be computed by 
 integrating the flux on the solid angle, on 
 the muon energy described in Section \ref{genplane}:
 \begin{equation}
@@ -512,21 +437,11 @@ is the projection of the surface element on the
 plane perpendicular to the cosmics flux. 
 The energy and angle ranges selected for this 
 simulation are respectively 0.5 GeV < $E_\mu$ < 500 GeV, 
-which selects \del{the} muons not absorbed in the 
+which selects muons not absorbed in the 
 concrete layer posed above the tracker, 
 and 0° < $\theta^*$ < 90°. 
-If we consider a generation plane of \add{an} area  \add{of} 
+Considering a generation plane of an area of  
 $\sim 5$ m$^2$, the resulting rate is $R \sim 380$ Hz. 
-%The rate of cosmic muons detected by each straw, $R_{straw}$, can be easily obtained as:
-%\begin{equation}
-%    R_{straw}=\frac{R}{(N_{faces}\cdot N_{panels}\cdot N_{straws} )}
-%\end{equation}
-%where $N_{faces}=4$ is the number of hit faces, $N_{panels}=3$ is the number of panels in one face and $N_{straws}=96$ is the number of straws in one panel.
-%The resulting rate is about 0.5 Hz. This simple computation does not take into account the complicated tracker geometry and the station orientation.
-%Let us normalize by a factor that is the ratio between the number of selected events and the total number of produced events, which is about 
-%$\sim10^{-3}$. The rate then changes to $\sim$ mHz. 
-%To perform a proper calibration, at least $\sim$1000 hits per straw are needed, which requires at least 8 days of data taking.
-%This rate calculation is quite straightforward, but the duration required for such a simple calibration is notably long.
 The number of generated events 
 was chosen to be $N_{gen}\sim 2\times 10^8$, since the 
 number of cosmics that 
@@ -550,13 +465,10 @@ To determine $x_{track}$ in Equation \ref{ffffff},
 it is necessary to reconstruct 3D muon track 
 starting from the stereo hit coordinates.
 As mentioned in equation \ref{equaretta}, 
-what we know about each single straw is:
+what is known about each single straw is:
 \begin{itemize}
     \item the straw direction $(D_{x,i},D_{y,i})$;
-    \item the straw midpoint\del{s} $(M_{x,i},M_{y,i})$;
-      \todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{'the straw midpoint' is a singular form}
-
+    \item the straw midpoint $(M_{x,i},M_{y,i})$;
     \item the straw $z_i$ coordinate.
 \end{itemize} 
 The reconstruction process begins 
@@ -572,9 +484,8 @@ the determination of the 3D intersection points.
 This new object effectively represents a 
 straw with the same direction and the midpoint 
 computed as the average of the midpoints of the straw 
-which make it. Since we have selected muons which 
-have hits in four panels in four different 
-faces, four $ClusterHit$s are reconstructed 
+which make it. Since muons with hits in four panels in four different 
+faces have been selected, four $ClusterHit$s are reconstructed 
 within a station. The new $ClusterHit$ 
 midpoints will be referred to as 
 $(x_{m,i}, y_{m,i}, z_{m,i})$.
@@ -626,7 +537,7 @@ m_{yz}&=\frac{y_2-y_1}{z_2-z_1}\\
 q_{yz}&=-m_{yz} \cdot z_1+y_1
 \end{aligned}
 \end{equation}
-To determine the four hit positions of the reconstructed track on the panels, we need to intersect the track with the panels' $z_i$ coordinates. 
+To determine the four hit positions of the reconstructed track on the panels, it is necessary to intersect the track with the panels' $z_i$ coordinates. 
 The reconstructed hits on the panels will be denoted as $R_{x,i}$ and $R_{y,i}$.
 \begin{equation}
     \begin{aligned}
@@ -634,38 +545,29 @@ The reconstructed hits on the panels will be denoted as $R_{x,i}$ and $R_{y,i}$.
  R_{x,i}&=\frac{(m_{yz}\cdot z_i+q_{yz}-q_{xy})}{m_{xy}}
 \end{aligned}
 \end{equation}
-The bias \del{on}\add{in} the longitudinal position is the difference between the reconstructed coordinate and the true Monte Carlo position in the panel frame.
+The bias in the longitudinal position is the difference between the reconstructed coordinate and the true Monte Carlo position in the panel frame.
 
 \section{Results}
-\del{The simulation shows that a resolution \del{on}\add{in} the 
-hit position along the straw ($x_{track}$) 
-better than 4 cm is necessary to achieve the 
-momentum resolution necessary for Mu2e physics goals.}
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{this statement is wrong and repeated already the second time.
-  What is the reasoning the statement is based on?}
 
-With this study, we need to verify that the 
-calibration procedure is consistent with 
-this requirement. In particular, since the 
+This study aims to verify the consistency of the 
+calibration procedure with the specified requirements. In particular, since the 
 procedure allows to perform an approximate reconstruction 
 of the muon track and, thus, of the extrapolated track 
-position on the panel, we need to carefully determine 
+position on the panel, it is necessary to carefully determine 
 what is the bias introduced by this procedure,  
 to make sure it is well below the threshold of 4 cm.  
 Figure \ref{fig:recx} shows the reconstructed 
 longitudinal coordinate $x_{track}$, which is 
 determined as the intersection of the reconstructed 
 muon track with the mean $z_i$ 
-coordinate of the panel, for panel 0, \del{which may 
-be} taken as \del{a good representative for all the panels}\add{an example}.
+coordinate of the panel, for panel 0, taken as an example.
 Similar patterns were observed for all 
 panels. In this distribution, the bumps 
 are a consequence of the 4/4 
 requirement and the panels' overlap areas 
 being located at the extreme edges. 
 It is important to observe that 
-\del{different bumps}\add{hits in different regions in X} correspond to different 
+hits in different regions in $x$ correspond to different 
 straws, as can also be seen in Figure 
 \ref{fig:illumination}.
 \begin{figure}[!h]
@@ -674,11 +576,9 @@ straws, as can also be seen in Figure
     \caption[The reconstructed longitudinal coordinate in the 0th panel frame.]{The reconstructed longitudinal coordinate in the 0th panel frame.}
     \label{fig:recx}
 \end{figure}
-Figure \ref{fig:bias} shows \hlite{the difference   
-between the reconstructed track on the panel 
-and true longitudinal coordinates}.
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{a reconstructed track is not a longitudinal coordinate, fix}
+Figure \ref{fig:bias} shows the difference   
+between the projection of the reconstructed track on the panel 
+and true longitudinal coordinates.
 
 The true coordinate is computed as the mean coordinate 
 of the Monte Carlo hits. 
@@ -699,10 +599,7 @@ four different spots shown in Figure
     The true coordinate is the mean coordinates of Monte Carlo hits.}
     \label{fig:bias}
 \end{figure}
-The 2D distribution of the \hlite{longitudinal bias}
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{introduce a variable for 'longitudinal bias', use the definition}
-%
+The 2D distribution of the longitudinal bias $\Delta x$ 
 versus the true position, shown in 
 Figure \ref{fig:rec2D}, shows four different 
 spots on the $x$ axis corresponding to 
@@ -714,16 +611,14 @@ panels overlap.
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/png/panel_00_x_bias_vs_x.png}
-    \caption[The 2D histogram of the longitudinal bias versus the true coordinate.]{The 2D histogram of the longitudinal bias versus the true longitudinal coordinate.}
+    \caption[The 2D histogram of the longitudinal bias versus the true coordinate.]{The 2D histogram of 
+    the longitudinal bias versus the true longitudinal coordinate.}
     \label{fig:rec2D}
 \end{figure}
 To assess the systematic impact on the 
 reconstructed coordinates, it is essential 
-to \hlite{visualize the TProfile} of the bias versus 
-the true coordinates.
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{the meaning is not clear, avoid jargon}
-%
+to visualize the profile histogram of the bias versus 
+the true coordinates. 
 Profile histograms are used to represent the 
 mean value of $y$ and its error for each bin in $x$. 
 The default displayed error is the standard 
@@ -737,27 +632,34 @@ corresponds to the overlap of \hlite{90° panels}.
 \todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
 {explain what that it}
 %
-This plot suggests that the mean may not 
-serve as an accurate estimator of the bias. 
-Under these conditions, \add{achieving the accuracy required for}
-the calibration is 
-expected to become challenging.
+This plot suggests that the mean may not be a reliable estimator 
+of the bias. Under these conditions, achieving the required accuracy 
+for the calibration is expected to become challenging. The main issue 
+with this plot is that, in the vertical orientation, the stereo 
+reconstruction biases for tracks with positive and negative values of 
+$m_{yz}$ do not cancel each other out.
+
+In fact, considering the vertical orientation and imagining two cosmic rays 
+with opposite $y-z$ orientations, since cosmic rays come from above and travel 
+downwards, the first one would hit plane 0 and then plane 1, while the second 
+would hit plane 1 first and then plane 0, with all hits occurring on different 
+panels. For this reason, opposite $y-z$ orientated cosmics do not appear on the same profile 
+histogram for a single panel.
+In the horizontal case, the same systematics apply as in the vertical case. 
+However, in this scenario, both cosmic rays would first hit plane 0 and then 
+plane 1, and since most muons have a vertical trajectory, they would hit mostly 
+the same panels. Therefore, the mean could serve as a reasonable estimator of the bias in this case.
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/png/panel_00_x_bias_vs_x_prof.png}
     \caption[The profile of the longitudinal bias versus the true longitudinal coordinate.]{The profile of the longitudinal bias versus the true longitudinal coordinate.}
     \label{fig:profile}
 \end{figure}
-\hlite{The main issue with this type of reconstruction 
-lies in the fact that $m_{yz}=\frac{\Delta y}{\Delta z}$ 
-is not accurately reconstructed.}
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{not true. The main issue is that, for the vertical orientation,
-  the stereo reconstruction biases for tracks with positive
-  and negative values of dy/dz do not cancel each other}
 
-Consequently, 
-the reconstructed coordinates depend on this 
+
+The systematics brought by this type of reconstruction arise 
+come from the fact that $m_{yz}=\frac{\Delta y}{\Delta z}$ 
+is not accurately reconstructed and the reconstructed coordinates depend on this 
 value, as demonstrated in Section \ref{reconstruction}. 
 This discrepancy arises when the true hit 
 position, far from the midpoint of the straws, 
@@ -769,8 +671,7 @@ reconstructed $m_{yz}$ distribution, highlighting
 a significant peak at the value of 0, 
 corresponding to cosmic muons erroneously 
 reconstructed as horizontal, which 
-are not possible in reality. We know there are 
-no horizontal muons in our sample, as can be seen 
+are not possible in reality. No horizontal muons are in the sample, as can be seen 
 from Figure \ref{fig:myz}.
 
 
@@ -782,7 +683,11 @@ from Figure \ref{fig:myz}.
   \end{figure}
   
   \section{Conclusions}
-
+  This chapter discusses the initial steps towards the tracker 
+  calibration.
+  The ultimate goal is to perform a time calibration of 
+  the first assembled station of the tracker using cosmic muons, aiming for a longitudinal hit 
+  position resolution better than 4 cm. 
 \hlite{The Mu2e collaboration}
 \todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
 {a) all discussion of a single station calibration has a scope of the tracker VST.
@@ -797,70 +702,13 @@ This analysis demonstrated that the vertical orientation for calibrating a stati
 \begin{itemize}
     \item the selection criteria in Section \ref{eventselection} select cosmic muons with orientations that affect panel illumination. 
     The illumination is non-uniform, and moreover, there are almost no hits in the central region of the panel, which could result in waveform non-linearities;
-    \item the rate of cosmic events is $R \sim 380$ Hz, and the expected duration of the calibration is about 6 days without interruptions, 
-    which is excessive for the simple calibration we intend to perform;
+    \item the rate of cosmic events is $R \sim 380$ Hz, and the expected duration of 
+    the calibration is about 6 days without interruptions, 
+    which is excessive for the simple calibration that needs to be performed;
     \item the bias range is approximately [-6, 6] cm. The 2D distribution of the longitudinal bias versus the true position shows 
     four distinct spots on the $x$ axis corresponding to the overlap regions. Each spot refers to different straws.
 \end{itemize}
 Therefore, an alternative orientation or method should be considered to optimize the calibration process and achieve more accurate results.
-For this reason, \hlite{a new mechanical approach }
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{whats that?}
-%
+For this reason, a new mechanical solution 
 to address the problems outlined in Section \ref{gassystem}  
 is currently under development.
-%yongi cap 3.1.5.2
-%con il tracker in orizzontale , dato che le tracks sono verticali colpirebbero per panel sicuro almeno 2 straws che sono sovrappposte e quindi in totale 8, se hanno una certa angolazione anche 12
-
-
-
-
-
-
-%yongi:
-%As discussed in Chapter 3, the Mu2e Tracker panels need to satisfy a series of performance
-%requirements for successful operations and the designed resolution. While various individual
-%component and single panel tests in the past confirmed their respective effectiveness, it was of great
-%interest to extend the tests to a system of multiple panels over a longer period of time under a more
-%realistic setup (i.e., similar to that of the actual experiment setup), and to get better quantitative
-%understandings of the detector performances. Hence, a VST was conducted.
-%The overall goal of the VST was to “exercise the full tracker operation and readout chain,
-%from the amplified wire signal to its storage in digitized format” [1]. The test used a whole plane of
-%six panels from panel pre-production,1 which was 1/36 of the full Tracker.
-%The VST contained two phases. In the first phase, the plane was laid horizontally on a
-%test bench for diagnostics and horizontal position runs, as shown in Figure 5.1(a). In the figure
-%the supporting systems, including gas lines, DC-to-DC converters for low voltage supplies, high
-%voltage supplies, and the Raspberry Pi (marked as RPi) for panel controls, are all labeled.2 In this
-%phase, the plane operations and performances were checked. The plane data output to the DAQ
-%server through the optical fiber links (see Chapter 4 and Appendix B) were finalized and tested.
-%Small cosmic-ray datasets werereconstruction of the track longitudinal position taken to verify the ability to synchronize data taking among the
-%panels. And 55 Fe source scan studies were performed for calibrations. The second phase of the
-
-
-
-%reconstruction of the track longitudinal position
-%tracker/vstplan
-%We also plan to take significant amounts of cosmic ray data in at least two configurations. First, cosmic ray data will be taken with the plane in the current horizontal
-%position. This will be taken using a modified readout scheme involving the serial
-%connection as described above. Software exists to take the output raw data and manually convert it into an art format that can be processed by the official Mu2e software
-%packages. This first cosmic data will be used to confirm the functionality of the system - including a cross-check of the panel to panel time synchronization, and the
-%overall timing measurement performance. 
-%Additionally, enough statistics could allow
-%for important preliminary calibrations of delta-t resolution, longitudinal propagation
-%velocities, efficiencies, and channel to channel variations. The fairly uniform distribution and wide phase-space of tracks in the horizontal configuration can make these
-%analyses more straightforward than in the vertical configuration. Additionally a better measure of the expected showering will allow an improved analysis of vertical data.
-%Finally, it may be possible to make some measure of the difference between vertical
-%and horizontal straw alignment compared to expectations from Duke measurements
-%and gravitational sag
-%Later, the plane will be positioned vertically and another month of cosmic data
-%will be taken. At this point readout may be through the fiber and DTC for improved
-%livetime. As described above we will move towards automatic processing of this
-%data and have it copied and backed up to tape. This data will be most useful for
-%testing the track reconstruction. There exists software for reconstructing cosmic
-%tracks without a magnetic field, and it has been tested in a limited fashion with
-%data from a single vertical panel (docdb-33914). The implementation for a single
-%plane in either horizontal or vertical configuration is being developed.
-%Finally, a more thorough calibration of the plane can be done using a systematic
-%scan across each panel with an Fe55 source. This will allow further measurements of
-%the response as a function of straw and position, and a determination of the variability
-%between panels.
