@@ -386,9 +386,6 @@ to the $m_{yz}\sim 0$, which corresponds to the
 horizontal direction and 
 $m_{yz} \rightarrow \infty$ (vertical), since the 
 4/4 requirement is not satisfied by vertical muons. 
-The consequence of the 4/4 requirement is also a 
-significant reduction of the total muon rate 
-(Section \ref{ratetracker}). 
 The selected muon  
 directions tend to have  
 $|m_{yz}| \sim 1$, which correspond to  
@@ -411,40 +408,6 @@ The leading edge decreases in amplitude and broadens, while moving to
 the other end. This wider portion of the signal contributes the most 
 and it may introduce timing systematics.
 
-\subsection{Expected muon rate}\label{ratetracker}
-The cosmic muons sample rate can be computed by 
-integrating the flux on the solid angle, on 
-the muon energy described in Section \ref{genplane}:
-\begin{equation}\label{intef}
-   R= \int \frac{\text{d} I}{d E_\mu \text{d} \Omega \text{d} t \text{d} S} \text{d} S_{\perp} \text{d} \Omega \text{d} E_\mu
-    \end{equation}
-where $\text{d}S_\perp= \text{d}S \text{cos}\theta$ 
-is the projection of the surface element on the 
-plane perpendicular to the cosmics flux. 
-The energy and angle ranges selected for this 
-simulation are respectively 0.5 GeV < $E_\mu$ < 500 GeV, 
-which selects muons not absorbed in the 
-concrete layer posed above the tracker, 
-and 0° < $\theta^*$ < 90°. 
-By integrating Eq. \ref{intef}, we obtain a flux of approximately 172 Hz/m$^2$.  
-Given an area of $\sim$0.9 m$^2$, which corresponds to the sensitive area of one face, 
-the rate is about $R\sim$155 Hz in the horizontal configuration.  
-For the vertical station, let us simplify the case by considering only 
-muons at a 45° angle, which are the most probable (Figure \ref{fig:myz}):  
-the rate must be scaled by two factors compared to the horizontal orientation. 
-The first factor, approximately $1/\cos^2\theta \sim 1/2$, accounts for the flux 
-dependence on the angle, and the second one, $1/\sqrt{2}$, accounts for cosmic 
-rays striking the station at a 45° angle.  
-Therefore, the rate in the vertical case is approximately $R\sim$55 Hz.
-
-To perform an initial calibration, at least $10^3$ hits per straw are required, 
-which corresponds to a total of $N \sim 2.88 \times 10^3$ cosmics hitting one station. 
-This translates to a calibration time of $T = N/R \sim 30$ minutes per station 
-in the horizontal configuration, and about 1.5 hours for the vertically oriented station.  
-Considering 18 stations, a full day of continuous cosmic ray data acquisition 
-would be required for the entire tracker in the vertical configuration, 
-which is excessively long for such a straightforward calibration. In contrast, 
-only a few hours would be necessary in the horizontal configuration.
 
 
 %Considering a generation plane of an area of  
@@ -566,58 +529,60 @@ of the muon track and, thus, of the extrapolated track
 position on the panel, it is necessary to carefully determine 
 what is the bias introduced by this procedure,  
 to make sure it is well below the threshold of 4 cm.  
+
 Figure \ref{fig:recx} shows the reconstructed 
 longitudinal coordinate $x_{track}$, which is 
 determined as the intersection of the reconstructed 
-muon track with the mean $z_i$ 
-coordinate of the panel, for panel 0, taken as an example.
-Similar patterns were observed for all 
-panels. In this distribution, the bumps 
-are a consequence of the 4/4 
-requirement and the panels' overlap areas 
-being located at the extreme edges. 
-It is important to observe that 
+muon track with the mean $z_i$ coordinate of the panel, for panel 0, taken as an example.
+Similar patterns were observed for all panels. In this distribution, the bumps 
+are a consequence of the 4/4 requirement and the panels' overlap areas 
+being located at the extreme edges. It is important to observe that 
 hits in different regions in $x$ correspond to different 
-straws, as can also be seen in Figure 
-\ref{fig:illumination}.
+straws, as can also be seen in Figure \ref{fig:illumination}. 
+
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/png/x_panel0.png}
     \caption[The reconstructed longitudinal coordinate in the 0th panel frame.]{The reconstructed longitudinal coordinate in the 0th panel frame.}
     \label{fig:recx}
 \end{figure}
-Figure \ref{fig:bias} shows the difference   
-between the projection of the reconstructed track on the panel 
-and true longitudinal coordinates.
 
-The true coordinate is computed as the mean coordinate 
-of the Monte Carlo hits. 
-The bias range is approximately [-6, 6] cm, 
-indicating a significant systematic factor 
-affecting the hit reconstruction. The 
-distribution is nearly symmetric, similar 
-for all panels. 
-There are four peaks corresponding to the 
-four different spots shown in Figure 
-\ref{fig:illumination}.
-
+Figure \ref{fig:bias} shows the distribution of the longitudinal bias $\Delta x$ between the projection 
+of the reconstructed track on the panel and true coordinates. 
+The true coordinate is computed as the mean coordinate of the Monte Carlo hits within the panel.
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/png/panel_00_x_bias.png}
-    \caption[The bias between the reconstructed and the true hit coordinate.]{The bias between the reconstructed 
-    and the true longitudinal hit coordinate in the 0th panel frame. 
+    \caption[The bias between the reconstructed and the true hit coordinate.]{The longitudinal bias 
+    $\Delta x$ between the reconstructed and the true hit coordinate in the 0th panel frame. 
     The true coordinate is the mean coordinates of Monte Carlo hits.}
     \label{fig:bias}
 \end{figure}
-The 2D distribution of the longitudinal bias $\Delta x$ 
-versus the true position, shown in 
-Figure \ref{fig:rec2D}, shows four different 
-spots on the $x$ axis corresponding to 
-the overlap regions. Each spot refers to 
-different straws. The two spots on the $y$ 
-axis correspond to cosmics with different orientations. 
-The first spot (CAL side) correspond to 90° 
-panels overlap.
+The bias range is approximately [-6,6] cm, indicating a significant systematic factor 
+affecting the hit reconstruction. The distribution is similar for all panels. 
+One problem is that this distribution is referred to multiple straws, so the 
+bias could be very different between straws.
+
+The systematics brought by this type of reconstruction, both for 
+the horizontal and vertical orientation, arise from the fact that $m_{yz}=\frac{\Delta y}{\Delta z}$ 
+is not accurately reconstructed and the reconstructed coordinates depend on this 
+value, as demonstrated in Section \ref{reconstruction}. 
+This discrepancy arises when the true hit position, far from the straws midpoint, 
+results in incorrectly reconstructed tracks' direction on the $y-z$ plane, leading to the erroneous 
+reconstruciton of cosmic muons as horizontal tracks.
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/png/myz_rec.png}
+    \caption[The reconstructed $y-z$ direction distribution of cosmic rays.]{The reconstructed $y-z$ direction distribution of cosmic rays ($m_{yz}=\Delta y /\Delta z$).}
+    \label{fig:myzrec}
+  \end{figure}
+Figure \ref{fig:myzrec} shows the reconstructed $m_{yz}$ distribution, highlighting 
+a significant peak at the value of 0, corresponding to cosmic muons erroneously 
+reconstructed as horizontal, which are not possible in reality. 
+No horizontal muons are in the sample, as can be seen from Figure \ref{fig:myz}.
+
+The main difference between the horizontal and vertical orientation can be better 
+understood looking at Figure \ref{fig:rec2D} and \ref{fig:profile}. 
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/png/panel_00_x_bias_vs_x.png}
@@ -625,104 +590,132 @@ panels overlap.
     the longitudinal bias versus the true longitudinal coordinate.}
     \label{fig:rec2D}
 \end{figure}
-To assess the systematic impact on the 
-reconstructed coordinates, it is essential 
-to visualize the profile histogram of the bias versus 
-the true coordinates. 
-Profile histograms are used to represent the 
-mean value of $y$ and its error for each bin in $x$. 
-The default displayed error is the standard 
-error on the mean. 
-The profile is reported in Figure \ref{fig:profile}. 
-It reveals a systematic effect in determining the 
-longitudinal position within a range exceeding 
-[-4,4] cm. The initial portion of the histogram (CAL side) 
-corresponds to the overlap of one panel with another located 
-on a different face, oriented at 90° relative to the first one. 
-Considering face 0 of the first plane and face 0 of the second plane, 
-rotated by 180° about the vertical axis (the same applies for the other faces), 
-three pairs of panels from this two faces form this angle 
-(Figure \ref{fig:coordinate}). In this situation the bias is smaller 
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{explain what that it}
-%
-This plot suggests that the mean may not be a reliable estimator 
-of the bias. Under these conditions, achieving the required accuracy 
-for the calibration is expected to become challenging. The main issue 
-with this plot is that, in the vertical orientation, the stereo 
-reconstruction biases for tracks with positive and negative values of 
-$m_{yz}$ do not cancel each other out.
-
-In fact, considering the vertical orientation and imagining two cosmic rays 
-with opposite $y-z$ orientations, since cosmic rays come from above and travel 
-downwards, the first one would hit plane 0 and then plane 1, while the second 
-would hit plane 1 first and then plane 0, with all hits occurring on different 
-panels. For this reason, opposite $y-z$ orientated cosmics do not appear on the same profile 
-histogram for a single panel.
-In the horizontal case, the same systematics apply as in the vertical case. 
-However, in this scenario, both cosmic rays would first hit plane 0 and then 
-plane 1, and since most muons have a vertical trajectory, they would hit mostly 
-the same panels. Therefore, the mean could serve as a reasonable estimator of the bias in this case.
 \begin{figure}[!h]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/png/panel_00_x_bias_vs_x_prof.png}
     \caption[The profile of the longitudinal bias versus the true longitudinal coordinate.]{The profile of the longitudinal bias versus the true longitudinal coordinate.}
     \label{fig:profile}
 \end{figure}
+The first one shows the 2D distribution of $\Delta x$ 
+versus the true position and the second shows the profile histogram of $\Delta x$ versus 
+the true coordinates. 
+Figure \ref{fig:rec2D}, shows four different 
+spots on the $x$ axis corresponding to 
+the overlap regions. Each spot refers to 
+different straws. The two spots on the $y$ 
+axis correspond to cosmics with different orientations. 
+
+To assess the systematic impact on the reconstructed coordinates, it is essential 
+to look also at the profile histogram of the bias versus the true coordinates. 
+Profile histograms are used to represent the mean value of $y$ and its error for each bin in $x$. 
+The default displayed error is the standard error on the mean. 
+Figure \ref{fig:profile} reveals a systematic effect in determining the 
+longitudinal position within a range exceeding [-4,4] cm. 
+This plot suggests that the mean may not be a reliable estimator 
+of the bias. The main issue with this plot is that, in the vertical orientation, the stereo 
+reconstruction biases for tracks with positive and negative values of 
+$m_{yz}$ do not cancel each other out.
+Considering the vertical orientation and imagining two cosmic muons  
+with opposite $y-z$ orientations, since cosmics come from the top and travel 
+downwards, the first particle would hit plane 0 and then plane 1, while the second 
+would hit plane 1 first and then plane 0, with all hits occurring on different 
+panels. For this reason, opposite $y-z$ orientated cosmics do not appear on the same profile 
+histogram for a single panel. In the horizontal case, the same systematics apply as in the vertical case. 
+However, in this scenario, both cosmic rays would first hit plane 0 and then 
+plane 1, and since most muons have a vertical trajectory, they would hit most likely  
+the same panels. Therefore, the mean could serve as a reasonable estimator of the bias in this case.
+
+The narrower spot on the left (CAL side) in Figure \ref{fig:rec2D} and \ref{fig:profile} 
+corresponds to the overlap of one panel with another located 
+on a different face, oriented at 90° relative to the first one. 
+Considering face 0 of the first plane and face 0 of the second plane, 
+rotated by 180° about the $y$ axis (the same applies for the other faces), 
+there are three pairs of panels whose relative angle is 90° (Figure \ref{fig:coordinate}). 
+This type of overlap minimizes the systematic effect and consequently the bias that was explained earlier.
+
+Under these conditions, achieving the required accuracy 
+for the calibration is expected to become challenging. 
 
 
-The systematics brought by this type of reconstruction arise 
-come from the fact that $m_{yz}=\frac{\Delta y}{\Delta z}$ 
-is not accurately reconstructed and the reconstructed coordinates depend on this 
-value, as demonstrated in Section \ref{reconstruction}. 
-This discrepancy arises when the true hit 
-position, far from the midpoint of the straws, 
-results in incorrectly reconstructed tracks'
-direction on the $y-z$ plane, leading to the erroneous 
-reconstruciton of cosmic muons as horizontal tracks.
-Figure \ref{fig:myzrec} shows the 
-reconstructed $m_{yz}$ distribution, highlighting 
-a significant peak at the value of 0, 
-corresponding to cosmic muons erroneously 
-reconstructed as horizontal, which 
-are not possible in reality. No horizontal muons are in the sample, as can be seen 
-from Figure \ref{fig:myz}.
-
-
-\begin{figure}[!h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{figures/png/myz_rec.png}
-    \caption[The reconstructed $y-z$ direction distribution of cosmic rays.]{The reconstructed $y-z$ direction distribution of cosmic rays ($m_{yz}=\Delta y /\Delta z$).}
-    \label{fig:myzrec}
-  \end{figure}
   
   \section{Conclusions}
-  This chapter discusses the initial steps towards the tracker 
-  calibration.
+  This chapter discusses the initial steps towards the tracker calibration.
   The ultimate goal is to perform a time calibration of 
   the first assembled station of the tracker using cosmic muons, aiming for a longitudinal hit 
-  position resolution better than 4 cm. 
-\hlite{The Mu2e collaboration}
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{a) all discussion of a single station calibration has a scope of the tracker VST.
-  no point in bringing up the Mu2e collaboration
-  b) I suggest to limit this part of conclusions to that with the station positioned vertically,
-  the station Vertical Slice Test should be able to achieve (a),(b),(c), ...
-  but not (d), which the items expanded on
-}
+  position resolution better than 4 cm. This requires determining the signal propagation velocity and 
+  channel-to-channel delays. The TDCs will measure the signal arrival times, $t_1$ and $t_2$. 
+  The calibration will be performed reconstructing the track position along the straw and comparing it with the arrival times. 
+  Due to operational constraints of the station, such as gas distribution, fragility, and space, a 
+  vertical station calibration was considered to be the best option for our goals.
+  The focus of this chapter was on the reconstruction of the trajectories 
+  of simulated cosmic muons within a vertically oriented station, as well as the 
+  analysis of potential biases and systematic errors that could arise from this particular orientation. 
+  I reconstructed $x_{\text{track}}$ using only the information of whether a straw was crossed 
+  or not by a cosmic muon, using only the geometry of the tracker station.
 
-  considered that a vertical station calibration might be feasible for our goals.
 This analysis demonstrated that the vertical orientation for calibrating a station is not optimal. This is due to several reasons:
 \begin{itemize}
     \item the selection criteria in Section \ref{eventselection} select cosmic muons with orientations that affect panel illumination. 
     The illumination is non-uniform, and moreover, there are almost no hits in the central region of the panel, which could result in waveform non-linearities;
-    \item the rate of cosmic events is $R \sim 380$ Hz, and the expected duration of 
-    the calibration is about 6 days without interruptions, 
-    which is excessive for the simple calibration that needs to be performed;
-    \item the bias range is approximately [-6, 6] cm. The 2D distribution of the longitudinal bias versus the true position shows 
-    four distinct spots on the $x$ axis corresponding to the overlap regions. Each spot refers to different straws.
+    \item the longitudinal bias $\Delta x$ range is approximately [-6,6] cm, indicating a significant systematic factor 
+    affecting the hit reconstruction. The systematics arise from the fact that $m_{yz}$ is not accurately reconstructed.
+    In fact, if the true hit position is far from the midpoint of the straws, the reconstructed tracks'
+    direction on the $y-z$ plane is completely different from the true one;
+    \item the 2D distribution of the $\Delta x$ versus the true position shows 
+    four distinct spots on the $x$ axis corresponding to the overlap regions. Each spot refers to different straws. 
+    The profile histogram of this distribution reveals a systematic effect in determining the 
+    longitudinal position within a range greater than [-4,4] cm. The main issue is that, in the vertical orientation, the stereo 
+    reconstruction biases for tracks with positive and negative values of $m_{yz}$ do not cancel each other out.
 \end{itemize}
+
+In addition to these results, there is one last factor we need to consider: the rate and the consequent data taking time.
+For the vertical orientation, the rate must be scaled by two additional factors compared to the horizontal one.
+Considering only muons at 45° (Figure \ref{fig:myz}), the first factor, 
+approximately $1/\cos^2\theta \sim 1/2$, accounts for the angular dependence of the flux,
+and the second factor, $1/\sqrt{2}$, accounts for cosmic rays striking the station at a 45° angle.
+However, estimating the rate is quite complicated. In fact, these are not the main contributors to the difference between the two rates.
+With the horizontal orientation, it is possible to reconstruct a particle track without the 4/4 requirement,
+instead only requiring that the particle crosses two panels on different faces, as most muons are vertical.
+On the other hand, if the vertical orientation is the only possible configuration,
+the analysis must account for all the biases in every straw.
+Consequently, much more data is required, as the number of parameters in the analysis increases.
+
+
 Therefore, an alternative orientation or method should be considered to optimize the calibration process and achieve more accurate results.
-For this reason, a new mechanical solution 
-to address the problems outlined in Section \ref{gassystem}  
-is currently under development.
+For this reason, a new mechanical solution to address the problems outlined in Section \ref{gassystem} is currently under development.
+%The consequence of the 4/4 requirement is also a 
+%significant reduction of the total muon rate. 
+%\subsection{Expected muon rate}\label{ratetracker}
+%The cosmic muons sample rate can be computed by 
+%integrating the flux on the solid angle, on 
+%the muon energy described in Section \ref{genplane}:
+%\begin{equation}\label{intef}
+%   R= \int \frac{\text{d} I}{d E_\mu \text{d} \Omega \text{d} t \text{d} S}orientation \text{d} S_{\perp} \text{d} \Omega \text{d} E_\mu
+%    \end{equation}
+%where $\text{d}S_\perp= \text{d}S \text{cos}\theta$ 
+%is the projection of the surface element on the 
+%plane perpendicular to the cosmics flux. 
+%The energy and angle ranges selected for this 
+%simulation are respectively 0.5 GeV < $E_\mu$ < 500 GeV, 
+%which selects muons not absorbed in the 
+%concrete layer posed above the tracker, 
+%and 0° < $\theta^*$ < 90°. 
+%By integrating Eq. \ref{intef}, we obtain a flux of approximately 172 Hz/m$^2$.  
+%Given an area of $\sim$0.9 m$^2$, which corresponds to the sensitive area of one face, 
+%the rate is about $R\sim$155 Hz in the horizontal configuration.  
+%For the vertical station, let us simplify the case by considering only 
+%muons at a 45° angle, which are the most probable (Figure \ref{fig:myz}):  
+
+%Therefore, the rate in the vertical case is approximately $R\sim$55 Hz.
+
+%To perform an initial calibration, at least $10^3$ hits per straw are required, 
+%which corresponds to a total of $N \sim 2.88 \times 10^5$ cosmics hitting one station. 
+%This translates to a calibration time of $T = N/R \sim 30$ minutes per station 
+%in the horizontal configuration, and about 1.5 hours for the vertically oriented station.  
+%Considering 18 stations, a full day of continuous cosmic ray data acquisition 
+%would be required for the entire tracker in the vertical configuration, 
+%which is excessively long for such a straightforward calibration. In contrast, 
+%only a few hours would be necessary in the horizontal configuration.
+
+
+
