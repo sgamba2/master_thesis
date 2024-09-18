@@ -142,26 +142,27 @@ DAQ software for future runs.
 Chapter \ref{planning} describes the initial steps towards 
 tracker calibration. Our primary objective is to perform a time calibration of 
 the first assembled station using cosmic muons, with the aim of achieving 
-a resolution on the longitudinal hit position better than 4 cm. This  
-requires determining the signal propagation velocity and 
+a resolution on the longitudinal hit position better than 4 cm. 
+This would enable the distinction 
+between different particle trajectories while reconstructing helices
+This calibration requires determining the signal propagation velocity and 
 channel-to-channel delays. 
 
 When a charged particle passes through the straw tube gas volume, the 
 resulting ionization charge generates an electric signal along the anode wire, 
 which propagates to both ends of the straw and reaches the front-end 
-electronics, where TDCs measure the signal arrival times, $t_1$ and $t_2$. The primary 
-goal of time calibration is to determine the track position along the straw 
-by measuring these arrival times. 
+electronics, where TDCs measure the signal arrival times, $t_1$ and $t_2$. 
+The calibration will be performed reconstructing the track position 
+along the straw and correlating it with the arrival times. 
 
-I studied the reconstruction of $x_{\text{track}}$ using only the 
+Due to operational constraints of the station, such as gas distribution, fragility, 
+and space, a vertical station calibration was considered to be the best option for our goals.
+I focused on the reconstruction of $x_{\text{track}}$ using only the 
 information of whether a straw was crossed or not by a cosmic muon. The only 
 way to deduce $x_{\text{track}}$ from this "yes-no" information is to use the geometry of the tracker station, 
 which consists of a set of rotated panels arranged on four faces orthogonal 
-to the detector axis. Since the Mu2e collaboration considered 
-that a vertical station calibration might be feasible for our 
-goals, due to operational constraints of the station, such as 
-gas distribution, fragility, and space, I examined the potential 
-biases and systematic errors that might result from this orientation. 
+to the detector axis. I examined the potential 
+biases and systematic errors that could arise from using the vertical orientation. 
 
 The first step in my analysis involved studying the selection criteria for 
 muons crossing a station and then the hit distribuion on the panels 
@@ -170,33 +171,30 @@ The request of having at least one hit per face resulted in
 a non-uniform illumination, with almost no hits 
 in the central region of the panel, potentially leading to 
 waveform non-linearities. 
-Another critical factor is the cosmic event rate, which is 
-computed to be approximately 
-$R \sim 380$ Hz. The resulting calibration duration would be around 6 days, 
-which would be hard to manage. 
 
 To reconstruct the 3D trajectory of the cosmic muon, at least 
-two 3D points along its path are needed. The $x$ and $y$ coordinates 
+two 3D points along its track are needed. The $x$ and $y$ coordinates 
 of each point can be determined by the intersection of one pair of 
-non-parallel straws. This analysis revealed that a vertical orientation 
-for station calibration is not optimal, as the bias range spans 
-approximately [-6, 6] cm. 
+non-parallel straws. This analysis indicates that the longitudinal bias along the straw 
+range spans approximately [-6,6] cm. This indicates a significant systematic factor 
+affecting the hit reconstruction. 
 The 2D distribution of the longitudinal bias versus the 
-true position shows four 
-distinct spots along the longitudinal axis, each corresponding 
-to overlap regions of different straws. The TProfile indicated a systematic effect in determining 
+true position shows four distinct spots along the longitudinal axis, each corresponding 
+to overlap regions of different straws. The profile histogram indicated a systematic effect in determining 
 the longitudinal position, with the range extending beyond [-4, 4] cm. 
 This suggests that the mean is not a reliable estimator of the bias under 
 these conditions, making the calibration process more challenging.
+The main issue with this configuration the stereo 
+reconstruction biases for tracks with positive and negative values of $m_{yz}$ do not cancel each other out. 
 
-Consequently, the horizontal orientation should be considered to 
-optimize the calibration and achieve more accurate results. A new 
-mechanical approach is currently under development to address 
-the issues outlined. 
-In the next months, once the tools to allow the horizontal 
-orientation of the station will have been developed, the Mu2e 
-collaboration will perform the cosmic muon data-taking and the 
-first tracker calibration. 
+Another critical factor is the cosmic event rate, which is 
+difficult to compute as it depends on various considerations, 
+such as angular factors and additional unpredictable ones 
+introduced by the straws' bias. Therefore, the horizontal orientation 
+should be considered to optimize the calibration and achieve more 
+accurate results. A new mechanical approach is currently under development to address these issues.
+
+
 \section{Pre-pattern recognition studies}
 
 Given the high data volume expected during Mu2e data taking, 
