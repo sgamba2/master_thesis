@@ -117,24 +117,24 @@
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Monte Carlo momentum distribution of particles producing hits in the Mu2e tracker ($CE-1BB$ data sample).}}{134}{figure.caption.120}%
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Monte Carlo momentum distribution of particles producing hits in the Mu2e tracker ($PBAR-0BB$ data sample).}}{135}{figure.caption.121}%
 \contentsline {figure}{\numberline {6.5}{\ignorespaces Before and After background hits flagging.}}{136}{figure.caption.122}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces $\delta $-electrons and CE patterns in $r-z$ plane.}}{137}{figure.caption.123}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces A $\delta $ candidate $seed$.}}{138}{figure.caption.124}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces $\delta $-electrons and CE patterns in $r-z$ plane.}}{138}{figure.caption.123}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces A $\delta $ candidate $seed$.}}{139}{figure.caption.124}%
 \contentsline {figure}{\numberline {6.8}{\ignorespaces Monte Carlo deposited energy distribution in the tracker.}}{139}{figure.caption.125}%
-\contentsline {figure}{\numberline {6.9}{\ignorespaces The distribution of the total and flagged number of muon $ComboHit$s as a function of the particle momentum.}}{141}{figure.caption.128}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces The distribution of the total and flagged number of muon $ComboHit$s as a function of the particle momentum.}}{142}{figure.caption.128}%
 \contentsline {figure}{\numberline {6.10}{\ignorespaces The $\delta $-electrons energy distribution.}}{143}{figure.caption.131}%
-\contentsline {figure}{\numberline {6.11}{\ignorespaces The efficiency of electrons and positrons versus particle momentum in the low-momentum range.}}{144}{figure.caption.132}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces The electrons (blue) and positrons (red) hit flagging efficiency versus particle momentum in the low-momentum range.}}{145}{figure.caption.132}%
 \contentsline {figure}{\numberline {6.12}{\ignorespaces Momentum distribution of reconstructed tracks.}}{146}{figure.caption.134}%
 \contentsline {figure}{\numberline {6.13}{\ignorespaces $TimeCluster$ on $time-z$ plane.}}{147}{figure.caption.136}%
-\contentsline {figure}{\numberline {6.14}{\ignorespaces $TimeCluster$ on $time-z$ plane.}}{147}{figure.caption.137}%
+\contentsline {figure}{\numberline {6.14}{\ignorespaces $TimeCluster$ on $time-z$ plane.}}{148}{figure.caption.137}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Mu2e simulation and data handling.}}{160}{figure.caption.139}%
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Mu2e simulation and data handling.}}{162}{figure.caption.139}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Procedure adopted to search for the center of the $x-y$ projection of the helix.}}{165}{figure.caption.140}%
-\contentsline {figure}{\numberline {C.2}{\ignorespaces Sketch of the resolution of the 2$\pi $ ambiguity.}}{165}{figure.caption.141}%
-\contentsline {figure}{\numberline {C.3}{\ignorespaces Combinatorial background reduction achieved by exploiting the calorimeter clusters seeding.}}{166}{figure.caption.142}%
-\contentsline {figure}{\numberline {C.4}{\ignorespaces The symmetry of the straw generates an ambiguity for the hits.}}{167}{figure.caption.143}%
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Procedure adopted to search for the center of the $x-y$ projection of the helix.}}{167}{figure.caption.140}%
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Sketch of the resolution of the 2$\pi $ ambiguity.}}{167}{figure.caption.141}%
+\contentsline {figure}{\numberline {C.3}{\ignorespaces Combinatorial background reduction achieved by exploiting the calorimeter clusters seeding.}}{168}{figure.caption.142}%
+\contentsline {figure}{\numberline {C.4}{\ignorespaces The symmetry of the straw generates an ambiguity for the hits.}}{169}{figure.caption.143}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {D.1}{\ignorespaces Plane 0 illumination pattern of cosmic hits.}}{169}{figure.caption.144}%
-\contentsline {figure}{\numberline {D.2}{\ignorespaces Plane 1 illumination pattern of cosmic hits.}}{170}{figure.caption.145}%
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Plane 0 illumination pattern of cosmic hits.}}{171}{figure.caption.144}%
+\contentsline {figure}{\numberline {D.2}{\ignorespaces Plane 1 illumination pattern of cosmic hits.}}{172}{figure.caption.145}%
