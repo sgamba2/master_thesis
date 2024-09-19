@@ -602,13 +602,13 @@ The Data Requests can be configured via the CFO as per the Run Plan and are
 typically issued to the tracker and calorimeter ROCs following each event 
 window through the DTCs. Conversely, the CRV Data Requests are issued via 
 software. The ROCs respond to these Data Requests by transmitting the 
-corresponding data to the DTCs. Data from multiple DTC sources are routed 
+corresponding data to the DTCs. Data from multiple DTC sources is routed 
 through the Event Building Switch to a designated DTC, pre-processed, and 
 then transmitted to the Online Processing module within the same DAQ 
 server\footnote{The DTCs are implemented as commercial PCIe cards located 
 within the DAQ Servers.}. If a trigger decision is made, the corresponding 
-CRV data are also read out from the ROCs through software-generated Data 
-Requests. Event data from all detectors are collected at the Data Logger 
+CRV data is also read out from the ROCs through software-generated Data 
+Requests. Event data from all detectors is collected at the Data Logger 
 and transferred to the long-term storage. Calculations estimate a data rate of 35 GBps 
 from the ROCs and an annual storage requirement for the entire experiment of 
 approximately 7 PB. 
