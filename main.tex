@@ -3,6 +3,7 @@
 % Tipo di documento. L'uso di twoside implica che i capitoli inizino sempre con la prima pagina a sinistra, eventualmente lasciando una pagina vuota nel capitolo precedente. Se questa cosa è fastidiosa, è possibile rimuoverlo. 
 \documentclass[a4paper, twoside,openright]{report}
 
+
 \usepackage{[caption}
 \usepackage{tikz}
 %\usepackage{lineno}
@@ -53,7 +54,6 @@
 % Per inserire gli hyperlinks tra i vari elementi del testo 
 \usepackage{hyperref}     
 % Diversi tipi di sottolineature
-
 
 % -----------------------------------------------------------------
 
@@ -189,11 +189,7 @@
 \input{chapters/dediche}
 \input{chapters/acknowledgements}
 \input{chapters/abstract}
-
-
 \tableofcontents
-
-% Rimuovere se non si vuole la tabella delle figure
 \listoffigures
 \input{chapters/chapter1}
 \input{chapters/chapter2}
@@ -202,9 +198,7 @@
 \input{chapters/chapter5}
 \input{chapters/chapter6}
 \input{chapters/chapter7}
-
 \appendix
-
 \input{chapters/particleinmagneticfield}
 \input{chapters/mu2esim}
 \input{chapters/eventreco}
