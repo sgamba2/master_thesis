@@ -1,25 +1,25 @@
 \chapter{Conclusions}\label{conclusions}
 The success of Mu2e depends on many factors, 
 one of which is the performance of the tracker. 
-The tracker must provide excellent momentum 
-resolution, approximately 1 MeV/c, 
+The tracker must provide \add{an} excellent momentum 
+resolution, approximately 1 MeV/c FWHM, 
 in order to distinguish the monochromatic CE 
 signal from the background. 
-The Mu2e collaboration opted for a detector 
+The Mu2e collaboration \del{opted for}\add{has chosen} a detector 
 based on the straw tube technology.  
 Its distinctive annular geometry is highly 
-effective in reducing background. 
+effective in reducing \add{the} background. 
 The tracker is placed inside the 
 DS, downstream from the ST, 
-in a uniform 1 T magnetic field. The detector 
-has a modular design, consisting of basic 
+in a uniform 1 T magnetic field. The \del{detector}\add{tracker}  
+has a modular design\add{and consists of 18 tracking stations.}\del{, consisting of basic 
 elements referred to as 
 $Panel$s, $Face$s, $Plane$s, and $Station$s. 
 The panels contain arrays of 96 straw tubes, 
 which serve as the sensitive units, arranged 
 like the harp chords. The detector is made of 
 18 stations, each with 2 planes, each plane 
-with 2 faces, and each face with 3 panels. 
+with 2 faces, and each face with 3 panels.}
 
 This Thesis provides a comprehensive 
 contribution to the Mu2e tracker 
@@ -37,13 +37,13 @@ chain, from the straws to the readout,
 to processed data on disk.
 Throughout the chapters, we explored 
 critical aspects of the tracker 
-system, focusing on the robustness and 
+\del{system}, focusing on the robustness and 
 reliability of data acquisition 
 processes and the crucial role of 
 calibration in ensuring precise measurements. 
 Part of my work was dedicated to the offline 
 analysis, particularly to pre-pattern recognition 
-studies, investigating the optimal methods for 
+studies, investigating \del{the optimal methods for}\add{techniques of}  
 flagging $\delta$-electrons during data taking. 
 I performed the very first systematic study 
 comparing the performance of two algorithms 
@@ -64,36 +64,47 @@ collected with digi-FPGAs pulsed
 by their internal pulsers, with the ROC set 
 in external mode. The ROC's  
 readout logic can be emulated with a bit-level 
-C++ simulation, which I 
-contributed to develop. The Monte Carlo simulation 
+C++ simulation,
+\del{which I contributed to develop}
+\add{and I contributed to the simulation code development.}
+The Monte Carlo simulation 
 and the experimental 
 data were compared in two different modes: 
 \textit{ROC buffer underflow} and \textit{overflow} 
-configuration. These configurations depend on the 
-internal hit buffer, which stores up to 255 hits, 
+configuration.
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{'ROC buffer underflow' : the name is misleading}
+
+\hlite{These configurations depend on the 
+internal hit buffer},
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{the running modes do not depend on the buffer itself,
+  but on whether or not it is getting filled up}
+
+
+which stores up to 255 hits, 
 and, depending on \( T_{gen} \) and \( T_{EW} \), 
 the total number of hits within the event window 
 can be respectively 
 less than or equal to 255. 
-By studying the timing distribution and delays 
-between channels and digi-FPGAs, we 
-were able to incorporate realistic delays into 
+By studying the timing distribution\add{s} \del{and}\add{of the signal} delays 
+between \add{different} channels \del{and digi-FPGAs}, we 
+were able to incorporate \del{realistic}\add{relative channel-to-channel} delays into 
 the simulation. The comparison 
 between the data and the bit-level simulation 
 demonstrated good agreement, 
-validating the simulation's accuracy in reproducing 
-the expected ROC behavior under 
-the two ROC buffer modes. The agreement between 
-the simulation and 
-experimental data was highly satisfactory, with 
-deviations at the level of \( 10^{-3} \).
+validating the simulation\del{'s} accuracy in reproducing 
+the expected ROC behavior \del{under}\add{in}  
+\del{the} two \del{ROC buffer} modes. The agreement between 
+the simulation and \add{the} experimental data was highly satisfactory,
+with \add{the} deviations at \del{the}\add{a} level of \( 10^{-3} \).
 
 The second test focused on evaluating the 
 performance of preamplifiers, 
-particularly looking for inactive channels, 
-cross-talk between channels, 
+particularly looking for \del{inactive}\add{dead} channels, 
+cross-talk between \add{the} channels, 
 and unexpected pulse patterns. The first part 
-of the test examined channel occupancy, revealing 
+of the test examined \add{the} channel occupancy, revealing 
 dead channels and channels exhibiting a higher 
 number of hits than expected. 
 Cross-talk was observed in only the first channels, 
@@ -102,9 +113,9 @@ between odd and even channels. This phenomenon was
 attributed to the physical proximity 
 of preamplifiers on the motherboard and the 
 closeness of the first channels to each other. 
-Although cross-talk was not fully resolved at 
+Although \add{the} cross-talk was not fully \del{resolved}\add{addressed} at 
 the time of writing, further investigations 
-are ongoing with tracker experts.
+are ongoing\del{ with tracker experts}.
 Subsequent waveform analysis helped explain 
 abnormalities, particularly the inverted 
 waveforms observed in some channels, which indicated 
@@ -113,9 +124,16 @@ on both the leading and trailing edges. The
 waveform analysis 
 provided further insights into the charge and 
 pulse height distributions, showing two or 
-three peaks in their distribution. This was due 
+three peaks in their distribution. \hlite{This was due 
 to timing mismatches between the pulser 
-and ADC, leading to incorrect readings. Overall, 
+and ADC, leading to incorrect readings}. 
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{not correct. The origin of the discussed effect is due to the ADCs
+  and the test pulser having correlated clocks, derived from the common one.
+  No incorrect readings.
+}
+%
+Overall, 
 these tests provided valuable results 
 that will inform future improvements to the 
 preamplifier design and its integration into 
@@ -140,11 +158,14 @@ DAQ software for future runs.
 
 \section{First steps towards the station calibration}
 Chapter \ref{planning} describes the initial steps towards 
-tracker calibration. Our primary objective is to perform a time calibration of 
+\add{the} tracker calibration. Our primary objective is to perform a time calibration of 
 the first assembled station using cosmic muons, with the aim of achieving 
 a resolution on the longitudinal hit position better than 4 cm. 
-This would enable the distinction 
-between different particle trajectories while reconstructing helices
+\del{This would enable the distinction 
+  between different particle trajectories while reconstructing helices}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{are you claiming that otherwise that is impossible ? }
+
 This calibration requires determining the signal propagation velocity and 
 channel-to-channel delays. 
 
@@ -152,27 +173,31 @@ When a charged particle passes through the straw tube gas volume, the
 resulting ionization charge generates an electric signal along the anode wire, 
 which propagates to both ends of the straw and reaches the front-end 
 electronics, where TDCs measure the signal arrival times, $t_1$ and $t_2$. 
-The calibration will be performed reconstructing the track position 
+The calibration will be performed \add{by} reconstructing the track position 
 along the straw and correlating it with the arrival times. 
 
-Due to operational constraints of the station, such as gas distribution, fragility, 
-and space, a vertical station calibration was considered to be the best option for our goals.
+Due to operational constraints\del{ of the station}, such as \add{the} gas distribution, fragility, 
+and space, a \del{vertical station} calibration \add{with a station oriented vertically} was considered
+to be the best option\del{ for our goals}.
 I focused on the reconstruction of $x_{\text{track}}$ using only the 
-information of whether a straw was crossed or not by a cosmic muon. The only 
-way to deduce $x_{\text{track}}$ from this "yes-no" information is to use the geometry of the tracker station, 
-which consists of a set of rotated panels arranged on four faces orthogonal 
-to the detector axis. I examined the potential 
+information \del{of}\add{about} whether a straw was crossed or not by a cosmic muon. The only 
+way to deduce $x_{\text{track}}$ from this "yes-no" information is to use the geometry of the \del{tracker} station, 
+which consists of a set of rotated panels arranged \del{on}\add{in} four faces orthogonal 
+to the detector axis. I examined \del{the} potential 
 biases and systematic errors that could arise from using the vertical orientation. 
 
 The first step in my analysis involved studying the selection criteria for 
-muons crossing a station and then the hit distribuion on the panels 
+muons crossing a station and then \del{the}\add{- various} hit distribuiton\add{s} \del{on the panels} 
 resulting from the selection. 
-The request of having at least one hit per face resulted in 
+The \del{request}\add{requirement} of having at least one hit per face resulted in 
 a non-uniform illumination, with almost no hits 
-in the central region of the panel, potentially leading to 
-waveform non-linearities. 
+in the central region of the panel\del{, potentially leading to 
+waveform non-linearities}. 
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{illumination per se can't lead to waveform non-linearities}
 
-To reconstruct the 3D trajectory of the cosmic muon, at least 
+To reconstruct the 3D trajectory of \del{the}\add{a} cosmic muon
+\add{moving along the straight line}, at least 
 two 3D points along its track are needed. The $x$ and $y$ coordinates 
 of each point can be determined by the intersection of one pair of 
 non-parallel straws. This analysis indicates that the longitudinal bias along the straw 
@@ -180,62 +205,92 @@ range spans approximately [-6,6] cm. This indicates a significant systematic fac
 affecting the hit reconstruction. 
 The 2D distribution of the longitudinal bias versus the 
 true position shows four distinct spots along the longitudinal axis, each corresponding 
-to overlap regions of different straws. The profile histogram indicated a systematic effect in determining 
-the longitudinal position, with the range extending beyond [-4, 4] cm. 
+to overlap regions of different straws. \del{The profile histogram indicated a}
+\add{The} systematic \del{effect}\add{shift} in \del{determining} 
+the \add{reconstructed} longitudinal position \add{could be as large as +/- 4 cm,
+  with the magnitude varying along the wire}\del{, with the range extending beyond [-4, 4] cm}. 
 This suggests that the mean is not a reliable estimator of the bias under 
 these conditions, making the calibration process more challenging.
-The main issue with this configuration the stereo 
-reconstruction biases for tracks with positive and negative values of $m_{yz}$ do not cancel each other out. 
+The main issue with this configuration \add{is that} the stereo 
+reconstruction biases for tracks with positive and negative values of $m_{yz}$
+do not cancel \del{each other} out. 
 
-Another critical factor is the cosmic event rate, which is 
+\hlite{Another critical factor is the cosmic event rate, which is 
 difficult to compute as it depends on various considerations, 
 such as angular factors and additional unpredictable ones 
-introduced by the straws' bias. Therefore, the horizontal orientation 
-should be considered to optimize the calibration and achieve more 
-accurate results. A new mechanical approach is currently under development to address these issues.
+introduced by the straws' bias.}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{re-read and rephrase}
+
+Therefore, the horizontal orientation \del{should be considered}
+\add{of the station is worth considering despite the difficulties
+  with connecting the gas supply lines.}
+\del{to optimize the calibration and achieve more 
+  accurate results}.
+\hlite{A new mechanical approach is currently under development to address these issues.}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{explain 'new mechanical approach' ?}
+
 
 
 \section{Pre-pattern recognition studies}
 
 Given the high data volume expected during Mu2e data taking, 
-estimated at approximately 7 PBytes per year, optimizing memory usage 
-and minimizing CPU consumption are critical. One significant challenge 
-is flagging $\delta$-electron hits, since they are the primary source 
+\del{estimated at approximately}\add{which could be as large as} 7 PBytes per year,
+optimizing memory usage and minimizing \add{the} CPU \add{time} consumption are critical.
+One significant challenge is flagging $\delta$-electron hits, \del{since they}\add{which}
+are the primary source 
 of hits in the tracker, without compromising the efficiency of 
-CE hit detection and 
-track reconstruction. $\delta$-electrons originate from Compton 
+\del{CE hit detection and 
+  track reconstruction}\add{reconstructing the CE tracks}.
+\hlite{$\delta$-electrons originate from Compton 
 scattered electrons, 
-pair production electrons and positrons, and delta rays. Compton 
+pair production electrons and positrons, and delta rays}.
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{delta-electrons originate from delta rays - tautology? }
+
+Compton 
 scattered electrons 
 are produced when photons from neutron capture interact with the 
-detector material, and  
-typically have energies of a few MeV. Pair production electrons 
-and positrons 
+detector material, and typically have energies of a few MeV.
+Pair production electrons and positrons 
 are generated during nuclear recoil processes, and delta rays are produced 
 when high-energy charged particles collide with the detector material.
 
-A detailed study of pre-pattern recognition and a comparison of two 
-algorithms for 
-$\delta$-electron flagging is provided in Chapter \ref{delta} to 
-address this issue. 
-This study has strong motivations. First, Mu2e's 
-primary goal is 
+A detailed study of pre-pattern recognition and a comparison of \add{the} two 
+\del{algorithms for }
+$\delta$-electron flagging \add{algorithms} is \del{provided}\add{presented}
+in Chapter \ref{delta}\del{ to address this issue}. 
+This study has strong motivations. First, \del{Mu2e's 
+primary goal}\add{the primary goal of Mu2e} is 
 to detect the CE signal: flagging even a small fraction of hits generated 
-by the CE as $\delta$-electrons may reduce the CE track 
+by the CE as $\delta$-electrons \del{may reduce}\add{reduces} the CE track 
 reconstruction efficiency. 
-Second, misidentifying muons and pions as protons or $\delta$-electrons 
-can result in inaccurate background estimates. Being able to identify 
+Second, \hlite{misidentifying muons and pions as protons or $\delta$-electrons
+can result in inaccurate background estimates.}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{fix needed, quite desperately}
+
+\hlite{Being able to identify 
 protons and count the number of protons in one event is extremely 
 important, since proton counting could complement the STM in determining 
 the muon stopping rate. 
 Simulations show that the majority (approximately 75\%) of hits in 
 the tracker 
 are generated by $\delta$-electrons, i.e., electrons and positrons 
-with momenta below 20 MeV/c.
+with momenta below 20 MeV/c.}
+
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{the sentences above are disconnected and not related to each other}
+
 
 Two algorithms have been developed in Mu2e collaboration to identify 
-and exclude $\delta$-electrons hits from the reconstruction 
-process: $FlagBkgHits$ and $DeltaFinder$. 
+\del{and exclude} $\delta$-electron\del{s} hits \del{from the reconstruction 
+  process}: $FlagBkgHits$ and $DeltaFinder$.
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{offline, flagged hits are excluded only from time clustering and pattern recognition,
+but not from the track fit}
+
 The $FlagBkgHits$ algorithm initially clusters hits on $x-y$ plane 
 and on time and uses an ANN to classify them, 
 while $DeltaFinder$ identifies clusters of hits consistent with those 
@@ -245,48 +300,76 @@ in a station, hits with energy above 5 keV are considered
 proton hits, while $FlagBkgHits$ lacks the 
 capability to identify proton hits.
 
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{is it necessary to repeat such details in the summary? }
+
 I conducted a systematic, $two-level$ comparison of the performance 
 of the two algorithms:
 \begin{enumerate}
     \item \textbf{hit-level comparison}: this study evaluates the accuracy 
     of individual hit flagging, providing a direct method to compare 
     the algorithms' performance. In terms of $\delta$-electron flagging, 
-    the two algorithms have a similar performance. However, 
+    the two algorithms have a similar performance. \hlite{However, 
     $DeltaFinder$ performs 
     better in flagging positrons due to the low statistics at energies 
-    below 2 MeV/c. This presents a disadvantage for $FlagBkgHits$ since 
-    the ANN performance depends on statistics, and it struggles 
-    to reconstruct hits 
-    that register only a single hit per station. $FlagBkgHits$ flags 
-    approximately 70\% more CE hits than $DeltaFinder$, as it analyzes 
-    the $x-y$ plane and does not reconstruct hits in the $z$ coordinate. 
-    Additionally, $DeltaFinder$ 
-    can flag proton hits (approximately 84\%), a task that $FlagBkgHits$ 
-    cannot perform. 
-    It is crucial that hits corresponding to $p\bar{p}$ annihilation 
-    are not flagged. $FlagBkgHits$ has been trained on datasets lacking 
-    muon and pion hits and thus flags these particles at rates roughly 
-    4 and 3.3 times higher, respectively, than $DeltaFinder$;
+    below 2 MeV/c.}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{this should be exactly the opposite - at very low energies, when the number
+  of hits produced by a single particle is small, an ANN-based algorithm
+  should do better. \\
+  b) and a usual comment about statistics, which sounds like a science fiction
+}
+
+  This presents a disadvantage for $FlagBkgHits$ since 
+  the ANN performance depends on statistics, and it struggles 
+  to reconstruct hits 
+  that register only a single hit per station. $FlagBkgHits$ flags 
+  approximately 70\% more CE hits than $DeltaFinder$, as it analyzes 
+  the $x-y$ plane and does not reconstruct hits in the $z$ coordinate.
+
+  Additionally, $DeltaFinder$ 
+  can \del{flag proton hits (approximately 84\%)}\add{identify protons and deuterons 
+    with the corresponding hit flagging efficiency of about 84\%}, a task that $FlagBkgHits$ 
+  cannot perform. 
+
+  \hlite{It is crucial that hits corresponding to $p\bar{p}$ annihilation 
+    are not flagged.}
+  \todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+  {a) I already read this claim a few sentences earlier, why repeat? \\
+    b) no ppbar annihilation, search-and-replace globally
+  }
+
+  $FlagBkgHits$ has been trained on datasets lacking 
+  muon and pion hits and thus flags these particles at rates roughly 
+  4 and 3.3 times higher, respectively, than $DeltaFinder$;
 
 \item  \textbf{high-level comparison}: this study 
 assesses the algorithms' impact on 
-subsequent event reconstruction stages, 
-particularly how each contributes to accurate 
-track reconstruction. The main difference 
+\del{subsequent event reconstruction stages, 
+particularly how each contributes to accurate}\add{the} 
+track reconstruction \add{efficiency}. The main difference 
 between the two algorithms is in the number 
 of reconstructed tracks using CE data samples, 
 which is 16\% higher for $FlagBkgHits$. 
-This increase is due to $FlagBkgHits$ failing to 
+This increase is due to $FlagBkgHits$ \del{failing to 
 flag protons properly, allowing these 
-particles to be sent to the reconstruction stage. 
-The difference in the reconstruction of $p\bar{p}$ 
+particles to be sent to the reconstruction stage}
+\add{leaving in enough proton hits for the pattern
+  recognition to find the corresponding tracks}. 
+\hlite{The difference in the reconstruction of $p\bar{p}$ 
 events, measured as the fraction of events with at 
 least two reconstructed tracks, is approximately 
-22\% higher with $DeltaFinder$.
+22\% higher with $DeltaFinder$.}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{a difference cant be higher, a difference is not a fraction.. .rephrase}
+
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{need to state that the CE reco efficiencies are within 1\% relative from each other}
+
 \end{enumerate}
 
-An important aspect of the study was the 
-timing performance of the two algorithms. 
+\hlite{An important aspect of the study was the 
+timing performance of the two algorithms.
 For $FlagBkgHits$, it was necessary to 
 account for the time spent creating the $StereoHit$s, 
 while $DeltaFinder$ independently reconstructed 
@@ -296,18 +379,32 @@ the difference in processing time between
 the two algorithms is negligible (with 
 $FlagBkgHits$ having an advantage of less than 1 ms), 
 considering that the entire reconstruction 
-process takes few ms per event.
+process takes few ms per event.}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{just give a quantified summary, procedural details are not needed}
 
 The primary drawback of $FlagBkgHits$ is its 
 reliance on supervised training using 
 CE and $\delta$-electron samples. This 
 approach fails when other particles, such 
 as cosmic muons and those from $p\bar{p}$ 
-annihilation, are introduced into the algorithm. 
+annihilation, are introduced into the algorithm.
+
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{in principle, one could add other sample to training,
+the issue is that it is becoming more and more cumbersome technically}
+
 Furthermore, the training was performed using 
 Monte Carlo data rather than real data, 
 posing a potential risk when transitioning 
-to actual data-taking. Additionally, as an 
-ANN-based method, $FlagBkgHits$ performs 
+to actual data taking.
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{it is not a risk, but rather what do you do in early data taking?
+what is the strategy of training with the data ?}
+
+\del{Additionally, as an ANN-based method, $FlagBkgHits$ performs 
 poorly when statistics are very low and lacks 
-a well-defined method for proton flagging.
+a well-defined method for proton flagging.}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{avoid using words like 'poorly', especially in writing}
+
