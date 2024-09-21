@@ -63,7 +63,7 @@ velocity $v$ of the signal along the wire and
 the difference $d_1-d_2$ between the delays introduced by 
 the front-end electronics. 
 Performing the time calibration means 
-determining $v$ and $d1-d2$ from the $\Delta t_{12}$ 
+determining $v$ and $d_1-d_2$ from the $\Delta t_{12}$ 
 measured by the TDCs and from an independent 
 reconstruction of the track 
 projected on the wire ($x_{track}$).
@@ -146,7 +146,7 @@ to achieve conditions that are as close as possible to those of the real detecto
 However, if the vertical orientation proves ineffective for calibration, 
 alternative mechanical solutions will be considered.
 
-This Chapter report on a simulation study 
+This Chapter reports on a simulation study 
 which shows that the vertical orientation introduces a significant bias on 
 the $x_{track}$ which significantly complicates 
 the station calibration. 
@@ -275,19 +275,23 @@ For this reason, in the simulation
 the magnetic field was set to zero. 
 
 Before starting explaining the event selection and the 
-reconstruction, let me define the coordinate system, 
+reconstruction, it is important to define the coordinate system, 
 as shown in Figure \ref{fig:coordinate}. The $z$ axis is parallel to 
 the DS axis, while the $y$ axis corresponds to the vertical axis.
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.5\textwidth]{figures/png/Screenshot_20240526_164527.png}
-    \caption[Schematic view of a tracker station and the coordinate system.]{Schematic view of a tracker station and definition of the coordinate system used for the analysis.}
+    \caption[Schematic view of a tracker station and 
+    the coordinate system.]{Schematic view of a tracker station 
+    and definition of the coordinate system used for the analysis. 
+    Different shades of gray indicate various numbers of panel overlaps.}
     \label{fig:coordinate}
 \end{figure}
 \section{Monte Carlo event selection}\label{eventselection}
 
 Since in the Mu2e simulation the tracker is made of 18 stations, to 
-perform this study, we selected those events where a cosmic muon crosses the first station.
+perform this study, we selected those events where a 
+cosmic muon crosses the first station.
 
 Although the station has four layers, 
 the panel geometry does not provide a uniform
@@ -309,7 +313,7 @@ where $D_{x,i}$, $D_{y,i}$ are the $x$ and $y$
 $i$-th straws' direction cosines and sines respectively, 
 while $M_{x,i}$, $M_{y,i}$ are the $x$, $y$ straws' midpoints.
 
-To conduct this study, it is necessary to 
+To perform this study, it is necessary to 
 reconstruct the 3D trajectory of the cosmic muon, 
 which requires at least two 3D points along the muon's 
 trajectory. The $x$ and $y$ coordinates of 
@@ -320,7 +324,7 @@ one another, it is necessary to use at least two straws from
 different panels. The intersection of two straws from 
 different panels on the same face lies outside the tracker circle 
 (Figure \ref{fig:coordinate}), which is not physically possible. 
-Therefore, more than one hit per face is required.
+Therefore, at least one hit per face is required.
 
 The 3D intersection $z$ 
 coordinate is determined as the average of the 
@@ -434,16 +438,16 @@ and it may introduce timing systematics.
 %0.7m (radius of the tracker station) divided by 5mm*2*4, that is 4°. 
 \section{Reconstructing the muon tracks}\label{reconstruction}
 To determine $x_{track}$ in Equation \ref{ffffff}, 
-it is necessary to reconstruct 3D muon track 
+it is necessary to reconstruct the 3D muon track 
 starting from the $StereoHit$ coordinates.
-As mentioned in equation \ref{equaretta}, 
+As mentioned relatively to Equation \ref{equaretta}, 
 what is known about each single straw is:
 \begin{itemize}
     \item the straw direction $(D_{x,i},D_{y,i})$;
     \item the straw midpoint $(M_{x,i},M_{y,i})$;
     \item the straw $z_i$ coordinate.
 \end{itemize} 
-The reconstruction process begins 
+Track reconstruction begins 
 with the sole information of whether 
 a straw has been hit or not.
 To improve the hit spatial resolution, adjacent 
@@ -455,7 +459,7 @@ $ClusterHit$, to minimize the uncertainty on
 the determination of the 3D intersection points.
 This new object effectively represents a 
 straw with the same direction and the midpoint 
-computed as the average of the midpoints of the straw 
+computed as the average of the midpoints of the straws  
 which make it. Since muons with hits in four panels in four different 
 faces have been selected, four $ClusterHit$s are reconstructed 
 within a station. The new $ClusterHit$ 
@@ -517,7 +521,9 @@ The reconstructed hits on the panels will be denoted as $R_{x,i}$ and $R_{y,i}$.
  R_{x,i}&=\frac{(m_{yz}\cdot z_i+q_{yz}-q_{xy})}{m_{xy}}
 \end{aligned}
 \end{equation}
-The bias in the longitudinal position is the difference between the reconstructed coordinate and the true Monte Carlo position in the panel frame.
+The bias on the longitudinal position is the difference between 
+the reconstructed coordinate and the true Monte Carlo position 
+on the panel frame.
 
 \section{Results}
 
@@ -534,7 +540,7 @@ longitudinal coordinate $x_{track}$, which is
 determined as the intersection of the reconstructed 
 muon track with the mean $z_i$ coordinate of the panel, for panel 0, taken as an example.
 Similar patterns were observed for all panels. In this distribution, the bumps 
-are a consequence of the 4/4 requirement and the panels' overlap areas 
+are a consequence of the 4/4 requirement and overlap of the panels  
 being located at the extreme edges. It is important to observe that 
 hits in different regions in $x$ correspond to different 
 straws, as can also be seen in Figure \ref{fig:illumination}. 
@@ -553,7 +559,7 @@ The true coordinate is computed as the mean coordinate of the Monte Carlo hits w
     \centering
     \includegraphics[width=0.8\textwidth]{figures/png/panel_00_x_bias.png}
     \caption[The bias between the reconstructed and the true hit coordinate.]{The longitudinal bias 
-    $\Delta x$ between the reconstructed and the true hit coordinate in the 0th panel frame. 
+    $\Delta x$ between the reconstructed and the true hit coordinate on panel 0. 
     The true coordinate is the mean coordinates of Monte Carlo hits.}
     \label{fig:bias}
 \end{figure}
@@ -596,7 +602,7 @@ understood looking at Figure \ref{fig:rec2D} and \ref{fig:profile}.
     \label{fig:profile}
 \end{figure}
 The first one shows the 2D distribution of $\Delta x$ 
-versus the true position and the second shows the profile histogram of $\Delta x$ versus 
+versus the true position and the second one shows the profile histogram of $\Delta x$ versus 
 the true coordinates. 
 Figure \ref{fig:rec2D}, shows four different 
 spots on the $x$ axis corresponding to 
