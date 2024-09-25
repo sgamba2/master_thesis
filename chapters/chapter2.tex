@@ -35,7 +35,7 @@ Given the brief cascading time compared to the mean muon lifetime in a muonic at
 instances of muon decay before reaching the ground state are negligible. 
 The cascades emit photons, aiding in estimating the number of muons captured 
 on the ST. 
-Muonic atoms decay after a lifetime that depends on the ST material. 
+\del{Muonic atoms decay after a lifetime that}\add{Stopped muon lifetime} depends on the ST material.
 In the Mu2e experiment, an Aluminum ST is adopted resulting in a lifetime of 
 864 ns. Muons interacting with a nucleus mostly undergo two processes: 
 nuclear capture $\mu^- N \rightarrow \nu_\mu N'^* $, where $N'^*$ represents an excited 
@@ -45,23 +45,31 @@ As shown in Figure \ref{fig:muonicatom}, the ratio between these
 processes varies with the ST material. For $^{27}$Al, approximately 60.9\% 
 of muonic atoms undergo muon nuclear capture. The remaining 39.1\% undergo muon DIO. 
 The experiment aims to identify a third process, neutrinoless muon-to-electron 
-conversion $\mu^- N \rightarrow e^- N $. Detectors will search for the signature of a 
-single monochromatic electron.
+conversion $\mu^- N \rightarrow e^- N $. \del{Detectors will search for the signature of a 
+single monochromatic electron.}
 
-The Mu2e experiment can also detect a lepton-number violation process 
+The Mu2e experiment can also detect a lepton-number \del{violation}\add{violating} process 
 $\mu^- N \rightarrow e^+ N'$.
 This process violates both the charged lepton flavour and the total lepton number 
 conservation ($|\Delta L|$ = 2). 
-Conversion positrons tracks helices in the tracker, but with different chirality from electrons. 
-\section{Signals and backgrounds}\label{sigandbkg}
+\del{Conversion positrons tracks helices in the tracker, but with different chirality from electrons. }
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{doesn't belong here}
+
+
+\section{Signal and backgrounds}\label{sigandbkg}
 \subsection{Conversion Electron signal}
 
-The specific goal of Mu2e search is the neutrino-less coherent $\mu^- \rightarrow e^-$
+The specific goal of Mu2e search is the \del{neutrino-less}\add{neutrinoless} coherent $\mu^- \rightarrow e^-$
 conversion in the field of an aluminum nucleus: the electron recoils off the 
-entire nucleus and follows two-body decay kinematics \cite{bartoszek2015mu2e}. The mass of the nucleus is large compared to the 
-mass of the electron, hence the recoil terms are minimal. The outgoing nucleus 
+entire nucleus and follows add{the} two-body decay kinematics \cite{bartoszek2015mu2e}. The mass of the nucleus is large compared to the 
+mass of the electron, \hlite{hence the recoil terms are minimal.}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{how many those terms are there ?}
+
+The outgoing nucleus 
 remains in the ground state and as a result the signature of the process is a monochromatic conversion electron 
-(CE) with the energy slightly lower than the muon's rest mass:
+(CE) with the energy slightly lower than the muon\del{'s} rest mass:
 \begin{equation}
     E_{CE} = m_\mu - E_{recoil}(A) - E_{bind}(Z) 
 \end{equation}
@@ -70,11 +78,15 @@ the recoil energy of the target nucleus, with $m_N$ the nucleus mass, and
 $E_{bind}\simeq \frac{Z^2 \alpha^2 m_\mu}{2}$ is the binding energy of the 
 $1s$ state of the muonic atom \cite{universe9010054}. For the Mu2e 
 ST material, $^{27}$Al, $E_{CE}$ = 104.97 MeV \cite{PhysRevD.84.013006}.
+
 \subsection{Backgrounds}\label{backgrounds}
-In order to improve the experimental sensitivity by four orders of magnitude 
-it is important to know the experimental backgrounds. 
-There are five categories of background 
-sources \cite{bartoszek2015mu2e}:
+\del{In order to improve the experimental sensitivity by four orders of magnitude 
+  it is important to know the experimental backgrounds. }
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{tautology, }
+
+\del{There are five categories of background 
+sources}\add{Five main background sources to the $\mu^- \to e^-$ conversion search are as follows} \cite{bartoszek2015mu2e}:
 \begin{enumerate}
 \item electrons or muons coming from cosmic rays;
 \item muon Decay-in-Orbit (DIO) and Radiative Muon Capture (RMC);
@@ -140,8 +152,6 @@ with a full width at half maximum (FWHM) approximately on the order of 1 MeV
 A particle tracking detector with high momentum resolution 
 also helps to reduce background, which will be explored in the next sections.
 
-
-
 \begin{figure}[!h]
      \begin{subfigure}[b]{0.4\linewidth}
          \centering
@@ -164,7 +174,7 @@ also helps to reduce background, which will be explored in the next sections.
 \centering
 \includegraphics[width =0.55\textwidth]{figures/png/Screenshot_20240909_141143.png}
 \caption[The electron energy spectrum near to the endpoint.]{The electron energy spectrum near to the endpoint. The black line 
-represents the Michel spectrum w/o the nuclear recoil, while the red 
+represents the \del{Michel}\add{DIO} spectrum w/o the nuclear recoil, while the red 
 dashed line takes into consideration the recoil of the Al nucleus 
 \cite{PhysRevD.84.013006}. The green arrow shows the spectrum end at 104.973 MeV.
 }
@@ -246,7 +256,7 @@ reaches an endpoint of 52.8 MeV, while those from the
 second process have a consistent energy of approximately 
 70 MeV. Since the pions and muons move at relativistic velocities, 
 the energies (and momenta) of the resultant electrons are 
-boosted. For instance, a muon with a momentum of around 
+boosted. For instance, a muon with \del{a} momentum of around 
 79 MeV/c or a pion with momentum close to 70 MeV/c can generate 
 an electron with an energy of 105 MeV \cite{bartoszek2015mu2e}. 
 Implementing a pulsed proton beam and using a delayed 
@@ -275,10 +285,12 @@ at rest in the center of mass frame, the minimum kinetic energy
 needed for $p\bar{p}$ production can be found, which is 
 approximately $6 m_pc^2 \sim 5.6$ GeV, where $m_p$ is the 
 mass of the proton. In an ideal scenario, maintaining the 
-beam energy below this threshold could enable us to avoid 
-this background in the experiment. Unfortunately, the Mu2e 
-proton beam goes beyond the threshold for antiproton production. 
-The antiprotons are long-lived and massive. Antiprotons with 
+beam energy below this threshold \del{could enable us to avoid}
+\add{would eliminate} 
+this background \del{in the experiment}\add{source}.
+\del{Unfortunately}\add{However}, the Mu2e 
+proton beam \del{goes beyond}\add{energy is} the threshold for antiproton production. 
+\del{The antiprotons}\add{Antiprotons} are long-lived and massive. Antiprotons with 
 momenta below 100 MeV/c travel at speeds less than 0.1$c$, 
 requiring several $\mu$s to spiral from the production target 
 to the ST \cite{bartoszek2015mu2e}. They have the correct 
@@ -286,7 +298,13 @@ charge and momentum to pass through the collimators placed
 between the production target and the ST. Annihilating or 
 undergoing interactions with other materials, they have the 
 capability to release a substantial amount of energy, generating 
-numerous electrons. The delayed timing of 
+\hlite{numerous electrons.}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{science fiction: the probability to have an electron in the final state
+  of a pbar-A annihilation is somewhere below $10^{-3}$  }
+
+
+The delayed timing of 
 such interactions is much longer than the muon lifetime, leading to a 
 continuous flow of antiprotons reaching the ST. The pulsed beam and 
 the delayed live window fail to suppress the antiproton background. 
@@ -294,8 +312,8 @@ The best approach is to prevent the antiprotons from reaching the
 region where the ST is located.
 Two thin absorbers are positioned in 
 the muon beamline to capture the antiprotons. Their design was 
-developed to find a compromise between increasing antiproton 
-absorption and decreasing muon beam loss. 
+developed to find a compromise between increasing the antiproton 
+absorption and decreasing the muon beam loss. 
 
 \subsection{Background estimates and signal sensitivity}
 Mu2e run plan is divided in two different phases. Run I 
@@ -375,7 +393,7 @@ Transport Solenoid (TS) provides the magnetic field for
 the muon beamline. The TS, configured in an S-shape, 
 incorporates collimators and proton absorbers. The ST is 
 located at the beginning of the Detector Solenoid (DS). 
-Proton absorbers surround the ST, not shown in the picture. 
+Proton absorbers surrounding the ST are not shown in the picture. 
 The tracker and the calorimeter are housed in the DS, 
 enabling momentum measurement and particle identification. 
 Additionally, a Stopping Target Monitor (STM) positioned 
@@ -456,15 +474,18 @@ $\mu$s.
 \end{figure}
 \subsection{Proton beam extinction and Extinction Monitor}
 As mentioned in the previous section, the Mu2e experiment 
-requires the extinction level of the incoming proton beam, to reduce backgrounds caused by out-of-time protons. 
+\hlite{requires the extinction level of the incoming proton beam},
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{one can't require an extinction level, rephrase}
+to reduce backgrounds caused by out-of-time protons. 
 The extinction rate, defined as the ratio between the 
 number of out-of-time protons and the number of the in-time protons, should be lower than $10^{-10}$ \cite{bartoszek2015mu2e}. The structure of the beam 
 leads to an extinction level $2.1 \times 10^{-5}$. To take into account the fact that some beam will 
 leak out of two consecutive proton pulses, an Extinction 
 Insert is deployed in the M4 beamline between the Delivery Ring and the Mu2e experiment.
-The out-of-time beam particles are swept into a collimator system by an oscillating dipole, called AC dipole. These AC dipole 
-offers an additional 
-extinction factor of $5\times 10^{-8}$, reducing the 
+The out-of-time beam particles are swept into a collimator system by an oscillating dipole, called AC dipole.
+\del{These}\add{The} AC dipole \del{offers}\add{provides} an additional 
+extinction factor of $5\times 10^{-8}$, \del{reducing}\add{improving} the 
 overall extinction to $1.1 \times 10^{-12}$, leaving a margin of 10$^2$ \cite{accelerator}. An 
 Extinction Monitor is positioned downstream of the 
 production target along the proton beamline, as shown in Figure \ref{fig:extintion}. It monitors the 
@@ -472,8 +493,8 @@ extinction level of the proton beam and delivers a measurement with an accuracy 
 
 The Extinction Monitor consists of a collimator and magnetic filter 
 system, a pixel telescope, a system of trigger scintillators and a range-stack. The collimator and 
-magnetic filter system transport a small quantity of 
-the particles generated at the production target to the Extinction Monitor. The pixel telescope 
+magnetic filter system transport a small \del{quantity}\add{number} of 
+\del{the} particles generated at the production target to the Extinction Monitor. The pixel telescope 
 tracks the trajectory of charged particles coming from 
 the collimator. The pixel telescope consists of a permanent magnet and 8 scintillators, as shown 
 in Figure \ref{fig:extintionmonitor}. The system uses a 
@@ -515,7 +536,7 @@ dissipation. This design is expected to last for more than one year. The PT prov
 \end{figure}
 
 \section{Solenoids}
-The principle of the Mu2e experiment is to use a sophisticated magnetic system
+\del{The principle of the} Mu2e \del{experiment is to use}\add{uses} a sophisticated magnetic system
 to form the high-intensity muon beam by collecting and filtering the particles emerging from the PT. 
 It is composed of three parts: the \textbf{Production Solenoid} (PS), 
 the \textbf{Transport Solenoid} (TS) 
@@ -533,8 +554,12 @@ direct them towards the DS. The magnetic field across the S-shaped TS changes it
 value only by a factor of 0.5 T. The shape of the TS allows to select charged particles 
 and its dimension was set to avoid transmitting 
 particles with large momentum. These particles either spiral with a large helical 
-radius (large initial momenta perpendicular to the field) or cannot create an 
-S-shaped bend (large initial momenta parallel to the magnetic field), resulting 
+radius (large initial momenta perpendicular to the field) \hlite{or cannot create an 
+  S-shaped bend}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{particles dont create bends}
+
+(large initial momenta parallel to the magnetic field), resulting 
 in collisions with solenoid walls or collimators. As particle drifts in the solenoid field is dependent on the particle charge,  
 positively and negatively charged muons 
 drift in opposite vertical directions and are separated, as explained in Appendix 
@@ -542,7 +567,7 @@ drift in opposite vertical directions and are separated, as explained in Appendi
 \ref{fig:collimators}, the positive (blue) and negative (red) muons 
 are deflected downwards and upwards respectively. Positive muons are stopped in 
 collimators COL3u and COL3d. The TS is long enough for pion decay, suppressing 
-RPC backgrounds.
+\add{the} RPC background\del{s}.
 The magnetic field in the first half of 
 the DS is reduced from 2 T to 1 T. In a smoothly gradient field, the adiabatic 
 invariance of the magnetic flux can be used. Assuming a constant $p^2_\perp/B$, there is:
@@ -553,7 +578,8 @@ Here, $\perp$ is referred with respect to the magnetic field $B$ and $\parallel$
 referred to the $z$ direction. The subscript 0's indicates the initial state. 
 The gradient pitches electrons forward into the tracker's acceptance. 
 
-The second half of the DS containing the tracker and the calorimeter has a 
+The second half of the DS containing the tracker and the calorimeter has
+\del{a}\add{an approximately} 
 uniform magnetic field of 1 T.
 
 \begin{figure}[!h]
@@ -571,8 +597,10 @@ The Production Solenoid (PS) (4 m long), shown in Figure
 \ref{fig:PS}, collects pions, 
 kaons generated by the interactions between the 8 GeV 
 proton beam and the production target. 
-It is composed of Nb-Ti superconducting cables stabilised with Al 
-and cooled by liquid helium. To avoid damages to the 
+\del{It is composed of}\add{Its coils are wound with} Nb-Ti
+superconducting cables stabilised with Al,  
+\del{and}\add{the magnet is} cooled by liquid helium.
+To avoid damages to the 
 superconducting cables and
 to the cooling system a bronze heat and radiation shield 
 is built inside the solenoid. 
@@ -609,31 +637,37 @@ beginning of the TS and also between the rotatable collimators
 to absorb antiprotons in 
 the beam. 
 
-It is divided in five parts. 
+\del{It}\add{The TS} is divided in five \add{regions}\del{parts}. 
 
-The first one is called TS1 that contains the first collimator (COL1), 
+The first one is called TS1 \del{that}\add{, and it} contains the first collimator (COL1), 
 Figure \ref{fig:collimatorsshape}, made of copper wedges. 
 It filters particles from their momentum and reduces the 
 radiation damage for coils of the 
 upstream part of the TS (TSu). 
 
-The TS2 contains a toroidal field in order to create a 
-vertical displacement of the charged particles,
+\add{A toroidal B-field of the TS2}\del{The TS2 contains a toroidal field in order to create}
+\add{leads to} a vertical displacement of the charged particles,
 according to their charge and momentum.
-Neutral particles, that are not sensitive to the magnetic 
-field are not transported to the next section.
+\del{Neutral particles, that are not sensitive to the magnetic 
+  field are not transported to the next section.}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{one can safely assume that this is a known fact}
 
-In TS3, negative muons are selected with two rotatable collimators (COL3u and COL3d, 
-shown in Figure \ref{fig:collimatorsshape}). 
-The rotatable feature allows selection of $\mu^-$'s instead of $\mu^+$'s, which can 
-be used for detector calibration. 
+
+In TS3, negative muons are selected with two \del{rotatable}\add{rotating}
+collimators (COL3u and COL3d,  shown in Figure \ref{fig:collimatorsshape}). 
+The \del{rotatable feature}\add{rotating collimators} allows selection
+of $\mu^-$'s instead of $\mu^+$'s, which can be used for the detector calibration. 
 
 The TS4 is the second toroid section of the TS and its role is 
 to collimate the beams on the TS axis.
 
 TS5 connects TS with DS and it contains a collimator (COL5), 
-Figure \ref{fig:collimatorsshape}, made of polyethylene, 
-which will serve as a shield from antiprotons.
+Figure \ref{fig:collimatorsshape}, \hlite{made of polyethylene, 
+which will serve as a shield from antiprotons.}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{where did this come from ? - to be fixed}
+
 
 It is linked to the DS 
 and matches its field to provide the best beam transmission.
@@ -657,9 +691,9 @@ and matches its field to provide the best beam transmission.
         \end{figure}
 
 \subsection{The Detector Solenoid}\label{detectorsolenoid}
-The DS, shown in Figure \ref{fig:DS}, is a cylindrical 
-system of approximately 11 m in 
-length and 2 m in radius, which houses the ST, 
+The DS, shown in Figure \ref{fig:DS}, is \del{a cylindrical 
+system of} approximately 11 m in 
+length and 2 m in radius\del{, which houses}\add{. It houses} the ST, 
 the proton absorber, the tracker and the calorimeter. 
 \begin{figure}[!h]
     \centering
@@ -675,24 +709,44 @@ m spectrometer section.
 The gradient region drives the CE 
 inside the tracker acceptance, while the low momentum particles 
 are driven to the low radius region that is not covered by detectors.  
+\hlite{In the spectrometer region, the uniform magnetic field allows a precise 
+  measurement of the particle momentum. }
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{science fiction: the field itself doesn't guarantee the accuracy
+  of the momentum measurement. Knowing the field, one can accurately reconstruct
+  the track momenta even if the field is not uniform }
 
-In the spectrometer region, the uniform magnetic field allows a precise 
-measurement of the particle momentum. 
 
-The DS is straight, differently from the COMET experiment. This allows 
-to detect both $e^+$ and $e^-$, with the disadvantage that the detectors are exposed to the 
+\hlite{The DS is straight, differently from the COMET experiment.}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{and COMET is ... ? - no way!}
+
+This allows 
+to detect both $e^+$ and $e^-$, \hlite{with the disadvantage that the detectors are exposed to the 
 beam flash and to protons and neutrons produced by the muon
-nuclear capture in the ST.
+nuclear capture in the ST.}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{and where does the flash go in case of COMET?}
 
-A series of absorbing materials inside the DS, shown in 
+
+\hlite{A series of absorbing materials inside the DS},
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{all materials are absorbing, rephrase}
+
+shown in 
 Figure \ref{fig:absorbersDS}, is used to suppress 
 the rate of protons and neutrons that can generate spare hits in the 
 tracker:
 \begin{itemize}
-    \item \textbf{Transport Solenoid downstream absorber (TSdA)}: this 
+\item \textbf{Transport Solenoid downstream absorber (TSdA)}:
+  \del{this 
     polyethylene disk-shaped absorber is designed to shield against neutron radiation. 
     Simulations predict it will reduce the hit rate in the calorimeter by approximately 30\% 
     while having a minimal impact (around 0.2\%) on electron acceptance;
+  }
+  \todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{this is not correct, see mu2e-50203 and remove the item}
+
     \item \textbf{Inner Proton Absorber (IPA)}: this is a thin (0.5 mm) conical 
     frustum made of low $Z$-material. It aims to reduce the rate of protons produced 
     in muon nuclear capture (around 0.03 per captured muon) while minimizing the 
@@ -716,11 +770,20 @@ composed of 37 annular aluminum foils of 75 mm of radius with a purity of
 above 99.99\% \cite{bobbb}. The foils are 100 $\mu$m thick to minimize energy losses of the CEs. This design 
 narrows the reconstructed CE momentum distribution 
 and separates it from the DIO electron momentum distribution. 
-The disks have an internal hole of 21 mm of radius.
+\hlite{The disks have an internal hole}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{can a disk have an external hole?}
+
+of 21 mm of radius.
 The annular design minimizes interactions with the beam electrons, reducing the radiation load by $\sim$30\%.
 
-The central hole does not affect the target capacity to halt muons, 
-which move in helical patterns. The space between each disk is
+\hlite{The central hole does not affect the target capacity to halt muons, 
+  which move in helical patterns.}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{it does, but not too much, as you say, it is a compromise}
+
+
+The space between each disk is
 22.2 mm, bringing the total lenght of the ST to $\sim$80 cm.
 Muons passing through the hole of an upstream foil will stop in a downstream layer. 
 The design of the ST has been chosen by considering two 
@@ -752,15 +815,16 @@ endpoint energies and do not contribute to background. For these reasons, alumin
 suitable ST material for muon-to-electron conversion searches.
 Moreover, the branching ratio ($BR$) of the conversion varies 
 depending on the ST material due to differences in atomic number 
-($Z$) and mass number ($A$). By comparing $BR$s on different nuclei 
-normalized to aluminum, it is possible to identify the dominating 
+($Z$) and mass number ($A$). \del{By comparing}\add{If a $\mu^- \to e^-$ conversion
+  is observed, comparison of conversion} $BR$s on different nuclei 
+normalized to aluminum\del{, it is possible}\add{could allow} to identify the dominating 
 operator type, such as scalar ($S$), dipole ($D$), vector of 
 transition charge radius type and vector of effective $Z$-penguin type, 
 ($V(\gamma)$) and ($V(Z)$) respectively. 
 Despite challenges in separating prompt backgrounds from 
-signals due to short lifetimes of muonic atoms, 
+\del{signals}\add{conversion signal} due to short lifetimes of muonic atoms, 
 materials with higher $Z$ offer better model differentiation. 
-If the Mu2e experiment observes conversion signals, a subsequent search 
+If the Mu2e experiment observes a conversion signal, a subsequent search 
 could make use of titanium as the ST. A more detailed discussion can be 
 found in \cite{PhysRevD.80.013002}, \cite{PhysRevD.76.059902} and 
 \cite{abusalma2018expression}.
@@ -801,11 +865,15 @@ the passage of particles produced during muon capture,
 remnant beam, and electrons from the initial proton collision to the beam dump without striking
 the detector elements, that otherwise would cause excessive instantaneous detector 
 occupancy and accumulated radiation damage. 
-Most decay muons are tipically too low momentum 
+\hlite{Most decay muons}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{what is this ?}
+
+are typically too low momentum 
 to exit the central region, preventing them from reaching the detector elements. 
-As a result, the number of detector hits is kept at a manageable level. 
+As a result, the \del{number of detector hits}\add{occupancy} is kept at a manageable level. 
 Due to acceptance limitations for particles originating from the ST, 
-only particles with a momentum higher than 80 MeV/c can be reconstructed.
+only particles with a momentum higher than $\sim$80 MeV/c can be reconstructed.
 The Mu2e detection system comprises a straw tracker, followed by a 
 calorimeter and a STM, all enclosed within the CRV.
 
@@ -850,17 +918,21 @@ including the mechanical structure, the FEE and
 DAQ system.
 \subsubsection{Momentum scale calibration}
 One of the most challenging aspects of the Mu2e experiment is achieving the 
-required momentum resolution to distinguish the CE electron from the background.
+required momentum resolution\del{ to distinguish the CE electron from the background}.
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{already stated above}
+
 
 Mu2e requires at least one source of high-energy calibration electrons or 
 positrons to independently measure the absolute momentum scale of the tracker. 
 The momentum scale calibration relies on accurately reconstructing the 
 $\pi^+ \rightarrow e^+ \nu_e$ peak ($BR\sim 1.23 \times 10^{-4}$), with its success critically dependent on the 
 suppression of $\mu^+ \rightarrow e^+ \nu_e \bar{\nu}_\mu$ decays in flight (DIF). 
-Several approaches have been explored, with the most promising ones being:
+Several approaches \del{have been explored, with the most promising ones being}
+\add{are being explored}:
 
 \begin{enumerate}
-    \item Special run with adjusted TS collimators: operating with 
+    \item A special run with adjusted TS collimators: operating with 
     reversed TS collimators and a reduced DS field 
     (70\% of the nominal value), this setup is designed to capture the 
     leptonic decay ($\pi^+ \rightarrow e^+ \nu_e$) of stopping $\pi^+$ in the nominal ST;
@@ -876,7 +948,7 @@ Several important considerations include:
 
 \begin{itemize}
     \item Early time measurement: to reconstruct the $\pi^+ \rightarrow e^+ \nu_e$ decays, 
-    measurements must be performed at early times, approximately 
+    measurements must be performed at early times, \del{approximately} 
     $T \sim 300$ ns. This necessitates operating at a reduced proton 
     beam intensity to mitigate the pileup;
     
@@ -910,14 +982,14 @@ on readings from an NMR probe.
 \subsection{The electromagnetic calorimeter}\label{calorimeter}
 The Mu2e electromagnetic calorimeter serves multiple purposes \cite{em4}:
 \begin{itemize}
-    \item the measurement of the energy deposited in the calorimeter 
+    \item \del{the} measurement of the energy deposited in the calorimeter 
     allows to separate electrons and muons of the same momentum. 
     The energy-to-momentum ratio ($E/p$) will be used for particle 
     identification and to suppress the background due to cosmic muons;
   \item the calorimeter information 
     helps improving the pattern recognition and 
     the quality of the track reconstruction;
-    \item it provides independent triggers from the track-based triggers \cite{em6}. 
+    \item it provides triggers independent from the track-based triggers \cite{em6}. 
 \end{itemize} 
 For these purposes, the calorimeter needs to fulfill the following physical requirements:
 \begin{itemize}
@@ -971,7 +1043,10 @@ is as robust as required to support the load of the crystals (700 kg). Each disk
 has two cover plates. The plate facing the beam is made of carbon fiber to minimize 
 the degradation of the electron energy, while the back plate should also be robust 
 to support the SiPMs, the FEE and the SiPM cooling lines and it 
-is therefore made of Polyether ether ketone (PEEK). The crystal arrangement is 
+is therefore made of \hlite{Polyether ether ketone (PEEK)}.
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{use lower case}
+The crystal arrangement is 
 self-supporting, with the load carried primarily by the outer ring. 
 The heat generated by SiPMs, FEE and read out electronics 
 must be removed within temperature values acceptable for the correct operation 
@@ -992,14 +1067,17 @@ minimize the dark current: this is obtained by circulating a refrigerating fluid
 
 \subsubsection{The undoped Cesium Iodide crystals}
 Each calorimeter disk is filled with 674 undoped cesium 
-iodide (CsI) crystals \cite{em6}, wrapped in a 150 $\mu$m Tyvek foil. 
+iodide (CsI) crystals \cite{em6}, wrapped in a 150 $\mu$m Tyvek \del{foil}.
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{Tyvek is not a foil, it is a specialized non-metal wrapping material}
+
 Undoped CsI represents the best compromise between cost, 
 reliability, performance and radiation hardness, providing 
 a fast emission time and a sufficiently high light yield. Pure 
 CsI has a wavelength peak emission at 310 nm, a scintillation 
 time of 20 ns, and a light yield of about 2000 photons/MeV. 
 Figure \ref{fig:calo2} (top right) shows some CsI crystals: 
-the dimensions are 34$\times$34 200 mm$^3$. The crystal length 
+the dimensions are $34 \times 34 \times 200 mm^3$. The crystal length 
 is approximately 10$X_0$ which is sufficient to contain the 105 
 MeV CE shower since the average incident angle 
 is 50°. Undoped CsI crystals also have the radiation hardness 
@@ -1025,13 +1103,14 @@ FEE, Mezzanine board and Digitizer board. In the following,
 a brief description of each component will be provided.
 \paragraph{Silicon PhotoMultipliers (SiPM)}
 Since the calorimeter will operate in a 1 T magnetic field, SiPMs were chosen over PMTs (Figure \ref{fig:sipmcell}) \cite{em1}. 
-To well match the scintillation emission of 310 nm to the SiPM photon detection efficiency, 
+To \del{well} match the scintillation emission of 310 nm to the SiPM photon detection efficiency, 
 UV extended Hamamatsu SiPMs with a front window made of a silicon resin were selected. Each SiPM is composed of a
 2 $\times$ 3 array array of individual 6 mm $\times$ 6 mm cells.
 The array can be seen as the parallel of two series of 3 cells, that 
 are powered by the same source. The mixed configuration is motivated by 
-two competing requirements: a parallel connection has greater capacitance and a higher response time 
-but requiring a lower bias voltage, whereas 
+two competing requirements: a parallel connection has greater capacitance
+and a \del{higher}\add{slower} response time 
+but \del{requiring}\add{requires} a lower bias voltage, whereas 
 a series connection has the opposite characteristics. 
 To improve reliability, light collection efficiency and resolution, each single 
 crystal is readout by two custom SiPMs arrays.
@@ -1042,8 +1121,12 @@ thermal coupling between crystals and FEE, the crystal-SiPM
 coupling is done without any optical grease and a 2 mm air gap is mantained 
 between the crystal and the readout sensor.
 
-Since the main scintillation component has a wavelength of 315 nm to match the SiPM
-photon detection efficiency as a function of wavelength, each crystal is coupled with a readout 
+\del{Since the main scintillation component has a wavelength of 315 nm to match the SiPM
+  photon detection efficiency as a function of wavelength, each}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{repetition}
+
+\add{Each} crystal is coupled with a readout 
 module consisting of two ultraviolet (UV)-extended SiPM arrays
 and the corresponding analog FEE boards, as illustrated in Figure 
 \ref{fig:calo2} (bottom right) \cite{em5}, \cite{em2} and \cite{em3}. 
@@ -1071,7 +1154,7 @@ The Front-End board provides signal preamplification and shaping, local linear
 regulation of the SiPM bias voltage, and monitoring of the SiPM current and temperature. 
 The two Front-End boards connected to the two SiPMs reading the same CsI 
 crystal are housed in a copper holder (Figure \ref{fig:holder}), which 
-serves as a mechanical support and ensures SiPM cooling. 
+serves as a mechanical support and ensures \add{the} SiPM cooling. 
 An enternal Faraday cage reduces the noise. The holder also holds 
 an optical fiber used to pulse the crystal with a laser light to 
 calibrate the energy and time response.
@@ -1157,19 +1240,26 @@ shown in Figure \ref{fig:calores} \cite{bobbb} and \cite{calo95}.
     \label{fig:calores}
 \end{figure}
 \subsection{The Cosmic Ray Veto}\label{CRV}
-As reported in the Section \ref{backgrounds}, the expected Mu2e 
-cosmic background is at a level of 1 signal-like event per day. 
+As reported in \del{the} Section \ref{backgrounds}, \hlite{the expected Mu2e 
+  cosmic background is at a level of 1 signal-like event per day}.
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{as spelled - wrong, rephrase}
+
 To minimize the backgrounds, Mu2e exploits a combination of passive shielding and an active 
-veto system named CRV. Figure \ref{fig:crv} shows a 
+\add{cosmic ray} veto system \del{named CRV}\add(CRV). Figure \ref{fig:crv} shows a 
 schematic representation of 
-the CRV covering the region of the DS and half of the Transport Solenoid 
+the CRV covering the region of the DS and \add{a} half of the Transport Solenoid 
 almost entirely (there is no veto on the floor at the bottom), for a total detector area
 of 327 m$^2$.
 The CRV modules are manufactured from plastic scintillator extrusions. 
 In different regions of the detector the extrusions may have different lenghts, 
 but they all have the same cross-sectional area of $5 \times 2$ cm$^2$.
 The extrusions are coated with Titanium dioxide to improve internal reflections and thus, the light yield. 
-Two grooves are extruded inside the scintillator bar throughout its length to contain two 
+Two \del{grooves}\add{holes}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{those are holes, google the difference between a hole and a groove}
+
+are extruded inside the scintillator bar throughout its length to contain two 
 1.4 mm diameter wavelength shifting fibers. The fibers transport light to the extrusion 
 ends where each fiber is instrumented with a $2 \times 2$ mm$^2$ SiPM at each end. Figure \ref{fig:crvmodule} 
 shows the cross-section of a CRV module. Each module is made of four overlapping staggered layers 
@@ -1227,8 +1317,11 @@ to measure the number of muons stopped on the ST.
     including 3p$\rightarrow$1s and 4p$\rightarrow$1s. In addition, the 3d$\rightarrow$2p 
     transition that populates the 2p state appears in the energy spectrum.
 
-    An alternative option is to measure gamma rays associated 
-    to muons interactions in the ST (Figure \ref{fig:stmprocess}).
+    \hlite{An alternative option is to measure gamma rays associated 
+      to muons interactions in the ST}
+    \todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{reads as if the 347 keV line was not due to muon interactions in the ST, rephrase}
+(Figure \ref{fig:stmprocess}).
     These are unambiguous signals that muons stopped in the aluminum target. 
     The main signatures are the following ones: 
     \begin{itemize}
@@ -1256,10 +1349,13 @@ to measure the number of muons stopped on the ST.
     \label{fig:stmprocess}
     \end{figure}
 
-    The Mu2e STM has been designed to determine the number of 
+   \hlite{ The Mu2e STM has been designed to determine the number of 
     muons in the ST within 10\% precision over the course of the experiment.  
     It is made of two solid state High Purity Germanium (HPGe) crystal detectors and one 
-    scintillating lanthanum bromide (LaBr$_3$) detectors. The HPGe detectors have the 
+    scintillating lanthanum bromide (LaBr$_3$) detectors.}
+  \todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{The STM section should start with this sentence}
+The HPGe detectors have the 
     energy resolution (FWHM) of 2.5 keV in the energy range of 300-2000 keV and are used 
     to measure photons produced by the secondary muonic aluminium orbital transitions 
     (347 keV) and nuclear captures (884 keV). The LaBr$_3$ detector has an order of 
