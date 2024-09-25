@@ -174,8 +174,8 @@ L.~Willmann et~al.
 
 \bibitem[Ambrose et~al.(1998)]{BNL:1998apv}
 D.~Ambrose et~al.
-\newblock {New limit on muon and electron lepton number violation from K0(L)
-  ---\ensuremath{>} mu+- e-+ decay}.
+\newblock {New limit on muon and electron lepton number violation from $K_0(L)
+  \rightarrow \mu^\pm e^\mp$ decay}.
 \newblock \emph{Phys. Rev. Lett.}, 81:\penalty0 5734--5737, 1998.
 
 \bibitem[{A. Sher et al.}({2005})]{PhysRevD.72.012005}
@@ -223,18 +223,8 @@ D.~Ambrose et~al.
 \newblock {2016}.
 \newblock URL \url{{https://hdl.handle.net/1721.1/134602}}.
 
-\bibitem[{Sirunyan, Albert and Tumasyan, Armen and Adam, Wolfgang and Ambrogi,
-  Federico and Asilar, Ece and Bergauer, Thomas and Brandstetter, Johannes and
-  Brondolin, Erica and Dragicevic, Marko and Erö, Janos and Flechl, Martin and
-  Friedl, Markus and Fruehwirth, Rudolf and Ghete, V. and Grossmann, Johannes
-  and Hrubec, Josef and Jeitler, M. and König, Axel and Krammer, Natascha and
-  Wyslouch, Boleslaw}({2018})]{cms17}
-{Sirunyan, Albert and Tumasyan, Armen and Adam, Wolfgang and Ambrogi, Federico
-  and Asilar, Ece and Bergauer, Thomas and Brandstetter, Johannes and
-  Brondolin, Erica and Dragicevic, Marko and Erö, Janos and Flechl, Martin and
-  Friedl, Markus and Fruehwirth, Rudolf and Ghete, V. and Grossmann, Johannes
-  and Hrubec, Josef and Jeitler, M. and König, Axel and Krammer, Natascha and
-  Wyslouch, Boleslaw}.
+\bibitem[{Sirunyan A. et al.}({2018})]{cms17}
+{Sirunyan A. et al.}
 \newblock {Search for lepton flavour violating decays of the Higgs boson to
   $\mu \tau$ and $e \tau$ in proton-proton collisions at $\sqrt{s}$ = 13 TeV}.
 \newblock page~{}, {03} {2018}.

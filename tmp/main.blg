@@ -23,7 +23,7 @@ Warning--empty journal in trkreq
 Warning--empty journal in Heck:1998vt
 You've used 90 entries,
             2481 wiz_defined-function locations,
-            1162 strings with 20595 characters,
+            1162 strings with 20220 characters,
 and the built_in function-call counts, 30031 in all, are:
 = -- 2791
 > -- 757
