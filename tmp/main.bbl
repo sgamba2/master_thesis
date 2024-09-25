@@ -13,14 +13,12 @@
 Wilhelm~H. Bertl et~al.
 \newblock {A Search for muon to electron conversion in muonic gold}.
 \newblock \emph{Eur. Phys. J. C}, 47:\penalty0 337--346, 2006.
-\newblock \doi{10.1140/epjc/s2006-02582-x}.
 
 \bibitem[{Bernstein, Robert H.}({2019})]{bobbb}
 {Bernstein, Robert H.}
 \newblock {The Mu2e Experiment}.
 \newblock \emph{{Frontiers in Physics}}, {7}, {2019}.
 \newblock ISSN {2296-424X}.
-\newblock \doi{{10.3389/fphy.2019.00001}}.
 \newblock URL
   \url{{https://www.frontiersin.org/articles/10.3389/fphy.2019.00001}}.
 
@@ -30,7 +28,6 @@ Wilhelm~H. Bertl et~al.
 \newblock \emph{{Physics Reports}}, {532}\penalty0 ({2}):\penalty0 {27--64},
   November {2013}.
 \newblock ISSN {0370-1573}.
-\newblock \doi{{10.1016/j.physrep.2013.07.002}}.
 \newblock URL \url{{http://dx.doi.org/10.1016/j.physrep.2013.07.002}}.
 
 \bibitem[{L. Cabibbi, G. Signorelli}({2018})]{clfv_signorelli}
@@ -40,14 +37,12 @@ Wilhelm~H. Bertl et~al.
 \newblock \emph{{La Rivista del Nuovo Cimento}}, {41}\penalty0 ({2}):\penalty0
   {71--174}, {Jan} {2018}.
 \newblock ISSN {0393697X, 0393697X}.
-\newblock \doi{{10.1393/ncr/i2018-10144-0}}.
 \newblock URL \url{{https://doi.org/10.1393/ncr/i2018-10144-0}}.
 
 \bibitem[{Cabibbo, Nicola}({1963})]{PhysRevLett.10.531}
 {Cabibbo, Nicola}.
 \newblock {Unitary Symmetry and Leptonic Decays}.
 \newblock \emph{{Phys. Rev. Lett.}}, {10}:\penalty0 {531--533}, {Jun} {1963}.
-\newblock \doi{{10.1103/PhysRevLett.10.531}}.
 \newblock URL \url{{https://link.aps.org/doi/10.1103/PhysRevLett.10.531}}.
 
 \bibitem[{Ardu, Marco and Pezzullo, Gianantonio}({2022})]{universe8060299}
@@ -55,7 +50,6 @@ Wilhelm~H. Bertl et~al.
 \newblock {Introduction to Charged Lepton Flavor Violation}.
 \newblock \emph{{Universe}}, {8}\penalty0 ({6}), {2022}.
 \newblock ISSN {2218-1997}.
-\newblock \doi{{10.3390/universe8060299}}.
 \newblock URL \url{{https://www.mdpi.com/2218-1997/8/6/299}}.
 
 \bibitem[{W.J. Marciano and A.I. Sanda}({1977})]{MARCIANO1977303}
@@ -64,21 +58,18 @@ Wilhelm~H. Bertl et~al.
 \newblock \emph{{Physics Letters B}}, {67}\penalty0 ({3}):\penalty0 {303--305},
   {1977}.
 \newblock ISSN {0370-2693}.
-\newblock \doi{{https://doi.org/10.1016/0370-2693(77)90377-X}}.
 
 \bibitem[{Davis, Raymond and Harmer, Don S. and Hoffman, Kenneth
   C.}({1968})]{PhysRevLett.20.1205}
 {Davis, Raymond and Harmer, Don S. and Hoffman, Kenneth C.}
 \newblock {Search for Neutrinos from the Sun}.
 \newblock \emph{{Phys. Rev. Lett.}}, {20}:\penalty0 {1205--1209}, {May} {1968}.
-\newblock \doi{{10.1103/PhysRevLett.20.1205}}.
 \newblock URL \url{{https://link.aps.org/doi/10.1103/PhysRevLett.20.1205}}.
 
 \bibitem[{Weinberg, Steven}({1979})]{wein}
 {Weinberg, Steven}.
 \newblock {Baryon- and Lepton-Nonconserving Processes}.
 \newblock \emph{{Phys. Rev. Lett.}}, {43}:\penalty0 {1566--1570}, {Nov} {1979}.
-\newblock \doi{{10.1103/PhysRevLett.43.1566}}.
 \newblock URL \url{{https://link.aps.org/doi/10.1103/PhysRevLett.43.1566}}.
 
 \bibitem[{Harnik, Roni and Kopp, Joachim and Zupan, Jure}({2013})]{Harnik_2013}
@@ -87,14 +78,12 @@ Wilhelm~H. Bertl et~al.
 \newblock \emph{{Journal of High Energy Physics}}, {2013}\penalty0 ({3}), {mar}
   {2013}.
 \newblock ISSN {1029-8479}.
-\newblock \doi{{10.1007/jhep03(2013)026}}.
 \newblock URL \url{{http://dx.doi.org/10.1007/JHEP03(2013)026}}.
 
 \bibitem[{Pati, Jogesh C. and Salam, Abdus}({1974})]{PhysRevD.10.275}
 {Pati, Jogesh C. and Salam, Abdus}.
 \newblock {Lepton number as the fourth "color"}.
 \newblock \emph{{Phys. Rev. D}}, {10}:\penalty0 {275--289}, {Jul} {1974}.
-\newblock \doi{{10.1103/PhysRevD.10.275}}.
 \newblock URL \url{{https://link.aps.org/doi/10.1103/PhysRevD.10.275}}.
 
 \bibitem[{I. Doršner and S. Fajfer and A. Greljo and J.F. Kamenik and N.
@@ -104,7 +93,6 @@ Wilhelm~H. Bertl et~al.
   colliders}.
 \newblock \emph{{Physics Reports}}, {641}:\penalty0 {1--68}, {2016}.
 \newblock ISSN {0370-1573}.
-\newblock \doi{{https://doi.org/10.1016/j.physrep.2016.06.001}}.
 \newblock URL
   \url{{https://www.sciencedirect.com/science/article/pii/S0370157316301314}}.
 \newblock {Physics of leptoquarks in precision experiments and at particle
@@ -116,7 +104,6 @@ Wilhelm~H. Bertl et~al.
 \newblock \emph{{Physics Reports}}, {317}\penalty0 ({3-4}):\penalty0
   {143--250}, {aug} {1999}.
 \newblock ISSN {0370-1573}.
-\newblock \doi{{10.1016/s0370-1573(98)00133-1}}.
 \newblock URL \url{{http://dx.doi.org/10.1016/S0370-1573(98)00133-1}}.
 
 \bibitem[{Particle Data Group, Zyla et al.}({2020})]{zyla}
@@ -125,7 +112,6 @@ Wilhelm~H. Bertl et~al.
 \newblock \emph{{Progress of Theoretical and Experimental Physics}},
   {2020}\penalty0 ({8}):\penalty0 {083C01}, {08} {2020}.
 \newblock ISSN {2050-3911}.
-\newblock \doi{{10.1093/ptep/ptaa104}}.
 \newblock URL \url{{https://doi.org/10.1093/ptep/ptaa104}}.
 
 \bibitem[{MEG II collaboration, A.M. Baldini et
@@ -138,7 +124,6 @@ Wilhelm~H. Bertl et~al.
 {Bellgardt, U. and others}.
 \newblock {Search for the Decay $\mu^+ \to e^+ e^+ e^-$}.
 \newblock \emph{{Nucl. Phys. B}}, {299}:\penalty0 {1--6}, {1988}.
-\newblock \doi{{10.1016/0550-3213(88)90462-2}}.
 
 \bibitem[{P. Wintz}({1998})]{titanium}
 {P. Wintz}.
@@ -150,7 +135,6 @@ Wilhelm~H. Bertl et~al.
 L.~Willmann et~al.
 \newblock {New bounds from searching for muonium to anti-muonium conversion}.
 \newblock \emph{Phys. Rev. Lett.}, 82:\penalty0 49--52, 1999.
-\newblock \doi{10.1103/PhysRevLett.82.49}.
 
 \bibitem[{Aubert et al.}({2010})]{Aubert_2010}
 {Aubert et al.}
@@ -159,7 +143,6 @@ L.~Willmann et~al.
   \mu^{\pm}\gamma$}.
 \newblock \emph{{Physical Review Letters}}, {104}\penalty0 ({2}), {jan} {2010}.
 \newblock ISSN {1079-7114}.
-\newblock \doi{{10.1103/physrevlett.104.021802}}.
 \newblock URL \url{{http://dx.doi.org/10.1103/PhysRevLett.104.021802}}.
 
 \bibitem[{Hayasaka et al.}({2010})]{Hayasaka_2010}
@@ -169,7 +152,6 @@ L.~Willmann et~al.
 \newblock \emph{{Physics Letters B}}, {687}\penalty0 ({2-3}):\penalty0
   {139--143}, {apr} {2010}.
 \newblock ISSN {0370-2693}.
-\newblock \doi{{10.1016/j.physletb.2010.03.037}}.
 \newblock URL \url{{http://dx.doi.org/10.1016/j.physletb.2010.03.037}}.
 
 \bibitem[{R. Aaij et al.}({2013})]{PhysRevLett.111.141801}
@@ -179,7 +161,6 @@ L.~Willmann et~al.
   and
   ${B}^{0}\ensuremath{\rightarrow}{e}^{\mathbf{\ifmmode\pm\else\textpm\fi{}}}{\ensuremath{\mu}}^{\mathbf{\ensuremath{\mp}}}$}.
 \newblock \emph{{Phys. Rev. Lett.}}, {111}:\penalty0 {141801}, {Sep} {2013}.
-\newblock \doi{{10.1103/PhysRevLett.111.141801}}.
 \newblock URL \url{{https://link.aps.org/doi/10.1103/PhysRevLett.111.141801}}.
 
 \bibitem[{B. Auberta et al.}({2008})]{PhysRevD.77.091104}
@@ -189,7 +170,6 @@ L.~Willmann et~al.
   and ${B}^{+}\ensuremath{\rightarrow}{l}^{+}\ensuremath{\nu}$ ($l=e$,
   $\ensuremath{\mu}$) using hadronic tag reconstruction}.
 \newblock \emph{{Phys. Rev. D}}, {77}:\penalty0 {091104}, {May} {2008}.
-\newblock \doi{{10.1103/PhysRevD.77.091104}}.
 \newblock URL \url{{https://link.aps.org/doi/10.1103/PhysRevD.77.091104}}.
 
 \bibitem[Ambrose et~al.(1998)]{BNL:1998apv}
@@ -197,21 +177,18 @@ D.~Ambrose et~al.
 \newblock {New limit on muon and electron lepton number violation from K0(L)
   ---\ensuremath{>} mu+- e-+ decay}.
 \newblock \emph{Phys. Rev. Lett.}, 81:\penalty0 5734--5737, 1998.
-\newblock \doi{10.1103/PhysRevLett.81.5734}.
 
 \bibitem[{A. Sher et al.}({2005})]{PhysRevD.72.012005}
 {A. Sher et al.}
 \newblock {Improved upper limit on the decay
   ${K}^{+}\ensuremath{\rightarrow}{\ensuremath{\pi}}^{+}{\ensuremath{\mu}}^{+}{e}^{\ensuremath{-}}$}.
 \newblock \emph{{Phys. Rev. D}}, {72}:\penalty0 {012005}, {Jul} {2005}.
-\newblock \doi{{10.1103/PhysRevD.72.012005}}.
 \newblock URL \url{{https://link.aps.org/doi/10.1103/PhysRevD.72.012005}}.
 
 \bibitem[{Abouzaid, E. and others}({2008})]{KTeV:2007cvy}
 {Abouzaid, E. and others}.
 \newblock {Search for lepton flavor violating decays of the neutral kaon}.
 \newblock \emph{{Phys. Rev. Lett.}}, {100}:\penalty0 {131803}, {2008}.
-\newblock \doi{{10.1103/PhysRevLett.100.131803}}.
 
 \bibitem[{W. Love et al.}({2008})]{Love_2008}
 {W. Love et al.}
@@ -219,7 +196,6 @@ D.~Ambrose et~al.
 \newblock \emph{{Physical Review Letters}}, {101}\penalty0 ({20}), {nov}
   {2008}.
 \newblock ISSN {1079-7114}.
-\newblock \doi{{10.1103/physrevlett.101.201601}}.
 \newblock URL \url{{http://dx.doi.org/10.1103/PhysRevLett.101.201601}}.
 
 \bibitem[{G. Aad et al., ATLAS Collaboration}({2014})]{Aad_2014}
@@ -228,7 +204,6 @@ D.~Ambrose et~al.
   with the ATLAS detector}.
 \newblock \emph{{Physical Review D}}, {90}\penalty0 ({7}), {oct} {2014}.
 \newblock ISSN {1550-2368}.
-\newblock \doi{{10.1103/physrevd.90.072010}}.
 \newblock URL \url{{http://dx.doi.org/10.1103/PhysRevD.90.072010}}.
 
 \bibitem[{R. Akers et al., OPAL Collaboration}({1995})]{akers}
@@ -246,7 +221,6 @@ D.~Ambrose et~al.
   $e\mu$ in proton-proton collisions at $\sqrt{s}=8\text{ }\text{
   }\mathrm{TeV}$}.
 \newblock {2016}.
-\newblock \doi{{10.1016/J.PHYSLETB.2016.09.062}}.
 \newblock URL \url{{https://hdl.handle.net/1721.1/134602}}.
 
 \bibitem[{Sirunyan, Albert and Tumasyan, Armen and Adam, Wolfgang and Ambrogi,
@@ -271,7 +245,6 @@ D.~Ambrose et~al.
 \newblock {Fermilab's Intensity Frontier}.
 \newblock \emph{{Annual Review of Nuclear and Particle Science}}, {60}\penalty0
   ({1}):\penalty0 {513--538}, {2010}.
-\newblock \doi{{10.1146/annurev-nucl-100809-131949}}.
 \newblock URL \url{{ https://doi.org/10.1146/annurev-nucl-100809-131949 }}.
 
 \bibitem[{Hewett, J L et al.}({2012})]{osti_1042577}
@@ -279,7 +252,6 @@ D.~Ambrose et~al.
 \newblock {Fundamental physics at the intensity frontier. Report of the
   workshop held December 2011 in Rockville, MD.}
 \newblock {6} {2012}.
-\newblock \doi{{10.2172/1042577}}.
 \newblock URL \url{{https://www.osti.gov/biblio/1042577}}.
 
 \bibitem[Aoki et~al.(2022)]{CGroup:2022tli}
@@ -292,7 +264,6 @@ M.~Aoki et~al.
 \newblock \emph{{Il Nuovo Cimento C}}, {39}\penalty0 ({4}):\penalty0 {1--8},
   {Dec} {2016}.
 \newblock ISSN {03905551, 03905551}.
-\newblock \doi{{10.1393/ncc/i2016-16325-7}}.
 \newblock URL \url{{https://doi.org/10.1393/ncc/i2016-16325-7}}.
 
 \bibitem[{Mu2e Collaboration}({2023})]{universe9010054}
@@ -301,7 +272,6 @@ M.~Aoki et~al.
   \rightarrow e ^-$ Conversion Search in Aluminum}.
 \newblock \emph{{Universe}}, {9}\penalty0 ({1}), {2023}.
 \newblock ISSN {2218-1997}.
-\newblock \doi{{10.3390/universe9010054}}.
 \newblock URL \url{{https://www.mdpi.com/2218-1997/9/1/54}}.
 
 \bibitem[Cei(2020)]{Cei_2020}
@@ -310,7 +280,6 @@ F~Cei.
   muons.
 \newblock \emph{Journal of Physics: Conference Series}, 1526\penalty0
   (1):\penalty0 012020, apr 2020.
-\newblock \doi{10.1088/1742-6596/1526/1/012020}.
 \newblock URL \url{https://dx.doi.org/10.1088/1742-6596/1526/1/012020}.
 
 \bibitem[{MEG II Collaboration}({2024})]{megiicollaboration2024operation}
@@ -321,7 +290,6 @@ F~Cei.
 {Eichler, Ralph and Grab, Christophorus}.
 \newblock {The SINDRUM-I Experiment}.
 \newblock \emph{{SciPost Physics Proceedings}}, page~{}, {09} {2021}.
-\newblock \doi{{10.21468/SciPostPhysProc.5.007}}.
 
 \bibitem[{Gavin Hesketh and Sean Hughes and Ann-Kathrin Perrevoort and Nikolaos
   Rompotis}({2022})]{hesketh2022mu3e}
@@ -336,7 +304,6 @@ F~Cei.
   experiment}.
 \newblock \emph{{EPJ Web of Conferences}}, {234}:\penalty0 {01011}, {01}
   {2020}.
-\newblock \doi{{10.1051/epjconf/202023401011}}.
 
 \bibitem[{E. C. Dukes}({2021})]{dukes}
 {E. C. Dukes}.
@@ -348,7 +315,6 @@ F~Cei.
 \newblock {DeeMe experiment to search for muon to electron conversion at J-PARC
   MLF}.
 \newblock page {109}, {02} {2018}.
-\newblock \doi{{10.22323/1.295.0109}}.
 
 \bibitem[{Abramishvili R. et al.}({2020})]{Abramishvili_2020}
 {Abramishvili R. et al.}
@@ -356,7 +322,6 @@ F~Cei.
 \newblock \emph{{Progress of Theoretical and Experimental Physics}},
   {2020}\penalty0 ({3}), {2020}.
 \newblock ISSN {2050-3911}.
-\newblock \doi{{10.1093/ptep/ptz125}}.
 \newblock URL \url{{http://dx.doi.org/10.1093/ptep/ptz125}}.
 
 \bibitem[ABA({2002})]{ABASHIAN2002117}
@@ -365,7 +330,6 @@ F~Cei.
   Accelerators, Spectrometers, Detectors and Associated Equipment}},
   {479}\penalty0 ({1}):\penalty0 {117--232}, {2002}.
 \newblock ISSN {0168-9002}.
-\newblock \doi{{https://doi.org/10.1016/S0168-9002(01)02013-7}}.
 \newblock URL
   \url{{https://www.sciencedirect.com/science/article/pii/S0168900201020137}}.
 \newblock {Detectors for Asymmetric B-factories}.
@@ -373,7 +337,6 @@ F~Cei.
 \bibitem[{The LHCb Collaboration}({2008})]{TheLHCbCollaboration2008}
 {The LHCb Collaboration}.
 \newblock {3}\penalty0 ({08}):\penalty0 {S08005}, {aug} {2008}.
-\newblock \doi{{10.1088/1748-0221/3/08/S08005}}.
 \newblock URL \url{{https://dx.doi.org/10.1088/1748-0221/3/08/S08005}}.
 
 \bibitem[{Branchini, Paolo}({2018})]{universe4100101}
@@ -381,7 +344,6 @@ F~Cei.
 \newblock {The Belle II Experiment: Status and Prospects}.
 \newblock \emph{{Universe}}, {4}\penalty0 ({10}), {2018}.
 \newblock ISSN {2218-1997}.
-\newblock \doi{{10.3390/universe4100101}}.
 \newblock URL \url{{https://www.mdpi.com/2218-1997/4/10/101}}.
 
 \bibitem[{J Bennett}({2016})]{Bennett_2016}
@@ -389,7 +351,6 @@ F~Cei.
 \newblock {Belle II Physics Prospects, Status and Schedule}.
 \newblock \emph{{Journal of Physics: Conference Series}}, {770}\penalty0
   ({1}):\penalty0 {012044}, {nov} {2016}.
-\newblock \doi{{10.1088/1742-6596/770/1/012044}}.
 \newblock URL \url{{https://dx.doi.org/10.1088/1742-6596/770/1/012044}}.
 
 \bibitem[{Kargiantoulakis, Manolis}({2020})]{Kargiantoulakis_2020}
@@ -399,7 +360,6 @@ F~Cei.
 \newblock \emph{{Modern Physics Letters A}}, {35}\penalty0 ({19}):\penalty0
   {2030007}, {apr} {2020}.
 \newblock ISSN {1793-6632}.
-\newblock \doi{{10.1142/s0217732320300074}}.
 \newblock URL \url{{http://dx.doi.org/10.1142/S0217732320300074}}.
 
 \bibitem[{R.M. Dzhilkibaev and V.M. Lobashev}(1989)]{lobachev}
@@ -414,7 +374,6 @@ F~Cei.
 \newblock \emph{{Physics Reports}}, {354}\penalty0 ({4}):\penalty0 {243--409},
   {2001}.
 \newblock ISSN {0370-1573}.
-\newblock \doi{{https://doi.org/10.1016/S0370-1573(01)00012-6}}.
 \newblock URL
   \url{{https://www.sciencedirect.com/science/article/pii/S0370157301000126}}.
 
@@ -423,7 +382,6 @@ F~Cei.
 {Czarnecki, Andrzej and Garcia i Tormo, Xavier and Marciano, William J.}
 \newblock {Muon decay in orbit: Spectrum of high-energy electrons}.
 \newblock \emph{{Phys. Rev. D}}, {84}:\penalty0 {013006}, {Jul} {2011}.
-\newblock \doi{{10.1103/PhysRevD.84.013006}}.
 \newblock URL \url{{https://link.aps.org/doi/10.1103/PhysRevD.84.013006}}.
 
 \bibitem[{R. Ehrlich}({2017})]{CRVposter}
@@ -439,14 +397,12 @@ F~Cei.
   $\mu$-Meson}.
 \newblock \emph{{Proceedings of the Physical Society. Section A}},
   {63}\penalty0 ({5}):\penalty0 {514}, {may} {1950}.
-\newblock \doi{{10.1088/0370-1298/63/5/311}}.
 \newblock URL \url{{https://dx.doi.org/10.1088/0370-1298/63/5/311}}.
 
 \bibitem[{Kinoshita, Toichiro and Sirlin, Alberto}({1959})]{PhysRev.113.1652}
 {Kinoshita, Toichiro and Sirlin, Alberto}.
 \newblock {Radiative Corrections to Fermi Interactions}.
 \newblock \emph{{Phys. Rev.}}, {113}:\penalty0 {1652--1660}, {Mar} {1959}.
-\newblock \doi{{10.1103/PhysRev.113.1652}}.
 \newblock URL \url{{https://link.aps.org/doi/10.1103/PhysRev.113.1652}}.
 
 \bibitem[{A. Gaponenko}({2017})]{gaponenko}
@@ -460,7 +416,6 @@ F~Cei.
   Tru\"ol, P.}
 \newblock {Photon Spectra from Radiative Absorption of Pions in Nuclei}.
 \newblock \emph{{Phys. Rev. C}}, {5}:\penalty0 {1867--1883}, {Jun} {1972}.
-\newblock \doi{{10.1103/PhysRevC.5.1867}}.
 \newblock URL \url{{https://link.aps.org/doi/10.1103/PhysRevC.5.1867}}.
 
 \bibitem[{Stratakis, Diktys and Convery, Mary E. and Johnstone, Carol and
@@ -473,7 +428,6 @@ F~Cei.
 \newblock {Accelerator performance analysis of the Fermilab Muon Campus}.
 \newblock \emph{{Phys. Rev. Accel. Beams}}, {20}:\penalty0 {111003}, {Nov}
   {2017}.
-\newblock \doi{{10.1103/PhysRevAccelBeams.20.111003}}.
 \newblock URL
   \url{{https://link.aps.org/doi/10.1103/PhysRevAccelBeams.20.111003}}.
 
@@ -490,7 +444,6 @@ F~Cei.
   Particle Accelerator Conference}, pages {3996--3999}, {Geneva, Switzerland},
   {June} {2015}. {JACoW}.
 \newblock ISBN {978-3-95450-168-7}.
-\newblock \doi{{https://doi.org/10.18429/JACoW-IPAC2015-THPF121}}.
 
 \bibitem[{D. R. Pushka}({2020})]{PT}
 {D. R. Pushka}.
@@ -507,7 +460,6 @@ F~Cei.
 \newblock {Conceptual Design of the Mu2e Production Solenoid}.
 \newblock \emph{{IEEE Transactions on Applied Superconductivity}},
   {23}\penalty0 ({3}):\penalty0 {4100604--4100604}, {2013}.
-\newblock \doi{{10.1109/TASC.2012.2232341}}.
 
 \bibitem[{Mu2e Collaboration}()]{tsview}
 {Mu2e Collaboration}.
@@ -521,7 +473,6 @@ F~Cei.
 \newblock {Model discriminating power of
   $\ensuremath{\mu}\ensuremath{\rightarrow}e$ conversion in nuclei}.
 \newblock \emph{{Phys. Rev. D}}, {80}:\penalty0 {013002}, {Jul} {2009}.
-\newblock \doi{{10.1103/PhysRevD.80.013002}}.
 \newblock URL \url{{https://link.aps.org/doi/10.1103/PhysRevD.80.013002}}.
 
 \bibitem[{Kitano, Ryuichiro and Koike, Masafumi and Okada,
@@ -531,7 +482,6 @@ F~Cei.
   muon-electron conversion rate for various nuclei [Phys. Rev. D 66, 096002
   (2002)]}.
 \newblock \emph{{Phys. Rev. D}}, {76}:\penalty0 {059902}, {Sep} {2007}.
-\newblock \doi{{10.1103/PhysRevD.76.059902}}.
 \newblock URL \url{{https://link.aps.org/doi/10.1103/PhysRevD.76.059902}}.
 
 \bibitem[{F. Abusalma et al.}({2018})]{abusalma2018expression}
@@ -544,14 +494,12 @@ F~Cei.
 \newblock {Negative Moun Spin Rotation}.
 \newblock \emph{{Physica Scripta}}, {11}\penalty0 ({3-4}):\penalty0 {133},
   {mar} {1975}.
-\newblock \doi{{10.1088/0031-8949/11/3-4/004}}.
 \newblock URL \url{{https://dx.doi.org/10.1088/0031-8949/11/3-4/004}}.
 
 \bibitem[Atanov et~al.(2022{\natexlab{a}})]{em4}
 Nikolay Atanov et~al.
 \newblock {The Mu2e Crystal Calorimeter: An Overview}.
 \newblock \emph{Instruments}, 6\penalty0 (4):\penalty0 60, 2022{\natexlab{a}}.
-\newblock \doi{10.3390/instruments6040060}.
 
 \bibitem[Atanov et~al.(2022{\natexlab{b}})]{em6}
 N.~Atanov et~al.
@@ -559,7 +507,6 @@ N.~Atanov et~al.
   Fermilab}.
 \newblock \emph{J. Phys. Conf. Ser.}, 2374\penalty0 (1):\penalty0 012021,
   2022{\natexlab{b}}.
-\newblock \doi{10.1088/1742-6596/2374/1/012021}.
 
 \bibitem[Atanov et~al.(2018)]{em7}
 N.~Atanov et~al.
@@ -571,34 +518,29 @@ Nikolay Atanov et~al.
 \newblock {The Mu2e Crystal and SiPM Calorimeter: Construction Status}.
 \newblock \emph{IEEE Trans. Nucl. Sci.}, 70\penalty0 (7):\penalty0 1281--1287,
   2023.
-\newblock \doi{10.1109/TNS.2023.3264757}.
 
 \bibitem[Morescalchi et~al.(2022)]{em5}
 Luca Morescalchi et~al.
 \newblock {The Readout Electronics of the Mu2e Electromagnetic Calorimeter}.
 \newblock \emph{PoS}, PANIC2021:\penalty0 113, 2022.
-\newblock \doi{10.22323/1.380.0113}.
 
 \bibitem[Ceravolo et~al.(2023)]{em2}
 S.~Ceravolo et~al.
 \newblock {Design and qualification of the Mu2e electromagnetic calorimeter
   electronic system}.
 \newblock \emph{Nucl. Instrum. Meth. A}, 1047:\penalty0 167875, 2023.
-\newblock \doi{10.1016/j.nima.2022.167875}.
 
 \bibitem[Atanov et~al.(2022{\natexlab{c}})]{em3}
 Nikolay Atanov et~al.
 \newblock {Mu2e Crystal Calorimeter Readout Electronics: Design and
   Characterisation}.
 \newblock \emph{Instruments}, 6\penalty0 (4):\penalty0 68, 2022{\natexlab{c}}.
-\newblock \doi{10.3390/instruments6040068}.
 
 \bibitem[et~al.(2018)]{calo95}
 N.~Atanov et~al.
 \newblock The mu2e undoped csi crystal calorimeter.
 \newblock \emph{Journal of Instrumentation}, 13\penalty0 (02):\penalty0 C02037,
   feb 2018.
-\newblock \doi{10.1088/1748-0221/13/02/C02037}.
 \newblock URL \url{https://dx.doi.org/10.1088/1748-0221/13/02/C02037}.
 
 \bibitem[{S. Giovannella}({2020})]{Giovannella_2020}
@@ -606,7 +548,6 @@ N.~Atanov et~al.
 \newblock {The detectors of the Mu2e experiment}.
 \newblock \emph{{Journal of Instrumentation}}, {15}\penalty0 ({06}):\penalty0
   {C06022}, {jun} {2020}.
-\newblock \doi{{10.1088/1748-0221/15/06/C06022}}.
 \newblock URL \url{{https://dx.doi.org/10.1088/1748-0221/15/06/C06022}}.
 
 \bibitem[{H. Kolanoski, N. Wermes}({2020})]{kola}
@@ -622,7 +563,6 @@ T.~Zhao, Y.~Chen, S.~Han, and J.~Hersch.
   Accelerators, Spectrometers, Detectors and Associated Equipment},
   340\penalty0 (3):\penalty0 485--490, 1994.
 \newblock ISSN 0168-9002.
-\newblock \doi{https://doi.org/10.1016/0168-9002(94)90129-5}.
 \newblock URL
   \url{https://www.sciencedirect.com/science/article/pii/0168900294901295}.
 
@@ -634,8 +574,7 @@ T.~Zhao, Y.~Chen, S.~Han, and J.~Hersch.
 \bibitem[{V. L. Rusu}({2019})]{vadimmu2e}
 {V. L. Rusu}.
 \newblock {Mu2e Tracker Front End Electronics}.
-\newblock \emph{{DOE IPR 2019 2019-12-10}}, {2019}.
-\newblock \doi{{mu2e-doc-30505-v3}}.
+\newblock \emph{{DOE IPR 2019 2019-12-10, mu2e-doc-30505-v3}}, {2019}.
 
 \bibitem[{Richie Bonventre, Greg Deuerling, Vadim L Rusu}({2016})]{drac}
 {Richie Bonventre, Greg Deuerling, Vadim L Rusu}.
@@ -650,15 +589,13 @@ T.~Zhao, Y.~Chen, S.~Han, and J.~Hersch.
   Accelerators, Spectrometers, Detectors and Associated Equipment}},
   {1046}:\penalty0 {167732}, {2023}.
 \newblock ISSN {0168-9002}.
-\newblock \doi{{https://doi.org/10.1016/j.nima.2022.167732}}.
 \newblock URL
   \url{{https://www.sciencedirect.com/science/article/pii/S0168900222010245}}.
 
-\bibitem[{R. Bernstein and A. Mukherjee}({2016})]{trkreq}
-{R. Bernstein and A. Mukherjee}.
+\bibitem[{R. Bernstein and A. Mukherjee, mu2e-doc-732-v22}({2016})]{trkreq}
+{R. Bernstein and A. Mukherjee, mu2e-doc-732-v22}.
 \newblock {Tracker Requirements Document}.
 \newblock {2016}.
-\newblock \doi{{mu2e-doc-732-v22}}.
 
 \bibitem[{Olive, K. A. et al.}({2014})]{muonflux}
 {Olive, K. A. et al.}

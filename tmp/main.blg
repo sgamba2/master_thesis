@@ -4,7 +4,7 @@ The top-level auxiliary file: main.aux
 The style file: unsrtnat.bst
 Database file #1: main.bib
 Warning--entry type for "tsview" isn't style-file defined
---line 446 of file main.bib
+--line 418 of file main.bib
 Warning--empty author in PhysRevD.104.032013
 Warning--empty journal in PhysRevD.104.032013
 Warning--empty journal in cms17
@@ -23,16 +23,16 @@ Warning--empty journal in trkreq
 Warning--empty journal in Heck:1998vt
 You've used 90 entries,
             2481 wiz_defined-function locations,
-            1225 strings with 22426 characters,
-and the built_in function-call counts, 30913 in all, are:
-= -- 2980
+            1162 strings with 20595 characters,
+and the built_in function-call counts, 30031 in all, are:
+= -- 2791
 > -- 757
 < -- 91
 + -- 396
 - -- 214
-* -- 2085
-:= -- 4845
-add.period$ -- 395
+* -- 1959
+:= -- 4656
+add.period$ -- 332
 call.type$ -- 90
 change.case$ -- 179
 chr.to.int$ -- 88
@@ -40,13 +40,13 @@ cite$ -- 109
 duplicate$ -- 1715
 empty$ -- 3140
 format.name$ -- 312
-if$ -- 6728
+if$ -- 6539
 int.to.chr$ -- 3
 int.to.str$ -- 91
 missing$ -- 83
-newline$ -- 582
+newline$ -- 519
 num.names$ -- 261
-pop$ -- 628
+pop$ -- 691
 preamble$ -- 1
 purify$ -- 90
 quote$ -- 0
@@ -61,5 +61,5 @@ type$ -- 627
 warning$ -- 16
 while$ -- 242
 width$ -- 0
-write$ -- 1391
+write$ -- 1265
 (There were 17 warnings)
