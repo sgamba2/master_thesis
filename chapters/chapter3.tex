@@ -7,8 +7,8 @@ This includes a description of the tracker mechanical structures
 Most of the discussion is based on \cite{kola} and \cite{bobbb}.}
 
 \section{Drift tubes}
-Gas detectors are capable of measuring charged particle coordinates. 
-They provide spatial resolution which could be as good as 50 $\mu$m
+\del{Gas detectors are capable of measuring charged particle coordinates.
+They}\add{Gaseous detectors} provide spatial resolution which could be as good as 50 $\mu$m
 and high detection efficiency at a low cost \cite{kola}. 
 There are many different gas ionizazion detectors, one of which is the drift tube.
 The basic configuration of a drift tube is shown in Figure \ref{fig:drifttube}.
@@ -226,9 +226,10 @@ For more details, refer to \cite{kola}.
 %where $c$ is the speed of light and $\epsilon$ is the dielectric constant of the gas. As $\epsilon$ is a function of $\omega$, 
 %components of different frequencies propagate at slightly different velocities. This leads to a dispersion (widening) of the signal. It brings some subtleties when using signal arrival time difference between straw tube ends to determine the longitudinal coordinate of an avalanche.
 \section{The Mu2e straw tracker}\label{geomtra}
-The sensitive elements of the detector are straw-tubes with a diameter of 5 mm and a variable length between 40 cm and 110 cm, 
+The sensitive elements of the \del{detector}\add{Mu2e tracker} are the straw tubes
+with a diameter of 5 mm and a \del{variable} length \add{varying in} between 40 cm and 110 cm, 
 filled with a 80\%:20\% Ar:CO$_2$ mixture at 1 atm.  
-The detector has a modular design, made of basic elements named $Panel$, $Face$, 
+The detector has a modular design, \add{and it is} made of basic elements named $Panel$, $Face$, 
 $Plane$ and $Station$, shown in Figure \ref{fig:trkpanel}. 
 The panel is the fundamental unit of the detector: 96 straw tubes arranged like 
 harp cords in two staggered layers to form one harp-shaped panel spanning 120° along the azimuthal angle \cite{bartoszek2015mu2e}, 
@@ -237,7 +238,7 @@ Three rotated panels form a face, and two faces rotated of 30° form one plane, 
 Two planes are coupled to make a station, mounting the second rotated on the vertical axes by 180°.
 Figure \ref{fig:trkpanel} (Top right-right).
 One station is thus made of twelve panels. The entire tracker is made of 18 stations, Figure \ref{fig:trkpanel} (bottom) 
-and has a total length of 3.2 m and a diameter of approximately 1.7 m.
+and has \del{a}\add{the} total length of 3.2 m and \del{a}\add{the} diameter of approximately 1.7 m.
 Each panel is equipped with its own front-end and DAQ electronics placed within the mechanical structure (colored in red).
 \begin{figure}[!h]
 \centering
@@ -252,7 +253,7 @@ stations and support structure \cite{bartoszek2015mu2e}.}
 The Mu2e tracker straw tubes use the same detection principles as the gaseous 
 ionisation detectors \cite{kola}, to 
 meet the experiment requirements.
-Figure \ref{fig:trkpencil} shows the edge of a straw tube, compared to a pencil.
+Figure \ref{fig:trkpencil} shows \del{the edge}\add{an end} of a straw tube, compared to a pencil.
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.5\textwidth]{figures/png/Screenshot_20240327_000000.png}
@@ -261,8 +262,8 @@ Figure \ref{fig:trkpencil} shows the edge of a straw tube, compared to a pencil.
     \end{figure}
 
 
-All the straws have the same diameter of 5 mm, but their length 
-is between a maximum of 334 mm and a minimum of 1.174 m, 
+All \del{the} straws have the same diameter of 5 mm, \del{but their}\add{and the straw} length 
+\del{is}\add{varies} between a minimum of 334 mm and a maximum of 1174 mm, 
 depending on their position on the panel, as shown in Figure \ref{fig:gonzalo}.
 
 The straw is wound with two layers of 6 $\mu$m-thick metallized 
@@ -278,7 +279,7 @@ and work-hardened to minimise sagging effects.
 Figure \ref{fig:trktubessmon} shows the straw termination machanical 
 structure that allows to hold the anode wire in place.
 To increase the straw mechanical strength, two brass tubes 
-are joined to both ends of the straw using silver epoxied.
+are joined to both ends of the straw using \add{a} silver \del{epoxied}\add{epoxy}.
     \begin{figure}[!h]
         \centering
         \includegraphics[width =\textwidth]{figures/png/Screenshot_20240706_153158.png}
@@ -296,7 +297,7 @@ are joined to both ends of the straw using silver epoxied.
         a kapton sleeve is inserted inside the brass tube. 
         The kapton sleeve holds an injection-molded plastic 
         insert which cointains a semicylindrical duct that 
-        allows gas flow into and out of the tube. The insert 
+        allows \add{the} gas flow into and out of the tube. The insert 
         has a groove along its axis and a U-shaped brass anode 
         pin inserted at the end. To avoid slippage, the anode 
         wire is epoxied into the groove and soldered to the 
@@ -313,7 +314,7 @@ are joined to both ends of the straw using silver epoxied.
 From the straws, signals are sent to a common preamp board 
 via the anode pin pair and grounding clip. The tracker front 
 end electronics will be described in Section \ref{tfee}.
-\subsection{The building blocks: from the panels to the station}
+\subsection{The building blocks: from panels to the station}
 Groups of 96 straws are assembled in two staggered layers of 48 straws and make a 
 panel (Figure \ref{fig:trktubes}). 
 \begin{figure}[!h]
@@ -337,8 +338,8 @@ Each panel spans a 120° arc (Figure \ref{fig:gonzalo}).
 The dual-layer geometry was chosen to maximize the total panel coverage. 
 This simplifies pattern recognition and increases tracking robustness and efficiency. 
 A 1.25 mm separation between two consecutive straws accommodates 
-manufacturing tolerances and allows for straws expansion due to gas 
-pressure. This requires each straw to be self-supporting across its 
+manufacturing tolerances and allows for \del{straws}\add{the straw} expansion
+due to \add{the} gas pressure. This requires each straw to be self-supporting across its 
 length. Channels within a panel are numbered from 0, 
 corresponding to the radially most internal and longest straw, 
 to 95, corresponding to the most external and shortest straw. 
@@ -353,7 +354,9 @@ of the panel edge is shown in Figure \ref{fig:strawtubes}.
 
             The straws are filled with a gas mixture of 80\%:20\% Ar:CO$_2$ at 1 atm.
             Since the DS internal volume is evacuated to 10$^{-4}$ Torr, 
-            the straws must endure such pressure difference. Under normal temperature and 
+            the straws must endure such pressure difference.
+            \add{The overpressure is essential for the straw mechanical stability.}
+            Under normal temperature and 
             pressure conditions, the panel must have an average leak rate below 0.014 cm$^3$/min.  
             The nominal operating voltage of the straw is 1450 V. 
             Preliminary tests showed that the straw 
@@ -407,9 +410,9 @@ survey of the detector will be performed before moving to the Mu2e experimental 
 
 \subsection{The tracker front-end Electronics}\label{tfee}
 The front-end electronics performs amplification, digitization and data packaging 
-for transmission to the Data Acquisition System (DAQ) of the straw-tube signals. 
-In particular, each single straw provides two hit times and one waveform, 
-which are necessary to reconstruct the hit position along the straw, 
+for transmission to the Data Acquisition System (DAQ)\del{ of the straw-tube signals. 
+In particular, each single}\add{. Each} straw provides two hit times and one waveform, 
+which are necessary to reconstruct the hit position along the straw \add{and the hit charge}, 
 thereby allowing the use of constant fraction discrimination and mitigating time walk effects. 
 A schematic representation of the entire system logic is reported in Figure \ref{fig:flowfee}.
 \begin{figure}[!h]
@@ -418,7 +421,7 @@ A schematic representation of the entire system logic is reported in Figure \ref
     \caption[Signal flow through front-end electronics.]{Signal flow through front-end electronics \cite{bartoszek2015mu2e}.}
     \label{fig:flowfee}
     \end{figure}
-All the front-end electronics is installed on multiple Printed Circuit Boards 
+\del{All the}\add{The plane} front-end electronics is installed on \del{multiple}\add{several} Printed Circuit Boards 
 (PCBs) mounted on the outer section of the panel. 
 The PCBs are shown in Figure \ref{fig:trackerfee} \cite{vadimmu2e}.
 All PCBs are located in the outer section of the panel. 
@@ -427,27 +430,27 @@ which handles the high-voltage supply distribution to the straws, and
 the calibration-side (CAL-side), whose FPGA is programmed 
 to manage the generation of the test pulses.
 
-Signals from the straw tube channels are first read 
+Signals from the straw tube \del{channels} are first read 
 out from both ends by the pre-amplifiers (preamps).
 
-Both sides of the panel have one Analog Mother Board (AMB) and one Jumper board, 
+\del{Both sides}\add{Each side} of the panel \del{have}\add{has} one Analog Mother Board (AMB) and one Jumper board, 
 whose task consist of directing signals from the preamps towards the Digital 
 Motherboard (DMB) positioned at the center, then to the Digitizer Readout and 
 Assembler Controller (DRAC) (mounted on top of the DMB) to be processed and 
 temporarily stored. 
 
-The AMBs and the DMB also handle 
-low voltage distribution and the AMB on the HV side distributes the high voltage to the wires. 
+The AMBs and the DMB also handle \add{the} low voltage distribution,
+and the AMB on the HV side distributes the high voltage to the wires. 
 The low voltage power supply is connected to the panel through the KEY board which 
 contains also an optical fiber link and a JTAG connector. The AMB on 
 the CAL side can inject a calibration pulse into the wires. 
 The boards are also equipped with sensors to monitor environmental parameters, 
 including temperature, pressure and humidity.
 
-In addition, the frontends components were chosen to sustain high level of radiation.
+In addition, the frontend components were \del{chosen}\add{qualified} to sustain high level of radiation.
 
 The first step of signal processing is the signal pre-amplification performed 
-by preamps mounted on two AMBs placed on the two lateral sides of the panel. 
+by \add{the} preamps mounted on two AMBs placed on the two lateral sides of the panel. 
 The analog signals are transmitted from the preamps via 
 microstrip transmissione lines and through a Jumper board to the DRAC.
 Most of the data processing functions are performed by the DRAC board. 
@@ -457,12 +460,15 @@ The analog signals are processed by the Time-to-Digital Converters
 Controller (ROC) for data packaging and transmission to the Mu2e DAQ 
 (Figure \ref{fig:flowfee}). 
 
-To summarise, each straw-tube is an independent detector channel equipped with:
+To summarize, each straw tube is an independent detector channel \del{equipped}\add{instrumented} with:
 \begin{itemize}
     \item two preamp channels, one for each end;
     \item two TDC channels, one for each end (192 in total);
     \item one ADC channel, measuring sum of both ends (96 in total);
-    \item one High Voltage feed.
+    \item one \hlite{High Voltage} feed.
+      \todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{lowercase}
+
 \end{itemize}
 \begin{figure}[!h]
 \centering
@@ -474,28 +480,28 @@ To summarise, each straw-tube is an independent detector channel equipped with:
 
 
 \subsubsection{The preamplifiers}\label{preampss}
-All the 96 straw-tubes are read out from both ends. 
-Two adjacent tubes are connected to the same preamp PCB board. 
+All \del{the} 96 straw tubes are read out from both ends. 
+Two adjacent \del{tubes}\add{straws} are connected to the same preamp PCB board. 
 These boards are mounted vertically on the AMBs. 
 Thus, each preamp PCB board contains two preamps,  
 each one connected to one single straw end. 
 Each panel is thus equipped with 48 preamp PCB boards on the HV 
 side and 48 on the CAL side, 192 preamps in total.
 To minimise signal reflections, the preamps have a matching 300 $\Omega$ input impedance. 
-The function of the preamps is to convert the straw tubes 
+The function of the preamps is to convert the straw tube  
 current signals into voltage signals which are amplified and shaped. 
 
 %The voltage gains of individual channels, different from the gas gain, are set by control signal from the DRAC. A bias voltage, adjustable for each side of a channel, is applied to the signals. 
 \subsubsection{The Digitizer Readout and Assembler Controller board}\label{DRAC}
 The $brain$ of the panel is called Digitizer Readout and Assembler Controller (DRAC) board. 
 The DRAC performs digitization, packaging, temporary storage and data transfer to 
-the Mu2e DAQ system. It also controls all the panel operations. The schematics of the 
+the Mu2e DAQ system. It also controls all \del{the} panel operations. The schematics of the 
 Figure \ref{fig:drac} shows a picture of the board: comparators 
 and ADCs, three DDR3 memory chips and three Field-Programmable Gate Arrays (FPGAs) 
 are clearly visible. 
 The two FPGAs on the left and on the right are named digi-FPGAs: 
-each of them receives the data from 48 straw channels, performs data 
-monitoring, buffering and assembles data packets which are then 
+each of them receives \del{the} data from 48 straw channels, performs data 
+monitoring, buffering and assembles \add{the} data packets which are then 
 transferred to the central FPGA named Readout Controller (ROC) \ref{DRAC}. 
 The ROC handles communication, monitors slow control variables and 
 controls all panel operations.
@@ -513,8 +519,12 @@ Figure \ref{fig:flowfee} shows the data flow through the panel front-end and the
     \item The two signals from the two sides of a straw tube are transmitted 
     from the preamps to the DRAC;
     \item In the DRAC, the two biased signals are fed to zero-crossing comparators, 
-      which generate square signals if the signals are above their respective thresholds;
-    \item The squared signals are transmitted to 16-bit TDCs implemented 
+      which generate \hlite{square signals} if the signals are above their respective thresholds;
+    \item \hlite{The squared signals}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{explain 'square signals' }
+
+      are transmitted to 16-bit TDCs implemented 
     in the firmware in the digi-FPGAs. Timing digitization bin is 20 ps, including the determination of the arrival time and the 
     time over threshold. 
   With the intrinsic TDC resolution of 25 ps, taking into account also the comparator jitter, 
@@ -534,15 +544,20 @@ Figure \ref{fig:flowfee} shows the data flow through the panel front-end and the
     digi-FPGAs, buffer data and transfer them to DAQ. ROCs continuously stream out 
     the zero-suppressed data collected between two proton pulses to 
     the Data Transfer Controllers (DTCs) (Section \ref{tdaqtra}) \cite{GIOIOSA2023167732}.
- The buffer stage is fundamental, since the DAQ is not able to handle the instantaneous 
- on-spill data rate and the off-spill time will be used to level the rate.
+    \del{The buffer stage is fundamental}\add{Buffering is necessary}, since the DAQ is not
+    able to handle the instantaneous on-spill data rate and the off-spill time
+    will be used to level the rate.
     The communication is flexible, thanks to the 
-    programmable nature of digitizer, ROC and DAQ.
+    \hlite{programmable nature of the digitizer, ROC and DAQ.}
+    \todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{'programmable nature of the DAQ' sounds awkward, rephrase }
+
 \end{itemize}
 
 \subsubsection{The tracker data format}
-Each event (hit) is composed of a data packet having a fixed length of 256 bits (32 bytes).
-The packet has the following structure:
+\del{Each event (hit) is composed of a}\add{A hit} data packet \del{having}\add{has}
+a fixed length of 256 bits (32 bytes).
+The packet \del{has the following} structure \add{is as follows}:
 \begin{itemize}
     \item 16 bit header: the header contains information to uniquely specify this is a
     packet header, a channel identifier to specify the channel so the ROC can
@@ -561,7 +576,7 @@ The packet has the following structure:
 
 The Mu2e Data Acquisition system (DAQ) is based on a $streaming$ readout architecture: 
 all detector data are digitised, zero-suppressed in the 
-front-end electronics 
+front-end electronics,
 and then transferred from the detectors for further 
 processing and storage. 
 This architecture results in a large data throughput in 
@@ -608,7 +623,8 @@ then transmitted to the Online Processing module within the same DAQ
 server\footnote{The DTCs are implemented as commercial PCIe cards located 
 within the DAQ Servers.}. If a trigger decision is made, the corresponding 
 CRV data is also read out from the ROCs through software-generated Data 
-Requests. Event data from all detectors is collected at the Data Logger 
+Requests. \del{Event data from all detectors is collected at}\add{Events
+  which passed the trigger are sent to} the Data Logger 
 and transferred to the long-term storage. Calculations estimate a data rate of 35 GBps 
 from the ROCs and an annual storage requirement for the entire experiment of 
 approximately 7 PB. 
@@ -616,7 +632,7 @@ approximately 7 PB.
 In addition to the detector data, the DTCs also handle the acquisition of 
 slow control variables from the detectors. For the tracker, these variables 
 include panels temperature, pressure, humidity, voltages, and currents at 
-specified PCB boards, high voltages, and channel threshold settings across 
+\add{the} specified PCB boards, high voltages, and channel threshold settings across 
 all panels. These data are managed by the DCS Host and recorded in long-term 
 storage. The data are also accessible in real-time in the Control Room for 
 monitoring purposes. Other detector control tasks and operations are managed 
@@ -634,9 +650,9 @@ of channel high voltage when necessary.
 
 
 \subsection{Tracker performance requirements}
-Here a resume of the requirements that the tracker must satisfy to ensure the 
+Here a \del{resume}\add{summary} of the requirements that the tracker must satisfy to ensure the 
 success of the experiment is presented \cite{trkreq}.
-A momentum resolution less than 180 keV/c for a 105 MeV/c electron is needed in the nominal
+A momentum resolution \del{less}\add{better} than 180 keV/c for a 105 MeV/c electron is needed in the nominal
 1 T solenoidal field, as measured at the front face of the tracker volume (before
 passing through any tracker related material). Non-Gaussian tails, particularly any
 high-side tail, must be controlled such that the DIO background results in much less
@@ -644,5 +660,6 @@ than one event at design sensitivity. To reach this, simulation results indicate
 a single straw requires around 4 cm of longitudinal and 200 $\mu$m of transverse 
 resolution for drift path lengths. 
 It must have an acceptance of approximately 20\% for conversion electrons.
+
 The tracker must operate in an ambient vacuum (< $10^{-4}$ Torr) and be able to withstand a rate of 5 MHz per straw (highest rate straw) 
 500 ns after the spill. 
