@@ -408,7 +408,7 @@ center the frame. Once fully assembled, a thorough mechanical
 survey of the detector will be performed before moving to the Mu2e experimental hall. 
 \subsection{The drift tubes in magnetic field}
 By particle deflection in a magnetic field, it is possible to determine its momentum.
-In a drift tubes, the sum of the electric drift field and magnetic field can 
+In a drift tube, the sum of the electric drift field and magnetic field can 
 produce several effects: 
 \begin{itemize} 
     \item change of the drift direction; 
@@ -429,7 +429,7 @@ where $\mu_B = 0$ is the mobility considering a zero magnetic field,
 $\omega = \frac{qB}{m}$ is the cyclotron frequency, and $\tau$ is the electron average collision time in the gas.
 Straws of the Mu2e tracker are orthogonal to the magnetic field and the 
 angle between the drift direction and the $\sim$ 1 T $B$-field varies from 0° to 90°. For this 
-reason drift calculation is a complicated numerical problem. Moreover, as shown in Figure \ref{fig:drift}, 
+reason drift calculation is a complicated numerical problem. Moreover, as shown in Figure \ref{fig:drift}, in 
 our straw gas, Ar:CO$_2$, $v_{d}$ depends on the electric field. Numerous simulations 
 have been conducted to account for this effect, revealing that the magnetic field 
 significantly influences the drift time as a function of the particle radial distance from the anode wire (Figure \ref{fig:driftchange}). 
@@ -439,7 +439,8 @@ The difference is about 8 ns at a radial distance of 2.5 mm.
     \includegraphics[width =0.6\textwidth]{figures/png/Screenshot_20240925_214957.png}
     \caption[The total drift time versus the initial radial distance from the
     sense wire.]{The total drift time as a function of initial radial distance from the
-    sense wire and initial angle of 90°.}
+    sense wire and initial angle of 90°. The black dotted line corresponds 
+    to the case with zero magnetic field, while the red one represents the case with $B=1$ T.}
     \label{fig:driftchange}
     \end{figure}
 \subsection{The tracker front-end Electronics}\label{tfee}
