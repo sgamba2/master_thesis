@@ -46,7 +46,7 @@ The second one describes the initial data quality monitoring of the tracker prea
 
 
     Depending on the test to perform, it was possible to 
-    select one between two ROC operational modes:
+    select one between \add{the} two ROC operational modes:
     \begin{itemize}
     \item  \textbf{ROC internal mode}: the ROC was emulating the data 
     itself (user-defined) without reading the digi-FPGAs;
@@ -74,8 +74,13 @@ The second one describes the initial data quality monitoring of the tracker prea
     for one detector channel.
     There are two important parameters: 
     the Event Window width ($T_{EW}$) shown in red, 
-    that represents the distance between two consecutive 
-    proton pulses (called heartbeats - HB's), separated by 
+    that represents the distance between add{the} \hlite{two consecutive 
+      proton pulses (called heartbeats - HB's),}
+    \todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+    {proton pulses and heartbeats are two different things, a data packet
+      corresponding to a proton pulse is the EWM - event window marker}
+
+    separated by 
     $\sim$1.7 $\mu$s during Mu2e data taking, and 
     the separation $T_{gen}=1/f_{gen}$ between 
     two consecutive hits (represented by grey triangles), 
@@ -86,7 +91,7 @@ The second one describes the initial data quality monitoring of the tracker prea
 
     The ROC firmware has an internal hit buffer 
     which stores up to 255 hits per event, adequate 
-    for the expected run time occupancy. 
+    for the expected run-time occupancy. 
     Depending on $T_{gen}$ and $T_{EW}$, the data 
     taking can proceed in two different modes:
     \begin{itemize}
@@ -370,7 +375,7 @@ sum of 48 readout channels in the first
 digi-FPGA and 37 readout channel in the digi-FPGA-2.
 
 
-Figure \ref{fig:2} (Bottom) shows a zoom on the 
+Figure \ref{fig:2} (Bottom) \del{shows a zoom}\add{zooms in} on the 
 rightmost channels of the distribution.
 The relative difference between the data and 
 the MC distributions 
@@ -500,7 +505,7 @@ which indicates very good agreement.
 \end{figure}
 
 
-\section{Study of preamplifiers performance}\label{dqm}
+\section{Study of preamplifier performance}\label{dqm}
 After having validated the correct ROC buffering, 
 a set of different tests was accomplished to check 
 the performance of the preamplifiers along with the readout chain.
