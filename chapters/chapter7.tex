@@ -29,7 +29,7 @@ The VST encompasses the entire testing
 chain, from the straws to the readout, 
 to processed data on disk.
 Throughout the chapters, we explored 
-critical aspects of the tracker \add{performance},
+critical aspects of the tracker performance,
 focusing on the robustness and 
 reliability of data acquisition 
 processes and the crucial role of 
@@ -50,7 +50,7 @@ and performance of the tracker readout chain.
 
 The first test I performed was to verify the 
 correct functioning of 
-\add{the} ROC buffering and to understand its logic. 
+the ROC buffering and to understand its logic. 
 During these tests, a single 
 ROC was connected to one DTC. Data were 
 collected with digi-FPGAs pulsed 
@@ -66,7 +66,7 @@ The ROC has an internal buffer which can store up to 255 hits,
 and, depending on \( T_{gen} \) and \( T_{EW} \), 
 the total number of hits within the event window 
 can be respectively less than or equal to 255. 
-These configurations depend on whether or not \del{it}\add{the buffer}
+These configurations depend on whether or not the buffer 
 is getting filled up.
 By studying the timing distributions of the signal delays 
 between different channels, we 
@@ -111,8 +111,7 @@ correlated clocks.
 Overall, these tests provided valuable results 
 that will inform future improvements to the 
 preamplifier design and its integration into 
-the readout chain. They also laid \del{the foundations}
-\add{a foundation} 
+the readout chain. They also laid a foundation  
 for the development of real-time 
 diagnostic tools, along with the identification of 
 key performance issues.
@@ -182,7 +181,7 @@ The main issue with this configuration is that the stereo
 reconstruction biases for tracks with positive and negative values of $m_{yz}$
 do not cancel out. 
 
-In addition to the results, we must consider the rate and \add{the} data-taking time. 
+In addition to the results, we must consider the rate and the data-taking time. 
 For the vertical orientation, the rate must be scaled by two additional 
 factors compared to the horizontal one: one that accounts for the 
 angular dependence of the flux, and the second one that considers the angle between the station and cosmics. 
@@ -213,10 +212,7 @@ and delta rays. Compton scattered electrons
 are produced when photons from neutron capture interact with the 
 detector material, and typically have energies of a few MeV.
 Pair production electrons and positrons 
-are generated during \hlite{nuclear recoil processes},
-\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
-{what is this ?}
-
+are generated during nuclear processes, 
 and delta rays are produced 
 when high-energy charged particles collide with the detector material.
 
@@ -297,10 +293,10 @@ annihilation, are introduced into the algorithm.
 Additional samples could be added to the training 
 process, but these would increase the technical complexity. 
 
-Furthermore, the training was performed using \add{the} 
-Monte Carlo data rather than \add{the} real data, 
+Furthermore, the training was performed using the  
+Monte Carlo data rather than the real data, 
 posing a potential risk when transitioning 
-to \del{actual}\add{the} data taking. The focus should be on how 
+to the data taking. The focus should be on how 
 to handle training during early data taking and 
 determining the strategy for incorporating real data into the training process.
 
