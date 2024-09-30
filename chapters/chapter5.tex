@@ -80,7 +80,7 @@ geometry (Section \ref{reconstruction}).
 \subsection{Operational constraints of the station}\label{gassystem}
 The detector, its infrastructures 
 and services, and, consequently, the stations have been
-designed for being operated in a 
+designed \del{for being operated}\add{to operate} in a 
 $vertical$ $orientation$. This has now an impact 
 on several aspects of detection operation: from 
 the storage and handling tools of the fully assembled and 
@@ -112,7 +112,8 @@ and exhaust valves. The red arrows represent the
 direction of the gas flow. On the supply side (Figure 
 \ref{fig:gassystem} (Left)), the ball has to rest on the 
 O-ring, or the gas flows downwards towards the atmosphere, 
-rather than flowing upwards towards the panel. According 
+rather than flowing upwards towards the panel. According
+
 to these specifications, it seems that the only operational 
 mode of the station is in the vertical position. 
 Additionally, other reasons include space constraints, as placing 
@@ -126,8 +127,13 @@ cosmic muons, with the aim of achieving a longitudinal hit
 position resolution better than 4 cm. This would enable a better distinction 
 between different particle trajectories while reconstructing helices (Appendix \ref{eventreco}).
 
-In the following section, simulation performed to reconstruct cosmic tracks will be described with  
-a vertically oriented station, with the aim of understanding 
+In the following section, \hlite{simulation performed to reconstruct cosmic tracks}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{re-read, rephrase}
+\hlite{will be described with a vertically oriented station},
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{need to explain how a simulation can be described WITH a station}
+with the aim of understanding 
 potential biases in determining the longitudinal position.
 
 \begin{figure}[!h]
@@ -217,7 +223,7 @@ significant at low energies. The numerical constants are derived by fitting expe
 \subsection{Monte Carlo cosmic generation with CRY}
 Several Monte Carlo programs allow to simulate sea-level 
 cosmic ray muons: the most widely used is CRY, developed 
-by Los Alamos National Laboratory (LANL). CRY \cite{Hagmann2007CosmicraySG} functions as a generator for air showers 
+\del{by}\add{at} Los Alamos National Laboratory (LANL). CRY \cite{Hagmann2007CosmicraySG} functions as a generator for air showers 
 induced by primary cosmic rays. The CRY package uses 
 precomputed input tables derived from comprehensive 
 MCNPX 2.5.0 simulation of protons in the energy range 
@@ -238,14 +244,15 @@ primary cosmic muon flux due to solar activity, a
 common day (6-21-2021) was chosen outside the maximum and minimum 
 sunspot cycle for the simulation. While there are other 
 packages designed to produce cosmic muons with specific 
-energy and zenith angles, such as CORSIKA \cite{Heck:1998vt}, CRY was chosen 
-for its straightforward implementation.
-
+energy and zenith angles, such as CORSIKA \cite{Heck:1998vt},
+\hlite{CRY was chosen for its straightforward implementation}.
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{you probably wanted to say smth else: implementation is smth hidden from users. Rephrase}
 
 \subsection{Monte Carlo sample and coordinate system }\label{genplane}
 A sample of cosmic muons was generated with a uniform distribution within a
 horizontal plane approximately 11 m above the muon beam axis. The GEANT4 
-simulation also incorporates the effects of the external neutron shield surrounding the DS 
+simulation also incorporates \del{the} effects of the external neutron shield surrounding the DS 
 and the concrete ceiling of the Mu2e experimental hall. Starting from the generation plane, 
 cosmic muons pass through the concrete ceiling and walls situated outside the experimental hall. 
 As they propagate downwards to the detector, they interact with the building materials. 
@@ -270,9 +277,10 @@ For this reason, in the simulation
 the magnetic field was set to zero. 
 
 Before describing the event selection and the 
-reconstruction, it is important to define the coordinate system, 
-as shown in Figure \ref{fig:coordinate}. The $z$ axis is parallel to 
-the DS axis, while the $y$ axis corresponds to the vertical axis.
+reconstruction, it is important to define the coordinate system\del{, 
+  as}\add{. As} shown in Figure \ref{fig:coordinate}\del{. The}
+\add{, the} $z$ axis is parallel to 
+the DS axis, while the $y$ axis \del{corresponds to the vertical axis}\add{is directed vertically}.
 \begin{figure}[!h]
     \centering
     \includegraphics[width =0.5\textwidth]{figures/png/Screenshot_20240526_164527.png}
@@ -295,11 +303,11 @@ detector where a particle with a trajectory orthogonal
 to the panel crosses four, three, two or even only one 
 detector layer (Figure \ref{fig:coordinate}). Given the
 rotation angles of the panels within the same 
-face and between different faces, if this particle
+face and between different faces, if \del{this}\add{a} particle
 crosses four layers, the straws of the four 
 panels are not parallel to each other.
 Each straw can be parameterized as a straight line 
-lying on a plane $z = z_i$, where $z_i$ is the $z$ 
+\del{lying on}\add{in} a plane $z = z_i$, where $z_i$ is the $z$ 
 coordinate of the panel which contains the straw:
 \begin{equation}\label{equaretta}
     (D_{x,i}t+M_{x,i},D_{y,i}t+M_{y,i},z_i)
@@ -334,8 +342,11 @@ with fewer than three hit straws per panel.
 This criterion was selected to minimize errors 
 in track reconstruction.
 \subsection{Panel illumination pattern}
-To achieve precise calibration, the hits should 
-be distributed uniformly across the panel.
+\hlite{To achieve precise calibration, the hits should 
+  be distributed uniformly across the panel.}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{not clear what this means, explain}
+%
 On the other hand, this is 
 not what it is obtained, due to the station geometry
 and the selection cuts. 
@@ -398,10 +409,18 @@ an angle of approximately 45°.
 
 Figure \ref{fig:illumination} 
 shows that there are almost no hits in the central region of the panel. 
-This could lead to waveform non-linearities: the signals generated by 
+This could lead to \hlite{waveform non-linearities}:
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{a wafeform is a waveform, it is all non-linear, not a straight line,
+  need to defined what you call the 'waveform non-linearity' ?}
+
+the signals generated by 
 particles at one end of a straw must propagate to the other end as well. 
 The leading edge decreases in amplitude and broadens, while moving to 
-the other end. This wider portion of the signal contributes the most 
+the other end. \hlite{This wider portion of the signal}
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{'wider portion of the signal' unexplained}
+contributes the most 
 and it may introduce timing systematics.
 
 
@@ -429,7 +448,7 @@ and it may introduce timing systematics.
 %at this point we need to understand how much we loose considering 
 %a vertical station. The most vertical angle one can measure is the arctan of 
 %0.7m (radius of the tracker station) divided by 5mm*2*4, that is 4°. 
-\section{Reconstructing the muon tracks}\label{reconstruction}
+\section{Reconstructing muon tracks}\label{reconstruction}
 To determine $x_{\text{track}}$ in Equation \ref{ffffff}, 
 it is necessary to reconstruct the 3D muon track 
 starting from the $StereoHit$ coordinates.
@@ -480,7 +499,10 @@ This is reproduced in Figure \ref{fig:stco}.
     \label{fig:stco}
 \end{figure}
 Considering only one plane and the following 
-equations as the $x-y$ $ComboHit$s equations:
+equations as the\hlite{ $x-y$ $ComboHit$s equations}:
+\todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{not clear what is the difference between ComboHits and ClusterHits, explain}
+
 \begin{equation}
     \begin{aligned}
         y&=\frac{v_1}{u_1}(x-x_{m,1})+y_{m,1} \\
@@ -519,7 +541,7 @@ The reconstructed hits on the panels will be denoted as $R_{x,i}$ and $R_{y,i}$.
 \end{aligned}
 \end{equation}
 The bias on the longitudinal position is the difference between 
-the reconstructed coordinate and the Monte Carlo position 
+the reconstructed coordinate and the \del{Monte Carlo}\add{simulated} position 
 on the panel frame.
 
 \section{Results}
@@ -549,8 +571,9 @@ straws, as can also be seen in Figure \ref{fig:illumination}.
     \label{fig:recx}
 \end{figure}
 
-Figure \ref{fig:bias} shows the distribution of the longitudinal bias $\Delta x$ determined as the difference between the projection 
-of the reconstructed track on the panel and Monte Carlo coordinates. 
+Figure \ref{fig:bias} shows the distribution of the longitudinal bias $\Delta x$
+determined as the difference between the projection 
+of the reconstructed track on the panel and \del{Monte Carlo}\add{its simulated} coordinates. 
 The true coordinate is computed as the mean coordinate of the Monte Carlo hits within the panel.
 \begin{figure}[!h]
     \centering
@@ -562,8 +585,8 @@ The true coordinate is computed as the mean coordinate of the Monte Carlo hits w
 \end{figure}
 The bias range is approximately [-6,6] cm, indicating a significant systematic factor 
 affecting the hit reconstruction. The distribution is similar for all panels. 
-One problem is that this distribution is referred to multiple straws, so the 
-bias could be very different between straws.
+One problem is that this distribution is referred to multiple straws,
+so \add{for different straws} the bias could be very different\del{ between straws}.
 
 The systematics brought by this type of reconstruction, both for 
 the horizontal and vertical orientation, arise from the fact that $m_{yz}=\frac{\Delta y}{\Delta z}$ 
@@ -636,7 +659,7 @@ there are three pairs of panels whose relative angle is 90° (Figure \ref{fig:co
 This type of overlap minimizes the systematic effect and consequently the bias that was explained earlier.
 
 Under these conditions, achieving the required accuracy 
-for the calibration is expected to become challenging. 
+\del{for}\add{of} the calibration is expected to become challenging. 
 
 
   
@@ -658,7 +681,10 @@ for the calibration is expected to become challenging.
 This analysis demonstrated that the vertical orientation for calibrating a station is not optimal. This is due to several reasons:
 \begin{itemize}
     \item the selection criteria in Section \ref{eventselection} select cosmic muons with orientations that affect panel illumination. 
-    The illumination is non-uniform, and moreover, there are almost no hits in the central region of the panel, which could result in waveform non-linearities;
+      The illumination is non-uniform, and moreover, there are almost no hits in the central region of the panel, which could result in \hlite{waveform non-linearities};
+      \todo[inline,color=green!20,linecolor=gray,tickmarkheight=10pt]
+{'waveform non-linearity' undefined, the second time}
+
     \item the longitudinal bias $\Delta x$ range is approximately [-6,6] cm, indicating a significant systematic factor 
     affecting the hit reconstruction. The systematics arise from the fact that $m_{yz}$ is not accurately reconstructed.
     In fact, if the true hit position is far from the midpoint of the straws, the reconstructed tracks'
